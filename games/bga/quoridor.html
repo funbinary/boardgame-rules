@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Quoridor 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Quoridor · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Quoridor</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Quoridor</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p><b><a href="https://www.quoridorfansite.com/tools/freeboard.html" target="_blank" rel="noopener">Freeboard</a></b>
+</p>
+<div style="float:right;clear:both;display:flex;margin:8px;"><div class="mw-collapsible mw-" style="display:flex;flex-direction:column;min-width:;max-width:600px;border-radius:0.5rem;background:#a98;"><div class="mw-collapsible-toggle" style="padding:0.5rem;text-align:center;color:#fff;font-weight:bold;overflow-wrap:break-word;hyphens:auto;">Starting position</div><div class="mw-collapsible-content" style="margin:0 0.25rem 0.25rem;padding:0.25rem;border-radius:calc(0.5rem - 0.25rem);background:#fffc;color:#202122;overflow-wrap:break-word;hyphens:auto;"><div style="display:grid; grid:1.5rem repeat(9,30px) 1.5rem / 1.5rem repeat(9,30px) 1.5rem; gap:7.5px; position:relative;">
+<div style="position:absolute; background:#a98; left:calc(-calc(2 * 7.5)px); top:calc(-calc(2 * 7.5)px); width:100%; height:100%; grid-area:1 / 1 / -1 / -1; border-radius:20px;"></div>
+<div></div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">A</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">B</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">C</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">D</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">E</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">F</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">G</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">H</div>
+<div style="z-index:1;align-self:end;text-align:center;font-weight:bold;color:#edc;">I</div>
+<div></div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">9</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="width:30px;height:30px;background:rgba(150,150,150,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.9),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">9</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">8</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">8</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">7</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">7</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">6</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">6</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">5</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">5</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">4</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">4</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">3</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">3</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">2</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left :4px;">2</div>
+<div style="z-index:1;align-self:center;text-align:right;font-weight:bold;color:#edc;padding-right:4px;">1</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="width:30px;height:30px;background:rgba(255,255,255,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.2),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div><div style="z-index:1;align-self:center;text-align:left ;font-weight:bold;color:#edc;padding-left:4px;">1</div>
+<div></div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">A</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">B</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">C</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">D</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">E</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">F</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">G</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">H</div>
+<div style="z-index:1;align-self:start;text-align:center;font-weight:bold;color:#edc;">I</div>
+<div></div>
+</div></div></div></div>
+
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<ul><li>Abstract game played on a 9×9 board.</li>
+<li>2 or 4 players.</li>
+<li>The first player to move their pawn to the opposite side of the board wins.</li>
+<li>Walls can be placed to restrict pawn moves.</li></ul>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<ul><li>Each player has one pawn which starts in the middle of their respective side.</li>
+<li>20 walls are distributed equally to all players.
+<ul><li><i>i.e. 2 players: 10 each</i></li>
+<li><i>i.e. 4 players: 5 each</i></li></ul></li>
+<li>Players take turns to either:
+<ul><li>Move their pawn</li>
+<li>Place a wall</li></ul></li></ul>
+<h3><span class="mw-headline" id="Pawn_Movement">Pawn Movement</span></h3>
+<ul><li>Adjacent squares in orthogonal directions.
+<ul><li><i>i.e. forwards, backwards, or sideways.</i></li></ul></li>
+<li>Not through a wall.</li>
+<li>Not onto the same square as another pawn.</li>
+<li>Jump over an orthogonally adjacent pawn:
+<ul><li>When two pawns face each other on neighboring squares which are not separated by a fence:
+<ul><li>The player whose turn it is can jump the opponent’s pawn (and place himself behind him), thus advancing an extra square (fig. "Jump Behind").</li></ul></li>
+<li>If there is a fence behind the said pawn:
+<ul><li>The player can place his pawn to the left or the right of the other pawn (fig. "Jump Aside")</li></ul></li>
+<li>Note: jumps are never mandatory.</li></ul></li></ul>
+<div style="display:flex;flex-wrap:wrap;align-items:start;"><div style="float:none;clear:both;display:flex;margin:8px;"><div class="mw-collapsible mw-" style="display:flex;flex-direction:column;min-width:;max-width:280px;border-radius:0.5rem;background:linear-gradient(135deg,#c00,#703,#307);"><div class="mw-collapsible-toggle" style="padding:0.5rem;text-align:center;color:#fff;font-weight:bold;overflow-wrap:break-word;hyphens:auto;">Jump Behind</div><div class="mw-collapsible-content" style="margin:0 0.25rem 0.25rem;padding:0.25rem;border-radius:calc(0.5rem - 0.25rem);background:#fffc;color:#202122;overflow-wrap:break-word;hyphens:auto;"><div><center>
+<div style="position:relative; width:180px; height:180px; overflow:hidden; margin:1rem;"><div style="position:absolute; bottom:0px;">
+<div style="display:grid; grid: repeat(9,30px) / repeat(9,30px) ; gap:7.5px; position:relative;">
+<div style="position:absolute; background:#a98; left:calc(-0px); top:calc(-0px); width:100%; height:100%; grid-area:1 / 1 / -1 / -1; border-radius:20px;"></div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#8008;">
+  <div style="position:absolute;"><div style="width:30px;height:30px;background:rgba(150,150,150,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.9),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="width:30px;height:30px;background:rgba(255,255,255,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.2),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#8008;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,1);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+</div>
+</div></div>
+<p>The white pawn may move <b>backwards</b>, to the <b>left</b> or <b>jump</b> over the black pawn.
+</p><p>A pawn may not move through a wall or onto the same square as another pawn.
+</p>
+</center></div></div></div></div><div style="float:none;clear:both;display:flex;margin:8px;"><div class="mw-collapsible mw-" style="display:flex;flex-direction:column;min-width:;max-width:280px;border-radius:0.5rem;background:linear-gradient(135deg,#703,#307,#00c);"><div class="mw-collapsible-toggle" style="padding:0.5rem;text-align:center;color:#fff;font-weight:bold;overflow-wrap:break-word;hyphens:auto;">Jump Aside</div><div class="mw-collapsible-content" style="margin:0 0.25rem 0.25rem;padding:0.25rem;border-radius:calc(0.5rem - 0.25rem);background:#fffc;color:#202122;overflow-wrap:break-word;hyphens:auto;"><div><center>
+<div style="position:relative; width:180px; height:180px; overflow:hidden; margin:1rem;"><div style="position:absolute; bottom:0px;">
+<div style="display:grid; grid: repeat(9,30px) / repeat(9,30px) ; gap:7.5px; position:relative;">
+<div style="position:absolute; background:#a98; left:calc(-0px); top:calc(-0px); width:100%; height:100%; grid-area:1 / 1 / -1 / -1; border-radius:20px;"></div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="width:30px;height:30px;background:rgba(150,150,150,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.9),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,1);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="width:30px;height:30px;background:rgba(255,255,255,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.2),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:#0808;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;position:relative;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+ <div style="position:absolute;height:calc(7.5px);width:calc((2 * 30px) + 7.5px);top:-7.5px;background:rgba(222,184,135,0);"></div>
+ <div style="position:absolute;width:calc(7.5px);height:calc((2 * 30px) + 7.5px);left:30px;top:calc(-30px - 7.5px);background:rgba(222,184,135,0);"></div>
+</div>
+<div style="display:grid;z-index:1;background:#987;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+</div>
+</div></div>
+<p>The forward jump is blocked by a wall.
+</p><p>The active white pawn may additionally move to squares orthogonally adjacent to the black pawn.
+</p>
+</center></div></div></div></div></div>
+<h3><span class="mw-headline" id="Wall_Placement">Wall Placement</span></h3>
+<ul><li>Each wall is two squares long.</li>
+<li>Must be placed between squares, aligned with the grid.</li>
+<li>May not jut out of the board.</li>
+<li>May not block all paths for each pawn to reach their destination side.</li>
+<li>Note: if a player places all their walls, they can no longer place walls.</li></ul>
+<h2><span class="mw-headline" id="Game_end">Game end</span></h2>
+<ul><li>A player wins if their pawn reaches any one of the nine squares on its destination side, opposite to their starting side.</li>
+<li>A team wins if <b>either pawn</b> reaches its destination side.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpquoridor" target="_blank" rel="noopener">Quoridor — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

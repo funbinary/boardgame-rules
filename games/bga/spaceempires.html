@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Spaceempires 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Spaceempires · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Spaceempires</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Spaceempires</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 1–4 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>In <b>Space Empires 4X</b>, 1 to 4 players compete for interstellar domination by e<b>X</b>ploring, e<b>X</b>panding, e<b>X</b>ploiting, and e<b>X</b>terminating. Several different scenarios are available. In most scenarios, players win by destroying their opponents’ Homeworlds. The play area is made up of hexes representing regions of space and game pieces are represented by square or hexagonal tokens. A 10-sided die roll is used to resolve combat and other checks. A roll of 1 is always a hit, and the ‘0’ face represents a 10. If you’re new to the game, it's recommended to use the Basic Rules until you become familiar with the game.
+</p>
+<h2><span class="mw-headline" id="Starting_the_Game">Starting the Game</span></h2>
+<p>First, each player chooses a Homeworld location in their Home System (a group of space matching each player's color). Next, all playable spaces (hexes) are populated with tokens (system markers) that represent the contents of each space. Each player's Homeworld is placed face-up, while all other tokens are placed face-down (these are unexplored). System markers in each player's Home System have a border matching their player color, while system markers in 'Deep Space' have a white border.
+Finally, each player’s starting units appear at their Homeworld:
+</p>
+<ul><li>4 Shipyards [SY] (Organized into one single "group"; see the x4 in the bottom)</li>
+<li>3 Scouts [SC]</li>
+<li>3 Colony Ships</li>
+<li>1 Miner</li></ul>
+<h2><span class="mw-headline" id="Sequence_of_Play">Sequence of Play</span></h2>
+<p>Each Round proceeds in a sequence - first three turns, and then an Economic Phase. During each turn, each player (in turn order) will move their ships, fight battles, and then explore undiscovered hexes. Afterwards, the Economic Phase is taken where each player simultaneously builds ships and researches technologies. Once that has happened, turn order is determined and a new Round begins.
+</p>
+<ul><li>Round
+<ul><li>Turn One:
+<ul><li>First Player's Turn
+<ul><li>Movement</li>
+<li>Combat</li>
+<li>Exploration</li></ul></li>
+<li>Other Players take turns, same as the First Player's Turn.</li></ul></li>
+<li>Turns Two &amp; Three, same as Turn One.</li>
+<li>Economic Phase
+<ul><li>All players take this phase simultaneously</li>
+<li>Afterwards, Turn Order is determined from Players' Bids.</li></ul></li></ul></li></ul>
+<h2><span class="mw-headline" id="Movement">Movement</span></h2>
+<p>During your Movement phase, you may move your units that are capabile of movement. You can move each unit 1 space at a time up to the limit determined by your Movement Technology Level (starts at Level 1). Moving a unit that unit's full allowance of movement is not required. You must complete one unit's movement before moving another unit.
+</p>
+<h4><span class="mw-headline" id="Movement_Technology_Levels">Movement Technology Levels</span></h4>
+<ul><li>Level 1: Move 1 space each Turn</li>
+<li>Level 2: Move 1 space in Turns 1 and 2, and 2 spaces in Turn 3</li>
+<li>Level 3: Move 1 space in Turn 1, and 2 spaces in Turns 2 and 3</li>
+<li>Level 4: Move 2 spaces each Turn</li>
+<li>Level 5: Move 2 spaces in Turns 1 and 2, and 3 spaces in Turn 3</li>
+<li>Level 6: Move 2 spaces in Turn 1, and 3 spaces in Turns 2 and 3</li>
+<li>Level 7: Move 3 spaces each Turn</li></ul>
+<p><i>Exceptions:</i>
+</p>
+<ul><li>Miners, Colony Ships, MS Pipelines, and Mines may never move more than 1 space per Turn.</li>
+<li>Shipyards and Bases never move.</li>
+<li>Fighters cannot move unless accompanied by a Carrier, to a maximum of three fighters per Carrier.</li></ul>
+<h4><span class="mw-headline" id="Movement_Restrictions">Movement Restrictions</span></h4>
+<p>A noncombatant unit may not enter an undiscovered hex, or hex that contains a enemy unit or Colony unless accompanied by a combat unit.
+</p><p>A combat unit may not enter an undiscovered hex, a Nebula, or Asteroids, unless the unit begins its turn adjacent to the space and moves into the space as its first move. Entering such a space ends the unit’s movement, regardless of Movement Technology Level.
+</p>
+<h4><span class="mw-headline" id="Enemy_Occupied_Hexes">Enemy Occupied Hexes</span></h4>
+<p>If your unit enters a space occupied by an enemy combat-capable unit you <b>must</b> stop moving and attack during the Combat Phase. If the space is occupied only by enemy non-combat units (not Colonies), those units are immediately destroyed and do not impede your movement. 
+</p>
+<h4><span class="mw-headline" id="Planets_and_Colonization">Planets and Colonization</span></h4>
+<p>Planets without Colonies do not affect your movement and may be Colonized by a Colony Ship. If a Colony is destroyed the planet may be re-colonized.
+</p><p>To Colonize a Planet, you need to click on your ship on the planet and click "Initiate Colonization". Your Colony Ship will land and begin building your new colony. During the next Economic Phase, your Colony Ship will change into a Colony producing 1 CP (Construction Point). During the two Economic Phases after that, your Colony will change into a 3 CP Colony and then a 5 CP Colony. Your Colony Ship is used as the first buildings of the new Colony and does not come back.
+</p><p><b>Colonizing Barren Planets:</b> Each player's Home System contains one Barren (monochrome) planet, and all planets in Deep Space are Barren. To colonize a Barren planet, you must have Terraforming Technology. A Colonized Barren planet performs like any other Colony.
+</p>
+<h2><span class="mw-headline" id="Combat">Combat</span></h2>
+<p>The Combat phase occurs whenever opposing units occupy the same hex. The player whose units moved into the space (during their Movement phase) is the attacker. If there is more than one battle, the attacker decides the order in which battles occur. During a battle, opposing units exchange fire in repeated rounds of combat until only one player's units occupy the space where the battle took place.
+</p>
+<h4><span class="mw-headline" id="Combat_Procedure">Combat Procedure</span></h4>
+<p>The Combat Phase window contains opposing ships organized horizontally by side and vertically by ship Class (A through E). Any Decoy units are automatically destroyed at start of Combat.
+</p><p><i>Combat Screening:</i> At the start of a combat round, if a player has more combat capable ships than their opponent, that player may choose to screen (protect) ships from combat for the current round (up to the difference in ship count). A screened ship may neither fire nor be fired upon during the current round, and screened ships can be changed each combat round. Non-combat ships are screened automatically.
+</p><p><i>Fleet Size Bonus:</i> At the start of a combat round, if a player has at least twice as many combat capable ships as their opponent, that player receives a +1 Attack bonus. Mines do not count towards fleet size.
+</p><p><i>Resolve Combat:</i> During each combat round, ships fire in Class order, starting with A Class, then B, C, D, and E Class. Each ship can fire once per round. A ship can be targeted more than once during a combat round. After the first combat round, a player may choose to have a unit retreat instead of firing. Bases and Shipyards cannot retreat.
+</p>
+<h4><span class="mw-headline" id="Firing_Order">Firing Order</span></h4>
+<p>Combat is not simultaneous. A Class fires before B, B fires before C, etc. If Combat units have equal Class, the units with higher Tactics technology fire first. If Combat units have equal Class and Tactics, the defender fires first.
+</p><p>If Combat occurs in a System (hex) occupied by Asteroids or Nebulae then all ships are affected and considered Class E no matter what their original Class.
+</p>
+<h4><span class="mw-headline" id="Who_May_Fire">Who May Fire</span></h4>
+<p>A unit (ship) with Attack Strength may fire at any opposing unit unless Screened. Ships in the same Group each fire and may choose unique targets.
+</p>
+<h4><span class="mw-headline" id="Non-Combat_Units">Non-Combat Units</span></h4>
+<p>Colony Ships, Mining Ships, and MS Pipelines have no Combat ability and will be destroyed if caught alone or if all other Combat capable units are destroyed or retreat. They may not retreat. Colonies (planets) have no Combat abilities but are not automatically destroyed.
+</p>
+<h4><span class="mw-headline" id="Fire_Resolution">Fire Resolution</span></h4>
+<p>Select your Attacking unit and your target. Your Attack Strength is the sum of your unit's Attack Strength plus its Attack Technology Level. Add a +1 bonus if Fleet Size Bonus is in effect. Your target's Defense is the sum of its Defense Strength plus its Defense Technology Level and this result is subtracted from your Attack Strength to determine your "To Hit" number. A die is rolled for each attacking ship and must be equal or less than the "To Hit" number to succeed. A die roll of 1 will always hit. 
+</p>
+<h4><span class="mw-headline" id="Recording_Hits">Recording Hits</span></h4>
+<p>Damage is cumulative through Combat and once a ship's damage equals its Hull Size, it is destroyed. Ships in a group may only be targeted one at a time. Hits to a ship do not affect abilities or performance in any way. 
+</p><p>At the conclusion of Combat, any surviving ships will send their crews into repair mode and all damage will be removed.
+</p>
+<h4><span class="mw-headline" id="Special_Conditions">Special Conditions</span></h4>
+<p><b>Asteroids:</b> When Combat occurs in a System with Asteroids, all ships are considered Class E and their Attack Technology Level is considered to be zero. Attack Strength is not affected. Fire order depends on Tactics.
+</p><p><b>Nebula:</b> When Combat occurs in a System with a Nebula, all ships are considered Class E and their Defense Technology Level is considered to be zero. Defense Strength is not affected. Fire order depends on Tactics.
+</p>
+<h4><span class="mw-headline" id="Retreat">Retreat</span></h4>
+<p>After the first round of Combat, any Combat capable ship may instead choose to Retreat to an adjacent System (hex) which is the same distance, or less, from one of its colonies. That System must not contain enemy units or be an unexplored System. If there is no legal retreat System available, Retreat is not possible. Bases and Ship Yards cannot retreat, nor can Colony Ships, Mining Ships, or MS Pipelines as they are too slow.
+Be warned that this rule can lead to seemingly counter-intuitive retreats, which are perfectly legal: an enemy fleet CAN retreat towards one of your colonies if that square is at least the same distance from one of the retreating party's colonies. To stop this you may try to surround embattled hexes with weak or even non-military units (such as decoys, miners or scouts) which will prevent enemy forces retreating into their square.
+This discussion thread may be helpful: <a href="https://boardgamegeek.com/thread/2862734/whats-your-opinion-retreat-rule" target="_blank" rel="noopener">https://boardgamegeek.com/thread/2862734/whats-your-opinion-retreat-rule</a>
+</p>
+<h4><span class="mw-headline" id="Colonies_and_Combat">Colonies and Combat</span></h4>
+<p>Once all ships in a System have been destroyed or Retreated, you may attack an enemy Colony or Homeworld. Each of your ships may fire once and the Colony cannot fire back (it has no Defense Strength or Defense Technology). The attacking ship's Attack Strength and Attack Technology are used to determine success at firing. 
+</p><p>A hit will reduce the Colony one step (ie: 2), so a Colony with 5 CP is reduced to 3 CP, 3 CP is reduced to 1 CP, and 1 CP is destroyed if hit. A newly colonized Planet with a grounded Colony Ship on it also only requires one hit to destroy. The empty Planet may be colonized again in the future. Damaged Colonies function normally and will grow again in the next Economic Phase.
+</p><p>A hit will reduce a Homeworld one step (ie: 5), so a Homeworld with 20 CP is reduced to 15 CP, 15 CP is reduced to 10 CP, 10 CP to 5 CP, and 5 CP is destroyed if hit.
+</p>
+<h4><span class="mw-headline" id="Post_Combat">Post Combat</span></h4>
+<p>Ships revealed in Combat will stay face-up and can be examined by other players until they return to one of their Colonies where they can flip face-down again.
+</p>
+<h2><span class="mw-headline" id="Exploration">Exploration</span></h2>
+<p>At the start of the game all Systems (hexes) are unexplored, except for each player's Homeworld. If a unit (ship) lands on an unexplored space it <b>must</b> explore that system and apply any effects immediately.
+</p><p>Before beginning its movement, a Cruiser with Exploration Tech level 1 can 'explore' an adjacent hex by peeking at the counter there (on BGA, click as if you were moving into the hex, then click the 'use Exploration tech' button in the prompt area). It then has the choice to reveal or hide the counter. On BGA, if the Cruiser hides the counter, the counter remains hidden unless it is a Mineral 10 or a Space Wreck, in which case it is revealed during the Exploration phase of the player's third turn (unless a ship moves into the hex, of course). Also on BGA, it appears that a ship cannot move into a hex with a counter that has been peeked at and hidden, unless it begins the turn adjacent to that hex (perhaps this is a bug?).
+</p><p>The systems forming a player's <b>Home System</b> are much tamer than those in Deep Space. Each Home System is composed of the following 25 tokens, randomly placed:
+</p>
+<ul><li>11 Minerals (5 CP)</li>
+<li>8 Planets</li>
+<li>2 Nebulas</li>
+<li>2 Asteroids</li>
+<li>1 Barren Planet</li>
+<li>1 Black Hole</li></ul>
+<p><b>Deep Space</b> is instead populated from the following set of 102 tokens:
+</p>
+<ul><li>26 Danger</li>
+<li>14 Minerals (10 CP)</li>
+<li>12 Barren Planets</li>
+<li>10 Nebulas</li>
+<li>10 Asteroids</li>
+<li>10 Black Holes</li>
+<li>5 Lost in Space</li>
+<li>3 Supernovas</li>
+<li>3 Space Wrecks</li>
+<li>6 Warp Points (3x1, 3x2)</li>
+<li>3 Doomsday Machines (1-3)</li></ul>
+<p>(In the Basic Rules, Warp Points and Doomsday Machines are treated as empty space.)
+</p>
+<h4><span id="Planets.2C_Nebulae.2C_Asteroids"></span><span class="mw-headline" id="Planets,_Nebulae,_Asteroids">Planets, Nebulae, Asteroids</span></h4>
+<ul><li>Planets: Can be Colonized</li>
+<li>Nebulae &amp; Asteroids: Affect Movement and Combat</li></ul>
+<h4><span class="mw-headline" id="Minerals">Minerals</span></h4>
+<p>Mineral counters represent valuable resources. They do not affect Movement or Combat and cannot be voluntarily destroyed. Minerals can be towed away to one of your Colonies or your Homeworld by a Mining ship. Each Mining Ship can tow one Mineral counter. There is no cost to pick up or deposit Minerals. You may deposit more than one Mineral per Colony/Homeworld. During the Economic Phase they generate the amount of CP printed on the counter.
+</p><p>If a Mining Ship is destroyed while towing a Mineral, the Mineral is also destroyed. If a Colony with Minerals is destroyed before the Economic Phase, the Mineral is also destroyed.
+</p>
+<h4><span class="mw-headline" id="Black_Holes">Black Holes</span></h4>
+<p>Discovery of a Black Hole in a hex requires units to stop and make a roll to determine survival. Each unit must roll so observant enemies will see how many ships entered the System. A roll of 1-6 and the unit survives, 7-10 means the unit is destroyed. Surviving units may continue any remaining Movement. Black Holes remain for the entire game.
+</p>
+<h4><span id="Danger.21"></span><span class="mw-headline" id="Danger!">Danger!</span></h4>
+<p>Space is full of danger. When this counter is discovered, all units there are destroyed. The hex remains empty in the future.
+</p>
+<h4><span class="mw-headline" id="Super_Nova">Super Nova</span></h4>
+<p>Super Novas dominate an entire sector. If a unit moving into a hex discovered a Super Nova, they must return to the hex they came from. Units may not move or retreat into a Super Nova. Super Novas remain for the entire game.
+</p>
+<h4><span class="mw-headline" id="Lost_in_Space">Lost in Space</span></h4>
+<p>When this counter is discovered by your unit(s), the player to your right shifts your unit(s) 1 hex in any direction. If that hex contains an unexplored system it must be explored. If it contains an enemy you must enter Combat. After leaving the Lost in Space hex, the counter is removed and the hex remains empty for the rest of the game.
+</p>
+<h4><span class="mw-headline" id="Space_Wreck">Space Wreck</span></h4>
+<p>A Space Wreck can be picked up and deposited just like a Mineral. During the Economic Phase, a Space Wreck upgrades a random technology to its next level (according to a d10 roll):
+</p>
+<ul><li>1-2: Ship Size tech</li>
+<li>3-4: Attack tech</li>
+<li>5-6: Defense tech</li>
+<li>7: Tactics tech</li>
+<li>8-9: Movement tech</li>
+<li>10: Shipyard tech</li></ul>
+<p>If the technology already maxed out, the upgrade is lost.
+</p>
+<h2><span class="mw-headline" id="Economic_Phase">Economic Phase</span></h2>
+<p>During the Economic Phase you will be shown the number of CP (Construction Points) generated by your Homeworld/Colonies* and any Minerals you have deposited. You will also have a negative number, which is the cost to keep your fleet Maintained and is equal to your collective Hull Sizes (see below). You may also optionally bid any number of CP to win the choice of player order for the next 3 turns. If nobody bids or there is a tie, the current first player chooses the next player order. The remaining CP balance can be spent on Technology Level upgrades and/or you can click on any of your Colonized Planets or your Homeworld to see which ship units can be built there. Up to 30 unspent CP can be carried forward to the next Economic Phase.
+</p><p><i>* Colonies occupied by an enemy unit with Attack Strength are in <b>Blockade</b> and do not generate CP or Mineral income. (They can still Grow, however).</i>
+</p>
+<h4><span class="mw-headline" id="Maintenance_Costs">Maintenance Costs</span></h4>
+<p>Each ship's Hull Size is equal to its maintenance cost. Bases, Colonies, Colony Ships, Ship Yards, and Mining Ships do not have a Maintenance Cost.
+</p>
+<h4><span class="mw-headline" id="Purchase_Units_and_Technology">Purchase Units and Technology</span></h4>
+<p>Costs for Units and Technology are printed on the Ship Technology Chart and Research Chart. At the start of the game you may only build Scouts, Mining Ships, Colony Ships, Ship Yards, and Decoys. You may build other ships when you advance your Technology Levels.
+</p><p><b>Ship Technology Level:</b> Building a new unit (Ship) automatically builds it at your current Technology Level. You can purchase a Technology Level and a spaceship in the same Economic Phase and it will have the latest tech. Ships already in play, however, are not automatically upgraded (unless playing with Basic Rules options that provide Instant Upgrades). Ship Yards, Bases, and Decoys are the exception, as they <i>will</i> automatically receive all later upgrades that apply to them.
+</p><p><b>Purchase Limits:</b> You may not build ships if all group counters of that ship type are already in play (unless you Scuttle ships to reuse the counter). The counter limits are as follows: 
+</p>
+<ul><li>Combat ships: 5 Scouts, 4 Destroyers, 4 Cruisers, 4 Battlecruisers, 4 Battleships, 2 Dreadnoughts.</li>
+<li>Other units: 15 Colony Ships, 4 Shipyards, 2 Bases, 2 Decoys, 2 Miners.</li>
+<li>Advanced Rules only: 8 Fighters, 4 Raiders, 4 Carriers, 5 Mines, 3 Minesweepers, 20 MS Pipelines.</li></ul>
+<h2><span class="mw-headline" id="Technology">Technology</span></h2>
+<p>Besides ships, you can spend your CPs on Technology Level upgrades. Refer to the Research Chart for each level's cost. Each Technology must be purchased in level order (no skipping over levels) and only one level of each tech may be purchased per Economic Phase.
+</p><p><b>Attack and Defense Technology (3 upgrades each):</b>
+Improve your unit Combat abilities with these two techs. Note that your unit Hull Size limits your Attack and Defense levels to the same amount, never more. This is the only limit on technologies.
+</p><p><b>Tactics Technology (3 upgrades):</b>
+Units/Groups that have a higher Tactics level will fire first in Combat.
+</p><p><b>Ship Size Technology (5 upgrades):</b>
+In order to build larger and more powerful ships, you need to increase your Ship Size technology. You may use this new tech in the same Economic Turn it was purchased.
+</p><p><b>Movement Technology (6 upgrades):</b>
+This dictates how fast (far) your ship may move.
+</p><p><b>Ship Yard Technology (1 upgrade):</b>
+You start with a Ship Yard capable of building ships with a Hull Size of 1. Level 2 grants 1.5 Hull Size and Level 3 grants 2 Hull Size ships. Combine multiple Ship Yards on a Colony to build even larger ships.
+</p><p><b>Terraforming Technology (1 upgrade):</b>
+Once purchased, your Colony Ships can Colonize Barren Planets. Colony Ships built prior to upgrade do not have Terraform.
+</p><p><b>Exploration Technology (1 upgrade):</b>
+This tech provides your Cruiser Ships with advanced sensors which allow you to peek at <i>one</i> adjacent unexplored (face down) counter prior to moving. Once seen, you choose to reveal or leave it face down. If revealed and the counter has any immediate effect, it is discarded and any negative effects do not affect your Cruiser. 
+</p><p>See the Exploration section for additional notes regarding the use of this technology.
+</p>
+<h2><span class="mw-headline" id="Playing_Pieces">Playing Pieces</span></h2>
+<h3><span class="mw-headline" id="System_Markers">System Markers</span></h3>
+<p>Your Home System will contain randomly-placed face-down square counters. Each player's color (red, blue, green, or yellow) will show as an outline on the square counters within their System. The white-outlined counters between players' Systems are "Deep Space" territory.
+</p>
+<h3><span class="mw-headline" id="Homeworld">Homeworld</span></h3>
+<p>Each player has one Homeworld, representing their starting planet/solar system from which they explore the galaxy. Each Homeworld produces 20 CPs (Construction Points). If your Homeworld is defeated by an enemy, you lose the game.
+</p>
+<h3><span class="mw-headline" id="Planets">Planets</span></h3>
+<p>Planets have no function until Colonized. Some planets are Barren and cannot be Colonized until Terra-formed. Habitable planets have a color matching the player Home System.
+</p>
+<h3><span class="mw-headline" id="Colony">Colony</span></h3>
+<p>A Planet that has been Colonized. Once populated, a Colony can grow from 1 CP, to 3 CP, to the maximum of 5 CP.
+</p>
+<h3><span class="mw-headline" id="Group">Group</span></h3>
+<p>Your spaceships of the same type and Technology Level. Each spaceship Group can contain 1-6 units, which is hidden from the enemy until engaged in Combat. The backside of the counter only displays a ship, while the front contains all the details, including: Type, Class, Attack Strength, Defense Strength, Hull Size, and Group Number.
+</p><p>Miners, Colony Ships, and MS Pipelines* are always single ships.
+</p>
+<h4><span class="mw-headline" id="Type">Type</span></h4>
+<p>The upper left corner contains the ship type followed by the group ID number.
+</p>
+<ul><li>BB: Battleships</li>
+<li>BC: Battle Cruisers</li>
+<li>CA: Cruisers</li>
+<li>CV: Carriers*</li>
+<li>DD: Destroyers</li>
+<li>DN: Dreadnaughts</li>
+<li>F: Fighters*</li>
+<li>R: Raiders*</li>
+<li>SC: Scouts</li>
+<li>SW: Minesweepers*</li>
+<li>SY: Shipyards</li></ul>
+<p><i>* denotes Advanced Rules ship types</i>
+</p>
+<h4><span class="mw-headline" id="Class">Class</span></h4>
+<p>This letter determines which ship fires first in Combat (A goes before B).
+</p>
+<h4><span class="mw-headline" id="Attack_Strength_-_Defense_Strength">Attack Strength - Defense Strength</span></h4>
+<p>The lower left corner contains two numbers with a dash between them. The first is your Attack Strength, which is the number you need to score a hit (a 4 means you must roll a 4 or less). The second number is your Defense Strength, which modifies the attacker's die roll, making it harder to hit your ship(s).
+</p>
+<h4><span class="mw-headline" id="Hull_Size">Hull Size</span></h4>
+<p>The number in the lower right with an "x" is your unit Hull Size and indicates how many hits a ship in the group can take before being destroyed. Hull Size also determines the maintenance cost of the ship, the amount of technology that a ship can utilize, and the construction capacity needed to build a ship at a Ship Yard.
+</p>
+<h3><span class="mw-headline" id="Special_Unit_Types">Special Unit Types</span></h3>
+<h4><span class="mw-headline" id="Bases">Bases</span></h4>
+<p>A Base is a defensive unit designed to protect a Colony. Only 1 base may be built per incoming-producing Colony (ie: not a brand new Colony) and it cannot move or retreat. A Base does not require a Ship Yard to be built. Does not have a maintenance cost.
+</p>
+<h4><span class="mw-headline" id="Ship_Yards">Ship Yards</span></h4>
+<p>Ship Yards can only be built on an income-producing Colony, one per Planet. Additional Ship Yards (needed to increase Hull Size production) may be built in future Economic Phases. As Ship Yards are placed along side other units, they cannot produce new Units in the same Phase as their placement. Does not have a maintenance cost. Decoys, Bases, and Ship Yards to not require a Ship Yard to be built.
+</p>
+<h4><span class="mw-headline" id="Decoys">Decoys</span></h4>
+<p>Decoys are unarmed, expendable ships that look just like larger ships or Groups to your opponents. Decoys do not explore, attack, or defend. They always move at the speed of your current Movement Technology Level. Decoys are revealed and destroyed if encountered alone by the enemy (enemy does not reveal themselves). If a Decoy is part of a friendly Group in Combat, it will be destroyed at start of Combat. Does not have a maintenance cost.
+</p>
+<h4><span class="mw-headline" id="Colony_Ships">Colony Ships</span></h4>
+<p>Colony Ships always represent a single ship, always stay face-up, and always move just 1 hex per turn. They flip to their Colony side once they Colonize a Planet.
+</p>
+<h4><span class="mw-headline" id="Mining_Ships">Mining Ships</span></h4>
+<p>Mining Ships always represent a single ship, always stay face-up, and always move just 1 hex per turn. They are used to tow a Mineral or a Space Wreck counter back to one of your Colonies. Does not have a maintenance cost.
+</p>
+<h2><span class="mw-headline" id="Glossary">Glossary</span></h2>
+<ul><li><b>Construction Point (CP):</b> Your Homeworld and your Colonies (planets) produce Construction Points, which are used in the Economic Phase to purchase units, maintain your fleet, and develop technologies.</li>
+<li><b>Group:</b> A counter (token) that represents 1-6 spaceships of the same type. A group can be a single ship as group size is usually hidden from the enemy.</li>
+<li><b>Home System:</b> The group of hexes where your Home System and Homeworld markers are placed.</li>
+<li><b>System:</b> A single hex on the board.</li>
+<li><b>Unit:</b> A Group, Decoy, Miner, Colony Ship, Base, Ship Yard, or MS Pipeline.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpspaceempires" target="_blank" rel="noopener">Spaceempires — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Turingmachine 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Turingmachine · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Turingmachine</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Turingmachine</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h3><span class="mw-headline" id="Overview">Overview</span></h3>
+<p>There is an unknown code consisting of 3 digits (1-5), corresponding to 3 colored shapes (blue triangle, yellow square, purple circle). Digits may appear more than once in each code.   
+</p><p><br />
+You're given a number of verifier cards, each tests a specific criteria of the code, and tells you if your guess meets this criteria. 
+</p><p>The objective of the game is to solve the code in as few moves as possible. By inputting trial codes (proposals) and testing them with the verifiers. 
+</p>
+<h3><span class="mw-headline" id="Turn">Turn</span></h3>
+<p>A turn consists of four or five stages.  
+</p>
+<ol><li><b>Compose</b></li>
+<li><b>Question</b></li>
+<li><b>Deduce</b></li>
+<li><b>End</b></li>
+<li><b>Verification</b> (Not in all rounds)</li></ol>
+<p>All players carry out their turns simultaneously. 
+</p>
+<h3><span class="mw-headline" id="Compose">Compose</span></h3>
+<p>In this phase, each player inputs a 3-digit proposal code.   
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Question">Question</span></h3>
+<p>Players pick up to three of the <b>Verifiers</b> to test their <b>Proposal.</b> 
+</p><p>Each verifiers tests a specific criteria of the code, and tells you if your proposal passes or fails said criteria. 
+</p><p><b>For example</b>: 
+</p><p>A <b>verifier</b> might test if the value of yellow is 3, lower than 3, or higher than 3.
+</p><p>If you input a proposal of 325 (2 for yellow). And the verifier returns as a <b>fail</b>. If 325 returns as failed. That means yellow is either 3, or higher than 3. 
+</p><p>If 325 returns as <b>passed</b>. You now know the value of yellow in the answer is lower than 3.
+</p><p><br />
+</p><p>Note: the verifier doesn't tell you your input is correct. If the answer code has a 1 for yellow, your 2 will pass despite being the incorrect value. 
+</p><p><br />
+Each verifier can be used only once per turn. But can be used again on a new proposal on your next turn.
+</p><p><br />
+</p><p><i>the same <b>colour/shape</b></i>, <i>or</i>
+</p>
+<ol><li>The <b>Verifiers</b> do NOT correspond to colors and/or shapes.  For example:
+<ol><li><i>Two <b>Verifiers</b> may contain criteria towards the same <b>colour/shape</b></i>, <i>or</i></li>
+<li><i>may ask if <b>Yellow/Square</b> is <b>greater than</b> <b>three</b></i>)</li>
+<li><i>Another <b>Verifier</b> may ask if <b>Yellow/Square</b> is <b>greater than</b> <b>three</b></i>)</li></ol></li>
+<li>The <b>Correct</b> and <b>Incorrect</b> answer received does NOT mean the number is right or wrong, but whether or not your proposal passed for that the <b>Verifier.</b></li></ol>
+<h3><span class="mw-headline" id="Deduce">Deduce</span></h3>
+<p>After completing the <b>Verification</b> step, take some time to figure out (but not declare) if you have found the answer.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="End">End</span></h3>
+<p>At the end, count to three, then reveal either a <b>thumbs up</b> (if think you know the code) or a <b>thumbs down</b> (if you are not sure of the code)
+</p><p>If everyone pointed down, return to Compose Phase
+</p><p>If at least one person pointed up, move to the Verification Phase
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Verification">Verification</span></h3>
+<p>The correct code will pass the test of ALL verifiers
+</p><p>If one person is correct, they win!
+</p><p>If more than one person is correct, the person who asked the fewest questions wins!
+</p><p>If no one is correct, they are eliminated!
+</p><p>If the second to last person is eliminated, the final player, even though they did not participate in Verification, will win!
+</p>
+<h3><span class="mw-headline" id="Meaning_of_verifiers">Meaning of verifiers</span></h3>
+<p>Each of the verifiers tell you that one of the criteria tested is true or not.
+</p><p>Per example if it exist a verifier which tell you if [(b&lt;3) or (y&lt;3) or (p&lt;3)], that assure you that the color tested is &lt;3. By testing 222, in all games that verifier would return true (so it's useless to ask). If you test 225, it can return true or false. If it return false, then p&lt;3. If it return true, then you don't know if b&lt;3 or if y&lt;3 or if both are true. If you test 555, it will always return false (so it's useless to ask).
+</p>
+<h3><span class="mw-headline" id="Mode">Mode</span></h3>
+<h4><span class="mw-headline" id="Classic">Classic</span></h4>
+<p>1 card for each verifier. 
+</p>
+<h4><span class="mw-headline" id="Extreme">Extreme</span></h4>
+<p>Each verifier shows two criteria cards. But only tests for 1 of the 2. The criteria tested is always the same, but is unknown to the players initially.  
+</p>
+<h4><span class="mw-headline" id="Nightmare">Nightmare</span></h4>
+<p>You do not know which verifier is associated with which verification card.
+</p>
+<h3><span id="Strategy_.28spoilers.29"></span><span class="mw-headline" id="Strategy_(spoilers)">Strategy (spoilers)</span></h3>
+<p>Each verifier is useful and at the end there is a single solution.
+</p><p>If there is a verifier which test if b&lt;y, b=y, or b&gt;y&#160;; and another test if b&lt;yp, y&lt;bp, or p&lt;by, then if y&lt;bp, that makes the first verifier useless. Same for b&lt;yp. So the second verificator is p&lt;by.
+</p><p>If there is a verifier about the numbers of 4s in the combinaisons, and no others verifiers tell you information about purple, then if p=1, you could have another solution by making p=2. Same for 3&amp;5. So p=4.
+</p><p>For more information, check the following page: <a href="https://en.doc.boardgamearena.com/Tips_turingmachine" target="_blank" rel="noopener">Tips turingmachine</a> .
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpturingmachine" target="_blank" rel="noopener">Turingmachine — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

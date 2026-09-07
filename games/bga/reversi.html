@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Reversi 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Reversi · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Reversi</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Reversi</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>For tips on how to play reversi/othello, see <b><a href="https://en.doc.boardgamearena.com/Tips_reversi" target="_blank" rel="noopener">Tips_reversi</a></b>
+</p><p>The game starts with two black and two white pieces in the board's centre.
+</p><p>Black and white take turns to add pieces to the board. On your turn you <i>must</i> place a piece such that there is an unbroken line of opponent pieces between your added piece and another piece of your colour (horizontal, vertical or diagonal). When you place such a piece, flip the line of opposing pieces to your colour.
+</p>
+<div style="display:flex; flex-flow:row wrap; gap:0rem;">
+<div style="display:grid;grid: repeat(8,54px) / repeat(8,54px) ;gap:2px;width:calc(8 * (54px + 2px) + 2px);height:calc(8 * (54px + 2px) + 2px);position:relative;">
+<div class="board background" style="position:absolute;background:black;left:calc(2 * -2px);top:calc(2 * -2px);width:calc(100% + 4 * 2px);height:calc(100% + 4 * 2px);grid-area:calc(1) / calc(1) / calc(-1) / calc(-1);border-radius:calc(4px + 2 * 2px);"></div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;border-left:solid 2px darkgreen;border-top-left-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;border-right:solid 2px darkgreen;border-top-right-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.2);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(240,240,240,1),inset 0px 20px 5px -5px rgba(255,255,255,0.8),inset 0px -30px 10px -20px rgba(0,0,0,0.2);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.2);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(240,240,240,1),inset 0px 20px 5px -5px rgba(255,255,255,0.8),inset 0px -30px 10px -20px rgba(0,0,0,0.2);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;border-left:solid 2px darkgreen;border-bottom-left-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;border-right:solid 2px darkgreen;border-bottom-right-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+</div>
+<p><br />
+</p>
+<div style="display:grid;grid: repeat(8,54px) / repeat(8,54px) ;gap:2px;width:calc(8 * (54px + 2px) + 2px);height:calc(8 * (54px + 2px) + 2px);position:relative;">
+<div class="board background" style="position:absolute;background:black;left:calc(2 * -2px);top:calc(2 * -2px);width:calc(100% + 4 * 2px);height:calc(100% + 4 * 2px);grid-area:calc(1) / calc(1) / calc(-1) / calc(-1);border-radius:calc(4px + 2 * 2px);"></div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;border-left:solid 2px darkgreen;border-top-left-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;border-right:solid 2px darkgreen;border-top-right-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.2);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(240,240,240,1),inset 0px 20px 5px -5px rgba(255,255,255,0.8),inset 0px -30px 10px -20px rgba(0,0,0,0.2);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;border-left:solid 2px darkgreen;border-bottom-left-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;border-right:solid 2px darkgreen;border-bottom-right-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+</div>
+<p><br />
+</p>
+<div style="display:grid;grid: repeat(8,54px) / repeat(8,54px) ;gap:2px;width:calc(8 * (54px + 2px) + 2px);height:calc(8 * (54px + 2px) + 2px);position:relative;">
+<div class="board background" style="position:absolute;background:black;left:calc(2 * -2px);top:calc(2 * -2px);width:calc(100% + 4 * 2px);height:calc(100% + 4 * 2px);grid-area:calc(1) / calc(1) / calc(-1) / calc(-1);border-radius:calc(4px + 2 * 2px);"></div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;border-left:solid 2px darkgreen;border-top-left-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-top:solid 2px darkgreen;border-right:solid 2px darkgreen;border-top-right-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.2);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(240,240,240,1),inset 0px 20px 5px -5px rgba(255,255,255,0.8),inset 0px -30px 10px -20px rgba(0,0,0,0.2);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.2);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(240,240,240,1),inset 0px 20px 5px -5px rgba(255,255,255,0.8),inset 0px -30px 10px -20px rgba(0,0,0,0.2);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.8);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(15,15,15,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(15,15,15,1),inset 0px 20px 5px -5px rgba(255,255,255,0.1),inset 0px -30px 10px -20px rgba(0,0,0,0.8);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><div style="position:relative;width:50px;height:50px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px -1px 0px -1px rgba(255,255,255,0.8),inset 0px 1px 1px -1px rgba(0,0,0,0.2);"><div style="position:absolute;width:42px;height:42px;top:4px;left:4px;background:rgba(240,240,240,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(240,240,240,1),inset 0px 20px 5px -5px rgba(255,255,255,0.8),inset 0px -30px 10px -20px rgba(0,0,0,0.2);"></div></div></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-left:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,255,255,0.25);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-right:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;border-left:solid 2px darkgreen;border-bottom-left-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:darkgreen;border-bottom:solid 2px darkgreen;border-right:solid 2px darkgreen;border-bottom-right-radius:4px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+</div>
+</div>
+<p>If you cannot place a piece, you must pass.
+</p><p>The game ends when the board is full, or when neither player can make a valid move. The game is won by player with the most pieces of their colour visible.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpreversi" target="_blank" rel="noopener">Reversi — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

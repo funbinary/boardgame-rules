@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Matchstick Tycoon 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Matchstick Tycoon · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Matchstick Tycoon</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Matchstick Tycoon</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p><b>Matchstick Tycoon</b> is a <b>ladder climbing game</b> for <span title="players" style="display:inline-block;position:relative;text-shadow:0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA;font-size:2rem;line-height:calc(2rem * 1.25);"><span aria-hidden="true">👤</span><span style="margin:0;position:absolute;top:70%;left:50%;margin-right:-50%;transform:translate(-50%,-50%);color:#fff;text-shadow:0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A;font-size:calc(2rem / 1.5);font-weight:700;">2<span style="position:absolute;font-size:0;">players</span></span></span> to <span title="players" style="display:inline-block;position:relative;text-shadow:0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA;font-size:2rem;line-height:calc(2rem * 1.25);"><span aria-hidden="true">👤</span><span style="margin:0;position:absolute;top:70%;left:50%;margin-right:-50%;transform:translate(-50%,-50%);color:#fff;text-shadow:0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A;font-size:calc(2rem / 1.5);font-weight:700;">8<span style="position:absolute;font-size:0;">players</span></span></span> players. It's played with a deck of 56 cards representing 7-segment display style <b>hexadecimal numbers</b> (ranging from <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:blue;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">0</span> to <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:orange;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">F</span>, the deck containing <b>4 copies</b> of each value). A unique addition to the genre is introduction of <b>matchsticks</b> that can be used to modify the numbers by <b>filling empty segments</b>.
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>At the start of the game, the deck is distributed as evenly as possible between the players, and each player receives 1 matchstick. Then, players in clockwise order take turns <b>playing a number of cards of the same value</b> from their hands to the table. There are 2 possible cases:
+</p>
+<ul><li>🎴 If there are <b>no cards</b> on the table, current player must play <b>1 to 5 cards</b> of any single value.</li>
+<li>🎴 <b>Otherwise</b>, current player must follow with the <b>same number</b> of cards of <b>stronger value</b> than the previous player, or <b>pass</b>.</li></ul>
+<p>Default <b>card strengths</b> at the start of the game are <b>increasing with value</b>, with <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:orange;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">F</span> being the strongest card.
+</p><p>When playing a card, it's possible to <b>rotate and/or place matchsticks</b> on it to make it look and act like another value.
+</p><p>When <b>passing</b>, a player takes another <b>matchstick from supply</b>. If everyone except the player who <b>played the last cards</b> passes, all cards are <b>removed</b> from the table.
+</p><p>If a player whose turn it is <b>doesn't have</b> any more cards in hand, but still has matchsticks, he/she must instead <b>discard one of the matchsticks</b>. 
+</p>
+<h2><span class="mw-headline" id="Revolution">Revolution</span></h2>
+<p>Any time <b>5 cards</b> are played simultaneously, a <b>revolution</b> happens, causing reversal of card strengths (if previously the strongest value was <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:orange;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">F</span>, <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:blue;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">0</span> becomes strongest, and vice versa). Then, the play continues as usual with the next player, who can cause a new <b>revolution</b> in the same way by following with <b>another 5 cards</b>. 
+</p>
+<h2><span class="mw-headline" id="Game_End">Game End</span></h2>
+<p>The game continues until all players except a single one go out by <b>getting rid of all their cards and matchsticks</b>. The players are ranked according to the <b>order</b> in which they went out.
+</p>
+<h2><span class="mw-headline" id="Expansion">Expansion</span></h2>
+<p>An expansion to the game adds <b>two new card values</b>, <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:orange;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">H</span> and <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:orange;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">G</span>. It's possible to choose, whether to add 2 copies, or 4 copies of each new card to the deck.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpmatchsticktycoon" target="_blank" rel="noopener">Matchstick Tycoon — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

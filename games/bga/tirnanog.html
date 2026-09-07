@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Tirnanog 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Tirnanog · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Tirnanog</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Tirnanog</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Goal">Goal</span></h2>
+<p>Strategically acquire cards and lay them out in your tableau to fulfill scoring conditions better than the other players.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>The game is played over 5 rounds, with 3 phases per round: Journey, Saga, and Cleanup. Each round players take turns placing storytellers, drafting cards from the Otherworld grid, and playing cards into their tableau. 
+</p><p>The tableau consists of 3 rows, each with a unique scoring condition based on the cards' number value. There are additional bonuses based on card color. Maximize both over the course of the game to win.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Components">Components</span></h2>
+<p>~ Cards numbered 0-8 in one of 4 colors: red, yellow, blue and green. Some card provide an immediate or ongoing ability.
+</p><p>~ An Otherworld grid where random cards are staged each round. Grid size varies by player count.
+</p><p>~ 3 Storyteller tokens per player, in their player color. These will be placed on the grid in an to attempt to reserve cards for placement in your personal tableau.
+</p><p>~ Hand of 5 cards.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>Each round has 3 phases, which occur in this order:
+</p><p><br />
+<b>JOURNEY phase: Place your tokens on the grid</b>
+</p><p>Players take turns placing tokens between the cards on the Otherworld grid to indicate which cards they would like to claim during the Saga phase.
+</p><p>Tokens must touch at least 2 cards. They may NOT be placed on an occupied space or on the card corners.
+</p><p><br />
+<b>SAGA Phase: Choose and place cards into your tableau</b>
+</p><p>Players take turns in counterclockwise order choosing a card in the grid. You may only select from among the cards that your token touches. This card is added to your hand. 
+</p><p>~ If none of your tokens touch a card, your storyteller is "lost" and your turn is skipped until only lost storytellers remain in the grid. Then, still in counterclockwise order, take turns selecting from among any of the cards remaining in the grid. Add it to your hand.
+</p><p>Next, place any card from your hand into your tableau. Cards may be placed in any row, but rows are built left to right. A maximum of 5 cards can be placed in a row. Resolve card effects that are triggered by placement.
+</p><p>~ If there are any gaps between cards, from a previous game effect, the next card played to that row must fill the gap.
+</p><p>~ If you don't have a legal placement, simply discard a card from your hand.
+</p><p><br />
+<b>CLEANUP Phase: Discard a card, prepare the grid for the next round, rotate 1st player</b>
+</p><p>Everyone must discard one card from their hand.
+</p><p>Then all cards are discarded from the grid, replaced by a random set of cards.
+</p><p>FIRST PLAYER token moves clockwise to the next player.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="SCORING">SCORING</span></h2>
+<p>At the end of the 5th round: 
+</p><p>Tally points per each row's scoring condition, then add points for color majorities:
+</p><p>For each card color, players receive points for having the LARGEST or 2ND LARGEST <i>orthogonally-connected</i> region of the same color.  In a 1-3 player game, 8 points go to the largest region, and 3 points go to the 2nd largest region.
+</p><p>~ Tied for region size? EACH tied player receives HALF the points for the tied size AND HALF the points of the next lower region size. Other players will not receive points for the lower region size.
+</p><p>For example: If 2 players tie for first place, 8 points divided by 2 players would be 4 points each for first place, AND 3 points divided by 2 players is 1 point each - no second place is awarded.  
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="SOLO_Mode">SOLO Mode</span></h2>
+<p>Balor, the automa, is controlled by his card. On each of his turns, a card is drawn, checked for the presence of an Ailm (plus sign under the card value), and if present, his control card flips over. One one side the highest values are used, on the opposite side of his control card, the lower values are used. The control card is shown next to the Otherworld grid of cards. Balor does not create a grid, but rather cards are placed side by side.
+</p><p><br />
+SOLO Mode Scoring:
+</p><p>Your score for Geas cards are calculated normally. Balor scores the points located in the lower right of each of the three Geas cards. 
+</p><p>Balor's cards are revealed at the end. Choose and discard a number of cards from Balor’s scoring pile based on the difficulty setting you want to play. 
+</p><p>When comparing color regions, Balor’s connected region size is the number of all cards of that color remaining in his scoring pile after discarding. 
+</p><p>Points are awarded like normal for a two-player game: 8 points to the player with the largest region of that color, 3 points to the player with the second largest region, and 0 points to players with regions of 0 or 1 cards. Ties split the first and second total 11 points evenly rounded down, so 5 points each.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptirnanog" target="_blank" rel="noopener">Tirnanog — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

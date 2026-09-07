@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Eightyeight 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Eightyeight · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Eightyeight</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Eightyeight</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Rules_of_Hachi-hachi">Rules of Hachi-hachi</span></h2>
+<p>Hachi-hachi is a Hanafuda game played in 6 or 12 rounds.<br />A month (1 round) consists of a bidding phase, a playing phase, and a scoring phase.
+</p>
+<ul><li>One set of Hanafuda (12 suits, 4 cards each) is used.</li>
+<li>Hachi-hachi can be played with 3 to 6 players, but each playing phase is played with only three players. In the bidding phase, players will determine whether they will join the playing phase or sit out this round.</li></ul>
+<ul><li>The units of scoring are kan and mon. <b>1 kan is equivalent to 12 mon.</b><br />~ mon values are always written as a zero or a positive number. For example, if you're forced to pay 5 mon, it will be displayed as "-1 kan 7 mon". (-12 mon +7 mon)<br />~ Your score on BGA is your kan value. mon is used only to break ties in final scoring.</li></ul>
+<h4><span class="mw-headline" id="Points_can_neither_be_created_nor_destroyed.">Points can neither be created nor destroyed.</span></h4>
+<ul><li>All points (kan and mon) are paid from one player to another. There is no central bank, and any loss or gain of points will be equally split among the players affected.</li></ul>
+<ul><li>Whenever you gain kan during the playing or scoring phase, you take half that amount from each opponent who called "In the Play" that round.<br />~ For example, if you gained 5 kan from a yaku, you would take 2.5 kan each from your two opponents that round.</li></ul>
+<p><b>Special rule:</b> All Willow (November) suit cards count as Chaff cards when determining <b>hand yakus</b> (Te-Yaku), <b>card-set yakus</b> (Deki-Yaku), and <b>special-scoring yakus</b> (Tokushu-Yaku).
+</p>
+<h2><span class="mw-headline" id="Initial_Setup">Initial Setup</span></h2>
+<p>Randomly determine the dealer (1st player) and seating order.<br />Initial ante: Each player begins the game with -5 kan in a full game (12 rounds), or -3 kan in a half game (6 rounds).
+</p>
+<h3><span id="Setup_for_each_month_.281_round.29"></span><span class="mw-headline" id="Setup_for_each_month_(1_round)">Setup for each month (1 round)</span></h3>
+<ul><li>Before dealing any hands, the dealer may call "<i>Mizuten</i>". This commits them to "Join the Play" that round without knowing their hand's contents. ~ At the end of the round, if the player who called "<i>Mizuten</i>" scores 89 points or more, they take 1 kan from each opponent at the table. ~ However, if the player who called "<i>Mizuten</i>" scores 88 points or less, they pay 1 kan to the other two players who called "Join the Play".</li>
+<li>they take 1 kan from each player at the start of the playing phase, and additional kan if they score 89 points or more during the playing phase.</li></ul>
+<p>The dealer deals 7 cards to each player, then deals 6 face-up cards to the table.
+</p>
+<ul><li>Determine the scoring multiplier for the round <i>(Small deal = 1x;  Big deal = 2x;  Great deal = 4x)</i>.<br />~ Small Deal: If no Bright cards appear on the table, the deal is a "small deal" and no multiplier is applied. (1x)<br />~ Big Deal: If a Bright card of Pine (January), Cherry Blossom (March) or Eulalia (August) appears on the table, the deal is a "big deal", and all subsequent gains and losses are doubled. (2x)<br />~ Great Deal: If a Bright card of Willow (November) or Paulownia (December) appears on the table, the deal is a "great deal", and all subsequent gains and losses are quadrupled. (4x)<br />~ If more than one Bright card appears on the table, apply the higher multiplier to this round, and carry the lower multiplier over to the next round.</li>
+<li>Scoring multipliers apply to all payments given and received in a round, including "Get Out of Play" fees.</li></ul>
+<h2><span class="mw-headline" id="Bidding_phase">Bidding phase</span></h2>
+<p><b>3-player game</b>: When there are only three players in the game, the bidding phase is omitted.
+</p>
+<ul><li>Starting with the dealer, each player looks at their hand and declares whether they want to "Join the Play" or "Get Out of Play".<br />~ If the dealer called "<i>Mizuten</i>" before looking at their hand, they must "Join the Play".<br />~ If the player chooses "Join the Play", they commit to playing their hand for that round.<br />~ If the player chooses "Get Out of Play", they score their current hand and then sit out this round. The first player to call "Get Out of Play" pays 1 kan, the second player pays 1.5 kan, and the third player pays 2 kan.</li></ul>
+<ul><li>If three players call "Join the Play", all remaining players must call "Get Out of Play".</li>
+<li>If three players call "Get Out of Play", all remaining players must call "Join the Play".</li></ul>
+<h4><span id="Scoring_for_.22Join_the_Play.22_players"></span><span class="mw-headline" id="Scoring_for_&quot;Join_the_Play&quot;_players">Scoring for "Join the Play" players</span></h4>
+<ul><li>Players who call "Join the Play" and have a <b>hand yaku</b> (Te-Yaku) will take points from the other two players who called "Join the Play".</li>
+<li>Once all yakus have been scored, all hands from players who called "Get Out of Play" are shuffled together to form the central deck.</li></ul>
+<h4><span id="Scoring_for_.22Get_Out_of_Play.22_players"></span><span class="mw-headline" id="Scoring_for_&quot;Get_Out_of_Play&quot;_players">Scoring for "Get Out of Play" players</span></h4><p>Players who call "Get Out of Play" take points from the players who called "Join the Play" that round, based on yakus present in their starting hand.
+</p><ul><li>If the player has a <b>hand yaku</b> (Te-Yaku), they take half of its value, split evenly among the players who called "Join the Play".</li>
+<li>If the player has a <b>card-set yaku</b> (Deki-Yaku) in their hand, they take half of its value, split evenly among the players who called "Join the Play".</li>
+<li>If a player was forced to "Get Out of Play", they receive points based on how many Bright cards are in their hand from each player who called "Join the Play". <i>(How many? I have no clue. Someone please explain?)</i></li>
+<li>Once all yakus have been scored, all hands from players who called "Get Out of Play" are shuffled together to form the central deck.</li></ul>
+<h2><span class="mw-headline" id="Playing_phase">Playing phase</span></h2>
+<p>Players take turns playing and capturing cards in the order in which they called "Join the Play".
+</p>
+<ul><li>The active player plays a card from their hand. If a card of the same suit is on the table, the player captures both cards.</li>
+<li>Next, the active player flips over the top card of the central deck. If a card of the same suit is on the table, the player captures both cards.<br />~ If there are two cards of a matching suit on the table, the player chooses one to capture and the other card remains on the table.<br />~ If there are three cards of a matching suit on the table, the player captures all four cards.<br />~ If there are <i>no</i> cards of that suit on the table, the player captures nothing and the card remains on the table.</li></ul>
+<p>When a player completes a <b>card-set yaku</b> (Deki-Yaku) with their captured cards, they may choose "Stop" or "Continue playing".
+</p>
+<ul><li>If they choose "Stop", the playing phase ends immediately and the scoring phase begins. You will win a considerable amount of points from choosing "Stop", so it is advised in most situations.<br /></li>
+<li>If they choose "Continue playing", with the intent of creating an additional yaku before anyone else does, see this section:</li></ul>
+<h4><span id="Rule_of_.22Continue_playing.22"></span><span class="mw-headline" id="Rule_of_&quot;Continue_playing&quot;">Rule of "Continue playing"</span></h4><p>When a player completes a <b>card-set yaku</b> (Deki-Yaku) and is likely to complete a second one, they may choose to "Continue playing".<br />~ On BGA, if there is no possibility that another <b>card-set yaku</b> can be constructed, the game will move to the scoring phase automatically.
+</p><ul><li>When the continuing player completes their second <b>card-set yaku</b> (Deki-Yaku):<br />~ The continuing player scores both yakus.</li>
+<li>But if another player completes a <b>card-set yaku</b> (Deki-Yaku) first:<br />~ The continuing player's yaku is nullified.<br />~ The continuing player must pay kan to the creator of the new yaku <i>from their stash exclusively</i> (the third player does not have to pay).</li>
+<li>If no player completes another <b>card-set yaku</b> (Deki-Yaku) before the round ends:<br />~ The continuing player scores only half of the points of their first completed yaku.</li></ul>
+<h4><span id="Rule_of_.22Hatto.22"></span><span class="mw-headline" id="Rule_of_&quot;Hatto&quot;">Rule of "Hatto"</span></h4>
+<p>When a player needs only one more card to complete a <b>card-set yaku</b> (Deki-Yaku), they are considered "Hatto".
+</p>
+<ul><li>If the round ends by another player completing a <b>card-set yaku</b>, the non-"Hatto" player must pay kan to the winner by themselves.</li>
+<li>Note that if a player's final card is what puts them into "Hatto" mode, it does not count. (They must still split the payment with the other losing player, as normal)</li></ul>
+<h2><span class="mw-headline" id="Scoring_phase">Scoring phase</span></h2>
+<p>When the playing phase ends without any player completing a <b>card-set yaku</b> (Deki-Yaku), check if any player completed a <b>special-scoring yaku</b> (Tokushu-Yaku).
+</p>
+<ul><li>If a <b>special-scoring yaku</b> (Tokushu-Yaku) is completed, any <b>hand yakus</b> (Te-Yaku) paid out at the beginning of the round will be refunded.</li></ul>
+<p>If no players completed any <b>card-set yakus</b> (Deki-Yaku) or <b>special-scoring yakus</b> (Tokushu-Yaku), players score the values of their captured cards this round.
+</p>
+<ul><li>Each player calculates the sum total of the scores of their captured cards. They receive [(sum - 88) * multiplier] mon, with gains and losses paid by the players in that round.</li></ul>
+<p>If a player is entitled to score additional kan from their <b>hand yakus</b> (Te-Yaku) or <i>Mizuten</i>, it will be paid now.
+</p><p>The player who wins the round (either with a yaku or by having the most card points) receives all payments from the "get out fee" paid by the players who called out of the round. (2 kan/3.5 kan/4.5 kan for 4/5/6 players)<br />~ If two players are tied for the highest score, the player first in turn order receives the bonus.
+</p><p>The player who wins the round will be the dealer next round.
+</p>
+<h4><span class="mw-headline" id="Final_Scoring">Final Scoring</span></h4>
+<p>At the end of 12 rounds, the player with the highest score receives the jackpot of (# of players * 5) kan, composed of the antes paid at the start of the game. If there is a tie, the winners split the jackpot equally. This is not relevant for BGA, but in the real world the winner would walk away with even more money.
+</p>
+<h2><span class="mw-headline" id="Details_of_yakus">Details of yakus</span></h2>
+<h3><span id="List_of_Hand_yakus_.28Te-Yaku.29"></span><span class="mw-headline" id="List_of_Hand_yakus_(Te-Yaku)">List of Hand yakus (Te-Yaku)</span></h3>
+<p>There are two types of <b>hand yakus</b>: by number of Chaff cards, and by suit distribution.<br />~ If a player achieves both a Chaff yaku and a Suit yaku, they score them both.<br /><b>Hand yakus</b> are scored at the end of the bidding phase, based on the player's starting hand of 7 cards.
+</p>
+<h4><span class="mw-headline" id="Hand_yakus_by_Chaff_cards"><u>Hand yakus by Chaff cards</u></span></h4>
+<ul><li><i><b>All Chaff</b></i> (4 kan)<br />~ If a player has 7 Chaff cards <i><b>[including any Willow (November) cards, which count as Chaff]</b></i> in their hand, they receive 4 kan.<br />~ The player reveals all cards in their hand.<br />~ If that player scores 89 points or more during the playing phase, they take 1 additional kan.</li>
+<li><i><b>Single Bright</b></i> (4 kan)<br />~ If a player has 6 Chaff cards <i>[including Willows]</i> and a Bright card in their hand, they receive 4 kan.<br />~ The player reveals 6 Chaff cards in their hand.</li>
+<li><i><b>Single Animal</b></i> (3 kan)<br />~ If a player has 6 Chaff cards <i>[including Willows]</i> and a Animal card in their hand, they receive 3 kan.<br />~ The player reveals 6 Chaff cards in their hand.<br />~ If that player scores 89 points or more during the playing phase, they take 1 additional kan.</li>
+<li><i><b>Single Ribbon</b></i> (3 kan)<br />~ If a player has 6 Chaff cards <i>[including Willows]</i> and a Ribbon card in their hand, they receive 3 kan.<br />~ The player reveals 6 Chaff cards in their hand.<br />~ If that player scores 89 points or more during the playing phase, they take 1 additional kan.</li>
+<li><i><b>Red</b></i> (2 kan)<br />~ If a player has only Ribbon cards and Chaff cards <i>[including Willows]</i> in their hand, they receive 2 kan.<br />~ The player reveals all Chaff cards in their hand.<br />~ If all seven cards in the hand are Ribbon cards, the yaku is also "Aka". No hand cards are revealed.<br />~ If that player scores 89 points or more during the playing phase, they take 1 additional kan.</li></ul>
+<h4><span class="mw-headline" id="Hand_yakus_by_suit_distribution"><u>Hand yakus by suit distribution</u></span></h4>
+<ul><li><i><b>Three</b></i> (2 kan)<br />~ If the player's suit distribution in hand is 3+1+1+1+1 or 3+2+1+1, they receive 2 kan <i>[from those "In the Play" that round]</i>.<br />~ The player reveals the 3-card set in their hand.<br />~ If that player captures all four cards of that suit, they take 1 additional kan.</li>
+<li><i><b>Weak Three</b></i> (3 kan)<br />~ If the player's suit distribution in hand is 3+1+1+1+1 or 3+2+1+1, and the 3-card suit is Wisteria (April), Iris (May), Bush Clover (July), or three Chaff cards of Paulownia (December), they receive 3 kan.<br />~ The player reveals the 3-card set in their hand.<br />~ If that player captures all four cards of that suit, they take 1 additional kan.</li>
+<li><i><b>Three Pairs</b></i> (4 kan)<br />~ If the player's suit distribution in hand is 2+2+2+1 they receive 4 kan.<br />~ The player reveals the three pairs in their hand.</li>
+<li><i><b>Four</b></i> (6 kan)<br />~ If the player's suit distribution in hand is 4+1+1+1 they receive 6 kan.<br />~ The player reveals the 4-card set in their hand.</li>
+<li><i><b>Full House</b></i> (7 kan)<br />~ If the player's suit distribution in hand is 3+2+2 they receive 7 kan.<br />~ The player reveals all cards in their hand.</li>
+<li><i><b>One Two Four</b></i> (8 kan)<br />~ If the player's suit distribution in hand is 4+2+1, they receive 8 kan.<br />~ The player reveals all cards in their hand.</li>
+<li><i><b>Double Threes</b></i> (6 kan)<br />~ If the player's suit distribution in hand is 3+3+1, they receive 6 kan.<br />~ The player reveals both 3-card sets in their hand.<br />~ If the player captures all four cards of both of those suits, they take 1 additional kan.</li>
+<li><i><b>Three Weak Three</b></i> (7 kan)<br />~ If the player's suit distribution in hand is 3+3+1, and one of the 3-card suits is Wisteria (April), Iris (May), Bush Clover (July), or three Paulownia (December) Chaff cards, they receive 7 kan.<br />~ The player reveals both 3-card sets in their hand.<br />~ If the player captures all four cards of both of those suits, they take 1 additional kan.</li>
+<li><i><b>Double Weak Threes</b></i> (8 kan)<br />~ If the player's suit distribution in hand is 3+3+1, and both of the 3-card suits are Wisteria (April), Iris (May), Bush Clover (July), or three Paulownia (December) Chaff cards, they receive 8 kan.<br />~ The player reveals both 3-card sets in their hand.<br />~ If the player captures all four cards of both of those suits, they take 1 additional kan.</li>
+<li><i><b>Four Three</b></i> (20 kan)<br />~ If the player's suit distribution in hand is 4+3, they receive 20 kan.<br />~ The player reveals all cards in their hand.</li></ul>
+<h4><span class="mw-headline" id="Other"><u>Other</u></span></h4>
+<ul><li><i><b>Mizuten</b></i><br />~ The dealer of a round may call "<i>Mizuten</i>" before they see their hand, adding additional risk and reward.<br />~ At the end of the round, if the player who called "<i>Mizuten</i>" scores 89 points or more, they take 1 kan from each opponent at the table. ~ However, if the player who called "<i>Mizuten</i>" scores 88 points or less, they pay 1 kan to the other two players who called "Join the Play".</li></ul>
+<h3><span id="List_of_Card-set_yakus_.28Deki-Yaku.29"></span><span class="mw-headline" id="List_of_Card-set_yakus_(Deki-Yaku)">List of Card-set yakus (Deki-Yaku)</span></h3>
+<p>When a player acquires a <b>card-set yaku</b> during the playing phase, they may choose to "Stop" and score the round immediately, or "Continue Playing" to attempt to score a second yaku.
+</p><p>The player who completes a <b>card-set yaku</b> will receive the noted value from <i>each</i> opponent who called "Join the Play" this round.
+</p>
+<ul><li><i><b>Three Poetry Red Ribbons</b></i> (7 kan)<br />~ When a player captures 3 Ribbon cards of Pine (January), Plum Blossom (February), and Cherry Blossom (March), they receive 7 kan.</li>
+<li><i><b>Three Blue Ribbons</b></i> (7 kan)<br />~ When a player captures 3 Ribbon cards of Peony (June), Chrysanthemum (September), and Maple (October), they receive 7 kan.</li>
+<li><i><b>Seven Ribbons</b></i> (10 kan)<br />~ When a player captures 7 of the 9 Ribbon cards (excluding the Willow (November) Ribbon card, which counts as a Chaff) they receive 10 kan.</li>
+<li><i><b>Four Brights</b></i> (10 kan)<br />~ When a player captures 4 Bright cards of Pine (January), Cherry Blossom (March), Eulalia (August), and Paulownia (December), they receive 10 kan.</li>
+<li><i><b>Five Brights</b></i> (12 kan)<br />~ When a player captures 5 Bright cards of Pine (January), Cherry Blossom (March), Eulalia (August), Paulownia (December), and Willow (November), they receive 12 kan.</li></ul>
+<h3><span id="List_of_Special-scoring_yakus_.28Tokushu-Yaku.29"></span><span class="mw-headline" id="List_of_Special-scoring_yakus_(Tokushu-Yaku)">List of Special-scoring yakus (Tokushu-Yaku)</span></h3><p>During the scoring phase, players check if they completed any <b>special-scoring yakus</b>.<br />~ If any player does, all <b>hand yakus</b> (Te-Yaku) paid at the beginning of this round will be refunded.
+</p><ul><li><i><b>16 Chaffs</b></i> (12 kan)<br />~ If a player captured 16 or more Chaff cards (including Willows), they receive 12 kan.<br />~ For each additional Chaff card above 16 (including Willows), they take an additional 2 kan.</li>
+<li><i><b>Double Score</b></i> (10 kan)<br />~ If a player scored 168 points or more during the playing phase, they receive 10 kan.<br />~ For each additional point scored, they take an additional 1 kan.</li>
+<li><i><b>All 88</b></i> (20 kan)<br />~ In the unlikely event that all three players have a score of exactly 88 points at the end of the playing phase, the player first in turn order gains 20 kan.</li></ul>
+<h2><span class="mw-headline" id="Hanafuda_cards">Hanafuda cards</span></h2>
+<p>A Hanafuda deck consists of 12 suits, with 4 cards per suit. Here is the card-value distribution for each suit:
+</p>
+<table>
+      <tbody><tr><th><b>Month</b></th><th><b>Suit (Flower)</b></th><th><b>Card composition</b></th></tr>
+      <tr><td>January</td><td>Pine</td><td>Bright, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>February</td><td>Plum Blossom</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>March</td><td>Cherry Blossom</td><td>Bright, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>April</td><td>Wisteria</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>May</td><td>Iris</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>June</td><td>Peony</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>July</td><td>Bush Clover</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>August</td><td>Eulalia</td><td>Bright, Animal, Chaff, Chaff</td></tr>
+      <tr><td>September</td><td>Chrysanthemum</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>October</td><td>Maple</td><td>Animal, Ribbon, Chaff, Chaff</td></tr>
+      <tr><td>November</td><td>Willow*</td><td><i>Bright, Animal, Ribbon, Chaff</i></td></tr>
+      <tr><td>December</td><td>Paulownia</td><td>Bright, Chaff, Chaff, Chaff</td></tr>
+    </tbody></table>
+<p><i>*All Willow (November) suit cards count as Chaff cards when forming yakus.</i>
+</p>
+<h4><span class="mw-headline" id="Card_points">Card points</span></h4><p>The point values of cards captured during the playing phase are as follows:</p><table>
+      <tbody><tr><th><b>Card type</b></th><th><b>Value</b></th></tr>
+      <tr><td>Bright (Hikari) card</td><td>20 mon</td></tr>
+      <tr><td>Animal (Tane) card</td><td>10 mon</td></tr>
+      <tr><td>Ribbon (Tanzaku) card</td><td>5 mon</td></tr>
+      <tr><td>Chaff (Kasu) card</td><td>1 mon</td></tr>
+    </tbody></table></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpeightyeight" target="_blank" rel="noopener">Eightyeight — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "boardgame-rules",
+  "version": "1.0.0",
+  "private": true,
+  "description": "桌游规则书 — 纯静态站点，本地预览用 npm start",
+  "scripts": {
+    "start": "serve -l 18080 ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

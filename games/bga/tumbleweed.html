@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Tumbleweed 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Tumbleweed · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Tumbleweed</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Tumbleweed</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Game_description">Game description</span></h2>
+<p>Tumbleweed is a two-player game. It is played on a hexhex board and a sufficient supply of stacked checkers.
+</p><p>A stack can "see" a hex, when they are connected by a straight line, with no stacks in between. The players take turns placing stacks of their tokens on hexes that are seen by at least one friendly stack. The height of every newly-placed stack equals the number of your stacks that see the new stack. Replacing an existing stack with a new stack is possible, as long as the new stack is taller than the previous one. This works with opponent stacks (to capture), or your own stacks (to reinforce).
+</p><p>Before the game, the host sets up the board and the guest decides which side they want to play (<b>red is first player, white is second player</b>). Setup consists of one stack of two neutral tokens in the central hex, and a single starting token for each player in hexes of the host's choosing.
+</p><p>The game ends when no more moves can be made by either player, or after two successive passes. The player who occupies over half the board wins.
+</p><p>Tumbleweed was voted Best Combinatorial 2-Player Game of 2020 on BGG.
+</p><p>This game description is copied from BoardGameGeek Tumbleweed page.
+</p>
+<h2><span class="mw-headline" id="Game_end_reminder">Game end reminder</span></h2>
+<p>Currently the game displays a reminder when both players neither capture a stack nor affect contested, empty, or opponent's controlled hexes for total of 3 turns.
+</p><p>If the stale situation continues for 2 additional turns after the reminder the game ends automatically.
+</p><p>Passing the turn is recommended when both players cannot expand territories any further.
+</p>
+<h2><span class="mw-headline" id="Options">Options</span></h2>
+<p>BGA implementation supports new game options and various player preference options.
+</p><p><b>Default options are bolded.</b>
+</p>
+<h3><span class="mw-headline" id="Board_size">Board size</span></h3>
+<ul><li><b>6x6x6</b>: The smallest board. Recommended for beginners and blitz games.</li></ul>
+<ul><li>8x8x8: The standard game board for competitive games.</li></ul>
+<ul><li>10x10x10: A larger game board. Recommended for correspondence games or complex games.</li></ul>
+<ul><li>11x11x11: The largest board. Recommended for correspondence games or deeper games.</li></ul>
+<h3><span class="mw-headline" id="Initial_setup">Initial setup</span></h3>
+<ul><li><b>Original setup</b>: The neutral stack is placed in the center.</li></ul>
+<ul><li>Free setup: The tentative first player places the neutral stack.</li></ul>
+<h3><span class="mw-headline" id="Player_aid">Player aid</span></h3>
+<ul><li>Beginner: Running score includes not only owned hexes with stacks, but also controlled empty hexes. Controlled hexes are highlighted and nonsucidal capture moves are outlined. Move preview displays suicidal stacks as gray.</li></ul>
+<p>Players may turn off controlled hex highlights and/or capturable hex outlines through player preference option.
+</p>
+<ul><li><b>Intermediate</b>: Running score includes not only owned hexes with stacks, but also controlled empty hexes. Move preview displays suicidal stacks as gray.</li></ul>
+<ul><li>Expert: Running score does not include controlled empty hexes. The number of controlled hexes is revealed at the end of the game. Move preview displays only color of stacks to be placed.</li></ul>
+<p>This option simulates real-life games.
+</p>
+<h3><span class="mw-headline" id="Player_preference_options">Player preference options</span></h3>
+<p>Open upper right menu from game screen or click 'Options' tab below the game board to access these preference options.
+</p>
+<h4><span class="mw-headline" id="Display_confirmation">Display confirmation</span></h4>
+<ul><li><b>Enabled</b>: Preview stack is displayed after clicking the hex. The player must confirm the move by clicking the preview stack to execute it.</li></ul>
+<ul><li>Disabled: All stacks are instantly placed without any preview.</li></ul>
+<p>In Expert mode, preview only displays color of stack to be placed.
+</p>
+<h4><span class="mw-headline" id="Highlight_last_move">Highlight last move</span></h4>
+<ul><li><b>Enabled</b>: The last move is highlighted as a yellow tone.</li></ul>
+<ul><li>Disabled: The last move is not highlighted.</li></ul>
+<h4><span class="mw-headline" id="Display_coordinates">Display coordinates</span></h4>
+<ul><li><b>Enabled</b>: The coordinates are displayed around the game board.</li></ul>
+<ul><li>Disabled: The coordinates around the game board are not displayed.</li></ul>
+<h4><span id="Display_influences_.28Beginner_mode_only.29"></span><span class="mw-headline" id="Display_influences_(Beginner_mode_only)">Display influences (Beginner mode only)</span></h4>
+<ul><li><b>Enabled</b>: Controlled empty hexes are highlighted as the controller's color. Light red displays contested hexes where both players have same influence.</li></ul>
+<ul><li>Disabled: The influences of empty hexes are not displayed.</li></ul>
+<p>This option does not have any effect in Intermediate and Expert player aid level.
+</p>
+<h4><span id="Highlight_nonsucidal_captures_.28Beginner_mode_only.29"></span><span class="mw-headline" id="Highlight_nonsucidal_captures_(Beginner_mode_only)">Highlight nonsucidal captures (Beginner mode only)</span></h4>
+<ul><li><b>Enabled</b>: The border of nonsuicidal captures change.</li></ul>
+<p>Only capturable stacks are highlighted, so reinforceable own stacks are not highlighted.
+</p><p>Also, captures leading to immediate recaptures are also not highlighted.
+</p>
+<ul><li>Disabled: Capturable stacks are not highlighted.</li></ul>
+<p>This option does not have any effect in Intermediate and Expert player aid level.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptumbleweed" target="_blank" rel="noopener">Tumbleweed — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

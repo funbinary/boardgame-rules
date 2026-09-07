@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Bandofbrothers 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Bandofbrothers · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Bandofbrothers</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Bandofbrothers</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h3><span class="mw-headline" id="Overview">Overview</span></h3>
+<p>The following covers basic rules only as not all rules are needed in every scenario, it will get you through the training scenario just fine, but beyond that you will need to refer to the main rulebook attached
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Key_Initials">Key Initials</span></h3>
+<p>CP - Command Points
+</p><p>FP - Fire Power
+</p><p>LOS - Line of Sight
+</p><p>MC - Morale Check
+</p><p>MP - Movement Points
+</p><p>OF - Opportunity Fire
+</p><p>SATW - Special Anti-Tank Weapon
+</p><p>UK - Unconfirmed Kill
+</p><p>WT - Weapons Team
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Unit_Breakdown">Unit Breakdown</span></h3>
+<p>A basic unit has 5 movement points, 4 if a WT, otherwise most info is on the tile
+</p><p>Along the right side is the unit Morale in white then yellow then red
+</p><p>At the base, from left to right, you have: Firepower with two numbers separated by a slash, Melee power in a small lower indexed number connected to this, Range in the middle, then Casualty on the far right with two numbers separated by a slash
+</p><p>Firepower is made up of normal firepower on the left, and Opportunity and Assault Firepower on the right
+</p><p>Range is the maximum number of hexes a unit can shoot up to
+</p><p>Casualty is the likelihood to take further casualties and is made up of a normal and a reduced value
+</p><p>Some units also have a SATW number, the lower the better
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Phases">Phases</span></h3>
+<p>The game is played over 4 phases, with each player taking their turn for that phase, then the other player, before moving to the next phase. The phases are:
+</p><p>1) Operations
+</p><p>2) Rout
+</p><p>3) Melee
+</p><p>4) Recovery
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Operations_Phase">Operations Phase</span></h3>
+<p>Each player has a number of actions they can perform, with a minimum and a maximum allowance, each unit can only perform once. This alternates until both players have used all their units.
+</p><p>A Unit can either move, fire, take opportunity, or do nothing but still use an action
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Movement">Movement</span></h3>
+<p>First, the unit takes a Morale Check (see "Suppression") then may move up to its movement points, generally 1 hex = 1 movement point, but some terrain seen in later scenarios may require more MP per hex
+</p><p>Units are vulnerable when moving and may receive Opportunity Fire from the opponent which may result in another Morale Check
+</p><p>Movement may be paired with an Assault Fire to allow it to move and fire in the same action
+</p><p>If a unit is declared as retreating before the start of their action, they gain +4 Morale but may not Assault Fire
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Fire">Fire</span></h3>
+<p>Units may fire upon enemy units which are up to their range, or up to double their range for half firepower, but not in the same hex as the firing unit or if the hex contains friendlies
+</p><p>First, except for Assault Fire, a Morale Check (see "Suppression") needs to be succeeded
+</p><p>When ready, roll the dice, if the value is less than or equal to the units Firepower, the shot hits and the enemy unit moves down one Suppression level (White to Yellow or Yellow to Red)
+</p><p>During a successful fire, casualties may be taken (see "Casualties")
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Suppression">Suppression</span></h3>
+<p>Suppression is used to track Morale, no Suppression gives a unit its White morale value, Yellow and Red Suppression tokens give a unit the morale value for that colour.
+</p><p>If a unit needs to take a Morale Check, White Morale is automatic success, whilst in Yellow or Red a dice needs to be rolled and the result needs to be equal or lower to succeed
+</p><p>The Red and Yellow Suppressions will regress during the Recovery Phase
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Casualties">Casualties</span></h3>
+<p>When an attack is made, if the first Casualty number can be added to the roll and it stays successful then it is flipped and takes 2 levels of Suppression if able. If the same can be said for the second/right number, then it is removed
+</p><p>e.g. the roll is 2, the casualty number of the target is 4, the FP of the attacker is 7, 4+2=6 which is still lower than 7, so a casualty effect occurs
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Opportunity_Fire">Opportunity Fire</span></h3>
+<p>Any unused unit may take Opportunity Fire if the enemy unit moves within their range. This will use the unit for that operations phase, i.e. no further actions may be taken by it. This works similar to normal Fire, except you use the Opportunity/Assault FP rather than the left normal FP. However, if the unit had already taken an action to prepare for Opportunity Fire, it gets a +1 to its FP. It may also gain a +1 to FP if the enemy unit is directly adjacent. (Note that Opportunity/Assault FP can never exceed normal FP, no matter the modifiers)
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Final_Opportunity_Fire">Final Opportunity Fire</span></h3>
+<p>This works essentially like Opportunity Fire, except it can only be taken by units which have already acted, and can only be used against directly adjacent enemy units and gives an FP modifier of -2
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Rout_Phase">Rout Phase</span></h3>
+<p>Units Rout if they fall under any of the following conditions:
+</p><p>1) They are in the same hex as an enemy
+</p><p>2) They are adjacent to an enemy which is not engaged in melee
+</p><p>3) They are in Open Ground, and within 5 Hexes of an enemy who has line of sight of them
+</p><p>If any condition is met, a Morale Check is taken, but only one even if multiple conditions are true. If passed, nothing happens, otherwise:
+</p><p>It must move at least one or up to its movement away from the enemy, and not move adjacent to enemy units
+</p><p>If options are available, it must first aim towards beneficial terrain or otherwise to the edge of the map
+</p><p>If it can't move due to enemy positions, it is eliminated
+</p><p>If it moves towards the edge of the board, reaches it, and still has movement remaining, it is eliminated
+</p><p>If they are still on the board, and their Morale Check met their casualty value, they are flipped (if not already) and given Red Suppression
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Melee_Phase">Melee Phase</span></h3>
+<p>If a unit is in the same hex as an enemy unit, melee occurs
+</p><p>If a unit has a melee value, it uses this, otherwise it uses normal FP. 2 dice are rolled and each which is equal or less than their melee value causes the enemy to be flipped
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Recovery_Phase">Recovery Phase</span></h3>
+<p>Unless in Melee, all units reduce Suppression by one step (i.e. Red to Yellow or Yellow to White)
+</p><p>All used, Opportunity Fire, and CP tokens are removed
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Line_of_Sight">Line of Sight</span></h3>
+<p>Line of sight is measured from the centre of the unit hex to the centre of the target hex
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Conceal_and_Decoy">Conceal and Decoy</span></h3>
+<p>Concealed Units reduce the attackers FP by 1
+</p><p>Concealed Units may lose this status a number of ways:
+</p><p>1) Taking Suppression
+</p><p>2) An enemy moves into the adjacent hex and survives any Opportunity Fire
+</p><p>3) They move into Line of Sight whilst in Open Ground
+</p><p>4) They perform a Fire or Assault action
+</p><p>5) The owner chooses to remove the conceal token
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Terrain">Terrain</span></h3>
+<p>There is a number of different terrain, but the basic terrain for the tutorial scenario are as follows:
+</p><p>Woods and Buildings cost 2 Movement Points to enter
+</p><p>Roads and anything not a Wood or Building is considered Open Ground and only 1 Movement Point to enter
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Command_Points">Command Points</span></h3>
+<p>Commanded points are given each turn and allow for special actions to be taken (5 options)
+</p><p>1) Re-roll non-Gun MC dice
+</p><p>2) For second player to perform 1 action prior to first player's full turn
+</p><p>3) Take a Final Op Fire action
+</p><p>4) Re-roll Melee dice
+</p><p>5) Give a +1 to Assault or Opportunity Firepower (cannot exceed Normal Firepower)
+</p><p>Each unit can only benefit from ONE of these effects ONCE per round
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpbandofbrothers" target="_blank" rel="noopener">Bandofbrothers — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

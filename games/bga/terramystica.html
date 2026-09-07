@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="神秘大地 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>神秘大地 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">神秘大地</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">神秘大地</h1>
+          <p class="game-sub">Terra Mystica · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2–5 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">概览</span></h2>
+<p><i>Terra Mystica</i>是一款2-5人的文明建设游戏。游戏开始时，你将选择一个派系，每个派系都有其地形和特殊能力。随着游戏的进行，你将改造土地，建造新建筑，升级现有建筑以收集收入并获得分数。六轮后分数最高的玩家获胜！
+</p><p>请注意，某些派系包含例外和补充规则，这些规则会改变或使其自身的一些规则失效。
+</p>
+<h2><span class="mw-headline" id="Game_Area_Components">游戏区域组件</span></h2>
+<p>在任何给定时刻，每位玩家将拥有以下资源：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>工人</b>：白色方块。通常从民居中获得，可用于建造新建筑或改造六边形地块。</li>
+  <li><b>金币</b>：通常从贸易站中获得，以及从其他玩家未选择的奖励板块中获得。可用于建造新建筑。</li>
+  <li><b>祭司</b>：米宝。通常从神庙和圣所中获得。可用于提升在崇拜轨道上的位置，以及升级你的土地改造和航运能力。</li>
+  <li><b>权力</b>：紫色圆盘放置在三个标记为I、II和III的碗中。权力通常从贸易站、要塞中获得，以及从其他玩家在你附近建造时获得。</li>
+</ul>
+<p>玩家在其派系板内或附近还有以下物品：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>建筑</b>：每座建筑的建造成本显示在其下方。当建筑投入使用时，它会暴露资源，这些资源可以在收入阶段获得。</li>
+  <li><b>派系地形循环</b>：你派系的主地形在顶部。其他地形围绕它呈圆形排列，由铲子分隔。你的建筑只能放置在你派系的主地形上。在这个圆圈上，其他地形离你的主地形越近，将其改造为主地形所需的铲子就越少。</li>
+  <li><b>铲子兑换率</b>：这个值越高，改造一个空间所需的工人就越少。（暗影族没有这个。）</li>
+  <li><b>航运</b>：这个值越高，你可以跳过的河流空间就越多，以实现相邻。（矮人和苦行僧没有这个。）</li>
+  <li><b>派系特殊能力</b>：每个派系至少有一个独特能力。至少，你默认会有一个能力，当你的要塞建成时，你将拥有另一个能力。</li>
+</ul>
+<p>整个游戏板包含以下特性：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>游戏地图</b>: 不言自明。</li>
+  <li><b>轮次追踪器</b>: 游戏中有六轮，每轮由一个板块表示。在每轮中，建造特定建筑或执行特定行动会获得奖励分数。在每轮结束时，你将根据你在教派追踪器上的进展获得额外奖励（最后一轮除外）。</li>
+  <li><b>强力行动</b>: 每个行动在使用时提供奖励，任何玩家都可以支付相应的力量成本来获取。这些行动每轮各可使用一次。</li>
+  <li><b>教派追踪器</b>: 有四个教派追踪器：火、水、土、气。玩家在每轮结束时根据在此处的进展获得奖励。在游戏结束时，进展最远的玩家会获得额外分数。</li>
+  <li><b>奖励板块:</b> 这些板块提供额外收入或奖励分数。在任何时候，每位玩家会占据一个奖励板块，然后在轮次结束时交换它们，因此会有三个未被占据的板块可供选择。</li>
+  <li><b>恩宠板块</b>: 这些板块提供额外收入、奖励分数和教派空间。它们是通过建造神庙或圣所来获取的。</li>
+  <li><b>城镇板块</b>: 这些板块提供奖励分数和一些其他一次性奖励。当玩家建造城镇（4个以上相邻建筑且力量值7以上）时获取。</li>
+</ul>
+<h2><span class="mw-headline" id="Setup">设置</span></h2>
+<p>游戏开始前，每位玩家执行以下步骤：
+</p>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>按回合顺序，每位玩家选择一个派系进行游戏。</li>
+  <li>按回合顺序，每位玩家在自己的家乡地形上任意一个六边形上放置一个自己的居所。（混沌术士暂时不放置居所。）</li>
+  <li>按<i>逆序</i>回合顺序，每位玩家在自己的家乡地形上任意一个六边形上放置第二个居所。（游牧民族将放置第三个居所。混沌术士在其他所有玩家之后放置他们唯一的居所。）
+  </li><li>按<i>逆序</i>回合顺序，每位玩家获取一个奖励板块。任何未被获取的奖励板块上会放置一枚硬币（以鼓励玩家在之后选择它们）。</li>
+</ol>
+<h2><span class="mw-headline" id="Gameplay">游戏进行</span></h2>
+<h4><span class="mw-headline" id="Rounds">轮次</span></h4>
+<p><i>神秘大地</i>游戏共进行六轮。每轮分为三个阶段：
+</p>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>收入阶段</b>: 任何带有张开手掌图标的地方都代表收入。这些通常位于已建造建筑下方、你的奖励板块和一些恩惠板块上。</li>
+  <li><b>行动阶段</b>: 玩家轮流执行一个行动。当所有玩家都选择跳过时，此阶段结束。</li>
+  <li><b>教派阶段</b>: 每位玩家根据轮次指示器指定的任何教派轨道上的进度获得奖励。在指定的教派轨道上每前进一格，玩家获得相应的奖励。如果此奖励涉及地球改造，则按回合顺序完成。</li>
+</ol>
+<p><b><u>行动</u></b>
+</p><p>一个回合包括执行一个行动（前后可能有免费的能量转换）。请注意，某些行动会根据轮次指示器获得分数。
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>改造地形</b>: 你可以改造一个六边形。你要改造的空间必须与现有建筑相邻。改造需要消耗"铲子"，数量取决于"阶段"与你的地形的距离。改造任何地形的最大成本是3个铲子。游戏开始时，一个空间需要3个工人，但之后可以改进。如果这个空间成为你派系的主地形（或者一开始就是），你可以通过支付相应成本建造一个住所。（黑暗精灵使用祭司而不是工人来执行此操作。半身人在每次这样改造地形时获得1分。矮人和苦行僧可以支付额外成本改造/建造更远的一个空间并获得分数。）<i>成本:</i> 工人</li>
+  <li><b>升级建筑</b>: 将一种建筑类型替换为另一种。住所可以升级为交易站。如果该建筑与其他玩家的建筑相邻，你支付较低成本。否则，支付较高成本。交易站可以升级为要塞或神庙。神庙可以升级为圣殿。如果你建造神庙或圣殿，你还会获得一个恩惠板块（如果扮演混沌法师，获得2个）。建造要塞后，你获得一个独特的派系特殊能力。<i>成本:</i> 工人和金币</li>
+  <li><b>提高铲子兑换率</b>: 通过支付给定成本，将你的铲子兑换率提高一步。你获得6分并减少获得一个铲子所需的工人数量。（黑暗精灵没有铲子兑换率。半身人可以以降低的成本升级。）<i>成本:</i> 工人、祭司和金币</li>
+  <li><b>提高航运</b>: 通过支付给定成本，将你的航运提高一步（从0开始，到3结束）。航运步数等于在确定相邻性时可以跳过的河流空间数量。（矮人和苦行僧不能这样做。美人鱼的航运轨道范围是1-5。）<i>成本:</i> 祭司和金币</li>
+  <li><b>派遣祭司到崇拜轨道</b>: 在轨道上前进指定的步数。如果你经过任何包含力量的门，获得该数量的力量。祭司将留在那里直到游戏结束。要前进到任何轨道的第10格，你需要一把钥匙。钥匙是通过形成城镇（4个以上相邻建筑，力量7+）获得的。<i>成本:</i> 1个祭司</li>
+  <li><b>特殊行动</b>: 执行橙色八边形指示的任何行动。板上有六个这样的行动，需要消耗力量。每个每轮只能执行一次。一旦有玩家执行了该行动，它就"关闭"。其他行动可能印在派系板块、恩惠板块或奖励板块上。<i>成本:</i> 不定</li>
+  <li><b>跳过</b>: 从你的奖励板块或神圣板块获得任何奖励分数（工程师的住所建成后获得奖励），然后选择一个新的奖励板块。如果你是第一个跳过的玩家，你将在下一轮成为第一个玩家。（如果启用了"可变回合顺序"，回合顺序将按照每个玩家跳过的顺序进行。否则，将从第一个跳过的玩家开始顺时针进行。）在本轮余下的时间内，你不能再执行任何行动。
+</li></ul>
+<p><i><b>建筑</b></i> 
+</p><p>如果你在其他玩家的建筑旁边建造任何东西，他们可以选择获得力量。每种建筑类型都有相应的力量等级：住宅价值1，贸易站和寺庙价值2，要塞和圣殿价值3。对于在你建造的建筑<i>直接</i>相邻（即不隔着任何河流）的建筑，每有一个力量等级，他们可以获得1点力量。然而，他们也会失去等于这种方式获得的力量数量减1的分数。这个行动是可选的。（如果有任何玩家因为信徒的建筑活动而接受这种力量获得，信徒可以在任何信仰轨道上前进一步。）
+</p><p>如果你的行动导致四个或更多直接相邻的建筑，总力量等级达到7或以上，这就形成了一个城镇。如果圣殿是其中之一，你只需要3点。一块神圣板块可以将力量要求降低到6点。城镇有额外的分数奖励，一次性奖励，以及在信仰轨道上前进到10号位置的机会。任何与城镇<i>直接</i>相邻的新建筑都被视为同一个城镇的一部分，不能用来形成新的城镇。然而，一旦两个城镇都建立起来，它们可以合并一次。（女巫和虫群族在形成城镇时有额外奖励。美人鱼可以在她们的城镇中包含一块河流板块。）
+</p><p>在建造任何东西之前，你可以选择将力量转化为资源或将其他资源降级（例如，将牧师变成工人，或将工人变成金币）。你也可以将任意数量的力量圆盘从碗II移动到碗III，然后从游戏中移除碗II中相同数量的力量。如果你需要立即获得力量，这可能很有用。
+</p><p><i><b>力量</b></i>
+</p><p>每个玩家有12个力量标记，分布在三个碗中。力量行动需要碗III中的力量。有三种方式可以获得力量 
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>收入</li>
+  <li>对手在你的建筑旁边建造结构</li>
+  <li>在信仰轨道上前进</li>
+</ul>
+<p>然而，你不会获得新的力量标记。相反，你将现有的标记从一个碗移动到更高的碗中。同样，当使用力量标记时，它们不会丢失，而是会回到起点（碗I）。
+</p><p>当你获得力量时，会发生以下情况：<b>如果碗I中有力量标记</b>，将每个获得的力量对应的标记从碗I移动到碗II。<b>如果碗I中没有力量标记，但碗II中有</b>，将每个获得的力量对应的标记从碗II移动到碗III。<b>如果你所有的力量标记都在碗III中</b>，什么都不会发生（你无法获得更多力量）。
+</p><p>当你使用力量时，你将力量标记从碗III移动到碗I。 
+</p>
+<h2><span class="mw-headline" id="End_of_Game">游戏结束</span></h2>
+<p>游戏在6轮后结束。每个玩家根据以下情况获得额外分数：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>拥有最大规模连接文明的玩家获得18分数。第二大的文明获得12分数。第三大的文明获得6分数。平分时，分数在玩家之间分配。</li>
+  <li>对于每个教派轨道，最高分的玩家获得8分数，第二高的获得4分数，第三高的获得2分数。</li>
+  <li>每位玩家根据其供应区中每3枚硬币获得1分数。所有资源在此自动降级为硬币。（炼金术士则每2枚硬币获得1分数。）</li>
+</ul>
+<p>分数最多的玩家获胜！
+</p>
+<h2><span class="mw-headline" id="Factions">派系</span></h2>
+<p>对于新手，女巫、游牧民、美人鱼和半身人通常被推荐，因为他们拥有最直接的能力。
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">
+<th>名称</th>
+<th>地形</th>
+<th>六边形</th>
+<th>能力</th>
+<th>要塞能力</th>
+<th>备注
+</th></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">炼金术士
+</th>
+<td>沼泽（黑色）</td>
+<td><a href="/File:TerraMystica_swamp.png" class="image"><img alt="TerraMystica swamp.png" src="/images/c/cc/TerraMystica_swamp.png" decoding="async" width="100" height="102" /></a></td>
+<td>任何时候当你能够进行免费转换时，你可以用1分交易1个硬币，或用2个硬币交易1分。（这部分在最终计分时自动完成。）</td>
+<td>获得12点能量。每次你进行地形改造（通过任何行动或效果），获得2点能量。</td>
+<td>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">精灵
+</th>
+<td>森林（绿色）</td>
+<td><a href="/File:TerraMystica_forests.png" class="image"><img alt="TerraMystica forests.png" src="/images/2/20/TerraMystica_forests.png" decoding="async" width="100" height="103" /></a></td>
+<td>--</td>
+<td>获得一个神圣板块。获得一个特殊行动，允许你在任何信仰轨道上前进两格。</td>
+<td>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">混沌法师
+</th>
+<td>荒地（红色）</td>
+<td><a href="/File:TerraMystica_wasteland.png" class="image"><img alt="TerraMystica wasteland.png" src="/images/8/8a/TerraMystica_wasteland.png" decoding="async" width="100" height="98" /></a></td>
+<td>当你建造神庙或圣殿时，获得两个神圣板块而不是一个。</td>
+<td>获得特殊行动：连续进行两个回合。</td>
+<td>游戏开始时你只有一个住所，在其他所有玩家都放置了他们的住所后才放置。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">信徒
+</th>
+<td>平原（棕色）</td>
+<td><a href="/File:TerraMystica_plains.png" class="image"><img alt="TerraMystica plains.png" src="/images/8/8c/TerraMystica_plains.png" decoding="async" width="100" height="100" /></a></td>
+<td>当其他玩家因为你的建造活动而获得能量时，在任何信仰轨道上前进一格。如果没有玩家选择获得能量，则获得1点能量。如果没有玩家<i>能够</i>获得能量，则什么都不会发生。</td>
+<td>获得7分</td>
+<td>
+</td></tr>
+</tbody></table>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">暗影族
+</th>
+<td>沼泽（黑色）</td>
+<td><a href="/File:TerraMystica_swamp.png" class="image"><img alt="TerraMystica swamp.png" src="/images/c/cc/TerraMystica_swamp.png" decoding="async" width="100" height="102" /></a></td>
+<td>在改造地形时，你可以使用一名祭司作为铲子。每次这样做获得2分数。</td>
+<td>你可以用一名工人交换一名祭司（最多3名）。</td>
+<td>由于暗影族能够使用祭司进行地形改造，所以他们没有铲子交换率。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">矮人
+</th>
+<td>山脉（灰色）</td>
+<td><a href="/File:TerraMystica_mountains.png" class="image"><img alt="TerraMystica mountains.png" src="/images/c/c0/TerraMystica_mountains.png" decoding="async" width="100" height="99" /></a></td>
+<td>你可以"挖掘"（额外支付2名工人）在改造地形或建造住所时跳过一个六边形。每次这样做获得4分数。在计分时，你最大的文明区域计算所有建筑，就好像它们可以通过此能力到达一样。</td>
+<td>在改造地形或建造时，你只需要支付<i>一个</i>工人来跳过一个空间</td>
+<td>矮人不能使用河流作为相邻（换句话说，没有航运）
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">工程师
+</th>
+<td>山脉（灰色）</td>
+<td><a href="/File:TerraMystica_mountains.png" class="image"><img alt="TerraMystica mountains.png" src="/images/c/c0/TerraMystica_mountains.png" decoding="async" width="100" height="99" /></a></td>
+<td>所有建筑成本减少1名工人和1枚金币（最低为1）。你可以用2名工人建造一座桥梁。</td>
+<td>当你跳过回合时，你每座两侧都有建筑的桥梁获得3分数。</td>
+<td>工程师能力的代价是建筑的生产率较低。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">苦行僧
+</th>
+<td>沙漠（黄色）</td>
+<td><a href="/File:TerraMystica_desert.png" class="image"><img alt="TerraMystica desert.png" src="/images/c/c9/TerraMystica_desert.png" decoding="async" width="100" height="99" /></a></td>
+<td>你可以"飞行地毯"（花费1名祭司）在改造地形或建造住所时跳过一个六边形。每次这样做获得4分数。在计分时，你最大的文明区域计算所有建筑，就好像它们可以通过此能力到达一样。</td>
+<td>你可以使用祭司跳过<i>两个</i>六边形。</td>
+<td>苦行僧不能使用河流作为相邻（换句话说，没有航运）
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">巨人
+</th>
+<td>荒地（红色）</td>
+<td><a href="/File:TerraMystica_wasteland.png" class="image"><img alt="TerraMystica wasteland.png" src="/images/8/8a/TerraMystica_wasteland.png" decoding="async" width="100" height="98" /></a></td>
+<td>你必须支付两次改造的代价（即6个工人，如果没有选择铲子升级）才能将任意六边形地块变为荒地</td>
+<td>获得特殊行动：免费将任意土地改造为荒地。</td>
+<td>由于他们的初始能力，巨人不能分步进行改造
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">半身人
+</th>
+<td>平原（棕色）</td>
+<td><a href="/File:TerraMystica_plains.png" class="image"><img alt="TerraMystica plains.png" src="/images/8/8c/TerraMystica_plains.png" decoding="async" width="100" height="100" /></a></td>
+<td>每次改造时获得1分</td>
+<td>你可以最多分三步进行改造，可以分配到任意数量的六边形地块上。如果这导致形成平原，你可以以适当的成本在上面建造一座住所。</td>
+<td>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">美人鱼
+</th>
+<td>湖泊（蓝色）</td>
+<td><a href="/File:TerraMystica_lakes.png" class="image"><img alt="TerraMystica lakes.png" src="/images/a/ac/TerraMystica_lakes.png" decoding="async" width="100" height="101" /></a></td>
+<td>航运范围从1到5（而不是0到3）。城镇可以包含一个河流空间，允许城镇跨越河流。</td>
+<td>免费升级一次航运。获得相应的分数。</td>
+<td>美人鱼在游戏开始时就可以使用航运。如果城镇包含一个河流六边形，你的城镇板块会被放置在那个河流六边形上。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">游牧民族
+</th>
+<td>沙漠（黄色）</td>
+<td><a href="/File:TerraMystica_desert.png" class="image"><img alt="TerraMystica desert.png" src="/images/c/c9/TerraMystica_desert.png" decoding="async" width="100" height="99" /></a></td>
+<td>在设置阶段，在其他玩家都放置了两座住所后，放置第三座住所。</td>
+<td>获得特殊行动：免费将一个六边形地块改造为沙漠。你可以立即在这个地块上建造一座住所（支付适当的成本）。不能通过桥梁或使用航运来实现。</td>
+<td>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">虫族
+</th>
+<td>湖泊（蓝色）</td>
+<td><a href="/File:TerraMystica_lakes.png" class="image"><img alt="TerraMystica lakes.png" src="/images/a/ac/TerraMystica_lakes.png" decoding="async" width="100" height="101" /></a></td>
+<td>所有建筑比平时多消耗1个工人和多1个金币。建造一座城镇时获得3个工人</td>
+<td>获得特殊行动：免费将一个住所升级为一个交易站。</td>
+<td>虫族能力的代价是建筑的生产率更高。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">女巫
+</th>
+<td>森林（绿色）</td>
+<td><a href="/File:TerraMystica_forests.png" class="image"><img alt="TerraMystica forests.png" src="/images/2/20/TerraMystica_forests.png" decoding="async" width="100" height="103" /></a></td>
+<td>建造一座城镇时获得5个分数。</td>
+<td>获得特殊行动：在任何森林六边形上免费建造一个住所，无论是否相邻。</td>
+<td>
+</td></tr>
+<h2><span class="mw-headline" id="Variants">变体</span></h2>
+<h4><span class="mw-headline" id="Special_Landscapes">特殊地貌</span></h4>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>每个派系都有一个特殊地貌可以放置。他们只能放置一个。它不能升级。</li>
+  <li>在地形改造行动期间，你可以放置特殊地貌而不是你的起始地形（除非另有说明）。</li>
+  <li>特殊地貌被视为一个能量值为1的建筑。它计入城镇的形成。与其他建筑一样，当其他玩家在其旁边建造时你会获得能量，当你建造在其他玩家的旁边时他们也会获得能量。</li>
+  <li>在教派奖励阶段，你不能放置特殊地貌。</li>
+  <li>特殊地貌不计入任何指定类型建筑的得分。它不被视为任何现有建筑类型的子类型（即，它不是住所、交易站、要塞、神庙或圣所）。</li>
+  <li>当执行"2把铲子"能量行动时，如果你用第一把铲子将一个六边形转变为特殊地貌，你不能用第二把铲子转变一个与特殊地貌相邻的六边形。</li>
+</ul>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">
+<th>派系</th>
+<th>特殊地形</th>
+<th>放置时的效果
+</th></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Auren
+</th>
+<td>宁静之树</td>
+<td>每当Auren在崇拜轨道上前进到第10格时，获得4分。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">炼金术士
+</th>
+<td>阴暗工坊</td>
+<td>在航运轨道上前进一次，在铲子汇率上前进一次，无需支付祭司费用。必须支付所需的金币和工人。照常获得分数。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">混沌法师
+</th>
+<td>混沌传送门</td>
+<td>当要塞建成时，立即将混沌传送门放置在任何荒芜地的空格上。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">崇拜者
+</th>
+<td>崇拜宫殿</td>
+<td>在崇拜计分时，平局时你获胜。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">暗影族
+</th>
+<td>营地</td>
+<td>营地算作一个居住地，并计入居住地的计分。营地无法升级。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">矮人
+</th>
+<td>伟大隧道</td>
+<td>从伟大隧道开始，你可以"挖掘"（花费工人来跳过地形改造时的一个六边形）来跳过2个六边形而不是1个。每当他们获得铲子作为崇拜奖励时，他们会花费这些铲子进行挖掘。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">工程师
+</th>
+<td>桥梁塔</td>
+<td>获得在陆地上建造桥梁的能力。这样的桥梁必须从桥梁塔的六个角之一开始，沿着与该角相邻的两个六边形的共享边缘延伸。在该边缘上放置一个桥梁部件。桥梁可以跨越河流空间或包含结构的两个六边形（使你能够到达对手结构之外的六边形）。这些桥梁不影响桥梁两侧结构的相邻性。这些桥梁在要塞建成后计入计分（即，如果条件满足，它们提供3分）。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">苦行僧
+</th>
+<td>飞行学校</td>
+<td>每次使用"飞行地毯"时获得2金币。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">巨人
+</th>
+<td>智慧洞穴</td>
+<td>无需成本将铲子汇率前进一步。获得正常的6分。
+</td></tr>
+</tbody></table>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">半身人
+</th>
+<td>钻探者</td>
+<td>在改造与钻探者直接相邻的六边形时，少支付1个铲子（但至少支付1个）。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">美人鱼
+</th>
+<td>珊瑚礁</td>
+<td>必须放置在直接相邻美人鱼建筑的河流格上。它不阻止其他玩家使用该空间进行扩张或间接相邻。运输与珊瑚礁和其他建筑一样工作。当建立一个包含珊瑚礁的城镇时，珊瑚礁必须是跳过的河流格。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">游牧民族
+</th>
+<td>交易营地</td>
+<td>当其他玩家在交易营地旁边建造时，你可以获得用于分数的权力（正常效果）或获得1枚金币。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">虫族
+</th>
+<td>繁殖地</td>
+<td>包含繁殖地的城镇可以超出正常限制增长并获得额外的城镇板块。在总权力值为14时，城镇变为城市并获得第二个城镇板块。在21时，城市变为大都市并获得第三个城镇板块。在28时，大都市变为特大城市并获得第四个城镇板块。"2火"恩惠板块将这些值分别降低为12、18和24。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">女巫
+</th>
+<td>乌鸦之失</td>
+<td>每次建立新城镇时，获得5分数（正常效果）或在您选择的一个崇拜轨道上前进3步。
+</td></tr>
+<h4><span class="mw-headline" id="Fire_and_Ice">火与冰</span></h4>
+<p>这个变体引入了新的派系和地形类型。
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">
+<th>名称</th>
+<th>初始地形</th>
+<th>初始能力</th>
+<th>要塞建筑能力</th>
+<th>其他
+</th></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">侍从
+</th>
+<td>火山（橙色）</td>
+<td>信仰点（代替铲子）用于将六边形地形改造为火山。通过<i>撤退</i>你在信仰轨道上的标记来获得信仰点。如果目标六边形是另一位玩家的初始地形，则需要4个信仰点。否则，需要3个信仰点。</td>
+<td>在你的碗I中放置与玩家数量相等的力量标记。</td>
+<td>每获得一个铲子，选择一个信仰轨道前进一格。冰地形无法被改造。在设置阶段，侍从不会从信仰轨道的起始位置获得力量。任何时候你使用祭司在信仰轨道上前进时，额外前进1格。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">龙领主
+</th>
+<td>火山（橙色）</td>
+<td>力量标记（代替铲子）用于将六边形地形改造为火山。力量标记从你的任意碗中取出并移出游戏。如果目标六边形是另一位玩家的初始地形，则需要2个力量标记。否则，需要1个力量标记。</td>
+<td>在碗I中放置与玩家数量相等的力量标记。</td>
+<td>每获得一个铲子，向碗I中放置1个力量标记。冰地形无法被改造。在设置阶段，侍从不会从信仰轨道的起始位置获得力量。任何时候你使用祭司在信仰轨道上前进时，额外前进1格。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">冰之少女
+</th>
+<td>冰（白色）</td>
+<td>在设置阶段，选择一张恩惠板块。其效果立即执行。</td>
+<td>当选择跳过行动时，根据你棋盘上每个神殿获得3个分数。</td>
+<td>当你选择这个派系时，同时选择任何其他未被玩家派系选中的地形类型。这种地形以及派系地形循环中相邻的地形需要1个铲子才能改造为冰地形。冰地形不能被改造为其他任何地形。
+</td></tr>
+</tbody></table>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Riverwalkers
+</th>
+<td>你的选择</td>
+<td>在设置期间，在你的派系地形循环的每个非家乡地形上放置一个祭司。每当你要获得一个祭司时，你可以改为将这些祭司中的一个移动到你的通用牌库（在那里可以正常获得）。每次这样做时，支付1个硬币（如果是其他玩家的家乡地形，则支付2个硬币）。你可以在任何未被祭司覆盖的地形上建造住所，并且只能在河流航运距离内的六边形上建造。</td>
+<td>立即放置两座桥梁。</td>
+<td>当你选择这个派系时，选择你的家乡地形类型。它必须是尚未被玩家派系选中的类型。你的航运锁定为1。你不能地形改造。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Shapeshifters
+</th>
+<td>你的选择</td>
+<td>每当其他玩家因你的建造活动而获得力量时，你可以支付1个分数来从牌库中将一个力量标记放入碗III。如果没有玩家选择获得力量，则正常获得1点力量。如果没有玩家<i>能够</i>获得力量，则什么都不会发生。</td>
+<td>获得特殊行动：花费来自任意碗的5个力量标记，将你的家乡地形改为另一种（不是其他玩家的家乡地形）。</td>
+<td>当你选择这个派系时，选择你的家乡地形类型。它必须是尚未被玩家派系选中的类型。
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Yetis
+</th>
+<td>冰（白色）</td>
+<td>棋盘上所有的力量行动都少消耗1点力量。为了建造城镇和从其他玩家那里获得力量的目的，你的要塞和圣所拥有4点力量。</td>
+<td>即使其他玩家已经使用了棋盘上的力量行动，你也可以使用它们。</td>
+<td>当你选择这个派系时，同时选择任何其他未被玩家派系选中的地形类型。这个地形以及派系地形循环中相邻的地形需要1把铲子才能改造为冰。冰不能被改造为其他任何地形。
+</td></tr>
+<h2><span class="mw-headline" id="Custom_Board_Layout">自定义棋盘布局</span></h2>
+<p>此选项仅在训练模式下可用。选择后，玩家可以从文本文件(.txt)加载自定义地图棋盘。文件内容代表地图的行和列。每种地形类型用一个字母表示：
+</p><p>
+R = 红色（荒漠） Y = 黄色（沙漠） U = 棕色（平原） K = 黑色（沼泽） B = 蓝色（礁石/岛屿） G = 绿色（森林） S = 灰色（山脉/石头） I = 河流
+
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">
+<th>字母代码</th>
+<th>六边形类型</th>
+<th>图片
+</th></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">R
+</th>
+<td>荒地</td>
+<td><a href="/File:TerraMystica_wasteland.png" class="image"><img alt="TerraMystica wasteland.png" src="/images/8/8a/TerraMystica_wasteland.png" decoding="async" width="100" height="98" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Y
+</th>
+<td>沙漠</td>
+<td><a href="/File:TerraMystica_desert.png" class="image"><img alt="TerraMystica desert.png" src="/images/c/c9/TerraMystica_desert.png" decoding="async" width="100" height="99" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">U
+</th>
+<td>平原</td>
+<td><a href="/File:TerraMystica_plains.png" class="image"><img alt="TerraMystica plains.png" src="/images/8/8c/TerraMystica_plains.png" decoding="async" width="100" height="100" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">K
+</th>
+<td>沼泽</td>
+<td><a href="/File:TerraMystica_swamp.png" class="image"><img alt="TerraMystica swamp.png" src="/images/c/cc/TerraMystica_swamp.png" decoding="async" width="100" height="102" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">B
+</th>
+<td>湖泊</td>
+<td><a href="/File:TerraMystica_lakes.png" class="image"><img alt="TerraMystica lakes.png" src="/images/a/ac/TerraMystica_lakes.png" decoding="async" width="100" height="101" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">G
+</th>
+<td>森林</td>
+<td><a href="/File:TerraMystica_forests.png" class="image"><img alt="TerraMystica forests.png" src="/images/2/20/TerraMystica_forests.png" decoding="async" width="100" height="103" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">S
+</th>
+<td>山脉</td>
+<td><a href="/File:TerraMystica_mountains.png" class="image"><img alt="TerraMystica mountains.png" src="/images/c/c0/TerraMystica_mountains.png" decoding="async" width="100" height="99" /></a>
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">I
+</th>
+<td>河流</td>
+<td>
+</td></tr></tbody></table>
+<p><br />
+文件应具有以下格式：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>最大行数：9</li>
+  <li>最大列数：13</li>
+  <li>列应在13列和12列之间交替。</li>
+<ul class="bulletlist" style="padding-inline-start:40px;">
+    <li>示例1：如果第一行有13列，第二行应该有12列，第三行应该有13列，第四行应该有12列，以此类推...</li>
+    <li>示例2：如果第一行有12列，第二行应该有13列，第三行应该有12列，第四行应该有13列，以此类推...</li>
+  </ul></ul>
+
+<p>以下是表示基础地图的示例文件内容：
+</p>
+<pre>U,S,G,B,Y,R,U,K,R,G,B,R,K
+Y,I,I,U,K,I,I,Y,K,I,I,Y
+I,I,K,I,S,I,G,I,G,I,S,I,I
+G,B,Y,I,I,R,B,I,R,I,R,U
+K,U,R,B,K,U,S,Y,I,I,G,K,B
+S,G,I,I,Y,G,I,I,I,U,S,U
+I,I,I,S,I,R,I,G,I,Y,K,B,Y
+Y,B,U,I,I,I,B,K,I,S,U,S
+R,K,S,B,R,G,Y,U,S,I,B,G,R
+</pre>
+<p>以下是表示火焰与冰霜地图的另一个示例文件内容：
+</p>
+<pre>U,I,U,K,Y,I,S,G,R,B,Y,B
+R,Y,I,B,S,R,I,I,I,Y,U,K,S
+G,K,I,I,I,U,G,Y,I,I,I,I
+Y,S,G,Y,K,I,B,R,U,I,G,B,G
+I,I,U,I,I,R,K,G,S,I,U,K
+G,R,I,I,G,I,I,I,U,B,I,S,R
+S,I,Y,S,B,R,G,I,R,S,I,K
+K,B,I,K,U,S,B,I,Y,K,I,R,B
+S,G,I,R,Y,K,Y,I,B,U,I,U
+</pre>
+<h2><span class="mw-headline" id="Fast_Auctions">快速竞叫</span></h2>
+<p>玩家轮流选择派系，每位玩家选择一个派系进行竞叫。所有玩家同时且秘密地竞叫以赢得该派系，使用分数作为货币。本质上，竞叫是对每个派系最终分数的预测。回合顺序与派系本身绑定，因此在竞叫中列在第一个的派系对应的玩家将成为第一玩家。一个算法根据玩家在各派系中的最高竞叫确定每个派系的成本，并相应地进行分配，扣除相应价值的分数。
+</p><p>例如，假设你和Alice、Bob一起游戏，你们都选择了<i>邪教徒</i>、<i>巨人</i>和<i>美人鱼</i>进行竞叫。假设所有人都从40分开始，你预计最终分数为<i>邪教徒</i>：135，<i>巨人</i>：120，<i>美人鱼</i>：130。在这种情况下，你对<i>巨人</i>的最高竞叫应为0，对<i>美人鱼</i>为10，对<i>邪教徒</i>为15。你以15分竞叫获得<i>邪教徒</i>和以0分竞叫获得<i>巨人</i>的满意度是相同的。
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">
+<th>玩家</th>
+<th>对邪教徒的最高竞叫</th>
+<th>对巨人的最高竞叫</th>
+<th>对美人鱼的最高竞叫
+</th></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">你
+</th>
+<td>15</td>
+<td>0</td>
+<td>10
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Alice
+</th>
+<td>12</td>
+<td>0</td>
+<td>5
+</td></tr>
+<tr>
+<th style="background-color: #eaecf0;text-align: center;font-style: normal;font-weight: 600;">Bob
+</th>
+<td>10</td>
+<td>3</td>
+<td>0
+</td></tr></tbody></table>
+<p>当所有玩家为每个派系提交了他们的最高竞叫后，算法会自动解决竞叫，如下所示：
+</p>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>你为<i>邪教徒</i>竞叫0。</li>
+  <li>Alice为<i>邪教徒</i>竞叫1。</li>
+  <li>Bob为<i>邪教徒</i>竞叫2。</li>
+  <li>你为<i>邪教徒</i>竞叫3。</li>
+  <li>Alice为<i>邪教徒</i>竞叫4。</li>
+  <li>Bob为<i>邪教徒</i>竞叫5。</li>
+  <li>你为<i>美人鱼</i>竞叫0。(此时，<i>美人鱼</i>对你更有价值，因为<i>邪教徒</i>将花费6（最高竞叫减去当前竞叫），而<i>美人鱼</i>将花费0。)</li>
+  <li>Alice为<i>邪教徒</i>竞叫6。</li>
+  <li>Bob为<i>邪教徒</i>竞叫7。(此时，Bob认为<i>邪教徒</i>（成本：7）和<i>巨人</i>（成本：0）同样有价值，因此倾向于提高现有竞叫而不是竞叫新的派系。)</li>
+  <li>你被跳过，因为你仍然是<i>美人鱼</i>的唯一竞叫者。</li>
+  <li>Alice为<i>美人鱼</i>竞叫1。（对Alice来说，<i>邪教徒</i>（成本：8）和<i>美人鱼</i>（成本：1）的价值相同，因此她随机选择一个。）</li>
+  <li>Bob被跳过，因为他在<i>邪教徒</i>上领先。</li>
+  <li>你为<i>美人鱼</i>竞叫2。（你为<i>美人鱼</i>定义的价值是8（10-2），高于你给<i>邪教徒</i>的价值，即7（15-8）。)</li>
+  <li>Alice为<i>邪教徒</i>竞叫8。</li>
+  <li>Bob为<i>巨人</i>竞叫0。</li>
+</ol>
+<p>结果是每个人都最大化了自己的价值，而无需超越他人。尽管你没有赢得<i>邪教徒</i>，尽管你提出了最高竞叫，但它们的价值变得比<i>美人鱼</i>更高，而你获得<i>美人鱼</i>的花费比你预测/竞叫的少了8点。
+</p><p>(<a rel="nofollow" class="external text" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2506595080">来源</a>)
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpterramystica" target="_blank" rel="noopener">神秘大地 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

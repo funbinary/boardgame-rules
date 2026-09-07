@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Superfantasybrawl 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Superfantasybrawl · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Superfantasybrawl</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Superfantasybrawl</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>Background
+</p>
+
+<h2><span class="mw-headline" id="Objective">Objective</span></h2>
+<p>Be the first player to gain 5 Victory Points. Victory Points are gained by accomplishing challenges or by defeating your enemy Champions.
+</p>
+<h2><span class="mw-headline" id="How_to_Play">How to Play</span></h2>
+<h4><span id="Beginning.2FSetup"></span><span class="mw-headline" id="Beginning/Setup">Beginning/Setup</span></h4>
+<p>Each player starts by choosing three champions for their team. Each champion comes with a set of 6 cards (2 blue, 2 yellow, 2 red), representing <i>manipulation</i>, <i>creation</i>, and <i>destruction</i>. These are shuffled together and form a player's deck.
+</p><p>Next, each player chooses 2 locations to place traps. There are 6 possible places for traps. 
+</p><p>Each player draws 5 cards, discards any they wish, then draws replacement cards for each.
+</p><p>Each player places their three Champions on a hex in their deployment area. 
+</p>
+<h4><span class="mw-headline" id="Rounds_and_Turns">Rounds and Turns</span></h4>
+<p>Each round consists of the first player's turn, then the second player's turn. Afterwards, the challenge track advances and another round begins. 
+</p><p><b><u>Player Turn</u></b>
+</p>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Scoreboard Phase:</b> If the player has fulfilled any of the conditions for the challenges, the player earns the appropriate number of VPs.</li>
+  <li><b>Activation Phase:</b> The active player play cards. Each card's color represents one of your 3 magic cores (red, yellow, and blue). When you use a card, the corresponding magic core is exhausted. No other cards of that color can be played that round. If you have magic cores but no cards of that color, you can execute standard actions. These actions are weaker, but don't need cards.</li>
+  <li><b>Upkeep Phase:</b> Cores are restored, the hand is discarded, and a new hand of 5 cards is drawn.</li>
+</ol>
+<h2><span class="mw-headline" id="Cards">Cards</span></h2>
+<p><img src="../../assets/img/bga/df36c64605b88794.jpg" loading="lazy"  alt="SuperFantasyBrawl cardAnatomy.jpg" decoding="async" />
+</p>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Champion Icon:</b> Identifies the Champion the card will control
+  </li><li><b>Action Type:</b> Attack, Skill, or Reaction
+  </li><li><b>Card Name:</b> Title of the card
+  </li><li> <b>Core of Magic:</b> Magic core that will be used when played (also depicted in the card's color). If the core is already exhausted, the card will be unplayable.</li>
+  <li> <b>Action Movement:</b> Indicates how many hexes the Champion can move before executing the action.</li>
+  <li> <b>Action Range:</b> Range of the card's effect: melee (must be adjacent), indirect (a thrown object within the indicated number of hexes, ignores obstacles like statues or other Champions), direct (a straight shot within the indicated number of hex spaces), or area of effect (AoE).</li>
+  <li><b>Card Number:</b> Identifies card</li>
+  <li><b>Illustrator:</b> Artist of the card</li>
+  <li><b>Action Strength:</b> Number of HP damage to the opponent</li>
+  <li><b>Action Effect:</b> Most cards have text indicating other effects that can or will happen when the card is played. Some can happen before damage is dealt (pre-attack: a left-facing arrow) or after (post-attack: a right-facing arrow) </li>
+  <li><b>Flavor Text:</b> Describes character, action, or backstory</li>
+  <li><b>Defense Modifier:</b> Reaction cards show a shield with a number, indicating how much damage is reduced. These cards must be played on the other player's turn. If they are played, they will exhaust their magic core, making that color unable to be used during the reacting player's turn.</li>
+</ol>
+<h3><span class="mw-headline" id="Attack_Card_Resolution">Attack Card Resolution</span></h3>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;"> 
+  <li>Use as much of the card’s movement (green boot) as you choose</li>
+  <li>Resolve any pre-attack abilities</li>
+  <li>Choose target(s)</li>
+  <li>Opponent chooses whether to play Reactions</li>
+  <li>The target's defense value is subtracted from the current strength value of the attack</li>
+  <li>Resolve attack damage</li>
+  <li>Resolve post-attack abilities from Reactions</li>
+  <li>Resolve post-attack abilities from the Attack card</li>
+</ol>
+<p>Check the range and targeting icons to determine which rules apply for the attack. Some attacks have a minimum range, and any enemy closer than that is not an eligible target.
+</p>
+<h2><span class="mw-headline" id="Traps">Traps</span></h2>
+<p>Some hexes have trap tokens. A trap triggers when a Champion enters the hex in which it is placed, whether it moved there by choice or was moved by another Champion. The trap token is flipped and an effect is applied (loss of hit points, loss of remaining movement, or discard a card of that Champion). The Champion may then complete the remaining movement (if available). When a trap is triggered, the player whose Champion triggered the trap places a new trap on a different empty trap hex. 
+</p>
+<h2><span class="mw-headline" id="How_to_Score_Victory_Points">How to Score Victory Points</span></h2>
+<p>If both players reach 5 VPs simultaneously (resulting in a draw), the non-active player wins. 
+</p>
+<h4><span class="mw-headline" id="Challenge_Track">Challenge Track</span></h4>
+<p>At the end of each round (after all players have taken a turn), a new Challenge card is drawn and all Challenge cards move one space to the right. Challenges that move off the rightmost space are discarded. The value of the Challenge (in VPs) depends on where on the track the Challenge is when it is completed (during the Scoreboard Phase). 
+</p>
+<h4><span class="mw-headline" id="Defeating_an_Enemy">Defeating an Enemy</span></h4>
+<p>On each Champion's character card is a number representing their hit points. When a Champion takes an amount of damage equal or greater than their hit points, they are taken "out of action". That means the Champion is moved outside the arena, near the deployment area. The Champion's hit points are restored and it can be moved on the player's next turn. Champions outside the arena cannot be targeted or damaged by card effects. But they also cannot be used until the player uses an action to move the character back into the arena.
+</p><p>The player with the Champion who defeated the enemy gets 1 VP. The Champion also "levels up". This means the character card is flipped over and the character gains a new ability. A Champion can only "level up" once. Hit points are not restored when a Champion "levels up".
+</p>
+<h2><span class="mw-headline" id="Keywords">Keywords</span></h2>
+<h4><span class="mw-headline" id="Movement">Movement</span></h4>
+<p><b><u>Moving an Ally</u></b>
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Dash X:</b> The dashing Champion may move in a straight line (in the same hex row) up to the number indicated. This takes place after any regular movement.</li>
+  <li><b>Jump X:</b> A Champion may move up to X hexes. Enemy Champions, statues, and traps are ignored and not activated (unless the Champion ends their movement on one).</li>
+  <li><b>Place:</b> Remove a Champion from its current location and place it in the new location as described by the effect.</li>
+  <li><b>Swoop X:</b> Champion moves in a straight line within the same hex row up to X hexes. Enemy Champions, statues, and Traps are ignored and not activated (unless the Champion ends their movement on one).</li>
+</ul>
+<p><b><u>Moving an Enemy</u></b>
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Fear X:</b> A Champion with <i>fear</i> must Dash X in a chosen direction away from the source of the fear. </li>
+  <li><b>Force X:</b> Player may move the target up to X hexes in any direction.</li>
+  <li><b>Pull X:</b> Target is pulled towards the active Champion in a straight line, within the same row of hexes, for X hexes. A Champion cannot be pulled through a statue or another Champion. If the target is pulled onto a trap hex, the trap is triggered. If a Champion cannot be pulled the full distance, they suffer damage equal to the remaining distance. </li>
+  <li><b>Push X:</b> Target is pushed away from the active Champion in a straight line, within the same row of hexes, for X hexes. A Champion cannot be pushed through a statue or another Champion. If the target is pushed onto a trap hex, the trap is triggered. If a Champion cannot be pushed the full distance, they suffer damage equal to the remaining distance. </li>
+  <li><b>Root:</b> Champion instantly loses any remaining movement and cannot make any further movement action (e.g., dashing, swooping, jumping, etc.). The Champion may attack and use skills normally. This Champion can still be "placed".</li>
+</ul>
+<h4><span class="mw-headline" id="Attack">Attack</span></h4>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Bloodied:</b> A Champion is <i>bloodied</i> if he/she has taken 3 or more damage. (Note: the Instruction Booklet says when a Champion has half or fewer HP remaining, but this is not BGA's policy.)</li>
+  <li><b>Double:</b> Resolve the attack damage step a second time.</li>
+  <li><b>Lifesteal:</b> Attacking Champion is healed equal to attack damage.</li>
+  <li><b>Poison X:</b> If damage was dealt to a target during an attack, deal X additional damage to the target.</li>
+  <li><b>Stun:</b> Player must discard a card of that Champion from their hand or reveal a hand showing no cards of that Champion.</li>
+</ul>
+<h4><span class="mw-headline" id="Other">Other</span></h4>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Control:</b> A player <i>controls</i> an area when they have more Champions in that area than their opponent.
+  </li><li><b>Plan X:</b> Player may put up to X cards from their hand on top of their deck.
+</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpsuperfantasybrawl" target="_blank" rel="noopener">Superfantasybrawl — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

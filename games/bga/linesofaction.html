@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Linesofaction 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Linesofaction · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Linesofaction</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Linesofaction</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>For tips on how to play Lines of Action, see <b><a href="https://en.doc.boardgamearena.com/Tips_linesofaction" target="_blank" rel="noopener">Tips_LinesOfAction</a></b>
+</p>
+
+<h2><span class="mw-headline" id="Goal">Goal</span></h2>
+<p>The object of the game is to connect all of one's pieces together into a contiguous body so that they are connected vertically, horizontally or diagonally. 
+Here is an <a href="#Example_winning_move" target="_blank" rel="noopener">example winning move</a>.
+</p>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<div style="display:grid;grid:1.5rem repeat(8,46px) 1.5rem / 1.5rem repeat(8,46px) 1.5rem;gap:0px;width:calc(3rem + 8 * (46px + 0px) + 0px);height:calc(3rem + 8 * (46px + 0px) + 0px);position:relative;">
+<div class="board background" style="position:absolute;background:;left:calc(2 * -0px);top:calc(2 * -0px);width:calc(100% + 4 * 0px);height:calc(100% + 4 * 0px);grid-area:calc(1 + 1) / calc(1 + 1) / calc(-1 - 1) / calc(-1 - 1);border-radius:calc(8px + 2 * 0px);"></div>
+<div></div>
+<div style="align-self:end;text-align:center;">A</div>
+<div style="align-self:end;text-align:center;">B</div>
+<div style="align-self:end;text-align:center;">C</div>
+<div style="align-self:end;text-align:center;">D</div>
+<div style="align-self:end;text-align:center;">E</div>
+<div style="align-self:end;text-align:center;">F</div>
+<div style="align-self:end;text-align:center;">G</div>
+<div style="align-self:end;text-align:center;">H</div>
+<div></div>
+<div style="align-self:center;text-align:right;padding-right:4px;">8</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;border-left:solid 2px #831;border-top-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;border-right:solid 2px #831;border-top-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">8</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">7</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">7</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">6</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">6</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">5</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">5</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">4</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">4</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">3</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">3</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">2</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">2</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">1</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;border-left:solid 2px #831;border-bottom-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;border-right:solid 2px #831;border-bottom-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left;padding-left:4px;">1</div>
+<div></div>
+<div style="align-self:start;text-align:center;">A</div>
+<div style="align-self:start;text-align:center;">B</div>
+<div style="align-self:start;text-align:center;">C</div>
+<div style="align-self:start;text-align:center;">D</div>
+<div style="align-self:start;text-align:center;">E</div>
+<div style="align-self:start;text-align:center;">F</div>
+<div style="align-self:start;text-align:center;">G</div>
+<div style="align-self:start;text-align:center;">H</div>
+<div></div>
+</div>
+
+<h2><span class="mw-headline" id="Movement">Movement</span></h2>
+<ul><li>Players alternate moves, with Red having the first move.</li>
+<li>Pieces move in a line horizontally, vertically, or diagonally.</li>
+<li>A piece moves exactly as many spaces as there are pieces (both friendly and enemy) on the line in which it is moving.</li></ul>
+<div style="display:flex; flex-flow:row wrap; gap:1rem;">
+ <div style="display:grid; grid:repeat(2,auto)/min-content;">
+  <div style="padding-left:1.5rem; padding-right:1.5rem;">
+<h3><span class="mw-headline" id="A_piece_may_not_jump_over_an_enemy_piece">A piece may not jump over an enemy piece</span></h3>
+<p>White cannot play a6-d6, even though there are three pieces in row 6. White might instead play a6-c4, moving two spaces because there are two pieces in the diagonal (a6-f1).
+</p>
+  </div>
+  <div style="align-self:end;">
+<div style="display:grid;grid:1.5rem repeat(8,46px) 1.5rem / 1.5rem repeat(8,46px) 1.5rem;gap:0px;width:calc(3rem + 8 * (46px + 0px) + 0px);height:calc(3rem + 8 * (46px + 0px) + 0px);position:relative;">
+<div class="board background" style="position:absolute;background:;left:calc(2 * -0px);top:calc(2 * -0px);width:calc(100% + 4 * 0px);height:calc(100% + 4 * 0px);grid-area:calc(1 + 1) / calc(1 + 1) / calc(-1 - 1) / calc(-1 - 1);border-radius:calc(8px + 2 * 0px);"></div>
+<div></div>
+<div style="align-self:end;text-align:center;">A</div>
+<div style="align-self:end;text-align:center;">B</div>
+<div style="align-self:end;text-align:center;">C</div>
+<div style="align-self:end;text-align:center;">D</div>
+<div style="align-self:end;text-align:center;">E</div>
+<div style="align-self:end;text-align:center;">F</div>
+<div style="align-self:end;text-align:center;">G</div>
+<div style="align-self:end;text-align:center;">H</div>
+<div></div>
+<div style="align-self:center;text-align:right;padding-right:4px;">8</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;border-left:solid 2px #831;border-top-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;border-right:solid 2px #831;border-top-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">8</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">7</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">7</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">6</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(255,0,0,0.5);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">6</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">5</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">5</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">4</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">4</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">3</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">3</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">2</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">2</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">1</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;border-left:solid 2px #831;border-bottom-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;border-right:solid 2px #831;border-bottom-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left;padding-left:4px;">1</div>
+<div></div>
+<div style="align-self:start;text-align:center;">A</div>
+<div style="align-self:start;text-align:center;">B</div>
+<div style="align-self:start;text-align:center;">C</div>
+<div style="align-self:start;text-align:center;">D</div>
+<div style="align-self:start;text-align:center;">E</div>
+<div style="align-self:start;text-align:center;">F</div>
+<div style="align-self:start;text-align:center;">G</div>
+<div style="align-self:start;text-align:center;">H</div>
+<div></div>
+</div>
+  </div>
+ </div>
+ <div style="display:grid; grid:repeat(2,auto)/min-content;">
+  <div style="padding-left:1.5rem; padding-right:1.5rem;">
+<h3><span class="mw-headline" id="A_piece_may_jump_over_friendly_pieces">A piece may jump over friendly pieces</span></h3>
+<p>Red may continue with e8-b5, jumping their own piece. It moves three spaces because there are three pieces in the diagonal (a4-e8).
+</p>
+  </div>
+  <div style="align-self:end;">
+<div style="display:grid;grid:1.5rem repeat(8,46px) 1.5rem / 1.5rem repeat(8,46px) 1.5rem;gap:0px;width:calc(3rem + 8 * (46px + 0px) + 0px);height:calc(3rem + 8 * (46px + 0px) + 0px);position:relative;">
+<div class="board background" style="position:absolute;background:;left:calc(2 * -0px);top:calc(2 * -0px);width:calc(100% + 4 * 0px);height:calc(100% + 4 * 0px);grid-area:calc(1 + 1) / calc(1 + 1) / calc(-1 - 1) / calc(-1 - 1);border-radius:calc(8px + 2 * 0px);"></div>
+<div></div>
+<div style="align-self:end;text-align:center;">A</div>
+<div style="align-self:end;text-align:center;">B</div>
+<div style="align-self:end;text-align:center;">C</div>
+<div style="align-self:end;text-align:center;">D</div>
+<div style="align-self:end;text-align:center;">E</div>
+<div style="align-self:end;text-align:center;">F</div>
+<div style="align-self:end;text-align:center;">G</div>
+<div style="align-self:end;text-align:center;">H</div>
+<div></div>
+<div style="align-self:center;text-align:right;padding-right:4px;">8</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;border-left:solid 2px #831;border-top-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;border-right:solid 2px #831;border-top-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">8</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">7</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">7</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">6</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">6</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">5</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">5</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">4</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">4</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">3</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">3</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">2</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">2</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">1</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;border-left:solid 2px #831;border-bottom-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;border-right:solid 2px #831;border-bottom-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left;padding-left:4px;">1</div>
+<div></div>
+<div style="align-self:start;text-align:center;">A</div>
+<div style="align-self:start;text-align:center;">B</div>
+<div style="align-self:start;text-align:center;">C</div>
+<div style="align-self:start;text-align:center;">D</div>
+<div style="align-self:start;text-align:center;">E</div>
+<div style="align-self:start;text-align:center;">F</div>
+<div style="align-self:start;text-align:center;">G</div>
+<div style="align-self:start;text-align:center;">H</div>
+<div></div>
+</div>
+  </div>
+ </div>
+ <div style="display:grid; grid:repeat(2,auto)/min-content;">
+  <div style="padding-left:1.5rem; padding-right:1.5rem;">
+<h3><span class="mw-headline" id="A_piece_may_capture_an_enemy_piece">A piece may capture an enemy piece</span></h3>
+<p>For example, White may play h3-f1, capturing the red piece on f1.
+</p>
+  </div>
+  <div style="align-self:end;">
+<div style="display:grid;grid:1.5rem repeat(8,46px) 1.5rem / 1.5rem repeat(8,46px) 1.5rem;gap:0px;width:calc(3rem + 8 * (46px + 0px) + 0px);height:calc(3rem + 8 * (46px + 0px) + 0px);position:relative;">
+<div class="board background" style="position:absolute;background:;left:calc(2 * -0px);top:calc(2 * -0px);width:calc(100% + 4 * 0px);height:calc(100% + 4 * 0px);grid-area:calc(1 + 1) / calc(1 + 1) / calc(-1 - 1) / calc(-1 - 1);border-radius:calc(8px + 2 * 0px);"></div>
+<div></div>
+<div style="align-self:end;text-align:center;">A</div>
+<div style="align-self:end;text-align:center;">B</div>
+<div style="align-self:end;text-align:center;">C</div>
+<div style="align-self:end;text-align:center;">D</div>
+<div style="align-self:end;text-align:center;">E</div>
+<div style="align-self:end;text-align:center;">F</div>
+<div style="align-self:end;text-align:center;">G</div>
+<div style="align-self:end;text-align:center;">H</div>
+<div></div>
+<div style="align-self:center;text-align:right;padding-right:4px;">8</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;border-left:solid 2px #831;border-top-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;border-right:solid 2px #831;border-top-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">8</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">7</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">7</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">6</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">6</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">5</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">5</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">4</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">4</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">3</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">3</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">2</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">2</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">1</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;border-left:solid 2px #831;border-bottom-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;border-right:solid 2px #831;border-bottom-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left;padding-left:4px;">1</div>
+<div></div>
+<div style="align-self:start;text-align:center;">A</div>
+<div style="align-self:start;text-align:center;">B</div>
+<div style="align-self:start;text-align:center;">C</div>
+<div style="align-self:start;text-align:center;">D</div>
+<div style="align-self:start;text-align:center;">E</div>
+<div style="align-self:start;text-align:center;">F</div>
+<div style="align-self:start;text-align:center;">G</div>
+<div style="align-self:start;text-align:center;">H</div>
+<div></div>
+</div>
+  </div>
+ </div>
+</div>
+<p><br />
+A player who is reduced to a single piece wins the game, because their pieces are by definition united.
+</p><p>If a move results, due to a capture, in each player having all their pieces in a contiguous body, then either the player moving wins, or the game is a draw, depending on the rules in force.
+</p>
+<div style="display:grid; grid:repeat(2,auto)/min-content;">
+ <div style="padding-left:1.5rem; padding-right:1.5rem;">
+<h3><span class="mw-headline" id="Example_winning_move">Example winning move</span></h3>
+<p>White has just won with the move b6-c7.
+</p>
+ </div>
+ <div style="align-self:end;">
+<div style="display:grid;grid:1.5rem repeat(8,46px) 1.5rem / 1.5rem repeat(8,46px) 1.5rem;gap:0px;width:calc(3rem + 8 * (46px + 0px) + 0px);height:calc(3rem + 8 * (46px + 0px) + 0px);position:relative;">
+<div class="board background" style="position:absolute;background:;left:calc(2 * -0px);top:calc(2 * -0px);width:calc(100% + 4 * 0px);height:calc(100% + 4 * 0px);grid-area:calc(1 + 1) / calc(1 + 1) / calc(-1 - 1) / calc(-1 - 1);border-radius:calc(8px + 2 * 0px);"></div>
+<div></div>
+<div style="align-self:end;text-align:center;">A</div>
+<div style="align-self:end;text-align:center;">B</div>
+<div style="align-self:end;text-align:center;">C</div>
+<div style="align-self:end;text-align:center;">D</div>
+<div style="align-self:end;text-align:center;">E</div>
+<div style="align-self:end;text-align:center;">F</div>
+<div style="align-self:end;text-align:center;">G</div>
+<div style="align-self:end;text-align:center;">H</div>
+<div></div>
+<div style="align-self:center;text-align:right;padding-right:4px;">8</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;border-left:solid 2px #831;border-top-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-top:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-top:solid 2px #831;border-right:solid 2px #831;border-top-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">8</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">7</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">7</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">6</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:rgba(0,255,0,0.5);">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">6</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">5</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">5</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">4</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:black;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white,0 0 2px white;"><span style="position:absolute;left:calc(-1px*119);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="white token" decoding="async" title="white token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">4</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">3</div>
+<div style="display:grid;z-index:1;background:#831;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*30);width:calc(1px*30);overflow:hidden;color:white;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;"><span style="position:absolute;left:calc(-1px*179);top:calc(-1px*0);transform-origin:top left;transform:scale(1);"><img src="../../assets/img/bga/10d4d6259e4fe0f8.png" loading="lazy"  alt="red token" decoding="async" title="red token" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">3</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">2</div>
+<div style="display:grid;z-index:1;background:#b85;border-left:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-right:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left ;padding-left :4px;">2</div>
+<div style="align-self:center;text-align:right;padding-right:4px;">1</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;border-left:solid 2px #831;border-bottom-left-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#831;border-bottom:solid 2px #831;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div>
+<div style="display:grid;z-index:1;background:#b85;border-bottom:solid 2px #831;border-right:solid 2px #831;border-bottom-right-radius:8px;">
+ <div style="display:grid;place-items:center;position:relative;background:;">
+  <div style="position:absolute;"><img src="../../assets/img/bga/66d9d27788f5f84e.png" loading="lazy"  alt="Empty Square" decoding="async" /></div>
+ </div>
+</div><div style="align-self:center;text-align:left;padding-left:4px;">1</div>
+<div></div>
+<div style="align-self:start;text-align:center;">A</div>
+<div style="align-self:start;text-align:center;">B</div>
+<div style="align-self:start;text-align:center;">C</div>
+<div style="align-self:start;text-align:center;">D</div>
+<div style="align-self:start;text-align:center;">E</div>
+<div style="align-self:start;text-align:center;">F</div>
+<div style="align-self:start;text-align:center;">G</div>
+<div style="align-self:start;text-align:center;">H</div>
+<div></div>
+</div>
+ </div>
+</div></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelplinesofaction" target="_blank" rel="noopener">Linesofaction — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

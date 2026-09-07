@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Luxor 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Luxor · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Luxor</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Luxor</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>For tips on how to play luxor, see <b><a href="https://en.doc.boardgamearena.com/Tips_luxor" target="_blank" rel="noopener">Tips_luxor</a></b>
+</p>
+
+<h2><span class="mw-headline" id="Game_play">Game play</span></h2>
+<p><i>Note: <b>The order of cards in players' hands cannot be rearranged during the game!</b></i>
+</p>
+<h3><span id="1.29_Play_a_Card_and_Move"></span><span class="mw-headline" id="1)_Play_a_Card_and_Move">1) Play a Card and Move</span></h3>
+<ul><li>On their turn, a player may play the leftmost or rightmost card from their hand and perform the card’s action (e.g. move one of their adventurers the indicated number of steps).
+<ul><li>If the card has a die, roll the die and move the rolled number of steps.</li></ul></li>
+<li>When moving, skip over any spaces that are completely empty (have no tiles anymore).</li>
+<li>When moving past one of your inactive adventurers on an Anubis tile, immediately move them to the entrance of the tomb. That adventurer can now be moved on future turns.
+<ul><li>You cannot land on an Anubis tile.</li></ul></li>
+<li>If a player cannot move, they discard a leftmost or rightmost card instead and draw a new one.</li></ul>
+<h4><span class="mw-headline" id="Horus_Cards">Horus Cards</span></h4>
+<ul><li>1-X: Move an adventurer any number of steps between 1 and X.</li>
+<li>1-dice: Roll the dice, then move an adventurer any number of steps between 1 and the die roll.</li>
+<li>Move all: Move all active adventurers the indicated number of steps forward.</li>
+<li>Last to second last: Move the last adventurer to the second-to-last adventurer.</li>
+<li>Minus one required: First move an adventurer the indicated number of steps, then you may loot a treasure tile with one less adventurer than required.</li></ul>
+<h3><span id="2.29_Perform_an_Action"></span><span class="mw-headline" id="2)_Perform_an_Action">2) Perform an Action</span></h3>
+<p>Based on the type of tile the player stopped on, they perform an action:
+</p>
+<h4><span class="mw-headline" id="Treasure_tile">Treasure tile</span></h4>
+<ul><li>If the player has at least as many adventurers on this tile as indicated on the tile, they loot the tile and score the indicated number of victory points immediately.
+<ul><li>If there is an icon below the looted tile, take the corresponding temple tile and place it on this spot. Adventurers stay on this spot without interacting with the temple tile.</li>
+<li>If there is no icon, then the adventurer stays on this spot.</li></ul></li></ul>
+<h4><span class="mw-headline" id="Temple_tile">Temple tile</span></h4>
+<ul><li>Perform the indicated action.
+<ul><li><i>Scarab</i>: take a scarab token and put it face down in front of you. VP at end of the game. 22 tiles (4: 1 point, 8: 2 points, 6: 3 points, 4: 4 points)</li>
+<li><i>Wild card treasure tile</i>: take on wild card tile and keep it for set collection scoring at end of the game.</li>
+<li><i>Scarab or Wild card treasure tile</i>: chose either a Scarab or Wild card tile.</li>
+<li><i>Favour of Horus</i>: take the top card from the corresponding Horus card stack.</li>
+<li><i>Tunnel</i>: Immediately advance this adventurer to the next tunnel. If there is none, don’t move. If passing sleeping adventurers, move them to the entrance.</li></ul></li></ul>
+<h4><span class="mw-headline" id="Horus_tile">Horus tile</span></h4>
+<ul><li>Take either one key or the top card from the matching stack.
+<ul><li>New cards always go in the middle of your hand cards.</li>
+<li>If the card stack is empty, nothing happens.</li></ul></li></ul>
+<h4><span class="mw-headline" id="Osiris_tile">Osiris tile</span></h4>
+<ul><li>Immediately move adventurer forward by the shown number on the tile.</li></ul>
+<h3><span id="3.29_Draw_a_Card"></span><span class="mw-headline" id="3)_Draw_a_Card">3) Draw a Card</span></h3>
+<ul><li>If you didn’t draw a Horus card during step 2, draw one basic card from the deck.</li>
+<li>New cards always go into the middle of your hand cards.</li>
+<li>If the draw deck is empty, reshuffle the discard pile.</li></ul>
+<h2><span class="mw-headline" id="Entering_the_tomb_chamber">Entering the tomb chamber</span></h2>
+<ul><li>To get into the chamber, a player needs to discard one key for each adventurer entering the tomb AND their adventurer must reach the tomb by exact step count.</li>
+<li>The first adventurer to enter gains the 5VP sarcophagus, the second the 3VP sarcophagus.</li>
+<li>After the second adventurer enters the chamber, the round is completed a usual, then the game ends</li></ul>
+<h2><span class="mw-headline" id="End_game_scoring">End game scoring</span></h2>
+<h4><span class="mw-headline" id="Current_location_of_adventurers">Current location of adventurers</span></h4>
+<ul><li>Score the number of VP displayed on the scarab on the wall next to where the adventurer is standing.</li></ul>
+<h4><span class="mw-headline" id="Sarcophagi">Sarcophagi</span></h4>
+<ul><li>Get indicated number of VP (5 VP for the first, 3 VP for the second).</li></ul>
+<h4><span class="mw-headline" id="Key">Key</span></h4>
+<ul><li>Reveal keys and get 1 VP for each key.</li></ul>
+<h4><span class="mw-headline" id="Treasure_tile_sets">Treasure tile sets</span></h4>
+<ul><li>Get number of VP according to number of sets collected.</li>
+<li>One set consists of one vase, one jewelry, and one statue.</li>
+<li>Wildcards may be used as substitutes for any of the three treasures, but a set cannot contain more than 2 wild card tiles.</li>
+<li>By themselves wildcards aren't worth any points</li></ul>
+<table class="wikitable">
+<caption>Completed Set Scoring
+</caption>
+<tbody><tr>
+<td>Sets
+</td>
+<td>1
+</td>
+<td>2
+</td>
+<td>3
+</td>
+<td>4
+</td>
+<td>5
+</td>
+<td>6
+</td>
+<td>7
+</td>
+<td>8+
+</td></tr>
+<tr>
+<td>Points
+</td>
+<td>3
+</td>
+<td>7
+</td>
+<td>12
+</td>
+<td>18
+</td>
+<td>25
+</td>
+<td>33
+</td>
+<td>42
+</td>
+<td>52
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Scarabs">Scarabs</span></h4>
+<ul><li>Reveal scarabs and gain indicated number of points.</li></ul>
+<h4><span class="mw-headline" id="Tie_breaker">Tie breaker</span></h4>
+<ul><li>Player who has sarcophagus wins</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpluxor" target="_blank" rel="noopener">Luxor — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

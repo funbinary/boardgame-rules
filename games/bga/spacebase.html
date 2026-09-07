@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="太空基地 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>太空基地 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">太空基地</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">太空基地</h1>
+          <p class="game-sub">Spacebase · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">概览</span></h2>
+<p>在《Space Base》中，你逐步建立舰队，根据骰子点数获得奖励。你的游戏板有12个区域，对应骰子掷出的不同结果。每个回合，所有玩家都有机会激活与骰子值（单个或总和）相匹配的区域中的卡牌。当新飞船加入你的舰队时，该区域的当前卡牌将被"部署"在你的游戏板上方，使其能在其他玩家的回合触发。
+</p>
+<h2><span class="mw-headline" id="Bug_Warning">错误警告</span></h2>
+<p>#8卡牌"U.E.S. Collins"允许你移动一个方块（除其他效果外）实际上并不允许你移动方块。
+</p>
+<h2><span class="mw-headline" id="Card_Design">卡牌设计</span></h2>
+<p>每张卡牌显示：
+</p>
+<ul><li>卡牌成本<i>（左上角）</i></li>
+<li>目标区域<i>（右上角）</i></li>
+<li>站点奖励<i>（中央区域，蓝色）</i></li>
+<li>已部署奖励<i>（下方区域，倒置，红色）</i></li></ul>
+<h2><span class="mw-headline" id="Game_Setup">游戏设置</span></h2>
+<p>游戏板包含3个主要区域：玩家个人游戏板、一个造船厂（包含来自1/2/3级牌库的6张正面朝上的卡牌）和一套黄色殖民地卡牌（每个区域一张）。
+</p><p>每位玩家的游戏板初始放置一套相同的起始飞船卡牌。玩家随机分配一张来自1级牌库的卡牌，添加到他们的游戏板上。玩家开始时拥有0分数、0收入和5信用点（减去起始卡牌的成本）。根据回合顺序分配额外奖励：
+</p>
+<ul><li>第一位玩家：无奖励</li>
+<li>第二位玩家：+1信用点</li>
+<li>第三位玩家：+2信用点</li>
+<li>第四位玩家：+1收入</li>
+<li>第五位玩家：+1收入</li></ul>
+<p>确定起始玩家
+</p><p>抽到区域编号最高卡牌的玩家成为起始玩家并获得起始玩家卡牌。如果有两位或更多玩家区域编号相同，则每位平局玩家掷骰子，点数总和最高的玩家成为起始玩家。
+</p>
+<h3><span class="mw-headline" id="Light-Speed_Variant">光速变体</span></h3>
+<p>光速变体通过在开始时部署更多飞船来加速游戏：
+</p>
+<ul><li>每位玩家开始时拥有15信用点和1收入</li>
+<li>每位玩家发到4张1级卡牌和2张2级卡牌。他们选择保留哪些卡牌，但必须为每张卡牌支付成本。</li>
+<li>花费最少信用点的玩家先开始。其他玩家的起始奖励与基础游戏相同。</li></ul>
+<h2><span class="mw-headline" id="Gameplay">游戏玩法</span></h2>
+<h3><span class="mw-headline" id="Roll_Dice_and_Activate_Sectors">掷骰子并激活区域</span></h3>
+<p>当前玩家掷出2个骰子。<b>所有玩家</b>然后根据骰子值选择要激活的区域。玩家可以选择与骰子总和相匹配的区域，也可以选择与单个骰子值相匹配的两个区域。如果两个骰子显示相同的值，则该区域可以激活两次。当前玩家获得该区域站点卡上显示的奖励（蓝色部分），其他玩家获得<b>所有</b>部署在该区域上方的卡牌的奖励（红色部分）。
+</p>
+<h3><span class="mw-headline" id="Buy_New_Cards">购买新卡牌</span></h3>
+<p>当前玩家然后可以选择从任何朝上的造船厂行（等级1/2/3）或黄色殖民地卡牌中购买卡牌。购买的卡牌被放置在相应的区域，之前的站点卡被移动到该区域的已部署卡牌堆中。购买卡牌后，<b>玩家的信用总额将重置为其收入水平，无论卡牌的成本如何（任何"购买"都会花费你所有的可用资金）</b>。当前玩家可以选择跳过此次购买，将信用点留到未来的回合使用。
+</p><p>当购买黄色殖民地卡牌时，玩家立即获得这些分数，并将卡牌放置在相应区域。<b>该区域在其回合期间不再触发任何奖励</b>，但已部署的奖励仍可在其他玩家的回合期间触发。<b>不能再为该区域购买更多卡牌</b>。
+</p>
+<h2><span class="mw-headline" id="Rewards">奖励</span></h2>
+<h3><span class="mw-headline" id="Basic_Rewards">基础奖励</span></h3>
+<p>大多数卡牌包含3种基础奖励之一：信用（硬币）、收入（星球）或分数（火箭）。
+</p>
+<h3><span class="mw-headline" id="Charged_Abilities">充能能力</span></h3>
+<p>带有方框轮廓的卡牌具有充能能力。能力必须先被充能，然后才能触发。当相应区域被激活时，会在卡牌上添加一个充能方块。只有在添加了所需数量的充能方块后，才能触发该能力。能力可以在被充能的同一回合触发，也可以留到后续回合使用。能力文本背景的颜色表示该能力何时可以使用：在你的回合<i>（蓝色）</i>，他人的回合<i>（红色）</i>，或任何回合<i>（绿色）</i>。当充能能力可以使用时，游戏会显示提示。
+</p>
+<h3><span class="mw-headline" id="Other_Reward_Types">其他奖励类型</span></h3>
+<ul><li><b>获取</b>一张卡牌 - 免费获得一张卡牌</li>
+<li><b>购买</b>一张卡牌 - 除了常规购买行动外额外购买一张卡牌。此次购买只需支付所需信用点（不是<i>所有</i>你的信用点）。</li>
+<li><b>箭头</b> - 使用相邻卡牌的奖励。</li>
+<li><b>骰子+箭头</b> - 使用更高一级区域的奖励（仅当你选择骰子总和时）。</li></ul>
+<h2><span class="mw-headline" id="Game_End">游戏结束</span></h2>
+<p>当有玩家达到40分数时，游戏结束。可能会进行几个额外的回合，直到所有玩家都完成了相同数量的回合。
+</p><p>总分最高的玩家获胜。如果出现平局，则根据需要进行额外的回合。
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpspacebase" target="_blank" rel="noopener">太空基地 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

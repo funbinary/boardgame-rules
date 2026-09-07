@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="幻兽奇旅 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>幻兽奇旅 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">幻兽奇旅</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">幻兽奇旅</h1>
+          <p class="game-sub">Wondrouscreatures · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Differences_between_the_BGA_implementation_and_the_Physical_game">BGA实现与实体游戏的区别</span></h2>
+<h3><span id="1._Initial_Captain.2C_Cards_and_Resources_selection"></span><span class="mw-headline" id="1._Initial_Captain,_Cards_and_Resources_selection">1. 初始船长、卡牌和资源选择</span></h3>
+<p>在BGA实现中，你一次性选择你玩的船长、起始卡牌（8张中的4张）和额外的起始资源（除非你是起始玩家）。一旦所有玩家都做出了选择，所有选择都会向其他玩家公开。如果你严格遵守规则，选择起始资源应该在船长+卡牌选择之后。这导致了更快的设置阶段，玩家可以更快地开始游戏。
+</p>
+<h3><span class="mw-headline" id="2._VP_track">2. 分数轨道</span></h3>
+<p>在BGA实现中，你的分数标记在分数轨道上达到50分后将停止移动。你仍然可以在游戏中获得额外分数，但你的标记不会再向前移动。你的分数标记将始终反映标记内的当前分数值。在实体游戏中，你会绕轨道再走一圈，但这可能会让一些玩家感到困惑，因为绕圈不会让你从轨道上获得额外奖励。
+</p>
+<h2><span class="mw-headline" id="Game_Overview">游戏概述</span></h2>
+<p>作为探险家，我们探索神秘岛屿，发现稀有生物并将它们安置在我们的保护区中。游戏结合了工人放置（船员）和引擎构建（生物卡）。核心机制是收集卡牌上的图标来完成科学目标（成就）。
+</p>
+<h2><span id="Core_Concept:_Icons_.26_Eggs"></span><span class="mw-headline" id="Core_Concept:_Icons_&amp;_Eggs">核心概念：图标与蛋</span></h2>
+<ul><li><b>图标：</b>你保护区中的每张卡牌都显示图标（例如，放大镜、爪子）。这些是成就所需的，但<b>不会被消耗</b>。</li>
+<li><b>蛋：</b>这些作为万能图标使用。当用于成就时，将它们翻到"孵化"面（它们留在你的保护区中，但失去万能属性）。</li></ul>
+<h2><span class="mw-headline" id="Gameplay">游戏玩法</span></h2>
+<p>在你的回合中，执行以下<b>4</b>个行动中的<b>1</b>个：
+</p>
+<h3><span id="1._Deploy_Crew_Member_.28Explore.29"></span><span class="mw-headline" id="1._Deploy_Crew_Member_(Explore)">1. 部署船员（探索）</span></h3>
+<p>放置你的船员，使其跨越两个六边形板块之间的边界线。
+</p>
+<ul><li><b>花费：</b>平原是免费的。山脉需要花费<b>1</b>个你选择的资源。</li>
+<li><b>获得：</b>从所有相邻的栖息地（六边形），你可以 EITHER 选择<b>1</b>个资源 OR 从荒野（市场）中选择<b>1</b>张匹配的生物牌放入你的手牌。</li>
+<li><b>奖励：</b>收集你船员所在两个六边形上的所有蛋。激活这些六边形上的任何行动图标。</li></ul>
+<h3><span id="2._Play_Cards_.28Expand_Reserve.29"></span><span class="mw-headline" id="2._Play_Cards_(Expand_Reserve)">2. 打出牌（扩展储备）</span></h3>
+<p>从你的手牌中打出最多<b>2</b>张牌到你的储备区。
+</p>
+<ul><li><b>花费：</b>支付牌左上角印制的资源。</li>
+<li><b>效果：</b>"即时"闪电符号触发一次。"永久"无限符号从现在开始激活。"充能"图标仅在"充能"行动期间触发。</li></ul>
+<h3><span class="mw-headline" id="3._Claim_Achievement">3. 声明成就</span></h3>
+<p>选择<b>3</b>个正面朝上的成就之一。
+</p>
+<ul><li><b>要求：</b>你的储备区必须显示所有必需的图标（在牌上或蛋上）。</li>
+<li><b>奖励：</b>拿取一个奖杯（胜利点），放置你的标记，并解锁你的船长能力。在本回合内，你不能打出任何更多的牌。</li></ul>
+<h3><span id="4._Recharge_.28Reset.29"></span><span class="mw-headline" id="4._Recharge_(Reset)">4. 充能（重置）</span></h3>
+<p>只有当你的<b>3</b>个船员都在棋盘上时才可能进行。
+</p>
+<ul><li><b>回收：</b>将所有棋子返回到你的供应区。</li>
+<li><b>时间宝石：</b>推进时间宝石。如果它到达蛋符号，补充棋盘上的蛋并刷新牌市场（荒野）。</li>
+<li><b>效果：</b>激活你储备区中所有带有"充能"图标的牌。手牌上限：<b>5</b>。</li></ul>
+<h2><span id="End_of_Game_.26_Scoring"></span><span class="mw-headline" id="End_of_Game_&amp;_Scoring">游戏结束与计分</span></h2>
+<p>当一名玩家拿取最后一个奖杯并结束他们的回合，然后其他每位玩家都再进行一个回合后，游戏结束。
+</p><p>最终计分会为以下项目加分：
+</p>
+<ul><li>你储备区中带有游戏结束能力的生物</li>
+<li>你储备区中带有游戏结束分数的生物</li>
+<li>成就</li>
+<li>每个奖杯<b>3</b>分</li>
+<li>每<b>4</b>个剩余资源和/或蝴蝶网<b>1</b>分</li></ul>
+<p>BGA 总是在游戏期间显示所有玩家的累计即时分数（带有棕色图标）。如果启用了实时计分，你还将看到总分（带有红色图标）。
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpwondrouscreatures" target="_blank" rel="noopener">幻兽奇旅 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

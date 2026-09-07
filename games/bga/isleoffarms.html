@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Isleoffarms 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Isleoffarms · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Isleoffarms</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Isleoffarms</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><ol><li>Gamehelpisleoffarms — BGA wiki page content (Phase 28, audit M9)</li></ol>
+<p>Paste the MediaWiki text below into `<a href="https://en.doc.boardgamearena.com/Gamehelpisleoffarms`" target="_blank" rel="noopener">https://en.doc.boardgamearena.com/Gamehelpisleoffarms`</a>
+(the in-game rules reference every released BGA game must have). Written against the v14 rules
+(`rules/bga-rules.md`) + DL-76/DL-77; re-read before pasting if the design moves again.
+</p><p>---
+</p>
+
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Each player runs one of five farms — Wheat, Vegetable, Orchard, Apiary or Dairy — building out a
+tableau of buildings, loading them with cards, and delivering goods to the central Island. The
+player with the most victory points (VP) at the end wins.
+</p><p>Every farm starts with three buildings: the <b>Farmstead</b> (a passive power keyed to your suit,
+live from turn 1), the <b>Barn</b> (prints your hand size), and the <b>Notice Board</b> (the one
+building neighbours may visit). Each can be upgraded once for £2 as a Build action.
+</p>
+<h2><span class="mw-headline" id="Your_turn">Your turn</span></h2>
+<p>Take <b>exactly one action</b>, plus optionally <b>one free bonus</b>, in either order.
+</p><p><b>The five actions:</b>
+</p>
+<ul><li><b>Draw</b> — reveal the top card of any two decks (or two from one deck); keep one, discard the other face up. If nothing at all is legal for you this turn, a Pass button appears instead.</li>
+<li><b>Build</b> — pay a card's printed cost (cards of its suit and/or wild cards from your hand, sometimes coins) to add it to your farm. Building also covers: <b>Hire a Worker</b> (£3, max one at a time) and <b>Upgrade a starter</b> (£2).</li>
+<li><b>Grow</b> — place a card from your hand onto one of your buildings that accepts its type, filling one space. "When activated" abilities fire.</li>
+<li><b>Harvest</b> — empty one of your FULL buildings: its loaded cards go to your barn. "When harvested" abilities fire (Wheat's Farmstead relaxes the fullness rule).</li>
+<li><b>Deliver</b> — spend barn cards to fill an Island tile's crates (<b>2 cards per crate</b>, suits as shown). Take a receipt worth the tile's printed VP, and the tile's coin bonus from the bank. Each tile takes at most two deliveries.</li></ul>
+<p><b>The free bonus (once per turn, before or after your action):</b>
+</p>
+<ul><li><b>Visit a neighbour</b> — place 1 card from your hand onto their Notice Board, then take <b>£1</b> from the bank (£2 if their board is upgraded) <i>or</i> <b>use one of their Hired Workers</b> (the bank pays the Worker's owner the wage shown on its track). An upgraded board ("Special Orders") also offers: place 2 cards for £3 (no Worker option). A full Notice Board cannot be visited — its owner must Harvest it to reopen it.</li>
+<li><b>Work your own Hired Worker</b> — perform its action for free (no wage).</li></ul>
+<h2><span class="mw-headline" id="Hired_Workers">Hired Workers</span></h2>
+<p>Five Worker cards sit in the central Hiring Fair. Hiring one is a Build action (£3). Every use —
+by you or a visitor — advances its meeple one space along its Working Week track; when it walks
+off the end, the card and meeple return to the Fair for anyone to hire. When a <i>visitor</i> uses
+your Worker, the bank pays you the wage printed on the space its meeple lands on.
+</p>
+<h2><span class="mw-headline" id="Game_end_and_scoring">Game end and scoring</span></h2>
+<p>The <b>first delivery to a Level‑3 Island tile</b> triggers the end: every <i>other</i> player takes
+one more turn, then the game is scored. Four sources:
+</p>
+<ul><li><b>Printed VP</b> on every card in your farm (upgraded starters are worth 2 each).</li>
+<li><b>Island receipts</b> — 4 / 8 / 16 VP by tile level.</li>
+<li><b>Endgame cards</b> — each of the 15 endgame cards scores its own formula over your farm.</li>
+<li><b>Coins</b> — every £5 remaining converts to 1 VP (rate configurable per table).</li></ul>
+<p>Tie-break: most coins remaining. The full breakdown table is shown at the end of the game.
+</p>
+<h2><span class="mw-headline" id="Solo">Solo</span></h2>
+<p>Solo is a two-seat game against the Farmhand, an automated rival who plays by simple fixed
+priorities, scores from all four sources, and can win. Everything it does appears in the game log.
+</p>
+<h2><span class="mw-headline" id="Table_options">Table options</span></h2>
+<p>The table creator can vary: the hire fee (£3/£2), the Worker wage track (£1/£2/£3 or flat),
+the Draw Worker's uses, the Notice Board capacity (5/4), and the coin-to-VP rate (£5/£10/off).
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpisleoffarms" target="_blank" rel="noopener">Isleoffarms — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Commanderchess 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Commanderchess · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Commanderchess</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Commanderchess</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Description">Description</span></h2>
+<p>Commander Chess, or Cờ tư lệnh (literally "Chess Command") is a xiangqi variant created by Hải Quý Nguyễn.
+</p><p>Cờ tư lệnh is played with 38 pieces (19 per player) on a board that is 11 lines wide and 12 lines long. It is played on the vertices of the grid. The board is divided into two land territories by a river in the middle of the board. The three files on one side of the board form the sea.
+</p>
+<h2><span class="mw-headline" id="Object_of_the_game">Object of the game</span></h2>
+<p>To win you must capture the opponent's Commander, or all units of a single division of the opponent's army:
+</p>
+<ul><li>Sea - Both Navy ships. 2 pieces total.</li>
+<li>Land - Artillery, Tanks, Infantry. 6 pieces total.</li>
+<li>Air - Both Planes. 2 pieces total.</li>
+<li>Commander - 1 piece total.</li></ul>
+<h2><span class="mw-headline" id="Pieces_and_movement">Pieces and movement</span></h2>
+<ul><li>All pieces have a range of movement. For example if a piece has a range of 3, then it may move 1, 2 or 3 spaces.</li>
+<li>All pieces move orthogonally (like a castle in standard chess), and some also move diagonally (like a bishop in standard chess).</li>
+<li>Hero status will mean a piece can move 1 additional space. The piece will also be able to move diagonally. <b>[Af]</b>Planes become stealth planes and are immune to ALL anti-aircraft.</li>
+<li>Normally pieces block other pieces from moving but some pieces can Jump over other pieces.</li>
+<li>Some pieces can carry other pieces, a piece will embark onto the carrier and share the same location. Either piece can move to the other piece. See 'Stack moves'.</li>
+<li>Anti-Aircraft pieces provide a Ring-of-fire range. See 'Airspace' for more details.</li></ul>
+<table class="wikitable" style="text-align:center;">
+<tbody><tr>
+<th>Piece
+</th>
+<th>Image
+</th>
+<th>Letter
+</th>
+<th>Type
+</th>
+<th>Range
+</th>
+<th>Diagonal
+</th>
+<th>Carry
+</th>
+<th>Embark
+</th>
+<th>Jump
+</th>
+<th>River Bank
+</th>
+<th>ROF Range
+</th>
+<th>Special
+</th></tr>
+<tr>
+<td>Commander
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/8d307fc9ea7f7e08.png" loading="lazy"  alt="Commander" decoding="async" /></div>
+</td>
+<td>C
+</td>
+<td>Land
+</td>
+<td>10
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>T,N,Af,HQ
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>If captured you lose.
+<p>Cannot goes past opponents C line-of-sight, and if you open a direct line-of-sight then you immediately lose. 
+If opponents pieces place the commander in check they gain 'hero' status. 
+The commander has protection inside the HQ from pieces[In,M,Aa,Ms].
+</p>
+</td></tr>
+
+<tr>
+<td>Infantry
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/d627b4efd468131e.png" loading="lazy"  alt="Infantry" decoding="async" /></div>
+</td>
+<td>I
+</td>
+<td>Land
+</td>
+<td>1
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>T,N,Af
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td></tr>
+<tr>
+<td>Tank
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/bfb0ed05ceb3bbc5.png" loading="lazy"  alt="Tank" decoding="async" /></div>
+</td>
+<td>T
+</td>
+<td>Land
+</td>
+<td>2
+</td>
+<td>-
+</td>
+<td>C,In,M
+</td>
+<td>N,Af
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>Only 1 tank maybe carried by a Navy on Plane.
+<p>May only carry 1 Infantry.
+</p>
+</td></tr>
+<tr>
+<td>Militia
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/419b2c2589813dcb.png" loading="lazy"  alt="Militia" decoding="async" /></div>
+</td>
+<td>M
+</td>
+<td>Land
+</td>
+<td>1
+</td>
+<td>yes
+</td>
+<td>-
+</td>
+<td>T,N,Af
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td></tr>
+<tr>
+<td>Engineer
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/0d59dcaee29736ce.png" loading="lazy"  alt="Engineer" decoding="async" /></div>
+</td>
+<td>E
+</td>
+<td>Land
+</td>
+<td>1
+</td>
+<td>-
+</td>
+<td>A, Aa, Ms
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>May carry all pieces, but only the single space across the river.
+</td></tr>
+<tr>
+<td>Artillery
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/b467e87873a06936.png" loading="lazy"  alt="Artillery" decoding="async" /></div>
+</td>
+<td>A
+</td>
+<td>Land
+</td>
+<td>3
+</td>
+<td>yes
+</td>
+<td>-
+</td>
+<td>E
+</td>
+<td>to capture
+</td>
+<td>restriction
+</td>
+<td>-
+</td>
+<td>May jump over other pieces to capture.
+<p>May only cross the river at 2 BANK positions, but can capture and move across the sea.
+May cross the sea if being carried.
+</p>
+</td></tr>
+<tr>
+<th>Piece
+</th>
+<th>Image
+</th>
+<th>Letter
+</th>
+<th>Type
+</th>
+<th>Range
+</th>
+<th>Diagonal
+</th>
+<th>Carry
+</th>
+<th>Embark
+</th>
+<th>Jump
+</th>
+<th>River Bank
+</th>
+<th>ROF Range
+</th>
+<th>Special
+</th></tr>
+<tr>
+<td>Anti-Aircraft
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/62bd7c81aab1bc93.png" loading="lazy"  alt="Anti-Aircraft" decoding="async" /></div>
+</td>
+<td>Aa
+</td>
+<td>Land
+</td>
+<td>1
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>E
+</td>
+<td>-
+</td>
+<td>restriction
+</td>
+<td>1
+</td>
+<td>Anti-aircraft. May shoot down opponents plane. See 'Airspace' for more details.
+<p>May only cross the river at 2 BANK positions.
+</p>
+</td></tr>
+<tr>
+<td>Missile
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/31b6a3e5df2968a4.png" loading="lazy"  alt="Missile" decoding="async" /></div>
+</td>
+<td>Ms
+</td>
+<td>Land
+</td>
+<td>2
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>E
+</td>
+<td>-
+</td>
+<td>restriction
+</td>
+<td>2
+</td>
+<td>Anti-aircraft. May shoot down opponents plane. See 'Airspace' for more details.
+<p>May only cross the river at 2 BANK positions.
+</p>
+</td></tr>
+<tr>
+<td>Headquarters
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.25);width:50px;height:50px;"><img src="../../assets/img/bga/ca33ce0bd068b78f.png" loading="lazy"  alt="Headquarters" decoding="async" /></div>
+</td>
+<td>HQ
+</td>
+<td>Land
+</td>
+<td>0
+</td>
+<td>-
+</td>
+<td>C
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>-
+</td>
+<td>Does not move. Protects commander against [In,M,Aa,Ms]
+</td></tr>
+<tr>
+<td>Airforce
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/1a4820467227f0a4.png" loading="lazy"  alt="Airforce" decoding="async" /></div>
+</td>
+<td>Af
+</td>
+<td>Air
+</td>
+<td>4
+</td>
+<td>yes
+</td>
+<td>T,In,M
+</td>
+<td>N
+</td>
+<td>yes
+</td>
+<td>-
+</td>
+<td>shot down
+</td>
+<td>May perform 'bombing' on an opponents land and sea pieces (not Af) and return to original position. See 'Airspace' for more details about being shot-down.
+</td></tr>
+<tr>
+<td>Navy
+</td>
+<td><div style="transform-origin:top left;transform:scale(0.125);width:50px;height:50px;"><img src="../../assets/img/bga/737f921304d5cd00.png" loading="lazy"  alt="Navy" decoding="async" /></div>
+</td>
+<td>N
+</td>
+<td>Sea
+</td>
+<td>4 (3)
+</td>
+<td>yes
+</td>
+<td>Af,T,In,M
+</td>
+<td>-
+</td>
+<td>yes
+</td>
+<td>-
+</td>
+<td>1
+</td>
+<td>Anti-aircraft. May shoot down opponents plane. See 'Airspace' for more details.
+<p>Cannot diagonally move across land, but can fire gun (range 3) onto land pieces. If it can legally move to capture a piece, it does.
+May move into the river but may not move onto or passed the bank.
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Airspace">Airspace</span></h2>
+<p>When moving Planes <b>[Af]</b> may be shot down by the opponents anti-aircraft pieces.
+</p><p>Anti-Aircraft Pieces (range): <b>[Ms]</b> Missile(2), <b>[Aa]</b> Anti-Aircraft(1), <b>[N]</b> Navy(1). 
+'<b>Note'</b>: this range a circular radius.
+</p><p>A plane can commit kamikaze (capture the opponents piece) while staying in opponents anti-aircraft range; But if the plane leaves the ROF before reaching its target then it will be shot down, and will be unsuccessful in performing kamikaze. Please see image for cases of 2 Aa pieces.
+</p><p><img src="../../assets/img/bga/d9650e0c6be056db.png" loading="lazy"  alt="4planes.png" decoding="async" />
+</p><p>The last <b>[Af]</b> plane committing kamikaze against the opponents last <b>[N]</b> Navy will win the game, even though the plane gets shot down.
+</p><p>A plane can get shot down during its own turn due to anti-aircraft pieces, when this happens a player cannot undo their turn.
+</p>
+<h2><span class="mw-headline" id="General_rules">General rules</span></h2>
+<p>Pieces capture as they move, and never jump, unless noted.
+</p><p>Pieces can cross the river but not occupy sea points unless noted.
+</p><p><b>[N]</b> Navy piece may not cut across land when moving diagonally.
+</p><p>Pieces which check the opposing Commander are promoted, gaining 'hero' status and gain special abilities.
+</p><p>Hero status will mean a piece can move 1 additional space. The piece will also be able to move diagonally. <b>[Af]</b> Planes become stealth planes and are immune to ALL anti-aircraft.
+</p><p>When a land piece captures a <b>[N]</b> Navy at sea (not the coast), it must stay where it is. 
+When a <b>[N]</b> Navy captures a land piece in-land (not the coast), it must stay where it is. 
+If navy/land piece capture is at coast position, then the captured piece is replaced as usual.  
+</p>
+<h2><span class="mw-headline" id="Stack:_Pieces_that_can_carry_other_pieces">Stack: Pieces that can carry other pieces</span></h2>
+<p><b>Stacks</b> are a group of pieces all at the same location. They may form groups of 2 or 3 pieces. 
+</p><p>A stack of pieces can all move in a single turn. The stack may move as a single group or any piece from the stack may instead disembark and move elsewhere. Multiple captures are possible. See the user interface section for specific instructions on moving with the stack.
+</p><p>The following list are pieces that can be carriers followed by the pieces and restrictions of what they can carry:
+</p><p><b>Stacks</b> maximum group of <b>3 pieces</b> (1 carrier and 2 other pieces)
+</p>
+<ul><li><b>[N]</b> Navy. May carry any combination of <b>[C]</b> Commander, <b>[In]</b> Infantry, <b>[M]</b> Militia, <b>[T]</b> Tank, <b>[Af]</b> Plane.</li>
+<li><b>[Af]</b> Plane. May carry any combination of <b>[C]</b> Commander, <b>[In]</b> Infantry, <b>[M]</b> Militia, <b>[T]</b> Tank. <b>but not 2 tanks</b>.</li>
+<li><b>[T]</b> Tank. May carry 1 <b>[In]</b> Infantry and 1 other piece. <b>[C]</b> Commander, <b>[In]</b> Infantry, <b>[M]</b> Militia.</li></ul>
+<p><b>Stacks</b> maximum group of <b>2 pieces</b> (1 carrier and 1 other piece):
+</p>
+<ul><li><b>[HQ]</b> Headquarters, may hold <b>[C]</b> Commander. <b>HQ does not move</b></li>
+<li><b>[E]</b> Engineer, may carry heavy weapons <b>[A]</b> Artillery, <b>[Aa]</b> Anti-aircraft, <b>[Ms]</b> Missile <b>Also specifically must be carried across the river from one side to the other.</b></li></ul>
+<h2><span class="mw-headline" id="Examples_of_unusual_play">Examples of unusual play</span></h2>
+<p>Both navy and land pieces may be placed on the coast. A <b>[N]</b> Navy has a gun and may capture a land piece, if it does then it will only capture and move if this land piece is on the coast, otherwise the <b>[N]</b> Navy piece will remain still and capture.
+</p><p><b>[E]</b> Engineers may only carry pieces from the limited number of river bank spaces, and move just the 1 space across the river. All other carried stack movements with the engineer are not allowed.
+</p><p><b>[A]</b> Artillery can only jump over pieces when capturing another piece. Otherwise, they cannot jump over pieces. 
+</p><p>On the Sea/Land border (coast) land pieces do not block the movement of a Navy piece and vice versa. So these pieces are not being jumped over. One is on land, the other is in the sea, but both are on the coast.
+</p><p>A commander that exposes himself to the opponents commander will immediately lose. (Line-of-sight).
+</p><p>Pieces that can jump and are not blocked by ANY piece. <b>[Af]</b> Plane, <b>[N]</b> Navy and the Navy gun. <b>[A]</b> Artillery(but only when capturing),
+</p><p>Without Enforce Check, it is possible to move into check, if you do this with your commander, then the opponents piece will become heroic.
+</p>
+<h2><span class="mw-headline" id="User_Interface">User Interface</span></h2>
+<ul><li>Some pieces stack on top of each other. It is recommended to use the squares to the right of the board from top to bottom. It automatically selects the stack to be moved as 1 group, if you would like to split up the pieces then user must select the pieces individually.</li></ul>
+<p>By selecting a box you will see the colour of the box change and the text. 
+</p><p>GREEN means this is the selected piece and the piece you are currently moving. 
+</p><p>RED   means this piece is being carried and will not move separately.
+</p><p>GREY  means this piece will move later after you have moved the current GREEN (selected) piece.
+</p><p>'Stay' will mean that the carried piece will disembark and stay in its current position.
+</p>
+<ul><li>When playing with 'Enforce check' option a player needs to RESIGN if there are no playable moves.</li></ul>
+<ul><li>There are various 'confirm' options available from the context menu (3 lines, burger menu).</li></ul>
+<ul><li>You can play with (0,0) always at the bottom, available from the context menu (3 lines, burger menu).</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpcommanderchess" target="_blank" rel="noopener">Commanderchess — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Ginrummy 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Ginrummy · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Ginrummy</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Ginrummy</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h3><span class="mw-headline" id="Overview">Overview</span></h3>
+<p>The aim is to reach 100 points through making melds.
+</p><p>A successful melds is either:
+</p>
+<ul><li>3 or more consecutive numbers of the same suit (runs), e.g. (3D-4D-5D)</li>
+<li>3 or 4 cards of the same number (sets), e.g. (8D-8H-8S)</li></ul>
+<p>Aces are low (A-2-3). A card can only be used in one meld, not both types simultaneously.
+</p><p>Each hand the objective is to reduce the sum of your unmelded cards (called deadwood) low enough that you can "knock" to end the hand. Remaining deadwood points work towards your opponent's score.  Aces count as one point, all face cards as 10 points.
+</p>
+<h3><span class="mw-headline" id="Turn">Turn</span></h3>
+<ul><li>Take either the face up card in the discard pile or draw the top card from the draw deck.</li></ul>
+<ul><li>Discard 1 card</li></ul>
+<ul><li>When your deadwood value is low enough, you can call "knock" to end the hand. In Gin Rummy, you cannot knock until 10 deadwood points or less. In the Oklahoma Gin variant, you cannot knock until your deadwood value is at or below the first card turned up to start the hand.</li></ul>
+<h3><span class="mw-headline" id="Scoring">Scoring</span></h3>
+<ul><li>Your base score for a hand you knock is the deadwood in your opponent's hand minus the deadwood in your hand.  If, however, the opponent has a lower deadwood value than the person knocking, they score the difference instead, as well as getting the additional undercut bonus.  The undercut bonus amount can be set to different values on BGA, 10 is the typical.</li></ul>
+<ul><li>If you are able to get your deadwood value to 0 (all cards are in sets or runs), you can call "gin" and score an extra 25 points + the deadwood value of your opponent's hand. You may use your discard to reach this gin. However, if the table uses the Big Gin settings, should all of your cards be melded sets before your discard, you instead get a larger Big Gin bonus (worth 31 instead of 25 bonus).</li>
+<li>In Oklahoma Gin, if the first card is a spade, the hand total score gained is doubled.</li></ul>
+<ul><li>The first person who reaches 100 points in regular Gin (or 150 in Oklahoma Gin) wins a game and receives 100 bonus points, worthwhile for ratings and tournament groups.</li>
+<li>At game's end each player also scores a line bonus per round won. If only a single player managed to win rounds, then that player receives additional 100 bonus points.</li></ul>
+<h3><span class="mw-headline" id="Solo_mode">Solo mode</span></h3>
+<p>Add 3 jokers in the deck. When you draw a joker, remove the drawn joker and continue playing.
+</p><p>The hand continues until either you knock or gin or draw a second joker.
+</p><p>If you knock or gin, turn over the cards in the deck one at a time until the joker appears. The number of cards you turn over is your score.
+</p><p>If you knock or the second joker appears before you knock or gin, the deadwood value is the joker's score.
+</p><p>The first player (you or the joker score) to get 100 points wins the game.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpginrummy" target="_blank" rel="noopener">Ginrummy — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

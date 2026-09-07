@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Daybreak 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Daybreak · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Daybreak</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Daybreak</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Daybreak_as_played_on_Board_Game_Arena">Daybreak as played on Board Game Arena</span></h2>
+<p>This document describes how Daybreak is played in the digital BGA interface. The card dealing, resolving of actions, effects, and crises, and the end-of-round tallying are all done automagically by BGA, such that the rules explanations about these elements in the tabletop version don't all apply in this environment.  Additionally, this document explains the screen layout, as it differs considerably from the tabletop game. If you have played the tabletop game, you will have no trouble adapting to online play (with the possible exception of "tucking").  But if you've never played the tabletop version, you may be a bit overwhelmed at first with all that is going on on the screen interface.
+</p>
+<h3><span id="About_.22tucking.22_cards"></span><span class="mw-headline" id="About_&quot;tucking&quot;_cards">About "tucking" cards</span></h3>
+<p>While tucking one card behind another in physical game play is obvious, it's not as straightforward on BGA. The reasons you may want to tuck cards are explained elsewhere.  This is just intended to help you get the hang of how to do this in the BGA interface. 
+</p>
+<h4><span class="mw-headline" id="Tucking_on_Local_Projects">Tucking on Local Projects</span></h4>
+<p>To play a card on a Local Project, you have two options: <b>replace</b> of your current projects or <b>support</b> a current project. In the BGA interface replacing is obvious, just tap/click the card you want to use and then tap/click the project card you want to replace and the initial card you clicked will move to cover the current project card, thus becoming a new, active project. However, supporting a project requires "tucking" a card behind the project card and any other cards already tucked behind it.  First you tap/click the card in your "hand" that you want to add to (support) a project and that then lights up an area above each project with a green rectangle.  Tap/click that green rectangle to "tuck" your card "behind" the project card. 
+</p>
+<h4><span class="mw-headline" id="Tucking_on_Global_Projects_and_Crisis_Cards">Tucking on Global Projects and Crisis Cards</span></h4>
+<p>To tuck a card from your hand behind a Global Project Card or a Crisis Card, the process is roughly the same as for Local Projects with one major difference. When you select (click) the card from your hand that you want to tuck, you then scroll down to where the Global and Crisis cards are displayed and click the card that you want the card from your hand to be tucked behind.  There is no visual on the GP and CC cards to indicate how you tuck the card from your hand behind the CP or CC card.  While "drag and drop" might seem like the thing to do, that does not work.   
+</p>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>This is a co-operative game in which the players collectively need to work together to sequester more carbon than they produce and then survive an ever-increasing number of crises over 6 (or fewer) rounds of play. Having too many communities in crisis, too high a temperature increase, or not reaching Drawdown by the end of Round 6 means your group has lost the game! By strategically completing Global Projects, working together to complete Local Projects, and mitigating against impending crises, the World Powers can achieve Drawdown and win the game! 
+</p>
+<h2><span class="mw-headline" id="Before_you_start">Before you start</span></h2>
+<p>Take time to study the iconography. Understanding the many symbols is important to grasping the game flow and will contribute to a smoother experience.  The PDF of the game rules (for the board game) available on BGA has very nice images of the icons. There are five categories of icons: tags, resilience, emissions, energy, and other (tokens and other miscellaneous).  Note also that three icons in the tags and resilience categories work together (they are pairs): Society (tag)/Social (resilience), Ecology (tag)/Ecological (resilience), and Infrastructure (tag)/Infrastructure (resilience).
+</p>
+<h2><span class="mw-headline" id="Start_of_game">Start of game</span></h2>
+<p>Players are each assigned a world region/country (called a World Power). Each World Power has its own starting values (climate scenarios) and Local Projects. BGA sets these up automatically.  
+</p><p>IMPORTANT: Review the tabulation areas on the right side of the screen.  These are: World Power scorekeeping areas, thermometer, and carbon emissions/sequestration.  You will need to pay attention to the status of each World Power's energy demand vs availability and its Communities in Crisis as keeping these in balance is critical.  The thermometer tracks the temperature, the planetary effects, and the rounds. The carbon emissions tell you your progress towards Drawdown. 
+</p>
+<h2><span class="mw-headline" id="Stages_in_a_Round">Stages in a Round</span></h2>
+<p>Each round consists of these five stages:
+</p><p><b>Global Stage</b>: You find out what crisis awaits you and decide on a Global Project
+</p><p><b>Local Stage:</b> You work on completing the local projects of your World Power and support your fellow players in completing their own local projects. This is where the cooperative play takes place.
+</p><p><b>Emissions Stage:</b> The emissions produced are calculated and added to the board.
+</p><p><b>Crisis Stage:</b> This stage has two components: 1) The planetary effects of your actions are determined by a roll of the die and 2) the crisis or crises for the round are executed.
+</p><p><b>Growth Stage:</b> Daybreak assumes that growth (economic? population?) happens at the end of every round. This is reflected via an increase in energy demand calibrated for the respective World Powers.
+</p>
+<h3><span class="mw-headline" id="Global_Stage">Global Stage</span></h3>
+<p><b>Crisis Cards:</b> In the first round, BGA will draw three crisis cards and randomly putt one face up and other two face down. In future rounds, the number of crises you will "draw" is determined by the current level on the Thermometer. (BGA does the drawing for you.) Study the Crisis Card or Cards, as it represents the crisis that will befall all of you at the end of the round.  Remind each other that you need to prepare during the round to do all you can to mitigate against it (mitigations are explained on the card).
+</p><p><b>Global Project Cards:</b> BGA will display two Global Project cards. As a group you will decide on which one to keep/use by voting.  Each World Power has one vote. In the event of a tie, BGA will break the tie and choose a Global Project for you. <i>Beware of round 5!</i> There can only be four global projects in play at a time. In rounds 5 and 6, you will have the option to keep your existing cards ("Lock Vote" without selecting a card), or vote for a new card <i>and</i> vote for the removal of an existing Global Project. 
+</p><p>Study each Global Project so that everyone understands what is needed to activate the card. In the next stage, you should discuss which World Power is best poised to activate the Global Project. If no World Power has the necessary card(s), stay alert to whether any of you acquire those cards via opportunities to draw more cards. Activating the Global Project should be a priority as it offers helpful support in achieving your goals toward reaching Drawdown. Activating is achieved by "tucking" (see above for how to "tuck" on BGA) the required Local Project card or cards behind the Global Project card.  Once a Local Project card is used in this manner, it can never be played again and will be discarded at the end of the round.
+</p><p>SUGGESTION: Each round, make note on paper outside of BGA regarding what is needed to mitigate against the coming crisis and what is needed to activate the Global Project. This can help you not lose sight of it as it is out if sight in the base play area of the game on your screen (scroll down to read it).  The old "Out of sight, out of mind" can be deadly in this game!
+</p>
+<h3><span class="mw-headline" id="Local_Stage">Local Stage</span></h3>
+<p>The first round is different from all of the others. In the first round, BGA will provide each World Power with five project cards and place them in the Local Projects area. These five starting projects are different for each World Power. You can see any World Power's projects by clicking on the player's BGA name in the tabs in the play area.  To see all Local Projects, click "View All".    
+</p><p>In each subsequent round, BGA deals each World Power more cards.  Typically, this is five cards, but this will vary, depending on other circumstances as the game progresses.  Some World Powers will receive fewer than five cards but none will ever receive more than five.   
+</p><p>Players take actions at the same time as described below.  There is no turn taking. Work together to determine the best actions each of you should take. The three available actions are described below:  
+</p>
+<h4><span class="mw-headline" id="Start_a_Local_Project">Start a Local Project</span></h4>
+<p>It is through local projects that you can effect some of the change required to win the game. You can either activate an existing project if you have the requisite tags (either with some of your own cards, or with cards shared with you by other players).  
+</p><p>This action allows you to play a new card on top of a pre-existing card or card stack. The ability of the old card is no longer available, but its symbols (tags) remain visible and available to use (they count toward requisite tags needed to take an action). (You don't have to meet a card's requirements to play the card onto a stack, only use to its action.) During the game, players can strengthen their projects by adding/stacking cards on their projects.
+</p>
+<h4><span class="mw-headline" id="Take_a_Local_Action">Take a Local Action</span></h4>
+<p>At this point, you can choose to complete the action(s) on the top of one or more of your project cards - assuming you have the correct tags on that project stack that are required to complete the action. Some cards become stronger/more powerful the more of a particular symbol (tag) is in their stack, and some cards require certain symbols to be in the card's stack in order to use them.  
+</p><p>You may take/use the top action on any stack as many times as you can, even coming back to it later, up to limits on the card. (The game will track this for you, using carbon cubes.) 
+</p><p>Notes:
+</p><p>1) You can complete a project's action, then cover the project with a new one, and then complete the new project's action in the same round. This allows you to take several actions in one turn with the same stack. Additionally, you can discard a project card to reveal the card beneath it and - if allowed by the card's rules - complete this newly re-exposed card again.
+</p><p>2) Be on the lookout for cards you can share with others to support the success of their Local Projects. 
+</p><p>3) Some project actions require you to discard. You may choose any card -- not just the top one in a project stack. If you do discard the top one, this allows the newly exposed card (and its effect) it to be used again (within the limits set forth on the card, if any).
+</p><p>HINT: Use the discard + draw project cards strategically to extend the round and allow you to generate more clean energy, capture carbon, provide resilience, etc.  
+</p>
+<h4><span class="mw-headline" id="Support_a_Project">Support a Project</span></h4>
+<p>You can tuck a card behind an existing project to contribute to its tags (see above for how to do this in the BGA interface). This can be used on Local, Global, and/or Crisis cards. On Local cards, it may make the available action(s) stronger. On Global cards, it helps unlock the ability. On Crisis cards, it will reduce or cancel the effect. 
+</p><p><b>End of Stage</b>
+</p><p>This stage ends when all players agree that all actions that the group wants to complete have been done. As they determine whether or not it is time to end the round, players should be mindful of energy supply vs energy demands in each of the territories, the numbers of communities in crisis in each territory, the currently active crisis card, and the Global Project   
+</p>
+<h3><span class="mw-headline" id="Emissions_Stage">Emissions Stage</span></h3>
+<h4><span class="mw-headline" id="Check_energy_demand_and_add_emissions">Check energy demand and add emissions</span></h4>
+<p>First, if any player's Energy Demand is more than their Total Energy count (Clean + Dirty), they must take Community in Crisis Tokens equal to the difference (in BGA, this is automatically done).
+</p><p>Then, each player adds Carbon cubes to the Recent Emissions area equal to their Dirty Energy + Emissions. (This is unaffected by meeting or failing to meet your Energy Demand.) You must count all of your Dirty Energy tokens each round, even if you can meet your demand more efficiently with Clean Energy tokens. (BGA does this is automatically).
+</p>
+<h4><span class="mw-headline" id="Sequester_carbon">Sequester carbon</span></h4>
+<p>Remove Carbon cubes from the Recent Emissions area based on the value of Trees, Oceans, and Direct Air Capture (DAC) tokens on the central board (shown on the lower right side in BGA). (DAC tokens are added by certain cards and function exactly like Trees and Oceans in sequestering Carbon.) This is Carbon that was successfully sequestered and will not lead to rising temperatures.
+</p>
+<h4><span class="mw-headline" id="Check_for_Drawdown">Check for Drawdown</span></h4>
+<p>After you Sequester Carbon, if you have 0 Carbon cubes in the Recent Emissions area, and there is remaining unused value in your Trees, Oceans, and/or DAC tokens, you have reached an important milestone: <b>Drawdown!</b> 
+</p><p>Continue sequestering Carbon onto the board, but instead of taking cubes from the Recent Emissions area, take them from the Thermometer, breaking Temperature Bands into Carbon cubes as needed. (Removing these cubes may help you survive the Crisis stage later this round.)
+</p><p>If you trigger Drawdown, you only need to survive one final Crisis stage to win!
+</p>
+<h5><span id="If_you_did_not_trigger_Drawdown.2C_adjust_temperature"></span><span class="mw-headline" id="If_you_did_not_trigger_Drawdown,_adjust_temperature">If you did not trigger Drawdown, adjust temperature</span></h5>
+<p>If Drawdown did not trigger, BGA adds any remaining Carbon cubes to the thermometer.  
+</p><p>Note each Thermometer space has room for 5 Carbon Cubes, stacked like a pyramid. When a row is completely filled (i.e. 5/10/15/20 Carbon Cubes) the cubes are wiped off and replaced with a Temperature Band. More temperature bands means more dice rolls, more hazards, and possibly stronger crisis effects. (If you complete a row that shows more Crisis cards, BGA will add a new face down Crisis card to be resolved.)
+</p>
+<h3><span class="mw-headline" id="Crisis_Stage">Crisis Stage</span></h3>
+<h4><span class="mw-headline" id="Planetary_Effects">Planetary Effects</span></h4>
+<p>BGA will roll the Planetary Effects die once per temperature band, and resolve the die roll by adding a token to the corresponding row/effect (depicted on the die in the tabletop version). If this token "lands" on a tipping point (shown by a fulcrum in the board game) (or the row is already full), an additional hazard occurs for that effect:
+</p>
+<ul><li>Change in Major Weather Systems: Draw 2 more Crisis Cards to reveal</li>
+<li>Desertification: Remove 1 tree per player</li>
+<li>Dieback of the Amazon: Add 1 Carbon Cube per player AND Remove 1 tree per player</li>
+<li>Loss of Arctic Sea Ice: Add 2 Carbon Cubes per player DIRECTLY to Thermometer</li>
+<li>Thawing Permafrost: Add 2 Carbon Cubes per player</li>
+<li>Ocean Acidification: Remove 1 Ocean per player</li></ul>
+<h4><span class="mw-headline" id="Crisis_Cards">Crisis Cards</span></h4>
+<p>Deal with all Crisis cards in order (BGA does this). Examples of Crisis effects:  
+</p>
+<ul><li>All players must discard one card per temperature band (reduced by resilience)</li>
+<li>All players gain 1 community in crisis per temperature band (reduced by resilience)</li>
+<li>All players lose 1 social resilience</li>
+<li>The player with the most pink symbols must discard two cards with them</li>
+<li>Passive: Players may not remove dirty energy (tuck to remove this)</li>
+<li>Passive: No crisis cards may be revealed/forecast (tuck to remove this)</li></ul>
+<h4><span class="mw-headline" id="Resolving_Crisis_Effects">Resolving Crisis Effects</span></h4>
+<p>Resilience can be gained through individual local projects. Note each person reduces the crisis effect individually according to their own resilience. Resilience level is not used up when decreasing a crisis's effect.  
+</p><p>If you need to lose a card, token, resilience, and don't have one, take a Community in Crisis token instead.
+</p><p>A player with 4 or more Community Crisis cards will be dealt one fewer Local Projects Card, and a player with 8 or more will be dealt 2 fewer Local Projects Cards. 
+</p><p>When discarding a card from your play area, you may choose any card -- not just the top one in a project stack. <b>NOTE:</b> <i>This is only true during Crisis Resolution only!</i> If you do discard the top one, this allows the newly exposed card (and its effect) it to be used again (within the limits set forth on the card, if any).
+</p>
+<h3><span class="mw-headline" id="Growth_Stage">Growth Stage</span></h3>
+<p>If you achieved Drawdown earlier and didn't lose during the Crisis stage, then you win!
+</p><p>If not, advance the round tracker (if this was round 6, you lose), Then advance your energy demand based on your society (U.S. &amp; Europe +1, China +2, Majority World +3) (BGA will do this for you, but pay attention to it on your respective country/region scorekeeping areas!
+</p><p>HINT: Before moving on to the next round, scroll down to review the results of the crises and the planetary effects (on the right side of the screen). You need to know what your "trouble areas" are so that you can work to fix them in the next round. For example, are any of the planetary effects close to a Tipping Point (seesaw/fulcrum icon)?  The Crisis Stage "resolution" happens very quickly on BGA and it is easy to miss all that has happened (this is a bit unfortunate, as taking stock of the effects of all of the actions is important for learning the dynamics of stopping/mitigating climate change).   
+</p>
+<h2><span class="mw-headline" id="End_of_Game">End of Game</span></h2>
+<p>Everyone wins during Growth if you reached "Drawdown" and survived the Crisis stage. [Note: If you have challenge cards active, other win conditions may apply based on the specific challenge (click the challenge card for details).]
+</p><p>Everyone loses if any of the following are reached:
+</p>
+<ul><li>The Thermometer reaches 8 Bands</li>
+<li>Any country/region has 12 or more communities in crisis</li>
+<li>You haven't won at the end of the Crisis Stage in Round 6</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpdaybreak" target="_blank" rel="noopener">Daybreak — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

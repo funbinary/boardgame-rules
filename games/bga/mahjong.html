@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Mahjong 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Mahjong · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Mahjong</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Mahjong</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="General_goal">General goal</span></h2>
+<p>The game is played with a set of 144 tiles based on Chinese characters and symbols. Each player begins by receiving 13 tiles. In turn players draw in the Great Wall and discard tiles on the Celestial Empire until they complete a legal hand using the 14th drawn tile to form four melds and a pair. A player can also win with a small class of limit hands.
+The Sacred Hill is a dead wall: 14 tiles only available to compensate Kong or bonus tiles.
+</p>
+<h2><span class="mw-headline" id="Tiles">Tiles</span></h2>
+<p>The tiles are split into three categories: simples, honors, and bonus tiles. <br />
+</p>
+<ul>
+<li>
+There are three suits of simples and in each suit the tiles are numbered from 1 to 9. The suits are bamboos, dots, and characters. There are four identical copies of each simples tile totaling 108 simples tiles
+</li>
+<li>
+There are two different sets of Honors tiles: Winds and Dragons. The Winds are East, South, West, and North. In Mahjong, East (not North) is the beginning. The Dragons are Red, Green, and White. The white dragon has a blue frame on the face of the piece. These tiles have no numerical sequence like the simples (for example the bamboo pieces number 1 to 9). Like the simples, there are four identical copies of each Honors tile, for a total of 28 Honors tiles.
+</li>
+<li>
+Option "Flowers and seasons": There are two sets of Bonus tiles: Flowers and Seasons. The flower and season tiles play a unique role in the mechanics of the game. When drawn, the Bonus tile is not added into a player's hand but are instead set aside and kept near the player's other tiles for scoring purposes should they win the hand, and an extra tile is drawn in replacement of the Bonus tile.
+In addition, unlike the Simple and Honors tiles, there is only a single tile of each Bonus tile, so there are a total of four flower and four season tiles in the set.
+</li> 
+</ul>
+<h2><span class="mw-headline" id="Melds">Melds</span></h2>
+<p>Melds are groups of tiles within the player's hand, consisting of either:<br />
+</p>
+<ul>
+<li>a Pong: three identical tiles</li>
+<li>a Kong: four identical tiles</li>
+<li>a Chow: three Simple tiles all of the same suit, in numerical sequence</li>
+<li>a Pair: two identical tiles needed in a winning hand</li>
+</ul>
+<p>Melds may be formed by drawing a tile from the wall (concealed melds), or by claiming another player's discard (exposed meld).<br />
+</p>
+<h2><span class="mw-headline" id="Claim_a_tile">Claim a tile</span></h2>
+<p>There are rules governing which player has priority to claim from a discard.<br />
+Going Mahjong &gt; Kong &gt; Pong &gt; Chow*<br />
+</p>
+<ul><li>A player can steal a discard to form a Chow only from the player whose turn was immediately before theirs. <br /></li></ul>
+<p><i>You cannot claim for a Pair excepted for going Mahjong</i><br />
+The player who steals a tile gets the hand, has to discard, and play continues with the player after them.
+<br />
+</p>
+<h2><span id="Limit_hands.28implemented_here.29"></span><span class="mw-headline" id="Limit_hands(implemented_here)">Limit hands(implemented here)</span></h2>
+<ul><li>Thirteen Orphans: Player has 1 and 9 of each simple suit, one of each wind, one of each dragon and in addition one extra piece of any of those thirteen elements.</li></ul>
+<ul><li>Orphans: Plays has only 1's and 9's in the winning hand.</li></ul>
+<ul><li>Nine Gates: Player has 1112345678999 in any simple suit, plus one additional tile of the same suit.</li></ul>
+<ul><li>Seven Pairs: Player has seven pairs of any tiles</li></ul>
+<ul><li>All Kongs: Player has 4 Kongs</li></ul>
+<ul><li>Great Winds: Player has a pong of the 4 winds, and another pair of anything</li></ul>
+<ul><li>Ruby Dragon: Player has a pong/kong of Red Dragons, three pongs/kongs of any Characters, pair of Characters</li></ul>
+<ul><li>Jade Dragon: Player has a pong/kong of Green Dragons, three pongs/kongs of any Bamboo, pair of Bamboo</li></ul>
+<ul><li>Opal Dragon: Player has a pong/kong of White Dragons, three pongs/kongs of any Dots, pair of Dots</li></ul>
+<h2><span class="mw-headline" id="Basics_Rules_Scoring">Basics Rules Scoring</span></h2>
+<p>E = exposed / C = Concealed<br />
+PAIR of Player Wind: E/C 2 pts<br />
+PAIR of Prevalent: E/C 2pts<br />
+PAIR of Dragons or Turn Wind: E 0pts / C 2 pts<br />
+CHOW: 0 pts<br />
+PUNG of 2 to 8: E 2 pts / C 4 pts<br />
+PUNG of 1 or 9 or Winds: E 4 pts / C 8 pts<br />
+PUNG of Dragons: E 8 pts / C 16 pts<br />
+KONG of 2 to 8&#160;: E 8 pts / C 16 pts<br />
+KONG of 1 or 9 or Winds: E 16 pts / C 32 pts<br />
+KONG of Dragons: E 32 pts / C 64 pts<br />
+FLOWERS or SEASONS: 4 pts each<br />
+MAHJONG: + 20 pts<br />
+</p><p><b>Double scoring</b> <i>each condition doubles the score</i><br />
+Melds of player wind, prevalent wind and/or round wind<br />
+Melds of dragons<br />
+Player flower/season<br />
+4 Flowers<br />
+4 Seasons<br />
+</p><p><b>Mahjong double scoring</b> <i>each condition doubles the score</i><br />
+Without chow<br />
+Pure Hand (only one type of tiles)<br />
+Fully Concealed<br />
+Robbing the Kong (claim discard for kong to go Mahjong)<br />
+Winning from the wall (go Mahjong on picking tile from the wall)<br />
+"Plucking the Moon from the Bottom of the Sea" (go Mahjong on picking the last tile of the wall)<br />
+</p><p><b>"Pay higher score"</b><br />
+If "Pay higher score" option is ON, player who goes Mahjong has to pay twice the difference with players who have higher score.
+</p><p><b>East wind exception</b><br />
+East wind doubles its gains and losses.<br />
+With "Pay higher score" ON, it means the multiplicator is 4 instead of 2!
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpmahjong" target="_blank" rel="noopener">Mahjong — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

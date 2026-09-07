@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Coin Age 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Coin Age · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Coin Age</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Coin Age</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>Adam P. McIver's CoinAge
+</p>
+
+<h2><span class="mw-headline" id="Game_Overview">Game Overview</span></h2>
+<p>Coin Age is a microgame for two players that is played with a single card and pocket change.
+</p><p>Players take turns placing coins on a map to control spaces, outmaneuver their opponent, and score victory points.
+</p><p>The game was originally published as a "print &amp; play" download that could be carried in a small "mint tin".
+</p>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<p>Place the map card in the center of the table directly between the two players.
+</p><p>Each map has ten spaces and several color-coded regions of various sizes (depending on the map).
+</p><p>Both players begin the game with 4 dimes, 3 pennies, 2 nickels, and 1 quarter in their "bank."
+</p><p>In this BGA implementation, each coin is represented by its value at the end of the game when controlling a territory:
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+<caption>Coin Representation on BGA
+</caption>
+<tbody><tr>
+<th><b>Coin</b>
+</th>
+<td><b>Represented by</b>
+</td></tr>
+<tr>
+<th>Dimes
+</th>
+<td>The value "1" coin (smallest in size)
+</td></tr>
+<tr>
+<th>Pennies
+</th>
+<td>The value "2" coin
+</td></tr>
+<tr>
+<th>Nickels
+</th>
+<td>The value "3" coin
+</td></tr>
+<tr>
+<th>The Quarter
+</th>
+<td>The value "4" coin (largest in size)
+</td></tr></tbody></table>
+<p><br />
+Coins can be stacked (see the "Place" action) with "smaller" coins being placed on top of "larger" coins: Dimes (1) &lt; Pennies (2) &lt; Nickels (3) &lt; Quarters (4)
+</p><p>"Heads" are represented as gold coins. "Tails" are represented as silver coins.
+</p><p>The player assigned "Heads" takes the first turn.
+</p>
+<h2><span class="mw-headline" id="Turn_Sequence_and_Actions">Turn Sequence and Actions</span></h2>
+<p>At the beginning of your turn, a <i>single coin</i> of each <i>different kind</i> of the coins remaining in your "bank" are tossed/flipped.
+</p><p>The number of coins that match your side ("Heads" or "Tails") determine what actions you can take:
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+<caption>Coin Matches and Actions
+</caption>
+<tbody><tr>
+<th><b>Number of Matches</b>
+</th>
+<td><b>Available Actions (Optional and in Any Order)</b>
+</td></tr>
+<tr>
+<th>Four (4)
+</th>
+<td>Place 2 <i>or</i> Pay 1 to Place 3
+</td></tr>
+<tr>
+<th>Three (3)
+</th>
+<td>Place 2
+</td></tr>
+<tr>
+<th>Two (2)
+</th>
+<td>Place 2
+</td></tr>
+<tr>
+<th>One (1)
+</th>
+<td>Place 1 <i>and</i> Move
+</td></tr>
+<tr>
+<th>None (0)
+</th>
+<td>Capture <i>and</i> Move
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Action_Details">Action Details</span></h2>
+<p><b>Place</b>
+</p><p>Take one of your matching coins and either: 
+</p>
+<ul class="bulletlist" style="margin:1em 0; padding-inline-start:40px;">
+    <li>Place it on an empty map space, or</li>
+    <li>Place it on an occupied map space (if your coin is of a lower rank [i.e.: smaller])</li>
+</ul>
+<p><b>Pay</b>
+</p><p>Transfer one of your matching coins to your opponent's bank.
+</p><p><b>Move</b>
+</p><p>Move a stack (all the coins) in one map space to an empty, adjacent map space.
+</p><p><b>Capture</b>
+</p><p>Remove any single coin from a map space (or from the top of stack) and place it in your bank.
+</p><p><i>Note: Click the <img src="../../assets/img/bga/b5a697830d5f5f60.png" loading="lazy"  alt="CoinAge-QuestionMark.png" decoding="async" /> icon in the BGA game display for a graphical representation of coins and actions.</i>
+</p>
+<h2><span id="Game_End_.26_Scoring"></span><span class="mw-headline" id="Game_End_&amp;_Scoring">Game End &amp; Scoring</span></h2>
+<p>The game ends immediately when a player places a coin in the last empty map space, or when a player runs out of coins in their bank (whichever comes first). The players then add up their victory points:
+</p><p><b>Controlling Spaces</b>
+</p><p>Each coin that "control" a space scores victory points (VP) equal to their rank (1, 2, 3 or 4).
+A coin "controls" a space if it is either the only coin on a space or is the top coin on a stack of coins on a space.
+</p><p><b>Region Bonuses</b>
+</p><p>If a player controls the majority of spaces in each color-coded region, the VP scored by their coins in that region is doubled. No
+region bonus is given in the case of a tie.
+</p><p><b>Bank Bonuses</b>
+</p><p>Players score 1 bonus VP per coin remaining in their bank at the end of the game. 
+</p><p>The player with the most VP wins! In the case of a tie, the player with the highest total value of coins (based on the values above) remaining in their bank is the winner.
+</p><p><i>Note: Click the <img src="../../assets/img/bga/580e18f2d7d17f71.png" loading="lazy"  alt="CoinAge-Star.png" decoding="async" /> icon in the BGA game display for a running tally of the current scoring situation for both players.</i>
+</p>
+<h2><span class="mw-headline" id="Map_Variants">Map Variants</span></h2>
+<p>There are several maps available, each with different (creatively-named) regions and unique region sizes. You can also allow BGA to choose a random map.
+</p><p>Forest, Frozen, Lagoon, Volcano or Random.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpcoinage" target="_blank" rel="noopener">Coin Age — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Clashofdecks 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Clashofdecks · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Clashofdecks</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Clashofdecks</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<ul><li>Place 2 bridges, one above the other, to form two lanes. Each player controls one side of the bridges.</li>
+<li>Each player receives a bastion/fort. Shuffle the remaining cards.</li>
+<li>The game starts with drafting: Draw 4 cards. The first player picks 1, then the second player picks 2; the first player receives the last card. Repeat with the second player becoming the first player until each player has 8 cards.</li>
+<li>Shuffle the 8 cards you drafted to form your hand, together with the bastion/fort in the leftmost space, bastion side up.</li>
+<li>Players alternate taking turns, beginning with the player who received the last card in the draft.</li>
+<li><b>Mana Regeneration:</b> Gain mana equal to the number of cards in your hand, including the bastion. (Exception: the first player gains only 6 mana on the first turn.)
+<ul><li>Mana is spent to play cards during your turn.</li>
+<li>Unspent mana is lost at the end of the turn.</li></ul></li>
+<li><b>Summoning:</b> You may play as many cards as you want (and can afford), but only if the card is one of the 4 leftmost cards (excluding the bastion/fort) in your hand when it is played. (The leftmost cards change as cards are played.) When you are done, begin your assault.
+<ul><li>To play a creature, pay its cost, and choose a lane. It is placed at the end of your side of that lane (furthest from the bridge).</li>
+<li>To play an incantation, pay its cost, select a target card in play, and apply the incantation’s effects to that creature. Then place the card in the rightmost space in your hand.</li></ul></li>
+<li><b>Assault:</b> All your cards in play (except creatures that you played this turn) attack, first those in the upper lane, then those in the lower lane. Within a lane, cards further from the bridge attack before cards nearer the bridge.
+<ul><li>Apply the attacks one by one to the nearest card on the opposite side of the lane. If a card suffers damage equal to or exceeding its health <b>in this turn</b>, it is immediately destroyed and returned to the rightmost space of its owner's hand. (Excess damage is lost. Damage that does not destroy a card is also lost at the end of the turn: every card has its full health at the beginning of a turn.)</li>
+<li>If the opposite side of the lane is empty, apply the damage to the bastion/fort: move it right a number of spaces equal to the damage. (Again, excess damage is lost.)</li>
+<li>If your bastion is ever in the rightmost space of your hand, it is destroyed. Flip it to the fort side and move it to the leftmost space. If the fort is ever in the rightmost space of your hand, you lose immediately.</li></ul></li></ul>
+<h2><span class="mw-headline" id="End_of_the_Game">End of the Game</span></h2>
+<p>When a player's fort reaches the rightmost space, it is destroyed. That player loses and their opponent wins.
+</p><p>Be Warned: If you play all of the cards to the right of your Fort, you destroy the fort yourself, and thus cause the opponent to win
+</p>
+<h2><span class="mw-headline" id="Special_Abilities">Special Abilities</span></h2>
+<ul><li>Aerial: Can only be attacked by cards with Aim.</li>
+<li>Aim: Can attack Aerial cards.</li>
+<li>Aquatic: Double its attack if it is closest to the bridge.</li>
+<li>Aura: Apply the effect to cards immediately to its right and left (but not to itself).</li>
+<li>Berserk: Attack again if it destroys a card. (It cannot attack the bastion/fort on the turn it enters play, even if it has Rage.)</li>
+<li>Catalyst: Gain 2 extra mana at the beginning of the turn.</li>
+<li>Focus: When played, insert it in the space directly behind a bridge.</li>
+<li>Indestructible: Immune to incantations.</li>
+<li>Perforation: Attack both the target and the card behind the target.</li>
+<li>Protection: Nullify the first source of (nonzero) damage applied to the card.</li>
+<li>Rage: Can attack cards (not the bastion/fort) on the turn it enters play.</li>
+<li>Splash: Attack both the target and the card in the other lane adjacent to the target.</li>
+<li>Sprint: When it attacks, move it until it is adjacent to the bridge.  Until the end of the turn, its attack damage is increased by the number of spaces it moved.</li>
+<li>Wrecker: Can attack buildings (including the bastion/fort) but not creatures.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpclashofdecks" target="_blank" rel="noopener">Clashofdecks — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

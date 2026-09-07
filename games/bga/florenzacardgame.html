@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Florenzacardgame 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Florenzacardgame · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Florenzacardgame</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Florenzacardgame</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>The game is divided into five rounds, after which the game ends.  In each round, players will take at least four actions.  Up to four more extra actions per round can be  acquired by building preacher (brown) and different residence (purple) cards.
+</p><p>Points are earned by building Monuments (bronze-colored cards) from a common pool, and district buildings (blue grey and green cards) that are dealt into your hand.  Monuments and blue/green buildings all require hiring an artist (also from common pool), which must be an acceptable type (painter, sculptor, or architect), and typically adds points to the construction.
+</p><p>Constructing buildings requires having sufficient resources (six different types), and enough money (fiorini) (for the artist, and often also the building!).
+</p><p>Location cards (light grey) on the table are actions that can be used once per round.  They are the primary way to acquire resources (apart from income during cleanup phase).  There are also locations for exchanging resources, becoming Captain of the People (first player), and for selling resources.
+</p>
+<h3><span class="mw-headline" id="Actions">Actions</span></h3>
+<p>Players get four actions per round (one in each of the first four phases of the round), plus additional actions (in subsequent phases) from purple and brown cards (up to four more).
+</p><p>Actions are:
+</p>
+<ul><li>- Activate a location card (light grey)</li>
+<li>- Play a Florenza card to your tableau (building a card from hand)</li>
+<li>- Build a Monument</li>
+<li>- Reserve a Monument or Artist</li>
+<li>- Send out workers (+50 fiorini)</li>
+<li>- Go to the market (buy or sell a resource for 100, or trade 2 resources for 1)</li>
+<li>- Look for inspiration (draw a Florenza card)</li></ul>
+<h3><span class="mw-headline" id="Cleanup_phase">Cleanup phase</span></h3>
+<p>After each round:
+</p>
+<ul><li>- players discard all but one card from their hand, then draw back up to five total, then:
+<ul><li>-- each constructed residence (purple) gives a player one more card draw</li></ul></li>
+<li>- sweep and refill the artists and (most of) the monuments on the table:
+<ul><li>-- the two highest valued monuments remain between rounds</li></ul></li>
+<li>- players receive income:
+<ul><li>-- 200 fiorini, 1 marble, 1 wood</li>
+<li>-- all workshops they have built</li>
+<li>-- one resource chosen by the current round's Captain (first player)</li></ul></li>
+<li>- Captain of the People (first-player) marker moves to whoever used that location card, or else rotates.</li>
+<li>- Restore location cards (turn face up)</li></ul>
+<h3><span class="mw-headline" id="Final_Scoring">Final Scoring</span></h3>
+<p>After the fifth round's action phase has ended, final scoring.
+</p>
+<ul><li>- constructed monuments, district buildings, and their artists all score the number shown in top right corner</li>
+<li>- complete sets of district buildings (one each of blue, grey, green) score additional 5 points</li>
+<li>- some guilds (orange) cards have their own scoring conditions</li>
+<li>- There will be a final production after the last round, then money and resources are scored:
+<ul><li>-- the player with the most money earns 4 points, second 2 points, third 1 point.</li>
+<li>-- the player with the most resources earns 4 points, second 2 points, third 1 point.</li></ul></li>
+<li>- player who was captain of the people scores 1 point</li></ul>
+<p>Note:
+</p>
+<ul><li>- reserved artists and monuments that were not constructed are negative points!</li></ul>
+<h3><span class="mw-headline" id="Strategy_Tips">Strategy Tips</span></h3>
+<ul><li>- first two rounds, it's especially important to get production and extra-actions cards played (get your engine going!)
+<ul><li>-- workshops (mustard-yellow cards) produce every round</li>
+<li>-- residences (purple) and preachers (brown) provide extra actions each round -- note, there are three different residence types, each providing another action!</li></ul></li>
+<li>- (generally) don't reserve artists or monuments -- actions are too precious!</li>
+<li>- after you figure out what you can build in a round, and acquire the resources necessary, extra actions should be used grabbing any resources still available from locations before you do the building.  building should generally be your last actions of the round.
+<ul><li>-- playing purple/brown cards gives you extra actions the same round -- order them carefully!</li></ul></li></ul>
+<p>Implementation is rather unforgiving. Be sure to double check your plan before you take action.
+</p>
+<h2><span id="Italian_.28original.29"></span><span class="mw-headline" id="Italian_(original)">Italian (original)</span></h2>
+<p><b>Il turno di gioco si divide in 4 fasi:</b>
+</p>
+<ul><li>Pesca degli Artisti e dei Monumenti</li></ul>
+<ul><li>Pesca delle carte Florenza</li></ul>
+<ul><li>Azioni (4 per round più eventuali azioni extra ottenute dalle carte giocate)
+<ul><li>Giocare una carta Florenza</li>
+<li>Realizzare un Monumento</li>
+<li>Riservarsi un Monumento o un Artista</li>
+<li>Attivare una carta centrale (raccogli/vendi le risorse indicate da una carta che sia sul tavolo a faccia in su)</li>
+<li>Mandare fuori un lavoratore a giornata (raccogli 50 Fiorini)</li>
+<li>Andare al Mercato (vendi/compra/scambia risorse con la riserva)</li>
+<li>Cercare ispirazione (pesca una carta Florenza extra)</li></ul></li></ul>
+<ul><li>Operazioni di Fine turno
+<ul><li>Scartare tutte le carte Monumento rimaste sul tavolo, tranne le due più a sinistra</li>
+<li>Scartare tutte le carte Artista rimaste eventualmente in gioco</li>
+<li>Scartare tutte le carte Florenza in mano ai giocatori, tranne una a scelta del giocatore</li>
+<li>Distribuire le rendite</li>
+<li>Eleggere il nuovo Capitano del Popolo</li>
+<li>Ripristinare le carte centrali</li></ul></li></ul>
+<p><b>Fine della partita</b> dopo 5 turni.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpflorenzacardgame" target="_blank" rel="noopener">Florenzacardgame — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

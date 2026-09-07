@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Tashkalar 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Tashkalar · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Tashkalar</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Tashkalar</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="HIGH_FORM_RULES">HIGH FORM RULES</span></h2>
+<p>High form is currently only implemented as a two-player game on BGA.
+</p>
+<h4><span class="mw-headline" id="Terminology">Terminology</span></h4>
+<p>Pieces are ranked in order: <b>common, heroic, legendary.</b> <b>Upgrade</b> and <b>downgrade</b> mean changing the rank of a piece by one step. A higher ranked piece may count (for summoning or tasks) as if it were of lower rank. 
+</p>
+<ul><li>A <b>move</b> is one square in any direction (including diagonals). A <b>leap</b> is from any square to any other.</li>
+<li>A <b>standard move/leap</b> is permitted onto any empty square or one occupied by a piece of a lesser rank.</li>
+<li>A <b>combat move/leap</b> is permitted onto any empty square or one occupied by a piece of <i>the same</i> or lesser rank.</li></ul>
+<p>Any piece previously occupying the destination square of a move/leap is destroyed. You may destroy your own pieces. "Converting" a piece to a different colour counts as destroying it, but upgrading or downgrading it does not. 
+</p><p>When text on a card refers to the name of the Being, it is referring to the piece in the square where it is summoned.
+</p>
+<h4><span class="mw-headline" id="Setup">Setup</span></h4>
+<p>Each player receives 3 cards from their personal deck, plus 2 Legendary Beings and one flare from the common decks. Four cards are drawn for the task queue. The first three are immediately available; the fourth is not yet available. None of the first three tasks may be "advanced" (certain 3-point tasks), and there may not be three tasks of the same type among the four on display (BGA automatically enforces these rules).
+</p>
+<h4><span class="mw-headline" id="Turns">Turns</span></h4>
+<p>The starting player takes a single action. In subsequent turns, each player takes two actions. These may be any of the following:
+</p>
+<ul><li>- Place a common piece on any empty square</li>
+<li>- Summon a being</li>
+<li>- Discard a card and (optionally) return other cards to the bottom of their decks. <i>(Only permitted once per turn.)</i></li></ul>
+<p>In addition, before or after any action, a flare may be played, if one or both of its conditions are met.
+</p><p>Once a turn is over:
+</p>
+<ul><li>- You may claim one task card and earn its victory points (VPs) if you meet its conditions.</li>
+<li>- If necessary, replenish your hand from the appropriate decks and update the task queue. (Automated on BGA.)</li></ul>
+<h4><span class="mw-headline" id="Summoning">Summoning</span></h4>
+<p>If your pieces are in the formation on a Being’s card (in any orientation or mirror image), you may summon the piece in the top left corner: it is placed via a combat leap onto the white square in the pattern. For most beings, the white square is empty, but some require a piece of your own to be present in the square. Once the Being is summoned, the effects listed on its card are activated.
+</p><p>Patterns for Legendary Beings require one or more heroic pieces. Each legendary piece on the board earns 1 VP. Each player can place a maximum of 3 legendary pieces on the board. If one is destroyed, 1 VP is lost.
+</p>
+<h4><span class="mw-headline" id="Playing_a_Flare">Playing a Flare</span></h4>
+<p>Each flare lists two numbers: X/Y. The top effect may be activated if a player has X fewer upgraded pieces on the board than their opponent; the bottom effect if they have Y fewer pieces in total on the board. Effects activate in top-to-bottom order.
+</p>
+<h4><span class="mw-headline" id="Discarding">Discarding</span></h4>
+<p>Once per turn a player may discard a card. They may also return as many other cards as they like (regular cards, legends, flares) to the bottom of the appropriate decks. Once the turn is over, they replenish their hand as usual. 
+</p>
+<h4><span class="mw-headline" id="Running_Out_of_Pieces">Running Out of Pieces</span></h4>
+<p>If a player needs to place a piece and has no more in stock, they must pick up one from the board before placing the new piece. (Heroic and common pieces come from the same pool--in the original boardgame, they are reverse sides of the same piece--but there are only three legendary pieces for each colour.)
+</p>
+<h4><span class="mw-headline" id="Game_End_and_Scoring">Game End and Scoring</span></h4>
+<p>When one player scores 9 VPs or draws the last card from their own deck, game end is triggered. Everyone plays one more turn, including the player who triggered endgame. Even if their score decreases below 9 due to destruction of a legendary piece, the game still ends.
+</p><p>High score wins. Tiebreakers are, in order, (1) number of upgraded pieces; (2) total number of pieces.
+</p>
+<h2><span id="DEATHMATCH_RULES:_TWO_PLAYERS_.28DUEL.29"></span><span class="mw-headline" id="DEATHMATCH_RULES:_TWO_PLAYERS_(DUEL)">DEATHMATCH RULES: TWO PLAYERS (DUEL)</span></h2>
+<p>No tasks are used. Opening positions are marked on the game board. The first player to score 18 VPs triggers the endgame. 
+</p><p>Destroying pieces scores VPs as follows:
+</p>
+<ul><li>- 1 VP for every 2 common pieces, rounded down</li>
+<li>- 1 VP for a heroic piece</li>
+<li>- 2 VPs for a legendary piece</li></ul>
+<p>Summoning a legend scores 1 VP. This VP is not lost if the piece is later destroyed.
+</p><p>If you play a flare your opponent gains 1 VP.
+</p>
+<h2><span class="mw-headline" id="DEATHMATCH_RULES:_THREE_OR_FOUR_PLAYERS">DEATHMATCH RULES: THREE OR FOUR PLAYERS</span></h2>
+<p>Setup: In three-player Deathmatch, the third player places one common piece adjacent to each diamond symbol. In four-player Deathmatch, the fourth player places one common piece adjacent to each diamond symbol for the first, third and fourth players. As usual, the first player only gets one action. (Sounds complicated? Don't worry, BGA automates the setup.)
+</p><p>Scores are tracked separately in each colour. Your final score is the lowest of these scores. (The second and, in 4-player games, third lowest scores are used as tiebreakers.)
+</p><p>When you score common pieces, first all common colour pairs are scored; then, if two common pieces of different colours remain, you may choose which colour to score against.
+</p><p>When you summon a legend, you may choose which opponent to score 1 VP against.
+</p><p>You may meet one or both criteria for a flare against multiple opponents, in which case you may choose whom to trigger it against (and give them 1 VP).
+</p><p>Endgame is triggered by a player scoring 12 (for three-player) or 10 (for four-player) VPs in a single colour.
+</p>
+<h4><span class="mw-headline" id="Improvised_Summoning">Improvised Summoning</span></h4>
+<p>Once per game, and once for each opponent's colour, a player may use an opponent's piece as their own when summoning a Being. (Thus in a 3-player game, a player may perform two improvised summonings; in a 4-player game, three--one for each opponent's colour.) Only one piece may be used per improvised summoning: you may not use two different opponents' pieces simultaneously.
+</p>
+<h2><span class="mw-headline" id="Expansions">Expansions</span></h2>
+<h4><span class="mw-headline" id="Everfrost">Everfrost</span></h4>
+<p>Several Beings in the Everfrost deck have "frozen effects". These effects do not have to take place immediately upon summoning; they can be activated later ("thawed"), like a flare. Only one such frozen effect may be stored at a time; if you summon a Being with a frozen effect and already have one in storage, you must discard one or the other frozen effect.
+</p>
+<h4><span class="mw-headline" id="Nethervoid">Nethervoid</span></h4>
+<p>Many of the effects in Nethervoid depend on a special marker called the "Gateway", which is automatically created when a Being is summoned; that marked piece is now called "The Gateway". It follows these rules:
+</p>
+<ul><li>1) If no Gateway is on the board, the next summoned common or heroic Being will create a Gateway.</li>
+<li>2) If a common Gateway is on the board, then if a heroic Being is summoned it will shift to the new piece.</li>
+<li>3) If the Gateway is heroic, summoning another heroic Being will not affect it.</li>
+<li>4) Legendary pieces may never become the Gateway; summoning one has no effect on the Gateway. If an upgrade would turn the Gateway into a legendary piece, the Gateway marker is removed from the board.</li></ul>
+<h4><span class="mw-headline" id="Etherweave">Etherweave</span></h4>
+<p>Many Etherweave cards have a "warp" effect; this is a free action that may be played in advance of the card itself, regardless of whether the pattern for that Being is on the board at present. However, until the card itself is summoned, the warped card still counts as being in your hand, and you may not use any more warped effects (though may otherwise summon cards as normal). Leaving a card "in the warp" reduces your score by 2; this penalty is removed the moment the warped card is summoned.
+(NB: A warp may not be played on the first turn of the game.)
+</p><p>Several Etherweave cards allow you to swap pieces or temporarily remove them from the board; neither of these actions count as destroying a piece (for the purpose of High Form goals or Deathmatch scoring).
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptashkalar" target="_blank" rel="noopener">Tashkalar — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

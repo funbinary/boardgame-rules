@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Pontedeldiavolo 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Pontedeldiavolo · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Pontedeldiavolo</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Pontedeldiavolo</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>For tips on how to play Ponte del Diavolo, see <b><a href="https://en.doc.boardgamearena.com/Tips_pontedeldiavolo" target="_blank" rel="noopener">Tips_PonteDelDiavolo</a></b>
+</p><p><b><a href="https://tesera.ru/images/items/178377/Ponte%20del%20Diavolo.pdf" target="_blank" rel="noopener">Rules</a></b>
+</p>
+
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>The object of the game is to form groups of islands linked by bridges.
+</p>
+<h3><span class="mw-headline" id="Definitions">Definitions</span></h3>
+<p><b>Island</b>: 4 orthogonally adjacent tiles of the same colour.
+</p><p><b>Sandbank</b>: Fewer than 4 orthogonally adjacent tiles of the same colour.
+</p><p><b>Bridge</b>: Game piece that connects 2 tiles of the same colour.
+</p><p><b>Water</b>: Empty space on the board.
+</p>
+<h2><span class="mw-headline" id="Game_Start">Game Start</span></h2>
+<ol><li>The first player places 2 light tiles anywhere on the board.</li>
+<li>The second player chooses to play as the light tile or the dark tile player <i>(pie rule)</i>.</li>
+<li>Play resumes with the dark tile player.</li></ol>
+<h2><span class="mw-headline" id="Game_Turn">Game Turn</span></h2>
+<p>Each player takes turns to place either:
+</p>
+<ul><li>2 tiles of their own colour, <b>or</b></li>
+<li>1 bridge.</li></ul>
+<h3><span class="mw-headline" id="Place_2_Tiles">Place 2 Tiles</span></h3>
+<p>Tiles can be placed anywhere on the board except:
+</p>
+<ul><li>Under bridges (including either of the tiles underneath a knight's move bridge), or</li>
+<li>Where a tile becomes adjacent to an <b>island</b> of the same colour, even diagonally. You also cannot complete an island if it would touch any other tile of the same colour diagonally.</li></ul>
+<h3><span class="mw-headline" id="Place_1_Bridge">Place 1 Bridge</span></h3>
+<p>A bridge can be placed between 2 tiles of the player's colour that are 2 spaces from each other in any direction orthogonally or diagonally, or at a <b>knight's move</b>.
+</p>
+<ul><li>The centre of a bridge must be over an empty (water) space (knight's bridge needs both water spaces), not a tile</li>
+<li>Each tile can have a maximum of one bridge connection.</li>
+<li>Bridges may not cross each other.</li></ul>
+<h2><span class="mw-headline" id="Game_End">Game End</span></h2>
+<p>Game end is triggered when either player:
+</p>
+<ol><li>Is unable to place 2 tiles, and</li>
+<li>Chooses not to (or is unable to) place a bridge.</li></ol>
+<p>The dark tile player can always take an equal number of turns.
+</p><p><b>Note:</b> unlike the printed rules, in the BGA implementation there is an infinite supply of tiles and bridges.
+Thus, the game will only end when a player has fewer than 2 valid squares available for tiles.
+</p>
+<h3><span class="mw-headline" id="Scoring">Scoring</span></h3>
+<p>The players score each group of islands connected by bridges (including connections via <b>sandbanks</b>) according to a rule of triangular numbers:
+</p>
+<table class="wikitable" style="width:auto;text-align:center;" border="2">
+<tbody><tr>
+<th># connected islands
+</th>
+<td>1
+</td>
+<td>2
+</td>
+<td>3
+</td>
+<td>4
+</td>
+<td>5
+</td>
+<td>6
+</td>
+<td>7
+</td>
+<td>8
+</td>
+<td>9
+</td>
+<td>10
+</td>
+<td>11
+</td>
+<td>12
+</td></tr>
+<tr>
+<th>Score
+</th>
+<td>1
+</td>
+<td>3
+</td>
+<td>6
+</td>
+<td>10
+</td>
+<td>15
+</td>
+<td>21
+</td>
+<td>28
+</td>
+<td>36
+</td>
+<td>45
+</td>
+<td>55
+</td>
+<td>66
+</td>
+<td>78
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Tiebreaks">Tiebreaks</span></h3>
+<ol><li>Most islands.</li>
+<li>Most bridges.</li></ol></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelppontedeldiavolo" target="_blank" rel="noopener">Pontedeldiavolo — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

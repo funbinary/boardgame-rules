@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Alakablast 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Alakablast · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Alakablast</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Alakablast</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h3><span class="mw-headline" id="Overview">Overview</span></h3>
+<p>Try to figure out your hand whilst battling your opponents to gain the most gems first!
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Core_Concept">Core Concept</span></h3>
+<p>Some of your hand cards are known only to you, and other hand cards are known only to everyone else
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Turn">Turn</span></h3>
+<p>On your turn, you either ask for information or challenge someone
+</p><p>If you ask for information, pick one of your cards you cannot see and first say whether you know anything about it, if you know nothing then you can be told either element (colour) or power level (number) and it's up to the others to pick which to tell you. However, if you already know one of these features, the others must tell you the unknown feature i.e. if you already know the number, they can't tell you the number again
+</p><p>Exception 1: if it is a special (*) card, regardless of its features, the others can only say it's a special and not the features <img src="../../assets/img/bga/b3f9dc5b117bc6f4.png" loading="lazy"  alt="AlakaBlast-Info-special.png" decoding="async" />
+</p><p>Exception 2: (does not apply to BGA implementation) If what you think you know is misremembered and wrong, this will not be corrected for free, but it's up to the others whether to clue the truly unknown feature or whether to clue the incorrectly understood feature
+</p><p>Exception 3: If the feature clued about can be found on other cards in your hand, you must also be told this (including for special cards)
+</p><p>Alternatively, you can choose to challenge someone
+</p><p>This challenge can be either element or power level based, decided by the challenger
+</p><p>Before the challenge begins, the challenger must give information to the opponent following the above information rules
+</p><p>Each in the challenge simultaneously pick a card (private or public) to use
+</p><p>If this is an Element challenge, Water beats Fire, Fire beats Plant, Plant beats Water, Light wins, Shadow loses
+</p><p>If this is a Power Level challenge, the highest number wins
+</p><p>Whoever wins gains 1 gem
+</p><p>If it's tied, play again with remaining cards in hand but keeping the same feature (element or power level)
+</p><p>Winning a tied round gains 1 extra gem
+</p><p>If needed, take another tied round, and increase the winning gems by 1 for each time (3rd round = 3 gems at stake)
+</p><p>Once a challenge is resolved, the two contestants draw back up to 4 cards (the winner takes their cards blind and facing the group, the loser takes their cards privately facing themselves)
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Game_End">Game End</span></h3>
+<p>The game can end in two ways
+</p><p>If during a challenge the opponents tie on ALL their hand cards, the game immediately ends with a win for everyone! (or no one!)
+</p><p>Otherwise, the first to 7/6/5/4 gems in 2/3/4/5 players, wins!
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpalakablast" target="_blank" rel="noopener">Alakablast — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

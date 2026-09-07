@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Pokerdice 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Pokerdice · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Pokerdice</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Pokerdice</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<ul><li>Each player has 5 dices with 6 sides (one each of A, K, Q, J, 10, 9).</li>
+<li>In each round, each player rolls all 5 dice. Then, they may reroll any number of those dice up to twice (click on the dice that you want to reroll).</li>
+<li>After all rerolls (or when the player stops), compare all hands from highest to lowest.</li>
+<li>Tied hands are resolved by the dice used in the combination, then by those unused. Note that A &gt; K &gt; Q &gt; J &gt; 10 &gt; 9.</li>
+<li>Lose lives according to the variant chosen. By default, rank-based life loss is used.</li>
+<li>Game ends when a player loses all lives. The player with the most remaining lives wins.</li></ul>
+<h2><span class="mw-headline" id="Poker_Dice_Hands">Poker Dice Hands</span></h2>
+<p>In the following table, 1 is the best combination while 8 is the worst. Note that there are no suits in this game.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Name</th>
+<th>Example</th>
+<th>Rank (Standard)</th>
+<th>Rank (Probability-based)
+</th></tr>
+<tr>
+<td>Five of a Kind
+</td>
+<td>A-A-A-A-A
+</td>
+<td>1
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Four of a Kind
+</td>
+<td>A-A-A-A-K
+</td>
+<td>2
+</td>
+<td>2
+</td></tr>
+<tr>
+<td>Full House
+</td>
+<td>A-A-A-K-K
+</td>
+<td>3
+</td>
+<td>4
+</td></tr>
+<tr>
+<td>Straight
+</td>
+<td>A-K-Q-10-J
+</td>
+<td>4
+</td>
+<td>3
+</td></tr>
+<tr>
+<td>Three of a Kind
+</td>
+<td>A-A-A-K-Q
+</td>
+<td>5
+</td>
+<td>6
+</td></tr>
+<tr>
+<td>Two Pair
+</td>
+<td>A-A-K-K-Q
+</td>
+<td>6
+</td>
+<td>7
+</td></tr>
+<tr>
+<td>One Pair
+</td>
+<td>A-A-K-Q-J
+</td>
+<td>7
+</td>
+<td>8
+</td></tr>
+<tr>
+<td>No Combination
+</td>
+<td>A-K-Q-J-9
+</td>
+<td>8
+</td>
+<td>5
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Variants">Variants</span></h2>
+<ul><li>Number of Lives: 3 or 5</li>
+<li>Life Loss: Rank-based life loss, All players except winner lose 1 life or Lowest rank players lose 1 life (Detailed below)</li>
+<li>Hank Rank: Standard or Probability-based (Described above)</li>
+<li>Simultaneous Mode: All players play simultaneously. Rolled dice are revealed at the end of the round.</li>
+<li>Elimination Mode: Off or On (Detailed below)</li></ul>
+<h3><span class="mw-headline" id="Life_Loss">Life Loss</span></h3>
+<ul><li>Rank-based life loss: The number of lives is multiplied by the number of players - 1. All players lose lives equal to the round rank - 1. If all players tie, all players lose 1 life.</li>
+<li>All players except winner lose 1 life: All players except the round winner lose 1 life. If all players tie, all players lose 1 life.</li>
+<li>Lowest rank players lose 1 life: The lowest rank players of the round lose 1 life. If all players tie, all players lose 1 life.</li></ul>
+<h3><span class="mw-headline" id="Elimination_Mode">Elimination Mode</span></h3>
+<ul><li>Off: When a player loses all lives, the game ends. All remaining players are ranked by the number of remaining lives.</li>
+<li>On: When a player loses all lives, the player is eliminated and the game continues. Game ends when only one player is left.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelppokerdice" target="_blank" rel="noopener">Pokerdice — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

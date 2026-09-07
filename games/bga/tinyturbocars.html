@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Tinyturbocars 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Tinyturbocars · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Tinyturbocars</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Tinyturbocars</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2–4 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>Welcome to Tiny Turbo Cars! This is a frantic race game for 2 to 4 players in which you program the movements of your tiny toy car in advance, with a sliding puzzle acting as your remote controller.
+</p>
+
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>A game includes several rounds. Each round contains 3 phase:
+</p><p>1. Programming
+</p><p>2. Racing
+</p><p>3. End of round 
+</p>
+<h3><span class="mw-headline" id="Phase_1:_Programming">Phase 1: Programming</span></h3>
+<p>All players <b>simultaneously</b> program their movements on their controllers. Each piece contains a command. 
+</p><p>Only the <b>2nd and 3rd lines</b> of the puzzle will be used to run the program. <b>Activate from left to right</b>, then the next line.  
+</p><p>In real-time mode, when a player is finished programming, they take the top smile token. When only 1 player is left programming, a 10 second countdown starts. When the countdown ends, the last player must stop programming. 
+</p><p>In turn-based mode, this part has changed into counting the moves of programming. 
+</p>
+<h4><span class="mw-headline" id="Moving_Commands"><b>Moving Commands</b></span></h4>
+<p>Black arrow: Forward
+</p><p>Hollow + Black arrow = Jump: Move forward 2 spaces while skipping the first space's effect
+</p><p>Gray arrow: Backward
+</p><p>Blue arrow: Left diagonal forward
+</p><p>Red arrow: Right diagonal forward
+</p><p>Arrow with missile icon: Launch a missile forward then move 1 space forward
+</p><p>Arrow with battery icon: Move forward according to your batteries number. 
+</p>
+<h4><span class="mw-headline" id="Special_Commands"><b>Special Commands</b></span></h4>
+<p>Empty: nothing happens
+</p><p>Battery: Charge 1 battery
+</p><p>+ (Increase): Increase the next command by 1. 
+</p><p>- (Decrease): Decrease the next command by 1. 
+</p><p>Effect to movement command: Effect to moving number only
+</p><p>Effect to Battery: Effect to the number of batteries recharged
+</p><p>+ after - or - after +&#160;: Both commands cancel each other. 
+</p>
+<h3><span class="mw-headline" id="Phase_2:_Racing">Phase 2: Racing</span></h3>
+<p>Start from the player with the happiest smile token and proceeding in smile order from happiest to saddest. After a player has executed all of their programmed commands, the next player's turn will start, and so on. The last player loses 1 battery when their turn starts. 
+</p>
+<h4><span class="mw-headline" id="Racetrack_Elements"><b>Racetrack Elements</b></span></h4>
+<p>When a Racecar moves, some interactions may be triggered, mostly according to where it start when proceed a command. 
+</p><p>Note: When it says "stop their current movement command", it means the next command will still be preceeded after the effect.  
+</p>
+<ul><li><b>Starting Grid</b>: Racecar won't suffer any damage from being hitted when on a Starting grid space. Ignore any backward commands.</li></ul>
+<ul><li><b>Carpets/Grass</b>: Any movement command that <b><u>starts</u></b> on a carpet space will have its movement value changed to exactly 1. Grass spaces with a carpet icon have the same rules as carpet spaces. Increase and Decrease effects are applied after the Carpet effect.</li></ul>
+<ul><li><b>Crayon Speeder</b>: When a Racecar <b><u>starts</u></b> a command on a space containing a Crayon Speeder, resolve that command as if it had an Increase.</li></ul>
+<ul><li><b>Obstacles/Racecars</b>: If a Racecar <b>enters</b> a space containing an Obstacle or another Racecar, it must stop its current movement command on that space and suffer 1 damage. Effects don't accumulate so if a player hits a Racecar on top of an Obstacle, it only counts as 1 damage.</li></ul>
+<ul><li><b>Water Puddle</b>: If a Racecar <b><u>enters or starts in</u></b> a space containing a Water Puddle, it receives the Slippery token immediately. From now on, any diagonal movement command will have it's direction reversed. Return the Slippery token to the supply at the end of the player's turn.</li></ul>
+<ul><li>I<b>mpassables</b>: Racecars <b><u>cannot enter</u></b> an Impassable space. Those can be found in the middle of the track as Books or Magazines with a dark background or on the side of the track marked in red (right) or blue (left). If the Racecar should move into an Impassable space, it stops its current movement command, remains on the space it was in before hitting the impassable space, and suffers 1 damage.</li></ul>
+<h5><span class="mw-headline" id="Damage"><b>Damage</b></span></h5>
+<p>For each damage suffered, the player loses 1 battery.  
+</p><p>If they have <b>Energy Shield(s)</b>, they must discard 1 instead.  
+</p><p>If all 3 batteries are lost, the Racecar immediately lies down. 
+</p>
+<h5><span class="mw-headline" id="Lay_down"><b>Lay down</b></span></h5>
+<p>When a Racecar is lying down, it cannot be moved until fully recharged. To recharge a lying down Racecar, ignore the next command to regain 1 battery. 
+</p><p>When a Racecar is lying down, its ability cannot be activated unless the ability says so. Also this Racecar can be hit but won't suffer any damage. 
+</p>
+<h4><span class="mw-headline" id="Finish_all_Commands"><b>Finish all Commands</b></span></h4>
+<p>After a player finish all commands, if they are not lying down they may spend their <b>Energy Shield(s)</b> to move. Move <b>2 spaces forward</b> for each <b>Energy Shield</b>, one by one. 
+</p><p>Although not mentioned in the rulebook, the publisher has clarified that "the movement restrictions from carpets, obstacles, and impassable terrains are applied to the Energy Shield movements as well". 
+</p><p>Source: <a href="https://boardgamegeek.com/thread/2736997/article/38598830#38598830" target="_blank" rel="noopener">https://boardgamegeek.com/thread/2736997/article/38598830#38598830</a> 
+</p>
+<h3><span class="mw-headline" id="Phase_3:_End_of_round">Phase 3: End of round</span></h3>
+<p>Check if any Racecar has crossed the finish line. 
+</p>
+<h6><span class="mw-headline" id="If_one_or_more_Racecar_has_crossed_the_finish_line:"><b>If one or more Racecar has crossed the finish line:</b></span></h6>
+<p>If only one Racecar has crossed, that Racecar is the winner. If more than one Racecar has crossed the finish line in the same round, the Racecar that move the furthest past the finish line is the winner (even if lying down). In case of a tie, the one with the happiest smile token wins the game. 
+</p><p>Other players keep playing to finish the race and check all their final standings. 
+</p>
+<h6><span class="mw-headline" id="If_no_Racecar_has_crossed_the_finish_line:"><b>If no Racecar has crossed the finish line:</b></span></h6>
+<p>Before starting a new round, players return and take <b>Energy Shield(s)</b>. Then they must shuffle their controller.  
+</p>
+<h5><span class="mw-headline" id="Energy_Shields"><b>Energy Shields</b></span></h5>
+<p>All players return their <b>Energy Shield(s)</b>. Then each player takes <b>Energy Shield</b> according to the number of <b>Racecar(s)</b> ahead of them. 
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Special_Abilities">Special Abilities</span></h2>
+<p>Each Racecar has a special ability override the board effect when specified. 
+</p>
+<ul><li><b>Die Liner</b>: The <u><b>Increase</b> command</u> is applied twice. Increase the next command by 2 instead of 1.</li></ul>
+<ul><li><b>Brick Gang</b>: When this Racecar starts <u><b>any movement</b></u> on a carpet, the movement value is equal to 2 instead of 1.</li></ul>
+<ul><li><b>Sonic Fish</b>: When this Racecar is under the effect of a <b>Slippery token</b>, all its <u><b>diagonal movements</b></u> are increased by 1.</li></ul>
+<ul><li><b>Grim Thresher</b>: When this Racecar moves <b><u>exactly 1 space forward</u></b> (after considering all modifiers), it ignores any damage in this movement.</li></ul>
+<ul><li><b>M1 Furry</b>: When this Racecar <u><b>shoots a missile</b></u>, it goes in all 4 orthogonal directions. If any other Racecars are hit, M1 Furry gains 1 energy shield.</li></ul>
+<ul><li><b>Bird Racer</b>: Before this Racecar's <b><u>turn end</u></b> (before using any shield tokens), Bird Racer may <u><b>"fly" their car sideways</b></u> to any empty spot. Obstacles, impassables, and any other Racecar may be "flown" over. This ability is ignored when Bird Racer is lying down.</li></ul>
+<ul><li><b>Dogtor</b>: When this Racecar uses the <u><b>Battery</b> command</u>, <u>recharge 2 batteries</u> instead of 1. If Dogtor has 3 batteries when using the Battery command, it <u>moves 2 forward</u> instead.</li></ul>
+<ul><li><b>Turbobot</b>: When this Racecar uses the <u><b>Turbo</b> command</u>,  they <u><b>moves</b> <b>4 space forward</b></u> instead. However during this movement <u>any damage</u> Turbobot suffers <u>takes twice</u>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Table_configuration">Table configuration</span></h2>
+<h3><span class="mw-headline" id="Turn-based_Variant"><b>Turn-based Variant</b></span></h3>
+<p>In a turn-based game, the order to take smile tokens is set by the number of moves taken in programming. 
+</p>
+<h5><span class="mw-headline" id="Normal_Difficulty"><b>Normal Difficulty</b></span></h5>
+<p>In a normal game, players have up to 30 moves to program.
+</p>
+<h5><span class="mw-headline" id="Easy_Difficulty"><b>Easy Difficulty</b></span></h5>
+<p>In a easy game, players have up to 40 moves to program.
+</p>
+<h3><span class="mw-headline" id="Longer_track"><b>Longer track</b></span></h3>
+<p>Add all four track boards to create a longer track.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptinyturbocars" target="_blank" rel="noopener">Tinyturbocars — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

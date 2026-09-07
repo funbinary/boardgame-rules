@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Obsession 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Obsession · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Obsession</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Obsession</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Each player has a number of Servant meeples, a set of Improvement tiles in front of them (representing areas of their estate's house and grounds), and a hand of Gentry cards. They also have a Reputation value, starting at 1.1; an amount of Money starting at £0; and a number of Objective Cards (some of which will be discarded as the game progresses).
+</p><p>Your Servant meeples are:
+</p>
+<table class="wikitable" style="max-width:50rem;text-align:center;" border="2">
+<tbody><tr>
+<th>Meeple
+</th>
+<th>Name
+</th>
+<th style="text-align:left;">Effect
+</th></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/a94145ecc9f8386c.png" loading="lazy"  alt="Butler.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #2A2275 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#2A2275,#2A2275)">Butler</span>
+</td>
+<td style="text-align:left;">Supports prestigious events and can hire new servants.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/ce0986c441c8d613.png" loading="lazy"  alt="Valet.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #249167 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#249167,#249167)">Valet</span>
+</td>
+<td style="text-align:left;">Supports male guests.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="https://en.doc.boardgamearena.com/images/f/f0/Lady%27s_Maid.png" loading="lazy"  alt="Lady&#39;s Maid.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #72116E clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#72116E,#72116E)">Lady's Maid</span>
+</td>
+<td style="text-align:left;">Supports female guests.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/608310eaab817e9e.png" loading="lazy"  alt="Housekeeper.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #E81F35 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#E81F35,#E81F35)">Housekeeper</span>
+</td>
+<td style="text-align:left;">Supports dining events and may also serve as a <span style="display:inline-block;display:inline;color:oklch(from #72116E clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#72116E,#72116E)">Lady's Maid</span>.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/ece4ee432782284a.png" loading="lazy"  alt="Footman.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #DFDACD clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#DFDACD,#DFDACD)">Footman</span>
+</td>
+<td style="text-align:left;">Supports outdoor events.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/2d56b42e64d645f0.png" loading="lazy"  alt="Underbutler.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #181A1A clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#181A1A,#181A1A)">Underbutler</span>
+</td>
+<td style="text-align:left;">Can serve as a <span style="display:inline-block;display:inline;color:oklch(from #2A2275 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#2A2275,#2A2275)">Butler</span>, <span style="display:inline-block;display:inline;color:oklch(from #249167 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#249167,#249167)">Valet</span> or <span style="display:inline-block;display:inline;color:oklch(from #DFDACD clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#DFDACD,#DFDACD)">Footman</span>.
+</td></tr>
+<tr>
+<td colspan="3" style="background:#a75; color:#ffa"><i><b>With Upstairs Downstairs expansion:</b></i>
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/57f94aa3d3a3cc43.png" loading="lazy"  alt="Cook.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #E2714C clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#E2714C,#E2714C)">Cook</span>
+</td>
+<td style="text-align:left;">Increases the family’s reputation by one when used. Permits guests with prestige ratings 1 or 2 levels above family’s rep to attend activity.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/66e31dda885c4407.png" loading="lazy"  alt="Hall Boy.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #30B3D3 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#30B3D3,#30B3D3)">Hall Boy</span>
+</td>
+<td style="text-align:left;">Duties as <span style="display:inline-block;display:inline;color:oklch(from #2A2275 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#2A2275,#2A2275)">Butler</span> when required for a gentry guest, even if Butler is present. May be used on any gentry card to increase the monetary favour by + £100.
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/740a30a898b72553.png" loading="lazy"  alt="Head Housemaid.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #EB92A8 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#EB92A8,#EB92A8)">Head Housemaid</span>
+</td>
+<td style="text-align:left;">Duties as <span style="display:inline-block;display:inline;color:oklch(from #E81F35 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#E81F35,#E81F35)">Housekeeper</span> for required female gentry guest (card), even if present, but may not screen guests acting in this capacity.
+<p>On invite card or tile, may look at 1 additional (“see 2/keep 1” becomes “see 3/keep 1”&#160;; “5/2” etc.).
+</p>
+</td></tr>
+<tr>
+<td style="background:#eee;"><img src="../../assets/img/bga/694da528f628efb5.png" loading="lazy"  alt="Useful Man.png" decoding="async" />
+</td>
+<td><span style="display:inline-block;display:inline;color:oklch(from #5B3224 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#5B3224,#5B3224)">Useful Man</span>
+</td>
+<td style="text-align:left;">Can perform various useful tasks:
+<ul><li>• Play onto Village Fair to increase by +£200;</li>
+<li>• Play onto a tile when buying to reduce cost by -£100;</li>
+<li>• Play onto an improvement tile to temporarily decrease its prestige rating by 1;</li>
+<li>• Remove the Useful Man from the game to refresh the builders' market;</li>
+<li>• Remove the Useful Man from the game to locate any non-monument tile and place it in the £800 place in the market. (The tile in the £300 space is returned to the bag and the others moved to the left.)</li></ul>
+</td></tr></tbody></table>
+<p>The game consists of players taking turns to host events at locations on their estate: each event requires a number of Servants to attend, and a number of Gentry to be played from the hand as guests to it. The outcome of an event will be a gain (or loss) of Reputation and/or Money, and/or the acquisition of new Gentry cards. After hosting an event, you may optionally buy one Improvement from the Builder's Market.
+</p><p>When your hand is running low, you can pass your turn to pick your discard pile back up - optionally taking either £200 or refreshing the Builder's Market.
+</p>
+<h2><span class="mw-headline" id="Each_turn">Each turn</span></h2>
+<p>On your turn you can either:
+</p>
+<h4><span class="mw-headline" id="Take_a_standard_turn">Take a standard turn</span></h4>
+<p>A standard turn consists of the following steps:
+</p>
+<ul><li>1. <b>Rotate service</b>: Move all your Servants one box to the right. (Only those in the "Available Service" box will be available for use on your turn.)</li>
+<li>2. <b>Host activity</b>: Choose tile from your estate to use this turn. Its bottom-left number must be equal to or lower than your family's Reputation.</li>
+<li>3. <b>Invite guests</b>: Play a number of Gentry cards from your hand that match the event.</li>
+<li>4. <b>Provide service</b>: Expend Servants to satisfy the event's Estate tile and Gentry cards. (If you do not have sufficient servants, you must go back and choose a different Estate/Gentry combination, or give up and pass your turn.)</li>
+<li>5. <b>Enjoy favours</b> given by the event tile and the played gentry cards. These are all compulsory, with the exception of "Dismissing".</li>
+<li>6. Optionally <b>buy an Improvement tile from Builders' Market</b></li>
+<li>7. <b>Clean up</b></li></ul>
+<h4><span class="mw-headline" id="Pass">Pass</span></h4>
+<p>When you choose to pass:
+</p>
+<ul><li>• All of your servants move into the "available" box</li>
+<li>• You take your discard pile of Gentry cards back into your hand</li></ul>
+<ul><li>• You may either:
+<ul><li>• Collect £200</li>
+<li>• Refresh the Builders' Market</li>
+<li>• Hire Servants using the Butler's Room (if using the Upstairs Downstairs expansion)</li></ul></li>
+<li>• You may optionally buy from the Builders' Market</li></ul>
+<p><b>Special Actions</b>
+</p><p>At any time:
+</p>
+<ul><li>• Spend 2 Reputation to gain £100</li>
+<li>• Spend 3 Reputation to refresh 1 Servant</li>
+<li>• Spend 4 Reputation to refresh the Builders' Market</li></ul>
+<h2><span class="mw-headline" id="Special_rounds">Special rounds</span></h2>
+<table class="wikitable" style="max-width:50rem;text-align:center;" border="2">
+<tbody><tr>
+<th>Event
+</th>
+<th>Regular Game
+</th>
+<th><i>Extended Game</i>
+</th>
+<th style="text-align:left;">Effect
+</th></tr>
+<tr>
+<th>Village Fair
+</th>
+<td>Rounds 3 and 9
+</td>
+<td>Rounds 4, 9 and 16
+</td>
+<td style="text-align:left;">Players who have flipped the Study tile receive £300 and 2 Reputation at the starts of these rounds.
+</td></tr>
+<tr>
+<th>Courtship
+</th>
+<td>Rounds 4, 8, 12 and 16
+</td>
+<td>Rounds 5, 10, 15 and 20
+</td>
+<td style="text-align:left;">No regular turns are taken: instead, whoever has the highest score for that courtship's current Theme colour (shown by the most recent upturned card at the top of the board) may take either the Charles or Elizabeth Fairchild card into their hand, and draw a Victory Point Card.
+<p>The <b>final Courtship round</b> is scored on the total for <i>all four</i> Theme colours, rather than just the fourth. (If a colour appears multiple times, it is counted multiple times.)
+</p>
+</td></tr>
+<tr>
+<th>Builder's Holiday
+</th>
+<td>Round 11
+</td>
+<td>Round 13
+</td>
+<td style="text-align:left;">Players may buy any number of Improvement tiles during this round.
+</td></tr>
+<tr>
+<th>National Holiday
+</th>
+<td>Round 14
+</td>
+<td>Round 11
+</td>
+<td style="text-align:left;">Player Reputation does not limit actions this round. Players may host any event and invite any guest, irrespective of their Reputation.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="End_Game_Scoring">End Game Scoring</span></h2>
+<p>Add up:
+</p>
+<ul><li>• Improvement Tile VP</li>
+<li>• Gentry Card VP</li>
+<li>• Objective Card VP</li>
+<li>• Service VP: 2 VP per servant</li>
+<li>• Wealth VP: 1 VP per £200</li>
+<li>• VP Cards</li>
+<li>• Reputation VP</li></ul>
+<table class="wikitable" style="width:auto;text-align:center;" border="2">
+<tbody><tr>
+<th>Reputation
+<p>Level
+</p>
+</th>
+<th>VP
+</th></tr>
+<tr>
+<td>1
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>2
+</td>
+<td>3
+</td></tr>
+<tr>
+<td>3
+</td>
+<td>6
+</td></tr>
+<tr>
+<td>4
+</td>
+<td>10
+</td></tr>
+<tr>
+<td>5
+</td>
+<td>15
+</td></tr>
+<tr>
+<td>6
+</td>
+<td>21
+</td></tr>
+<tr>
+<td>7*
+</td>
+<td>28
+</td></tr>
+<tr>
+<td>8
+</td>
+<td>36
+</td></tr>
+<tr>
+<td>Max
+</td>
+<td>45
+</td></tr></tbody></table><p>*Maximum in Standard Play</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpobsession" target="_blank" rel="noopener">Obsession — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Draculahelsing 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Draculahelsing · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Draculahelsing</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Draculahelsing</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>Each player plays the role of a different character, either Van Helsing or Dracula.
+</p><p>Van Helsing wins the game if he manages to kill Dracula by removing all his Health Points (HP). Dracula wins the game by either turning all 4 inhabitants of the same District into vampires or surviving until the end of the 5th round.
+</p>
+
+<h2><span class="mw-headline" id="Round_Setup">Round Setup</span></h2>
+<p>The deck (4 suits, each from 1 to 8) is shuffled and each player receives 5 cards.
+</p><p><b>Each card faces a District. Cards cannot be swapped or rearranged unless a game effect allows you to do so. This is very important, as each card will affect the District that it faces at the end of the round.</b>
+</p><p>The color tokens, associated with the 4 suits, are randomly ranked at the begining of the game. They then can be manipulated with card effects. The rightmost token (with no tokens above or below it) marks the trump suit. 
+</p><p>Dracula always goes first.
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>The game is played in a maximum of 5 rounds. Each round, players alternate taking turns, drawing a card and discarding a card to trigger its effect.
+</p><p>On your turn, the topmost card is drawn from the deck. Then, you can either discard this card, or swap it with any of your 5 cards and discard the chosen card. The effect of the discarded card is then triggered.
+</p><p>Instead of drawing (and discarding) a card, a player can call the end of the round. You can only choose this action if there are at least 6 cards in the discard pile. Your opponent takes their last turn, then the round ends.
+</p>
+<h3><span class="mw-headline" id="Card_Effects">Card Effects</span></h3>
+<table class="wikitable" style="width:auto;text-align:left;" border="2">
+
+<tbody><tr>
+<th>1
+</th>
+<td>Reveal one of your cards
+</td></tr>
+<tr>
+<th>2
+</th>
+<td>Reveal the topmost card of the deck
+</td></tr>
+<tr>
+<th>3
+</th>
+<td>Reveal one of your opponent's cards
+</td></tr>
+<tr>
+<th>4
+</th>
+<td>Swap two of your cards
+</td></tr>
+<tr>
+<th>5
+</th>
+<td>Immediately play another turn
+</td></tr>
+<tr>
+<th>6
+</th>
+<td>Swap one of your card with your opponent's card from the same District
+</td></tr>
+<tr>
+<th>7
+</th>
+<td>Swap the Trump color token with another color token
+</td></tr>
+<tr>
+<th>8
+</th>
+<td>Immediately ends the round (can only be discarded after 6 cards are in the discard). You opponent doesn't play another turn.
+</td></tr></tbody></table>
+<p>Cards effects must be triggered if possible.
+</p>
+<h2><span class="mw-headline" id="End_of_the_Round">End of the Round</span></h2>
+<p>A round ends when a player uses their turn to call it or when the deck is empty.
+</p><p>Then, all Districts are resolved one by one, from left to right in the direction the weathervane is pointing. For each District, your card is compared with the opponent’s card:
+</p><p>1) First compare the cards for trumps. If one of the two cards is a Trump Card, it wins. If both cards are Trump Cards, the highest value wins;
+</p><p>2) If neither is the trump card compare for value, the highest value wins.
+</p><p>3) However, if both values are tied, the higher color (on the Color Ranking Board) wins. (rule null on board game arena highest number wins regardless of suit unless they are trump. this has been a known issue for 2 years)
+</p><p>Whenever Dracula wins a District, he turns one Human Token into a Vampire in that District.
+</p><p>Whenever Van Helsing wins a District, he removes one of Dracula’s Health Points.
+</p><p>If one of the end game conditions (4 Vampires in the same District or 0 HP for Dracula) is met during the resolution of a District, the game ends immediately.
+</p>
+<h2><span class="mw-headline" id="End_of_the_Game">End of the Game</span></h2>
+<p>If Dracula loses his last HP, Van Helsing wins the game.
+</p><p>If Dracula turns all 4 inhabitants of the same District into vampires, or if the game reaches the end of the fifth round, Dracula wins the game.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpdraculahelsing" target="_blank" rel="noopener">Draculahelsing — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

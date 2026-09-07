@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="《七大奇迹》(7 Wonders) 中文规则：轮抽卡牌建设文明，穿越三个时代争夺最高分数。">
+  <title>七大奇迹 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="wonders">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">七大奇迹（7 Wonders）</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="全部游戏">
+        <div class="toc-title">全部游戏</div>
+        <ul>
+          <li><a href="../index.html">🏠 返回首页</a></li>
+          <li><a href="7-wonders.html">🏛️ 七大奇迹</a></li>
+          <li><a href="brass-birmingham.html">🏭 工业革命：伯明翰</a></li>
+          <li><a href="vale-of-eternity.html">✨ 永恒之谷</a></li>
+          <li><a href="wingspan.html">🦜 展翅翱翔</a></li>
+          <li><a href="pokemon-grove.html">🌳 宝可梦林地探索</a></li>
+          <li><a href="puerto-rico.html">⛵ 波多黎各</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">🏛️ 七大奇迹</h1>
+          <p class="game-sub">7 Wonders · 设计：Antoine Bauza</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 3–7 人</span>
+            <span class="meta-chip">⏱ 约 30 分钟</span>
+            <span class="meta-chip">🎂 10 岁以上</span>
+          </div>
+        </header>
+
+        <h2>游戏概述</h2>
+        <p>《七大奇迹》是一款文明建设类卡牌游戏，带领你的文明穿越 <strong>3 个时代</strong>。每名玩家选择一个奇迹，并通过打出卡牌来发展文明。游戏结束时，分数最高的玩家获胜。</p>
+
+        <h2>游戏配件</h2>
+        <ul>
+          <li>7 个奇迹板图</li>
+          <li>7 张奇迹卡</li>
+          <li>49 张一级卡（时代A）</li>
+          <li>49 张二级卡（时代B）</li>
+          <li>49 张三级卡（时代C）</li>
+          <li>84 张资源卡（7 种）</li>
+          <li>6 张军事卡</li>
+          <li>25 张计时卡</li>
+          <li>50 枚金币</li>
+          <li>40 枚负面标记（军事标记）</li>
+          <li>1 本规则书</li>
+        </ul>
+
+        <h2>游戏设置</h2>
+        <ol>
+          <li>将奇迹板图随机分发给每位玩家（也可以自选），每位玩家面前放着一块奇迹板图以及对应的奇迹卡。</li>
+          <li>每位玩家获得 <strong>3 枚金币</strong>。</li>
+          <li>将三个时代的卡牌分开，按时代将卡牌洗混。</li>
+          <li>根据玩家数量，从每个时代的牌堆中移除多余卡牌。</li>
+        </ol>
+
+        <h3>奇迹板图</h3>
+        <p>每块奇迹板图分为时代A、时代B、时代C 等多个建造阶段，分别标注了每个阶段的费用与奖励。</p>
+        <p><em>版图布局示意：三块时代板图并排摆放。</em></p>
+
+        <h2>游戏流程</h2>
+        <p>每个时代进行若干轮。<strong>每轮所有玩家同时从手牌中选择 1 张卡，然后同时展示。</strong></p>
+        <p>选择卡牌后，玩家可以执行以下 3 种行动之一：</p>
+        <ol>
+          <li><strong>打出卡牌</strong>（支付费用）；</li>
+          <li><strong>建造奇迹</strong>（将卡牌面朝下放在奇迹板图下方）；</li>
+          <li><strong>弃掉卡牌获得 3 枚金币</strong>。</li>
+        </ol>
+
+        <h3>回合结束：传牌</h3>
+        <p>每位玩家将剩余手牌传给邻座玩家：<strong>时代A 和时代C 传给左边，时代B 传给右边</strong>。当每人只剩 1 张手牌时，最后一张手牌不打出，直接弃掉，时代结束。</p>
+
+        <h2>卡牌费用与打出卡牌</h2>
+
+        <h3>卡牌费用</h3>
+        <p>卡牌左上角的图标表示打出这张卡所需的费用。费用可以是资源（木材、矿石等），也可以是金币。</p>
+
+        <h3>打出卡牌与卡牌颜色</h3>
+        <p>打出卡牌时，先支付费用，然后将卡牌面朝上放在自己面前。卡牌的效果立即生效。</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>卡牌颜色</th><th>作用</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>棕色</td><td>提供资源</td></tr>
+              <tr><td>灰色</td><td>提供加工品</td></tr>
+              <tr><td>蓝色</td><td>提供分数</td></tr>
+              <tr><td>黄色</td><td>提供金币或交易优惠</td></tr>
+              <tr><td>红色</td><td>提供军事力量</td></tr>
+              <tr><td>紫色</td><td>公会，游戏结束时计分</td></tr>
+              <tr><td>绿色</td><td>提供科学符号</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>交易 / 奇迹建造 / 军事冲突</h2>
+
+        <h3>交易</h3>
+        <p>玩家可以向相邻玩家购买资源。向邻居购买资源时，每购买 1 个资源需支付 <strong>2 枚金币</strong>；拥有相应黄色交易卡时，价格可以降为 1 枚金币。</p>
+
+        <h3>奇迹建造</h3>
+        <p>建造奇迹分为多个阶段。每个阶段需要支付对应的费用（将选中的卡牌面朝下放在奇迹板图下方作为建造标记）。完成阶段后获得对应奖励。</p>
+
+        <h3>军事冲突</h3>
+        <p>每个时代结束时，每位玩家与相邻玩家比较军事力量，力量较强的一方获得战争胜利标记，较弱的一方获得负面标记。</p>
+        <p>胜利标记的分值随时代递增：<strong>时代A 每个 +1 分、时代B 每个 +2 分、时代C 每个 +3 分</strong>；负面标记每个 -1 分。</p>
+
+        <h2>科学计分与计分总表</h2>
+
+        <h3>科学计分</h3>
+        <ul>
+          <li>绿色卡牌上有 3 种科学符号（指南针、车轮、石板）。<strong>集齐 3 种不同符号可获得 7 分</strong>。</li>
+          <li>每种符号的数量按<strong>平方计分</strong>：1 个得 1 分，2 个得 4 分，3 个得 9 分……</li>
+          <li>部分紫色公会卡和奇迹阶段也可提供科学符号。</li>
+        </ul>
+
+        <h3>计分总表</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>分数来源</th><th>分数</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>军事</td><td>胜利标记按时代计分：时代A 每个 +1、时代B 每个 +2、时代C 每个 +3；失败标记每个 -1</td></tr>
+              <tr><td>国库</td><td>每 3 枚金币 1 分</td></tr>
+              <tr><td>蓝色卡</td><td>面版分数</td></tr>
+              <tr><td>黄色卡</td><td>特定条件分数</td></tr>
+              <tr><td>绿色科学</td><td>平方计分</td></tr>
+              <tr><td>紫色公会</td><td>特定条件分数</td></tr>
+              <tr><td>奇迹阶段</td><td>面版分数</td></tr>
+              <tr><td>负面标记</td><td>每个 -1 分</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>游戏结束与获胜</h2>
+        <p>第三个时代结束后，游戏立即结束，所有玩家计算总分。总分最高的玩家获胜。平局时，金币多的玩家获胜；仍平局则共享胜利。</p>
+
+        <h3>2 人游戏变体</h3>
+        <p>2 人游戏时，使用一个虚拟玩家（自由城市）。自由城市按固定规则行动。</p>
+
+        <h2>卡牌清单（时代一、二级卡示例）</h2>
+
+        <h3>一级卡（时代A）示例</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>卡牌名称</th><th>颜色</th><th>效果</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>木材厂</td><td>棕色</td><td>提供 1 木材</td></tr>
+              <tr><td>采石场</td><td>棕色</td><td>提供 1 石头</td></tr>
+              <tr><td>锯木坑</td><td>棕色</td><td>提供 1 木材</td></tr>
+              <tr><td>矿坑</td><td>棕色</td><td>提供 1 粘土</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>二级卡（时代B）示例</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>卡牌名称</th><th>颜色</th><th>效果</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>锯木场</td><td>棕色</td><td>提供 1 木材</td></tr>
+              <tr><td>采石场B</td><td>棕色</td><td>提供 1 石头</td></tr>
+              <tr><td>制坯厂</td><td>棕色</td><td>提供 1 粘土</td></tr>
+              <tr><td>铸造厂</td><td>棕色</td><td>提供 1 矿石</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>卡牌清单（续）与奇迹一览</h2>
+
+        <h3>三级卡（时代C）示例</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>卡牌名称</th><th>颜色</th><th>效果</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>工会</td><td>紫色</td><td>按邻居蓝色卡数量计分</td></tr>
+              <tr><td>学者行会</td><td>紫色</td><td>按绿色科学符号计分</td></tr>
+              <tr><td>建造者行会</td><td>紫色</td><td>按奇迹阶段数量计分</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>奇迹一览</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>奇迹名称</th><th>阶段A效果</th><th>阶段B效果</th><th>阶段C效果</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>吉萨大金字塔</td><td>3 分</td><td>5 分</td><td>7 分</td></tr>
+              <tr><td>巴比伦空中花园</td><td>3 分</td><td>科学符号</td><td>7 分</td></tr>
+              <tr><td>亚历山大灯塔</td><td>3 分</td><td>交易优惠</td><td>7 分</td></tr>
+              <tr><td>阿尔忒弥斯神庙</td><td>3 分</td><td>5 分</td><td>7 分</td></tr>
+              <tr><td>摩索拉斯陵墓</td><td>3 分</td><td>卡牌回收入</td><td>5 分</td></tr>
+              <tr><td>罗德斯岛巨像</td><td>3 分</td><td>军事力量</td><td>7 分</td></tr>
+              <tr><td>奥林匹亚宙斯像</td><td>3 分</td><td>交易优惠</td><td>7 分</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>常见问题</h2>
+        <p><strong>问：打出卡牌时可以购买邻居的资源吗？</strong><br>
+        答：可以。打出卡牌时，可以通过向邻居购买资源来支付费用。</p>
+        <p><strong>问：弃牌获得金币的行动一回合可以做多次吗？</strong><br>
+        答：不可以。每回合只能选择一种行动。</p>
+        <p><strong>问：建造奇迹的阶段可以跳过吗？</strong><br>
+        答：可以，可以不按顺序建造，但必须支付对应阶段费用。</p>
+
+        <h2>原版规则书图片（扫描版）</h2>
+        <details class="scan-appendix">
+          <summary>📖 展开查看原版规则书扫描图（11 页，点击放大）</summary>
+          <div class="scan-list">
+            <figure><img src="../assets/img/7-wonders/p01.jpg" alt="规则书 第1页" loading="lazy"><figcaption>1 · 封面</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p02.jpg" alt="规则书 第2页" loading="lazy"><figcaption>2 · 目录与配件</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p03.jpg" alt="规则书 第3页" loading="lazy"><figcaption>3</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p04.jpg" alt="规则书 第4页" loading="lazy"><figcaption>4</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p05.jpg" alt="规则书 第5页" loading="lazy"><figcaption>5</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p06.jpg" alt="规则书 第6页" loading="lazy"><figcaption>6</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p07.jpg" alt="规则书 第7页" loading="lazy"><figcaption>7</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p08.jpg" alt="规则书 第8页" loading="lazy"><figcaption>8</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p09.jpg" alt="规则书 第9页" loading="lazy"><figcaption>9</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p10.jpg" alt="规则书 第10页" loading="lazy"><figcaption>10</figcaption></figure>
+            <figure><img src="../assets/img/7-wonders/p11.jpg" alt="规则书 第11页" loading="lazy"><figcaption>11</figcaption></figure>
+          </div>
+          <p class="source-note">注：原文第 12 页图片在 B 站图床已失效（404），无法收录。上方文字为整理版速查，完整细节请对照扫描图。</p>
+        </details>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://www.bilibili.com/opus/1031116154839498768/" target="_blank" rel="noopener">《BGA桌游规则：七大奇迹（7 Wonders）》</a> · BGA小助手 · 规则内容版权归原作者所有。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

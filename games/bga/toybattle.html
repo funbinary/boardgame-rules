@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="玩具大乱斗 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>玩具大乱斗 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">玩具大乱斗</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">玩具大乱斗</h1>
+          <p class="game-sub">Toybattle · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><h2><span class="mw-headline" id="Overview">概览</span></h2>
+<p>游戏进行一系列回合，直到通过以下三种方式之一触发游戏结束。  
+</p>
+<ul><li>如果总部被军队占领，占领玩家立即获胜。</li>
+<li>如果通过区域控制，玩家获得了地图上定义的特定数量的勋章，该玩家立即获胜。</li>
+<li>如果玩家无法执行更多行动（例如，他们没有板块可以摸牌且无法打出任何板块），则游戏结束。在这种情况下，拥有最多勋章的玩家获胜。如果平局，触发此游戏结束条件的玩家失败。</li></ul>
+<p>每位玩家有24个军队--8种类型，每种3个。在设置期间，从每位玩家的储备中随机移除4个军队，玩家不知道哪些板块被移除。两位玩家之间被移除的板块可能不同，创造出神秘的不对称性。 
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+<caption>部队
+</caption>
+<tbody><tr>
+<th style="background:linear-gradient(0deg, #f8f8f8, #e7e9e8);">名称</th>
+<th>图片</th>
+<th>强度</th>
+<th>描述</th>
+<th>备注
+</th></tr>
+<tr>
+<td><b>夸克</b></td>
+<td><a href="/File:ToyBattle_kwak.gif" class="image"><img alt="ToyBattle kwak.gif" src="/images/5/5c/ToyBattle_kwak.gif" decoding="async" width="88" height="117" /></a></td>
+<td>X</td>
+<td>夸克没有效果，但可以放置在任何敌方部队的上方。然而，任何敌方部队也可以覆盖它。</td>
+<td>
+</td></tr>
+<tr>
+<td><b>骷髅</b></td>
+<td><a href="/File:ToyBattle_skully.gif" class="image"><img alt="ToyBattle skully.gif" src="/images/7/75/ToyBattle_skully.gif" decoding="async" width="89" height="117" /></a></td>
+<td>1</td>
+<td>你可以从你的储备区摸2张部队牌。</td>
+<td>如果你在架子上已经有7张部队牌，你只能摸一张。
+</td></tr>
+<tr>
+<td><b>上尉</b></td>
+<td><a href="/File:ToyBattle_capn.gif" class="image"><img alt="ToyBattle capn.gif" src="/images/6/6e/ToyBattle_capn.gif" decoding="async" width="88" height="116" /></a></td>
+<td>2</td>
+<td>你可以按照正常的放置规则额外放置1张部队牌并应用其效果。</td>
+<td>放置的部队牌（包括上尉）的效果首先触发，然后是任何特殊基地效果。
+</td></tr>
+<tr>
+<td><b>巨象</b></td>
+<td><a href="/File:ToyBattle_jumbo.gif" class="image"><img alt="ToyBattle jumbo.gif" src="/images/4/4b/ToyBattle_jumbo.gif" decoding="async" width="88" height="117" /></a></td>
+<td>3</td>
+<td>你可以选择1张可见的敌方部队牌（与巨象相邻）并将其正面朝上弃掉。</td>
+<td>如果部队牌通过一段路径相连，则它们相邻。
+</td></tr>
+<tr>
+<td><b>钩子</b></td>
+<td><a href="/File:ToyBattle_hook.gif" class="image"><img alt="ToyBattle hook.gif" src="/images/0/04/ToyBattle_hook.gif" decoding="async" width="88" height="117" /></a></td>
+<td>4</td>
+<td>你可以忽略连接规则，将钩子放置在任何<u><b>基地</b></u>上，无论它是否与你的总部相连。</td>
+<td>要将钩子放置在敌方总部（不是基地）上，它必须通过你的部队与你的总部相连。
+</td></tr>
+<tr>
+<td><b>XB-42</b></td>
+<td><a href="/File:ToyBattle_xb42.gif" class="image"><img alt="ToyBattle xb42.gif" src="/images/d/dd/ToyBattle_xb42.gif" decoding="async" width="87" height="116" /></a></td>
+<td>5</td>
+<td>你可以随机从对手的架子上拿取1张部队牌并将其正面朝上弃掉。</td>
+<td>
+</td></tr>
+<tr>
+<td><b>星星</b></td>
+<td><a href="/File:ToyBattle_star.gif" class="image"><img alt="ToyBattle star.gif" src="/images/8/81/ToyBattle_star.gif" decoding="async" width="88" height="116" /></a></td>
+<td>6</td>
+<td>你可以从你的储备区摸1张部队牌并将其放置在你的架子上。</td>
+<td>
+</td></tr>
+</tbody></table>
+<tr>
+<td><b>Roxy</b></td>
+<td><a href="/File:ToyBattle_roxy.gif" class="image"><img alt="ToyBattle roxy.gif" src="/images/b/b1/ToyBattle_roxy.gif" decoding="async" width="87" height="116" /></a></td>
+<td>7</td>
+<td>无效果。</td>
+<td>
+</td></tr>
+<h2><span class="mw-headline" id="Your_Turn">你的回合</span></h2>
+<p>你可以选择：
+</p><p><b>摸2个部队</b>从你的储备区并将它们放置在你的架子上。你的架子最多可容纳8个部队
+</p><p>或者
+</p><p><b>打出1个部队</b>从你的架子上放置到战场上的一个空间。你可以将它放置在任何满足以下条件的位置：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>一个空的基地，且该基地与你的总部相连（这意味着你必须始终从你的总部（起点）到你放置的部队遵循一条连续路径，只能穿过你占领的基地）</li>
+  <li>被你任何部队占领的基地</li>
+  <li>被敌方部队占领的基地，且该部队的战力低于你放置的部队</li>
+  <li>对手的总部。（你不能在自己的总部上放置部队）</li>
+</ul>
+<p>每个部队在放置后会触发一个效果。
+</p><p>如果部队放置在特殊基地上，你先完全完成部队的效果，然后再触发特殊基地的效果。
+</p><p>如果你通过占领环绕某个区域的所有基地来控制该区域，你将获得该区域中所有的勋章。
+</p><p>如果你要摸第9个部队，你 simply 不摸这个部队。
+</p>
+<h2><span class="mw-headline" id="Battlefields">战场</span></h2>
+<table class="wikitable" style="width:auto;" border="2">
+<tbody><tr>
+<th style="background:linear-gradient(0deg, #f8f8f8, #e7e9e8);">名称</th>
+<th>特殊基地的效果
+</th></tr>
+<tr>
+<td><b>城堡战场</b></td>
+<td>你可以选择你的其他1个部队，无论它在哪里，并将其放回你的架子。
+</td></tr>
+<tr>
+<td><b>热带泳池</b></td>
+<td>只有具有指定数值的部队才能放置在这些特殊基地和总部上
+</td></tr>
+<tr>
+<td><b>云之城</b></td>
+<td>你可以从你的储备区摸1个部队并将其放置在你的架子上。
+</td></tr>
+<tr>
+<td><b>火山丛林</b></td>
+<td>你可以选择1个与这个特殊基地相邻的敌方部队。将其移动到与其起始基地相邻的基地上，忽略放置规则。
+</td></tr>
+<tr>
+<td><b>诅咒墓地</b></td>
+<td>你可以选择你的弃牌区中的1个部队并将其放置在你的架子上。
+</td></tr>
+<tr>
+<td><b>加勒比海</b></td>
+<td>没有特殊基地，但不对称，有2个蓝色总部和1个红色总部
+</td></tr>
+<tr>
+<td><b>金属X站</b></td>
+<td>部队效果在特殊基地上不生效。
+</td></tr>
+<tr>
+<td><b>战场</b></td>
+<td>随机选择1个对手的部队。它被"冻结"，直到下一回合才能被放置。
+</td></tr></tbody></table></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptoybattle" target="_blank" rel="noopener">玩具大乱斗 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

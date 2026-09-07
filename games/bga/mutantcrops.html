@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Mutantcrops 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Mutantcrops · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Mutantcrops</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Mutantcrops</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h3><span class="mw-headline" id="Overview">Overview</span></h3>
+<p>Players take turns placing their farmers on unoccupied action spaces to do actions. Once all of your farmers are on the board, you take your turn by moving one of your farmers to a different space.
+</p><p>The game is divided into rounds in which each player takes 2 actions (3 actions in a solo or 2-player game). At the end of each round, a new field (action card) will be revealed and whoever most recently took the <b>FIRST PLAYER</b> action takes the next turn.
+</p><p>By doing the actions, you can collect three types of resource token: seeds, food and water. Seeds are spent buying crops from the display with the <b>SOW</b> action. You can then <b>FEED</b> or <b>WATER</b> your crops, where you spend food and water to activate the crops' abilities and score coins (points).
+</p><p>Once you have fed and watered a crop, you may <b>FEED</b> or <b>WATER</b> it again to activate its special ability. This might give you more points, or a bonus sow action, or have another effect.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Other_actions:">Other actions:</span></h3>
+<p><b>ROTATE CROPS</b>: shuffle displayed crops back into deck and deal out new ones.
+</p><p><b>DUAL ACTION</b>: move another farmer onto an occupied action space and perform that action.
+</p><p><b>CHANGE RESOURCES</b>: return any number of resource tokens and replace them with the same number of any types.
+</p><p><b>EXCHANGE</b>: return a crop card to the bottom of the deck and sow a new one from the display for free.
+</p><p><b>SEARCH &amp; SOW</b>: search the crop deck and sow a card from there.
+</p><p><b>1/2 SOW or WATER/FEED</b>: perform the action, paying half-price (rounded up).
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Game_End">Game End</span></h3>
+<p>The game ends after the seventh round, which is the round after the final field has been revealed. Whoever has the most coins wins, with the tiebreak being the total number of resource tokens (seeds, food and water).
+</p><p>N.B. In this implementation, <i>Melon</i>, <i>Strawberry</i> and <i>Pepper</i> special abilities (which give coins according to the resources you have left) are awarded at the end of the game, but other special abilities award their points during the game.
+</p><p><br />
+</p>
+<h3><span id="Field_Cards_.28Actions.29"></span><span class="mw-headline" id="Field_Cards_(Actions)">Field Cards (Actions)</span></h3>
+<p><b>Stage 2 field cards</b> (appear in a random order):
+</p>
+<ul><li><b>top:</b> 2 x Feed action; <b>bottom:</b> Water action and +2 seeds</li>
+<li><b>top:</b> 2 x Water action; <b>bottom:</b> Sow action and +2 food</li>
+<li><b>top:</b> 2 x Sow action; <b>bottom:</b> Feed action and +2 water</li></ul>
+<p><br />
+<b>Stage 3 field cards</b> (appear in random order):
+</p>
+<ul><li><b>top:</b> Sow action then Water/Feed action; <b>bottom:</b> +1 any resource then Change Resources</li>
+<li><b>top:</b> Feed action and Water action; <b>bottom:</b> free Dual Action</li>
+<li><b>top:</b> +3 any resources; <b>bottom:</b> Exchange action</li></ul>
+<p><br />
+<b>EXPANSION Stage 3 field cards</b> (shuffled with the base game Stage 3 field cards and drawn at random):
+</p>
+<ul><li><b>top:</b> 1/2 price Water/Feed action; <b>bottom:</b> 1/2 price Sow action</li>
+<li><b>top:</b> +1 any resource then Water/Feed action; <b>bottom:</b> +1 seed then Sow action</li>
+<li><b>top:</b> +2 seeds, +1 water, +1 food; <b>bottom:</b> Search deck and Sow action</li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Special_Rules">Special Rules</span></h3>
+<p><b>Cranberry and Orange</b>: they "count as" another sowed crop, which means they trigger rewards from the special abilities of other cards (like the <i>Onion</i>, <i>Chard</i>, <i>Cucumber</i>, <i>Pumpkin</i> or <i>Peach</i>, which all award coins if you have sown certain other crops). They do not gain another card's special ability themselves.
+</p><p><b>Pear</b>: you can sow a card if it is in the crop display, not just cards from the deck.
+</p><p>With double action spaces like <b>WATER x2</b> or <b>SOW + WATER OR FEED</b> you <b>must</b> be able to do both actions. That might mean there are some actions you cannot do if it makes the second action unaffordable or impossible. (Eg. with <b>SOW + WATER OR FEED</b> you must be able to do a water/feed action after sowing, so if you have no affordable water/feed actions already, you can only sow a crop that gives you an affordable water/feed action.)
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpmutantcrops" target="_blank" rel="noopener">Mutantcrops — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

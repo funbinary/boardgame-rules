@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Shogi 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Shogi · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Shogi</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Shogi</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Basic_principles">Basic principles</span></h2>
+<p>Shogi is a game from the same family as chess. Each player has a set of pieces, including a king. The goal is to capture the opponent's king. The game ends when a king is in "checkmate", that is when no matter what its owner does, it would end up being captured by the opponent on their next move.
+</p><p>Pieces move differently depending on their type, as described below. Players can only move one piece per turn.
+</p>
+<h2><span class="mw-headline" id="How_the_pieces_move">How the pieces move</span></h2>
+<p>A piece can never move to a square already occupied by another friendly piece. If a piece moves to a square occupied by an enemy piece, the enemy piece is captured.
+Except for the knight, pieces cannot jump over other pieces.
+</p>
+<ul><li>玉: the king (1 per player). It can move one square in any direction (vertically, horizontally or diagonally).</li>
+<li>歩: pawns (9 per player). They can only move one square forward.</li>
+<li>香: lances (2 per player). They can move any number of square directly forward.</li>
+<li>桂: knights (2 per player). They move two squares forward plus one square to either side (in an inverted "L" shape, either to the left or right). They can jump over other pieces.</li>
+<li>銀: silver generals (2 per player). They can move one square diagonally backwards, or to one of the three squares in front of them (directly forwards, or diagonally forwards).</li>
+<li>金: gold generals (2 per player). They can move one square directly backwards, to the left or right, or to one of the three squares in front of them (directly forwards, or diagonally forwards).</li>
+<li>角: bishop (1 per player). It can move any number of squares diagonally.</li>
+<li>飛: rook (1 per player). It can move any number of squares orthogonally (forwards, backwards, to the left or to the right).</li></ul>
+<h2><span class="mw-headline" id="Promotions">Promotions</span></h2>
+<p>A piece can <b>promote</b> after it moves <i>into, inside or out of</i> the enemy camp, defined as the last three ranks (lines).
+Promotion is optional, except when declining promotion would result in the piece not being able to ever move again (a pawn or lance on the last rank, or a knight on the last two ranks).
+</p>
+<ul><li>Rooks (飛) and bishops (角), when promoted, keep their original movement and also gain the ability to move like a king. So a promoted rook (named a dragon, 龍) can now move one square diagonally, while a promoted bishop (called a horse, 馬) can now move one square orthogonally.</li>
+<li>All "small" pieces (pawns, lances, knights and silver generals) lose their original movement when promoted and instead move like gold generals.</li>
+<li>Kings (玉) and gold generals (金) can't promote.</li></ul>
+<h2><span class="mw-headline" id="Drops">Drops</span></h2>
+<p>When a player captures an enemy piece, they return it to their unpromoted form and take it in hand.
+On a player's turn, instead of moving one of their pieces on the board, they can drop one of their pieces in hand on any free square of the board.
+</p><p>There are a few restrictions:
+</p>
+<ul><li>It is illegal to drop a piece where it wouldn't be able to move (pawns and lances on the last rank, and knights on the last two ranks).</li>
+<li>It is illegal to drop a pawn in a file (column) where the player already has an unpromoted pawn. This rule only applies to pawns.</li>
+<li>It is illegal to immediately checkmate the opponent's king by dropping a pawn. This rule only applies to pawns.</li></ul>
+<p>Pieces are always dropped unpromoted. A player can promote a dropped piece as per the usual rules the next time they move it.
+</p>
+<h2><span class="mw-headline" id="Points_of_attention_for_chess_players">Points of attention for chess players</span></h2>
+<p>Pawns do not capture diagonally, but directly forwards (the same way they normally move).
+</p><p>There's no special moves: pawns can't move two squares, there's no en passant, and no special castling move.
+</p><p>Stalemates are a very rare occurence in Shogi, but they don't end in a draw. A player that has no legal move on their turn loses the game.
+</p>
+<h2><span id="Other.2C_less_important_rules"></span><span class="mw-headline" id="Other,_less_important_rules">Other, less important rules</span></h2>
+<h3><span class="mw-headline" id="Repetitions">Repetitions</span></h3>
+<p>If the same game position appears four times throughout the game, it immediately ends in a draw.
+</p><p>A "game position" includes the pieces on the board, the pieces in hands, and which player has the turn.
+</p><p>If this position has been achieved four times by repeatedly checking the opponent's king, then instead of a draw, the game ends with the player being in check winning.
+</p>
+<h3><span class="mw-headline" id="Entering_kings">Entering kings</span></h3>
+<p>Rarely, a game can end up in a situation where no player can realistically checkmate their opponent's king.
+</p><p>This happens when one or both kings have entered their enemy's camp. Because shogi pieces move mostly forwards, they can't easily attack a king in their own camp. Such a king will also easily be surrounded by friendly promoted pieces, making its defense impenetrable.
+</p><p>To resolve such a situation, points are attributed to each player depending on the pieces they own (on the board or in their hand). Rooks and bishops are worth 5 points, kings are worth 0 point, and all other pieces are worth 1 point.
+</p><p>Then, on BGA, the following rules are applied:
+</p>
+<ul><li>If a player got their king in the enemy camp and has at least 31 points, they win the game.</li>
+<li>Otherwise, if both players got their king in the enemy camp, the game ends in a draw.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpshogipik" target="_blank" rel="noopener">Shogi — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

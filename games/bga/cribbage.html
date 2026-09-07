@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="克里比奇纸牌 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>克里比奇纸牌 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">克里比奇纸牌</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">克里比奇纸牌</h1>
+          <p class="game-sub">Cribbage · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <h2>组件</h2>
+<ul>
+  <li>计分板（跳钉板）用于记录每位玩家的分数。</li>
+  <li>标准 52 张牌。花色地位相同。A = 1，J、Q、K = 10。</li>
+</ul>
+
+<h2>发牌</h2>
+<p>双方切牌决定第一次发牌权，牌小者先发。若点数相同，则重新洗牌再切。</p>
+<ul>
+  <li>👤 2 人局 ⇨ ✋ 每人 6 张手牌</li>
+  <li>👤 3 人局 ⇨ ✋ 每人 5 张手牌 + 1 张弃入底牌池（crib）</li>
+  <li>👤 4 人局 ⇨ ✋ 每人 5 张手牌，对面而坐的玩家为一队</li>
+</ul>
+
+<h2>底牌池（The crib）</h2>
+<p>每位玩家选留四张牌，把其余的牌面朝下弃入"底牌池"，供庄家稍后使用。每人的手牌和底牌池都是四张牌。</p>
+
+<h2>起点牌（The starter）</h2>
+<p>非发牌者切牌，发牌者翻开下半叠的顶牌，称为"起点牌"（starter）或"切牌"。若翻开的是 J，发牌者得 2 分（"his heels"）。起点牌稍后在"亮牌"阶段使用。</p>
+
+<h2>出牌（The play）</h2>
+<p>"出牌"（或称 pegging）由非发牌者开始。每位玩家轮流面朝上打出一张牌，并报出已打出牌的累计值（count）。例如 Alice 打出 ♣4 并报"四"，Bob 打出 ♥7 并报"十一"，以此类推。</p>
+<ul>
+  <li>累计值<strong>不得超过 31</strong>。</li>
+  <li>每位玩家必须继续出牌，直到无法出牌为止。</li>
+  <li>无法出牌的玩家报"Go"（过）。</li>
+  <li>打出最后一张牌的玩家得 1 分（因对手"Go"）；若恰好把累计值打到 31，则得 2 分。</li>
+  <li>随后累计值清零，由报"Go"的玩家的对手重新开始出牌。</li>
+  <li>如此反复，直到所有手牌打完。</li>
+</ul>
+<p>在"出牌"阶段可以按以下规则获得额外分数：</p>
+<ul>
+  <li><strong>十五</strong>：累计值恰好等于 15 ⇨ 2 分</li>
+  <li><strong>三连</strong>（任意顺序的三张连牌，如 ♠6、♦4、♠5）⇨ 3 分</li>
+  <li><strong>四连</strong> ⇨ 4 分，连牌每多一张 ⇨ +1 分</li>
+  <li><strong>对子</strong>（与上一张牌同点）⇨ 2 分</li>
+  <li><strong>三条</strong> ⇨ 6 分（3 个不同对子 × 2 分）</li>
+  <li><strong>四条</strong> ⇨ 12 分（6 个不同对子 × 2 分）</li>
+  <li>如果一张牌同时完成多个得分组合，则全部组合都计分。</li>
+</ul>
+
+<h2>亮牌（The show）</h2>
+<p>"出牌"结束后，从非发牌者开始，每位玩家依次报分。</p>
+<ul>
+  <li>发牌者的手牌计分。</li>
+  <li>底牌池翻开，由发牌者作为额外的一手牌计分。</li>
+  <li>底牌池的计分方式与手牌相同，唯一例外是同花：底牌池的四张同花只有在与起点牌同花色时才计分（5 分）。</li>
+  <li>起点牌是所有手牌共享的第五张牌。计分如下：</li>
+</ul>
+<ul>
+  <li><strong>十五</strong>：每个独立组合等于 15 ⇨ 2 分</li>
+  <li><strong>三连</strong>：三张连牌（不限花色）⇨ 3 分</li>
+  <li><strong>四连</strong> ⇨ 4 分；<strong>五连</strong> ⇨ 5 分</li>
+  <li><strong>对子</strong> ⇨ 2 分；<strong>三条</strong> ⇨ 6 分；<strong>四条</strong> ⇨ 12 分</li>
+  <li><strong>同花</strong>：手牌四张同花色 ⇨ 4 分（注意：这是唯一不适用于底牌池的规则）</li>
+  <li><strong>同花</strong>：起点牌与手牌同花色 ⇨ 5 分</li>
+  <li><strong>J</strong>：起点牌与手牌中的 J 同花色 ⇨ 1 分（"one for his nob"）</li>
+</ul>
+
+<h2>游戏结束</h2>
+<p>有人达到 121 分（标准目标分）时游戏结束。通常按跑道计分，先到终点者获胜。</p>
+
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpcribbage" target="_blank" rel="noopener">克里比奇纸牌 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

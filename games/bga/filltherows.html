@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Filltherows 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Filltherows · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Filltherows</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Filltherows</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Goal">Goal</span></h2>
+<p>Score the most points by checking off stops along four iconic American road trip routes. Fill as many stops as you can — every stop counts, and completing a route earns a bonus!
+</p>
+<hr />
+<h2><span class="mw-headline" id="The_Routes">The Routes</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Route</th>
+<th>Color</th>
+<th>Direction</th>
+<th>From → To
+</th></tr>
+<tr>
+<td>🌊 <b>Pacific Coast</b></td>
+<td>Blue</td>
+<td>Ascending 2 → 12</td>
+<td>San Diego → Olympic NP
+</td></tr>
+<tr>
+<td>🛣️ <b>Route 66</b></td>
+<td>Rust</td>
+<td>Ascending 2 → 12</td>
+<td>Chicago → Santa Monica
+</td></tr>
+<tr>
+<td>🏔️ <b>Blue Ridge Pkwy</b></td>
+<td>Green</td>
+<td>Descending 12 → 2</td>
+<td>Front Royal → Cherokee
+</td></tr>
+<tr>
+<td>🌅 <b>Gulf Coast</b></td>
+<td>Teal</td>
+<td>Descending 12 → 2</td>
+<td>South Padre → Key West
+</td></tr></tbody></table>
+<p>Ascending routes fill left-to-right (low to high). Descending routes fill right-to-left (high to low). All stops must be checked off <b>in order</b>.
+</p><p><i>Tip: Hover over any stop to read a fun fact about that location!</i>
+</p>
+<hr />
+<h2><span class="mw-headline" id="The_Dice">The Dice</span></h2>
+<p>Each turn uses six dice:
+</p>
+<ul><li>⛽ <b>2 Gas Money dice</b> (brown) — neutral dice available to all players.</li>
+<li>🎲 <b>4 Route dice</b> (one per route color) — extra dice available only to the Driver.</li></ul>
+<p>When a route is completed, its Route die is <b>retired</b> and no longer rolled.
+</p>
+<hr />
+<h2><span class="mw-headline" id="On_Your_Turn">On Your Turn</span></h2>
+<p>Each turn has a <b>Driver</b> (the active player) who rolls all eligible dice. The turn has two phases:
+</p>
+<h3><span id="Phase_1_.E2.80.94_Gas_Money_.28all_players.29"></span><span class="mw-headline" id="Phase_1_—_Gas_Money_(all_players)">Phase 1 — Gas Money (all players)</span></h3>
+<p><b>Every player</b> (including the Driver) may check off one stop on any open route whose stop number matches the <b>sum of the two Gas Money dice</b>. Or skip.
+</p>
+<h3><span id="Phase_2_.E2.80.94_Bonus_Miles_.28Driver_only.29"></span><span class="mw-headline" id="Phase_2_—_Bonus_Miles_(Driver_only)">Phase 2 — Bonus Miles (Driver only)</span></h3>
+<p>The <b>Driver</b> may check off one additional stop using the sum of <b>one Route die + one Gas Money die</b> (their choice of which dice to combine). The stop number must match the chosen sum and must be a valid next stop on that route's die color. Or skip.
+</p><p>After both phases resolve, the Driver role passes to the left.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Stop_Rules">Stop Rules</span></h2>
+<ul><li>Stops must be checked off <b>in order</b> — you cannot skip ahead.</li>
+<li>The <b>final stop</b> on any route (stop 12 on ascending routes, stop 2 on descending routes) requires <b>at least 4 stops already checked</b> on that route before it can be claimed.</li>
+<li>Once a route is <b>completed</b>, it is closed — no one can use it and its Route die is retired.</li>
+<li>A stop that can no longer be reached (because a later stop was already checked by someone else) is shown as ~~crossed out~~.</li></ul>
+<hr />
+<h2><span id="Detours_.28Penalties.29"></span><span class="mw-headline" id="Detours_(Penalties)">Detours (Penalties)</span></h2>
+<p>If the Driver has <b>no valid move in either phase</b> — meaning the dice produce no playable stop in Phase 1 and no playable combo in Phase 2 — they are at a Detour.
+</p><p>The Driver must choose one:
+</p>
+<dl><dt>Take a Detour penalty</dt>
+<dd>The Driver marks a Detour (–5 points at scoring). If a player reaches <b>3 Detour penalties</b>, the game ends immediately.</dd></dl>
+<dl><dt>🧭 Ask for Directions *(once per game)*</dt>
+<dd>Instead of taking a penalty, the Driver may re-roll all dice and replay the full turn from Phase 1. Each player may only use this option <b>once per game</b>. The Ask for Directions option can also be disabled as a table option before the game starts.</dd></dl>
+<p><b>Note:</b> A Detour is only triggered when the Driver has no valid move in <i>both</i> phases. Skipping Phase 1 voluntarily (when valid moves exist) simply advances to Phase 2 — no penalty.
+</p>
+<hr />
+<h2><span class="mw-headline" id="End_of_Game">End of Game</span></h2>
+<p>The game ends immediately when either of these conditions is met:
+</p>
+<ul><li><b>2 routes are completed</b> (closed), or</li>
+<li><b>Any player reaches 3 Detour penalties</b></li></ul>
+<p>All players finish scoring at that point.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Scoring">Scoring</span></h2>
+<p>Each route is scored independently using a <b>triangular number formula</b>:
+</p>
+<dl><dd><b>Score = n × (n + 1) ÷ 2</b>   where <i>n</i> = number of stops you checked on that route.</dd></dl>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Stops checked (n)</th>
+<th>Score
+</th></tr>
+<tr>
+<td>1</td>
+<td>1
+</td></tr>
+<tr>
+<td>2</td>
+<td>3
+</td></tr>
+<tr>
+<td>3</td>
+<td>6
+</td></tr>
+<tr>
+<td>4</td>
+<td>10
+</td></tr>
+<tr>
+<td>5</td>
+<td>15
+</td></tr>
+<tr>
+<td>6</td>
+<td>21
+</td></tr>
+<tr>
+<td>7</td>
+<td>28
+</td></tr>
+<tr>
+<td>8</td>
+<td>36
+</td></tr>
+<tr>
+<td>9</td>
+<td>45
+</td></tr>
+<tr>
+<td>10</td>
+<td>55
+</td></tr>
+<tr>
+<td>11</td>
+<td>66
+</td></tr></tbody></table>
+<p><b>Completion bonus:</b> If you were the player who checked off the final stop to complete a route, add <b>+1</b> to your score for that route.
+</p><p><b>Detour penalty:</b> Subtract <b>5 points</b> for each Detour penalty you have taken.
+</p><p><i>Example: You checked off 7 stops on the Pacific Coast route and completed it. Score = 7×8÷2 + 1 = 29 points.</i>
+</p>
+<hr />
+<h2><span class="mw-headline" id="Iconography">Iconography</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Symbol</th>
+<th>Meaning
+</th></tr>
+<tr>
+<td>🌊</td>
+<td>Pacific Coast route / Route die
+</td></tr>
+<tr>
+<td>🛣️</td>
+<td>Route 66 route / Route die
+</td></tr>
+<tr>
+<td>🏔️</td>
+<td>Blue Ridge Pkwy route / Route die
+</td></tr>
+<tr>
+<td>🌅</td>
+<td>Gulf Coast route / Route die
+</td></tr>
+<tr>
+<td>⛽</td>
+<td>Gas Money dice (brown, neutral)
+</td></tr>
+<tr>
+<td>✓</td>
+<td>Stop checked off
+</td></tr>
+<tr>
+<td>~~n~~</td>
+<td>Stop no longer reachable (crossed out)
+</td></tr>
+<tr>
+<td>🧭</td>
+<td>Ask for Directions (once-per-game re-roll)
+</td></tr></tbody></table></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpfilltherows" target="_blank" rel="noopener">Filltherows — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

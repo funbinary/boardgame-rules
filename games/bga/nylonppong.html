@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Nylonppong 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Nylonppong · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Nylonppong</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Nylonppong</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2–6 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Nylon-ppong">Nylon-ppong</span></h2>
+<p><b>Nylon-ppong</b> (or <b>Nairong-ppong</b>) is a traditional Korean Hwatu rummy game for 2 to 6 players. It combines elements of Mahjong with traditional rummy mechanics.
+</p>
+<h3><span class="mw-headline" id="Gameplay_Flow">Gameplay Flow</span></h3>
+<p>The game is played with a standard 48-card Hwatu deck (12 months, 4 cards each). Players must be familiar with the Korean month sequence (1 to 12) to calculate scores and sequences.
+</p><p>A round proceeds <b>counterclockwise</b>. On their turn, a player follows these steps:
+</p>
+<ol><li><b>Draw:</b> Draw one card from the face-down draw deck.</li>
+<li><b>Check:</b> If the resulting 6 cards in hand form a valid <b>combination</b>, the player may end the round immediately.</li>
+<li><b>Discard:</b> If no combination is formed, the player must discard one card to the pile to end their turn.</li></ol>
+<p>The round ends if the draw deck runs out of cards, a player "goes out" via a special action, or a player calls a 6-card combination.
+</p>
+<h3><span class="mw-headline" id="Special_Actions">Special Actions</span></h3>
+<h4><span id="Ppong_.28or_Pong.29"></span><span class="mw-headline" id="Ppong_(or_Pong)">Ppong (or Pong)</span></h4>
+<p>If a player holds <b>two cards of the same month</b> as the card just discarded to the top of the pile, they can call <b>"Ppong"</b>.
+</p>
+<ul><li>This can often be done <b>out of turn</b>.</li>
+<li>The player discards the matching pair from their hand.</li>
+<li>They must then discard one additional card to end their turn.</li>
+<li>If a player has no cards left after the final discard, they have <b>gone out</b>, and the round ends immediately.</li></ul>
+<h4><span class="mw-headline" id="Stop">Stop</span></h4>
+<p>A player who has <b>only 2 cards</b> remaining in their hand (after having called at least one "Ppong") can choose to call <b>"Stop"</b> instead of drawing a card.
+</p>
+<ul><li>This is only allowed if the <b>sum of the month numbers</b> of their two cards is equal to or less than a predetermined limit (usually 5 or 10).</li>
+<li>Calling "Stop" ends the round immediately.</li></ul>
+<h3><span id="Combinations_.286-Card_Hands.29"></span><span class="mw-headline" id="Combinations_(6-Card_Hands)">Combinations (6-Card Hands)</span></h3>
+<p>If a player ends the round by claiming one of these combinations, they ignore standard penalty points and instead receive the combination's value (which can be a negative number, reducing their total penalty score).
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Name</th>
+<th>Value</th>
+<th>Composition
+</th></tr>
+<tr>
+<td><b>Three pairs</b> (Ddoi-ddoi)</td>
+<td>0</td>
+<td>Three pairs from three different months.
+</td></tr>
+<tr>
+<td><b>Two triplets</b> (Ddoi-ddoi)</td>
+<td>0</td>
+<td>Two triplets from two different months.
+</td></tr>
+<tr>
+<td><b>Four and pair</b> (Nejang-ddoi)</td>
+<td>-50</td>
+<td>A four-of-a-kind and a pair of another month.
+</td></tr>
+<tr>
+<td><b>Straight</b></td>
+<td>-Sum</td>
+<td>6 cards of consecutive months (e.g., months 3-8).
+</td></tr>
+<tr>
+<td><b>10 or less</b> (Sib-bujok)</td>
+<td>-100</td>
+<td>6 cards with a total sum of 10 or less.
+</td></tr>
+<tr>
+<td><b>66 or more</b> (Daeppang)</td>
+<td>-100</td>
+<td>6 cards with a total sum of 66 or more.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Scoring_and_Penalties">Scoring and Penalties</span></h3>
+<p>At the end of a round, players typically receive <b>penalty points</b> equal to the sum of the month numbers of the cards remaining in their hand.
+</p>
+<ul><li><b>Failed Stop:</b> If a player calls "Stop" but another player has a lower (or equal) hand sum, the caller receives an <b>additional 30 or 50 penalty points</b>.</li>
+<li><b>Ppong Victim:</b> If a player discards a card that allows another player to go out by calling "Ppong," the discarder receives an <b>additional 30 or 50 penalty points</b>.</li>
+<li><b>Starting Player:</b> The player with the most penalty points from the previous round becomes the starting player for the next round.</li></ul>
+<h3><span class="mw-headline" id="Winning_the_Game">Winning the Game</span></h3>
+<p>The game consists of a predetermined number of rounds. The player with the <b>lowest total penalty points</b> at the end is the winner.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpnylonppong" target="_blank" rel="noopener">Nylonppong — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

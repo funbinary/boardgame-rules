@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Contractbridge 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Contractbridge · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Contractbridge</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Contractbridge</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Learn bridge: <a href="https://www.worldbridge.org/world-bridge-academy/try-bridge/" target="_blank" rel="noopener">https://www.worldbridge.org/world-bridge-academy/try-bridge/</a>
+</p><p>The BGA implementation for 2 players will not be covered here, because it is not bridge. However, it is played similarly to bridge, so the following may still be useful.
+</p><p><b>Contract bridge</b> (4 players) is played 2v2 (the players sitting opposite eachother are together on a team throughout). The game is played clockwise with each round of Contract Bridge involving two stages: bidding and playing. 
+</p><p>In the bidding stage, the pair who bids the highest becomes the "declaring" side. In that pair, the player that bid the denomination (Suit or NoTrump) first, becomes the "Declarer" (plays for both players), and their partner becomes the "Dummy" (watches/doesn't play any more for this round). The opposing pair are called "Defenders", playing collectively against the Declarer. In the playing stage, the players play tricks until all hands are empty. The Declarer has to win a certain number of tricks to win points for the round. If the Declarer does not succeed, the declaring side fail their contract, the defending side gain points.
+</p>
+<h2><span class="mw-headline" id="Bidding_Calls">Bidding Calls</span></h2>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>Pass</li>
+  <li>Double</li>
+  <li>Redouble</li>
+  <li>(from lowest to greatest) 1C, 1D, 1H, 1S, 1NT, 2C ... 7C, 7D, 7H, 7S, 7NT</li>
+</ul>
+<h2><span class="mw-headline" id="Cards">Cards</span></h2>
+<p>Ranks (from strongest to weakest): <b><span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">A</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">K</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">Q</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">J</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">10</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">9</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">8</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">7</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">6</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">5</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">4</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">3</span> <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:#000;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">2</span></b>
+</p><p>Bridge is played with a standard pack of 52 cards.
+13 cards in each suit (<span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:black;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">&#8203;♠</span>, <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:red;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">&#8203;♥</span>, <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:red;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">&#8203;♦</span>, <span title="card" style="background:#fafafa;box-shadow:0.05rem 0.05rem 0.1rem 0.1rem rgba(0,0,0,0.2),inset 0 0 0 0.1rem #fff0;border-radius:0.2rem;padding:0.25rem 0.15rem;line-height:calc(1rem + 0.7rem);color:black;text-shadow:0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0,0 0 calc(1rem/20) #fff0;font-size:1rem;white-space:nowrap">&#8203;♣</span>)
+</p>
+<h2><span class="mw-headline" id="Goal">Goal</span></h2>
+<p>To bid to the highest making contract you can (sometimes in can be good to bid too much, in the hope to lose less than the opponents would have won - see Sacrificing in Bridge).
+And then win as many tricks as you can, (often making overtricks is not the focus, though you get a few more points) focusing on making your contract.
+</p>
+<h2><span class="mw-headline" id="Bidding">Bidding</span></h2>
+<p>All cards are dealt to each player (so 13 each). The "Dealer" starts, they may Pass or Bid, and we then carry on clockwise.
+Bidding means you set out to take <b>at least</b> a certain number of tricks:
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+   <li>Bidding at the 1 level = i set out for our pair to win at least 7 tricks.</li>
+   <li>2 = 8 tricks.</li>
+   <li>3 = 9 tricks.</li>
+   <li>4 = 10 tricks.</li>
+   <li>5 = 11 tricks.</li>
+   <li>6 = 12 tricks.</li>
+   <li>7 = all 13 tricks.</li>
+</ul>
+<p>However, you must also choose a denomination:
+Clubs(♣), Diamonds(♦), Hearts(♥), Spades(♠), or NoTrumps(<b>NT</b>).
+= If anyone runs out of a suit and has to discard, the suit contracted would win the trick (or NoTrumps = discarding cannot win the trick).
+</p>
+<h2><span class="mw-headline" id="Scoring">Scoring</span></h2>
+<p><a href="https://en.wikipedia.org/wiki/Bridge_scoring" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Bridge_scoring</a>
+The scoring is somewhat complex, but you essentially win points as a pair for making your contract, and lose points (same as opponents wining points) for going down in a contract.
+A quick strategy tip, playing in 3NT, 4H, 4S, 5C, 5D is really worth it, even if you only make 50% of the time, I always bid to such contracts when both my partner and myself have a better than average hand (the average hand has 1Ace 1King 1Queen 1Jack).
+</p>
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>Bridge is a game of Probability and Teamwork.
+It has endless strategic depth.
+There are countless books written on the game.
+There are innumerable bridge clubs around the world.
+Players have different agreements for bidding and cardplay, however, these must be disclosed to the opposition.
+Duplicate Bridge is played at an international level.
+</p><p>Have fun! 😊
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpcontractbridge" target="_blank" rel="noopener">Contractbridge — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Buttons 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Buttons · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Buttons</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Buttons</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>The game ends when one player has a connected line of 5 stars either horizontally or vertically (not diagonally) or when a player reaches 12 stars.
+</p><p><b>Setup</b>:
+</p><p>Each player begins with one designated bonus colour (or 2 colours for 2 player games) and an individual player board (all different). 
+</p><p><b>Each round</b>:
+</p><p>With the exception of the first round the players will pass their designated bonus colour token to the next person in a clockwise order 
+</p><p>Each player will then take their turn in clockwise order starting with the player that has the red designated bonus colour token
+</p>
+<ul><li>On their turn the current player can either roll the one white die with gold pips and 5 black dice (one with gold pips) or if they have placed at least one button on their board they can choose to opt out</li>
+<li>if the current player opts out they take one of the black dice (without the gold pips) and forfeit placing buttons for the remainder of the round, any remaining players will have 1 less black die available to roll. (Two less black dice for 2 player games.)</li>
+<li>If the current player rolls then if possible the player combines the white die for the row and a black die for the column and places a button on the corresponding intersection on their board IF there is NO button, star, or a button orthogonal to this intersection on their player board</li>
+<li>if there is no valid intersection to place a button then the player "busts out", all buttons they placed this round are removed from their player board, forfeits placing more buttons, and takes one of the black dice (without the gold pips) until the end of the round.  Any remaining players will have 1 less black die available to roll.</li>
+<li>The other players MAY use the combination of the white die for the row and the black die with the gold pip for the column to place a button on the corresponding intersection as long as there is NO button, star, or a button orthogonal to this intersection on their player board.</li>
+<li>Once every player has made their placement decisions, the dice are handed to the next player in clockwise order start their turn.</li></ul>
+<p><br /> 
+<b>End of each round</b>:
+</p><p>When all of the players have either busted out or opted out, stars are awarded from the supply.
+</p><p>(1) A star is awarded for successfully opting out
+</p><p>(2) A star is awarded for each colour that you covered with at least 3 buttons during your turn <i>(N.B. more than 3 buttons do not provide any further points)</i>
+</p><p>(3) A bonus star is awarded for each of your bonus colours that you covered with at least 3 buttons during your turn
+</p><p>Stars can be placed to replace any of the buttons placed during this round.  After stars are placed, any remaining buttons are returned to the supply and the next round is started.  
+</p><p>Strategy Tip: Each button you place on the board 'blocks' horizontally and vertically adjacent locations from being available for buttons on future turns during the round.  Thus, the more buttons you have, the more locations are blocked for placement.
+</p><p>Strategy Tip: Since there is only a single white die, aiming to make a horizontal line can set you up for more frequent bust outs compared to vertical lines.
+</p><p><br />
+<b>Ending and Winning the Game</b>:
+</p><p>The game ends when a player connects a line of 5 stars horizontally or vertically (not diagonally).  If 2 or more players connect a line of 5 stars at the end of the same round, the player with the most stars wins the tie.breaker.  There is no further tie-break.
+</p><p>If no one connects a line of 5 stars, a player who places 12 stars triggers the end of the game.  The player with the most stars wins the game.  There is no further tie-break.
+</p><p><br />
+<b>In the BGA implementation: 100 points are awarded for connecting 5 stars in a row, so the game simply ends when someone has 12 or more points.</b>
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpbuttons" target="_blank" rel="noopener">Buttons — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

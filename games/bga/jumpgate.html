@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Jump Gate 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Jump Gate · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Jump Gate</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Jump Gate</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Jump_Gate">Jump Gate</span></h2>
+<p>The Jump Gate has just been invented, and it allows a ship to jump into orbit around a distant planet in an instant.
+This puts deep space on the map for those willing to make the trip.
+As a spaceship captain, you've assembled your crew, prepared your ship, and are ready to venture forth. It's time to gaze up upon worlds that no other person has ever seen.
+</p><p>Jump Gate is a light space exploration, hand management, and set collection game.
+Jump between planets, scan for resources, and collect sets that will score you the most points.
+</p>
+<h2><span class="mw-headline" id="Game_Layout">Game Layout</span></h2>
+<p>Players start with their spaceship tokens on the Jump Gate.
+Each player is dealt a hand of 5 nav cards and 2 hidden resources.
+</p><p>The game will start with a number of planets according to the following table:
+</p>
+<pre>* 2 players: 6 Planets
+* 3 players: 7 Planets
+* 4 players: 8 Planets
+* 5 players: 9 Planets
+</pre>
+<p>Each planet starts with 3 hidden resources and one resource revealed.
+These resources are dealt randomly from a deck of 48 cards.
+</p>
+<h2><span class="mw-headline" id="Turn_Reference">Turn Reference</span></h2>
+<p>Take two actions on your turn.
+You may take the same action twice.
+</p><p>Actions:
+</p>
+<pre>- Fly ... to an adjacent planet without spending an action card
+- Jump ... to any planet by spending a nav card with a number in a blue square that matches the number in the blue square on the planet's card
+- Scan ... your current planet to reveal a hidden resource and mark one visible resource to be claimed using Harvest or Land and Claim
+- Land &amp; Claim ... your current planet if it has no face-down resources and is unclaimed by spending two nav cards with matching yellow triangles. Claimed planets are worth 4 points
+- Harvest ... 1 resource you marked with a Scan, or 1 unmarked resource at a planet with all face-up resources by discarding any nav card
+- Research ... refill your hand up to 5 cards.  You may discard any number of cards before refilling by selecting them before pressing the action button
+</pre>
+<p>* Note: in the Jump Gate card game, the planets are arranged in a circle.
+In this online implementation, in order to adapt correctly to different devices or browser widths, planets are instead displayed in a straight line from left to right, wrapping around to make as many rows as needed to display all the planets (similar to word wrap for text).
+Think of the single line of planets as if they were forming a circle, i.e. the first planet is adjacent to the last planet, so you can fly from one to the other without discarding a card.
+If planets are displayed in multiple rows, the planet at the end of a row is adjacent to the first planet of the following row, and the last planet of the last row is adjacent to the first planet of the first row.
+</p>
+<h2><span class="mw-headline" id="Harvesting_Resources_and_Claiming_Planets">Harvesting Resources and Claiming Planets</span></h2>
+<p>Each planet starts out as newly discovered and unexplored. In order to harvest their resources and eventually claim the planet, the planet must be fully explored.
+In this game this is achieved by repeatedly scanning the planet until all its resources have been uncovered. Along the way you can mark a resource to be harvested later, but you can only defend your claim to one resource at a time, so if you want to keep your newfound spoils you may want to harvest it before proceeding further.
+</p><p>In practice this results in a simple cycle of scan - mark - harvest until the planet has been fully explored and it can be claimed and all resources harvested, though you may want to move to other planets if you're not finding what you want
+</p><p>Once a planet is fully explored (no facedown resources, x0 on the card), it's a free-for-all!
+Resources may be harvested without marking them and the planet itself can be claimed, distributing all marked resources and allowing the claimant to take one unmarked resource for free.
+</p>
+<h2><span class="mw-headline" id="How_the_Game_Ends">How the Game Ends</span></h2>
+<p>The game ends when:
+</p>
+<ul><li>there are 7 or more Markers on the Black Hole (immediately).</li>
+<li>there are no more Resources at any Planet (immediately).</li>
+<li>After the last Planet is claimed, every player takes 1 final turn, and then the game ends.</li></ul>
+<h2><span class="mw-headline" id="Scoring_Reference">Scoring Reference</span></h2>
+<p>If there are 7 or more markers on the Black Hole, the player(s) with the most markers on the Black Hole must discard their hidden resource cards before scoring.
+Otherwise, players reveal their hidden resource cards and add them to their collected resources for scoring.
+</p><p>Score all collected resources as explained on the resource cards.
+</p><p>Add 4 points for each planet claimed.
+</p><p>Player with the highest score wins.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpjumpgate" target="_blank" rel="noopener">Jump Gate — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

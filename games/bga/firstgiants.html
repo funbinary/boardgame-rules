@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Firstgiants 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Firstgiants · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Firstgiants</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Firstgiants</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Game_Turn">Game Turn</span></h2>
+<p>Starting with the first player, players take turns in clockwise order.
+</p><p>On your turn, you must do one of these two actions:
+</p>
+<h3><span class="mw-headline" id="Play_1_Marker">Play 1 Marker</span></h3>
+<p>To play 1 marker, at least 1 marker must be on your board.&#160;<i>If you have no markers on your board, then you must do the “reclaim markers” action.</i>
+</p>
+<ol><li>Take 1 of the markers from your board and place it at a Dig Site that does not already contain one of your markers.</li>
+<li>Take 1 of the 2 cards from that Dig Site and place it in your Study (i.e. above your board).</li>
+<li>Apply that card’s effect and any relevant recurring effects <i>Some cards have recurring effects. These effects are applied every time that condition is met, including at the moment you actually take the card.</i>  <i>Most cards have a single use effect, which only occurs once, during the turn in which you take the card.</i>  <i>If multiple effects for cards in your study would trigger at the same time, resolve them in the order of your choice.</i>  <i>If effects from multiple players’ cards would trigger at the same time, resolve them in turn order, starting with all the active player’s effects and proceeding clockwise.</i></li>
+<li>Finally, refill the open Dig Site space with the top card of the deck.</li></ol>
+<h3><span class="mw-headline" id="Reclaim_markers">Reclaim markers</span></h3>
+<p>To reclaim markers, at least 1 of your markers must be at a Dig Site.&#160;<i>If you have no markers at any Dig Sites, then you must do the “play 1 marker” action.</i>
+</p>
+<ol><li>Take all your markers from Dig Sites and return them to your board.</li>
+<li>For each marker reclaimed, choose 1 of the following effects:
+<ul><li>Gain 1 amber</li>
+<li>Display 1 fossil</li></ul></li></ol>
+<p><i>You can choose a different effect for each marker reclaimed, in any order you wish.</i>
+</p>
+<h2><span class="mw-headline" id="Display_Fossil">Display Fossil</span></h2>
+<p>To put a fossil on display, spend the amount of amber equal to its size (1, 2, or 3). After spending amber, take the card from your Study and place it facedown below your board.
+</p><p><i>If you cannot pay a fossil’s cost, you cannot put it on display.</i>
+</p><p><i>A fossil on display loses all its effects.</i>
+</p><p><br />
+When you put a fossil on display, you can either start a new set or expand an existing set: 
+</p><p>To start a new set, place the card into a new row below your board. Starting a new set does not earn you any points; to earn points, you must expand your set.
+</p><p>Once a fossil has been assigned to a set, it must stay there. It cannot later be reassigned to another set.
+</p><p><br />
+To expand an existing set, add the card to that set.
+</p><p>There are two general types of sets: 
+</p>
+<ul><li>Same Family + different Sizes = Family set</li>
+<li>Same Size + different Families = Size set</li></ul>
+<p><i>Note that the second card added to the set determines its type, and once a set’s type has been defined, it cannot be changed.</i> 
+</p><p><i>You cannot add cards of a different Family to a Family set, nor can you add a card to a Family set if the set already contains that card’s Size.</i>
+</p><p><i>You cannot add cards of a different Size to a Size set, nor can you add a card to a Size set if the set already contains that card’s Family.</i>
+</p>
+<h2><span class="mw-headline" id="Score_Points">Score Points</span></h2>
+<p>Each time you expand a set, take 1 Set token from the supply and place it with its 2 points side visible, such that it overlaps the previous card and the new card.
+</p><p>Additionally, if you are the first player to expand a set of a particular type, you immediately take from the supply the News token matching that set.
+</p><p>If another player obtains the same type of set with more cards, they steal the matching News token!
+</p><p><i>A complete Family set cannot exceed 3 cards, and a complete Size set cannot exceed 5 cards. If you are the first player to complete a type of set, the matching News token can no longer be stolen from you.</i> 
+</p><p>When you have completed a set, flip over each Set token on that set to their 3 points side.
+</p>
+<h2><span class="mw-headline" id="End_of_the_Game">End of the Game</span></h2>
+<p>The end of the game is triggered when a player takes the last Set token from the supply or when the deck is empty after a player refills a Dig Site. Take all remaining Set tokens from the box and add them to the supply. Play continues until all players have had an equal number of turns, at which point the game ends; then add up your scores.
+</p>
+<ul><li>News tokens are worth 3 or 5 points (as indicated on the token).</li>
+<li>Each Set token is worth 2 points if the set is incomplete&#160;or 3 points if the set is complete.</li>
+<li>Finally, add all the points earned during the game.</li></ul>
+<p>The player with the most points wins the game! 
+</p><p>In case of a tie, tied players share victory.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpfirstgiants" target="_blank" rel="noopener">Firstgiants — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

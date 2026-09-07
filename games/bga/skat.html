@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Skat 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Skat · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Skat</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Skat</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Point_values_of_cards">Point values of cards</span></h2>
+<table class="wikitable" style="width: 60%; height: 4em;" border="1">
+
+<tbody><tr>
+<th>Rank
+</th>
+<th>J
+</th>
+<th>A
+</th>
+<th>10
+</th>
+<th>K
+</th>
+<th>Q
+</th>
+<th>9
+</th>
+<th>8
+</th>
+<th>7
+</th></tr>
+<tr>
+<th>Value
+</th>
+<th>2
+</th>
+<th>11
+</th>
+<th>10
+</th>
+<th>4
+</th>
+<th>3
+</th>
+<th>0
+</th>
+<th>0
+</th>
+<th>0
+</th></tr></tbody></table>
+<p>The non-trump suit cards rank in order 
+A-10-K-Q-9-8-7. 
+</p><p>The trumps rank the same way with the four jacks on top in the order 
+J♣, J♠, J♥, J♦.
+</p><p>The total face value of all cards is 120 points. The declarer's goal is to take at least 61 points in tricks in order to win that round of the game.
+</p>
+<h2><span class="mw-headline" id="The_Possible_Contracts">The Possible Contracts</span></h2>
+<p>If you win the bidding you are entitled to pick up the two skat cards, add them to your hand without showing them to the other players, and discard any two cards face down. The cards discarded may include one or both of the cards picked up, and their value counts along with your tricks. Having discarded, you declare your game. If you looked at the skat, your contract is a <i>skat game</i>. There are seven possibilities:
+</p><p>Diamonds, Hearts, Spades, Clubs (in which the named suit is trumps and the declarer tries to take at least 61 card points),
+</p><p>Grand (in which the jacks are the only trumps and the declarer tries to take at least 61 card points),
+</p><p>Null (in which there are no trumps and the declarer tries to lose every trick),
+</p><p>Null Ouvert (Open Null) (like Null but with declarer's cards are exposed).
+</p><p>You may choose not to look at the skat cards, but to play with the 10 cards you were originally dealt. If you don't look at the skat you are playing a <i>hand game</i>, and again there are seven possibilities: Diamonds Hand, Hearts Hand, Spades Hand, Clubs Hand, Grand Hand, Null Hand and Null Ouvert Hand. In this case no one must look at the skat cards until after the play.
+</p><p>If you are declarer in a Suit Hand or Grand Hand game, you can increase the value of the game by announcing Schneider (undertaking to win at least 90 card points), or Schwarz (undertaking to win all the tricks), or Open (Ouvert) (undertaking to win all the tricks with your cards exposed). Such announcements must be made before the lead to the first trick. These announcements are not allowed if declarer has looked at the skat. Also (obviously) they do not apply in Null games.
+</p>
+<h2><span class="mw-headline" id="Calculating_the_Value_of_the_Game">Calculating the Value of the Game</span></h2>
+<h3><span class="mw-headline" id="Suit_and_Grand_contracts">Suit and Grand contracts</span></h3>
+<p>The value of a Suit or Grand contract is obtained by multiplying together two numbers: the <i>base value</i> and the <i>multiplier</i>. The base value depends on the trump suit as follows:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Contract
+</th>
+<th>
+</th>
+<th>Base value
+</th></tr>
+<tr>
+<td>Diamonds
+</td>
+<td>
+</td>
+<td>9
+</td></tr>
+<tr>
+<td>Hearts
+</td>
+<td>
+</td>
+<td>10
+</td></tr>
+<tr>
+<td>Spades
+</td>
+<td>
+</td>
+<td>11
+</td></tr>
+<tr>
+<td>Clubs
+</td>
+<td>
+</td>
+<td>12
+</td></tr>
+<tr>
+<td>Grand
+</td>
+<td>
+</td>
+<td>24
+</td></tr></tbody></table>
+<p>The multiplier is the sum of all applicable items from the following table:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Multiplier
+</th>
+<th>Skat game
+</th>
+<th>Hand game
+</th></tr>
+<tr>
+<td>Matadors (with or against)
+</td>
+<td>1 each
+</td>
+<td>1 each
+</td></tr>
+<tr>
+<td>Game (always applies)
+</td>
+<td>1
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Hand (declarer did not look at the skat)
+</td>
+<td>n/a
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Schneider (one side took 90 or more card points)
+</td>
+<td>1
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Schneider announced
+</td>
+<td>n/a
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Schwarz (one side took every trick)
+</td>
+<td>1
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Schwarz announced
+</td>
+<td>n/a
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>Open
+</td>
+<td>n/a
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>
+</td>
+<td colspan="2">(n/a = not applicable)
+</td></tr></tbody></table>
+<p>Note that all applicable multipliers count - for example
+</p>
+<ul><li>if you make the opponents Schwarz, you count the matadors, game, Schneider and Schwarz multipliers;</li>
+<li>if you announce and make Schneider you count matadors, game, Hand, Schneider and Schneider announced;</li>
+<li>if you announce and make Schwarz you count matadors, game, Hand, Schneider, Schneider announced, Schwarz, Schwarz announced.</li></ul>
+<p>Open contracts are extremely rare: you can only play open if you did not look at the skat and you also undertake to win every trick. By implication, an open contract includes announcements of Schneider and Schwarz,so you count: matadors, game, Hand, Schneider, Schneider announced, Schwarz, Schwarz announced, and Open.
+</p>
+<h4><span class="mw-headline" id="Matadors">Matadors</span></h4>
+<p>The jack of clubs and any top trumps in unbroken sequence with it are called <i>matadors</i>. If as declarer you have such a sequence in your original hand plus the skat, you are with that number of matadors. If there is such a sequence in the opponents' combined hands, declarer is against that number of matadors.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td colspan="3">Examples of matadors (Hearts are trumps)
+</td></tr>
+<tr>
+<td>Declarer has:
+</td>
+<td>&#160;
+</td>
+<td>Declarer is:
+</td></tr>
+<tr>
+<td>J, J, J, A, 10, Q, 9
+</td>
+<td>
+</td>
+<td>with 1
+</td></tr>
+<tr>
+<td>J, J, J, J, A, 10, K
+</td>
+<td>
+</td>
+<td>with 7
+</td></tr>
+<tr>
+<td>J, J, A, K, Q, 7
+</td>
+<td>
+</td>
+<td>against 1
+</td></tr>
+<tr>
+<td>J, A, 10, K, Q, 7
+</td>
+<td>
+</td>
+<td>against 3
+</td></tr></tbody></table>
+<p>Note that for the purposes of matadors, cards in the skat count as part of declarer's hand, even though in a Hand game declarer does not know what is in the skat when choosing the game.
+</p><p>The game multiplier is always counted, whether declarer wins or loses. The calculation of the value of a game sounds something like this: "with 2, game 3, Schneider 4, 4 times spades is 44". The declarer must always be with or against at least one matador (the jack of clubs must be somewhere), so the smallest possible multiplier is 2, and the smallest possible game value (and the lowest possible bid) is 18.
+</p>
+<h3><span class="mw-headline" id="Null_contracts">Null contracts</span></h3>
+<p>These are easy to score. Each possible Null contract has a fixed value unaffected by multipliers. As with all contracts, an unsuccessful declarer loses twice the value of the game. The Null values are:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Contract
+</th>
+<td>
+</td>
+<th>Fixed Value
+</th>
+<td>
+</td>
+<th>Amount lost if unsuccessful
+</th></tr>
+<tr>
+<td>Null
+</td>
+<td>.....
+</td>
+<td>23
+</td>
+<td>.....
+</td>
+<td>46
+</td></tr>
+<tr>
+<td>Null Hand
+</td>
+<td>.....
+</td>
+<td>35
+</td>
+<td>.....
+</td>
+<td>70
+</td></tr>
+<tr>
+<td>Null Ouvert
+</td>
+<td>.....
+</td>
+<td>46
+</td>
+<td>.....
+</td>
+<td>92
+</td></tr>
+<tr>
+<td>Null Ouvert Hand
+</td>
+<td>.....
+</td>
+<td>59
+</td>
+<td>.....
+</td>
+<td>118
+</td></tr></tbody></table>
+<p>These rather eccentric looking numbers are chosen to fit between the other contract values, each being slightly below a multiple of 12. 
+</p>
+<h2><span class="mw-headline" id="The_Scoring">The Scoring</span></h2>
+<p>If declarer wins the game and the value of the game is as least as much as the bid, then the value of the game is added to the declarer's cumulative score.
+</p><p>If the declarer loses the game and the value of the game is as least as much as the bid, then twice the value of the game is subtracted from the declarer's score.
+</p><p>If the value of the declarer's game turns out to be less than the bid then the declarer automatically loses - it does not matter how many card points were taken. The amount subtracted from the declarer's score is twice the least multiple of the base value of the game actually played which would have fulfilled the bid.
+</p><p><i>Note that the above are the official rules as from 1st January 1999. Before then, scores for lost games played from the hand were not doubled</i> 
+</p><p>If as declarer you announce Schneider but take less than 90 card points, or if you announce Schwarz or Open and lose a trick, you lose, counting all the multipliers you would have won if you had succeeded.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpskat" target="_blank" rel="noopener">Skat — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

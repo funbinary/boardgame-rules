@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Kairos 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Kairos · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Kairos</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Kairos</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span id="Kairos_.C3.A2.E2.82.AC.E2.80.9D_Time_Travellers"></span><span class="mw-headline" id="Kairos_â€”_Time_Travellers">Kairos â€” Time Travellers</span></h2>
+<p><b>Kairos</b> is a 1-4 player cooperative time-travel board game. Players are time-travelling agents recovering precious historical articles from 36 time locations scattered across a hexagonal grid â€” from ancient Egypt to the moons of Saturn. An AI antagonist called <b>Kronos</b> steals artifacts and bends the Main Line Timeline toward darkness. Work together to restore articles, protect artifacts, and shift the timeline back to the light!
+</p>
+<h3><span class="mw-headline" id="Goal">Goal</span></h3>
+<p>Shift the <b>Main Line Timeline (MLT)</b> above zero AND clear all blots from at least one player's record before time runs out.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Total Seats</th>
+<th>Agents per Player</th>
+<th>Starting TimeLords</th>
+<th>Starting Blots</th>
+<th>Max Rounds
+</th></tr>
+<tr>
+<td>1</td>
+<td>12</td>
+<td>4</td>
+<td>10</td>
+<td>14
+</td></tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td>14
+</td></tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+<td>9</td>
+<td>13
+</td></tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>8</td>
+<td>13
+</td></tr></tbody></table>
+<p><b>Starting Kairos (â­):</b> All players start with 0 Kairos.
+</p><p><b>Initial State:</b> MLT starts at <b>-2</b>, Paradoxes at <b>2</b>. All agents begin at their player's HQ.
+</p><p>The <b>Time Field</b> is a hex grid of 37 tiles: 36 Time Locations across Rings 1-3, plus the <b>Time Vortex</b> at the centre (Ring 0). Articles start at their correct locations (artifacts and crystals) or scattered to random past-era locations (items). 12 random locations are designated as active <b>Portals</b>.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Your_Turn">Your Turn</span></h2>
+<p>On your turn, each of your agents may perform <b>one action</b>. When finished, press <b>End Turn</b>.
+</p>
+<h3><span class="mw-headline" id="Agent_Actions">Agent Actions</span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Action</th>
+<th>Who Can Do It</th>
+<th>Description
+</th></tr>
+<tr>
+<td>Time Travel</td>
+<td>Any agent</td>
+<td>Roll Travel Dice to move to a destination Time Location
+</td></tr>
+<tr>
+<td>Recover Article</td>
+<td>Any agent at a location with an article</td>
+<td>Roll Recovery Dice to secure the article
+</td></tr>
+<tr>
+<td>Pick Up Article</td>
+<td>Any agent</td>
+<td>Pick up a recovered item/crystal. Free at HQ; costs action elsewhere
+</td></tr>
+<tr>
+<td>Recall to HQ</td>
+<td>Any agent in the field</td>
+<td>Return to HQ. Carried articles are auto-deposited
+</td></tr>
+<tr>
+<td>Empower Crystal</td>
+<td>Any agent at HQ; owner's agents in the field</td>
+<td>Empower a deposited crystal (+1â­). A TimeLord field-empowering at the paired artifact's TL attempts a nerf (TimeLord-only)
+</td></tr>
+<tr>
+<td>Attempt Vortex</td>
+<td>TimeLord at Vortex only</td>
+<td>Try to switch off the Time Vortex (2d6 check)
+</td></tr>
+<tr>
+<td>Intel / Recon</td>
+<td>Any agent at a TL with another team's agent</td>
+<td>Grant the other team an Intel Die (all-wild recovery die, one use)
+</td></tr>
+<tr>
+<td>Rescue from LIT</td>
+<td>TimeLord at HQ only</td>
+<td>Rescue an allied agent Lost in Time
+</td></tr>
+<tr>
+<td>Skip</td>
+<td>Any agent</td>
+<td>Take no action this turn
+</td></tr></tbody></table>
+<hr />
+<h2><span class="mw-headline" id="Time_Travel">Time Travel</span></h2>
+<p>Select an agent and destination, then roll the <b>Travel Dice</b>. Up to <b>4 rolls</b> total.
+</p>
+<h3><span class="mw-headline" id="Travel_Dice">Travel Dice</span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Die</th>
+<th>Colour</th>
+<th>Faces</th>
+<th>Purpose
+</th></tr>
+<tr>
+<td>Ring</td>
+<td>ðŸŸ&#160; Orange</td>
+<td>6, 6, 7, 8, X, 0</td>
+<td>Match destination ring (6=R3, 7=R2, 8=R1). X = skull
+</td></tr>
+<tr>
+<td>Direction</td>
+<td>âš«&#160;Black</td>
+<td>2, 2, 3, X, 0, â˜…</td>
+<td>2=past, 3=future (needed if crossing eras)
+</td></tr>
+<tr>
+<td>Base</td>
+<td>ðŸŸ¢ Green</td>
+<td>1, 1, 1, 1, 0, â˜…</td>
+<td>Always required (must show "1")
+</td></tr>
+<tr>
+<td>Portal</td>
+<td>ðŸ”µ Blue</td>
+<td>â˜…, â˜…, â˜…, â˜…, 0, X</td>
+<td>Bonus die if destination is a portal
+</td></tr>
+<tr>
+<td>Planet</td>
+<td>âšª White</td>
+<td>5, 5, 4, X, 0, â˜…</td>
+<td>5=Earth, 4=off-world (space/moon)
+</td></tr>
+<tr>
+<td>Adjacent</td>
+<td>ðŸŸ¡ Yellow</td>
+<td>!,&#160;!, â˜…, â˜…, 0, â˜…</td>
+<td>Bonus die if destination is 1 hex away. <i>!</i> negates a skull
+</td></tr>
+<tr>
+<td>TimeLord</td>
+<td>ðŸ• TL</td>
+<td>â˜…, â˜…, â˜…, â˜…, 0, 0</td>
+<td>Bonus die for TimeLord agents only
+</td></tr>
+<tr>
+<td>Age</td>
+<td>ðŸŸ£ Purple</td>
+<td>+, âˆ’, 0, 0, 0, 0</td>
+<td>Always included; + = Ageing check, âˆ’ = Sickness check
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Special_Faces">Special Faces</span></h3>
+<ul><li><b>â˜… (Wild):</b> Can satisfy any requirement. Only assigned on the <b>final roll</b></li>
+<li><b>X (Skull):</b> Auto-locks, cannot be unlocked. <b>2+ skulls = instant failure</b></li>
+<li><b>! (Negate):</b> Cancels one skull face (Adjacent die only)</li>
+<li><b>+ (Ageing):</b> On the Age die â€” triggers an ageing check (see below)</li>
+<li><b>âˆ’ (Sickness):</b> On the Age die â€” triggers a sickness check (see below)</li>
+<li><b>0 (Blank):</b> No value</li></ul>
+<h3><span class="mw-headline" id="Requirements">Requirements</span></h3>
+<ul><li><b>Ring</b> â€” always required</li>
+<li><b>Base "1"</b> â€” always required</li>
+<li><b>Planet</b> â€” always required (5 for Earth, 4 for off-world)</li>
+<li><b>Direction</b> â€” required only when crossing eras (past â†” future)</li></ul>
+<p>Skull faces may trigger a <b>Travel Event</b> card draw.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Time_Travel_Ageing">Time Travel Ageing</span></h2>
+<p>Every travel roll includes an <b>Age die</b> reflecting the physical toll of time travel. It can cause your player avatar to age, rejuvenate, or suffer sickness.
+</p>
+<h3><span id="Ageing_Check_.28.2B_face.29"></span><span class="mw-headline" id="Ageing_Check_(+_face)">Ageing Check (+ face)</span></h3>
+<p>When the + face is rolled, a d6 determines the outcome:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>d6 Result</th>
+<th>Effect
+</th></tr>
+<tr>
+<td>1</td>
+<td><b>Age Up</b> â€” avatar moves one step forward (e.g. Youth â†’ Adult)
+</td></tr>
+<tr>
+<td>2</td>
+<td><b>De-Age</b> â€” avatar moves one step backward (e.g. Adult â†’ Youth)
+</td></tr>
+<tr>
+<td>3â€“6</td>
+<td>No effect
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Age_Steps">Age Steps</span></h3>
+<p>Child â†’ Youth â†’ Adult â†’ Old â†’ <b>Zero Time</b>
+</p><p>All players begin as <b>Youth</b>. The avatar picture changes to reflect the current age.
+</p>
+<h3><span class="mw-headline" id="Zero_Time">Zero Time</span></h3>
+<p>If ageing would push past Old (aging up) or below Child (de-aging), the player enters <b>Zero Time</b>:
+</p>
+<ul><li>A dramatic popup shows the avatar transformation</li>
+<li><b>All remaining unspent agents are immediately marked as spent</b></li>
+<li>The player's turn ends immediately</li>
+<li>The avatar resets from Zero Time at the start of the next turn</li></ul>
+<h3><span id="Sickness_Check_.28.C3.A2.CB.86.E2.80.99_face.29"></span><span class="mw-headline" id="Sickness_Check_(âˆ’_face)">Sickness Check (âˆ’ face)</span></h3>
+<p>When the âˆ’ face is rolled, a d6 determines the outcome:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>d6 Result</th>
+<th>Effect
+</th></tr>
+<tr>
+<td>1â€“2</td>
+<td><b>Time Travel Sickness</b> â€” the travelling agent misses their next turn
+</td></tr>
+<tr>
+<td>3â€“6</td>
+<td>No effect
+</td></tr></tbody></table>
+<p><b>Note:</b> The Age die is separate from the <b>Hazard (Baal) die</b>, which only appears when the timeline drops to âˆ’6 or below. Both can be in the travel pool simultaneously.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Article_Recovery">Article Recovery</span></h2>
+<p>When an agent is at a Time Location with an unclaimed article, roll the <b>Recovery Dice</b>.
+</p>
+<h3><span class="mw-headline" id="Recovery_Dice">Recovery Dice</span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Die</th>
+<th>Colour</th>
+<th>Faces
+</th></tr>
+<tr>
+<td>Red</td>
+<td>ðŸ”´</td>
+<td>A, S, C, P, M, $
+</td></tr>
+<tr>
+<td>Blue</td>
+<td>ðŸ”µ</td>
+<td>A, S, C, P, $, H
+</td></tr>
+<tr>
+<td>Green</td>
+<td>ðŸŸ¢</td>
+<td>A, S, C, P, â˜…, H
+</td></tr>
+<tr>
+<td>Black</td>
+<td>âš«</td>
+<td>â˜…, S, C, P, $, H
+</td></tr>
+<tr>
+<td>White</td>
+<td>âšª</td>
+<td>A, S, C, P, M, â˜…
+</td></tr>
+<tr>
+<td>TimeLord</td>
+<td>ðŸ• TL</td>
+<td>M, C, P, H, â˜…, â˜…
+</td></tr>
+<tr>
+<td>Intel</td>
+<td>ðŸŸ£ In</td>
+<td>â˜…, â˜…, â˜…, â˜…, â˜…, â˜…</td>
+<td>Granted by Intel/Recon action; single use
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Specialist_Factors">Specialist Factors</span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Code</th>
+<th>Specialist</th>
+<th>Description
+</th></tr>
+<tr>
+<td>A</td>
+<td>Archivist</td>
+<td>Archaeological and archival expertise
+</td></tr>
+<tr>
+<td>S</td>
+<td>Security</td>
+<td>Physical security and protection
+</td></tr>
+<tr>
+<td>C</td>
+<td>Cryptohacker</td>
+<td>Cyber security and code-breaking
+</td></tr>
+<tr>
+<td>P</td>
+<td>Psychotronics</td>
+<td>Psychic defence and mental warfare
+</td></tr>
+<tr>
+<td>M</td>
+<td>Medical</td>
+<td>Medical support and emergency care
+</td></tr>
+<tr>
+<td>H</td>
+<td>Historian</td>
+<td>Historical research and cultural knowledge
+</td></tr></tbody></table>
+<p>Up to <b>4 rolls</b>. <b>$ faces</b> trigger a <b>Recovery Event</b> card draw. Wilds count on the <b>final roll</b> only.
+</p><p><b>On Success:</b> Items and Crystals are added to the agent's inventory. Artifacts are <b>guarded</b> at their location (stay on the tile but protected from Kronos).
+</p>
+<hr />
+<h2><span class="mw-headline" id="Article_Types">Article Types</span></h2>
+<h3><span id="Items_.2812_total.29"></span><span class="mw-headline" id="Items_(12_total)">Items (12 total)</span></h3>
+<p>Historical curiosities scattered to random past-era locations. Carry them back to HQ to <b>restore</b> them.
+</p><p><b>Restoring an item at HQ awards:</b>
+</p>
+<ul><li><b>â­ Kairos</b> (typically 2-4)</li>
+<li><b>âˆ’âš«&#160;Blots</b> removed (typically 1)</li>
+<li><b>âˆ’1 Paradox</b> (vital for slowing time collapse)</li></ul>
+<h3><span id="Crystals_.2812_total.29"></span><span class="mw-headline" id="Crystals_(12_total)">Crystals (12 total)</span></h3>
+<p>Precious gems from future time locations. Deposit at HQ for <b>Crystal Light</b> each Kronos phase.
+</p><p><b>Depositing a crystal awards:</b>
+</p>
+<ul><li><b>â­ Kairos</b> (typically 2-3)</li>
+<li><b>âˆ’âš«&#160;Blots</b> removed (typically 1)</li>
+<li><b>Crystal Light</b> each round (see Crystal Light section below)</li></ul>
+<h3><span id="Artifacts_.2812_total.29"></span><span class="mw-headline" id="Artifacts_(12_total)">Artifacts (12 total)</span></h3>
+<p>Legendary relics of great power. Unlike items and crystals, artifacts are <b>NOT carried</b> â€” they are <b>guarded</b> at their location after recovery.
+</p><p><b>Guarding an artifact awards:</b>
+</p>
+<ul><li><b>â­ Kairos</b> (typically 2-4)</li>
+<li>Protection from Kronos theft (harder to steal when guarded)</li></ul>
+<p>Each crystal is randomly <b>paired</b> with one artifact. A <b>TimeLord</b> empowering the crystal <b>in the field at the paired artifact's time location</b> (while Kronos holds it) attempts a <b>nerf</b> â€” only TimeLords can nerf. Roll 2d6 âˆ’ crystal depletion, success on 4+: the artifact gains <b>+4 depletion</b>, pushing it toward <b>depleted</b> â€” an inert state where it deals no timeline damage until it recovers.
+</p>
+<hr />
+<h2><span id="Intel_.2F_Recon"></span><span class="mw-headline" id="Intel_/_Recon">Intel / Recon</span></h2>
+<p>When your agent is at a Time Location with an agent from another team, you can perform the <b>Intel</b> action to grant that team a one-use <b>Intel Die</b> (all wilds). The receiving team's agent shows a blue dot indicator. When the Intel Die is used in a recovery session, the indicator disappears.
+</p>
+<hr />
+<h2><span class="mw-headline" id="TimeLord_Upgrades">TimeLord Upgrades</span></h2>
+<p>A regular agent upgrades to <b>TimeLord</b> when it accumulates <b>8 or more Kairos (â­)</b> (agent_kairos â‰¥ 8).
+</p><p><b>TimeLord Benefits:</b>
+</p>
+<ul><li><b>Extra TL die</b> on travel and recovery rolls (mostly wilds!)</li>
+<li><b>Carry 3</b> articles instead of 2</li>
+<li><b>Nerf artifacts</b> â€” only TimeLords can attempt a nerf via field empowerment (-1âš«&#160;on success)</li>
+<li><b>Attempt Vortex</b> â€” try to switch off the Time Vortex</li>
+<li><b>Rescue</b> allied agents from Lost in Time</li></ul>
+<hr />
+<h2><span id="Kronos_Phase_.28End_of_Round.29"></span><span class="mw-headline" id="Kronos_Phase_(End_of_Round)">Kronos Phase (End of Round)</span></h2>
+<p>After all players and Automa act, <b>Kronos</b> executes these phases:
+</p><p><b>Phase 1 â€” STEAL:</b> Kronos targets ALL artifacts (portal and non-portal locations). Roll <b>2d6 per artifact + modifiers</b>, steal on <b>9+</b>:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Modifier</th>
+<th>Roll Adjustment
+</th></tr>
+<tr>
+<td>Non-portal location</td>
+<td>âˆ’5
+</td></tr>
+<tr>
+<td>Ring-1 location (inner ring, adjacent to Vortex)</td>
+<td>+2
+</td></tr>
+<tr>
+<td>Ring-2 location</td>
+<td>+1
+</td></tr>
+<tr>
+<td>Difficulty (Hard / Easy)</td>
+<td>+2 Hard, âˆ’2 Easy
+</td></tr>
+<tr>
+<td>Crystal excess (when positive)</td>
+<td>+ excess
+</td></tr>
+<tr>
+<td>Timeline tier (MLT Ã· 5, truncated toward zero)</td>
+<td>Â± tier
+</td></tr>
+<tr>
+<td>Guarded (recovered)</td>
+<td>âˆ’2
+</td></tr>
+<tr>
+<td>Protected (agent present)</td>
+<td>âˆ’4
+</td></tr></tbody></table>
+<p><b>Phase 2 â€” EMPOWER:</b> For each non-depleted artifact Kronos holds, roll 2d6 + difficulty/timeline modifiers vs <b>9+</b> = empowered (deals more damage). Each rolling artifact gains +1 depletion (+2 if empowered); depleted artifacts skip the roll.
+</p><p><b>Phase 3 â€” DARKNESS:</b> Each non-depleted artifact Kronos holds damages the Timeline:
+</p>
+<ul><li>Empowered artifact: âˆ’2 MLT</li>
+<li>Non-empowered: âˆ’1 MLT</li>
+<li>Depleted: no damage</li></ul>
+<p><b>Phase 4 â€” CRYSTAL LIGHT:</b> Crystals contribute to the Timeline based on their location:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Crystal Location</th>
+<th>Mechanic</th>
+<th>MLT Gain
+</th></tr>
+<tr>
+<td><b>HQ</b> (not empowered)</td>
+<td>Flat (no roll)</td>
+<td>+1
+</td></tr>
+<tr>
+<td><b>HQ</b> (empowered)</td>
+<td>Flat (no roll)</td>
+<td>+2
+</td></tr>
+<tr>
+<td><b>Field at paired artifact's correct TL</b></td>
+<td>Roll 2d6 + mods vs 9</td>
+<td>Hit: +2 (+3 if paired artifact depleted); Miss: +1
+</td></tr>
+<tr>
+<td><b>Field elsewhere</b> (hq-activated)</td>
+<td>Flat (no roll)</td>
+<td>+1
+</td></tr>
+<tr>
+<td><b>Carried by agent</b></td>
+<td>Does not contribute</td>
+<td>0
+</td></tr></tbody></table>
+<p>Field crystal roll modifiers: +3 if empowered, + crystal excess (HQ crystals âˆ’ Kronos artifacts, minimum 0).
+</p><p>All contributing crystals accumulate <b>depletion</b> â€” eventually they deplete and stop contributing.
+</p><p><b>Phase 5 â€” TIME COLLAPSE:</b> Roll 2d6 (adjusted Â±3 at MLT extremes). If roll â‰¤ paradox count, <b>max rounds decreases by 1</b>. Locked if Vortex has been switched off. Cannot reduce below 6 rounds.
+</p><p><b>Phase 6 â€” PORTAL ROTATION:</b> Remove portals equal to player count, refill to 12. Pool resets every 5 rounds.
+</p><p>All crystal <b>empowered</b> flags are cleared at end of round (re-empower each round). Depletion â€” on both crystals and artifacts â€” persists until recovered.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Special_Locations">Special Locations</span></h2>
+<h3><span class="mw-headline" id="Time_Vortex">Time Vortex</span></h3>
+<p>Centre of the hex grid. Only <b>TimeLords</b> can attempt to switch it off:
+</p><p>Roll: <b>2d6 + HQ crystals âˆ’ Kronos artifacts + other TLs at Vortex + urgency modifier</b>
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Result</th>
+<th>Outcome
+</th></tr>
+<tr>
+<td>â‰¥ 9</td>
+<td><b>SUCCESS</b> â€” +10â­, âˆ’3âš«, max rounds locked (time collapse disabled)
+</td></tr>
+<tr>
+<td>5-8</td>
+<td>No effect
+</td></tr>
+<tr>
+<td>â‰¤ 4</td>
+<td><b>WIPE</b> â€” agent destroyed permanently
+</td></tr></tbody></table>
+<p>TimeLords arriving at the Vortex can make an <b>urgent attempt</b> as a bonus action, but with a <b>âˆ’2 modifier</b> (harder to succeed, easier to die). Or wait until next turn for a normal attempt.
+</p><p>Max 3 agents at the Vortex simultaneously.
+</p>
+<h3><span class="mw-headline" id="Xanadu_Jail">Xanadu Jail</span></h3>
+<p>Agents sent here by event cards. Escape options (turns 1-2):
+</p>
+<ul><li>Roll <b>2d6 doubles</b> (costs âˆ’2â­)</li>
+<li><b>Bribe</b> â€” instant escape (costs âˆ’3â­, removes âˆ’1âš«)</li>
+<li>Play a <b>KEEP â€“ JAIL</b> or <b>KEEP â€“ WILD</b> card</li>
+<li>After <b>3 turns</b>: forced bribe release</li></ul>
+<h3><span class="mw-headline" id="Lost_in_Time">Lost in Time</span></h3>
+<p>Agents drifting through temporal space. Escape options (turns 1-2):
+</p>
+<ul><li>Roll <b>d6 â‰¥ 5</b> (free)</li>
+<li>Play a <b>KEEP â€“ LIT</b> or <b>KEEP â€“ WILD</b> card</li>
+<li><b>TimeLord rescue</b> from HQ (both agents consume their turn)</li>
+<li>After <b>3 turns</b>: forced release (+1âš«)</li></ul>
+<hr />
+<h2><span class="mw-headline" id="Event_Cards">Event Cards</span></h2>
+<h3><span id="Travel_Events_.2840_cards.29"></span><span class="mw-headline" id="Travel_Events_(40_cards)">Travel Events (40 cards)</span></h3>
+<p>Drawn when skull faces appear during travel. Effects include: Send to Jail, Lost in Time, Add/Remove Blots, Miss Turn, Recall to HQ, Wiped Out, Upgrade to TimeLord. Some are <b>KEEP</b> cards held in hand for later use.
+</p>
+<h3><span id="Recovery_Events_.2818_cards.29"></span><span class="mw-headline" id="Recovery_Events_(18_cards)">Recovery Events (18 cards)</span></h3>
+<p>Drawn when <b>$</b> faces appear during recovery. Effects include: Add Blot, Add Requirement, Wipe Locked Dice, Mission Fail, Lose Inventory, Send to Jail, Recall to HQ.
+</p>
+<hr />
+<h2><span id="Time-Travelling_Dinosaurs_.28Optional.29"></span><span class="mw-headline" id="Time-Travelling_Dinosaurs_(Optional)">Time-Travelling Dinosaurs (Optional)</span></h2>
+<p>An optional game mode that can be enabled in game options. Dinosaurs are special entities that roam the time field and interact with agents and articles.
+</p>
+<hr />
+<h2><span id="Easter_Egg_Crystal_.28Optional.29"></span><span class="mw-headline" id="Easter_Egg_Crystal_(Optional)">Easter Egg Crystal (Optional)</span></h2>
+<p>An optional hidden mechanic. When enabled, a secret Easter Egg crystal is placed somewhere in the time field. If discovered and brought to an HQ, it <b>permanently activates</b> that HQ as an Easter Egg location. Once activated, any agent at that HQ can perform an Easter Egg upgrade â€” even if the crystal is later moved away. The activation is permanent for the game.
+</p>
+<hr />
+<h2><span id="Winning_.26_Losing"></span><span class="mw-headline" id="Winning_&amp;_Losing">Winning &amp; Losing</span></h2>
+<h3><span class="mw-headline" id="Victory">Victory</span></h3>
+<ul><li>MLT is <b>above 0</b>, AND</li>
+<li>At least one player (human or Automa) has <b>0 blots</b></li>
+<li>Checked <b>twice per round</b>: after player turns (before Kronos) and after Kronos phase</li></ul>
+<h3><span class="mw-headline" id="Defeat">Defeat</span></h3>
+<ul><li>Max rounds reached and MLT â‰¤ 0 â€” <b>Kronos wins</b></li>
+<li>MLT &gt; 0 but no player at 0 blots â€” <b>Pyrrhic victory</b> (light endures, no one ascends)</li></ul>
+<h3><span class="mw-headline" id="Scoring">Scoring</span></h3>
+<p><b>Final Score = Kairos (â­) âˆ’ Blots (âš«) + End Score Card bonus</b> (minimum 0). Tiebreaker among winners.
+</p>
+<h3><span class="mw-headline" id="End_Score_Cards">End Score Cards</span></h3>
+<p>Each player (and Automa) is dealt a <b>secret End Score Card</b> during setup â€” a personal combo objective with <b>2â€“3 tiered goals</b> based on tracked stats: crystals deposited, artifacts guarded, items restored, crystals empowered, dinos sent back, artifacts nerfed. At game end, the <b>highest tier reached</b> on each objective awards bonus kairos (tiers don't stack) â€” up to <b>+9 to +15</b> depending on the card. The two dinosaur cards (Dino Wrangler, Collector) are only in the deck when the Dinosaurs option is enabled.
+</p>
+<h3><span class="mw-headline" id="How_to_Clear_Blots">How to Clear Blots</span></h3>
+<ul><li>Restore items at HQ (âˆ’blots, âˆ’1 paradox each)</li>
+<li>Deposit crystals at HQ (âˆ’blots)</li>
+<li>Empower crystals when paired artifact in Kronos (âˆ’1 extra blot)</li>
+<li>Switch off the Vortex (âˆ’3 blots)</li>
+<li>Bribe escape from Jail (âˆ’1 blot)</li>
+<li>Certain event cards</li></ul>
+<hr />
+<h2><span id="Automa_.28AI_Players.29"></span><span class="mw-headline" id="Automa_(AI_Players)">Automa (AI Players)</span></h2>
+<p>Automa fill empty seats (up to 4 total). They follow automated logic to travel, recover, deposit, guard, and empower. Automa <b>can win the game</b> â€” if an Automa clears its blots while MLT is positive, the team wins.
+</p><p><b>AutoAlpha:</b> A stronger Automa variant that receives a bonus <b>Purple (Alpha) die</b> on all travel and recovery rolls (2 wilds, 4 blanks). Helps AutoAlpha agents keep pace with human players.
+</p><p><b>Baal Die:</b> Certain conditions grant the <b>Hazel (Baal) die</b> (2 crosses, 4 blanks). Crosses have special effects.
+</p>
+<hr />
+<h2><span class="mw-headline" id="Game_Options">Game Options</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Option</th>
+<th>Choices</th>
+<th>Default
+</th></tr>
+<tr>
+<td>Difficulty</td>
+<td>Easy / Medium / Hard</td>
+<td>Medium
+</td></tr>
+<tr>
+<td>Game Length</td>
+<td>Short (âˆ’2 rounds) / Standard / Long (+2 rounds)</td>
+<td>Standard
+</td></tr>
+<tr>
+<td>Number of Automa</td>
+<td>0-3 AI players</td>
+<td>0
+</td></tr>
+<tr>
+<td>Dinosaurs</td>
+<td>On / Off</td>
+<td>Off
+</td></tr>
+<tr>
+<td>Easter Egg Crystal</td>
+<td>On / Off</td>
+<td>Off
+</td></tr></tbody></table>
+<hr />
+<h2><span class="mw-headline" id="Quick_Reference">Quick Reference</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Stat</th>
+<th>Value
+</th></tr>
+<tr>
+<td>Starting MLT</td>
+<td>âˆ’2
+</td></tr>
+<tr>
+<td>Starting Paradoxes</td>
+<td>2
+</td></tr>
+<tr>
+<td>Max MLT</td>
+<td>15
+</td></tr>
+<tr>
+<td>Agent carry capacity</td>
+<td>2 (regular) / 3 (TimeLord)
+</td></tr>
+<tr>
+<td>TimeLord upgrade threshold</td>
+<td>Agent Kairos â‰¥ 8
+</td></tr>
+<tr>
+<td>Max dice rolls</td>
+<td>4 (travel and recovery)
+</td></tr>
+<tr>
+<td>Skulls to auto-fail travel</td>
+<td>2+
+</td></tr>
+<tr>
+<td>Active portals</td>
+<td>12 (rotate each round)
+</td></tr>
+<tr>
+<td>Kronos steal threshold</td>
+<td>9+ on 2d6 per artifact
+</td></tr>
+<tr>
+<td>Non-portal steal modifier</td>
+<td>âˆ’5
+</td></tr>
+<tr>
+<td>Guarded modifier</td>
+<td>âˆ’2
+</td></tr>
+<tr>
+<td>Protected (agent present) modifier</td>
+<td>âˆ’4
+</td></tr>
+<tr>
+<td>Kronos empower threshold</td>
+<td>d6 â‰¥ 4
+</td></tr>
+<tr>
+<td>Crystal Light (HQ)</td>
+<td>+1 MLT flat (empowered: +2)
+</td></tr>
+<tr>
+<td>Crystal Light (field at correct TL)</td>
+<td>2d6 vs 9: hit +2 MLT, miss +1 MLT
+</td></tr>
+<tr>
+<td>Empower crystal reward</td>
+<td>+1â­ (and âˆ’1âš«&#160;if paired artifact in Kronos)
+</td></tr>
+<tr>
+<td>Vortex success</td>
+<td>2d6 + crystals âˆ’ Kronos + TL assist + urgency â‰¥ 9
+</td></tr>
+<tr>
+<td>Vortex wipe</td>
+<td>â‰¤ 4
+</td></tr>
+<tr>
+<td>Vortex reward</td>
+<td>+10â­, âˆ’3âš«
+</td></tr>
+<tr>
+<td>Jail: doubles escape</td>
+<td>âˆ’2â­
+</td></tr>
+<tr>
+<td>Jail: bribe</td>
+<td>âˆ’3â­, âˆ’1âš«&#160;(removes 1 blot)
+</td></tr>
+<tr>
+<td>Jail: forced after</td>
+<td>3 turns
+</td></tr>
+<tr>
+<td>LIT: escape threshold</td>
+<td>d6 â‰¥ 5
+</td></tr>
+<tr>
+<td>LIT: forced after</td>
+<td>3 turns (+1âš«)
+</td></tr>
+<tr>
+<td>Item restore bonus</td>
+<td>âˆ’1 Paradox per item
+</td></tr>
+<tr>
+<td>Collapse floor</td>
+<td>6 rounds minimum
+</td></tr></tbody></table>
+<p><i>Wiki v1.4 â€” updated 8 July 2026 (nerf is TimeLord-only, flat +4 depletion)</i>
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpkairos" target="_blank" rel="noopener">Kairos — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

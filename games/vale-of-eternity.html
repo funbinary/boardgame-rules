@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="《永恒之谷》(The Vale of Eternity) 中文规则：狩猎、驯服、召唤神话生物，率先达到 60 分。">
+  <title>永恒之谷 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="vale">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">永恒之谷（The Vale of Eternity）</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="全部游戏">
+        <div class="toc-title">全部游戏</div>
+        <ul>
+          <li><a href="../index.html">🏠 返回首页</a></li>
+          <li><a href="7-wonders.html">🏛️ 七大奇迹</a></li>
+          <li><a href="brass-birmingham.html">🏭 工业革命：伯明翰</a></li>
+          <li><a href="vale-of-eternity.html">✨ 永恒之谷</a></li>
+          <li><a href="wingspan.html">🦜 展翅翱翔</a></li>
+          <li><a href="pokemon-grove.html">🌳 宝可梦林地探索</a></li>
+          <li><a href="puerto-rico.html">⛵ 波多黎各</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">✨ 永恒之谷</h1>
+          <p class="game-sub">The Vale of Eternity · 设计：Sang-yeon Baek</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2–4 人</span>
+            <span class="meta-chip">⏱ 30–45 分钟</span>
+            <span class="meta-chip">🔄 通常 8–10 轮</span>
+          </div>
+        </header>
+
+        <h2>游戏目标</h2>
+        <p>在一个奇幻世界中，玩家们作为驯兽师，将会狩猎并驯服各种生物。驯服最顶尖生物的玩家将会赢得游戏胜利。</p>
+        <figure>
+          <img src="../assets/img/vale-of-eternity/p01.png" alt="永恒之谷游戏组件" loading="lazy">
+          <figcaption>游戏组件一览</figcaption>
+        </figure>
+
+        <h2>游戏配件</h2>
+        <figure>
+          <img src="../assets/img/vale-of-eternity/p02.png" alt="永恒之谷配件清单" loading="lazy">
+          <figcaption>配件清单</figcaption>
+        </figure>
+
+        <h2>游戏设置</h2>
+        <ol>
+          <li>每位玩家选择一个颜色并拿取对应颜色的 2 个玩家标记和 1 个玩家板块。</li>
+          <li>随机决定一位起始玩家，拿取起始玩家标记。</li>
+          <li>将游戏版图和计分板放置在桌面中央。</li>
+          <li>洗混所有卡牌形成抽牌堆，放置到便于拿取的地方。</li>
+          <li>将轮次标记放置到轮次轨的起始位置上。</li>
+          <li>每位玩家将各自的分数标记放置到分数轨等同于自己顺位的分值上。</li>
+          <li>将所有魔法石放置到一旁，形成供应堆。</li>
+        </ol>
+        <figure>
+          <img src="../assets/img/vale-of-eternity/p03.png" alt="永恒之谷游戏设置示例" loading="lazy">
+          <figcaption>设置示例</figcaption>
+        </figure>
+
+        <h2>游戏流程</h2>
+        <p>游戏进行若干轮（通常为 8–10 轮），每一轮分为 3 个阶段：</p>
+
+        <h3>1. 狩猎阶段</h3>
+        <ul>
+          <li>从抽牌堆中翻开<strong>等同于玩家人数两倍</strong>的卡牌，将这些卡牌按左上角的不同元素分开并放置到游戏版图的对应区域旁。</li>
+          <li>从起始玩家开始，按照<strong>顺时针</strong>顺序，每位玩家轮流选择一张没有放置标记的卡牌，并将自己的玩家标记放置到该卡牌上。</li>
+          <li>然后，从末位玩家开始，按照<strong>逆时针</strong>顺序，每位玩家轮流选择第二张卡牌并将自己剩余的玩家标记放置到所选卡牌上。</li>
+        </ul>
+
+        <h3>2. 行动阶段</h3>
+        <p>从起始玩家开始，每位玩家轮流进行自己的回合。在你的回合中，你可以任意顺序执行以下行动任意次数：</p>
+        <ul>
+          <li><strong>卖掉一张卡牌</strong>：选择放有你玩家标记的一张卡牌，将玩家标记收回手中并弃除这张卡牌，然后根据卡牌所属元素获得对应类型和数量的魔法石（标识在游戏版图上）。</li>
+          <li><strong>驯服一张卡牌</strong>：选择放有你玩家标记的一张卡牌，将玩家标记收回手中并将该卡牌加入手中。玩家可以拥有的手牌数量没有上限。</li>
+          <li><strong>召唤一张卡牌</strong>：首先，检查你的玩家区域是否已满。玩家面前可以打出的卡牌数量等同于当前游戏轮次。如果玩家区域已满，则不能执行此行动。否则，你可以选择一张手中的卡牌，支付左上角所示价值的魔法石，将其面朝上召唤到你的玩家区域中。然后你立即结算该卡牌的即时效果（如果有的话）。</li>
+          <li><strong>移除一张卡牌</strong>：选择自己玩家区域中的一张卡牌，支付等同于当前轮次的费用，将这张卡牌移除。</li>
+        </ul>
+        <div class="callout">
+          <p class="callout-title">⚠️ 注意</p>
+          <p>玩家拥有的魔法石数量上限为 <strong>4</strong>（不论种类）；玩家不能将拥有的魔法石与供应堆中的魔法石进行转换。</p>
+          <p>召唤时如果你支付了超出费用的魔法石，不会从供应堆中找零。</p>
+        </div>
+
+        <h3>3. 结算阶段</h3>
+        <p>从起始玩家开始，每位玩家轮流激活自己玩家区域中所有带有<strong>沙漏图标</strong>的卡牌效果。</p>
+
+        <h2>一轮结束</h2>
+        <p>在结算阶段之后，一轮结束。如果此时没有触发游戏结束条件，则执行以下两个步骤：</p>
+        <ol>
+          <li>将轮次标记移动到下一个位置中；</li>
+          <li>将起始玩家标记传给左手边的玩家。</li>
+        </ol>
+
+        <h2>游戏结束</h2>
+        <p>在一轮结束时，如果有玩家分数达到 <strong>60 分或更多</strong>，游戏立即结束。或者，如果这是游戏的<strong>第十轮</strong>，则该轮结束后游戏结束。</p>
+        <p>分数最高的玩家赢得游戏胜利。如果出现平手，平手玩家中召唤了更多卡牌的玩家获胜；如果依然平手，则平手玩家共享游戏胜利。</p>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://www.bilibili.com/opus/890774653861101571" target="_blank" rel="noopener">《The vale of eternity桌游规则》</a> · 作者：啃规则的Lancer（B站） · 规则内容版权归原作者所有。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

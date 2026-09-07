@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Tokaidoduo 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Tokaidoduo · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Tokaidoduo</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Tokaidoduo</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Six travellers explore the island of Tokaido: a <b>Pilgrim</b> seeking enlightenment, a <b>Merchant</b> seeking profit, and an <b>Artist</b> seeking inspiration — one of each per player. Each round, three dice are drafted between the two players, one per character type. Whichever die you take, you <b>must</b> move the matching character that many spaces.
+</p><p>The game ends at the end of the round when one of four race conditions is triggered and then both players total all their character scores.
+</p>
+<ul><li>a full Temple track</li>
+<li>a full Garden track</li>
+<li>a 6th gold slab</li>
+<li>the last Painting tile (of a single player) being gifted</li></ul>
+<h2><span class="mw-headline" id="Turn_Structure">Turn Structure</span></h2>
+<p>Each round is a <b>1-2-1</b> die draft:
+</p>
+<ol><li><b>Player A</b> rolls all 3 dice, chooses one, and moves the matching character.</li>
+<li><b>Player B</b> chooses one of the 2 remaining dice and moves the matching character.</li>
+<li><b>Player A</b> uses the last die and moves the matching character.</li></ol>
+<p>A new round then begins with Player B drafting first; the first picker role alternates every round.
+</p>
+<ul><li>The chosen character <b>must</b> move the exact number of spaces shown on the die.</li>
+<li>Using the arrival space's effect, in some cases this is optional (for example selling wares)</li></ul>
+<h2><span class="mw-headline" id="The_Pilgrim">The Pilgrim</span></h2>
+<p>The Pilgrim travels clockwise around the island's outer ring of 37
+spaces.
+</p>
+<ul><li>May pass through stations occupied by another meeple.</li>
+<li>If the intended final space is occupied by any other meeple, the pilgrim jumps to the next space.</li></ul>
+<table class="wikitable">
+<tbody><tr>
+<th>Station</th>
+<th>Effect
+</th></tr>
+<tr>
+<td>Coastal Town</td>
+<td>Gain coins  value (2, 3, or 4) based on the boutique token linked to that space. These coins
+<pre>go into the same personal supply the Merchant uses for gold slabs.
+</pre>
+</td></tr>
+<tr>
+<td>Temple</td>
+<td>Advance your Temple track one slot. Reaching slot 9 ends the game.
+</td></tr>
+<tr>
+<td>Garden</td>
+<td>Advance your Garden track one slot. Reaching slot 6 ends the game.
+</td></tr>
+<tr>
+<td>Hot Spring</td>
+<td>Take the Hot Spring token (from the board, or from your opponent if they hold it). It cannot be used the same turn it's gained.
+</td></tr>
+<tr>
+<td>Seashore</td>
+<td>Take any one Wave tile from the board (or from your opponent if the board has none) and place it on the associated character board.
+<p>If you already hold all the wave tiles nothing occurs.
+</p>
+</td></tr></tbody></table>
+<p><b>Hot Spring token:</b> After any future die pick, you may spend the token to immediately repeat your <b>last chosen die value</b> — move that same character the same number of spaces again (no reroll) and use its effect. The token returns to the board once it has been used. If your opponent lands on Hot Spring while you're holding it, they take it from you immediately.
+</p>
+<h2><span class="mw-headline" id="The_Merchant">The Merchant</span></h2>
+<p>The Merchant travels along the orange Trade routes connecting 4 Mountain towns and 8 Coastal towns, crossing a number of routes equal to the die value.
+</p>
+<ul><li>If no path of exactly that length exists, the Merchant does not move and takes no action.</li></ul>
+<ul><li>When several destinations are reachable at the exact die value, you choose which to visit.</li></ul>
+<ul><li>You cannot enter a coastal town occupied by another meeple.</li></ul>
+<ul><li>Both Merchants may share a single mountain town.</li></ul>
+<p><b>Mountain town:</b> draw Wares from the bag randomly equal to the town's printed value (2, 3, or 4). Storage cap is 5 — if a draw would exceed the cap, keep any 5 of your choice and return the rest to the bag.
+</p><p><b>Coastal town:</b> sell any wares of the towns boutique token type; gain its coin value per ware sold, and return sold wares to the bag. 
+</p><p><b>Gold Slab:</b> Any time your coin total reaches 10 or more, it immediately converts into 1 gold slab placed in the leftmost empty slot on your Merchant board. Gaining your <b>6th</b> gold slab ends the game.
+</p>
+<h2><span class="mw-headline" id="The_Artist">The Artist</span></h2>
+<p>The Artist moves through a number of zones equal to the die value and never revisiting a zone already passed through on that move. You traverse zones via crossing the orange trade routes, never through a mountain town. Both Artists may share the same zone.
+</p><p>After moving, choose <b>one</b> of:
+</p><p><b>Paint</b> — reveal face-down Painting tiles from your Artist board equal to the number of other meeples (any player's) currently in your arrival zone. You can imagine your arrival zone as all the spaces which surround where your artist lands, as well as the area itself. Tiles are always revealed left-to-right, top row first. 
+</p>
+<div class="floatleft"><img src="../../assets/img/bga/88a2acc377368fc5.jpg" loading="lazy"  alt="Tokaido-Duo-Artist-Aid.jpg" decoding="async" /></div>
+<p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p><br />
+</p><p>You can see in this image 2 potential artist areas and every space which would apply for the painting mechanic. The artist itself does not count for painting and therefore the maximum number of paintings that can occur in one turn is 5 (6 with proficient wave tile), all other meeples including the opponents artist on the same zone.
+</p><p><b>Gift</b> — if your arrival zone's icon matches the icon on the <b>topmost, leftmost</b> revealed painting on your Artist board, remove that tile from the game. Only one tile may be gifted per action, and only that specific tile is ever eligible. Removing your last tile ends the game.
+</p>
+<h2><span class="mw-headline" id="Wave_Tiles">Wave Tiles</span></h2>
+<p>When the pilgrim lands on a Seashore space you receive a Wave tile, placed on the matching character board (a Pilgrim tile only goes on the Pilgrim board, and so on). There is 3 double sided wave tiles, one for each character. Each tile's side is assigned randomly at setup and fixed for the whole game — its effect are described below and is sometimes optional in situations where not using it might be beneficial.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Character</th>
+<th>Side</th>
+<th>Name</th>
+<th>Effect
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Pilgrim</td>
+<td>1</td>
+<td>Hasty</td>
+<td>Move +1 beyond the die result (always move at least 1).
+</td>
+<td>You will be presented both eligible spaces and must pick one
+</td></tr>
+<tr>
+<td>Pilgrim</td>
+<td>2</td>
+<td>Tranquil</td>
+<td>Move −1 below the die result (always move at least 1).
+</td>
+<td>When die result is &gt; 1 you will be presented both eligible spaces and must pick one
+</td></tr>
+<tr>
+<td>Artist</td>
+<td>1</td>
+<td>Proficient</td>
+<td>Reveal 1 additional Painting tile when painting.
+</td>
+<td>Automatically applied
+</td></tr>
+<tr>
+<td>Artist</td>
+<td>2</td>
+<td>Inspired</td>
+<td>Gift eligibility extends to any icon begun, passed through, or ended on during the move.
+</td>
+<td>Artist movement becomes stepped to allow for specific beneficial pathing.
+</td></tr>
+<tr>
+<td>Merchant</td>
+<td>1</td>
+<td>Crafty</td>
+<td>Each ware you sell is worth 1 extra coin.
+</td>
+<td>Automatic
+</td></tr>
+<tr>
+<td>Merchant</td>
+<td>2</td>
+<td>Robust</td>
+<td>Draw 1 extra ware at Mountain towns; storage cap raised to 6.
+</td>
+<td>Automatic
+</td></tr></tbody></table>
+<p>When no wave tiles are available to take from the board the player must steal a tile from their opponent, if you already hold all the tiles then the landing on the seashore space has no effect.
+</p>
+<h2><span class="mw-headline" id="End_Game">End Game</span></h2>
+<p>The game ends at the end of a round where one of these conditions is met, there will be a last round banner shown.
+</p>
+<ol><li>A Temple track is completed (reaches slot 9).</li>
+<li>A Garden track is completed (reaches slot 6).</li>
+<li>A player gains their final gold slab (6th, 60 coins).</li>
+<li>A player gifts their final painting tile (10th).</li></ol>
+<h2><span class="mw-headline" id="Scoring">Scoring</span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Score</th>
+<th>Formula
+</th></tr>
+<tr>
+<td><b>Pilgrim</b></td>
+<td>Temple track value × Garden track value
+</td></tr>
+<tr>
+<td><b>Merchant</b></td>
+<td>The rightmost score printed above the merchant gold slab slots, which contains a slab.
+</td></tr>
+<tr>
+<td><b>Artist</b></td>
+<td>The value printed on the bottom-most, right-most uncovered (gifted) painting slot.
+</td></tr></tbody></table>
+<p><b>Highest total wins</b>. Ties are broken by leftover coins, and in the rare event this is also tied then a true tied game occurs.
+</p>
+<h2><span id="Solo_Mode_.28vs._Automa.29"></span><span class="mw-headline" id="Solo_Mode_(vs._Automa)">Solo Mode (vs. Automa)</span></h2>
+<p>Tokaido Duo can be played 1-player against <b>Automa</b>, a scripted opponent that replaces the second player. Automa tracks progress on 3
+Rank tracks (one per character) instead of a normal board, her die choice and movement are fully automatic each turn. The game and the Rank tracks end the same way as a 2-player game; Automa's final score is the sum of her 3 Ranks. Automa has no money, so any tie goes to the human player. Automa's movement logic is rather complex so this is shown to the player above her rank tracks, refer to the Automa rule book for a more detailed explanation.
+</p>
+<h2><span class="mw-headline" id="BGA-Specific_Notes">BGA-Specific Notes</span></h2>
+<ul><li>Artist movement offers the final space and will take the most efficient route to that space (based on the die value rolled). When the inspired artist wave tile is held the artist instead moves in single steps as this is the only instance in which the specific spaces moved on is relevant.</li>
+<li>When holding either Pilgrim wave tile rather than automatically moving the game will offer both spaces and the player must manually select which to take. The one exception to this is when the player has a pilgrim 1 die and has the Tranquil wave, you always must move one.</li>
+<li>As mentioned above Automa's thinking is clearly shown above their rank track to help you track how they will act depending on your choices.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptokaidoduo" target="_blank" rel="noopener">Tokaidoduo — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

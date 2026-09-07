@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Paiko 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Paiko · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Paiko</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Paiko</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p><b>Paikō</b> is a <span title="players" style="display:inline-block;position:relative;text-shadow:0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA;font-size:2rem;line-height:calc(2rem * 1.25);"><span aria-hidden="true">👤</span><span style="margin:0;position:absolute;top:70%;left:50%;margin-right:-50%;transform:translate(-50%,-50%);color:#fff;text-shadow:0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A;font-size:calc(2rem / 1.5);font-weight:700;">2<span style="position:absolute;font-size:0;">players</span></span></span> player abstract strategy game where players take turns <b>deploying tiles</b> on the board and <b>shifting</b> them to advance out of homeground in order to score <b>10 points</b> and win the game.
+</p>
+<h2><span class="mw-headline" id="Game_Board">Game Board</span></h2>
+<p>The game board is made of <b>squares</b> arranged in a diamond pattern. Pieces are deployed in and shifted between the squares. <b>4 black squares</b> in the middle of the board are inaccessible except to <b>Lotus tiles</b>.
+</p><p>Half squares at the edges of the board serve only decorative purpose and are not part of the game.
+</p><p>The board is split into 4 quarters, of which 2 opposite ones are <b>homegrounds</b> of respective players, and the other 2 are <b>middleground</b>. Having a tile in middleground is worth <b>1 point</b>, and having a tile in opponent's homeground is worth <b>2 points</b>.
+</p><p>Each square can be <b>threatened</b> and/or <b>covered</b> by nearby tiles. <b>Threat</b> from a friendly tile allows a player to <b>capture opponent's tiles</b> and also deploy own tiles further away from homeground. <b>Cover</b> protects from a single opponent's <b>threat</b>, but only when checking for capture. While <b>threat</b> is cumulative, <b>cover</b> is not. <b>Homeground</b> squares are always in <b>cover</b>.
+</p>
+<h2><span class="mw-headline" id="Tiles">Tiles</span></h2>
+<p>Each player starts with black or white 24 tiles in their reserve, 3 for each of <b>8 tile types</b>. Tiles in reserve cannot be used directly and first need to be drawn into <b>player's hand</b>. Once in hand, tiles can be deployed on the board and then shifted. Players draw some tiles (8 for white, 9 for black) into their hands before start of the game.
+</p><p>A tile on the board can be rotated to face any of the 4 orthogonal directions. Each tile has its own pattern of <b>threat</b> and <b>cover</b> that is projected from the tile's position and follows the tile's rotation. 
+</p><p>Some of the tiles feature exceptions to the rules that are listed in respective tooltips.
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>During their turn, each player takes a single one of the following actions:
+</p>
+<ul><li>🔴 <b>Draw</b>: take up to 3 arbitrary tiles <b>from reserve</b> and add them to <b>your hand</b>.</li></ul>
+<ul><li>🔴 <b>Deploy</b>: place a tile from your hand on any square <b>not threatened by your opponent</b> that's either <b>in your homeground</b> or <b>threatened by your tile</b>, then rotate it by any amount.</li></ul>
+<ul><li>🔴 <b>Shift</b>: move one of your tiles on the board <b>up to 2 squares</b> orthogonally, then rotate it by any amount. It's not possible to move through squares with enough <b>threat</b> for the tile to be captured. Additionally, a single tile cannot be shifted <b>4 times in a row</b>.</li></ul>
+<p>After the action is completed, check for <b>captures</b>. Any action that would result in any of your tile being <b>captured</b> at the end of your turn is not allowed.
+</p>
+<h2><span class="mw-headline" id="Captures">Captures</span></h2>
+<p>A tile is captured when its square is <b>threatened by at least 2 opponent's tiles</b> (or 3 tiles when in <b>cover</b>). A captured tile is removed from the board which can cause additional tiles to be captured as well. The order of captures is chosen so that as many tiles as possible are captured. Fire tiles are captured all at once, even if they <b>threaten</b> each other.
+</p><p>The owner of each captured tile must choose 1 tile for the opponent to draw from reserve.
+</p>
+<h2><span class="mw-headline" id="End_of_the_game">End of the game</span></h2>
+<p>The game ends in a victory for the player who scores <b>10 points</b> first. However, if each player has lost <b>13 or more tiles</b> and has <b>5 or fewer points</b> the game ends in a tie.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelppaiko" target="_blank" rel="noopener">Paiko — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

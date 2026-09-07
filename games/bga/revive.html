@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Revive 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Revive · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Revive</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Revive</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Important_notes"><b>Important notes</b></span></h2>
+<p>If you already know the game, here are a few things you should know about this implementation:
+</p>
+<ul><li>The crystal conversion is automated. Whenever you need to pay more than you have of a resource, the game will just use your crystals. If you get a surplus of crystals you can convert them.</li>
+<li>Each turn is strictly split into 2 parts for the 2 actions(unless the player hibernates). Every free action you do is considered part of the respective main action.</li>
+<li>It has already been clarified on BGG, that you can use crates for payment even if the crate would otherwise push you beyond the resource-limit. Here you can temporarily get beyond the limit within the action. At the end of that action any surplus is lost. If you want to do a free action before your second action that would give you a surplus for that action, you need to finish the first action with the button 'next action' first.</li>
+<li>When playing with the expansion, every point and devotion point you gain during an action, can be summed up to be converted 2:1</li>
+<li>The machine, that allows you to treat a card as any color for 1 action can only be used for card that is being played.</li>
+<li>If you play on a small screen, the supply/market is not visible per default. You can open with a button inthe action bar.</li>
+<li>If you're missing the player aid, go to user settings and turn on the help button, it will provide something similar</li></ul>
+<h2><span class="mw-headline" id="About_the_Game"><b>About the Game</b></span></h2>
+<p>In Revive, you explore the land, so that you can populate and build on it. Each player has a tribe with a special ability and technologies that can be unlocked by populating.
+</p><p>They also have 3 machine tracks. Advancing on them can unlock free actions(machines) and other bonuses.
+</p><p>There are 3 basic Resources (gear, book, and food) and crystals which can be converted into any of the 3. The resources you can have are limited (max 3 crystals and 6 of each of the others). But when you get more crystals you can just convert them to any other.
+</p>
+<h2><span class="mw-headline" id="Turn_overview"><b>Turn overview</b></span></h2>
+<p><b>During your turn may either</b>
+</p><p>A) Take 2 Main Actions (different or the same):
+</p><p>• Play a card
+</p><p>• Use your Switch
+</p><p>• Explore
+</p><p>• Build
+</p><p>• Populate
+</p><p>or 
+</p><p>B) Hibernate
+</p><p>At any point during your turn (before between or after your 2 Actions, even before, during or after hibernating) you may
+</p><p>• use a machine
+</p><p>• use a crate
+</p><p>• use a special trade action that you unlocked with one of your technologies
+</p><p>The Main Actions in detail:
+</p>
+<h2><span class="mw-headline" id="Play_a_card"><b>Play a card</b></span></h2>
+<p>At the start of the game (after the setup is complete) you have 6 citizen cards. 3 of them are in your active area visible for all. The other 3 form your rest area (facedown but accessible for all) on the right of your player board.
+</p><p>Each card has 2 parts: One at the top and one at the bottom. On your player board you have 5 Card slots. 2 at the top, 2 at the bottom and one the the right. This last one is only available after you unlock the middle technology in the second row of your tribe.
+</p><p>When you play a card you have to put it in a slot that is either empty or contains only cards with a symbol at the visible border. If you put it in a top slot you get the top effect and visa versa. If you have unlocked the side slot you can put a card in there in any orientation to get the part you want.
+</p><p>Each card's slots also has space for 2-3 slot modules. Whenever you gain a slot module, put in any of these slots. They all have 1 or 2 colors. Whenever you play a card into a slot, also gain the effect of all modules in this slots containing the color of the card.
+</p><p>As mentioned above some cards have a slot symbol at the top or bottom border. if you play those cards with this part visible, you can later play a card in the same slot. The previous cards then works like a slot module, i.e. if it matches the new card, you get it's effect again.
+</p>
+<h2><span class="mw-headline" id="Use_your_Switch"><b>Use your Switch</b></span></h2>
+<p>On your player board there is a switch. As long as it is unused(the green part is visible) you can use it once to get any resource. The switch will be reset when you hibernate.
+</p><p>With the optional rule "advanced switch action" (introduced during campaign and enabled per default) you can alternatively copy the top effect of the card of another player. The player's card has to played into that a slot with its top part visible. You gain only the effect of that card, not slot modules. However the owner usually benefits as well, since the copied card is then put into their rest area, freeing the slot and coming back with the next hibernation
+</p>
+<h2><span class="mw-headline" id="Explore"><b>Explore</b></span></h2>
+<p>To Explore, choose a facedown area tile which you can reach (you cannot pass through other facedown areas to Explore). Then pay the range (see below) and the cost shown along the top of the tile.
+</p><p>Some areas will show a small location or a water space in the middle (below the cost and above the reward). The front of these tiles will contain a space matching the type shown.
+</p><p>You gain the rewards shown along the bottom of the tile (usually points and a new card). The tile is then flipped face up, and you choose its orientation. (Each tile may be placed in one of two orientations.) Important: If any spaces on the tile you just flipped are adjacent to buildings owned by any player, the owning player now gains the rewards from these spaces.
+</p><p>When you gain a card, you can either pick one from the market or draw a facedown card from the deck. The gained card goes directly to your active area and is immediately available.
+</p><p>The only tiles where you don't get a card are the vast crystals introduced during the campaign
+</p>
+<h2><span class="mw-headline" id="Build"><b>Build</b></span></h2>
+<p>You have 5 normal building(cost 3 gears) and 3 large buildings(cost 5 gears) that you can build. They can only be built on desert spaces and each desert space can only hold 1 building. In addition to the food you need to pay for range (see below)
+</p><p>You then get bonuses for the spaces adjacent to the building:
+</p>
+<ul><li>for forest, mountain and field spaces you get 1 advancement on the respective machine track</li>
+<li>for printed crystal spaces you get 1 crystal</li>
+<li>for water spaces you get the depicted bonus as long as you haven't built next to this water space before. You can only get the bonus from each water space once (exception: tribe ability of Hofstadterians moon side)</li>
+<li>for vast crystals (introduced in the campaign) you get 1 crystal and 1 point. Note that these tiles each count as 1 large space.</li></ul>
+<p>Large buildings double these rewards, except for the water spaces
+</p><p>If you build next to an unexplored tile, and that tile is explored later, you will then get the bonuses from the spaces placed next to your building, no matter who explored it.
+</p>
+<h2><span class="mw-headline" id="Populate"><b>Populate</b></span></h2>
+<p>On your tribe board there are 7 technologies, that you can unlock by populating with the meeple placed next to them.
+</p><p>The first time you populate, you must use meeple from the bottommost technology. After that you can unlock any technologies that are connected to an already unlocked technology.
+</p><p>You can populate on any city space or large location (5-spaces-tiles at the corners). You have to pay for range (see below) and 2/3/4 books depending on the row the meeple comes from.
+</p><p>Each city and large location can hold 1 meeple from each player, but you have to pay an additional book to each player who is already on the city or large location you populate.
+</p><p>The technologies can be immediate one-time effects, continuous effects, trade actions which can be used any time during your turn or machines.
+</p>
+<h2><span class="mw-headline" id="Hibernate"><b>Hibernate</b></span></h2>
+<p>Instead of doing 2 main actions, you can hibernate. If you that the following happens:
+</p>
+<ol><li>All cards in your rest area go to your active area</li>
+<li>All played cards (tucked behind your board) go into your rest area</li>
+<li>Your switch is reset</li>
+<li>You get all used energy back</li>
+<li>You advance on the hibernation track (bottom right of the main board) and get the bonus of the new row or any below. If it was the 4th time you hibernated, you have to choose on artifact still available on the board and discard it</li></ol>
+<p>You can still do free action before, after or during the hibernation
+</p>
+<h2><span class="mw-headline" id="Paying_for_range"><b>Paying for range</b></span></h2>
+<p>Most actions that happen on the main board require you to pay for range. As long as you have not build or populated you can count range from the starting space at the center.
+</p><p>As soon as you have buildings or meeples on the board you can no longer count range from the starting space. instead you can count range from any building or meeple. Some Tribes have additional stuff they can count range from.
+</p><p>The distance is determined by the number of spaces between the starting point and the target space. You can always take the shortest route, but you cannot count through vast crystals, lakes (expansion only), or unexplored tiles. If the target is a complete tile (for ex. when exploring) the space of that tile with smallest distance counts.
+</p><p>Range is paid with food in the amount of the distance. There are effects that can increase your range (permanently or for 1 action) so that you pay less for the distance.
+</p>
+<h2><span class="mw-headline" id="Machines_and_the_machine_track"><b>Machines and the machine track</b></span></h2>
+<p>On your player board there a machine spaces (Round spaces with a progress marker on it at the start of the game)
+</p><p>They are linked to 1-2 spaces of your machine tracks you once you have reach all linked spaces of a machine you unlock it. You place the progress marker on the next free space of the track that starts at the bottom left of the player board. On some spaces you get a bonus for that(A new energy or an artifact)
+</p><p>The first one of each track is pre-printed. For the others you can choose one of the 3 machines of the respective color from the market.
+</p><p>Machines can be used with energy. You start the game with only 1 energy, but you can gain more (mainly from unlocking progress marker or water spaces) during the game. When using a machine you put an energy token on it. 
+</p><p>You can only put 1 energy token each machine. Until you get it back (by hibernating or other effects) you can not use that machine again.
+</p><p>The machine track has other spaces to unlock (hexagonal): On 3 spaces you get an artifact on the other 3 you get 2 points at the end of the game for each card of a certain color that you gained during the game(not counting your start cards)
+</p><p>If you advance beyond the last space of a machine track, you get the respective resource instead.
+</p>
+<h2><span class="mw-headline" id="Tribe_abilities"><b>Tribe abilities</b></span></h2>
+<p>Each tribe has a special ability at the bottom of their tribe board. Whenever you get the star-symbol somehow (from cards, slot modules or machines) you can execute that ability.
+</p><p>The first 5 times, you do that, remove one of the discs next to it and place it on the track on your player board as described above.
+</p><p>When they are empty you can still use the ability (unless your tribe needs certain tiles/tokens for it that you ran out of), but get no more discs.
+</p>
+<h2><span class="mw-headline" id="Points"><b>Points</b></span></h2>
+<p>Of course the main goal is to score points. Some points you get during the game (points with a blue marble in the background) and some at the end of the game (purple background). For points during the game you get bonuses when you reach certain spaces on the point track.
+</p><p>You do not get these bonuses when score end-game points.
+</p>
+<h2><span class="mw-headline" id="Artifacts_and_Artifact_cards"><b>Artifacts and Artifact cards</b></span></h2>
+<p>depending on the game variant each player has an artifact card or there is 1 common artifact card for all players.
+</p><p>This card provides points at the end of the game.
+</p><p>For each of the 3 colors count the number of your artifacts of that color <b>PLUS 1</b>
+</p><p>Then count whatever the part of the card needs and multiply it with that number an with the the depicted points.
+</p><p>For example, if the yellow artifacts score 1 point for each energy and you have 6 energy and 3 yellow artifacts, score 6x4x1=24 points
+</p><p>Whenever you get an artifact choose any available artifact from the board. There no effect that gives you an artifact of a specific color.
+</p><p>The player who takes (or removes) the last artifact also gets the 4-Point token and triggers the game end. After their turn, all <b>other</b> players get one more turn.
+</p><p>If anyone else would get an artifact now, they get a 2-point token instead.
+</p><p>In the variant "long game" with 4 players 2 additional 2-point tokens are placed on the board that will be taken after the artifacts have been the depleted. The game end is triggered by the 2nd being taken
+</p>
+<h2><span class="mw-headline" id="End_of_the_game"><b>End of the game</b></span></h2>
+<p>The game end is triggered when the last artifact is taken (see above). Then each <b>other</b> player takes one more turn.
+</p><p>At the end of the game each player scores points:
+</p>
+<ul><li>the lowest visible points on their progress track(see machine tracks)</li>
+<li>points for gained cards if they have unlocked the respective spaces on the machine tracks</li>
+<li>Points from each large location they have populated</li>
+<li>2/4-point markers (see artifacts)</li>
+<li>points for each 5 remaining resources</li>
+<li>points from the artifacts + artifact card</li></ul>
+<p>Ties are broken by the number of unscored resources and then by the total advancement of the machine tracks.
+</p>
+<h2><span class="mw-headline" id="Expansion_Rules"><b>Expansion Rules</b></span></h2>
+<p>The expansion "Call of the abyss" introduces several new parts:
+</p>
+<h3><span class="mw-headline" id="Devotion_Points">Devotion Points</span></h3>
+<p>Devotion points are points that have a separate score track. At the end of the game they are just added to your victory points.
+</p><p><b>Whenever you get points or devotion points you can convert all or parts of them in a 2:1 ratio into the other.</b>
+</p><p>The devotion track also provides rewards on certain spaces:
+</p><p>on some spaces you get a scyphoz card(see below). You draw 2 and choose which one to keep.
+</p><p>on one space you can populate for free(even if already populated) to a separate large location that is randomly drawn during setup. Normally it would be placed next to the track, but here, in order to save space, it is placed with the player panels (at the top or right of the screen)
+</p><p>That location is scored as usual at the end of the game
+</p>
+<h3><span class="mw-headline" id="Scyphoz_Cards">Scyphoz Cards</span></h3>
+<p>You get scyphoz cards only by getting devotion points(see above) these cards work like citizen cards, but don't have any of the 3 colors. Instead you can choose their color each round and even at the end of the game(happens automatically here)
+</p><p>They usually have stronger effects than normal citizen cards
+</p>
+<h3><span class="mw-headline" id="Journey_Cards">Journey Cards</span></h3>
+<p>The switch action now has an additional option. Instead of using it as before, you can now use it to get a journey card. For each journey card you have to destroy (remove from the game) a card of a certain color from your active area.
+</p><p>Once you have it, you can resolve it at any time as a free action. When you do that, you get devotion points according to the level that you fulfilled and the flip the journey card facedown. From now on it counts as an additional flask symbol.
+</p>
+<h3><span class="mw-headline" id="Lakes">Lakes</span></h3>
+<p>Lakes are tiles that being placed on the board during setup. They cannot be explored.
+</p><p>When you build next to it you immediately get devotion points depending on the building type(1 for normal, 3 for large building) <b>if you don't already have a building of that type next to that lake</b>
+</p><p>Whenever you hibernate you get the rewards from the right column of the table on each lake if you have at least 1 of the respective building type next to it. Additional buildings of the same type next to it don't provide additional bonuses.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelprevive" target="_blank" rel="noopener">Revive — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

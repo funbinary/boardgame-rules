@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="《波多黎各》(Puerto Rico) 中文规则：轮番出任开拓者、市长、建筑师、工匠、商人、船长与淘金者，建设种植园与城市、运送货物回旧大陆，赚取最多胜利点数。含双人变体与官方扩展建筑。">
+  <title>波多黎各 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⛵</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="puerto">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">波多黎各（Puerto Rico）</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="全部游戏">
+        <div class="toc-title">全部游戏</div>
+        <ul>
+          <li><a href="../index.html">🏠 返回首页</a></li>
+          <li><a href="7-wonders.html">🏛️ 七大奇迹</a></li>
+          <li><a href="brass-birmingham.html">🏭 工业革命：伯明翰</a></li>
+          <li><a href="vale-of-eternity.html">✨ 永恒之谷</a></li>
+          <li><a href="wingspan.html">🦜 展翅翱翔</a></li>
+          <li><a href="pokemon-grove.html">🌳 宝可梦林地探索</a></li>
+          <li><a href="puerto-rico.html">⛵ 波多黎各</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">⛵ 波多黎各</h1>
+          <p class="game-sub">Puerto Rico · Andreas Seyfarth</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2–5 人</span>
+            <span class="meta-chip">⏱ 90–150 分钟</span>
+            <span class="meta-chip">🎂 12 岁以上</span>
+          </div>
+        </header>
+
+        <div class="callout">
+          <p class="callout-title">📌 说明</p>
+          <p>本页文字由原版规则书扫描图（alea / Ravensburger 中文版，含官方扩展内容）转录整理，已按《波多黎各》通行规则对明显识别错误做了校正；个别字词仍无法确定，以〔?〕标注。完整细节请以文末「原版规则书图片」为准。</p>
+        </div>
+
+        <h2>游戏简介</h2>
+        <p><strong>轮番出任开拓者、市长、建筑师、工匠、商人、船长与淘金者</strong>——每个游戏年度，玩家轮流选择一个角色并执行其行动；只有选角色的人才能享用角色特权。开垦种植园、生产货物、兴建建筑、把货物运回旧大陆，赚取最多<strong>胜利点数</strong>的玩家，成为波多黎各最成功的领主。</p>
+        <p>要注意你的对手——有时候他们会从你选择的角色获得比你更大的好处。你必须时刻适应千变万化的局势：高互动性、富策略深度，波多黎各属于每一位玩家。</p>
+
+        <h3>游戏配件</h3>
+        <ul>
+          <li>5 块游戏板（正面：波多黎各／背面：庆典〔?〕）</li>
+          <li>49 个方形板块：8 靛蓝田、8 蔗糖田、8 烟草田、8 玉米田、9 咖啡田、8 采石场（矿场）</li>
+          <li>54 枚硬币（面值 1 或 5 杜布隆）、殖民者（棕色圆片）、胜利点数计分片（面值 1 与 5）</li>
+          <li>100 个货物（每色 20 个：靛蓝、蔗糖、烟草、玉米、咖啡）</li>
+          <li>6 艘船：4、5、6、7、8 格货船各一艘，以及殖民船</li>
+          <li>建筑板块：大型建筑（紫色）、小型生产建筑（白色、方形）、大型生产建筑（白色、矩形）、城市建筑（蓝色）</li>
+          <li>8 张角色卡：开拓者、市长、建筑师、工匠、商人、船长、淘金者×2</li>
+        </ul>
+
+        <h2>游戏准备（3–5 人）</h2>
+        <p>2 人游戏请参阅<a href="#two-player">双人游戏</a>一节。玩家们先决定一位起始玩家，该玩家拿取总督卡（总督标记）。给每位玩家：</p>
+        <ul>
+          <li>1 块玩家游戏板</li>
+          <li>杜布隆币：<strong>3 人局 2 元；4 人局 3 元；5 人局 4 元</strong>（放在自己版图的罗盘位置，让所有人可见）</li>
+          <li>1 块农作物田：<strong>起始玩家拿靛蓝（染料）田</strong>，其后按顺时针——
+            <ul>
+              <li>3 人局：第 2 位染料田、第 3 位玉米田</li>
+              <li>4 人局：第 2 位染料田、第 3、4 位玉米田</li>
+              <li>5 人局：第 2、3 位染料田、第 4、5 位玉米田</li>
+            </ul>
+          </li>
+        </ul>
+        <p>田地正面朝上放在自己版图 12 格岛屿区的任意一格。中央版图置于桌面中央，建筑按版图空格名字分开放好，剩余杜布隆放进「银行」。其余组件按下表设置：</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>组件</th><th>3 人</th><th>4 人</th><th>5 人</th></tr></thead>
+            <tbody>
+              <tr><td>计分片备用堆</td><td>75 分</td><td>100 分</td><td>122 分</td></tr>
+              <tr><td>翻开的农作物田</td><td colspan="3">玩家人数 +1（4 / 5 / 6 块），置于采石场（矿场）叠旁</td></tr>
+              <tr><td>角色卡</td><td>6 张（无淘金者）</td><td>7 张（1 张淘金者）</td><td>全部 8 张</td></tr>
+              <tr><td>货运船</td><td>4 / 5 / 6 格</td><td>5 / 6 / 7 格</td><td>6 / 7 / 8 格</td></tr>
+              <tr><td>殖民船上的殖民者</td><td>3 颗</td><td>4 颗</td><td>5 颗</td></tr>
+              <tr><td>殖民者备用堆</td><td>55 颗</td><td>75 颗</td><td>95 颗</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>货物按种类分为五堆（供应区），交易所置于中央版图旁。把不需要的游戏组件留在游戏盒里。</p>
+
+        <h2>游戏进程：游戏年度</h2>
+        <p>每局游戏大约进行 15 个回合（称为<strong>年度</strong>），每个年度按以下方式进行：</p>
+        <ol>
+          <li>持有总督标记的起始玩家开始，为自己选择 1 张角色牌放到面前，执行该角色的<strong>行动 + 特权</strong>。</li>
+          <li>然后按顺时针方向，其他玩家轮流执行该角色的<strong>行动</strong>（<strong>不包括特权</strong>），直至所有玩家都完成或略过。你会留意到：每一次，最后行动的都是起始玩家。</li>
+          <li>轮到起始玩家的下家，从剩下的角色牌中拣取 1 张，同样执行其行动与特权；其他玩家再轮流执行行动。如此类推。</li>
+          <li>直到每位玩家都已选取 1 张角色牌（且所有附带行动完成），本年度结束。</li>
+        </ol>
+        <p><strong>开始新的年度</strong>（若未触发游戏结束）：在<strong>未被选取</strong>的每张角色牌上各放 1 元杜布隆；所有角色牌归还中央版图旁；总督标记转交下家，由他开始新年度。</p>
+
+        <h3>角色牌通用规则</h3>
+        <ul>
+          <li>每张角色牌附带一个行动及一个特权（例外：淘金者）。只有选取该角色的玩家能一并享用特权；其他玩家只执行行动。</li>
+          <li>行动由选取该角色的玩家开始，按<strong>顺时针</strong>轮流执行。</li>
+          <li>轮到选角色时必须选取一张，但可谢绝执行其附带行动〔?〕；行动并非强制（例外：市长〔及船长〕）。</li>
+          <li>若无法执行行动，只能选择豁免，轮到下一位玩家。</li>
+          <li>若角色牌上附有杜布隆（因上轮未被选取），选取者同时获得这些杜布隆。</li>
+          <li>已选取的角色牌留在玩家面前，本年度不能再被选取。</li>
+        </ul>
+
+        <h2>角色详解</h2>
+
+        <h3>开拓者（拓荒者）· 开拓阶段</h3>
+        <p><strong>行动</strong>：拣选 1 块已翻开正面的农作物田，置入自己版图的岛屿区空格。</p>
+        <p><strong>特权</strong>：可改为拿取 1 块采石场（矿场）。</p>
+        <p><strong>重新整理</strong>：所有玩家完成行动后，选开拓者的玩家把剩下的已翻开农作物田移入弃牌堆，重新翻开「玩家人数 +1」块（4/5/6 块）。〔若农作物田牌堆耗尽，将弃牌堆洗匀补足；若连弃牌堆也不足，则翻开数量相应减少。〕〔?〕</p>
+        <ul>
+          <li>土地片放在哪些土地空格并无影响（位置不影响功效）。</li>
+          <li>已获取的土地片不能丢弃或更换；岛屿区 12 格填满后，不能再于开拓阶段争取土地片。</li>
+        </ul>
+
+        <h3>市长（Mayor）· 市长阶段</h3>
+        <p><strong>行动</strong>：将殖民船上的殖民者，由选市长者开始顺时针分发，直至派清；然后各玩家重新安排自己所有殖民者的岗位。</p>
+        <p><strong>特权</strong>：从备用堆额外拿取 1 颗殖民者。</p>
+        <p>矿场、农作物田、建筑物都需要<strong>有人</strong>（殖民者放在空缺格白圈中）才能发挥功效。分派完毕后，玩家可将全部殖民者在所有空缺格之间自由调配，1 格只可放 1 颗；殖民者多于空缺格时，多出的放在玩家版图的<strong>罗盘位置（圣胡安）</strong>，不提供生产力。</p>
+        <p><strong>重新整理</strong>：待所有玩家完成后，选市长的玩家点算<strong>所有玩家建筑物</strong>（<strong>不点算</strong>矿场及农作物田）未被填满的空缺格数，从备用堆取等量殖民者补充到殖民船上。</p>
+        <p><em>插图注：市长卡——「行动：从殖民船获得殖民者；特权：从供应区额外拿取 1 个殖民者」。</em></p>
+
+        <h3>建筑师（建造者）· 建筑阶段</h3>
+        <p><strong>行动</strong>：拣选并建造 <strong>1 幢建筑物</strong>（每轮只限 1 幢），向银行支付费用，置入自己版图的城市区空格。小型建筑物占 1 格，大型建筑物占 2 格。</p>
+        <p><strong>特权</strong>：建筑费用减免 1 元（若建筑师卡上附有杜布隆则减 2 元）。</p>
+        <ul>
+          <li>每款建筑物只可拥有 1 幢；同一时间建筑版图上每款最多 1 座可供选购〔?〕。</li>
+          <li>建筑物放在哪些城市空格并无影响，可自由移动为大型建筑腾位。</li>
+          <li>若决定豁免行动，则无法享用特权。</li>
+        </ul>
+        <h4>采石场（矿场）折扣</h4>
+        <p>玩家每拥有 1 块<strong>有人的矿场</strong>，选购建筑物时便可少付 1 元；但折扣不可高于所在直排的上限——第一排上限 1 元、第二排 2 元、〔第三排 3 元〕、第四排 4 元（版图各直排上方绘有等量矿场图示）。建筑师特权属于额外扣减，不受此上限影响。折扣永不会使费用减至负数，最低为 0 元。</p>
+
+        <h3>工匠（Craftsman）· 生产阶段</h3>
+        <p><strong>行动</strong>：按「有人的生产建筑 + 相应农作物田」的配对，拿取相应数量的货物圆片，放到自己版图的仓库位。</p>
+        <p><strong>特权</strong>：额外多拿 1 个货物——从自己本次生产的货物中任选一种。</p>
+        <p>玉米田无需生产建筑即可直接生产玉米；靛蓝、蔗糖、烟草、咖啡必须配上<strong>有人的对应生产建筑</strong>方可生产。</p>
+
+        <h3>商人（Trader）· 交易阶段</h3>
+        <p><strong>行动</strong>：由选商人者开始，各玩家轮流到交易所出售最多 1 个货物。所卖货物须是交易所中<strong>尚无</strong>的种类（同种货物同一时间最多 1 件）。售价按种类：</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>货物</th><th>玉米</th><th>靛蓝</th><th>蔗糖</th><th>烟草</th><th>咖啡</th></tr></thead>
+            <tbody><tr><td>售价（杜布隆）</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr></tbody>
+          </table>
+        </div>
+        <p><strong>特权</strong>：售卖货物时额外多得 1 元。</p>
+
+        <h3>船长（Captain）· 运送阶段</h3>
+        <p><strong>行动</strong>：由选船长者开始，各玩家轮流把货物装上货船：每艘货船只能装载<strong>一种</strong>货物且有容量上限；每装 1 个货物得 <strong>1 VP</strong>。玩家每轮至少须运送 1 种货物（如可能）；无法运送者可略过；同一种货物不能在同一轮内分别装上两艘船〔?〕。</p>
+        <p><strong>特权</strong>：装船的玩家额外多得 1 VP〔?〕。</p>
+        <p><strong>运送阶段结束</strong>：每位玩家只能保留 1 种货物，其余丢弃；持有小仓库／大仓库者可豁免额外种类（见扩展建筑）。然后选船长者检视所有货船——<strong>已载满</strong>的货船清空、货物移回供应区；<strong>未满</strong>的船留在港口，货物留在船上；〔若某船虽未满但无人能再装该种货物，该船亦驶离清空。〕〔?〕</p>
+
+        <h3>淘金者（勘探者 · Prospector）</h3>
+        <p>淘金者没有附带行动。选取者只享其特权：<strong>从备用堆拿取 1 个杜布隆</strong>（若卡上附有杜布隆，连同卡上的 1 元共拿 2 个）。2 人游戏时移除 1 张淘金者。</p>
+
+        <h2 id="game-end">游戏结束与最终计分</h2>
+        <p>任一情况发生时，于该<strong>年度完结时</strong>结束游戏（仍需完成该年度，包括运送及计分）：</p>
+        <ol>
+          <li><strong>殖民者</strong>备用堆不足以填充殖民船（市长阶段结束时）；</li>
+          <li><strong>胜利点数计分片</strong>被拿光（船长阶段中；计分片拿光后以纸笔继续记录〔?〕）；</li>
+          <li>有玩家盖满其城市区 <strong>12 格</strong>建筑（建筑阶段中）。</li>
+        </ol>
+        <p>最终计分项：</p>
+        <ul>
+          <li><strong>建筑物的 VP</strong>：每座建筑右上角的红色数字，不论是否有人；</li>
+          <li><strong>装船获得的 VP</strong>：每出口 1 个货物 1 VP（以计分片记录）；</li>
+          <li><strong>有人的大型建筑的额外加成</strong>（见下）。</li>
+        </ul>
+        <p><strong>胜负判定</strong>：总分最高者获胜；平手时，杜布隆与货物（每个货物算 1 元）总数较多者胜；再平手则共享胜利。</p>
+
+        <h3>基础大型建筑的结束计分</h3>
+        <ul>
+          <li><strong>堡垒</strong>：每持有 3 颗殖民者（含罗盘位置，无论是否在空缺格上）+1 VP。〔范例：22 颗殖民者 → +7 VP〕</li>
+          <li><strong>海关</strong>：每持有 4 分<strong>计分片</strong> +1 VP（只算计分片分值，不含建筑 VP 与大型建筑加成）。〔范例：30 分计分片 → +7 VP〕</li>
+          <li><strong>市政厅</strong>：每拥有 1 个米色（小）建筑物 +1 VP（不论是否有人；市政厅本身也算，但须有人生效）。〔范例：7 个米色建筑物 → +7 VP〕</li>
+        </ul>
+
+        <h2 id="two-player">双人游戏</h2>
+        <p>基础规则如常适用，准备阶段调整如下：</p>
+        <ul>
+          <li>每人：<strong>3 元</strong>杜布隆；起始玩家拿 1 块染料田（和总督牌），对手拿 1 块玉米田。</li>
+          <li><strong>土地片</strong>：每款各移除 3 块；余下洗匀后翻开 <strong>3 块</strong>。</li>
+          <li><strong>建筑物</strong>：只留每款米色建筑物各 1 块、每款加工厂各 2 块。</li>
+          <li><strong>计分片</strong>：65 分；<strong>殖民者</strong>：40 颗备用 + 2 颗放殖民船。</li>
+          <li><strong>货运船</strong>：使用 4 格与 6 格两艘；<strong>货物</strong>：每款移除 2 个。</li>
+          <li><strong>角色牌</strong>：7 张（移除 1 张淘金者〔勘探者〕）。</li>
+        </ul>
+        <p>〔年度流程调整：双方轮流选取角色牌（每人 3 张），余下未被使用的角色牌上放置 1 元；总督标记转交对手，开展下一年度。原文该段扫描识别破碎，细节请对照文末扫描图。〕</p>
+
+        <h2>扩充 I：新世代建筑</h2>
+        <p><strong>游戏准备</strong>：将基础米色建筑物（12 款小型各 2 块 + 5 款大型各 1 块）与扩充的新建筑物混合。由起始玩家开始，玩家顺时针轮流从中各选 1 块放到中央版图对应的米色建筑物空格上，直至 12 个小型与 5 个大型空格放满；未被挑选的新建筑物放回游戏盒。除上述事项外按基础规则进行。</p>
+
+        <h3>水道（生产阶段）</h3>
+        <p>若持有有人的水道：成功透过<strong>大</strong>染料厂生产染料〔达到门槛数量〕时额外生产 1 个染料；成功透过<strong>大</strong>糖厂生产蔗糖时额外生产 1 个蔗糖（小厂不算）。〔原文两处转录在门槛数字上不一致（"生产至 2 个"与"至少 1 个"），以扫描图为准。〕</p>
+        <ul>
+          <li>范例：A 君经大染料厂生产 0 个染料、小糖厂 1 个蔗糖 → 水道无效果。</li>
+          <li>范例：B 小姐经大染料厂 2 个染料、大糖厂 3 个蔗糖 → 共得 3 染料、4 蔗糖。</li>
+        </ul>
+
+        <h3>森林舍（开拓阶段）</h3>
+        <p>若持有有人的森林舍：开拓阶段可改为拿取 1 块<strong>森林</strong>，置入自己的土地空格。每 2 块森林视同 1 块有人的矿场提供 1 元建筑折扣；但森林<strong>不需要殖民者</strong>就能生效，也<strong>不受直排折扣上限</strong>影响。</p>
+
+        <h2>扩展建筑详解</h2>
+        <p>〔本节为官方扩展「新建筑」规则，除特别注明外均需有人方可生效。〕</p>
+
+        <h3>建筑舍〔建造工寮〕（开拓阶段）</h3>
+        <p>开拓阶段选取已翻开的农作物田时，可如选取矿场般拿取 1 块矿场〔?〕。即使选择开拓者并享用特权，也不会因此获得第二块土地片；持有农庄时随机抽取的田也不能换成矿场。</p>
+
+        <h3>小仓库（运送阶段）</h3>
+        <p>运送阶段结束时，除原本可储存的 1 种货物外，可额外选择 <strong>1 种</strong>货物储存，不限数量。仓库不能免除强制送货；货物无需真的放在仓库，保留在版图罗盘旁即可。</p>
+
+        <h3>大仓库（运送阶段）</h3>
+        <p>运送阶段结束时，可额外选择 <strong>2 种</strong>货物储存，不限数量（同时持有小仓库则共 3 种）。</p>
+
+        <h3>民宿（开拓阶段）</h3>
+        <p>开拓阶段如常获取农作物田或矿场时，可额外拿取 1 颗殖民者，置于该土地片的空缺格上。备用堆没殖民者时可从殖民船拿；连船上也没有则无效果。</p>
+
+        <h3>办公室（交易阶段）</h3>
+        <p>可无视「交易所不得有同种货物」的限制，售卖交易所已有的同种货物。若交易所已满，仍只可略过。〔范例：交易所有 1 个蔗糖，A 君与 B 小姐各持有人的办公室，均可照常售卖蔗糖。〕</p>
+
+        <h3>大市场（交易阶段）</h3>
+        <p>售卖货物时可从银行额外获得 2 元〔?〕；同时持有小市场则合计额外 3 元。</p>
+
+        <h3>工厂（生产阶段）</h3>
+        <p>按本阶段成功生产的货物<strong>种类数</strong>额外获得杜布隆：</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>生产种类数</th><th>1 种或以下</th><th>2 种</th><th>3 种</th><th>4 种</th><th>5 种齐全</th></tr></thead>
+            <tbody><tr><td>额外收入</td><td>0 元</td><td>1 元</td><td>2 元</td><td>3 元</td><td>4 元〔?〕</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>大学（建造阶段）</h3>
+        <p>兴建〔大型?〕建筑物时〔?〕，除版面图示的折扣优惠外额外获得 1 杜布隆币。这项额外杜布隆只会在建造阶段发放。〔本条目原文识别破碎，以扫描图为准。〕</p>
+
+        <h3>图书馆（所有阶段）</h3>
+        <p>选取角色牌时可享用该角色的 <strong>2 倍特权</strong>。选开拓者时：先如常享特权，待其余玩家完成开拓者行动后，再从剩下的已翻开农作物田中选取 1 块（此次不能选矿场）。</p>
+        <ul>
+          <li>2 倍工匠特权：可拿 2 个同款或不同款货物（需符合生产条件）。</li>
+          <li>同时持有民宿：只在拿第一块田（或矿场）时获得殖民者。</li>
+          <li>同时持有建筑舍：选第二块田时可改为拿 1 块矿场。</li>
+        </ul>
+
+        <h3>档案馆（开拓阶段）</h3>
+        <p>可额外选取 1 块农作物田／矿场时，改为从供应区抽取 1 块，自己查看后与已翻开的并列再行选取〔?〕。只在开拓阶段可用。</p>
+
+        <h3>官邸（市长阶段〔?〕）</h3>
+        <p>市长阶段可获得 1 个额外的功能〔?〕；若同时持有有人的图书馆，则共 2 个额外功能。〔另见「市长·圣胡安」相关的结束计分说明。〕</p>
+
+        <h3>圣胡安市（大型建筑）</h3>
+        <p>不提供任何游戏功能，纯粹是胜利点数来源〔?〕，考验玩家在胜利点数与金钱之间的平衡。</p>
+
+        <h3>教堂（建造阶段）</h3>
+        <p>建造阶段可将 1 个货物存放到教堂，游戏结束时每存放 1 个货物获得 1 VP〔?〕。</p>
+
+        <h3>小船坞（运送阶段）</h3>
+        <p>轮到自己送货时，可改为不送货运船：将自己任意数量、任意款式组合的货物一次过送往供应区，<strong>每 2 个货物得 1 VP</strong>。每个运送阶段限用 1 次；使用时不受「尽可能最多数量」规则约束（但至少 1 个）。同时持有船坞者，可各用 1 次。</p>
+
+        <h3>船坞（运送阶段）</h3>
+        <p>〔轮到自己送货时，可将任意数量的同款货物送上船坞（视作一艘专属货船），每 1 个货物得 1 VP；每个运送阶段限用 1 次。原文识别破碎，上句为按小船坞规则推断的整理，以扫描图为准。〕</p>
+
+        <h3>港口（运送阶段）</h3>
+        <p>可免除强制性送货：船长把多余货物推入海中之前，持有有人的港口的玩家可把自己的 1 个货物装上货船（即使该种货物本无法装船）〔?〕。</p>
+
+        <h3>灯塔（运送阶段）</h3>
+        <p>选取船长角色牌时，从银行获取 1 元杜布隆（不论能否送货）；且每次送出 1 款货物〔?〕都可再从银行获取 1 元。</p>
+
+        <h3>专款工厂（生产阶段）</h3>
+        <p>选择 1 款货物（不可选玉米），按成功生产该货物的数量获得「数量 − 1」元杜布隆；特权货物也计入。〔范例：生产 5 玉米、4 染料、2 蔗糖 → 选染料得 3 元。〕</p>
+
+        <h3>联盟厂（运送阶段）</h3>
+        <p>自己第一次送货上船之前，点算所有货物：每 2 个同款货物得 1 VP，然后如常运送。〔范例甲：3 玉米、2 染料、1 咖啡 → 2 分；范例乙：4 玉米、2 咖啡 → 3 分。〕</p>
+
+        <h3>雕像（游戏结束）</h3>
+        <p>没有空缺格、无任何功能，游戏结束时让持有者获得 <strong>8 VP</strong>。若同时持有有人的大学，购买雕像时本应获得的殖民者改置于罗盘位置〔?〕。</p>
+
+        <h3>城市酒店（游戏结束）</h3>
+        <p>就城市中每个持有殖民者的建筑物 +1 VP，最多 5 分；城市酒店本身被占领时也计入。不与雕像的 VP 重复计算〔?〕。</p>
+
+        <h3>关税楼（游戏结束）</h3>
+        <p>就整场游戏中实际拿取的计分片总值，每 4 分 +1 VP，最多 8 分；不含从建筑物效果等途径获得的 VP。</p>
+
+        <h3>黑市（建筑阶段）</h3>
+        <p>〔识别破碎，大意：可将最多 1 颗殖民者及若干货物、计分片返还供应区，换取额外购建筑折扣（殖民者 3 元／货物 2 元／计分片 1 元一类〔?〕），每项只能退还一次；只能在金钱不足时使用。〕</p>
+
+        <h3>货栈（运送阶段）</h3>
+        <p>运送阶段结束时，可额外储存 <strong>3 种</strong>货物。〔原文范例识别破碎。〕</p>
+
+        <h2>森林与相关注意事项</h2>
+        <ul>
+          <li>矿场折扣、森林折扣与角色特权的折扣<strong>独立计算</strong>，但均不会使建筑费用减至负数。</li>
+          <li>持有有人的<strong>农庄</strong>（Hacienda）时，看过随机抽得的农作物田后，可将其翻至背面视作<strong>森林</strong>使用。</li>
+          <li>持有有人的<strong>图书馆</strong>时，可将要拿的田块翻至背面作森林：最少 0 块、最多 2 块〔?〕。</li>
+          <li>持有有人的<strong>民宿</strong>并决定把获得的田块翻成森林时，本应随田获得的殖民者改置于罗盘位置〔?〕。</li>
+          <li>田块一旦以正面（农作物）或背面（森林）放入岛屿区，不得再变更用途。</li>
+        </ul>
+
+        <h2>建筑速查</h2>
+        <p>〔本表为扫描图 p14–p16 建筑卡条目中可辨认的条目，识别质量有限，以扫描图为准。〕</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>建筑</th><th>费用</th><th>VP</th><th>功能摘要</th></tr></thead>
+            <tbody>
+              <tr><td>水道</td><td>1</td><td>1〔?〕</td><td>大染料／大糖厂生产 +1 货物</td></tr>
+              <tr><td>森林舍</td><td>3</td><td>〔?〕</td><td>开拓阶段拿森林；每 2 森林 = 1 元折扣</td></tr>
+              <tr><td>小船坞</td><td>〔6?〕</td><td>〔?〕</td><td>专属货运船：任意混合送货，每 2 个 +1 分</td></tr>
+              <tr><td>灯塔</td><td>〔7?〕</td><td>〔?〕</td><td>选船长 +1 元；每次送货款 +1 元</td></tr>
+              <tr><td>专款工厂</td><td>〔8?〕</td><td>〔?〕</td><td>按 1 款货物生产量得 n−1 元（除玉米）</td></tr>
+              <tr><td>图书馆</td><td>〔8?〕</td><td>〔?〕</td><td>2 倍特权</td></tr>
+              <tr><td>联盟厂</td><td>〔9?〕</td><td>〔?〕</td><td>送货前每 2 个同款货物 +1 分</td></tr>
+              <tr><td>雕像</td><td>〔10?〕</td><td>8</td><td>无功能，值 8 分</td></tr>
+              <tr><td>城市酒店</td><td>〔?〕</td><td>〔5?〕</td><td>每个有人建筑物 +1 分（最多 5 分）</td></tr>
+              <tr><td>关税楼</td><td>〔10?〕</td><td>〔?〕</td><td>每 4 分计分片 +1 分（最多 8 分）</td></tr>
+              <tr><td>银矿场</td><td>5</td><td>〔1?〕</td><td>〔功能识别不清〕</td></tr>
+              <tr><td>港口</td><td>〔10?〕</td><td>〔?〕</td><td>〔运送相关，识别不清〕</td></tr>
+              <tr><td>官邸</td><td>10</td><td>〔?〕</td><td>〔游戏结束按有人大建筑计分?〕</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>原版规则书图片（扫描版）</h2>
+        <details class="scan-appendix">
+          <summary>📖 展开查看原版规则书扫描图（17 页，点击放大）</summary>
+          <div class="scan-list">
+            <figure><img src="../assets/img/puerto-rico/p01.jpg" alt="规则书 封面" loading="lazy"><figcaption>1 · 封面</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p02.jpg" alt="规则书 第1页" loading="lazy"><figcaption>2 · 欢迎／目标／内容</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p03.jpg" alt="规则书 第2页" loading="lazy"><figcaption>3 · 游戏准备</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p04.jpg" alt="规则书 第3页" loading="lazy"><figcaption>4 · 游戏进程</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p05.jpg" alt="规则书 第4页" loading="lazy"><figcaption>5 · 角色：通用／开拓者／建筑师</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p06.jpg" alt="规则书 第5页" loading="lazy"><figcaption>6 · 市长／殖民船／建筑师</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p07.jpg" alt="规则书 第6页" loading="lazy"><figcaption>7 · 建筑物总述</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p08.jpg" alt="规则书 第7页" loading="lazy"><figcaption>8 · 工匠／商人／船长</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p09.jpg" alt="规则书 第8页" loading="lazy"><figcaption>9 · 船长续／淘金者／计分</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p10.jpg" alt="规则书 第9页" loading="lazy"><figcaption>10 · 扩展建筑（一）</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p11.jpg" alt="规则书 第10页" loading="lazy"><figcaption>11 · 扩展建筑（二）</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p12.jpg" alt="规则书 第11页" loading="lazy"><figcaption>12 · 大型建筑计分／双人游戏</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p13.jpg" alt="规则书 第12页" loading="lazy"><figcaption>13 · 扩充 I：新世代建筑</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p14.jpg" alt="规则书 第13页" loading="lazy"><figcaption>14 · 森林／黑市／货栈</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p15.jpg" alt="规则书 第14页" loading="lazy"><figcaption>15 · 扩展建筑（三）</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p16.jpg" alt="规则书 第15页" loading="lazy"><figcaption>16 · 城市酒店／关税楼</figcaption></figure>
+            <figure><img src="../assets/img/puerto-rico/p17.jpg" alt="规则书 第16页" loading="lazy"><figcaption>17 · 索引／出版信息</figcaption></figure>
+          </div>
+          <p class="source-note">注：上方文字为整理版速查，完整细节请对照扫描图。扫描图来自 B 站专栏文章，版权归原作者所有。</p>
+        </details>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://www.bilibili.com/opus/1036770316071731200" target="_blank" rel="noopener">《BGA桌游规则：波多黎各（Puerto Rico）》</a> · BGA小助手 · 哔哩哔哩 · 规则内容版权归原作者所有，转录仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

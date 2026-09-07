@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Trickstergods 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Trickstergods · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Trickstergods</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Trickstergods</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 3–4 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Trickster_Gods">Trickster Gods</span></h2>
+<p>In this trick-taking game for 3-4 players, players win tricks to manipulate the <b>Cosmic Equation</b>, which dictates scoring at the end of each round.
+</p>
+<h3><span class="mw-headline" id="Round_Structure">Round Structure</span></h3>
+<p>The game consists of a fixed number of rounds (equal to the number of players). Players are dealt 12 card hands at the start of each round. Each round includes:
+</p>
+<ol><li><b>Playing Tricks:</b> Tricks are played one after another until all hand cards are exhausted.</li>
+<li><b>Resolving Tricks:</b> Whoever won the trick (according to the current rank parameter card--either highest or lowest card), has the option to place one eligible card (either god or animal, if any were played into the trick) into the Cosmic Equation. If lead changed, the player who lost lead may activate one of their three power cards (each may only be activated once per round).</li>
+<li><b>Scoring:</b> Points are calculated based on the final state of the equation.</li></ol>
+<h3><span class="mw-headline" id="Trick-Taking_Rules">Trick-Taking Rules</span></h3>
+<p>Standard <b>must-follow</b> rules apply. If you have the led suit, you must play it.
+</p>
+<ul><li><b>Lead:</b> The lead player plays a card. Trump cannot be led unless you only hold trump.</li>
+<li><b>Trump:</b> The current trump suit is shown by the trump parameter card.</li>
+<li><b>Cosmic Joke:</b> This card can be played at any time (even if you can follow suit). Whoever plays the Cosmic Joke always wins the trick. They also get to choose who will lead the next trick (and could thus choose the player who previously led, preventing activation of a power card because lead was not lost).</li>
+<li><b>Determining Trick Winner:</b> The rank parameter card indicates whether the highest or lowest card of the trump suit wins the trick (or the corresponding card of the led suit if no trump is present). <b>Note:</b> The "Wee Folk" power card flips the rank parameter card.</li></ul>
+<h3><span class="mw-headline" id="Post-Trick_Actions">Post-Trick Actions</span></h3>
+<p>The winner of the trick performs the following steps:
+</p>
+<ul><li><b>Modify Equation:</b> If the trick contains god or animal cards, the winner may place 1 onto a matching slot (operand) in the <b>Cosmic Equation</b>. The previous card there is discarded.</li>
+<li><b>Lead:</b> The winner takes the remaining cards from the trick and becomes the new lead player.</li>
+<li><b>Power Cards:</b> Any player who loses the lead (i.e., was the previous lead but did not win the trick) may activate 1 of their 3 <b>Power Cards</b> (each may only be activated once per round):
+<ul><li><b>Rabbit:</b> Changes the trump suit to a suit of the player's choice. "No Trump" can also be selected.</li>
+<li><b>Fox:</b> Flips an operator in the Cosmic Equation--the first operator can either be +/- (add/subtract), the second can either be +/* (add/multiply).</li>
+<li><b>Wee Folk:</b> Flips the rank parameter card (Highest wins &lt;--&gt; Lowest wins).</li></ul></li></ul>
+<h3><span id="End_of_Game_.26_Scoring"></span><span class="mw-headline" id="End_of_Game_&amp;_Scoring">End of Game &amp; Scoring</span></h3>
+<p>The round ends after the last trick is played.
+</p>
+<ul><li><b>Scoring:</b> Points are awarded based on the final state of the Cosmic Equation (e.g., ([God A - lowest rank value of won cards] + [God B - # won cups suit cards]) * [Animal C - # fish cards]). Unused power cards count as the animal being evaluated in the equation. If an operand in the equation is left blank, it counts as a zero. Scores can be negative.</li>
+<li><b>Spurning the Gods:</b> If you took 0 tricks, you score the sum of the rank values from the cards in the Cosmic Equation instead.</li>
+<li><b>Winner:</b> After all rounds, the player with the highest total score wins.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelptrickstergods" target="_blank" rel="noopener">Trickstergods — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

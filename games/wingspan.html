@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="《展翅翱翔》(Wingspan) 中文规则：经营鸟类保护区，吸引鸟类、繁衍后代、积蓄食物。">
+  <title>展翅翱翔 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🦜</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="wingspan">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">展翅翱翔（Wingspan）</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="全部游戏">
+        <div class="toc-title">全部游戏</div>
+        <ul>
+          <li><a href="../index.html">🏠 返回首页</a></li>
+          <li><a href="7-wonders.html">🏛️ 七大奇迹</a></li>
+          <li><a href="brass-birmingham.html">🏭 工业革命：伯明翰</a></li>
+          <li><a href="vale-of-eternity.html">✨ 永恒之谷</a></li>
+          <li><a href="wingspan.html">🦜 展翅翱翔</a></li>
+          <li><a href="pokemon-grove.html">🌳 宝可梦林地探索</a></li>
+          <li><a href="puerto-rico.html">⛵ 波多黎各</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">🦜 展翅翱翔</h1>
+          <p class="game-sub">Wingspan · 设计：Elizabeth Hargrave</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 1–5 人</span>
+            <span class="meta-chip">⏱ 40–70 分钟</span>
+            <span class="meta-chip">🎂 10 岁以上</span>
+          </div>
+        </header>
+
+        <div class="callout">
+          <p class="callout-title">📌 说明</p>
+          <p>本页文字由原版规则书图片转录整理。个别细节（尤其附录鸟名表格）以文末「原版规则书图片」为准。</p>
+        </div>
+
+        <h2>游戏简介</h2>
+        <p><strong>一款适合 1–5 位玩家、融合了鸟类收集与引擎构筑的竞技类游戏。</strong>你们是一群鸟类发烧友——研究员、鸟类观察家、鸟类学家和收藏家——一直在寻觅并试图吸引那些最美丽的鸟类栖息到自己的饲养基地中来。</p>
+        <ul>
+          <li>使用喂食器鸟塔里的定制骰子来获取食物标记</li>
+          <li>使用不同颜色的大理石鸟蛋模型来模拟鸟类的下蛋</li>
+          <li>扩大你的鸟类收藏，从一百多张不重复的珍奇鸟类卡中抓取卡牌</li>
+        </ul>
+        <p>游戏结束时，通过结算鸟类卡、奖励卡、轮末目标、鸟蛋、储存的食物和群落中的鸟类数量，得到最多分数的玩家获得胜利。</p>
+
+        <h3>游戏配件</h3>
+        <ul>
+          <li>1 本规则书、1 本《规则附录》、1 块目标面板、1 个卡牌托盘、5 块玩家面板、1 个喂食器鸟塔</li>
+          <li>1 本计分册、170 张鸟类卡、26 张奖励卡、75 个鸟蛋模型、5 个定制木质骰子</li>
+          <li>40 个行动木块、103 个食物标记、8 块目标板块、1 个起始玩家标记</li>
+        </ul>
+
+        <h2>初始设置</h2>
+
+        <h3>公共区配件</h3>
+        <ol>
+          <li><strong>鸟类卡</strong>：将所有鸟类卡混洗构成一个牌堆，面朝下放置在卡牌托盘旁边，然后从牌堆顶翻开 3 张放置到卡牌托盘上。</li>
+          <li><strong>供应堆</strong>：将所有食物和鸟蛋标记放在一起形成一个供应堆，确保每一位玩家都能方便拿取。</li>
+          <li><strong>喂食器</strong>：将 5 个食物骰子投掷入喂食器鸟塔中。</li>
+          <li><strong>目标面板</strong>：选择这次游戏想使用的目标类型，翻到那一面放置：
+            <ul>
+              <li><strong>绿色面</strong>（适用于 2–3 人游戏）：把一块目标板块放置在面板的一个空白轮末目标区上，将显示出的数字调整为相应的玩家人数，用行动木块压住。</li>
+              <li><strong>蓝色面</strong>（适用于 4–5 人游戏）：把所有目标板块翻转放置在 4 个轮末目标区上，将显示出的数字调整为相应的玩家人数，用行动木块压住。</li>
+            </ul>
+          </li>
+          <li><strong>奖励卡</strong>：混洗构成一个牌堆，面朝下放置在目标面板旁边。</li>
+          <li><strong>起始玩家</strong>：随机决定一名玩家作为起始玩家，交给他起始玩家标记。</li>
+        </ol>
+
+        <h3>玩家个人区设置</h3>
+        <ol>
+          <li>给每位玩家 1 块玩家面板、8 个同种颜色的行动木块、2 张随机的奖励卡、5 张鸟类卡和 5 个食物标记（每种各 1 个）。</li>
+          <li>你每保留 1 张鸟类卡，就需要弃掉 1 个食物标记，弃掉其余的鸟类卡。</li>
+          <li>选择 1 张奖励卡保留，弃掉另外 1 张。</li>
+          <li>随机选择一位玩家作为起始玩家，并交给他起始玩家标记。</li>
+        </ol>
+
+        <h2>回合结构</h2>
+        <p>从起始玩家开始，玩家们按回合制轮流进行行动。一个回合里，每个玩家必须从他的玩家面板上选择 4 个行动的其中之一来执行：</p>
+        <ol>
+          <li><strong>打出鸟类卡</strong>（对应栖息地：森林／草原／湿地任一）</li>
+          <li><strong>获得食物</strong>（对应栖息地：森林）</li>
+          <li><strong>下蛋</strong>（对应栖息地：草原）</li>
+          <li><strong>抽卡</strong>（对应栖息地：湿地）</li>
+        </ol>
+        <p>每个行动都对应玩家面板上的一行栖息地。</p>
+
+        <h3>轮与行动次数</h3>
+        <p>每位玩家每轮只有一次行动，玩家们轮流进行，直到所有人都执行完该轮的最后一个行动。每完成一个行动后，将你的一个行动木块移到最上面一行（行动顺序条）的对应位置上。游戏共进行 <strong>4 轮</strong>：</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>轮次</th><th>每位玩家行动次数</th></tr></thead>
+            <tbody>
+              <tr><td>第 1 轮</td><td>8</td></tr>
+              <tr><td>第 2 轮</td><td>7</td></tr>
+              <tr><td>第 3 轮</td><td>6</td></tr>
+              <tr><td>第 4 轮</td><td>5</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>行动详解</h2>
+
+        <h3>打出鸟类卡</h3>
+        <p>从手牌中选择 1 张鸟类卡打出：</p>
+        <ol>
+          <li>弃除你面板上鸟类卡上的鸟蛋，数量等于你准备放置的鸟类卡所在列最顶那格所显示的鸟蛋数；</li>
+          <li>弃除卡牌上显示的食物标记（如果显示 ⊘，则不需要弃除食物；百搭符号表示可以弃除任意种类的食物，也可以支付任意 2 个食物标记来代替任意 1 个食物标记）；</li>
+          <li>将该鸟类卡放到你玩家面板上与其栖息地相匹配的一行中最左侧空着的卡槽上；</li>
+          <li>如果该鸟类卡拥有「打出时」能力，立即激活该能力（仅限这张牌）。</li>
+        </ol>
+        <div class="callout">
+          <p class="callout-title">⚠️ 注意</p>
+          <p>你只能将鸟类卡打出到其卡面顶部所标注栖息地对应的那一行。第一个暴露位置（最左侧）无需额外费用，但打出到第二个暴露位置需支付 1 个鸟蛋，第三个需支付 2 个鸟蛋，第四个需支付 3 个鸟蛋，第五个需支付 4 个鸟蛋。</p>
+        </div>
+
+        <h3>获得食物（森林行动）</h3>
+        <ol>
+          <li>根据你的森林栖息地中最左侧空着的卡槽上所显示的食物总数，从喂食器鸟塔中拿出相应数量的食物骰子，获得对应骰面的食物标记（如果显示 ⊘ 那么这一项为 —）。</li>
+          <li>如果该卡槽上显示的是「换蛋→食物」，你可以弃掉手牌中 1 张鸟类卡，从喂食器骰塔外拣选并拿出 1 个骰子，获得对应面的食物。</li>
+          <li>从右往左，根据你的意愿激活任意森林鸟类的棕色能力。</li>
+        </ol>
+        <div class="callout">
+          <p class="callout-title">🌰 管理喂食器</p>
+          <p>如果喂食器的收纳盘在任何时候被清空，立即将 5 个骰子重新投入到骰盘中。</p>
+          <p>如果收纳盘内的骰子都显示同一面（当选时只剩 1 个骰子的情况），并且此时你出于任何原因正需要获取食物，你可以首先将全部 5 个骰子重新投入到喂食器。</p>
+        </div>
+
+        <h3>下蛋（草原行动）</h3>
+        <ol>
+          <li>根据草原栖息地中最左侧空着的卡槽上显示的鸟蛋个数，获得对应数量的鸟蛋，放置到你玩家面板上的鸟类卡上（不能超出每种鸟的产蛋上限，超出的部分将被弃除）。</li>
+          <li>如果该卡槽上显示「鸟→蛋」，你可以弃除 1 个食物标记来额外获得 1 个鸟蛋。</li>
+          <li>从右往左，根据你的意愿激活任意草原鸟类的棕色能力。</li>
+        </ol>
+
+        <h3>抽卡（湿地行动）</h3>
+        <ol>
+          <li>根据湿地栖息地中最左侧空着的卡槽上显示的卡牌张数，从牌库顶或卡牌托盘上抓取对应数量的鸟类卡（暂时不要填补卡牌托盘上的空位）。</li>
+          <li>如果该卡槽上显示「鸟→卡」，你可以弃除 1 个鸟蛋来额外抓取 1 张牌。</li>
+          <li>从右往左，根据你的意愿激活任意湿地鸟类的棕色能力。</li>
+        </ol>
+        <div class="callout">
+          <p class="callout-title">💡 提示</p>
+          <p>卡牌托盘上公开的鸟类卡会一直保留，直到有玩家拿取它们；被拿取后立即从牌堆顶翻开补齐。手牌没有上限。</p>
+        </div>
+
+        <h2>鸟类能力</h2>
+
+        <h3>能力类型总览</h3>
+        <ul>
+          <li><strong>白色能力（打出时触发）</strong>：打出的同时执行能力，且只能执行一次。能力文字以「打出这张卡时」开头。</li>
+          <li><strong>粉色能力（其他玩家的回合触发）</strong>：每当其他玩家执行对应行动时触发一次。</li>
+          <li><strong>棕色能力（激活时触发）</strong>：每次你在该鸟类所在栖息地执行行动时触发；触发顺序由你决定。</li>
+        </ul>
+
+        <h3>棕色能力与捕猎者</h3>
+        <p>棕色能力在每次你于该鸟类所在栖息地执行行动时触发一次。捕猎者能力也是一种棕色能力：从鸟类卡牌堆顶抽 1 张卡，将其与捕猎者卡上标注的翼展数值比较——</p>
+        <ol>
+          <li>若抽到的鸟的翼展比捕猎者卡上标注的数值短（或依卡面文字为长），<strong>猎食成功</strong>：将抽到的卡面朝下放置到捕猎者卡的下方（游戏结束时每张计 1 分）。</li>
+          <li>若猎食失败，依捕猎者卡的卡面文字处理抽到的卡（通常是将其弃掉）。</li>
+        </ol>
+
+        <h3>捕猎者判定细则</h3>
+        <ul>
+          <li>捕猎者能力在激活时执行；抽卡比较后，无论成功与否，抽出的卡都不会进入你的手牌。</li>
+          <li>若牌堆抽空，先重洗弃牌堆组成新牌堆。</li>
+          <li>部分捕猎者卡的文字以「如果猎食失败」开头，此类能力在猎食失败时反而触发效果。</li>
+        </ul>
+
+        <h2>轮末流程与计分</h2>
+
+        <h3>轮末目标计分</h3>
+        <p>当所有玩家都放完他们的行动木块后，一轮结束。此时按目标面板上该轮对应的目标进行计分：</p>
+        <ol>
+          <li>计算每位玩家在指定项目上的数量（如：打出的鸟类卡数量、鸟蛋总数、指定栖息地内的鸟类数、巢型数量等）。</li>
+          <li>按名次分配分数：将目标板块翻到计分面，根据玩家名次给分。</li>
+          <li>该轮的起始玩家将起始玩家标记交给他左边的玩家。</li>
+        </ol>
+        <ul>
+          <li><strong>绿色面</strong>（2–3 人游戏）：计分时只有第 1 名获得目标板块上标示的分数；最后一名得 0 分。</li>
+          <li><strong>蓝色面</strong>（4–5 人游戏）：第 1、2、3 名分别获得目标板块上对应的分数（最多 5 分，最少 0 分）。</li>
+        </ul>
+        <div class="callout">
+          <p class="callout-title">⚠️ 并列规则</p>
+          <p>当出现并列名次时，将相关名次的分数相加后平均分配给并列的玩家（向下取整）。例：两人并列第一时，将第一名与第二名的分数相加后平均分给两人。</p>
+        </div>
+
+        <h3>轮次结束时的流程</h3>
+        <ol>
+          <li><strong>计分</strong>：按当前轮的目标板块计分，并在计分区放置行动木块标记。</li>
+          <li><strong>取回行动木块</strong>：所有玩家从面板上移除自己的行动木块。</li>
+          <li><strong>补齐卡牌托盘</strong>：弃除卡牌托盘上剩下的卡牌，从鸟类卡牌堆顶填补新的到卡牌托盘上，其他配件保持原样。</li>
+          <li><strong>传递起始玩家标记</strong>：沿顺时针将起始玩家标记传送给下一位玩家。</li>
+        </ol>
+
+        <h3>奖励卡</h3>
+        <p>每位玩家在游戏开始时保留 1 张奖励卡。奖励卡在游戏结束时计分：根据你饲养基地中鸟类、鸟蛋、栖息地、巢型、食性等条件获得相应分数。</p>
+
+        <h2>游戏结束与计分</h2>
+        <p>当第 4 轮游戏结束后，加总以下分数：</p>
+        <ol>
+          <li>每张鸟类卡的分数（卡左上角的数字）</li>
+          <li>每张已完成之奖励卡的分数</li>
+          <li>轮末目标的分数</li>
+          <li>以下内容各得 1 分：鸟类卡上的每个鸟蛋、鸟类卡上的每个储存食物标记、鸟类卡下塞入的每张卡牌</li>
+        </ol>
+        <p>分数最高的玩家获胜。如果出现平局，拥有食物标记最多的玩家获胜；如果还是平手，平手玩家共享胜利。</p>
+        <div class="callout">
+          <p class="callout-title">🧭 单人模式</p>
+          <p>本游戏支持单人模式，使用 Automa 虚拟玩家规则进行游戏，详见专门的 Automa 规则书。</p>
+        </div>
+
+        <h2>附录：鸟类能力速查</h2>
+        <div class="callout">
+          <p class="callout-title">⚠️ 转录提醒</p>
+          <p>以下附录表格由规则附录的密集表格页转录，个别鸟名与能力条件可能存在识别误差（已尽量标注），请以文末扫描原图为准。</p>
+        </div>
+
+        <h3>抓牌类能力</h3>
+        <p><strong>能力共通点</strong>：根据卡牌描述抓取新的卡牌到你手中。和「抽卡」行动一样，你可以从牌库顶或面朝上的公开卡中抓取。手牌永远没有上限。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td>蒲鸭</td><td><strong>激活时</strong>：抓 1 张牌。</td><td>相当于强化了湿地的抓牌行动，可从牌库顶或面朝上的卡牌中抓取。</td></tr>
+              <tr><td>黑颈长脚鹬、卡罗莱纳鸽</td><td><strong>打出时</strong>：抓 2 张牌。</td><td>（同上）</td></tr>
+              <tr><td>黑浮鸥、克氏鸊鷉、弗氏燕鸥</td><td><strong>激活时</strong>：抓 1 张牌；若这么做，回合结束时从手上弃掉 1 张牌。</td><td>强化的抓牌行动但有代价。下家可在你思考弃哪张时开始他的回合以节省时间。</td></tr>
+              <tr><td>黄喉地莺、斑嘴巨鸊鷉、棕硬尾鸭、林鸳鸯</td><td><strong>激活时</strong>：抓 2 张牌；若这么做，回合结束时从手上弃掉 1 张牌。</td><td>（同上）</td></tr>
+              <tr><td>琵嘴鸭、紫青水雉、斑腹矶鹬、威氏沙锥</td><td><strong>激活时</strong>：所有玩家从牌库顶抓 1 张鸟类卡。</td><td>从当前回合玩家开始，依顺时针依次抓牌。</td></tr>
+              <tr><td>美洲麻鸦、小潜鸟</td><td><strong>激活时</strong>：鸟类（卡）最少的玩家抓 1 张鸟类卡。</td><td>并列最少的玩家都可以抓 1 张，从当前回合玩家开始顺时针依次进行。</td></tr>
+              <tr><td>美洲鹈鹕</td><td><strong>打出时</strong>：从牌库顶抓取「玩家人数 +1」张鸟类卡，从你开始依顺时针每位玩家依次选 1 张加入手牌，你保留最后 1 张。</td><td>每位玩家都从这套牌组中挑选 1 张，由你开始向左手边依次进行。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>弃牌类能力</h3>
+        <p><strong>能力共通点</strong>：根据卡牌描述从手上弃掉卡牌来执行对应能力，均为「打出时」能力。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td>鸬鹚</td><td><strong>打出时</strong>：弃掉 X 张牌（X 为你森林栖息地鸟类卡数量），每弃 1 张获得 1 个任意食物标记。</td><td>强化森林行动——获得食物。</td></tr>
+              <tr><td>游隼</td><td><strong>打出时</strong>：弃掉 X 张牌（X 为你草原栖息地鸟类卡数量），每弃 1 张获得 1 个任意食物标记。</td><td>强化草原行动。</td></tr>
+              <tr><td>蚛鹬</td><td><strong>打出时</strong>：弃掉 X 张牌（X 为你湿地栖息地鸟类卡数量），每弃 1 张获得 1 个任意食物标记。</td><td>强化湿地行动。</td></tr>
+              <tr><td>威胁燕鸥</td><td><strong>打出时</strong>：弃掉 X 张牌（X 为该卡所在栖息地鸟类卡数量），每弃 1 张获得 1 个任意食物标记。</td><td>（同上）</td></tr>
+              <tr><td>白眉歌鸫 等（共 4 张：森林／草原／湿地／所在栖息地版本）<br><em>（鸟名识别不确定）</em></td><td><strong>打出时</strong>：弃掉 X 张牌，每弃 1 张获得 1 个鸟蛋。</td><td>强化对应栖息地——产下鸟蛋。</td></tr>
+              <tr><td>白头海雕 / 金雕</td><td><strong>打出时</strong>：弃掉 X 张牌（X 为你所有鸟类卡数量），每弃 1 张获得 1 个任意食物标记。</td><td>强化所有栖息地的行动。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>鸟蛋自动获得类能力</h3>
+        <p><strong>能力共通点</strong>：均为「打出时」能力，打出时立即获得鸟蛋并放到你面板的鸟类卡上（不能超出产蛋上限，超出部分弃除）。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th></tr></thead>
+            <tbody>
+              <tr><td>东王霸鹟</td><td><strong>打出时</strong>：在这张卡上放置 2 个鸟蛋。</td></tr>
+              <tr><td>粉红燕鸥</td><td><strong>打出时</strong>：在这张卡上放置 3 个鸟蛋。</td></tr>
+              <tr><td>黑枕黄鹂</td><td><strong>打出时</strong>：在这张卡上放置 4 个鸟蛋。</td></tr>
+              <tr><td>鸿雁 / 疣鼻栖鸭</td><td><strong>打出时</strong>：在所有鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>短嘴鸦</td><td><strong>打出时</strong>：在所有【草原】鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>普通潜鸟</td><td><strong>打出时</strong>：在所有【湿地】鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>林鸳鸯</td><td><strong>打出时</strong>：在所有【森林】鸟类卡上各放置 1 个鸟蛋。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>储存类能力</h3>
+        <p><strong>能力共通点</strong>：均为「激活时」能力但不使用激活标记。可将食物标记放置到鸟类卡上储存（游戏结束时每个储存食物计 1 分）。储存的食物只有在能力说明允许时才能使用；储存卡槽有容量上限，储存的食物可以用来支付打出鸟类卡的费用。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th></tr></thead>
+            <tbody>
+              <tr><td>美洲骨顶鸡 / 灰噪鸦</td><td><strong>激活时</strong>：获得 1 个任意食物标记储存到这张卡上。</td></tr>
+              <tr><td>白喉带鹀 / 蓝松鸦</td><td><strong>激活时</strong>：获得 1 个浆果标记储存到这张卡上。</td></tr>
+              <tr><td>北扑翅鴷</td><td><strong>激活时</strong>：获得 1 个啮齿动物标记储存到这张卡上。</td></tr>
+              <tr><td>红腹啄木鸟</td><td><strong>激活时</strong>：获得 1 个鱼标记储存到这张卡上。</td></tr>
+              <tr><td>五子雀</td><td><strong>激活时</strong>：获得 1 个种子标记储存到这张卡上。</td></tr>
+              <tr><td>王雪鸟 <em>（鸟名识别不确定）</em></td><td><strong>激活时</strong>：获得 1 个任意食物标记储存到这张卡上。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>换骰子类能力</h3>
+        <p><strong>能力共通点</strong>：均为「激活时」能力。当喂食器鸟塔内的骰子不符合需求时，将它们重新投入骰塔重掷，不消耗骰子。重新投入后可正常拿取骰子获得食物；部分卡允许在拿取前先行重掷。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th></tr></thead>
+            <tbody>
+              <tr><td>红喉蜂鸟</td><td><strong>激活时</strong>：重掷骰塔内全部骰子；若重掷后的骰面包含鸟蛋，在草原栖息地所有鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>白腹鱼狗</td><td><strong>激活时</strong>：重掷骰塔内全部骰子；若有显示鸟蛋的骰面，在草原栖息地所有鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>鹗</td><td><strong>激活时</strong>：重掷骰塔内全部骰子；若骰面包含【鱼】，获得 1 个【鱼】标记。</td></tr>
+              <tr><td>安氏蜂鸟</td><td><strong>激活时</strong>：重掷骰塔内的蛋面；若仍显示鸟蛋，在草原栖息地所有鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>红腹燕鸥 <em>（鸟名识别不确定）</em></td><td><strong>激活时</strong>：重掷骰塔内蛋面以外的全部骰子；若骰面包含鸟蛋，在草原栖息地所有鸟类卡上各放置 1 个鸟蛋。</td></tr>
+              <tr><td>卷羽鹈鹕</td><td><strong>打出时</strong>：重掷骰塔内全部骰子；若骰面包含【鱼】，获得 2 个【鱼】标记。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>捕猎类能力</h3>
+        <p><strong>能力共通点</strong>：均为「激活时」能力。从牌堆顶翻开卡牌进行猎食判定：翼展符合条件（通常为短于卡面数值）则塞入本卡下方（游戏结束时每张计 1 分），否则弃掉。各鸟的具体判定条件以卡面文字为准。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th></tr></thead>
+            <tbody>
+              <tr><td>白腹鱼狗 / 红尾鵟 / 灰背隼 / 游隼 / 白头海雕 / 大雕鸮 / 雪鸮</td><td><strong>激活时</strong>：从牌库顶翻 1 张鸟类卡，若其翼展不高于本卡数值，塞入本卡下方；否则弃掉。</td></tr>
+              <tr><td>长耳鸮</td><td><strong>激活时</strong>：从牌库顶翻 1 张鸟类卡，若其翼展低于本卡数值，塞入本卡下方；否则弃掉。</td></tr>
+              <tr><td>金雕</td><td><strong>激活时</strong>：从牌库顶翻 4 张鸟类卡，塞入其中翼展最小的一张到本卡下方，弃掉其余。</td></tr>
+              <tr><td>红隼</td><td><strong>激活时</strong>：从牌库顶翻 2 张鸟类卡，若翼展不高于本卡数值，塞入本卡下方；否则弃掉。</td></tr>
+              <tr><td>游隼（附录续页）</td><td><strong>激活时</strong>：从牌库顶翻 2 张鸟类卡，塞入翼展最小的一张到本卡下方。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><em>（注：捕猎类各页 OCR 识别存在交叉与矛盾——如猫头鹰类鸟名同时出现在「移动类」页——请以扫描原图为准。）</em></p>
+
+        <h3>塞入卡牌类能力</h3>
+        <p><strong>能力共通点</strong>：从牌库顶将鸟类卡塞入本卡下方（面朝下），塞入的卡在游戏结束时每张计 1 分。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th></tr></thead>
+            <tbody>
+              <tr><td>家燕</td><td><strong>打出时</strong>：从牌库顶翻一张鸟类卡，塞入本卡下方。</td></tr>
+              <tr><td>紫崖燕</td><td><strong>激活时</strong>：从牌库顶翻一张鸟类卡，塞入本卡下方。</td></tr>
+              <tr><td>树燕 / 灰沙燕</td><td><strong>激活时</strong>：从牌库顶翻两张鸟类卡，塞入本卡下方。</td></tr>
+              <tr><td>环颈鸻</td><td><strong>激活时</strong>：弃掉 1 个鸟蛋，从牌库顶翻一张鸟类卡塞入本卡下方。</td></tr>
+              <tr><td>猩红丽唐纳雀 / 玫红丽唐纳雀 / 黄腹丽莺<em>（识别不确定）</em></td><td><strong>打出时</strong>：塞入一张对应栖息地【森林／草原／湿地】鸟类卡到本卡下方。</td></tr>
+              <tr><td>姬鹬</td><td><strong>激活时</strong>：翻两张牌库顶的鸟类卡，塞入其中翼展较短的一张，弃掉另一张。</td></tr>
+              <tr><td>棕曲嘴嘲鸫</td><td><strong>激活时</strong>：塞入一张鸟类卡到本卡下方。<em>（识别不清，请对照原图）</em></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>移动类能力</h3>
+        <p><strong>能力共通点</strong>：均为「激活时」能力。允许你移动鸟类卡在玩家面板上的位置，以及将鸟蛋从一个鸟类卡转移到另一个（不产蛋）。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>鸟名</th><th>能力</th></tr></thead>
+            <tbody>
+              <tr><td>仓鸮 / 雪鸮</td><td><strong>激活时</strong>：将草原上一张鸟类卡的 1 个鸟蛋，移动到另一张草原鸟类卡上。</td></tr>
+              <tr><td>大雕鸮 <em>（鸟名识别不确定）</em></td><td><strong>激活时</strong>：将任意栖息地上一张鸟类卡的 1 个鸟蛋，移动到另一张鸟类卡上。</td></tr>
+              <tr><td>岩鸽</td><td><strong>激活时</strong>：在栖息地之间移动鸟蛋。<em>（识别不清，请对照原图）</em></td></tr>
+              <tr><td>东美角鸮 / 弗吉尼亚秧鸡 <em>（鸟名识别不确定）</em></td><td><strong>激活时</strong>：将鸟蛋在同一栖息地内移动。<em>（识别不清，请对照原图）</em></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>原版规则书图片（扫描版）</h2>
+        <details class="scan-appendix">
+          <summary>📖 展开查看原版规则书扫描图（34 页，点击放大）</summary>
+          <div class="scan-list">
+            <figure><img src="../assets/img/wingspan/p01.jpg" alt="规则书 第1页" loading="lazy"><figcaption>1 · 封面</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p02.jpg" alt="规则书 第2页" loading="lazy"><figcaption>2</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p03.jpg" alt="规则书 第3页" loading="lazy"><figcaption>3</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p04.jpg" alt="规则书 第4页" loading="lazy"><figcaption>4</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p05.jpg" alt="规则书 第5页" loading="lazy"><figcaption>5</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p06.jpg" alt="规则书 第6页" loading="lazy"><figcaption>6</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p07.jpg" alt="规则书 第7页" loading="lazy"><figcaption>7</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p09.jpg" alt="规则书 第9页" loading="lazy"><figcaption>9</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p10.jpg" alt="规则书 第10页" loading="lazy"><figcaption>10</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p11.jpg" alt="规则书 第11页" loading="lazy"><figcaption>11</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p12.jpg" alt="规则书 第12页" loading="lazy"><figcaption>12</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p13.jpg" alt="规则书 第13页" loading="lazy"><figcaption>13</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p14.jpg" alt="规则书 第14页" loading="lazy"><figcaption>14</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p15.jpg" alt="规则书 第15页" loading="lazy"><figcaption>15</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p16.jpg" alt="规则书 第16页" loading="lazy"><figcaption>16</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p17.jpg" alt="规则书 第17页" loading="lazy"><figcaption>17</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p18.jpg" alt="规则书 第18页" loading="lazy"><figcaption>18</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p19.jpg" alt="规则书 第19页" loading="lazy"><figcaption>19</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p20.jpg" alt="规则书 第20页" loading="lazy"><figcaption>20</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p21.jpg" alt="规则书 第21页" loading="lazy"><figcaption>21</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p22.jpg" alt="规则书 第22页" loading="lazy"><figcaption>22</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p23.jpg" alt="规则书 第23页" loading="lazy"><figcaption>23</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p24.jpg" alt="规则书 第24页" loading="lazy"><figcaption>24</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p25.jpg" alt="规则书 第25页" loading="lazy"><figcaption>25</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p26.jpg" alt="规则书 第26页" loading="lazy"><figcaption>26</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p27.jpg" alt="规则书 第27页" loading="lazy"><figcaption>27</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p28.jpg" alt="规则书 第28页" loading="lazy"><figcaption>28</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p29.jpg" alt="规则书 第29页" loading="lazy"><figcaption>29</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p30.jpg" alt="规则书 第30页" loading="lazy"><figcaption>30</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p31.jpg" alt="规则书 第31页" loading="lazy"><figcaption>31</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p32.jpg" alt="规则书 第32页" loading="lazy"><figcaption>32</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p33.jpg" alt="规则书 第33页" loading="lazy"><figcaption>33</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p34.jpg" alt="规则书 第34页" loading="lazy"><figcaption>34</figcaption></figure>
+            <figure><img src="../assets/img/wingspan/p35.jpg" alt="规则书 第35页" loading="lazy"><figcaption>35</figcaption></figure>
+          </div>
+          <p class="source-note">注：上方文字为整理版速查，完整细节请对照扫描图。原文有一张图片（编号 8）在 B 站图床已失效（404），无法收录；另有 3 张图为源帖重复上传，与前面页面相同。</p>
+        </details>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://www.bilibili.com/opus/1030122149069717511/" target="_blank" rel="noopener">《BGA桌游规则：展翅翱翔（Wingspan）》</a> · BGA小助手 · 规则内容版权归原作者所有。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

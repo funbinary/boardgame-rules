@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="四子连线 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>四子连线 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">四子连线</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">四子连线</h1>
+          <p class="game-sub">Connect Four · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <h2>游戏目标</h2>
+<p>四子连线（Connect Four）是一款双人连线游戏。目标是把自己颜色的四颗棋子连成一条直线，同时阻止对手达成同样的目标。</p>
+
+<h2>游戏进行</h2>
+<p>玩家轮流从顶端把一颗自己颜色的棋子投入竖直悬挂的网格中。棋子垂直下落，占据该列最低的空位。</p>
+<p>当一名玩家把自己的四颗棋子连成横、竖或斜的一条直线时，游戏结束。如果棋盘在任一玩家达成四连之前被填满，则为平局。</p>
+
+<h2>棋盘尺寸</h2>
+<p>BGA 实现提供五种棋盘尺寸（6x7、8x9、9x8、9x9 和 10x10）。</p>
+
+<h2>开局规则</h2>
+<p>为了消除先手优势，实现了两种可选的开局规则：</p>
+<ul>
+  <li><strong>馅饼规则（Pie rule）</strong>：先手完成第一手之后，后手可以选择交换颜色。</li>
+  <li><strong>交换规则（Swap rule）</strong>：先手放置三颗棋子——一颗红色、一颗黄色、再一颗红色。在这三颗放完之后，后手可以选择交换颜色。</li>
+</ul>
+
+<h2>竞技场模式</h2>
+<p>6x7 棋盘尺寸在竞技场模式中不可用，因为这个局面太容易被破解。</p>
+<ul>
+  <li>开局规则锁定为交换规则，以允许多样的开局走法并消除先手/后手优势。</li>
+  <li>棋盘尺寸选项随赛季轮换（8x9 → 9x9 → 10x10 → 8x9 → …）。</li>
+</ul>
+<p><em>高手们，请不要给 6x7 棋盘或非交换开局投票！</em></p>
+
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpconnectfour" target="_blank" rel="noopener">四子连线 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

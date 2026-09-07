@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Connectsix 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Connectsix · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Connectsix</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Connectsix</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Players_and_stones">Players and stones</span></h2>
+<p>Connect 6 is a two player game. Each player plays with stones, as in <b><a href="classicgo.html">Go</a></b> and <b><a href="gomoku.html">Gomoku</a></b>.
+</p>
+<div style="display:flex; flex-flow:row wrap;"><div style="width:30px;height:30px;background:rgba(150,150,150,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.9),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div>
+<div style="width:30px;height:30px;background:rgba(255,255,255,1);border-radius:50%;box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.2),inset 0px -10px 20px 1px rgba(0,0,0,0.2),inset 0px -4px 10px -1px rgba(0,0,0,0.2),0px 2px 1px -1px rgba(0,0,0,0.4);"></div>
+</div>
+<h2><span class="mw-headline" id="Game_board">Game board</span></h2>
+<p>Connect6 is typically played on a go board.
+</p>
+<div class="notation grid" style="display:grid; grid: repeat(19,20px) / repeat(19,20px) ; gap:1px; position:relative;">
+<div class="board background" style="background:#e5c079; width:100%; height:100%; grid-area:1 / 1 / -1 / -1; position:absolute; border-radius:8px;"></div>
+<div class="grid" style="display:grid; grid:repeat(calc(19 - 1),20px) / repeat(calc(19 - 1),20px); gap:1px; left:calc((20px / 2) + (1px / 2)); top :calc((20px / 2) + (1px / 2)); grid-area:calc(1) / calc(1) / calc(-1) / calc(-1); position:absolute;">
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+ <div style="outline:1px solid #000;width:100%;height:100%"></div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;border-radius:calc(20px / 2);background:#000;width:0px;height:0px;"></div>
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+<div style="display:grid;">
+ <div style="display:grid;place-items:center;border-radius:calc(20px / 2);outline-offset:-5px;outline:solid px;position:relative;">
+  <div style="position:absolute;"></div>
+ </div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Moves">Moves</span></h2>
+<p>Black plays first, putting one black stone on one intersection, then White and Black take turns to place two stones on unoccupied intersections each turn.
+</p>
+<h2><span class="mw-headline" id="Winner">Winner</span></h2>
+<p>The player who is the first to make a line of at least six stones (horizontally, vertically, or diagonally) wins!
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpconnectsix" target="_blank" rel="noopener">Connectsix — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

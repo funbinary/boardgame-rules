@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Openfacechinesepoker 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Openfacechinesepoker · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Openfacechinesepoker</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Openfacechinesepoker</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 1–4 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>For tips on how to play Open Face Chinese Poker, see <b><a href="https://en.doc.boardgamearena.com/Tips_openfacechinesepoker" target="_blank" rel="noopener">Tips_Open Face Chinese Poker</a> .</b>
+</p>
+
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Open Face Chinese Poker can be abbreviated as OFCP. The goal of the game is to achieve more points than your opponent(s) by winning more hands also known as rows and/or by collecting royalties on premium hands without fouling. 
+Each player plays cards across three hands, the top, middle, and bottom, such that at the end there are 3 cards in the top, 5 in the middle and 5 in the bottom; 13 total in the completed hand, legal or not. The game version of BGA supports 1 to 4 players. 
+</p>
+<h2><span class="mw-headline" id="Hand_Rankings">Hand Rankings</span></h2>
+<p>The best front hand is three aces. Straights, flushes, and straight flushes are not legal front hands.
+</p><p>A&gt;K&gt;Q&gt;J&gt;10&gt;9&gt;8&gt;7&gt;6&gt;5&gt;4&gt;3&gt;2.
+</p><p>For the convenience of writing, 10 will be written as T below.
+</p><p>High card (K9652): lowest possible hand. In ties, you take the value of the highest card, then the second highest...
+</p><p>Pair (KK652): two identical cards. In ties, you compare first the value of the pair (TT652&gt;99AKQ)
+</p><p>Two Pair (KK662): two pairs. In ties the highest pair wins (AA662&gt;JJ773)
+</p><p>3 of a Kind (KKK52): also called triplet. three identical cards. In ties you compare this trio first
+</p><p>Straight (K9JQT): five consecutive cards. In ties you compare the highest card (AKQJT&gt;JT987&gt;T9876&gt;5432A)
+</p><p>Flush: five cards of the same suit. In ties you compare the highest card
+</p><p>Full House (KKK55): 3 of a kind + pair. In ties you compare the value of the trio first, then the pair (33322&gt;222AA)(666TT&gt;66622)
+</p><p>4 of a Kind (KKKK2): four identical cards. In ties you compare the 4 of a kind first (33334&gt;2222A)
+</p><p>Straight Flush: flush + straight.
+</p><p>Royal Flush: Ace high Straight Flush, in other words, AKQJT in the same suit.
+</p>
+<h2><span class="mw-headline" id="Deal_and_Play">Deal and Play</span></h2>
+<p>One player is designated dealer and deals 5 cards to each player, one at a time face down. The player to dealer's left now sets his or her 5 cards, placing them face up on the table, assigning each card to the front, middle or back hand. The other players do the same, in turn, ending with the dealer.
+</p><p>Once all players have set their first 5 cards, play continues clockwise, starting with the player on the dealer's left. Each player in turn draws the top card of the stock, exposes it, and adds it to one of his or her three hands. Once played, cards cannot be moved from one hand to another, and when a hand has its full complement of cards (5 in the back or middle, 3 in the front), no more can be added. When everyone has 13 cards, the hands are compared and scored.
+</p><p>The deal moves to the left after each hand.
+</p>
+<h2><span id="Fouling.2Fmis-setting"></span><span class="mw-headline" id="Fouling/mis-setting">Fouling/mis-setting</span></h2>
+<p> At the end of each round, you check the hand requirement for all players (by default Top hand ≤ Middle hand ≤ Bottom hand). If some player(s) don’t meet them, the hand is considered fouled/mis-set and has zero hand ranking.
+So if no players meet them, all players will score 0 for the round.
+</p>
+<h2><span class="mw-headline" id="Variation:_Pineapple">Variation: Pineapple</span></h2>
+<p>In Pineapple OFCP, the maximum number of players is 3, and 4 players are not possible. 
+</p><p> In Pineapple OFCP, instead of one card per round per player as in Original OFCP, each player is dealt three cards per round, playing two and discarding one. Recently, Pineapple OFCP is more popular than Original OFCP. Pineapple is the <b><big>default</big></b> setting option for OFCP in Board Game Arena. 
+</p>
+<h2><span class="mw-headline" id="Variation:_2-7_Lowball_Middle">Variation: 2-7 Lowball Middle</span></h2>
+<p>2-7 lowball middle is an option that can be selected before the game starts. If you use this option, then:
+</p><p>The middle hand adopts 2-7 lowball poker hand ranks. For hands to be valid, The bottom hand must be stronger than or equal to the top hand and the middle hand cannot be higher than 10 high.
+</p><p>In other words, in the middle hand:
+</p><p>You should only put in 2 to 10, and never put in J, Q, K, A; and the 5 cards should not form a straight, flush (same suit), and no pair or better. Otherwise your hand is invalid and you will lose this hand completely.
+</p><p>We want the middle hand to be as weak as possible, not as strong as possible.
+</p><p>Whether to use Variation: 2-7 Lowball Middle and whether to use Variation: Pineapple are options that can be set independently.
+</p>
+<h2><span class="mw-headline" id="Scoring">Scoring</span></h2>
+<p>For each line, top/middle/bottom, we compare the hand rank for each pair of players. The higher hand wins 1 point, plus the royalties of the hand, minus the royalties of the other player.
+</p><p>If one player defeats another on all three lines, he/she gets a bonus of +3 points.
+</p><p>The defeated player loses points equal to the gain of the other player.  If one player loses all their 100 starting points, they lose immediately.
+</p><p>When using Variation: 2-7 lowball middle, top/bottom remain the same, stronger is better. In the middle hand, weaker hands are better. Weak hands beat strong hands.
+</p>
+<h2><span class="mw-headline" id="Fantasyland">Fantasyland</span></h2>
+<p>After normal scoring is complete, if any player has a pair of queens or better in the top line, they enter in fantasyland which is a bonus round where they receive 14 cards (13 cards in Original OFCP) and arrange them as they want. Remaining cards after completing a 13-card hand are discarded. On a fantasyland round, the other players play and points are scored as usual.  
+</p><p>The requirement to stay in fantasyland is higher. If in Original OFCP, 3 of a kind/full-house/4 of a kind, for top/middle/bottom respectively. If in Pineapple OFCP, 3 of a kind/4 of a kind, for top/bottom respectively. In Pineapple games, a full house in middle hand does not repeat Fantasyland. 
+</p><p>When using Variation: 2-7 lowball middle, build KK or better in the top row and/or 75432(not the same suit) in the middle row to enter Fantasyland. To stay in Fantasyland, 3 of a kind in the top hand or 4 of a kind or higher in the bottom hand is required. 
+</p>
+<h2><span class="mw-headline" id="Progressive_Fantasyland">Progressive Fantasyland</span></h2>
+<p>In Progressive Fantasyland games, the maximum number of players is 3, and 4 players are not possible.  
+</p><p>Players receive one additional card for each hand rank above QQ when they enter Fantasyland (3 additional cards maximum). Remaining cards after completing a 13-card hand are discarded.  
+</p><p>In Progressive Fantasyland Pineapple OFCP, in the top row: 14 cards for QQ, 15 cards for KK, 16 cards for AA and 17 cards for triplets(3 of a Kind). The player keeps 13 cards, discarding the remainder before setting the hands. 
+</p><p>In 2-7 lowball middle, the condition changes into building KK or better in the top row and 75432 in the middle row with the same hand. 
+</p>
+<h2><span class="mw-headline" id="Royalties">Royalties</span></h2>
+<p>If fouled/mis-set, no Royalties.
+</p>
+<h3><span id="Front.2FTop"></span><span class="mw-headline" id="Front/Top">Front/Top</span></h3>
+<p>66	1 /
+77	2 /
+88	3 /
+99	4 /
+10 10	5 /
+JJ	6 /
+QQ	7 /
+KK	8 /
+AA	9 /
+</p><p>222	10 /
+333	11 /
+444	12 /
+555	13 /
+666	14 /
+777	15 /
+888	16 /
+999	17 /
+10 10 10	18 /
+JJJ	19 /
+QQQ	20 /
+KKK	21 /
+AAA	22
+</p>
+<h3><span id="Middle_.28when_variation:_2-7_lowball_middle_is_NOT_USED.29"></span><span class="mw-headline" id="Middle_(when_variation:_2-7_lowball_middle_is_NOT_USED)">Middle (when variation: 2-7 lowball middle is NOT USED)</span></h3>
+<p>Three of a kind	2
+</p><p>Straight	4
+</p><p>Flush	8
+</p><p>Full house	12
+</p><p>Four of a kind	20
+</p><p>Straight flush	30
+</p><p>Royal flush	50
+</p>
+<h3><span id="Middle_.28when_variation:_2-7_lowball_middle_is_USED.29"></span><span class="mw-headline" id="Middle_(when_variation:_2-7_lowball_middle_is_USED)">Middle (when variation: 2-7 lowball middle is USED)</span></h3>
+<p>9 high 	1 (the highest number among the 5 cards is 9, the following is similar)
+</p><p>8 high	2
+</p><p>7 high	4
+</p><p>75432	8 (not the same suit)
+</p>
+<h3><span id="Bottom.2FBack"></span><span class="mw-headline" id="Bottom/Back">Bottom/Back</span></h3>
+<p>Straight	2
+</p><p>Flush	4
+</p><p>Full house	6
+</p><p>Four of a kind	10
+</p><p>Straight flush	15
+</p><p>Royal flush	25
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpopenfacechinesepoker" target="_blank" rel="noopener">Openfacechinesepoker — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

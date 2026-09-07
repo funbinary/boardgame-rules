@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Raceformulaninetysecondedition 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Raceformulaninetysecondedition · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Raceformulaninetysecondedition</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Raceformulaninetysecondedition</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Game_components">Game components</span></h2>
+<h3><span class="mw-headline" id="Car_chart">Car chart</span></h3>
+<p>Every player gets a car chart at the start of the game. 
+</p><p>This chart defines:
+</p>
+<ul><li>The amount of <b>tyres</b> the player starts with (and can refill during a pit-stop)</li>
+<li>The amount of <b>cards</b> the player starts with (and can refill during a pit-stop)</li>
+<li>The amount of <b>damage</b> points the car can take before breaking down.</li></ul>
+<p>Furthermore, the car chart is used to indicate the player's current <b>strategy</b> and the card that is used for their <b>target checks</b>.
+</p><p>Damage and tyre tokens are also managed here.
+</p>
+<h3><span class="mw-headline" id="Race_cards">Race cards</span></h3>
+<p>Race cards are used for most of the actions in the game. They contain the following information:
+</p>
+<ul><li>The movement type: Speeding (red), Driving (green), Gear (orange) or Event (yellow)</li>
+<li>The movement value: The big number in the top right corner (ranges from 1 to 4).</li>
+<li>Symbols: The center of the card will list symbols, including resources, checks, events, actions, ...</li>
+<li>The check factor: The number in the red square on the bottom right. This number is used for various checks that will be performed during the game.</li></ul>
+<h3><span class="mw-headline" id="Track_map">Track map</span></h3>
+<p>The track map contains the following information:
+</p>
+<ul><li>Amount of laps</li>
+<li>Pit stop duration</li>
+<li>The game turn indicator: large table with slots for each of the laps in the race (A blue pawn will be used to track the current lap)</li>
+<li>A representation of the track, divided in sections</li>
+<li>Sections can contain trajectory or late braking points (indicated by the colored circles on the road).</li></ul>
+<h4><span class="mw-headline" id="Section_types">Section types</span></h4>
+<ul><li>Straight (purple) - the easiest places to overtake</li>
+<li>Braking (grey) - will often contain trajectory points (ideal corner line bonus) or late braking opportunities (for overtaking others)</li>
+<li>Corner (yellow) - overtaking here is done with a corner contest. Each corner has a name and contest bonus value (displayed on cards in the corner name block)</li></ul>
+<h4><span class="mw-headline" id="Trajectories">Trajectories</span></h4>
+<p>Indicated by a colored circle with a number inside. Players can end their turn here in order to get a movement bonus on the next turn.
+</p><p>In order to make use of a trajectory, the player will need to play a movement card with the same movement type (indicated by the color)
+</p>
+<h4><span class="mw-headline" id="Late_braking_points">Late braking points</span></h4>
+<p>These points indicate that a late braking manoeuvre can be executed when ending in that section. Each section braking point will also display a traffic sign with a check value.
+</p>
+<h3><span class="mw-headline" id="Other_components">Other components</span></h3>
+<ul><li>Damage chips (red/brow discs) represent damage and come in two varieties: repairable (red) and permanent (brown) damage.</li>
+<li>Tyre chips (black discs) are mostly currency for movement.</li></ul>
+<h2><span class="mw-headline" id="1._Free_practice">1. Free practice</span></h2>
+<p>Every player gets assigned a random car chart and draws their initial hand.
+</p><p>Based on the number of players, bots are added (they don't have cards or car charts, and instead move by predefined rules).
+</p>
+<h3><span class="mw-headline" id="Substitute_car">Substitute car</span></h3>
+<p>When a player substitutes their car, the cards in their hand are re-drawn. (Optional)
+</p>
+<h2><span class="mw-headline" id="2._Qualifying">2. Qualifying</span></h2>
+<p>Every player selects one card from their hand. The card with the biggest movement value will win qualifying, with lower check factors winning in ties.
+</p><p>Note that bots can have a movement value higher than 4, which is not possible for players in the basic game.
+</p>
+<h3><span class="mw-headline" id="Fuel_selection">Fuel selection</span></h3>
+<p>In the basic game, fuel selection is done automatically based on qualifying results. First driver fuels for 8 laps, second for 10, last for 14, and all the other for 12 laps.
+</p><p>This lap will be indicated with the car color on the track's turn indicator.
+</p>
+<h2><span class="mw-headline" id="3._Pre-race_warm-up">3. Pre-race warm-up</span></h2>
+<h3><span class="mw-headline" id="Strategy_selection">Strategy selection</span></h3>
+<p><i>Note that reading up on the game turn description first, will make this section a lot clearer.</i>
+</p><p>In qualifying order, each player can select the strategy for their race:
+</p>
+<ul><li><b>Save tyres</b>: Pay one tyre less for your chosen movement cards' total</li>
+<li><b>Hazard</b>: Get an extra movement point for each damage or check in your chosen movement cards, and an extra movement point after completing a late braking manoeuvre.</li>
+<li><b>Balance</b>: Allows the player to use trajectories with any driving, event or gear card. (Speeding cards can still be used for speeding (red colored) trajectories</li>
+<li><b>Lucky</b>: The player will draw 2 cards instead of 1 at the start of their turn. One card is added to their hand, other is discarded.</li>
+<li><b>Chase</b>: Not implemented at this time</li>
+<li><b>Banging wheels</b>: Gives a +3 corner contest bonus and can overtake other drivers more easily: 2 movement points in corners, 1 movement point in braking zones (like straights). Also, when the race starts, one overtake can be done without spending a movement point.</li></ul>
+<p>A player can update their strategy during the race by taking a pit-stop or skipping a turn.
+</p><p><i>Selecting the right strategy is one of the key elements of this game. If you are planning an early pit stop because you qualified at the front, HAZARD could be a good choice. SAVE TYRES or BALANCE may be more useful in longer stints, ...</i>
+</p>
+<h2><span class="mw-headline" id="4._Game_turn">4. Game turn</span></h2>
+<p>A game turn is represented by a 'lap' on the game turn indicator. From here on, we'll use the 'turn' term for this purpose, and 'lap' for the actual physical lap the driver is on based on his movement on the track.
+</p><p>This means that the race ends after a fixed amount of turns, and not when all drivers have crossed the physical finish line.
+</p><p>Each turn, every driver will have their individual turn, starting from the leader to whomever is next on the track that hasn't had their individual turn yet. For example, when a driver laps another driver, this  means that this lapped driver will have their turn next.
+</p><p>Before a driver has their individual turn, the section where the driver is placed, is "activated". This is mostly relevant for corners, where a corner contest can be initiated.
+</p>
+<h2><span class="mw-headline" id="4.1_Individual_player_turn">4.1 Individual player turn</span></h2>
+<p>A player's turn has 6 phases:
+</p>
+<ul><li>A - Turn start declarations</li>
+<li>B - Draw</li>
+<li>C - Play cards</li>
+<li>D - Resolve symbols</li>
+<li>E - Movement</li>
+<li>F - Turn end declarations</li></ul>
+<h3><span class="mw-headline" id="A._Turn_start_declarations">A. Turn start declarations</span></h3>
+<p>The player has three choices at the start of their turn
+</p>
+<h4><span class="mw-headline" id="Skip_turn">Skip turn</span></h4>
+<p>The player is allowed to change their strategy, but cannot move and their turn is over immediately. (Very rare action...)
+</p>
+<h5><span class="mw-headline" id="Pit_stop">Pit stop</span></h5>
+<p>The player comes in for a pit stop. All his repairable damage is fixed, tyres and cards are replenished, and a new strategy can be chosen. 
+</p><p>The player is moved the indicated amount of sections backwards to simulate the time lost. Note that they will still be able to complete their individual turn later (phase B and beyond) when their section is activated.
+</p><p>A player is only required to make one pit stop in the race, at the latest on the turn indicated on the track. (A reminder will be shown so you don't accidentally forget.) But extra stops might be necessary if the player has no more tyres or has too much damage for comfort.
+</p><p><i>Note that cards have to be discarded when the player has more than the amount on their car chart.</i>
+</p><p><i>Note that cards frozen by a corner contest cannot be discarded.</i>
+</p><p><i>Note that you cannot come in for a pit stop when you are off track.</i>
+</p>
+<h5><span class="mw-headline" id="Movement">Movement</span></h5>
+<p>The normal course of action, the player will use the cards in his hand to move forward. Continue with phase B and beyond below.
+</p>
+<h3><span class="mw-headline" id="B._Draw">B. Draw</span></h3>
+<p>Draw a card from the deck and add it to your hand.
+</p><p><i>Note that the LUCKY strategy allows you to choose one from two drawn cards.</i>
+</p>
+<h3><span class="mw-headline" id="C._Play_cards">C. Play cards</span></h3>
+<p>The player picks one or two cards from their hand. The sum of the movement values is the base movement value for that turn (each movement value moves a player one section forward, unless overtaking is necessary.)
+</p><p><i>Note that when picking two cards, one card needs to have a movement value of 1, or both have to have a movement value of 2.</i>
+</p><p><i>Note that the type of cards you pick might give you a trajectory bonus.</i>
+</p>
+<h3><span class="mw-headline" id="D._Resolve_symbols">D. Resolve symbols</span></h3>
+<p>All symbols on the played movement cards need to be resolved in the below.
+</p><p><i>Note that weather and flag events are ignored in the basic version of the game.</i>
+</p>
+<h4><span class="mw-headline" id="D.1_Pay_resources">D.1 Pay resources</span></h4>
+<p>Pay all indicated tyre and damage chips. Note that you'll have to retire the car if you cannot do so.
+</p><p><i>Note that every tyre but the first, can be replaced by a chosen card in your hand.</i>
+</p>
+<h4><span class="mw-headline" id="D.2_Perform_a_check">D.2 Perform a check</span></h4>
+<p>You need to perform a check against the card in your target check area.
+</p><p>To pass a check you need to play a card with a value <b>equal to or lower than</b> your current check factor. This card can come from your hand or can even be a played movement card. It is also possible to perform a <b>blind check</b>, where you draw a random card from the deck.
+</p><p>After performing the check, the player's check card is replaced (discarding the old one). Failing the check will yield one damage token.
+</p><p><i>Note that there are 3 check symbols: check (normal), checkP20 (checked value + 20 =&gt; easier check) &amp; checkM20 (checked value - 20 =&gt; harder check).</i>
+</p>
+<h4><span class="mw-headline" id="D.3_Draw_cards">D.3 Draw cards</span></h4>
+<p>Draw the indicated amount of cards from the race deck.
+</p>
+<h3><span class="mw-headline" id="E._Movement">E. Movement</span></h3>
+<p>The player must move their car forwards for the total mount of movement points on their played cards, and optional bonuses from trajectories or strategies.
+</p><p>Each movement point moves the player to the next section, unless there is a car in front of them.
+</p>
+<h4><span class="mw-headline" id="Overtaking_rules">Overtaking rules</span></h4>
+<p><b>1. Standard rules</b>
+</p><p>On a <b>straight</b>, a player overtakes other drivers by spending one movement point.
+</p><p>In a <b>braking zone</b>, a player either stops last in line, or attempts a late braking manoeuvre.
+</p><p>In a <b>corner</b>, the player stops last in line. Overtaking can only be done in a corner contest.
+</p><p><b>2. Rules when lapping and unlapping</b>
+</p><p>On a <b>straight</b> and in a <b>braking zone</b>, a player overtakes other drivers by spending one movement point. (Late braking can also be used.)
+</p><p>In a <b>corner</b>, a player overtakes other drivers by spending two movement points. Note that corner contests can still happen the next turn.
+</p><p><i>Note: When the leader laps another car for the first time, they need to perform an additional check. If the check is failed, they do not overtake the car and movement is stopped.</i>
+</p><p><b>3. Exceptions</b>
+</p>
+<ul><li>On the <b>first and last lap</b> (turn) of the race, <b>all sections are handled as straights</b>!</li>
+<li>Cars with the "no move" marker (eg. after skipping a turn) can always be overtaken for one movement point</li>
+<li>Cars off-track can be overtaken as if they aren't there</li>
+<li>Players with the BANGING WHEELS strategy can basically always use the lapping rules.</li></ul>
+<h3><span class="mw-headline" id="F._Turn_end">F. Turn end</span></h3>
+<p>When the player ends their movement in a section that supports it, they can do the following:
+</p>
+<h4><span class="mw-headline" id="F.1_Late_braking">F.1 Late braking</span></h4>
+<p>The player performs a blind check against the section's check value. 
+</p><p>When passed, they can continue to the last place of the next section.
+</p><p>When failed, they go off-track, and waste their next turn re-entering the track in the following section.
+</p><p><i>Note that no damage is sustained after failing a late braking check.</i>
+</p><p><i>Note that you cannot take a pit stop when off-track, so it might not be the best idea to perform a late braking manoeuvre the turn before your planned pit stop.</i>
+</p>
+<h4><span class="mw-headline" id="F.2_Trajectories">F.2 Trajectories</span></h4>
+<p>You can choose to end your turn on any of the available trajectory points. These can give you a movement value advantage the next turn.
+</p>
+<h2><span class="mw-headline" id="4.2_Corner_contests">4.2 Corner contests</span></h2>
+<p>When a corner section is activated, and more than one driver is positioned there, a corner contest can be initiated.
+</p><p>Each player in the section, from last to first, will be asked whether they want to participate in the contest.
+</p><p>When participating, the player secretly selects up to two cards. The <b>combined movement value</b> will define the outcome of the contest, together with the corner contest bonus.
+</p><p>The <b>corner contest bonus</b> is applied to all participating drivers other than the section leader. This bonus can be positive or negative, so be sure to take this into account when deciding to participate.
+</p><p>When all drivers have made their decision, the new section order is established.
+</p>
+<ul><li>Drivers not participating in the contest, are moved to the back</li>
+<li>Other drivers are placed in order of combined movement values</li>
+<li>When two or more drivers have the <b>same combined movement</b> value, they receive <b>one damage</b> token.</li></ul>
+<p>Cards used for the contest are frozen that turn, and cannot be used for movement or checks (or even replaced in a pit-stop) until the next.
+</p><p><i>Note that each driver can only contest the same corner once within a turn.</i>
+</p>
+<h2><span class="mw-headline" id="4.3_Bot_drivers">4.3 Bot drivers</span></h2>
+<p>Bots are added depending on player count. 3 of each type for 2-3 players, 2 of each type for more.
+</p>
+<ul><li><b>Slow</b> bots (purple) have a standard movement value of 2</li>
+<li><b>Fast</b> bots (yellow) have a standard movement value of 3</li></ul>
+<p>Bots can <b>overtake</b> <b>each other without spending any movement points</b>. When players are involved, they follow the standard overtaking rules.
+</p><p>Bots will <b>never attempt late braking</b> in the basic game, but do automatically receive any trajectory bonuses.
+</p><p>In <b>corner contests</b>, bots will <b>automatically participate</b> (unless they're lapped), and draw two cards from the race deck to define their movement value.
+</p><p>Bot <b>pit stops are planned per bot speed</b> when the race starts, the first bot on track will perform a pit stop when the turn is reached. No other pit stops will be performed by bots.
+</p>
+<h2><span class="mw-headline" id="5._Race_end">5. Race end</span></h2>
+<p>When the race reaches the last lap, players are notified and overtaking rules are simplified for a final push.
+</p><p>After each driver has taken their individual turn, the positions on track count as the finishing order. 
+</p><p>Points are awarded according to the Formula 1 1991 rules.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpraceformulaninetysecondedition" target="_blank" rel="noopener">Raceformulaninetysecondedition — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

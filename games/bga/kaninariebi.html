@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Kaninariebi 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Kaninariebi · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Kaninariebi</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Kaninariebi</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 2 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p><b>Kani Nari Ebi(かになりエビ)</b> is a <span title="players" style="display:inline-block;position:relative;text-shadow:0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA,0 0 calc(2rem / 20) #fffA;font-size:2rem;line-height:calc(2rem * 1.25);"><span aria-hidden="true">👤</span><span style="margin:0;position:absolute;top:70%;left:50%;margin-right:-50%;transform:translate(-50%,-50%);color:#fff;text-shadow:0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A,0 0 calc(2rem / 20) #000A;font-size:calc(2rem / 1.5);font-weight:700;">2<span style="position:absolute;font-size:0;">players</span></span></span> player strategy game inspired by Hasami Shogi. Each player starts with <b>5 Crab pieces placed on their home column of the 5x5 board</b> and on their turn moves them attempting to surround and capture the opponent's pieces.
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>One their turn, a player must move one of their pieces to another space on the board.
+There are 2 kinds of pieces that differ in movement pattern:
+</p>
+<ul><li>🦀 Crabs move any number of spaces <b>horizontally</b> (but cannot jump over other pieces)</li>
+<li>🦐 Shrimps move exactly one space <b>diagonally</b></li></ul>
+<p>Crabs have an opportunity to <b>promote to Shrimps</b> each time they end their move in the opponent's home column at the opposite edge of the board.
+</p>
+<h3><span class="mw-headline" id="Sea_Current">Sea Current</span></h3>
+<p>Each time a piece stops in the middle column, it's forcibly <b>carried away either up or down</b>, up to player's choice, as far as possible without going over another piece or the edge of the board. It's always possible to choose any of the 2 directions, even it if will result in the piece remaining in place. 
+</p><p>The Current must be resolved <b>before Bonding and Capture checks</b> (see below).
+</p>
+<h3><span class="mw-headline" id="Bonding">Bonding</span></h3>
+<p>If a piece ends its move near a group of <b>friendly pieces of the same type</b>(all 🦀Crabs or all 🦐Shrimps) connected orthogonally, the player receives a Bond Bonus that allows them to make <b>another diagonal move</b> with <b>any piece</b> from the group. The Bonded piece is affected by the Current as usual and can be promoted and make an additional Capture if the conditions are met. This effect can only be used <b>once per turn</b>.
+</p><p>An advanced game variant allows Bonds between any pieces.
+</p>
+<h3><span class="mw-headline" id="Captures">Captures</span></h3>
+<p>When a piece ends its move in the same row or column as another friendly piece and <b>all spaces between them are filled with opponent's pieces</b>, those opponent's pieces are captured and removed from the board until the end of the game.
+</p><p>It's equally possible to surround and capture multiple sets of opponent's pieces in a single move.
+</p>
+<h2><span class="mw-headline" id="Game_End">Game End</span></h2>
+<p>The game ends as soon as one of the players fulfills one of the following win conditions:  
+</p>
+<ul><li>🦐 <b>Promote</b> 3 Crabs to Shrimps (captured Shrimps don't count)</li>
+<li>🥅 <b>Capture</b> 3 opponent's pieces</li>
+<li>⛔ Ensure that the opponent <b>does not have any valid moves</b> on their turn</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpkaninariebi" target="_blank" rel="noopener">Kaninariebi — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

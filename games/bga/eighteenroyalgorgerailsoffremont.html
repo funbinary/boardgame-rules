@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Eighteenroyalgorgerailsoffremont 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Eighteenroyalgorgerailsoffremont · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Eighteenroyalgorgerailsoffremont</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Eighteenroyalgorgerailsoffremont</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>Colorado, the 1870s: the Denver &amp; Rio Grande and the Atchison, Topeka
+&amp; Santa Fe are locked in a real historical standoff — the "Royal
+Gorge War" — over the only practical rail route through a narrow
+canyon on the Arkansas River. 18RoyalGorge drops players into that
+moment as financiers rather than railroad men: you buy private
+assets, found and capitalize railroad companies, lay track across
+the map, and run trains for revenue, while the stock market rewards
+well-run companies and punishes neglected ones. Two side industries —
+Colorado Fuel &amp; Iron (steel) and Victor Gold (gold mining) — feed
+income back into the whole table. Highest personal net worth when the
+game ends wins.
+</p><p>18RoyalGorge is a fan-made, from-the-ground-up design built for the
+Colorado market and railroad history, playable standalone without
+owning any other 18xx title.
+</p>
+<ul><li><b>Designer/Publisher theme:</b> Colorado railroads, 1870s–1880s</li>
+<li><b>Players:</b> 2–4</li>
+<li><b>Playing time:</b> ≈ 90 minutes</li>
+<li><b>Complexity:</b> Moderate–heavy (18xx family); best for players comfortable with stock-and-route economic games</li>
+<li><b>BGA status:</b> Alpha</li></ul>
+<h2><span class="mw-headline" id="How_you_win">How you win</span></h2>
+<p>At game end, each player totals:
+</p>
+<ul><li>Cash on hand</li>
+<li>Market value of every share held</li>
+<li>Value of privates still personally owned</li></ul>
+<p>Highest total wins; ties are settled by most cash on hand.
+</p>
+<h2><span class="mw-headline" id="The_game_loop">The game loop</span></h2>
+<pre>Private Asset Auction (once, at game start)
+        ↓
+   Stock Round  &lt;---------------------+
+        ↓                             |
+   Operating Round 1                  |
+        ↓                             |
+   Operating Round 2                  |
+        ↓                             |
+   End-of-Round Upkeep  --------------+
+   (repeats until a game-end trigger fires)
+</pre>
+<p>One Stock Round is always followed by <b>two</b> Operating Rounds before
+the upkeep step runs and the cycle repeats.
+</p>
+<h2><span class="mw-headline" id="Private_asset_auction">Private asset auction</span></h2>
+<p>The game opens with a one-time auction of five private assets — two
+yellow, two green, one brown tier — sold left to right in ascending
+$5 bids. Winning a private grants its owner a small ongoing income
+and, later, a special ability once the private is sold into a
+railroad company. Whoever finishes the auction with the most cash
+gets first priority in the opening Stock Round.
+</p>
+<h2><span class="mw-headline" id="Stock_Round">Stock Round</span></h2>
+<p>Players buy and sell railroad shares. Selling shares moves a
+company's stock price down; a company whose shares are entirely held
+by players (none left in the bank pool) sees its price tick up at
+round's end. Buying a company's president's certificate is how new
+railroads get founded — the buyer sets a starting share price, pays
+double into the company treasury, and places its home station on the
+map. Whoever holds the most shares in a company is its president and
+runs it during Operating Rounds.
+</p>
+<h2><span class="mw-headline" id="Operating_Round">Operating Round</span></h2>
+<p>Each company, richest stock price first, takes a turn to:
+</p>
+<ol><li><b>Lay track</b> — extend or upgrade tiles across the map</li>
+<li><b>Build a station</b> — plant a token to claim a city for its routes</li>
+<li><b>Run trains</b> — choose the best-paying route(s) for each train</li>
+<li><b>Pay or withhold</b> — send revenue to shareholders (raises share price) or keep it in the treasury (drops share price)</li>
+<li><b>Buy trains</b> — from the bank or another company, to keep pace as the available train fleet advances through phases</li>
+<li><b>Buy a private</b> (optional) — absorb a private asset's income and ability directly into the company</li></ol>
+<p>As the newest trains are bought, the game phases forward
+(yellow → green → brown → silver), unlocking new tile colors, letting
+more companies start, and eventually rusting out the oldest trains.
+</p>
+<h2><span class="mw-headline" id="Colorado-specific_flavor">Colorado-specific flavor</span></h2>
+<ul><li><b>Colorado Fuel &amp; Iron (steel)</b> — every tile laid consumes steel from a shared market; money spent on steel accumulates and is paid out as a dividend to CF&amp;I shareholders.</li>
+<li><b>Victor Gold &amp; gold mining</b> — companies can ship gold cubes from gold-mine hexes for bonus revenue; that income likewise builds toward a dividend for Victor Gold shareholders.</li>
+<li><b>The Royal Gorge itself</b> — a contested set of hexes with reserved station space; the historic <b>Treaty of Boston</b> event auto-resolves the standoff mid-game, handing Rio Grande extra station tokens and saddling both feuding railroads with debt they must pay down before the game ends.</li></ul>
+<h2><span class="mw-headline" id="Game_end">Game end</span></h2>
+<p>Play continues until a game-end trigger fires (bank runs low, or a
+specific end condition described in the rulebook), after which the
+current set of Operating Rounds finishes before final scoring.
+</p>
+<h2><span id="Full_rules_.26_in-game_reference"></span><span class="mw-headline" id="Full_rules_&amp;_in-game_reference">Full rules &amp; in-game reference</span></h2>
+<ul><li>The complete rulebook PDF is linked from the BGA game page.</li>
+<li>For a dense mid-play lookup (turn-by-turn rules, tables of costs and thresholds), see the in-game <b>"How to play?"</b> tab, sourced from Gamehelpeighteenroyalgorgerailsoffremont.md in this same directory.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpeighteenroyalgorgerailsoffremont" target="_blank" rel="noopener">Eighteenroyalgorgerailsoffremont — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

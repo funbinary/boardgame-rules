@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Nainjaune 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Nainjaune · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Nainjaune</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Nainjaune</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h3><span class="mw-headline" id="Overview">Overview</span></h3>
+<p>The aim is to get rid of all your cards first
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Turn">Turn</span></h3>
+<p>On a turn, as the active player, lay as many cards in a run of any suit as you can, this can start at any point i.e. A start is fine, but also 5 start
+</p><p>Note: The original rules state same suit, but the "modern" rules state any suit, and this implementation allows any suit.
+</p><p>After which, the other players can try to continue, so if you laid A 2 3 4, they can add 5 6 7 ... or just 5 or pass
+</p><p>If going round the players, a King is played, that player ends the run and can start a new run in a suit of their choosing
+</p><p>If the available cards in hand means no one can continue the sequence, the last player to play a card can start a new sequence
+</p>
+<h3><span class="mw-headline" id="Scoring">Scoring</span></h3>
+<p>Whoever completes a sequence, either by King or default high card, gets 1 counter of each other player
+</p><p>In addition, if the final card was an honour (King, Queen, Jack, 10, 7), they also receive all counters found in the corresponding box
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="End_Round">End Round</span></h3>
+<p>The round ends when one player has played all their cards
+</p><p>All other players total up their hand debt, Face cards worth 10, Aces worth 1, and number cards their number value. This debt is then paid to the player who emptied their hand
+</p><p>A player will have to double their debt if any of the following applies: the player who played their last card was the only player to play that sequence, a player holds the 7 of Diamonds, a player holds an Honour card
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Game_End">Game End</span></h3>
+<p>After the final round is played, total up the points, and the player with the most wins
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpnainjaune" target="_blank" rel="noopener">Nainjaune — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

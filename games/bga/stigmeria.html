@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Stigmeria 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Stigmeria · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Stigmeria</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Stigmeria</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">👥 1–6 人</span>
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Components">Components</span></h2>
+<ul><li><b>1 Flower Board per player</b> containing a grid of 10x10 cells called "pistils". The name printed on the flower is a reminder of the rules to apply on it. (See start options, everyone will start with the same empty flower)</li>
+<li>1 <b>Central common flower board</b> when playing in competitive modes</li>
+<li>1 <b>Target schema</b> board is a picture of your goal for a given game&#160;: it states all the pollen you need to have on your board to be able to win before the others</li>
+<li>(unlimited) Tokens representing 1 <b>Stigmerian</b> on a side (with some fairy figure) and 1 <b>pollen</b> on the other side&#160;:
+<ul><li>9 colors exist&#160;: Red, Yellow, Blue, Orange, Violet, Green, Pink,  White, Black</li>
+<li>1 token = 2 sides of the same color: eg. 1 blue stigmerian token becomes 1 blue pollen when you flip it</li></ul></li>
+<li><b>Wind</b> arrow tokens will be placed around the board to indicate known wind direction&#160;: South by default, but in No Limit can be anything (North, South, East, West)</li>
+<li>1 <b>Special actions board per player&#160;:</b> list the 20 special actions and display who unlocked what. White token means unlocked, black token means unlocked and already used.</li>
+<li>1 <b>die</b> with 12 colored faces&#160;:
+<ul><li>used in competitive mode with 1 special action or 1 versus action</li>
+<li>used to randomize wind in No Limit Mode</li></ul></li>
+<li>Help and action cards describe which action is available to you in a given game&#160;: on BGA, you may display tooltips over each special action to see its description.</li></ul>
+<h2><span class="mw-headline" id="Objective">Objective</span></h2>
+<p>Find the best combinations of available actions to recreate on your personal board the schema of the chosen schema flower in a minimum of turns and actions.
+</p>
+<h3><span class="mw-headline" id="5_game_modes">5 game modes</span></h3>
+<p><u>Discovery</u>&#160;: like normal but you don't loose too early, you can discover the rules (for example in solo).
+</p><p><u>Normal</u>&#160;: a race between 1 to 6 players to fulfill the target before the end of turn 10.
+</p><p><u>Competitive</u>&#160;: almost like normal + you don't start with default special actions, everyone need to earn it through central board.
+</p><p><u>Competitive No Limit</u>&#160;: almost like Competitive + turns are not limited to 10 + wind is not known in advance + you can directly attack a flower board with Last Drift action.
+</p><p><u>Solo No Limit&#160;:</u> almost like Competitive No Limit but as you are alone you won't play on a central board to earn special actions; the game will offer you 1 special action for each turn
+</p>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<ol><li>The game display the selected target schema to everyone</li>
+<li>Each player receives an opaque bag with 45 stigmerian tokens (15 YELLOW + 15 RED + 15 BLUE). On BGA, you cannot watch in your bag but you know the current size of it (like if you had it in your hand).</li>
+<li>Each player receives the same empty flower.</li>
+<li>Each player draws a token from their bag and place it on the recruitment zone of their personal flower board.</li>
+<li>If the targeted schema contains a side "Set up", place all the needed tokens on each player's flower in order to start with that same set up.</li></ol>
+<h2><span class="mw-headline" id="Gameplay_Overview">Gameplay Overview</span></h2>
+<p>Game will play in turns where each turn will give you more actions (1 action in turn 1, 2 in turn 2, ... 10 in turn 10, capped at 10 for 10+). There is some empty spots around each of the 10 petals of the flower board where the turn counter will move to display how many moved anyone used in the turn.
+</p><p>During each turn, a first player is chosen and everyone will play in clockwise order after them&#160;: playing the N maximum actions. Each action may move/replace/remove a stigmerian token from your board and if it is on a targeted spot, it becomes a pollen&#160;: pollens cannot be modified (except removed by very few actions) and represent your progression to the victory.
+</p><p>After each turn (except last one), there is an automated effect on each flower board&#160;: wind blows over stigmerian to move them 1 spot away in a given direction.
+</p>
+<h2><span class="mw-headline" id="On_Your_Turn">On Your Turn</span></h2>
+<h3><span id="Central_board_.22StigmaReine.22"></span><span class="mw-headline" id="Central_board_&quot;StigmaReine&quot;">Central board "StigmaReine"</span></h3>
+<p>If in <b>competitive</b> modes, you have 2 actions on the central board to take&#160;: (you are forced to choose at least "1 Draw and land")
+</p>
+<ul><li><u>Draw and land</u>&#160;: Draw and land a stigmerian from your bag to the central board and place it near others if any.</li>
+<li><u>Move</u>&#160;: Move a stigmerian of one adjacent spot (no diagonal)</li></ul>
+<p>If one of these actions make the central board contains 3 tokens of the same colors, you <b>earn a special action</b>&#160;! (and remove those tokens to avoid the next player to earn again&#160;;)). You may not earn more than 9 special actions this way.
+</p>
+<h3><span class="mw-headline" id="Basic_actions_on_your_board">Basic actions on your board</span></h3>
+<ul><li>Draw (alias <u>Recruit</u>)&#160;: take 1 stigmerian from your bag and place it in your recruit zone</li>
+<li><u>Land&#160;:</u> take 1 stigmerian from your recruit zone and place it on your board (adjacent to others if any)</li>
+<li><u>Move</u>&#160;: Move a stigmerian of one adjacent spot (no diagonal)</li>
+<li><u>Recruit on StigmaReine&#160;:</u> take 1 stigmerian from central board recruit zone and place it on your board (adjacent to others if any)</li>
+<li><u>Joker&#160;:</u> 1 per game action, optional rule&#160;: play special action "No harm no Foul" for free.</li></ul>
+<h3><span class="mw-headline" id="Special_actions_on_your_board">Special actions on your board</span></h3>
+<table class="wikitable">
+<caption>
+</caption>
+<tbody><tr>
+<th>
+</th>
+<th>Unlocked in normal mode
+</th>
+<th>Unlockable in Competitive
+</th>
+<th>Max uses in turn N
+</th>
+<th>Cost (number of actions)
+</th>
+<th>Info
+</th></tr>
+<tr>
+<td>Mixing
+</td>
+<td>on VertigHaineuse flower + InspirActrice
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Change the color of two primary stigmerian tokens which are horizontally or vertically adjacent into the secondary color resulting of their mixing. Be careful this action cannot be performed on pollen tokens.
+<p>Put back in the box both primary color tokens and replace them at the same place on the flower by secondary color tokens from the box.
+</p>
+</td></tr>
+<tr>
+<td>Combination
+</td>
+<td>on Maronne flower + InspirActrice
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Change to a brown color a stigmerian token that is surrounded by 8 tokens (diagonals included) of which at least 2 yellow, 2 red and 2 blue tokens. The surrounding tokens can be stigmerians or pollens. The original central token is replaced by a brown stigmerian token and put back in the box.
+</td></tr>
+<tr>
+<td>Fulgurance
+</td>
+<td>on Maronne flower + InspirActrice
+</td>
+<td>level &gt;= **
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Draw 5 stigmerian tokens from your bag and put them randomly from left to right on the same line, with the first token adjacent to a stigmerian or pollen token already in game&#160;: no diagonals but the first token can be above or under a token as long as it is adjacent.
+<p>If there is no token already in game, put the first token on a free space on the first line (A) as long as you can place the other 4 tokens next to this one on the same line.
+</p>
+</td></tr>
+<tr>
+<td>Choreography
+</td>
+<td>on DentDine flower + InspirActrice
+</td>
+<td>level &gt;= ***
+</td>
+<td>1
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Once per turn you can move maximum N stigmerian tokens by one movement. (N is equal to the ongoing turn number minus 2).
+</td></tr>
+<tr>
+<td>Diagonal
+</td>
+<td>on DentDine flower + InspirActrice
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Move a stigmerian token diagonally.
+</td></tr>
+<tr>
+<td>Exchange
+</td>
+<td>on DentDine flower + InspirActrice
+</td>
+<td>level &gt;= **
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>You can switch the position of 2 adjacent stigmerian tokens (diagonals excluded). They permute.
+</td></tr>
+<tr>
+<td>Fast Step
+</td>
+<td>on DentDine flower + InspirActrice
+</td>
+<td>level &gt;= ***
+</td>
+<td>1
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Once per turn, you can move one stigmerian token by X movements maximum. (X is equal to the ongoing turn number minus 2).
+</td></tr>
+<tr>
+<td>Half Note
+</td>
+<td>on SiffloChamp flower + InspirActrice
+</td>
+<td>level &gt;= **
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Fusion 2 black adjacent tokens in one white stigmerian token on one of the two places previously occupied by the black tokens. Put back in the box the 2 black tokens.
+</td></tr>
+<tr>
+<td>Quarter Note
+</td>
+<td>on SiffloChamp flower + InspirActrice
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Transform a white stigmerian token in 2 black stigmerian tokens. Put the white token back to the box and replace it by one black token. The second black token is placed adjacent to the first one.
+</td></tr>
+<tr>
+<td>Two Beats
+</td>
+<td>on SiffloChamp flower + InspirActrice
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Make a white stigmerian token appear in an empty spot which is surrounded by 8 tokens (diagonals included), it can be a mix of stigmerian and/or pollen tokens
+</td></tr>
+<tr>
+<td>Rest
+</td>
+<td>on SiffloChamp flower + InspirActrice
+</td>
+<td>level &gt;= ***
+</td>
+<td>1
+</td>
+<td>1 (or 2 with InspirActrice in normal mode)
+</td>
+<td>Once per turn you can make a stigmerian or a pollen disappear from a flower spot. The token is put back in the box.
+</td></tr>
+<tr>
+<td>No harm No foul
+</td>
+<td>NO
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1
+</td>
+<td>Exchange 4 tokens of the same primary color in your recruitment area by 4 tokens of the same primary color of your choice taken from the box (example: 4 blue tokens exchanged for 4 yellow tokens or 4 red tokens).
+</td></tr>
+<tr>
+<td>Copy
+</td>
+<td>NO
+</td>
+<td>level &gt;= **
+</td>
+<td>1
+</td>
+<td>1
+</td>
+<td>Once per turn, switch a stigmerian token of a primary color on the board with another stigmerian token of a primary color from the box. The switched token is put back in the box.
+</td></tr>
+<tr>
+<td>Prediction
+</td>
+<td>NO
+</td>
+<td>level &gt;= ***
+</td>
+<td>1
+</td>
+<td>1
+</td>
+<td>Once per turn, take 3 tokens of different colors from the box and add them to your bag. That allows you to be able to draw tokens of non primary colors to top put on the common board&#160;: in this case, these colors work exactly with the same rules than primary colors to unlock the special actions on the common board.
+</td></tr>
+<tr>
+<td>Mimicry
+</td>
+<td>NO
+</td>
+<td>level &gt;= ***
+</td>
+<td>
+</td>
+<td><b>3</b>
+</td>
+<td>Spend 3 action points to exchange the last stigmerian token that landed on the board by the same color of one of the adjacent colors. You cannot copy the same color many times on the same turn.
+</td></tr>
+<tr>
+<td>Fog Die
+</td>
+<td>NO
+</td>
+<td>level &gt;= ***
+</td>
+<td>1
+</td>
+<td>1
+</td>
+<td>Once per turn, roll the die and take a stigmerian of the color indicated by the die face. Without using the recruit action, you have to land this token on your board, following the landing rules.
+</td></tr>
+<tr>
+<td>Pilferer
+</td>
+<td>NO
+</td>
+<td>
+</td>
+<td>1
+</td>
+<td><b>0</b>
+</td>
+<td>Free action, once during your turn, you can choose a token of a color that is not used by the schema and put it in another player bag.
+</td></tr>
+<tr>
+<td>Sower
+</td>
+<td>NO
+</td>
+<td>
+</td>
+<td>1
+</td>
+<td><b>0</b>
+</td>
+<td>Free action, once during your turn, you can recruit by drawing a stigmerian from another player bag and putting it in your recruitment area.
+</td></tr>
+<tr>
+<td>Jealousy
+</td>
+<td>NO
+</td>
+<td>level &gt;= **
+</td>
+<td>1 per game
+</td>
+<td>1
+</td>
+<td>Once per game, during your turn, after playing on the common board (and before playing on your individual board), you can exchange your bag for the rest of the game with an other player.
+<p>You must have a minimum of 5 tokens in your bag to exchange it.
+</p>
+</td></tr>
+<tr>
+<td>Charmer
+</td>
+<td>NO
+</td>
+<td>level &gt;= **
+</td>
+<td>1
+</td>
+<td><b>0</b>
+</td>
+<td>Free action, once per turn, <b><u>at the end of a turn</u></b> after all players played on their individual board (in turn order).
+<p>Exchange one stigmerian from a recruitment area with one stigmerian from an other recruitment area. If more than two players play, you can exchange tokens from 2 other players.
+</p><p>The exchanged tokens cannot be exchanged again in the current turn.
+</p><p>The first player do this action first if they can and wish to do so, then other players do the same in turn order.
+</p>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Last_Drift">Last Drift</span></h3>
+<p><i>(called "Final drift" in the english rulebook page 30)</i>
+</p><p><b>Free action.</b> Once per turn <u>before playing on the common board</u>, choose one of this 3 options PERSONAL BOARD, OPPONENT BOARD or CENTRAL BOARD before throwing the dice then do the dice actions. 
+</p><p>Once the dice has been throw, you have to do the action.
+</p>
+<h2><span class="mw-headline" id="End_of_game">End of game</span></h2>
+<h3><span class="mw-headline" id="Defeat_case_1_:_Time">Defeat case 1&#160;: Time</span></h3>
+<p>When no one succeeds at fulfilling the objective in time (Normal mode / Competitive modes are limited to 10 turns, solo / multi), then everyone lost the game.
+</p>
+<h3><span class="mw-headline" id="Defeat_case_2_:_Out_of_tokens">Defeat case 2&#160;: Out of tokens</span></h3>
+<p>In a competitive game, a player who run out of tokens in their bag will not be able to play the mandatory central action "draw and land", so they are considered eliminated and other players continue the game.
+</p>
+<h3><span class="mw-headline" id="Defeat_case_3_:_Wind">Defeat case 3&#160;: Wind</span></h3>
+<p>In a normal mode game, if wind blows 1 of your token out of your board, you loose&#160;! (and other players continue the game)
+</p>
+<h3><span class="mw-headline" id="Victory_case_:">Victory case&#160;:</span></h3>
+<p>The player who finish the schema <b>identically</b> (ie. same pollens and <u>0 remaining stigmerians</u>) in the <b>least game turns and actions win</b>.
+</p><p>The game end at the end of the current game turn. (NB&#160;: in normal mode, the game will give everyone a chance to fulfill the schema until turn 10, in competitive modes the game stop.)
+</p>
+<h2><span class="mw-headline" id="Scoring">Scoring</span></h2>
+<p>A success for a schema gives <b>5</b> points for level *, <b>10</b> for level **, <b>20</b> for level *** and <b>40</b> for level ****: each unused action (before end of last turn) gives <b>1</b> point.
+</p><p>A defeat gives <b>-1</b> point.
+</p><p>A used joker gives <b>-5</b> points.
+</p><p><br />
+In case of a tie between winners, the player with the most stigmerians in their recruit zone wins.
+</p><p>If there still is a tie, the player with the most yellow stigmerian recruits wins.
+</p>
+<h2><span class="mw-headline" id="Options">Options</span></h2>
+<p>Your first option is to select the game mode (NORMAL by default). (See objective section).
+</p><p>Your second option is to select the targeted schema for the game&#160;: you may select a random one but be careful of differences in difficulty. Default is 1 (Easy). There are 49 official schemas (from publisher) and some can be made by fan players).
+</p>
+<h3><span class="mw-headline" id="Examples_of_schemas">Examples of schemas</span></h3>
+<p>1&#160;: the star on lower left corner reminds you of the difficulty (the easiest)
+</p><p>In the first schema, you will need 6 blue pollens, 4 orange pollens and 2 yellow pollens&#160;:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:302px;"><img src="../../assets/img/bga/a13abea9df1f7a9e.png" loading="lazy"  alt="" decoding="async" />  <div class="thumbcaption"><div class="magnify"></div>n°1</div></div></div>
+<p>49, the most difficult official one&#160;: (****)
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:302px;"><img src="../../assets/img/bga/806cb4d7b189e447.png" loading="lazy"  alt="" decoding="async" />  <div class="thumbcaption"><div class="magnify"></div>n°49</div></div></div>
+<p><br />
+Unofficial 101&#160;:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:302px;"><img src="../../assets/img/bga/5b200d0187602488.png" loading="lazy"  alt="" decoding="async" />  <div class="thumbcaption"><div class="magnify"></div>n° 101 alias France flag</div></div></div>
+<h2><span class="mw-headline" id="Obsolete_rules">Obsolete rules</span></h2>
+<ul><li>We don't reset the board after a token exits. Change the rule from english rulebook page 23&#160;:</li></ul>
+<blockquote><p>If a stigmerian exit the common board either by the wind effect or a movement of a basic action, the
+</p><p>players reset this board.They take off all the stigmerians from their position on the StigmaReine
+</p><p>
+and put them all around it, outisde of the petals.</p></blockquote></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpstigmeria" target="_blank" rel="noopener">Stigmeria — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

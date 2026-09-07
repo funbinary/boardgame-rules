@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Rive 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Rive · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Rive</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Rive</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>Rive can be played on any odd sized, hexagonally patterned board, which
+starts out empty. The two players, Black and White, take turns placing stones of their own color
+on unoccupied cells on the board. There will always be a placement available. Players cannot
+pass on their turn.
+</p><p>The goal is to claim the majority of cells. Draws cannot occur in Rive.
+</p>
+
+<h2><span class="mw-headline" id="Placement">Placement</span></h2>
+<p>A group here is comprised of interconnected stones of both colors. If
+you can place a stone in isolation, you must do so. Otherwise your stone must be placed adjacent
+to up to three groups, of which the largest must be as small as possible.
+</p><p><img src="../../assets/img/bga/7624b1e71bb58e81.png" loading="lazy"  alt="Rive example 1.png" decoding="async" />
+</p><p>In Figure 1, the only legal stone placements are the cells marked with a green spot. These cells
+have no adjacent groups.
+</p><p>In Figure 2, the only legal placements are marked in green. These cells connect to a group of size
+one. All of the other empty cells connect to groups of size two.
+</p>
+<h2><span class="mw-headline" id="Capturing">Capturing</span></h2>
+<p>When you place a stone that connects to two or three groups,
+you must remove stones from the newly formed group, of either or both colors, to bring the group
+size down to one stone larger than the largest of the groups that was so combined. Selecting
+stones for removal from the newly formed group must be done in a way that does not split the
+group into two or more smaller groups.
+</p><p><img src="../../assets/img/bga/905e2d196f084fb0.png" loading="lazy"  alt="Rive example 2.png" decoding="async" />
+</p><p>In Figure 3a, the capturing placements are marked in green. It is not legal to place a stone
+adjacent to the group of size three, since that’s larger than the minimum possible, two.
+</p><p>In Figure 3b, White has placed the white stone marked with a green spot and selected the two
+stones marked with red for removal, resulting in a new group of size three - one larger than the
+largest group joined with the placement.
+</p><p>There are also two non-capturing placements available in Figure 3a, at the bottom of the
+board. There is no requirement to make a capturing placement if a non-capturing placement is
+available.
+</p>
+<h2><span class="mw-headline" id="Multiple_placements_per_turn">Multiple placements per turn</span></h2>
+<p>When you make a capture, you must add another
+stone to the board while it's still your turn. And you must continue to add stones during your turn
+until you make a non-capturing placement.
+</p><p><img src="../../assets/img/bga/217781d16ebfb962.png" loading="lazy"  alt="Rive example 3.png" decoding="async" />
+</p><p>In Figure 3c, White completes their turn with their only available move, adjacent to a group of two.
+</p><p>In Figure 3d, Black creates a group of size four and must then place another stone while it’s still
+their turn.
+</p>
+<h2><span class="mw-headline" id="Object_of_the_game">Object of the game</span></h2>
+<p>You win with a majority of stones on a filled board.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelprive" target="_blank" rel="noopener">Rive — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

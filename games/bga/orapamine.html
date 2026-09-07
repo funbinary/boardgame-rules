@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Orapamine 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Orapamine · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Orapamine</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Orapamine</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output"><p>We've received a request to locate gemstones in Orapa Mine. By sending ultrasonic waves deep into the ground and analyzing the returned signals, we can determine the position of the gemstones. Although signals sometimes return abnormally, as experts, we will use logic to find the gemstones--just as we always have.
+</p>
+
+<h2><span class="mw-headline" id="Objective">Objective</span></h2>
+<p>This game combines Battleship, Mastermind, and laser reflection puzzles. Locate the position and orientation of gemstones in the Orapa Mine by either sending ultrasonic laser waves and analyzing the results OR pinpointing gem positions. The first player to deduce the layout of gemstones on their grid wins. 
+</p>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<p>Unlike the board game, BGA determines each player's gem layout randomly. The player's area consists of a gridded map where you investigate and analyze the solution, a collection of gemstone overlay pieces, and the game log. 
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>Grid depicting a map of the mine. This is where you place guesses and ultimately submit your solution to the gemstone placement. The four corners have helpful UI tools.
+  <ul class="bulletlist" style="padding-inline-start:40px;">
+    <li>Save the current solution layout</li>
+    <li>Clear the grid.</li>
+    <li>Show/hide gemstone overlays</li>
+    <li>Show/hide gemstone overlay controls (e.g., trash, rotate)</li>
+  </ul></li>
+  <li>Collection of gemstone overlay pieces to put on your grid while determining solutions. Pieces may be dragged onto the suspected/known orientations of the gemstones, as well as empty spaces.</li>
+  <li>Game log</li>
+</ul>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>On your turn, you may do one of the following actions:
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>Send Ultrasound Wave</li>
+  <li>Ask About Specific Position</li>
+  <li>Submit Answer</li>
+</ul>
+<h4><span class="mw-headline" id="Send_Ultrasound_Wave">Send Ultrasound Wave</span></h4>
+<p>Choose a position on any side of your grid from which to send an ultrasound wave. The wave will emit in a straight line into the grid. The results contain A) its exit location B) its exit color, which indicates which color(s) gemstones it reflected against.
+</p>
+<table class="wikitable" style="border-style: solid; border-width: 20px">
+
+<tbody><tr>
+<th>Ultrasound Wave Result Color</th>
+<th>Minimum Number of Colors</th>
+<th>Colors Bounced Against (in any order)
+</th></tr>
+<tr>
+<td>Transparent</td>
+<td>0</td>
+<td>n/a
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from rgb(0, 108, 184) clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,rgb(0, 108, 184),rgb(0, 108, 184))">Blue</span></td>
+<td>1</td>
+<td>Blue
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #e71e1f clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#e71e1f,#e71e1f)">Red</span></td>
+<td>1</td>
+<td>Red
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #ffffff clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#ffffff,#ffffff)">White</span></td>
+<td>1</td>
+<td>White
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #fabe2a clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#fabe2a,#fabe2a)">Yellow</span></td>
+<td>1</td>
+<td>Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #800080 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#800080,#800080)">Purple</span></td>
+<td>2</td>
+<td>Blue / Red
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #87CEEB clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#87CEEB,#87CEEB)">Sky Blue</span></td>
+<td>2</td>
+<td>Blue / White
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #008000 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#008000,#008000)">Green</span></td>
+<td>2</td>
+<td>Blue / Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #FFC0CB clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#FFC0CB,#FFC0CB)">Pink</span></td>
+<td>2</td>
+<td>Red / White
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #F4A460 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#F4A460,#F4A460)">Orange</span></td>
+<td>2</td>
+<td>Red / Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from rgb(255, 244, 79) clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,rgb(255, 244, 79),rgb(255, 244, 79))">Lemon</span></td>
+<td>2</td>
+<td>White / Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #D8BFD8 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#D8BFD8,#D8BFD8)">Light Purple</span></td>
+<td>3</td>
+<td>Blue / Red / White
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #000000 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#000000,#000000)">Black</span></td>
+<td>3</td>
+<td>Blue / Red / Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #90EE90 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#90EE90,#90EE90)">Light Green</span></td>
+<td>3</td>
+<td>Blue / White / Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #FFD8B1 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#FFD8B1,#FFD8B1)">Light Orange</span></td>
+<td>3</td>
+<td>Red / White / Yellow
+</td></tr>
+<tr>
+<td><span style="display:inline-block;display:inline;color:oklch(from #808080 clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#808080,#808080)">Gray</span></td>
+<td>4</td>
+<td>Blue / Red / White / Yellow
+</td></tr></tbody></table>
+<p><b><u>Interpreting Ultrasound Wave Results</u></b>
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>The result color does not change if a wave hits more than one instance of the same gemstone. For example, if a wave hits 2 white gemstones and 1 red, the result will be pink.</li>
+</ul>
+<p><b><u>Placement Rules</u></b>
+</p><p>Pieces have been placed on the on mine board according to
+the following rules:
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+<li> The corners of pieces align with the grid points on the board, and the lines within each piece match the grid lines.
+</li><li> Pieces may touch the edge of the board, but cannot be placed outside the grid.
+</li><li> The edges of two pieces cannot directly touch but they may touch corner to edge or corner to corner.
+</li><li> No piece can be completely hidden behind other pieces when viewed from the board’s edge.
+</li><li> Two white gems cannot be placed in a perfectly symmetrical arrangement along the vertical or horizontal direction.
+</li></ul>
+<h4><span class="mw-headline" id="Ask_About_Specific_Position">Ask About Specific Position</span></h4>
+<p>Select a specific space on the grid. BGA will tell you what color gemstone (if any) occupies that space, but not its shape or angle.
+</p>
+<h4><span class="mw-headline" id="Submit_Answer">Submit Answer</span></h4>
+<p>Once the grid is valid (has all the gemstones placed), the player may submit it to see if it's correct. If so, the player wins. If not, the game continues. A player only gets 2 chances to submit an answer. If the second guess is incorrect, the player is out of the game.
+</p>
+<h2><span class="mw-headline" id="Variants">Variants</span></h2>
+<h4><span class="mw-headline" id="Diamond_Expansion">Diamond Expansion</span></h4>
+<p>This variant increases difficulty by adding a transparent gemstone piece. The transparent gem reflects ultrasound waves like other gemstones, but does not affect the resulting color. For example, if a wave hits a red gemstone, white gemstone, and a transparent gemstone, the result will be pink.
+</p>
+<h4><span class="mw-headline" id="Blackbody_Expansion">Blackbody Expansion</span></h4>
+<p>This variant increases difficulty by adding a black gemstone piece. The black gemstone does not reflect ultrasound waves. In this case, the result will be "the signal was absorbed" instead of an exit point or color.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelporapamine" target="_blank" rel="noopener">Orapamine — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

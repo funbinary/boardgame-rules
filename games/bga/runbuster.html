@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Runbuster 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Runbuster · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Runbuster</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Runbuster</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="RUN_BUSTER"><b>RUN BUSTER</b></span></h2>
+<h4><span class="mw-headline" id="INTRODUCTION"><b>INTRODUCTION</b></span></h4>
+<p>Two players, Red and Blue, sit across from each other at an initially cleared table.   They each begin with a dice cup containing six dice of their own color.
+</p>
+<h4><span class="mw-headline" id="DEFINITIONS"><b>DEFINITIONS</b></span></h4>
+<p><b>Straight</b> - Collection of one or more dice, numbered sequentially, such as (2, 3, 4), (3, 4, 5, 6), and (1). [A straight is always as long as it can be. It’s never a sub-straight of a longer straight.]
+</p><p><b>Full straight</b> - (1, 2, 3, 4, 5, 6)
+</p><p><b>Complement (or Run Buster)</b> - The set of dice which, when combined with a non-full straight, completes a full straight. For example, the complement of (2, 3, 4) is (1, 5, 6).
+</p>
+<h4><span class="mw-headline" id="PLAY"><b>PLAY</b></span></h4>
+<p>Starting with Red, players take turns rolling their dice, <b>one roll per turn</b>, and adding some of their newly rolled dice into their own hand (if they can. See below.)  Players sometimes kill their opponent's hand.
+</p>
+<h4><span class="mw-headline" id="OBJECT_OF_THE_GAME"><b>OBJECT OF THE GAME</b></span></h4>
+<p>To win, your hand must be a full straight. It's possible to win on your first turn, with a probability of 1.54%, or about 1 in 65 plays.
+</p>
+<h4><span id="RED.27S_FIRST_TURN"></span><span class="mw-headline" id="RED'S_FIRST_TURN"><b>RED'S FIRST TURN</b></span></h4>
+<p>Red rolls the dice in his cup, and, selecting from his rolled dice, forms his hand.  His hand must consist of exactly one straight. [Hands are always comprised of exactly one straight.]  For example, if Red rolls (2, 2, 4, 5, 5, 6), his hand option are (2), (4), (4, 5), (4, 5, 6), (5), (5, 6), and (6). After forming his hand, Red must deposit his remaining dice back into his cup, concluding his turn.
+</p>
+<h4><span id="BLUE.27S_FIRST_TURN"></span><span class="mw-headline" id="BLUE'S_FIRST_TURN"><b>BLUE'S FIRST TURN</b></span></h4>
+<p>Blue rolls the dice in his cup.  If Blue's rolled dice contain the complement of Red's straight, Blue must remove Red's hand from the table and drop it into Red's cup. For example, if Red's hand is (1, 2, 3, 4), and Blue rolls (1, 3, 3, 5, 6, 6), Blue's roll contains (5, 6), which is the complement of Red's (1, 2, 3, 4). Blue must then place Red's hand in Red's cup.
+</p><p>Then Blue (whether or not he killed Red’s hand), selecting from his rolled dice, forms his own hand, consisting of exactly one straight.  In this example, from his (1, 3, 3, 5, 6, 6), Blue’s hand options are (1), (3), (5), (5, 6), and (6).  Blue must then put his remaining dice back in his cup, concluding his turn.
+</p>
+<h4><span class="mw-headline" id="ALL_REMAINING_TURNS"><b>ALL REMAINING TURNS</b></span></h4>
+<p>Begin your turn by rolling the dice in your cup. If your newly rolled dice contain the complement of your opponent's straight, you must remove his hand from the table and deposit it in his cup, as described above.  Then (whether or not you've killed your opponent's hand) you must <b>extend your straight</b> with at least one of your newly rolled dice, <b>if you can</b>. For example, say your hand is (4, 5) and you've rolled (3, 4, 4, 6).  Your new, extended straight options are (3, 4, 5), (3, 4, 5, 6), and (4, 5, 6).  But say that, instead, you've rolled (1, 2, 4, 5). In this case, there's no way to extend your (4, 5) straight.  As always, put your remaining dice back in your cup, concluding your turn.
+</p>
+<h4><span class="mw-headline" id="MONOCOLOR_RUN_BUSTER"><b>MONOCOLOR RUN BUSTER</b></span></h4>
+<p>Each player must have their own hand, but not necessarily their own color. All of the dice can be standard white dice with black pips for example.  Just try to keep the hands separated if they're all the same color.
+</p>
+<h4><span class="mw-headline" id="MULTIPLAYER_RUN_BUSTER"><b>MULTIPLAYER RUN BUSTER</b></span></h4>
+<p>Run Buster can actually accommodate any number of players.  Remove all of your opponents’ hands for which you have complements in your newly rolled dice.  Randomly choose Player 1 and proceed clockwise.  In successive rounds, the new Player 1 is to the left of the previous Player 1.  The round winners drop out, one by one, and the last remaining player buys the next round of drinks.
+</p>
+<h4><span class="mw-headline" id="DESIGN_NOTES"><b>DESIGN NOTES</b></span></h4>
+<p>The challenge was to design a simple dice game with a certain symmetry: Six faces on a die, six dice, and a goal of six different numbers.  It took me a few weeks of trance-like concentration.  Inventing concepts.  Morphing and recombining them.  Eventually the solution came together in the form of this very satisfying mechanism.
+</p>
+<h2><span class="mw-headline" id="BGA_USER_INTERFACE"><b>BGA USER INTERFACE</b></span></h2>
+<h4><span class="mw-headline" id="DICE_CUPS"><b>DICE CUPS</b></span></h4>
+<p>The Run Buster UI is shockingly minimal.  Starting out, there are two dice cups on the screen - one on the upper half and one on the lower half.  The lower dice cup is yours.  It is initially colored green.  
+</p>
+<h4><span class="mw-headline" id="ROLL_YOUR_DICE"><b>ROLL YOUR DICE</b></span></h4>
+<p>Begin your turn by clicking on your dice cup.  This rolls your dice.  Your dice cup turns yellow after your roll.
+</p>
+<h4><span class="mw-headline" id="ADD_DICE_TO_YOUR_HAND"><b>ADD DICE TO YOUR HAND</b></span></h4>
+<p>Add some of your rolled dice to your hand by clicking on them.  You must add at least one die to your hand, if you can.
+</p>
+<h4><span class="mw-headline" id="CONCLUDE_YOUR_TURN"><b>CONCLUDE YOUR TURN</b></span></h4>
+<p>Once you've added all of the dice to your hand that you intend to, click on your (now yellow) dice cup.  This puts all of your unused, rolled dice back into your cup, and turns your cup red, concluding your turn.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelprunbuster" target="_blank" rel="noopener">Runbuster — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

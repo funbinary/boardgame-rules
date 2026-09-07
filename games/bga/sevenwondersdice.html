@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Sevenwondersdice 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Sevenwondersdice · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Sevenwondersdice</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Sevenwondersdice</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>A game plays over a series of roll-and-write turns during which players use dice to construct their cities. The game ends when one player has crossed off 3 bonuses. The player with the highest score wins.
+</p>
+<h2><span class="mw-headline" id="Turn_Structure">Turn Structure</span></h2>
+<p>Each turn has two phases: 
+</p><p>1. BGA rolls the dice.
+</p><p>Dice are rolled in a box called "the Forum." The forum is divided into four quarters. Each section is associated with a cost (0, 1, 2, or 3) to take an action based on that die. 
+</p><p>2. Each player does one of three available actions:
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>Construct a building</b>
+  <ol class="bulletlist" style="padding-inline-start:40px;">
+    <li>Choose one of the 7 dice in the Forum associated with a building on your board. Pay its cost in the forum.</li>
+    <li>Pay the construction cost (the number in a square under the symbol) using Resources and/or coins. (You must follow order of construction.)</li>
+    <li>Cross off the space and gain the benefit from its effect.</li>
+  </ol></li>
+  <li><b>Construct a Wonder</b>
+  <ol class="bulletlist" style="padding-inline-start:40px;">
+    <li>Pay the construction cost (the number in a square under the symbol) under your Wonder, using Resources and/or coins. No die must be chosen. (You must follow order of construction.)</li>
+    <li>Cross off the space and gain the benefit from its effect.</li>
+  </ol>
+  </li>
+  <li><b>Pass and gain 3 coins</b></li>
+</ul>
+<p>When all the spaces of a building are crossed off, you may gain one of three bonuses and gain its effect.
+</p>
+<h2><span class="mw-headline" id="Dice_and_Buildings">Dice and Buildings</span></h2>
+<table class="wikitable" style="max-width:50rem;" border="2">
+<tbody><tr>
+<th>Die
+</th>
+<th>Building
+</th>
+<th>Description
+</th>
+<th>Die Faces
+</th></tr>
+<tr>
+<td><img src="../../assets/img/bga/5f04bea371e010b1.gif" loading="lazy"  alt="7dice grayDie.gif" decoding="async" />
+</td>
+<th style="background:#DCCDC6">Warehouse
+</th>
+<td>Accumulates resources that reduce the cost of other buildings. Resources are never spent once unlocked. Completing the Warehouse does not earn a bonus.
+</td>
+<td>Each represents 1 of the 6 resources.
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/3fae0bfda903a4c0.gif" loading="lazy"  alt="7dice redDie.gif" decoding="async" />
+</td>
+<th style="background:#D14450">Barracks
+</th>
+<td>The VP scored when a sword/axe space is crossed off is equal to the number of points shown in that space minus the number of shields crossed off in the neighboring city at that moment (i.e. the shield only affects axe/sword cells not yet crossed).
+</td>
+<td>2x Shield, 2x Axe, 2x Sword
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/423a85a5b37c1b4a.gif" loading="lazy"  alt="7dice blueDie.gif" decoding="async" />
+</td>
+<th style="background:#4C98C0">Agora
+</th>
+<td>Scores VP. First player to cross off every space scores 3 extra VP.
+</td>
+<td>Each represents 1 of the 6 rows/columns in the Agora.
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/cc43c96ba21dc3ad.gif" loading="lazy"  alt="7dice yellowDie.gif" decoding="async" />
+</td>
+<th style="background:#FDCC00">Market
+</th>
+<td>Gains coins and resources.
+</td>
+<td>2x 7 Coins, 2x Camel, 2x Chest
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/67b362e835dd3cd9.gif" loading="lazy"  alt="7dice greenDie.gif" decoding="async" />
+</td>
+<th style="background:#79A358">University
+</th>
+<td>Grants ongoing bonus effects and unlocks special dice.
+</td>
+<td>2x tablet, 2x compass, 2x cog
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/8ff1375b5ccd3c34.gif" loading="lazy"  alt="7dice purpleDie.gif" decoding="async" />
+</td>
+<th style="background:#9B71B1">Guild Court
+</th>
+<td>Player must have more spaces crossed off in the corresponding building than each neighbor to score VP here.
+</td>
+<td>1x Warehouse, 1 Agora, 1 Barracks, 1 Market, 1 University, 1 Wonder
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/9b1eb3a446d6a7ff.gif" loading="lazy"  alt="7dice whiteDie.gif" decoding="async" />
+</td>
+<th style="background:#FFFFFD">Gallery of Leaders
+</th>
+<td>Crosses off spaces in other buildings. Must be unlocked first.
+</td>
+<td>1x red leader, 1 yellow leader, 1 green leader, 1 blue leader, 2x 1 VP per leader crossed off
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/81260f35ae2172fe.gif" loading="lazy"  alt="7dice blackDie.gif" decoding="async" />
+</td>
+<th style="background:black;"><span style="display:inline-block;display:inline;color:white;font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:&#123;&#123;&#123;w&#125;&#125;&#125;;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:&#123;&#123;&#123;f&#125;&#125;&#125;;white-space:&#123;&#123;&#123;wr&#125;&#125;&#125;;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:&#123;&#123;&#123;br&#125;&#125;&#125;em;padding:0px 0px 0px 0px;background:linear-gradient(90deg in oklch,#fff0,#fff0)">Spy</span>
+</th>
+<td>Allows crossing off any space in the corresponding building. Must be unlocked first.
+</td>
+<td>1 blue, 1 yellow, 1 red, 1 green, 1 gray, 1 red/blue/yellow/green
+</td></tr>
+<tr>
+<td><img src="../../assets/img/bga/14816f3606c5268d.gif" loading="lazy"  alt="7dice noDie.gif" decoding="async" />
+</td>
+<th style="background:#FFFFE0">Wonder
+</th>
+<td>Each board's Wonder has unique actions.
+</td>
+<td>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Game_End_and_Scoring">Game End and Scoring</span></h2>
+<p>When any player crosses off all three of their bonuses, all players take one more turn before scoring. BGA adds up the victory points for all buildings that the players have constructed. The player with the highest score wins.
+</p><p>On a tie, the player with the most unspent coins wins the game.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpsevenwondersdice" target="_blank" rel="noopener">Sevenwondersdice — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

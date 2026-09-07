@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Shut the box 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Shut the box · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Shut the box</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Shut the box</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="SHUT_THE_BOX"><b>SHUT THE BOX</b></span></h2>
+<p>Shut the box is a simple game where you roll dice and drop tiles with values that are equal to or added up to the value rolled. The goal of the game is to score the least amount of points than other players, or if playing solo, try to drop all boxes.
+</p>
+<h4><span class="mw-headline" id="RULES"><b>RULES</b></span></h4>
+<p>On your turn, you must roll 2 dice. If the remaining boxes open are 1 through 6, then you may roll 1 die instead. If you can play, you must. Drop up to 2 boxes in your turn that add up exactly to the value rolled. If you can’t play, your round is over, and no more future plays can be made for that player in the round. Once everyone has finished their round, points are scored. It is dependent by how many boxes are open after the round.
+</p>
+<h4><span class="mw-headline" id="SCORING_MODES"><b>SCORING MODES</b></span></h4>
+<p><b>Add up values:</b>
+Boxes that are still open at the end of the round are all added up by their shown values and put toward your player score (in bga, the points are reduced).
+</p><p><b>Remaining open boxes:</b>
+Boxes that are still open at the end of the round are added to your player score, regardless of value shown.
+</p><p><b>Score what you see:</b>
+Boxes that are still open will be added up by its shown value from left to right, so values can be very massive with this kind of scoring. (Example, if the remaining open boxes are 3, 7, 9, and 11, the score is 37,911.) (Also due to 32bit integer limit on bga, a value of 2,147,483,647 or more will get you eliminated.)
+</p>
+<h4><span class="mw-headline" id="ENDING_THE_GAME"><b>ENDING THE GAME</b></span></h4>
+<p>The game ends when only one player remains. For a quick game (or if scoring is what you see), whoever has the least amount of points wins (in bga, the most points, which is whoever has the fewest negative points).
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpshutthebox" target="_blank" rel="noopener">Shut the box — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

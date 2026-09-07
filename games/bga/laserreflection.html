@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Laserreflection 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Laserreflection · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Laserreflection</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Laserreflection</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>Players create a puzzle using the allotted pieces then race to see who can complete the other puzzles the fastest.
+</p>
+<h2><span class="mw-headline" id="Phase_1:_Construction">Phase 1: Construction</span></h2>
+<p>Using all objects, each player places objects into the grid to create a puzzle that all other players will attempt to solve. All objects must be used and can be arranged in any way the player desires. When a player decides they are happy with the position of all objects they may select "ready" and prepare for phase 2.
+</p>
+<h2><span class="mw-headline" id="Phase_2:_Solving">Phase 2: Solving</span></h2>
+<p>When all players have completed their grids and pressed "ready" each player will receive the puzzle of another player. Players will then select "start" to begin solving the puzzle.
+</p><p>By placing objects on the grid, each player will need to deduce how the objects have been placed for this puzzle. To do this, the players must look at the numbers and colors on each square. If a square has a red outline that means that square's laser does not meet the requirements of reflection; the laser projected from that square does not project in the manner the other player set up with their puzzle. 
+</p><p><b>A puzzle is solved when a player places objects so that all lasers for all squares meet their requirements.</b>
+</p><p>Players will attempt to solve each other player's puzzle.
+</p><p>Players may "give up" at any time if they find a puzzle too difficult. They will proceed to the next player's puzzle after everyone finishes their own round.
+</p>
+<h2><span class="mw-headline" id="Game_Physics">Game Physics</span></h2>
+<p>Each square with a number projects a laser directly away from itself. The number is the amount of square that laser crosses before it exits the board.
+</p><p><b>Players may click on a numbered square to see the laser projected from it.</b>
+</p>
+<ul><li><b>Green squares</b> project a laser that goes off the board through a different square than the one from which it started. This means that each green square will project a laser to another green square with the same number.</li></ul>
+<ul><li><b>Yellow squares</b> emit a laser that reflects off a flat surface at some point and returns to the square from which it originally came.</li></ul>
+<ul><li><b>Gray squares</b> emit a laser that is swallowed up in a black hole.</li></ul>
+<p><b>Examples:</b>
+</p>
+<ul><li>A Green 8 emits a laser that travels 8 spaces and leaves the board through another square.</li></ul>
+<ul><li>A Yellow 10 emits a laser that travels five spaces before it reflects off a flat surface and bounces back on itself covering the same 5 spaces (total of 10) and leaving the board through the same space it began.</li></ul>
+<ul><li>A Gray 4 projects a laser 4 spaces before it enters a black hole, where it stops.</li></ul>
+<p>Every numbered square will be one of the above.
+</p>
+<h2><span class="mw-headline" id="Objects">Objects</span></h2>
+<p>Objects are randomized for each game.
+Games will not contain black holes or light warps unless specified in game preferences.
+</p>
+<ul><li><b>Angled Mirrors</b>: most common piece; reflects lasers at angles.</li>
+<li><b>Double Mirrors</b>: two types: horizontal and vertical; create flat surfaces that send lasers back to their original squares; lasers passing between the mirrors are unaffected.</li>
+<li><b>Square Mirror</b>: creates a four-sided mirror that reflects in every direction.</li>
+<li><b>Black Hole</b>: creates a hole in which the laser stops and is absorbed.</li>
+<li><b>Light Warp</b>: not placed by players, always two; creates a portal through which a laser passes; a laser entering through one light warp will continue out of the other.</li></ul>
+<h2><span class="mw-headline" id="Game_End">Game End</span></h2>
+<p>The game ends when all players have solved their puzzles or given up. 
+</p><p>Players receive points for solving the puzzle with the fastest player receiving the most. 
+</p><p><b>After all rounds have been completed, the player with the most points wins the game.</b>
+<b>If players tie the one that took the least amount of total time across all rounds wins the game.</b>
+</p>
+<h2><span class="mw-headline" id="Solo_Mode">Solo Mode</span></h2>
+<p>To complete the Challenges, you have to solve a number of puzzles (3/6/10) based on the level of the challenge.
+</p><p>When playing any Challenge level, you start with one heart (are allowed to fail one puzzle and still continue).
+</p>
+<ul><li>Challenge 1 - Easy: Only 1 heart, but you only need to complete 3 puzzles</li>
+<li>Challenge 2 - Medium: An extra heart can be earned by completing 3 puzzles</li>
+<li>Challenge 3 - Hard: An extra heart can be earned by completing 5 puzzles</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelplaserreflection" target="_blank" rel="noopener">Laserreflection — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Blackjack 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Blackjack · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Blackjack</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Blackjack</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="BLACKJACK"><b>BLACKJACK</b></span></h2>
+<p>Blackjack is a classic casino card game where players compete against the dealer. The goal is to obtain a hand value closer to <b>21</b> than the dealer’s hand without exceeding that value.
+</p><p>Players do not compete against each other: everyone tries to beat the dealer. The dealer always draws cards until reaching <b>17 points</b> and automatically stands once reaching <b>17 or more</b>.
+</p>
+<h2><span class="mw-headline" id="Objective_of_the_Game"><b>Objective of the Game</b></span></h2>
+<p>Each player tries to form a hand with a value higher than the dealer’s without exceeding 21.
+</p><p>You win if:
+</p><p>Your hand is higher than the dealer’s.
+</p><p>The dealer exceeds 21.
+</p><p>You have <b>Blackjack</b> (21 with two cards) and the dealer does not.
+</p><p>You lose if:
+</p><p>You exceed 21.
+</p><p>The dealer has a higher hand without exceeding 21.
+</p><p>The dealer has Blackjack and you do not.
+</p>
+<h2><span class="mw-headline" id="Card_Values"><b>Card Values</b></span></h2>
+<p>Cards from <b>2 to 10</b> are worth their numeric value.
+</p><p><b>J, Q, K</b> are worth <b>10</b>.
+</p><p><b>Ace</b> is worth <b>1 or 11</b>, whichever is more advantageous for the hand.
+</p><p>A <b>Blackjack</b> occurs when the first two cards total exactly <b>21</b> (an Ace + a 10-value card).
+</p>
+<h2><span class="mw-headline" id="Game_Flow"><b>Game Flow</b></span></h2>
+<p>All players place their bets.
+</p><p>Each player receives two face-up cards.
+</p><p>The dealer receives two cards (usually one face up and one face down).
+</p><p>Each player takes their turn.
+</p><p>The dealer reveals their hidden card and plays according to dealer rules.
+</p><p>Bets are resolved.
+</p>
+<h2><span class="mw-headline" id="Player_Actions"><b>Player Actions</b></span></h2>
+<p>During their turn, a player may choose between:
+</p><p><b>Hit</b>
+</p><p>Receive an additional card.
+</p><p><b>Stand</b>
+</p><p>End the turn keeping the current hand.
+</p><p><b>Double</b>
+</p><p>Double the bet and receive only <b>one additional card</b>.
+</p><p><b>Split</b>
+</p><p>If the first two cards have the same value, the player may split them into two separate hands.
+</p><p><b>Surrender</b>
+</p><p>The player abandons the round and loses half of the bet.
+</p>
+<h2><span class="mw-headline" id="Dealer_Rules"><b>Dealer Rules</b></span></h2>
+<p>The dealer follows fixed rules:
+</p><p>Draw cards while having <b>16 or less</b>.
+</p><p>Automatically stand when reaching <b>17 or more</b>.
+</p>
+<h2><span class="mw-headline" id="Configuration_Options"><b>Configuration Options</b></span></h2>
+<p>Some tables may use different game configurations.
+</p>
+<h3><span class="mw-headline" id="Number_of_Rounds">Number of Rounds</span></h3>
+<p>Defines how many rounds will be played.
+</p><p>1
+</p><p>6
+</p><p>10
+</p><p>20
+</p>
+<h3><span class="mw-headline" id="Number_of_Decks">Number of Decks</span></h3>
+<p>Number of decks used in the game.
+</p><p>1
+</p><p>4
+</p><p>6
+</p><p>8
+</p>
+<h3><span class="mw-headline" id="Split">Split</span></h3>
+<p>Maximum number of times a player can split their hand.
+</p><p>Not allowed
+</p><p>Up to 3 times
+</p>
+<h3><span class="mw-headline" id="Surrender">Surrender</span></h3>
+<p>Allows a player to abandon the round and lose half of their bet.
+</p><p>No
+</p><p>Yes
+</p>
+<h3><span class="mw-headline" id="Determine_Dealer_Blackjack_Immediately">Determine Dealer Blackjack Immediately</span></h3>
+<p>If enabled, the dealer immediately checks for Blackjack after the initial deal.
+</p><p>No
+</p><p>Yes
+</p>
+<h3><span class="mw-headline" id="Shuffle">Shuffle</span></h3>
+<p>Defines when the deck will be reshuffled.
+</p><p>Always
+</p><p>~25%
+</p><p>~50%
+</p>
+<h3><span class="mw-headline" id="Elimination">Elimination</span></h3>
+<p>Defines when players may be eliminated from the game.
+</p><p>No
+</p><p>Every round
+</p><p>Every 3 rounds
+</p>
+<h3><span class="mw-headline" id="Minimum_Double">Minimum Double</span></h3>
+<p>Defines when the Double action is allowed.
+</p><p>No
+</p><p>Every round
+</p><p>Every 2 rounds
+</p>
+<h3><span class="mw-headline" id="Secret_Bet">Secret Bet</span></h3>
+<p>Allows hidden bets between players.
+</p><p>None
+</p><p>1
+</p><p>2
+</p>
+<h3><span class="mw-headline" id="Minimum_Bet_Limit">Minimum Bet Limit</span></h3>
+<p>Minimum amount that can be bet.
+</p><p>1
+</p><p>4
+</p><p>10
+</p>
+<h3><span class="mw-headline" id="Maximum_Bet_Limit">Maximum Bet Limit</span></h3>
+<p>Defines the maximum bet based on the table minimum.
+</p><p>Disabled
+</p><p>Maximum: Minimum × 50
+</p><p>Maximum: Minimum × 100
+</p><p>Maximum: Minimum × 200
+</p>
+<h2><span class="mw-headline" id="End_of_the_Game"><b>End of the Game</b></span></h2>
+<p>After the defined number of rounds, the player with the <b>highest number of chips</b> wins.
+</p><p>In case of a tie, the tied players share the victory.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpblackjack" target="_blank" rel="noopener">Blackjack — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

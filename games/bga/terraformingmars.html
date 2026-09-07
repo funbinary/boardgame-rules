@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="重塑火星 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>重塑火星 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">重塑火星</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">重塑火星</h1>
+          <p class="game-sub">Terraformingmars · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Turn_Structure">回合结构</span></h2>
+<p>每个轮代表火星发展与殖民的一个世代。在每个轮开始时，"先手标记"会移交给下一位玩家。每个世代，玩家执行以下步骤：
+</p>
+<ol class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>研究</b>：摸4张牌。你可以选择任意数量的牌加入手牌，每张牌花费3M€，然后弃掉剩余的牌。（无手牌上限。）</li>
+  <li><b>行动</b>：从下面的列表中选择1-2个行动。按回合顺序继续，直到所有玩家都弃牌。</li>
+  <ul class="bulletlist" style="padding-inline-start:40px;">
+    <li>打出一张手牌。</li>
+    <li>执行一个<i>标准项目</i>。</li>
+    <li>宣称一个里程碑。</li>
+    <li>资助一个奖项。</li>
+    <li>使用一张蓝牌行动（每个世代每张只能使用一次）。</li>
+    <li>花费8个植物来放置一个绿化板块。（这会增加氧气水平和你的地球化评级）</li>
+    <li>花费8点热量来使温度上升1度。（这也增加你的地球化评级）</li>
+    <li>弃牌。如果你弃牌，你将无法在本轮中再执行任何行动。当所有玩家都弃牌后，本轮结束。</li>
+  </ul>
+  <li><b>生产</b>：将未使用的能量转化为热量。所有玩家根据其生产数值获得资源，并获得M€，数量等于其地球化评级+M€生产值。</li>
+</ol>
+<h4><span class="mw-headline" id="Playing_Cards">打出牌</span></h4>
+<p>要打出一张牌，你必须支付其M€成本。（其他牌可能可以降低这个成本。）在某些情况下，资源可以代替M€支付。
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>1个钢铁 = 2M€，用于支付任何<i>建筑</i>牌（棕色建筑图标）</li>
+  <li>1个钛 = 3M€，用于支付任何<i>太空</i>牌（金色太阳图标）</li>
+</ul>
+<p>有些牌有要求，例如：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>全局参数（海洋数量、氧气、温度必须高于或低于特定水平）</li>
+  <li>场上特定类型的标签数量。标签出现在你游戏区域中已打出牌的顶部。（BGA也会以数字形式显示它们。）</li>
+  <li>生产特定资源的能力（如钛）。</li>
+</ul>
+<p>一旦支付了成本，你将获得牌的收益和效果（例如，获得资源，增加/减少生产值）。如果生产值变化有红色边框（通常是负面效果），你可以将其应用于另一个玩家或无人。
+</p><p>牌打出后，它会移动到你版图上的三个区域之一。（你可以通过点击"三条横线"图标来改变这些区域的排列方式。）
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>红色卡牌</b>有一次性效果。它们不提供标签，因此会自动隐藏，但可能获得分数。</li>
+  <li><b>绿色卡牌</b>有一次性效果，但它们的标签会添加到你的 tableau（这可以帮助你打出其他卡牌）并且可能获得分数。</li>
+  <li><b>蓝色卡牌</b>有持续的被动效果或你在你的回合可以采取的行动。</li>
+</ul>
+<h4><span class="mw-headline" id="Standard_Projects">标准项目</span></h4>
+<p>标准项目总是可以作为行动使用。大多数涉及在火星板块上放置板块。如果板块放置在有资源图标的六边形中，玩家获得这些资源。你还会根据放置板块相邻的海洋板块数量获得 2M€。
+</p><p>你也可以通过花费热量或植物而不是 M€来提高温度。
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+<tbody><tr>
+<th>名称</th>
+<th>费用</th>
+<th>描述</th>
+<th>备注
+</th></tr>
+<tr>
+<td><b>出售专利</b></td>
+<td>弃一张牌</td>
+<td>每张弃牌获得 1 M€。</td>
+<td>
+</td></tr>
+<tr>
+<td><b>发电厂</b></td>
+<td>11 M€</td>
+<td>将你的能源产量提高一步。</td>
+<td>
+</td></tr>
+<tr>
+<td><b>小行星</b></td>
+<td>14 M€</td>
+<td>温度提高 1 度。你的 TR 提高 1。</td>
+<td>
+</td></tr>
+<tr>
+<td><b>蓄水层</b></td>
+<td>18 M€</td>
+<td>放置 1 个海洋板块。你的 TR 提高 1。</td>
+<td>海洋板块不属于任何玩家。
+</td></tr>
+<tr>
+<td><b>绿地</b></td>
+<td>23 M€</td>
+<td>放置 1 个绿地板块，氧气水平提高 1%。你的 TR 提高 1。</td>
+<td>绿地板块必须放置在你拥有的另一个板块旁边。
+</td></tr>
+<tr>
+<td><b>城市</b></td>
+<td>25 M€</td>
+<td>放置 1 个城市板块。你的 M€ 产量提高 1。</td>
+<td>城市板块不能彼此相邻放置（除诺克提斯城外，它放置在预留的六边形上，以及<i>城市化区域</i>，必须放置在 2 个城市板块旁边。）
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Milestones_and_Awards">里程碑和奖项</span></h4>
+<p>里程碑和奖项是<i>火星改造</i>的竞争元素。第一个达到特定里程碑的玩家获得其奖励。奖项在游戏结束时颁发。
+</p><p>花费 8 M€来声明你已满足条件的里程碑。每个里程碑价值 5 分，但每局游戏最多只能声明 3 个里程碑。可用的里程碑取决于地图。
+</p><p>对于奖项，第一个资助的奖项花费 8 M€，下一个花费 14 M€，最后一个花费 20 M€。每局游戏最多只能资助 3 个奖项。在计分时，BGA 检查每个资助的奖项，并给满足其条件的第一和第二名玩家分数。资助奖项的玩家没有特殊考虑。
+</p>
+<h2><span class="mw-headline" id="Game_End_and_Scoring">游戏结束和计分</span></h2>
+<p>当氧气水平达到14%，地图上有9个海洋板块，温度为8˚C时，游戏结束。当前世代/轮结束。所有玩家有一次额外回合，可以将多余的植物转化为一个或多个绿化板块。
+</p>
+<table class="wikitable" style="width:auto;" border="2">
+<tbody><tr>
+<th>来源</th>
+<th>描述
+</th></tr>
+<tr>
+<td><b>地球改造评级</b></td>
+<td>获得与你的地球改造评级相等的分数。
+</td></tr>
+<tr>
+<td><b>绿化板块</b></td>
+<td>为你拥有的每个绿化板块获得分数。
+</td></tr>
+<tr>
+<td><b>城市板块</b></td>
+<td>为你拥有的每个<i>与城市板块相邻的绿化板块</i>获得分数。绿化板块的所有者不重要。首都城市也为每个相邻的海洋板块获得1分。
+</td></tr>
+<tr>
+<td><b>奖项</b></td>
+<td>第一名获得5分，第二名获得2分。奖项必须有资金支持才能计入。（在两人游戏中，不授予第二名。）
+</td></tr>
+<tr>
+<td><b>里程碑</b></td>
+<td>为你获得的每个里程碑获得5分。
+</td></tr>
+<tr>
+<td><b>已使用的卡牌</b></td>
+<td>为每张标有其分数价值的卡牌获得1分。
+</td></tr></tbody></table>
+<p>平局时，拥有最多M€的玩家获胜。
+</p>
+<h2><span class="mw-headline" id="Variants">变体</span></h2>
+<h4><span class="mw-headline" id="Solo">单人</span></h4>
+<p>要获胜，你必须在第14世代结束时达到每个全球参数（温度、海洋板块和氧气水平）的目标。单人变体只有14个世代。
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>总是使用企业时代设置。（包含所有企业时代卡牌。） </li>
+  <li>游戏开始前，在地图上放置2个中立城市板块，每个板块相邻一个绿化板块。这些板块不会增加氧气水平。 </li>
+  <li>起始地球改造评级为14而不是20。你没有额外的资源产出。</li>
+  <li>不使用奖项和里程碑。</li>
+  <li>你可以从中立对手那里偷取资源或减少其资源和产出。</li>
+  <li>游戏在第14世代（轮）后结束，无论温度、海洋板块或氧气水平是否达到其目标。</li><li><b>前奏扩展：</b>启用前奏扩展后，游戏在第12世代结束！</li><li><b>殖民地扩展：</b>启用殖民地扩展后，你开始游戏时MC产出为-2，并且必须从4个随机殖民地板块中选择3个用于游戏。
+</li></ul>
+<h4><span class="mw-headline" id="Options">选项</span></h4>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li><b>启用选牌</b>: 在研究阶段，牌库中的牌会在所有玩家间进行选牌，而不是购买。</li>
+  <li><b>新手公司</b>: 新手公司开始时有42 M€，并获得10张牌，无需花费金钱。（仅推荐新手玩家使用）</li>
+  <li><b>公司时代</b>: 游戏开始时选择一张公司牌。每张牌提供不同的福利。所有生产值初始为0。</li>
+  <li><b>前序扩展</b>: 包含前序牌（玩家从4张中选择2张）、额外的项目牌和额外的公司牌。</li>
+  <li><b>殖民地扩展</b>: 包含带有舰队的殖民地板块、额外的项目牌和额外的公司牌。</li>
+  <li><b>地图</b>
+    <ul class="bulletlist" style="padding-inline-start:40px;">
+      <li><i>水手谷</i>: 基础地图，专注于城市发展和氧气生产</li></ul></li>
+      <li><i>极乐世界</i>: 大片海洋区域和独特的放置奖励</li>
+      <li><i>希腊平原</i>: 描绘南极，依赖热量和水</li>
+      <li><i>北方荒原</i>: 特点是有冻结的二氧化碳，可以提高温度</li>
+      <li><i>亚马逊平原</i>: 大型地图，专为4-5名玩家设计，有更高的里程碑要求</li>
+    </ul>
+  <li><b>实时计分</b>: 玩家的分数在游戏过程中显示。</li>
+  <li><b>多步撤销支持（实验性）</b>: 允许玩家一步步撤销操作，而不是重新开始行动阶段</li>
+</div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpterraformingmars" target="_blank" rel="noopener">重塑火星 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

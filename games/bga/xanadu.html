@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Xanadu 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Xanadu · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Xanadu</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Xanadu</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Story">Story</span></h2>
+<blockquote><p><i>In 1252, Kublai Khan asked the famous Chinese architect, Liu Bingzhong, to design his summer palace in Mongolia, and to settle the city of Xanadu (”High City”). Bingzhong distributed his designs among his dearest disciples, so they would build the city. Now, they seek the acknowledgement of their master and the Khan, and will even sabotage their peers' work to become the best architect of Xanadu.</i></p></blockquote>
+<dl><dd>-- excerpt from the game rules</dd></dl>
+<h2><span class="mw-headline" id="Object_of_the_Game">Object of the Game</span></h2>
+<p>Players will construct buildings, landscapes, and other features with the aim of pleasing Kublai Khan. This is done by developing and harvesting resources with workers. Buildings can be improved or degraded the more they are used, but will eventually be gifted to the Khan for <i>tong bao</i> (money &amp; prestige).
+</p><p>The player who earns the most <i>tong bao</i> by the end of the game will earn the Khan's utmost respect and be declared victorious.
+</p>
+<h2><span class="mw-headline" id="The_Building_Deck">The Building Deck</span></h2>
+<p>There are 74 cards in the deck, broken down into 5 color categories corresponding to their associated construction costs:
+</p>
+<ul><li><span style="color: brown">24x Brown</span> - common materials</li>
+<li><span style="color: blue">24x Blue</span> - uncommon materials</li>
+<li><span style="color: yellow">12x Yellow</span> - rare materials</li>
+<li><span style="color: green">11x Green</span> - very rare materials, especially Jade (dragon)</li>
+<li><span style="color: magenta">4x Magenta</span> - rarest materials</li></ul>
+<p>Each card has several display areas on it:
+</p>
+<ul><li>Building Name (top center), in both Spanish and English.</li>
+<li>Cost (upper left) shows the resource icons needed in order to construct that building and put it into play.</li>
+<li>Passive resources (upper right), which are available ongoing to the building's owner as long as it is in play.</li>
+<li>Harvestable resources (bottom half) organized into rows. Each row (except the left column) can become occupied by a worker. Resources obtained this way can only be used in the current turn.</li>
+<li>Favor resources (left column), which become available and ongoing to their owner once they are unlocked with workers (see below). Like passive resources (upper right), Favors also remain available as long as their card remains in play.</li>
+<li>Building value (circles, right column), indicating how many <i>tong bao</i> are awarded when the building is <i>sold</i> (gifted to the Khan).
+<ul><li>A building's current value is always the lowest-positioned number on the card that is not covered up by a worker.</li>
+<li>The color of the circle indicates whether the value <span style="color: green"><b>increases</b></span>, <span style="color: red"><b>decreases</b></span>, or <span style="color: tan"><b>remains the same</b></span> when the next worker is played on it.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Resources">Resources</span></h3>
+<h4><span class="mw-headline" id="Common">Common</span></h4>
+<ul><li>Wood (tree branch)</li>
+<li>Clay (lantern-shaped jar)</li>
+<li>Stone (statue head)</li>
+<li>Water (droplet)</li></ul>
+<h4><span class="mw-headline" id="Uncommon">Uncommon</span></h4>
+<ul><li>Silk (pink fabric)</li>
+<li>Ink (Chinese character)</li>
+<li>Porcelain (tea cup)</li></ul>
+<h4><span class="mw-headline" id="Rare">Rare</span></h4>
+<ul><li>Gold (gold figurine)</li>
+<li>Bronze (disc)</li></ul>
+<h4><span class="mw-headline" id="Very_Rare">Very Rare</span></h4>
+<ul><li>Jade (green dragon)</li></ul>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<p>The deck of building cards is shuffled and 7 cards are dealt to each player. Each player then simultaneously chooses a brown building from their hand to start in play.
+</p><p>Players without a brown card must choose a blue card instead (or yellow, if neither brown nor blue are available).
+</p>
+<h2><span class="mw-headline" id="Turn_Sequence">Turn Sequence</span></h2>
+<p>Players take turns performing each of the four phases below, in whole or in part, in the following order.
+</p>
+<h3><span id="SELL_PHASE_.28optional.29"></span><span class="mw-headline" id="SELL_PHASE_(optional)">SELL PHASE (optional)</span></h3>
+<p>Any or all of a player's buildings in play can be "sold" (gifted to the Khan) to score their current value (the lowest value position visible on the card, i.e. not covered by workers). Some building types will have a fairly consistent value while others may increase with use, and others decrease.
+</p><p>When a building is scored, it is placed into a central discard pile along with all the cards played as workers on top of it.
+</p>
+<ul><li>If you already know you intend to pass your entire turn you can select "Skip Turn".</li></ul>
+<h3><span id="CONSTRUCTION_PHASE_.28optional.29"></span><span class="mw-headline" id="CONSTRUCTION_PHASE_(optional)">CONSTRUCTION PHASE (optional)</span></h3>
+<p>You have the option to choose <i>one</i> of the building cards in your hand for construction by clicking on it.
+</p>
+<ul><li>Cards which are darkened cannot currently be paid for using the available resources/workers in play. If you can select a card, there <b>is</b> a way to pay for it.
+<ul><li>If the game determines you have no way of paying for any of the buildings in your hand, this phase is auto-skipped.</li></ul></li>
+<li>You cannot attempt to construct a building if you already have 5 buildings in play.</li>
+<li>If you do not wish to build a building, click "Skip Build".</li></ul>
+<h3><span id="WORKER_PHASE_.28partially_optional.29"></span><span class="mw-headline" id="WORKER_PHASE_(partially_optional)">WORKER PHASE (partially optional)</span></h3>
+<p>If the player chooses to construct a building from their hand, they must now be able to pay the cost of that building (indicated in its upper left) through the use of passive resources on their buildings (upper right), and Favor resources on their buildings (left column) unlocked by workers. If they are missing any resources, they are required to acquire the difference by covering resource rows of buildings in play (belonging to them or any player) that provide the necessary remaining resources.
+</p>
+<ul><li>Click on a row of a building in play to mark/unmark it as covered.</li>
+<li>You can keep track of your to-be-constructed building costs (and what remains to be satisfied) in the lower left of the browser.</li>
+<li>You won't be allowed to proceed until all resource costs are fulfilled.</li>
+<li>You can't mark more rows than you have cards in hand (see next section).</li>
+<li>Rows on a card must be marked from bottom to top - no skipping allowed.</li>
+<li>Marking a row with a Favor resource immediately unlocks that resource for use (and can help pay for a building-in-construction that turn).</li>
+<li>You can't mark rows on the building you're trying to build (it's not in play yet).</li>
+<li>You can click "Undo" on your proposed construction to change your mind.</li>
+<li>If you don't wish to place workers, click "Skip Placement".</li></ul>
+<h4><span class="mw-headline" id="Overplaying">Overplaying</span></h4>
+<p><b>Players are always allowed to place workers, even if no building was constructed, and may place more than is necessary to cover a building's cost!</b> There are several reasons you might do this:
+</p>
+<ul><li><b>Unlock</b>: By covering rows with Favor resources on your own buildings, you will have more flexibility constructing buildings later and will need less workers to pay for them.</li>
+<li><b>Improve</b>: If the value of your building increases with additional workers, you will score more points when it is sold.</li>
+<li><b>Degrade</b>: If the value of an opponent's building decreases with additional workers, you can reduce the points they receive when it is sold.</li>
+<li><b>Deny</b>: Some cards have rare resources needed for valuable buildings. Covering those resources even when you don't need them might slow an opponent's building plans for a bit!</li></ul>
+<h3><span class="mw-headline" id="Select_Workers_From_Hand">Select Workers From Hand</span></h3>
+<p>Based on the number of workers the player chose to place onto building rows, they must choose cards to play from their hand (face-down) to represent them. There is no difference between cards used in this way, though the player should be careful not to get rid of building cards they plan to construct in future turns!
+</p><p>If a building was constructed this turn, it now fully enters play and can be used by anyone in later turns.
+</p>
+<h3><span class="mw-headline" id="DRAW_PHASE">DRAW PHASE</span></h3>
+<ul><li>By default, a player draws one new card from the deck at the end of their turn.</li>
+<li>If the player scored any buildings at the start of their turn, they draw 3 new cards instead (regardless of how many buildings were scored).</li>
+<li>If the player chooses to pass their turn (or ends up scoring none of their buildings, and neither constructs a new building nor places any Workers), they refill their hand to 7 cards total.</li>
+<li>Regardless of how many draws they may get, a player never draws above the 7 card hand limit.</li>
+<li>When the deck runs out the first time, the discard pile is shuffled to form a new deck, and an "END OF GAME" marker is inserted randomly into the bottom 10 cards of the deck. Drawing cards continues as normal.</li></ul>
+<h4><span class="mw-headline" id="Autoselling">Autoselling</span></h4>
+<p>If at the end of a turn, a building in play has all of its worker rows occupied, it will automatically be sold (scored) for its top value, by its owner. A building that is scored this way does not grant the current player a 3-card draw.
+</p>
+<h2><span class="mw-headline" id="End_of_the_Game">End of the Game</span></h2>
+<p>The game ends immediately when any player draws the "END OF GAME" marker. At this moment, all buildings still in play are scored for their current value. The player with the highest total score is the winner!
+</p>
+<h2><span class="mw-headline" id="Tips_and_Tricks">Tips and Tricks</span></h2>
+<ul><li>Buildings serve different roles; some are just raw materials, others offer ongoing resources to their owners (passives and Favors), and some are just great for scoring points. Try and figure out which of these you're needing during each turn of the game.</li>
+<li>Since you have room for five buildings in play at a time, consider using 2-3 of those slots to hold buildings which provide passive and Favor resources consistently, and the remaining slots for rapid construction, improvement, and re-sell.</li>
+<li>Watch your opponents' hand sizes, as it's a rough measure of how many options they are considering, and their ability to ruin your plans with unwanted workers.</li></ul></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpxanadu" target="_blank" rel="noopener">Xanadu — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

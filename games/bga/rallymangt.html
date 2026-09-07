@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Rallymangt 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Rallymangt · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Rallymangt</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Rallymangt</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Rounds">Rounds</span></h2>
+<p>A game of Rallyman: GT is made up of alternating “white” and “black” rounds. Each player gets one turn each round. 
+</p><p>The Round marker has a white side and a black side, which allows you to immediately tell who has already played their turn this round. At the end of a round the Round marker is flipped over and a new round begins.
+</p>
+<h2><span class="mw-headline" id="Determining_Turn_Order">Determining Turn Order</span></h2>
+<p>At the beginning of each round, you must first determine the order of play.
+</p><p>Order of play at the start of each round is determined by speed, then by the position of each car in case of a draw.
+</p><p><b>SPEED &gt; DISTANCE &gt; POSITION</b>
+</p>
+<ol><li><b>Speed:</b> Start by identifying the fastest car. The car with the highest Gear marker always plays first, no matter where they are on the track.</li>
+<li><b>Distance:</b> If two or more cars are going at the same speed, then order of play is determined by how far along the track they are. The car furthest ahead plays first.</li>
+<li><b>Position:</b> In case of a draw in terms of speed and distance, the car situated on the inside lane of the current or next corner plays first. A “corner” is a section of track with speed limitations. /* Note. The French rule book has been adopted in the BGA implementation. If cars are positioned in a corner, then the current corner is used for the evaluation, otherwise the next corner. */</li></ol>
+<h2><span class="mw-headline" id="The_Turn">The Turn</span></h2>
+<p>Once order of play has been established, each player takes their turn one after the other.
+</p>
+<h3><span class="mw-headline" id="During_their_turn_a_player_will_do_the_following:">During their turn a player will do the following:</span></h3>
+<ol><li>Plan your turn.</li>
+<li>Roll your dice and move your car.</li></ol>
+<h2><span class="mw-headline" id="Planning_Your_Turn">Planning Your Turn</span></h2>
+<p>During their turn, players will use dice to accelerate, brake, and coast their way around the track. Your player board (and the summary at the top of the screen) shows what dice are available to you.
+</p><p>Each die number represents a gear. With each move you make, may go up or down one gear (or stay the same with a white die). You must always be moving forward. Each die may only be used once per turn.
+</p>
+<h3><span class="mw-headline" id="Corners">Corners</span></h3>
+<p>Corner spaces have numbers in the middle which indicate the top gear in which you can safely navigate the corner. Exceed this number and you will lose control!
+</p><p><b>The inside line:</b>Some spaces have dotted lines separating them, with a lower number or caution symbol next to it. The number indicates the highest gear you can use to safely move between those spaces. Exceed it and you will lose control! The caution symbol gives one extra caution result when moving (see below)
+</p><p>Note that you can safely move diagonally into spaces like this, as long as you don't exceed the normal limits.
+</p><p><b>The outside line</b>:Some spaces have a caution triangle around the number. This indicates that you get an extra caution result when you pass that space in that gear.
+</p>
+<h3><span class="mw-headline" id="Overtaking">Overtaking</span></h3>
+<p>To enter a space adjacent to another player’s car, you must use a Gear die equal to or higher than the current Gear of the opponent’s car. 
+Once your car is beside theirs, the rest of their movement can be at any speed.
+</p><p><b>Note</b>: if a yellow flag is out due to damage, you cannot overtake (move alongside) another player.
+</p>
+<h3><span class="mw-headline" id="Show_Overspeed_Alarm_Option">Show Overspeed Alarm Option</span></h3>
+<p>If the Show Overspeed Alarm option is enabled, a red halo will appear around your die if you place it on a space which will cause your car to spin.  An orange halo will appear if the space will cause you to gain an automatic caution symbol (!).
+</p>
+<h2><span class="mw-headline" id="Rolling_Your_Dice_and_Moving">Rolling Your Dice and Moving</span></h2>
+<p>Once you have planned your turn, you will roll your dice, either all at once (<i>Flat Out</i>) or one at a time. But be careful: Meet or exceed the safe number of caution symbols (generally three), and you will lose control!
+</p>
+<h3><span class="mw-headline" id="Flat_out:_All_the_dice_at_once">Flat out: All the dice at once</span></h3>
+<p>This is the risky but brave choice: Roll your dice, and hope you get lucky. If you roll safely, you will get some <i>focus tokens</i> for your trouble: one per gear or coast die (not brake or boost die) you rolled. These will come in handy later!
+</p>
+<h3><span class="mw-headline" id="One_at_a_time">One at a time</span></h3>
+<p>Sometimes you need to play it safe. You can roll your dice one at a time, and stop at any time. This way you can stop if you are at risk of losing control.
+</p><p><b>Focus</b>: While you are rolling your dice one at a time, you may find that you are at risk of losing control. You can spend the focus tokens you earned earlier to <i>secure</i> your dice. Instead of rolling them you guarantee a safe result. But each die protected in a turn has a higher cost: the first die costs one, the second another two, the third another three, etc.
+</p>
+<h2><span class="mw-headline" id="The_Dice">The Dice</span></h2>
+<p>Some dice are safer than others: The white <i>coast</i> dice along with first and second gear only have one caution symbol on them while the other dice all have two.
+</p>
+<ul><li><b>Braking</b>: You can jump down extra gears by adding a red 'brake' die to the space moved. Each red die lets you skip a gear. For example, you could go from fourth to 1st by rolling brake+brake+1, or from 6th to 4th by rolling brake+4. In this way you can move further on one turn, or end a turn in a higher gear.</li>
+<li><b>Boosting</b>: Similarly, the green 'boost' die (available in GT5 races) lets you skip a gear upwards.</li>
+<li><b>Coasting</b>: White 'coast' dice let you stay in the same gear.</li></ul>
+<table class="wikitable" style="margin:auto">
+<caption>Car Dice
+</caption>
+<tbody><tr>
+<th></th>
+<th><b>Gear dice</b></th>
+<th><b>Coast dice</b></th>
+<th><b>Brake dice</b></th>
+<th><b>Boost Dice</b>
+</th></tr>
+<tr>
+<td><b>GT4</b></td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>0
+</td></tr>
+<tr>
+<td><b>GT5</b></td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
+<td>1
+</td></tr>
+<tr>
+<td><b>GT6</b></td>
+<td>6</td>
+<td>2</td>
+<td>3</td>
+<td>0
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Losing_Control">Losing Control</span></h2>
+<p>If you meet or exceed your limit, you will lose control. 
+</p><p>Consult your player board table to see what happens when you lose control: You might lose all speed to 'gear' 0, or go off the track in 'gear' 00. 
+You might also take some damage: at higher speeds (3,4,5th gear) and on more dangerous tiles (Yellow, Orange, Red). 
+For each black damage marker in the table a "Damage" token will be randomly drawn for you.
+</p>
+<ul><li><b>Gear 00</b>: In this gear you simply lose a turn: when it comes to your turn, get back on the track in 'gear' 0. Next turn you will resume as normal, starting from gear 1 etc.</li>
+<li><b>Gear 0</b>: In this gear you are just stopped in place. Next turn, just resume your movement.</li></ul>
+<p>If you used the 'flat out' die rolling option, you can change the order and locations of the dice you rolled.  You do not even have to place all of them. However, you must place your dice in a way that results in loss of control.  By changing your speed and location at the moment of loss of control, you may be able to minimize any bad effects.  Even if you lose control, you will still get your focus tokens.
+</p>
+<h3><span class="mw-headline" id="Damage">Damage</span></h3>
+<p>There are several Damage result tokens (42 total).  0, 1, 2 or 3 of these Damage Tokens are drawn randomly for you depending on your Gear/Speed when you lost control and the track segment you are on.  (Consult the table on your player dashboard.)
+</p>
+<ul><li><b>Lose a Dice:</b> (Qty x 6 of each: Red, White, Black) This reduces your dice pool. You might lose a white, black, or red die (meaning you will have one less die of that color to use on your turn.) Losing a black die means you can pick, each turn, which number you want to leave unused.</li>
+<li><b>Yellow Flag:</b> (Qty x 6) This will be removed on your next move (not turn - if you are at speed 00, the yellow flag stays on the board, affecting all players, until you are ready to move again).  While the yellow flag is on the table, no player may move alongside any other player’s car.  (Cars <b>are</b> allowed to pass cars stopped at speed 0 or 00).</li>
+<li><b>Weather:</b> (Qty x 6) The weather will change from rain to sun, or vice versa! If you are on the wrong kind of tires, your dice pool and caution limit will be reduced. You might want to stop to change tires.</li>
+<li><b>Green Flag:</b> (Qty x 12) No damage, you got lucky!</li></ul>
+<h3><span class="mw-headline" id="Confirm_Trajectory">Confirm Trajectory</span></h3>
+<p>If you see a message that says: "You must set back your dice with a loss of control" you are being given the option to "re-allocate and re-order some or all of the dice you used on that turn back onto the track in any legal order you like."  You must still use enough "!" dice and/or track features to activate the "spin out," but sometimes this offers an opportunity to adjust your dice, their order and you car's route so that you spin out at a more favorable location on the track, on a more favorable tile (Yellow instead of Orange or Red) or in a more favorable gear (1 or 2, instead of 3, 4 or 5).
+</p><p>Once you have re-ordered your dice you must click the 'confirm trajectory' button."
+</p>
+<h2><span class="mw-headline" id="Pit_Stops">Pit Stops</span></h2>
+<p>If you wish you can repair all damage, change tires, or both by making a Pit Stop. To make a Pit Stop, you must end your turn in 1st Gear in a space with no speed or restrictions (meaning not on a corner space) at the edge of the track. While you are in the pit your gear is either 0 or 00 depending on whether you chose to change tires or repair damage, and you are off the track (not blocking other players’ movement). Once you return to 0 gear (as with losing control, above), you can choose which tires you want and then you will move as normal on that turn.
+</p>
+<h2><span class="mw-headline" id="Flying_Start">Flying Start</span></h2>
+<p>With Flying Start, you can go straight to Gear 2 instead of Gear 1 when starting from 0. 
+</p><p>When you resolve your move, whether rolling one by one or moving Flat Out, the result of the Gear 2 die is checked: if it's a caution symbol, your turn ends immediately. The car moves forward one space and stays in Gear 2.
+</p><p>If you were going Flat Out and would have suffered a Loss of Control as well as this effect, the Loss of Control is ignored.
+</p>
+<h2><span class="mw-headline" id="Tire_Dashboards">Tire Dashboards</span></h2>
+<p>Here are the available dice for each type of tire and weather condition:
+</p>
+<table class="wikitable" style="margin:auto">
+<caption>GT6 Tires
+</caption>
+<tbody><tr>
+<th></th>
+<th><b>Asphalt-Dry</b></th>
+<th><b>Asphalt-Wet</b></th>
+<th><b>Rain-Wet</b></th>
+<th><b>Rain-Dry</b>
+</th></tr>
+<tr>
+<td><b>/!\</b></td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>3
+</td></tr>
+<tr>
+<td><b>Gear</b></td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>6
+</td></tr>
+<tr>
+<td><b>Coast</b></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1
+</td></tr>
+<tr>
+<td><b>Brake</b></td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>2
+</td></tr></tbody></table>
+<table class="wikitable" style="margin:auto">
+<caption>GT5 Tires
+</caption>
+<tbody><tr>
+<th></th>
+<th><b>Asphalt-Dry</b></th>
+<th><b>Asphalt-Wet</b></th>
+<th><b>Rain-Wet</b></th>
+<th><b>Rain-Dry</b>
+</th></tr>
+<tr>
+<td><b>/!\</b></td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>3
+</td></tr>
+<tr>
+<td><b>Gear</b></td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5
+</td></tr>
+<tr>
+<td><b>Coast</b></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1
+</td></tr>
+<tr>
+<td><b>Brake</b></td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>2
+</td></tr>
+<tr>
+<td><b>Boost</b></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1
+</td></tr></tbody></table>
+<table class="wikitable" style="margin:auto">
+<caption>GT4 Tires
+</caption>
+<tbody><tr>
+<th></th>
+<th><b>Asphalt-Dry</b></th>
+<th><b>Asphalt-Wet</b></th>
+<th><b>Rain-Wet</b></th>
+<th><b>Rain-Dry</b>
+</th></tr>
+<tr>
+<td><b>/!\</b></td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>3
+</td></tr>
+<tr>
+<td><b>Gear</b></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4
+</td></tr>
+<tr>
+<td><b>Coast</b></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2
+</td></tr>
+<tr>
+<td><b>Brake</b></td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2
+</td></tr></tbody></table></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelprallymangt" target="_blank" rel="noopener">Rallymangt — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

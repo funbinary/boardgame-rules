@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Noneshallpass 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Noneshallpass · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Noneshallpass</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Noneshallpass</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>In <i>None Shall Pass</i>, you are <i>not</i> one of the brave four chosen heroes of destiny that saves the world. You are a guard, keeping the Big Bad in its tomb while minion monsters attempt to free it. Stand your ground and defend the seal, and you might just live to retirement. 
+</p>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<h4><span class="mw-headline" id="Guards">Guards</span></h4>
+<p>In the beginning, each player chooses a <b>Guard</b> (hero class), two EXP points <img src="../../assets/img/bga/acbb27e8da5e307c.png" loading="lazy"  alt="NoneShallPass expIcon.png" decoding="async" />, and six cards. The cards determine your Guard's attributes and possible actions. 
+</p><p><img src="../../assets/img/bga/e592486813227640.png" loading="lazy"  alt="NoneShallPass guardCardAnatomy.png" decoding="async" />
+</p><p>Each card has two actions (for a total of six, corresponding to a <span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*40);width:calc(1px*40);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*calc((6 - 1) * 40));top:calc(-1px*0);transform-origin:top left;transform:scale(calc(40 / 30));"><img src="../../assets/img/bga/de5905b3a7aacc77.png" loading="lazy"  alt="white die" decoding="async" title="white die" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span>). Each action has instructions, the die roll needed to select that action, and a Peril number. <i>Peril</i> <img src="../../assets/img/bga/24b7ac8a237507d2.png" loading="lazy"  alt="NoneShallPass perilIcon.png" decoding="async" /> indicates how dangerous an action is. The more Peril, the more likely you are to be targeted by the monster (if no one else chooses a more dangerous action than you).
+</p><p>Each card can also be leveled up <img src="../../assets/img/bga/5db8bf7ab2fee824.png" loading="lazy"  alt="NoneShallPass levelUpCostIcon.png" decoding="async" /> (up to level 4) by spending EXP <img src="../../assets/img/bga/acbb27e8da5e307c.png" loading="lazy"  alt="NoneShallPass expIcon.png" decoding="async" />. Leveled-up cards increase the power of abilities and attributes.
+</p>
+<h4><span class="mw-headline" id="Monsters">Monsters</span></h4>
+<p>Monster cards are organized by level, with higher levels representing stronger monsters. Every monster has a name, level <img src="../../assets/img/bga/5db8bf7ab2fee824.png" loading="lazy"  alt="NoneShallPass levelUpCostIcon.png" decoding="async" />, HP <img src="../../assets/img/bga/9deaf104b73778dd.png" loading="lazy"  alt="NoneShallPass healthIcon.png" decoding="async" />, Attack strength <img src="../../assets/img/bga/6c626e6a20b251e6.png" loading="lazy"  alt="NoneShallPass attackIcon.png" decoding="async" /> (how much HP is taken from the player on an attack), and a unique ability. 
+</p><p><img src="../../assets/img/bga/0c9949cf483faaba.png" loading="lazy"  alt="NoneShallPass monsterAnatomy.png" decoding="async" />
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>If there is no monster on the board (because it's the start of the game or the previous one was defeated), a new one is randomly drawn for the next level. 
+</p><p>All players roll their 3 dice, then take turns selecting one of their dice to take a corresponding action. After all the players have taken their turn, the monster attacks the player(s) whose action(s) had the highest value <i>Peril</i> <img src="../../assets/img/bga/24b7ac8a237507d2.png" loading="lazy"  alt="NoneShallPass perilIcon.png" decoding="async" /> (value ranking). 
+</p><p>The monster must be defeated within a certain number of rounds, or it will "breach". If they defeat all the monsters before then, they win.
+</p>
+<h4><span id="Player.27s_Turn"></span><span class="mw-headline" id="Player's_Turn">Player's Turn</span></h4>
+<p>The player selects a die and follows its action's instructions. After the action is resolved, their icon is placed on the Peril track <img src="../../assets/img/bga/24b7ac8a237507d2.png" loading="lazy"  alt="NoneShallPass perilIcon.png" decoding="async" /> based on the action's value. 
+</p><p>The <span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*40);width:calc(1px*40);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*calc((6 - 1) * 40));top:calc(-1px*0);transform-origin:top left;transform:scale(calc(40 / 30));"><img src="../../assets/img/bga/de5905b3a7aacc77.png" loading="lazy"  alt="white die" decoding="async" title="white die" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span> represents a bonus action. You may take this action before or after your main action. If you roll <span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*40);width:calc(1px*40);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*calc((6 - 1) * 40));top:calc(-1px*0);transform-origin:top left;transform:scale(calc(40 / 30));"><img src="../../assets/img/bga/de5905b3a7aacc77.png" loading="lazy"  alt="white die" decoding="async" title="white die" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span> <span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*40);width:calc(1px*40);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*calc((6 - 1) * 40));top:calc(-1px*0);transform-origin:top left;transform:scale(calc(40 / 30));"><img src="../../assets/img/bga/de5905b3a7aacc77.png" loading="lazy"  alt="white die" decoding="async" title="white die" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span>, you can take the <span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*40);width:calc(1px*40);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*calc((6 - 1) * 40));top:calc(-1px*0);transform-origin:top left;transform:scale(calc(40 / 30));"><img src="../../assets/img/bga/de5905b3a7aacc77.png" loading="lazy"  alt="white die" decoding="async" title="white die" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span>) action twice.
+</p><p>If you roll three of a kind, you can take <i>any</i> two actions. Choose the Peril from one.
+</p><p>Once per round, each player with at least one level-4 Guard card may spend one EXP <img src="../../assets/img/bga/acbb27e8da5e307c.png" loading="lazy"  alt="NoneShallPass expIcon.png" decoding="async" /> to reroll one die.
+</p>
+<h4><span class="mw-headline" id="Actions">Actions</span></h4>
+<p>Most actions involve taking or dealing damage. When a monster takes damage, its HP decreases by that amount. A player who takes damage, he/she gains <i>Wounds</i> <img src="../../assets/img/bga/17cd9426b8ffddc7.png" loading="lazy"  alt="NoneShallPass woundIcon.png" decoding="async" /> equal to the damage minus their Armor <img src="../../assets/img/bga/a5c192f250caca65.png" loading="lazy"  alt="NoneShallPass armorIcon.png" decoding="async" />. 
+</p><p>The guard's health <img src="../../assets/img/bga/9deaf104b73778dd.png" loading="lazy"  alt="NoneShallPass healthIcon.png" decoding="async" /> indicates how many <b>Wounds</b> <img src="../../assets/img/bga/17cd9426b8ffddc7.png" loading="lazy"  alt="NoneShallPass woundIcon.png" decoding="async" /> they can have before becoming <i>Incapacitated</i>. A player who is Incapacitated at the beginning of an action does not roll dice. Instead, they must perform their <span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:&#123;&#123;&#123;z&#125;&#125;&#125;;height:calc(1px*40);width:calc(1px*40);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*calc((3 - 1) * 40));top:calc(-1px*0);transform-origin:top left;transform:scale(calc(40 / 30));"><img src="../../assets/img/bga/de5905b3a7aacc77.png" loading="lazy"  alt="white die" decoding="async" title="white die" /></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span>) action (which is always a healing action). They also do not place a die on the Peril track <img src="../../assets/img/bga/24b7ac8a237507d2.png" loading="lazy"  alt="NoneShallPass perilIcon.png" decoding="async" />. Incapacitation lasts an entire round, even if you lose enough Wounds before your turn. Similarly, gaining Wounds during the round doesn't Incapacitate you until the next round.
+</p><p>Some actions and events give players EXP <img src="../../assets/img/bga/acbb27e8da5e307c.png" loading="lazy"  alt="NoneShallPass expIcon.png" decoding="async" /> which can be spent to improve attributes and actions. At any time, a player may spend EXP <img src="../../assets/img/bga/acbb27e8da5e307c.png" loading="lazy"  alt="NoneShallPass expIcon.png" decoding="async" /> equal to the Level Up Cost <img src="../../assets/img/bga/5db8bf7ab2fee824.png" loading="lazy"  alt="NoneShallPass levelUpCostIcon.png" decoding="async" /> on one of their Guard cards. That card is flipped or swapped with the card beneath it to reveal the card one level higher.
+</p>
+<h2><span class="mw-headline" id="Monsters_2">Monsters</span></h2>
+<p>When all players have done their actions, the monster's turn starts. It attacks <img src="../../assets/img/bga/6c626e6a20b251e6.png" loading="lazy"  alt="NoneShallPass attackIcon.png" decoding="async" /> the player highest on the Peril track <img src="../../assets/img/bga/24b7ac8a237507d2.png" loading="lazy"  alt="NoneShallPass perilIcon.png" decoding="async" />. If more than one player is at the same position on the magic track, the damage is divided evenly. Then its <i>Breach</i> level goes down by 1. 
+</p><p><img src="../../assets/img/bga/563b43c8418aa37f.png" loading="lazy"  alt="NoneShallPass monsterBoard.png" decoding="async" />
+</p><p>If the monster's HP is at zero when it starts its turn, it is defeated. All players receive 1 EXP point <img src="../../assets/img/bga/acbb27e8da5e307c.png" loading="lazy"  alt="NoneShallPass expIcon.png" decoding="async" />. The next level monster takes its place, but does not attack right away.
+</p><p>If the monster's Breach level goes below 1, it has broken through the seal and leaves. The players receive no EXP. The next level monster takes its place.
+</p>
+<h2><span class="mw-headline" id="End_of_Game">End of Game</span></h2>
+<p>If the fifth monster breaches, the game ends and the players lose. 
+</p><p>If the players reduce the final monster's HP to 0, the players win.
+</p>
+<h2><span class="mw-headline" id="Variants">Variants</span></h2>
+<h4><span class="mw-headline" id="Two_Players">Two Players</span></h4>
+<p>Each player gets a second Guard to control. BGA automatically shows the cards and dice for the current Guard's turn, but there is a "Toggle Guards" button at the bottom-left to see the other Guard's cards and dice.
+</p>
+<h4><span class="mw-headline" id="Three_Players">Three Players</span></h4>
+<p>One of the players will be an Automaton. The first player decides its actions.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpnoneshallpass" target="_blank" rel="noopener">Noneshallpass — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

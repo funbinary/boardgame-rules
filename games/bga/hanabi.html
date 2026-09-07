@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="花火 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>花火 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">花火</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">花火</h1>
+          <p class="game-sub">Hanabi · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Overview">概述</span></h2>
+<p>《烟花》是一款合作游戏，你们的共同目标是创造一场精彩的烟花表演。像任何一场精彩的表演一样，你应该从小烟花开始，最后以大型烟花收尾。你将通过打出红色、黄色、绿色、蓝色和白色的1到5点卡牌来完成这一目标。问题是？你不知道自己手中的卡牌是什么，但你知道其他玩家手中的卡牌。所以你必须相互沟通，通过按顺序放置卡牌而不出错来完成一场精彩的表演。
+</p>
+<h4><span class="mw-headline" id="Cards_and_Firework_Stacks">卡牌与烟花堆</span></h4>
+
+<p>这副牌有50张牌。牌有五种颜色：<span style="display:inline-block;display:inline;color:oklch(from firebrick clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:{{{s}}}em;font-weight:700;font-style:{{{i}}};font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px {{{oc}}};border:2px solid {{{bc}}};border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,firebrick,firebrick)">红色</span>
+<span style="display:inline-block;display:inline;color:oklch(from gold clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,gold,gold)">黄色</span>
+<span style="display:inline-block;display:inline;color:oklch(from green clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,green,green)">绿色</span>
+<span style="display:inline-block;display:inline;color:oklch(from royalblue clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,royalblue,royalblue)">蓝色</span>
+ <span style="display:inline-block;display:inline;color:oklch(from white clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,white,white)">白色</span>
+</p>
+<p>每种颜色有10张卡牌：3张 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:silver"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">卡牌</span></span>1</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">，带有一个 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span>
+<span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:silver;visibility:hidden"><span style="font-size:0;visibility:hidden">烟火卡片 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">1</span><span style="font-size:0;visibility:hidden">提示,</span>, 2 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:silver"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">卡片</span></span>2</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span>
+<span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">,带有 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:silver;visibility:hidden"><span style="font-size:0;visibility:hidden">花火牌 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">2</span><span style="font-size:0;visibility:hidden">提示,</span>, 2 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:silver">
+<span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">牌</span></span>3</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">，带有一个 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:silver;visibility:hidden"><span style="font-size:0;visibility:hidden">花火牌 </span></span>
+<span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">3</span><span style="font-size:0;visibility:hidden">线索,</span>, 2 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:silver"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">卡片</span></span>4</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">,带有一个 </span>
+<span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:silver;visibility:hidden"><span style="font-size:0;visibility:hidden">花火牌 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">4</span><span style="font-size:0;visibility:hidden">提示,</span>, 1 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:silver"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">
+卡片</span></span>5</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">，带有一个 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:silver;visibility:hidden"><span style="font-size:0;visibility:hidden">花火卡片 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">5</span><span style="font-size:0;visibility:hidden">提示，</span>.
+<p>每种颜色的烟花堆只有一堆，开始时为空。 <span style="display:inline-flex;gap:0 6px;padding:8px;width:fit-content;background:#bad;border-radius:6px;white-space:nowrap"><span style="display:inline-grid;display:none;place-items:center;width:26px;height:52px;font:700 22px Roboto;color:#f00;background:linear-gradient(#ddd,#777);border-radius:3px;"><span><span style="font-size:0">牌组中的牌</span></span></span></span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #e03;border-radius:3px;outline:2px solid #e03"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">红色</span></span></span>
+<span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">r</span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #fe7;border-radius:3px;outline:2px solid #fe7"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">黄色</span></span></span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">y</span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #3a7;border-radius:3px;outline:2px solid #3a7">
+<span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">绿色</span></span></span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">g</span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #1ae;border-radius:3px;outline:2px solid #1ae"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">蓝色</span></span></span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">b</span>
+<span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#fff;border-radius:3px;outline:2px solid #fff"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">白色</span></span></span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">w</span><span style="display:inline-grid;display:none;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #b0b;border-radius:3px;outline:2px solid #b0b"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">多色</span></span>
+</span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">m</span><span style="display:inline-grid;display:none;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#000;border-radius:3px;outline:2px solid #000"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:1px #fff"><span style="grid-area:2/1/3/1;font-size:0">黑火药</span></span></span>
+</p></p>
+<p>每个烟花必须按从1开始的升序排列，所以你的目标是 <span style="display:inline-flex;gap:0 6px;padding:8px;width:fit-content;background:#bad;border-radius:6px;white-space:nowrap"><span style="display:inline-grid;display:none;place-items:center;width:26px;height:52px;font:700 22px Roboto;color:#f00;background:linear-gradient(#ddd,#777);border-radius:3px;"><span><span style="font-size:0">牌堆中的牌</span></span></span></span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #e03;border-radius:3px;outline:2px solid #e03"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">红色</span></span>5</span>
+<span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">r</span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #fe7;border-radius:3px;outline:2px solid #fe7"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">黄色</span></span>5</span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">y</span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #3a7;border-radius:3px;outline:2px solid #3a7">
+<span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">绿</span></span>5</span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">g</span><span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #1ae;border-radius:3px;outline:2px solid #1ae"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">蓝</span></span>5</span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">b</span>
+<span style="display:inline-grid;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#fff;border-radius:3px;outline:2px solid #fff"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">白色</span></span>5</span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">w</span><span style="display:inline-grid;display:none;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color: #b0b;border-radius:3px;outline:2px solid #b0b"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458)"><span style="grid-area:2/1/3/1;font-size:0">多色</span></span>
+</span><span aria-hidden="true" style="grid-area:2/1/3/1;z-index:1;width:26px;font:20px/1.1 cursive">m</span><span style="display:inline-grid;display:none;grid:24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#000;border-radius:3px;outline:2px solid #000"><span style="grid-area:1/1/3/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:1px #fff"><span style="grid-area:2/1/3/1;font-size:0">黑火药</span></span></span>.
+<p>在任何不是序列中下一个数字的堆上打出一张牌将导致操作失败。<b>如果发生三次操作失败，游戏结束，玩家失败。</b>
+</p></p>
+<h4><span class="mw-headline" id="Communication">沟通</span></h4>
+<p>你可以通过<b>线索</b>与队友交流。你的线索数量有限，用这样的代币表示：<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索代币</span>
+</p>
+<p>每次给出一个线索时，一个<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索代币</span>
+从白色区域（可用令牌）移动到黑色区域（已用令牌）：<span style="display:inline-grid;grid:1fr/1fr 1fr;place-items:center;margin:2px;border-radius:6px;outline:1px solid #0004;width:calc(1.2*172px);height:calc(1.2*60px);background:linear-gradient(90deg,#000 50%,#fff 50%)"><span style="display:grid;grid:1fr 1fr/repeat(4,calc(1.2*17px));gap:2px;place-items:center"><span style="display:none">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span></span></span><span style="display:none">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span><span style="display:none">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span><span style="display:none">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span><span style="display:none">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span><span style="display:none">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:non">
+<span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">提示代币</span>
+<span style="display:grid;grid:1fr 1fr/repeat(4,calc(1.2*17px));gap:2px 0;place-items:center"><span style="display:none"><span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span>
+<span style="grid-area:1/1;font-size:0">提示代币</span></span><span style="display:non"><span title="提示代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">
+线索代币</span><span style="display:non"><span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">线索代币</span>
+<span style="display:non"><span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:non">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:non">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:non">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:non"><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">1 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span></span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">2 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">3 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">4 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">5 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">6 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:non">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">7 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span><span style="display:none">
+<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1.2rem*1.25);height:calc(1.2rem*1.25);border:calc(1.2px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1.2rem;line-height:1.2rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1.2rem*1.1);height:calc(1.2rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">8 </span></span><span style="grid-area:1/1;font-size:0">线索代币</span>.
+<p>如果没有可用的代币，你必须在你的回合中出牌或弃牌。</p></p>
+<div style="padding:.5em .75em;margin:.5em 0;min-height:1.5rem;border:1px solid #fc3;background-color:#fff9ea;color:#333;width:fit-content;&#123;&#123;&#123;s&#125;&#125;&#125;"><span class="mw-&#123;&#123;&#123;s&#125;&#125;&#125;ollapsible mw-&#123;&#123;&#123;s&#125;&#125;&#125;ollapsed" style="display:flex;align-items:center;gap:.75em;"><span class="mw-&#123;&#123;&#123;s&#125;&#125;&#125;ollapsible-toggle">
+<span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:{{{z}}};height:calc(1px*25);width:calc(1px*25);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*1*25);top:calc(-1px*0);transform-origin:top left;transform:scale(.5);"><img src="https://en.doc.boardgamearena.com/images/6/60/MediaWiki-note-icons.png" loading="lazy"  alt="MediaWiki-note-icons.png" decoding="async" /></span></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></span><span class="mw-collapsible-content">
+不要通过聊天提供信息。这是作弊。如果你这样做，你将被认为不光彩，你作为烟火大师的声誉将受到玷污。</span></div></div>
+
+
+<h2><span class="mw-headline" id="Setup">设置</span></h2>
+<p>在2-3人游戏中，每个玩家手中有5张牌。在4-5人游戏中，每个玩家手中有4张牌。
+</p>
+<h2><span class="mw-headline" id="Gameplay">游戏玩法</span></h2>
+<p>在你的回合，你可以做三件事情之一。
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>提供提示。</li>
+  <li>弃掉一张牌。</li>
+  <li>打出一张牌。</li>
+</ul>
+<h4><span class="mw-headline" id="Give_a_Clue">提供提示</span></h4>
+<p>要给出提示，白色区域中必须至少有 1 个 <span title="clue tokens" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">提示标记</span>。
+选择另一位玩家的卡牌。你可以选择告诉该玩家：</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;"><li>玩家拥有的<b>该颜色</b>的牌</li><li>玩家拥有的<b>该数字</b>的牌</li></ul>
+<p>此时，1 个<span title="线索代币" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索代币</span> 从白色“可用”区域移动到黑色“已使用”区域。</p>
+<p>游戏会记录这些线索，这样你就可以知道其他玩家指出的卡牌是数字和颜色。</p>
+<h4><span class="mw-headline" id="Play_a_Card">出一张卡牌</span></h4>
+<p>从手牌中选择一张牌，然后 <span style="display:inline-block;margin:2px;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 .8rem Roboto,Arial,sans-serif;border-radius:calc(.8*5px);padding:calc(.8*6px) calc(.8*12px);box-shadow:.8px .8px calc(.8*3px) #00000040; --110:#738fc8;--120:#315777; --21:#f4f4f4;--22:#cacaca;--23:#fff;--24:#dedede;--25:#014090; --210:#40434d;--220:#31343d;--230:#474b56;--240:#31343d;--250:#fff; --31:#888;--32:#787878;--33:#9c9c9c;--34:#8c8c8c; --r1:#e42421;--r2:#86211f;--r3:#e44e2a;--r4:#863534; background:linear-gradient(var(--11,#0b72b5),var(--12,#244587)),linear-gradient(var(--13,#809ac0),var(--14,#5b6095));color:var(--15,#fff);">出选中的牌</span>，或者将牌直接拖到中间的烟花堆上来出牌。
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>如果它是某种颜色的下一张顺序牌，它会自动放置到相应的堆叠上，从而增加或完成烟花堆叠。</li>
+  <li>如果它不是任何颜色的下一张顺序牌，则烟花发射失败，该牌被弃掉。</li>
+</ul>
+<p>会自动在玩家手牌的左侧添加一张补充牌。</p>
+<p>如果打出的牌完成了一组烟花堆，1个<span title="提示标记" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">提示标记</span>从用过的黑色区域移到白色可用区域。
+</p>
+<h4><span class="mw-headline" id="Discard_a_Card">弃掉一张牌</span></h4>
+<p>要丢弃一张卡片，黑色区域中必须至少有 1 个 <span title="线索标记" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索标记</span> 。</p>
+<p>选择你手中的一张卡牌，然后<span style="display:inline-block;margin:2px;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 .8rem Roboto,Arial,sans-serif;border-radius:calc(.8*5px);padding:calc(.8*6px) calc(.8*12px);box-shadow:.8px .8px calc(.8*3px) #00000040; --110:#738fc8;--120:#315777; --21:#f4f4f4;--22:#cacaca;--23:#fff;--24:#dedede;--25:#014090; --210:#40434d;--220:#31343d;--230:#474b56;--240:#31343d;--250:#fff; --31:#888;--32:#787878;--33:#9c9c9c;--34:#8c8c8c; --r1:#e42421;--r2:#86211f;--r3:#e44e2a;--r4:#863534; background:linear-gradient(var(--11,#0b72b5),var(--12,#244587)),linear-gradient(var(--13,#809ac0),var(--14,#5b6095));color:var(--15,#fff);">弃掉所选卡牌</span>，或者直接将卡牌拖到弃牌区以弃掉它。
+</p><p>替换卡牌会自动添加到玩家手牌的左侧。
+</p>
+<p>1 <span title="线索标记" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索标记</span> 从黑色区域移动到白色区域，使其可用。
+</p>
+<p>弃牌是游戏中必不可少的一部分，因为你需要恢复<span title="线索标记" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索标记</span>，以便提示更多的卡牌。
+</p>
+<h2><span class="mw-headline" id="Game_End">游戏结束</span></h2>
+
+<p>游戏可以通过三种方式结束：
+</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>如果玩家造成了3次误发（打错的牌），游戏立即结束，玩家失败。</li>
+  <li>如果所有5个烟花堆都完成，玩家获胜，并获得25分的辉煌胜利。</li>
+  <li>如果牌堆耗尽，每位玩家再轮流出牌一次（包括消耗完牌堆的玩家）。</li>
+</ul>
+<h4><span class="mw-headline" id="Scoring">计分</span></h4>
+<p>游戏过程中分数会自动计算，并显示在玩家面板上。
+</p><p>艺术表现由烟花技师工匠联盟参考等级决定：
+</p>
+
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background:#ccd4;text-align:left;font-weight:600;">
+<th>分数
+</th>
+<th>整体印象
+</th></tr>
+<tr>
+<td>0-5
+</td>
+<td>糟糕，被观众嘘声……
+</td></tr>
+<tr>
+<td>6-10
+</td>
+<td>平庸，仅获得零星掌声……
+</td></tr>
+<tr>
+<td>11-15
+</td>
+<td>可敬的尝试，但很快被遗忘……
+</td></tr>
+<tr>
+<td>16-20
+</td>
+<td>出色，观众满意。
+</td></tr>
+<tr>
+<td>21-24
+</td>
+<td>惊人，将被记住数周！
+</td></tr>
+<tr>
+<td>25-29
+</td>
+<td>传奇，所有人目瞪口呆，眼中闪烁星光！
+</td></tr>
+<tr>
+<td>30
+</td>
+<td>神圣，表演胜过星辰！
+</td></tr></tbody></table>
+<p>要获得25分以上的唯一方式是包含多色卡片。见下方<b>变体</b>。
+</p>
+<h2><span class="mw-headline" id="Variants">变体</span></h2>
+<h4><span class="mw-headline" id="Colors">颜色</span></h4>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background:#ccd4;text-align:left;font-weight:600;">
+<th>名称
+</th>
+<th>牌数
+</th>
+<th>定义
+</th></tr>
+<tr>
+<td>普通
+</td>
+<td style="text-align:left;">5种颜色
+</td>
+<td style="text-align:left;">使用50张牌组成的5种颜色（红色、黄色、绿色、蓝色、白色）牌组进行游戏，以形成5个烟花堆。
+</td></tr>
+<tr>
+<td>棘手</td>
+<td style="text-align:left;">第六种颜色（10张牌）</td>
+<td style="text-align:left;">添加第六种颜色——<span style="display:inline-block;display:inline;color:oklch(from #b0b clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#b0b,#b0b)">多色</span>——将牌组组建为60张，并制作6个烟花堆。
+</td></tr>
+<tr>
+<td>困难</td>
+<td style="text-align:left;">第6种颜色（5张不同的牌）</td>
+<td style="text-align:left;">与“棘手”相同，但<span style="display:inline-block;display:inline;color:oklch(from #b0b clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:{{{s}}}em;font-weight:700;font-style:{{{i}}};font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px {{{oc}}};border:2px solid {{{bc}}};border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#b0b,#b0b)">多色</span> 牌每个点数只有一张：</td>
+</tr>
+<p>1 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#b0b"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">多色</span></span>1</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive">m</span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">,有一个 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span>
+<span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:#b0b;visibility:hidden"><span style="font-size:0;visibility:hidden">彩色 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">1</span><span style="font-size:0;visibility:hidden">线索,</span>, 1 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#b0b"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">彩色</span></span>2</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive">m</span>
+<span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">，带有 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:#b0b;visibility:hidden"><span style="font-size:0;visibility:hidden">多色 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">2</span><span style="font-size:0;visibility:hidden">提示，</span>，1 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#b0b">
+<span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">多色</span></span>3</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive">m</span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">，有一个 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:#b0b;visibility:hidden"><span style="font-size:0;visibility:hidden">多色 </span></span>
+<span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">3</span><span style="font-size:0;visibility:hidden">线索,</span>, 1 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#b0b"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">多彩</span></span>4</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive">m</span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">,带有一个 </span>
+<span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:#b0b;visibility:hidden"><span style="font-size:0;visibility:hidden">多色 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">4</span><span style="font-size:0;visibility:hidden">线索,</span>, 1 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#b0b"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:0px #fff"><span style="font-size:0">
+多色5,带有多色5提示
+
+
+<div style="padding:.5em .75em;margin:.5em 0;min-height:1.5rem;border:1px solid #a3caff;background-color:#eaf3ff;color:#333;width:fit-content;&#123;&#123;&#123;s&#125;&#125;&#125;"><span class="mw-&#123;&#123;&#123;s&#125;&#125;&#125;ollapsible mw-&#123;&#123;&#123;s&#125;&#125;&#125;ollapsed" style="display:flex;align-items:center;gap:.75em;"><span class="mw-&#123;&#123;&#123;s&#125;&#125;&#125;ollapsible-toggle">
+<span style="display:inline-flex;align-items:center;justify-content:space-around;position:relative;z-index:{{{z}}};height:calc(1px*25);width:calc(1px*25);overflow:hidden;color:#000;font-family:Roboto,Arial,sans-serif;font-weight:700;font-size:16px;text-shadow:0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0,0 0 2px #fff0;"><span style="position:absolute;left:calc(-1px*0*25);top:calc(-1px*0);transform-origin:top left;transform:scale(.5);"><img src="https://en.doc.boardgamearena.com/images/6/60/MediaWiki-note-icons.png" loading="lazy"  alt="MediaWiki-note-icons.png" decoding="async" /></span></span><span style="position:relative;white-space:nowrap;">&#8203;</span></span></span></div></span></span></span><span class="mw-collapsible-content">
+这个变体总是在友谊模式下进行，因为分数过于依赖运气，无法反映真实的技巧。</span>
+
+
+
+<tr>
+<td>色彩雪崩
+</td>
+<td style="text-align:left;">多色（10 张多色牌）
+</td>
+<td style="text-align:left;"><span style="display:inline-block;display:inline;color:oklch(from #b0b clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:{{{s}}}em;font-weight:700;font-style:{{{i}}};font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px {{{oc}}};border:2px solid {{{bc}}};border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,#b0b,#b0b)">多色</span> 牌是万能牌，这意味着这些牌可以由 <i><b>任何颜色提示</b></i>。
+</td></tr></p></tbody></table>
+<h4><span class="mw-headline" id="Black_Powder">黑火药</span></h4>
+<p>将十张<span style="display:inline-block;display:inline;color:oklch(from black clamp(0,(l/0.64 - 1)*-infinity,1) 0 h);font-size:&#123;&#123;&#123;s&#125;&#125;&#125;em;font-weight:700;font-style:&#123;&#123;&#123;i&#125;&#125;&#125;;font-family:Roboto,sans-serif;white-space:nowrap;-webkit-text-stroke:.5px &#123;&#123;&#123;oc&#125;&#125;&#125;;border:2px solid &#123;&#123;&#123;bc&#125;&#125;&#125;;border-radius:99em;padding:4px 8px 4px 8px;background:linear-gradient(90deg in oklch,black,black)">黑色</span>卡片加入牌组。黑色卡片按<b>降序</b>出牌（从<span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#000">
+<span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:1px #fff"><span style="font-size:0">黑火药</span></span>5</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">,带有一个 </span><span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:#000;visibility:hidden"><span style="font-size:0;visibility:hidden">黑火药 </span></span>
+<span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">5</span><span style="font-size:0;visibility:hidden">线索,</span> 到 <span style="display:inline-grid;grid:16px 24px 28px/auto-flow;width:26px;font:500 16px/1.1 Roboto;text-align:center;color:#000"><span style="grid-area:2/1/4/1;z-index:1;width:26px;font:700 28px/1.1 Roboto;border-radius:3px;background:linear-gradient(#324,#458);-webkit-text-stroke:1px #fff"><span style="font-size:0">黑色粉末</span></span>1</span><span aria-hidden="true" style="grid-area:3/1/4/1;z-index:1;width:26px;font:20px/1.1 cursive"></span><span aria-hidden="true" style="grid-area:3/1/4/1;position:relative;top:26px;z-index:4;width:26px;color:#fff"></span><span style="font-size:0;visibility:hidden">,带有一个 </span>
+<span style="grid-area:1/1/3/1;width:12px;margin:0 1px;border-radius:3px;border:1px solid #648;background:#ccc8;visibility:hidden"></span><span style="grid-area:1/1/3/1;justify-self:center;width:22px;border-radius:3px;border:1px solid #648;background:#000;visibility:hidden"><span style="font-size:0;visibility:hidden">黑色火药 </span></span><span style="grid-area:1/1/3/1;padding:0 3px;line-height:1.15;text-align:left;color:#324;visibility:hidden">1</span><span style="font-size:0;visibility:hidden">线索,</span>).
+这就是为什么不是三个1和一个5，而是三个5和一个1。
+</p>
+<p>你<b>不能为黑色卡牌提供颜色提示</b>。它们没有颜色（谁能看到黑色的烟花呢？）。所以黑色卡牌只能通过数字提示。</p><p>游戏得分从-5开始。黑色火药堆中每缺少一张卡牌，得分就减1。</p>
+<h4><span class="mw-headline" id="5_Flamboyants">5 奢华牌</span></h4>
+<p>也被称为“华丽的五张”。当你在烟花堆上打出最后一张卡牌（通常是5）时，会随机选择一个奖励牌立即使用。奖励牌有不同的效果：</p>
+<ul class="bulletlist" style="margin:1em 0;padding-inline-start:40px;">
+  <li>获得一个 <span title="clue tokens" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">提示代币</span></li>
+
+  <li>获得一个<span title="线索标记" style="display:inline-grid;place-content:center;place-items:center;width:calc(1rem*1.25);height:calc(1rem*1.25);border:calc(1px*2) solid #444;border-radius:50%;background:repeating-conic-gradient(#5df 0deg 6deg,#444 8deg 52deg,#5df 54deg 60deg);color:#fff;font-family:Impact;font-weight:700;text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000,0 0 2px #000;font-size:1rem;line-height:1rem;vertical-align:middle"><span style="grid-area:1/1;width:calc(1rem*1.1);height:calc(1rem*1.1);border-radius:50%;background:repeating-conic-gradient(#4440 0deg 24deg,#5df 26deg 34deg,#4440 36deg 60deg)"></span></span><span style="grid-area:1/1;white-space:nowrap">&#8203; </span><span style="grid-area:1/1;font-size:0">线索标记</span>并移除1个失误</li>
+  <li>免费给玩家一个颜色线索</li>
+  <li>免费给玩家一个数字线索</li>
+
+  <li>将弃掉的牌洗回牌堆（可选）</li>
+  <li>打出一张弃掉的牌（可选）</li>
+</ul>
+
+<h4><span class="mw-headline" id="Convention_Used">使用的公约</span></h4>
+
+<p><i>Hanabi</i> 是一款关于交流的游戏，但提示标记不够用</p>
+能够指示每张出牌的颜色<i>和</i>数字。因此，为了提供更多信息，团队必须就提示、出牌和弃牌的解释达成一致，这被称为<b>约定</b>。
+<p>如果玩家使用不同的约定来交流，他们一定会输。您可以在 <b><a href="https://en.doc.boardgamearena.com/Tips_hanabi" target="_blank" rel="noopener">提示</a></b> 页面上阅读更多关于约定的信息。</p><p>在游戏设置期间，创建者可以指示玩家应使用哪套约定。这些约定不是强制执行的，因此请尊重桌面创建者设定的约定。</p>
+<table class="wikitable" style="width:auto;" border="2">
+
+<tbody><tr style="background:#ccd4;text-align:left;font-weight:600;">
+<th>约定套装</th>
+<th>摘要</th>
+<th>参考</th></tr>
+<tr>
+<th style="background:#ccd4;text-align:center;font-weight:600;">未指定</th>
+<td style="text-align:left;">没有设置约定</td>
+<td></td></tr>
+<tr>
+<th style="background:#ccd4;text-align:center;font-weight:600;">巧妙技巧 (Finesse)</th>
+<td style="text-align:left;">
+<p>玩家假设每张标记的卡片都是有用的。<br />  
+无用的卡片会按优先顺序被弃置 <i>例如，当蓝色堆叠完成后，标记为蓝色的卡片。</i><br />  
+如果没有可打的卡片，最旧的未标记卡片可以安全弃置。<br />  
+标记最旧未标记卡片的数字提示意味着将此卡片留到以后使用。<br />  
+否则，这是一个以左侧为重点的出牌提示。<br />  
+出牌提示也可能包括每手牌中的 <b>最新未标记</b> 卡片。</p>  
+</td>  
+<td><a href="https://docs.google.com/document/d/1VzgN6WoeYwh5NYtHECzUNZqFvpVcg-EdObU-YNMlyhc" target="_blank" rel="noopener">参考资料</a>  
+</td></tr>
+<tr>
+<th style="background:#ccd4;text-align:center;font-weight:600;">分层技巧
+</th>
+<td style="text-align:left;">与技巧相同，但增加了被技巧化的牌也可以叠放在其他无关但可打出的牌后面。
+</td>
+<td><a href="https://docs.google.com/document/d/1VzgN6WoeYwh5NYtHECzUNZqFvpVcg-EdObU-YNMlyhc" target="_blank" rel="noopener">参考</a>
+</td></tr>
+<tr>
+<th style="background:#ccd4;text-align:center;font-weight:600;">H组
+</th>
+<td style="text-align:left;">这是一个综合性的约定集，包含多个详细解释，许多基于最后一张牌（称为“切牌”）和提示的顺序。更多详情请参见参考资料。
+</td>
+<td><a href="https://hanabi.github.io" target="_blank" rel="noopener">H-Group</a>
+</td></tr>
+<tr>
+<th style="background:#ccd4;text-align:center;font-weight:600;">其他
+</th>
+<td style="text-align:left;">您可以在表格开始时，在表格展示标题中指定应使用的会议集。
+</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Preset_Deck">预设牌组</span></h4>
+<p>预设牌组对于使用相同牌组比较团队/会议非常有用。您可以选择不使用预设牌组，或者选择当天的5个预设牌组之一。这些牌组每天 UTC 时间 0:00 会更换。
+</p>
+<h4><span class="mw-headline" id="Unofficial_variant">非官方变体</span></h4>
+<p>在两人游戏中，手牌数量为 6，而不是 5。在五人游戏中，手牌数量为 3，而不是 4。
+</p>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelphanabi" target="_blank" rel="noopener">花火 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

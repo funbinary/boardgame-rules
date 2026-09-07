@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Meridians 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Meridians · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Meridians</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Meridians</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>Meridians is an abstract strategy game for two players. It has a territorial nature, but the goal is to annihilate the opponent's stones.
+</p><p>Meridians is named after the meridian system, a concept in traditional Chinese medicine conceptually similar to the circulatory system.
+</p><p>Kanare Kano designed Meridians in March of 2021.
+</p>
+<h2><span class="mw-headline" id="Components">Components</span></h2>
+<p>A centerless hexagonal board tessellated with triangles. The regular size board has six intersections along two sides and seven intersections along the other four sides.
+</p><p>A sufficient number of stones of two colors.
+</p>
+<h2><span class="mw-headline" id="Definitions">Definitions</span></h2>
+<p><b>Group</b>: Like-colored stones adjacent to each other. Singletons are considered groups of size 1.
+</p><p><b>Path</b>: An uninterrupted straight line of at least one empty intersection connecting two different but similar-colored groups.
+</p><p><b>Dead Group</b>: A group which has no path connecting it to another group.
+</p>
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p><i>Note: The following steps describe the rules of the BGA implementation more accurately than the rules PDF. They are, for all intents and purposes, equivalent.</i>
+</p><p>The player controlling the light colored stones moves first, with turns alternating afterwards.
+</p><p>On each player's first turn, the active player must place a stone of their color onto any empty intersection.
+</p><p>During each subsequent turn:
+</p>
+<dl><dd>1. The active player must place a stone of their color onto any empty intersection that is on a straight line from an existing friendly stone, such that there are no different colored stones between them. Passing is not allowed.</dd>
+<dd>2. The active player removes all of their dead groups from the board.</dd>
+<dd>3. If the active player has no stones on the board, they lose.</dd></dl></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpmeridianstwo" target="_blank" rel="noopener">Meridians — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

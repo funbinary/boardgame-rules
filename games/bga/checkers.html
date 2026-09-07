@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="西洋跳棋 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>西洋跳棋 · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">西洋跳棋</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">西洋跳棋</h1>
+          <p class="game-sub">Checkers · Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <h2>游戏目标</h2>
+<p>西洋跳棋（Checkers），也写作 draughts，是一款拥有近千年历史的双人抽象策略游戏。游戏中移动自己的棋子，直到跳吃掉对手的所有棋子并将它们移出棋盘。玩家轮流（浅色先行）每次沿对角线移动一颗棋子。文中所有关于格子的说明都只针对深色格。棋盘为 8×8 的交替浅色/深色格子。玩家把棋子摆在自己一侧前三行的 12 个深色格上（浅色格完全不用），共摆三行、每行 4 颗棋子。</p>
+
+<h2>游戏变体</h2>
+<p>西洋跳棋有很多变体，BGA 上提供其中四种：</p>
+<ul>
+  <li><strong>国际跳棋</strong>（10×10 棋盘；兵可以向后吃，王可以飞行，必须吃尽可能多的棋子）</li>
+  <li><strong>美式跳棋 / 英式跳棋（Straight Checkers）</strong>（8×8 棋盘；兵不能向后吃，王可以向后吃但不能飞行，能吃必须吃，但不必吃最多的子）</li>
+  <li><strong>巴西跳棋</strong>（8×8 棋盘；兵可以向后吃，王可以飞行，必须吃尽可能多的棋子）</li>
+  <li><strong>俄罗斯跳棋</strong>（8×8 棋盘；兵可以向后吃，王可以飞行并在加冕后立即继续吃子，能吃必须吃，但不必吃最多的棋子）</li>
+</ul>
+<p>请务必查看你当前所玩变体的规则：以下详细说明仅适用于美式跳棋（Straight Checkers）。</p>
+
+<h2>美式跳棋</h2>
+<h3>移动与吃子</h3>
+<ul>
+  <li>轮到己方时，把一颗棋子沿对角线向对手一侧向前移动一格，目标格必须没有双方棋子。如果你的棋子位于对手棋子后方一格以内（在你这一侧），可以进行"跳吃"：沿同一方向跳过对手棋子落到再后面一格，并把被跳过的棋子移出游戏。</li>
+  <li>在同一回合中用连续跳跃吃掉多枚棋子是本游戏的关键；连跳时可以改变对角线方向，但必须始终向前。</li>
+  <li>如果有跳吃对手棋子的机会，你<strong>必须</strong>吃。</li>
+  <li>只要还有后续的吃子机会，就必须继续吃。</li>
+  <li>如果可以在多枚对手棋子中选择跳吃对象，你可以任选其一，但必须吃掉其中一枚。</li>
+</ul>
+<h3>王</h3>
+<ul>
+  <li>当棋子到达对手一侧的底线时，升变为王，此后可以向任意方向移动。</li>
+  <li>王可以沿对角线向前或向后移动。</li>
+  <li>除吃子外，王每次仍然只能沿对角线移动一格。</li>
+  <li>在连续吃子时，王可以在同一回合中既向前又向后移动。</li>
+</ul>
+<h3>获胜</h3>
+<p>完成以下两个目标之一即获胜：</p>
+<ul>
+  <li>吃光对手的所有棋子；</li>
+  <li>或封锁对手的所有棋子，使其无法再移动。</li>
+</ul>
+<h3>平局</h3>
+<p>出现以下任一条件即判为平局：</p>
+<ul>
+  <li>同一局面第三次重复出现（不要求连续）；</li>
+  <li>或连续 25 步内没有兵向前移动，也没有发生吃子。</li>
+</ul>
+
+<h2>游戏变体（BGA 可选）</h2>
+<p>有关如何玩西洋跳棋的提示，参见 Tips_checkers（英文）。</p>
+
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpcheckers" target="_blank" rel="noopener">西洋跳棋 — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Draftcider 的中文规则（Board Game Arena 官方文档翻译）。">
+  <title>Draftcider · 规则 — 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-theme="bga">
+
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">Draftcider</span>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="toc" aria-label="本页目录">
+        <div class="toc-title">本页目录</div>
+        <ul id="toc-list"></ul>
+      </nav>
+      <nav aria-label="站点导航">
+        <div class="toc-title">站点导航</div>
+        <ul>
+          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <article>
+        <header class="page-header">
+          <h1 class="game-title">Draftcider</h1>
+          <p class="game-sub">Board Game Arena 官方规则文档</p>
+          <div class="meta-chips">
+            <span class="meta-chip">📄 BGA 官方文档</span>
+          </div>
+        </header>
+
+        <div class="mw-parser-output">
+<h2><span class="mw-headline" id="Gameplay">Gameplay</span></h2>
+<p>At the start of the game, you are each given a board; this is your orchard. 
+</p><p>The first player is whoever most recently consumed an apple or apple-based product.
+</p><p><br />
+At the start of each round, a set of 2 cards per player is placed into the communal hand.
+</p><p>On a player's turn, they must select a card and place it in any of their available batches.
+</p><p>At the start of each phase, rotate the player who picks first. The game ends after 6 rounds.
+</p><p><br />
+As with most games, the player with the most points at the end is the winner.
+</p><p><i>The deck appears to have one copy of each combination of colour (Green, Gold, Red), height (1-5), and sweetness (1-5).  If someone knows for sure, they could update this…</i>
+</p>
+<h3><span class="mw-headline" id="Two_players">Two players</span></h3>
+<p>The game consists of 4 rounds of 6 cards
+</p>
+<h3><span class="mw-headline" id="The_Batches">The Batches</span></h3>
+<h4><span class="mw-headline" id="Monochrome_Batch">Monochrome Batch</span></h4>
+<p>All apples must be the same colour, as indicated by the card. 
+</p><p>Points are triangle numbers starting at 1: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78
+</p>
+<h4><span class="mw-headline" id="Apples_of_a_Feather">Apples of a Feather</span></h4>
+<p>The second card must match the 1st card's Sweetness or Height. Any additional cards must then follow this rule. If a pair of cards have the same Sweetness and Height, you may continue with either attribute based on your next card. E.g. if the first card is Sweetness 3, Height 2, the player can then place either a Sweetness 3 or Height 2 card, but once they place a Sweetness 3, they must continue to do so exclusively.
+</p><p>Scoring is n(n-1), where n is the number of cards: 0, 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132
+</p>
+<h4><span class="mw-headline" id="Special_Colour_Tree">Special Colour Tree</span></h4>
+<p>Score 20 points if no other apples of this colour are outside of the bad batch. Loses 20 points if an apple of the same colour is played outside of the bad batch. This card cannot be placed if there is a card of its colour anywhere but the Bad Batch. However, a card of the same colour may be played at the cost of all points for this batch.
+</p>
+<h4><span class="mw-headline" id="Unlucky_batch">Unlucky batch</span></h4>
+<p>Sweetness must add to 13 and the sweetness of the cards must be within 1 of each other!
+</p><p>Points: Square of the number of cards used, if and only if the result is 13 exactly! E.g. two 4s and a 5 would be 3 cards, so 9 (3x3) points 
+</p><p>9, 16, 25, 36, 49, 64, 81, 100, 121, 144
+</p>
+<h4><span class="mw-headline" id="Fortepiano_Height">Fortepiano Height</span></h4>
+<p>Score the difference in Height between each pair times 2. Heights may not be the same. 
+</p><p>E.g. Heights 1&amp;5=8 points. 2&amp;3=2 Max: 4
+</p>
+<h4><span class="mw-headline" id="Sweet_Couple">Sweet Couple</span></h4>
+<p>Score 7 points for each pair of cards of the same Sweetness. Each pair must have the same Sweetness to be played. 
+</p><p>Max: 42
+</p>
+<h4><span class="mw-headline" id="Steady_Height">Steady Height</span></h4>
+<p>Height must be within one of the previous cards. E.g 3-3 or 3-2 or 3-4 Points: 
+</p><p>Score is odd prime numbers: 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41
+</p>
+<h4><span class="mw-headline" id="Bad_batch">Bad batch</span></h4>
+<p>-1 point for each tree planted here. (0/1 points on easy mode) Max: -12
+</p>
+<h3><span class="mw-headline" id="Tie-Breaker">Tie-Breaker</span></h3>
+<p>In the event of a tie, the player with the most cards in different batches wins.
+</p>
+<h3><span class="mw-headline" id="Single_Player_Variant">Single Player Variant</span></h3>
+<p>In this version, your only opponent is luck. Your aim is to score as high as possible, despite not knowing which cards you will receive.
+</p></div>
+
+        <footer class="source-note">
+          <p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelpdraftcider" target="_blank" rel="noopener">Draftcider — BGA 官方文档 Wiki</a> ·
+          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="返回顶部">↑</button>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

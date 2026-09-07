@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="桌游规则书：七大奇迹、工业革命：伯明翰、永恒之谷、展翅翱翔、波多黎各、宝可梦林地探索等桌游的中文规则速查，收录 Board Game Arena 全部游戏的官方规则文档，支持手机浏览。">
+  <title>桌游规则书 · 全站中文规则查询</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="brand">🎲 桌游规则书</span>
+  </header>
+
+  <main class="home">
+    <section class="hero">
+      <div class="hero-icon">🎲</div>
+      <h1>桌游规则书</h1>
+      <p class="hero-sub">中文精选规则 + Board Game Arena 全量官方规则文档，随时查阅。手机浏览同样友好。</p>
+      <div class="hero-tags">
+        <span class="meta-chip">📖 中文精选</span>
+        <span class="meta-chip">🌍 BGA 全量规则</span>
+        <span class="meta-chip">📱 支持手机</span>
+      </div>
+    </section>
+
+    <!-- 搜索全部游戏 -->
+    <section class="search-section">
+      <div class="search-box">
+        <input id="game-search" type="search" placeholder="搜索游戏名称，如：卡坦岛、卡卡颂、hearts…" autocomplete="off">
+        <label class="show-en-toggle"><input type="checkbox" id="show-en"> 同时显示英文游戏（1600+）</label>
+      </div>
+      <div class="search-meta" id="search-meta"></div>
+      <div class="bga-grid" id="bga-grid"></div>
+      <div class="search-more" id="search-more" hidden></div>
+    </section>
+
+    <!-- 中文精选 -->
+    <section class="featured">
+      <h2 class="section-title">✨ 中文精选规则</h2>
+      <div class="game-grid">
+        <a class="game-card" data-theme="wonders" href="games/7-wonders.html">
+          <div class="card-banner">🏛️</div>
+          <div class="card-body">
+            <h3 class="card-title">七大奇迹</h3>
+            <p class="card-sub">7 Wonders · Antoine Bauza</p>
+            <div class="card-meta">
+              <span class="meta-chip">👥 3–7 人</span>
+              <span class="meta-chip">⏱ 约 30 分钟</span>
+            </div>
+            <p class="card-desc">带领你的城市穿越三个时代，建造奇观、发展科技与军事，通过轮抽卡牌在古代地中海争霸。</p>
+            <span class="card-link">阅读规则 →</span>
+          </div>
+        </a>
+
+        <a class="game-card" data-theme="brass" href="games/brass-birmingham.html">
+          <div class="card-banner">🏭</div>
+          <div class="card-body">
+            <h3 class="card-title">工业革命：伯明翰</h3>
+            <p class="card-sub">Brass: Birmingham · Martin Wallace</p>
+            <div class="card-meta">
+              <span class="meta-chip">👥 2–4 人</span>
+              <span class="meta-chip">⏱ 60–120 分钟</span>
+            </div>
+            <p class="card-desc">回到 1770–1870 年的英格兰：铺设运河与铁路，建设煤矿、棉花厂、陶器厂与啤酒厂，两个时代后争夺最高胜利点数。</p>
+            <span class="card-link">阅读规则 →</span>
+          </div>
+        </a>
+
+        <a class="game-card" data-theme="vale" href="games/vale-of-eternity.html">
+          <div class="card-banner">✨</div>
+          <div class="card-body">
+            <h3 class="card-title">永恒之谷</h3>
+            <p class="card-sub">The Vale of Eternity · Sang-yeon Baek</p>
+            <div class="card-meta">
+              <span class="meta-chip">👥 2–4 人</span>
+              <span class="meta-chip">⏱ 30–45 分钟</span>
+            </div>
+            <p class="card-desc">化身驯兽师，狩猎并驯服神话生物：出售、驯服、召唤仆从，收集魔法石，最先获得 60 分。</p>
+            <span class="card-link">阅读规则 →</span>
+          </div>
+        </a>
+
+        <a class="game-card" data-theme="grove" href="games/pokemon-grove.html">
+          <div class="card-banner">🌳</div>
+          <div class="card-body">
+            <h3 class="card-title">宝可梦林地探索</h3>
+            <p class="card-sub">宝可梦主题卡牌游戏 · 全地区图鉴探索大赛</p>
+            <div class="card-meta">
+              <span class="meta-chip">👥 1–5 人</span>
+              <span class="meta-chip">⏱ 约 60 分钟</span>
+            </div>
+            <p class="card-desc">打出训练家图鉴、收集宝可梦组建队伍，在第三声口哨响起前拿到最高分。含基础版、三个官方扩展、大木扩与单人模式。</p>
+            <span class="card-link">阅读规则 →</span>
+          </div>
+        </a>
+
+        <a class="game-card" data-theme="wingspan" href="games/wingspan.html">
+          <div class="card-banner">🦜</div>
+          <div class="card-body">
+            <h3 class="card-title">展翅翱翔</h3>
+            <p class="card-sub">Wingspan · Elizabeth Hargrave</p>
+            <div class="card-meta">
+              <span class="meta-chip">👥 1–5 人</span>
+              <span class="meta-chip">⏱ 40–70 分钟</span>
+            </div>
+            <p class="card-desc">经营你的鸟类保护区：吸引鸟类栖息、繁衍后代、积蓄食物，打造最美的鸟类栖息地。</p>
+            <span class="card-link">阅读规则 →</span>
+          </div>
+        </a>
+
+        <a class="game-card" data-theme="puerto" href="games/puerto-rico.html">
+          <div class="card-banner">⛵</div>
+          <div class="card-body">
+            <h3 class="card-title">波多黎各</h3>
+            <p class="card-sub">Puerto Rico · Andreas Seyfarth</p>
+            <div class="card-meta">
+              <span class="meta-chip">👥 2–5 人</span>
+              <span class="meta-chip">⏱ 90–150 分钟</span>
+            </div>
+            <p class="card-desc">轮番出任总督、拓荒者、市长、建筑师、工匠、商人、船长与淘金者：开垦种植园、兴建建筑、把货物运回旧大陆，赚取最多胜利点数。</p>
+            <span class="card-link">阅读规则 →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="home-footer">
+      <p>BGA 规则内容来自
+        <a href="https://en.doc.boardgamearena.com" target="_blank" rel="noopener">Board Game Arena 官方文档 Wiki</a>（英文），版权归原出版商与 BGA 所有，本站仅作个人学习查阅。
+      </p>
+      <p>中文规则：七大奇迹 / 展翅翱翔 整理自
+        <a href="https://www.bilibili.com/opus/1031116154839498768/" target="_blank" rel="noopener">BGA桌游中文规则书</a>（哔哩哔哩）；波多黎各整理自
+        <a href="https://www.bilibili.com/opus/1036770316071731200" target="_blank" rel="noopener">BGA桌游规则：波多黎各</a>（BGA小助手，哔哩哔哩）；永恒之谷整理自
+        <a href="https://www.bilibili.com/opus/890774653861101571" target="_blank" rel="noopener">啃规则的Lancer</a>；工业革命：伯明翰整理自
+        <a href="https://mp.weixin.qq.com/s/9p9dLk-auv57EnYaqD8pHA" target="_blank" rel="noopener">微信公众号《工业革命：伯明翰》中文规则书</a>；宝可梦林地探索整理自玩家提供的规则书扫描图。版权归原作者所有。
+      </p>
+    </footer>
+  </main>
+
+  <script src="assets/js/bga-index.js"></script>
+  <script>
+  (function () {
+    var input = document.getElementById("game-search");
+    var grid = document.getElementById("bga-grid");
+    var meta = document.getElementById("search-meta");
+    var more = document.getElementById("search-more");
+    var featured = [
+      { name: "宝可梦林地探索", en: "Pokemon Grove", id: "pokemon-grove", players: "1-5", href: "games/pokemon-grove.html" },
+      { name: "工业革命：伯明翰", en: "Brass: Birmingham", id: "brass-birmingham", players: "2-4", href: "games/brass-birmingham.html" }
+    ];
+    var games = featured.concat(window.BGA_GAMES || []);
+    var LIMIT = 120;
+    var hasZh = function (g) { return /[\u4e00-\u9fff]/.test(g.name); };
+    var showAll = false;
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function render(q) {
+      q = (q || "").trim().toLowerCase();
+      var list = games;
+      if (!showAll) list = list.filter(hasZh);
+      if (q) {
+        var qn = q.replace(/[\s'-]/g, ""); // 去空格连字符，匹配 BGA 的连写 id
+        list = list.filter(function (g) {
+          var hay = g.name.toLowerCase() + " " + (g.en || "").toLowerCase() + " " + g.id.toLowerCase();
+          return hay.indexOf(q) >= 0 || g.id.toLowerCase().indexOf(qn) >= 0 || (g.en || "").toLowerCase().replace(/[\s'-]/g, "").indexOf(qn) >= 0;
+        });
+      }
+      var shown = list.slice(0, LIMIT);
+      var html = "";
+      for (var i = 0; i < shown.length; i++) {
+        var g = shown[i];
+        html += '<a class="bga-item" href="' + (g.href || ('games/bga/' + encodeURIComponent(g.id) + '.html')) + '">' +
+          '<span class="bga-name"><span class="bga-zh">' + esc(g.name) + "</span>" +
+          (g.en ? '<small class="bga-en">' + esc(g.en) + "</small>" : "") +
+          "</span>" +
+          (g.players ? '<span class="bga-players">' + esc(g.players) + '人</span>' : "") +
+          "</a>";
+      }
+      grid.innerHTML = html || '<div class="search-empty">没有匹配的游戏</div>';
+      meta.textContent = list.length ? "共 " + list.length + " 个游戏" : "";
+      if (list.length > LIMIT) {
+        more.hidden = false;
+        more.textContent = "只显示前 " + LIMIT + " 个结果，请输入更多关键字缩小范围";
+      } else {
+        more.hidden = true;
+      }
+      // 中文模式下搜不到，但英文游戏里有：给出提示
+      if (!showAll && q && !list.length) {
+        var qn2 = q.replace(/[\s'-]/g, "");
+        var enCount = games.filter(function (g) {
+          return !hasZh(g) && ((g.en || "").toLowerCase().indexOf(q) >= 0 || g.id.toLowerCase().indexOf(qn2) >= 0 || (g.en || "").toLowerCase().replace(/[\s'-]/g, "").indexOf(qn2) >= 0);
+        }).length;
+        if (enCount > 0) {
+          more.hidden = false;
+          more.textContent = "英文游戏中找到 " + enCount + " 个匹配——勾选上方「同时显示英文游戏」即可查看";
+        }
+      }
+    }
+
+    var timer = null;
+    input.addEventListener("input", function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () { render(input.value); }, 120);
+    });
+    document.getElementById("show-en").addEventListener("change", function (e) {
+      showAll = e.target.checked;
+      render(input.value);
+    });
+    render("");
+  })();
+  </script>
+</body>
+</html>
