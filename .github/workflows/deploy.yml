@@ -1,0 +1,52 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+env:
+  SERVER: root@101.34.252.34
+  # 服务器 ED25519 主机指纹（固定下来，防止 keyscan 被劫持）
+  HOST_KEY_FP: SHA256:KBTITL08BAObIwNTj2s/R0hQAgsvy1ekGUeVS5xhT1M
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 配置 SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -t ed25519 101.34.252.34 > ~/.ssh/known_hosts 2>/dev/null
+          actual="$(ssh-keygen -lf ~/.ssh/known_hosts | awk '{print $2}')"
+          if [ "$actual" != "$HOST_KEY_FP" ]; then
+            echo "::error::主机指纹不匹配（期望 $HOST_KEY_FP，实际 $actual）"
+            exit 1
+          fi
+
+      - name: 部署到 /var/www/rules
+        run: |
+          ssh "$SERVER" "mkdir -p /var/www/rules"
+          if ssh "$SERVER" "command -v rsync" > /dev/null 2>&1; then
+            echo ">> rsync 增量同步（--delete 清除残留）"
+            rsync -az --delete --exclude='.git/' --stats ./ "$SERVER":/var/www/rules/
+          else
+            echo ">> tar 全量同步（先清空目录）"
+            tar --exclude='./.git' -czf - . | ssh "$SERVER" "find /var/www/rules -mindepth 1 -delete && tar -xzf - -C /var/www/rules"
+          fi
+
+      - name: 验证站点
+        run: |
+          sleep 2
+          status="$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 http://101.34.252.34/)"
+          echo "HTTP $status"
+          [ "$status" = "200" ]
