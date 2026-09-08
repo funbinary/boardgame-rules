@@ -103,7 +103,7 @@
       for (var i = 0; i < shown.length; i++) {
         var g = shown[i];
         var r = R[g.id];
-        var rating = r ? '<small class="bga-rating">⭐ BGG ' + r.a.toFixed(1) + (r.r ? " · 排名 #" + r.r : "") + "</small>" : "";
+        var rating = r ? '<small class="bga-rating">⭐ BGG ' + r.a.toFixed(1) + (r.r ? " · 排名 #" + r.r : "") + (r.w ? " · 权重 " + r.w.toFixed(1) : "") + "</small>" : "";
         html += '<a class="bga-item" href="' + (g.href || ('games/bga/' + encodeURIComponent(g.id) + '.html')) + '">' +
           '<span class="bga-name"><span class="bga-zh">' + esc(g.name) + "</span>" +
           (g.en ? '<small class="bga-en">' + esc(g.en) + "</small>" : "") +

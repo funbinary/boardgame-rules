@@ -230,10 +230,12 @@ function bggChipHtml(row) {
   if (!row || !row.a) return "";
   const avg = parseFloat(row.a).toFixed(1);
   const rank = row.r ? ` · 排名 #${row.r}` : "";
+  const wv = parseFloat(row.w);
+  const weight = isFinite(wv) && wv > 0 ? ` · 权重 ${wv.toFixed(2)}/5` : "";
   const u = fmtWan(row.u);
   const users = u ? ` · ${u}人评分` : "";
   const href = row.i ? `https://boardgamegeek.com/boardgame/${row.i}` : "https://boardgamegeek.com";
-  return `<a class="meta-chip bgg-chip" href="${href}" target="_blank" rel="noopener" title="BoardGameGeek 综合评分（点击查看原页面）">⭐ BGG ${avg}${rank}${users}</a>`;
+  return `<a class="meta-chip bgg-chip" href="${href}" target="_blank" rel="noopener" title="BoardGameGeek：⭐综合评分 ${avg}，排名 #${row.r || "-"}，权重/复杂度 ${isFinite(wv) && wv > 0 ? wv.toFixed(2) : "-"}/5（1 轻松 ~ 5 重度），${u || "-"}人评分。点击查看原页面">⭐ BGG ${avg}${rank}${weight}${users}</a>`;
 }
 
 // 3) 生成页面（content/bga-zh/<id>.html 有中文版则优先使用；bga-names-zh.json 提供中文译名）
