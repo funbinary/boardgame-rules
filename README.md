@@ -41,7 +41,7 @@ node tools/build-bga.mjs         # 生成 games/bga/ + assets/js/bga-index.js
 
 ## BGA 规则翻译成中文
 
-页面框架已是中文；规则正文默认英文。中文版放在 `content/bga-zh/<游戏id>.html`（存在即优先生效），目前收录 **130 个游戏**：8 个经典游戏人工整理，其余为热门游戏机翻（机翻质量以模型为准）。其中勃艮第城堡为《特别典藏版》官方中文规则书全文转录（`content/bga-zh/castlesofburgundy.html`，扫描图在 `assets/img/bga/castlesofburgundy/`，页头标签经 `<游戏id>.meta.json` 覆盖）；瘟疫危机为官方中文规则书全文转录（`content/bga-zh/pandemic.html`，扫描图在 `assets/img/bga/pandemic/`，整理自哔哩哔哩「BGA桌游规则」文集动态）；农场主（Agricola）为官方中文规则书全文转录（`content/bga-zh/agricola.html`，扫描图在 `assets/img/bga/agricola/`，Zeranix 翻译版，整理自哔哩哔哩「BGA桌游规则」专栏）。
+页面框架已是中文；规则正文默认英文。中文版放在 `content/bga-zh/<游戏id>.html`（存在即优先生效），目前收录 **131 个游戏**：8 个经典游戏人工整理，其余为热门游戏机翻（机翻质量以模型为准）。其中勃艮第城堡为《特别典藏版》官方中文规则书全文转录（`content/bga-zh/castlesofburgundy.html`，扫描图在 `assets/img/bga/castlesofburgundy/`，页头标签经 `<游戏id>.meta.json` 覆盖）；瘟疫危机为官方中文规则书全文转录（`content/bga-zh/pandemic.html`，扫描图在 `assets/img/bga/pandemic/`，整理自哔哩哔哩「BGA桌游规则」文集动态）；农场主（Agricola）为官方中文规则书全文转录（`content/bga-zh/agricola.html`，扫描图在 `assets/img/bga/agricola/`，Zeranix 翻译版，整理自哔哩哔哩「BGA桌游规则」专栏）。领国者（Hegemony）为官方中文规则书全文转录（`content/bga-zh/hegemony.html`，扫描图在 `assets/img/bga/hegemony/`，整理自哔哩哔哩「客厅猫桌游研究会」上/下篇动态）。
 
 游戏名的中文译名在 `content/bga-names-zh.json`（135 个，主要取自 BGA 中文站的官方译名，如卡坦岛、重塑火星、森森不息），未收录的游戏名保留英文原名，直接在 JSON 里补一行即可。
 
@@ -139,5 +139,6 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [农场主](https://www.bilibili.com/opus/1030775993404489735/) · BGA桌游规则（官方中文规则书全文转录）
 - [工业革命：伯明翰](https://mp.weixin.qq.com/s/9p9dLk-auv57EnYaqD8pHA) · 微信公众号（Roxley 官方繁中规则书转录为简体）
 - [勃艮第城堡：特别典藏版](https://mp.weixin.qq.com/s/Q5LgHCoXpvZGdYITuS2H2w) · 微信公众号「乐智源桌游工作室」（官方中文规则书全文转录，见 `games/bga/castlesofburgundy.html`）
+- [领国者](https://www.bilibili.com/opus/1244101530062159880)（[下篇](https://www.bilibili.com/opus/1244102552250744886)） · B站「客厅猫桌游研究会」（官方中文规则书全文转录，见 `games/bga/hegemony.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
