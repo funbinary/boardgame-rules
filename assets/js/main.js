@@ -199,35 +199,218 @@
     });
   }
 
-  /* ---------- 5. 图片点击放大（lightbox） ---------- */
+  /* ---------- 5. 图片点击放大（lightbox，支持缩放与平移） ----------
+     滚轮 / 按钮 / 双击 / 双指捏合缩放；放大后拖动平移。
+     图片若带 data-full-src,打开时优先加载该高清原图。 */
   function initLightbox() {
     var overlay = document.createElement("div");
     overlay.className = "lightbox";
     overlay.setAttribute("aria-hidden", "true");
     var img = document.createElement("img");
     img.alt = "";
+    img.draggable = false;
     overlay.appendChild(img);
+
+    var bar = document.createElement("div");
+    bar.className = "lightbox-bar";
+    var zoomLabel = document.createElement("span");
+    zoomLabel.className = "lightbox-zoom";
+    zoomLabel.textContent = "100%";
+    var mkBtn = function (txt, label) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = txt;
+      b.setAttribute("aria-label", label);
+      return b;
+    };
+    var btnOut = mkBtn("−", "缩小");
+    var btnIn = mkBtn("+", "放大");
+    var btnReset = mkBtn("重置", "重置缩放");
+    var btnClose = mkBtn("✕", "关闭");
+    bar.appendChild(zoomLabel);
+    bar.appendChild(btnOut);
+    bar.appendChild(btnIn);
+    bar.appendChild(btnReset);
+    bar.appendChild(btnClose);
+    overlay.appendChild(bar);
+
+    var hint = document.createElement("div");
+    hint.className = "lightbox-hint";
+    hint.textContent = "滚轮 / 双击 / 双指缩放 · 放大后可拖动";
+    overlay.appendChild(hint);
+
     document.body.appendChild(overlay);
 
+    var scale = 1, tx = 0, ty = 0;
+    var MIN = 1, MAX = 8;
+    var pointers = new Map();
+    var pinch = null;   // {dist, scale, tx0, ty0}
+    var panStart = null;
+    var tap = null;     // {x, y, t, onImg}：单指落点，用于轻点/双击判定
+    var lastTap = null; // 上一次有效轻点，用于触屏双击检测
+    var closeTimer = null; // 触屏轻点延迟关闭，给双击放大留出判定窗口
+
+    function apply(anim) {
+      img.style.transition = anim ? "" : "none";
+      img.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + scale + ")";
+      img.classList.toggle("zoomed", scale > 1.01);
+      zoomLabel.textContent = Math.round(scale * 100) + "%";
+    }
+    function reset(anim) { scale = 1; tx = 0; ty = 0; apply(anim); }
+
+    // 以视口坐标 (cx, cy) 为锚点缩放到 target 倍
+    function zoomAt(cx, cy, target, anim) {
+      var ns = Math.min(MAX, Math.max(MIN, target));
+      if (Math.abs(ns - scale) < 0.0001) return;
+      var r = overlay.getBoundingClientRect();
+      var ox = cx - r.left - r.width / 2;
+      var oy = cy - r.top - r.height / 2;
+      var k = ns / scale;
+      tx = ox - (ox - tx) * k;
+      ty = oy - (oy - ty) * k;
+      scale = ns;
+      apply(anim);
+    }
+
+    function open(src, alt) {
+      reset(false);
+      img.src = src;
+      img.alt = alt || "";
+      overlay.classList.add("open");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    }
     function close() {
       overlay.classList.remove("open");
       overlay.setAttribute("aria-hidden", "true");
       document.body.classList.remove("no-scroll");
     }
-    overlay.addEventListener("click", close);
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && overlay.classList.contains("open")) close();
+    function centerStep(f) {
+      var r = overlay.getBoundingClientRect();
+      zoomAt(r.left + r.width / 2, r.top + r.height / 2, scale * f, true);
+    }
+
+    btnIn.addEventListener("click", function () { centerStep(1.3); });
+    btnOut.addEventListener("click", function () { centerStep(1 / 1.3); });
+    btnReset.addEventListener("click", function () { reset(true); });
+    btnClose.addEventListener("click", close);
+
+    overlay.addEventListener("wheel", function (e) {
+      e.preventDefault();
+      zoomAt(e.clientX, e.clientY, scale * Math.exp(-e.deltaY * 0.0016), false);
+    }, { passive: false });
+
+    img.addEventListener("dblclick", function (e) {
+      e.preventDefault();
+      if (scale > 1.01) reset(true);
+      else zoomAt(e.clientX, e.clientY, 2.5, true);
     });
+
+    overlay.addEventListener("pointerdown", function (e) {
+      if (e.target !== img && e.target !== overlay) return; // 工具条按钮不参与手势
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      try { overlay.setPointerCapture(e.pointerId); } catch (err) { /* 忽略 */ }
+      if (pointers.size === 1) {
+        panStart = { x: e.clientX, y: e.clientY, tx: tx, ty: ty };
+        // 鼠标的单击/双击交给原生 click/dblclick；触屏/笔才做轻点判定
+        tap = e.pointerType === "mouse" ? null
+          : { x: e.clientX, y: e.clientY, t: Date.now(), onImg: e.target === img };
+      } else if (pointers.size === 2) {
+        var ps = Array.from(pointers.values());
+        pinch = {
+          dist: Math.hypot(ps[0].x - ps[1].x, ps[0].y - ps[1].y),
+          scale: scale, tx0: tx, ty0: ty
+        };
+        tap = null;
+        lastTap = null;
+      }
+    });
+
+    overlay.addEventListener("pointermove", function (e) {
+      if (!pointers.has(e.pointerId)) return;
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      if (pointers.size === 2 && pinch) {
+        var ps = Array.from(pointers.values());
+        var d = Math.hypot(ps[0].x - ps[1].x, ps[0].y - ps[1].y);
+        if (d > 2) {
+          var cx = (ps[0].x + ps[1].x) / 2, cy = (ps[0].y + ps[1].y) / 2;
+          var ns = Math.min(MAX, Math.max(MIN, pinch.scale * d / pinch.dist));
+          var k = ns / pinch.scale;
+          var r = overlay.getBoundingClientRect();
+          var ox = cx - r.left - r.width / 2, oy = cy - r.top - r.height / 2;
+          tx = ox - (ox - pinch.tx0) * k;
+          ty = oy - (oy - pinch.ty0) * k;
+          scale = ns;
+          apply(false);
+        }
+      } else if (pointers.size === 1 && panStart) {
+        if (scale > 1.01) {
+          tx = panStart.tx + (e.clientX - panStart.x);
+          ty = panStart.ty + (e.clientY - panStart.y);
+          apply(false);
+          tap = null;
+        }
+      }
+    });
+
+    function endPointer(e) {
+      if (!pointers.has(e.pointerId)) return;
+      pointers.delete(e.pointerId);
+      if (pointers.size < 2) pinch = null;
+      if (pointers.size === 1) {
+        // 双指收起回单指：以剩余手指重建平移基准
+        var rest = Array.from(pointers.values())[0];
+        panStart = { x: rest.x, y: rest.y, tx: tx, ty: ty };
+        return;
+      }
+      if (pointers.size === 0) {
+        panStart = null;
+        if (tap && Date.now() - tap.t < 350 &&
+            Math.hypot(e.clientX - tap.x, e.clientY - tap.y) < 8) {
+          if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+          if (lastTap && tap.t - lastTap.t < 350 &&
+              Math.hypot(tap.x - lastTap.x, tap.y - lastTap.y) < 32) {
+            // 触屏双击：切换放大/还原
+            if (scale > 1.01) reset(true);
+            else zoomAt(tap.x, tap.y, 2.5, true);
+            lastTap = null;
+          } else {
+            lastTap = { x: tap.x, y: tap.y, t: tap.t };
+            // 轻点关闭：点背景随时关；点图片仅在未放大时关，避免放大后误关。
+            // 延迟一拍关闭，给可能到来的第二次轻点（双击放大）留窗口。
+            var tapInfo = { onImg: tap.onImg };
+            closeTimer = setTimeout(function () {
+              closeTimer = null;
+              if (!tapInfo.onImg || scale <= 1.01) close();
+            }, 330);
+          }
+        }
+      }
+    }
+    overlay.addEventListener("pointerup", endPointer);
+    overlay.addEventListener("pointercancel", endPointer);
+
+    // 桌面：点击背景关闭（点图片留给双击放大，关闭用 ✕/Esc/点背景）
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!overlay.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "+" || e.key === "=") centerStep(1.3);
+      else if (e.key === "-") centerStep(1 / 1.3);
+      else if (e.key === "0") reset(true);
+    });
+
     document.addEventListener("click", function (e) {
       var t = e.target;
       var smallIcon = t && t.classList && (t.classList.contains("ic") || t.classList.contains("ic-md") || t.classList.contains("ic-badge"));
       if (t && t.tagName === "IMG" && !smallIcon && t.closest(".content")) {
         e.preventDefault();
-        img.src = t.currentSrc || t.src;
-        img.alt = t.alt || "";
-        overlay.classList.add("open");
-        overlay.setAttribute("aria-hidden", "false");
-        document.body.classList.add("no-scroll");
+        var full = t.getAttribute("data-full-src");
+        open(full || t.currentSrc || t.src, t.alt || "");
       }
     });
   }
