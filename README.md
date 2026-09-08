@@ -141,5 +141,6 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [勃艮第城堡：特别典藏版](https://mp.weixin.qq.com/s/Q5LgHCoXpvZGdYITuS2H2w) · 微信公众号「乐智源桌游工作室」（官方中文规则书全文转录，见 `games/bga/castlesofburgundy.html`）
 - [领国者](https://www.bilibili.com/opus/1244101530062159880)（[下篇](https://www.bilibili.com/opus/1244102552250744886)） · B站「客厅猫桌游研究会」（官方中文规则书全文转录，见 `games/bga/hegemony.html`）
 - [阿纳克遗迹](https://www.bilibili.com/opus/1030775946166140930/) · BGA桌游规则（官方中文规则书全文转录，见 `games/bga/arnak.html`）
+- [巴塞罗那](https://mp.weixin.qq.com/s/vp7R0FbF9FMj8nFBpGHyCw) · 微信公众号「桌游怎么玩」（官方中文规则书全文转录，见 `games/barcelona.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
