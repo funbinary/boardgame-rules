@@ -512,6 +512,24 @@ img { max-width: 100%; height: auto; }
   border-radius: 999px;
   padding: 1px 8px;
 }
+.bga-rating {
+  font-size: 0.72rem;
+  color: #8a6d1a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* BGG 评分 chip（游戏页头部，金色调不随主题变化） */
+.meta-chip.bgg-chip {
+  border-color: #ead9a0;
+  background: #fff8e1;
+  color: #8a6d1a;
+}
+.meta-chip.bgg-chip:hover {
+  border-color: #d8bd6a;
+  background: #fdf2cf;
+}
 
 .search-empty { color: var(--ink-soft); padding: 18px 4px; grid-column: 1 / -1; }
 

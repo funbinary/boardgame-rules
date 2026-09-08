@@ -103,9 +103,10 @@ function cleanHtml(html, titleToId, imgMap) {
 }
 
 /* ---------- 模板 ---------- */
-function renderPage({ id, name, sub, players, contentHtml, chip, desc, source }) {
+function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, bgg }) {
   const chips = [
     players ? `<span class="meta-chip">👥 ${players} 人</span>` : "",
+    bggChipHtml(bgg),
     `<span class="meta-chip">📄 ${chip || "BGA 官方文档"}</span>`,
   ].filter(Boolean).join("\n            ");
 
@@ -205,6 +206,36 @@ try {
 let imgMap = {};
 try { imgMap = JSON.parse(fs.readFileSync(path.join(ROOT, "_bga", "images-map.json"), "utf8")); } catch {}
 
+// BGG 评分（_bgg/results.jsonl 由内置浏览器抓取；文件不存在时页面不带评分 chip）
+// 兼容两代字段名：v2 长名(average/usersrated/avgweight/rank)、v3+ 短名(a/u/w/r)
+let bggRatings = {};
+try {
+  for (const l of fs.readFileSync(path.join(ROOT, "_bgg", "results.jsonl"), "utf8").split("\n")) {
+    if (!l.trim()) continue;
+    try {
+      const r = JSON.parse(l);
+      const avg = r.a ?? r.average;
+      if (!r.x && avg) bggRatings[r.k] = { ...r, a: avg, u: r.u ?? r.usersrated, w: r.w ?? r.avgweight, r: r.r ?? r.rank };
+    } catch { /* 跳过坏行 */ }
+  }
+} catch { /* 无评分数据 */ }
+
+function fmtWan(n) {
+  const v = parseInt(n, 10);
+  if (!isFinite(v) || v <= 0) return "";
+  return v >= 10000 ? (v / 10000).toFixed(1).replace(/\.0$/, "") + "万" : String(v);
+}
+
+function bggChipHtml(row) {
+  if (!row || !row.a) return "";
+  const avg = parseFloat(row.a).toFixed(1);
+  const rank = row.r ? ` · 排名 #${row.r}` : "";
+  const u = fmtWan(row.u);
+  const users = u ? ` · ${u}人评分` : "";
+  const href = row.i ? `https://boardgamegeek.com/boardgame/${row.i}` : "https://boardgamegeek.com";
+  return `<a class="meta-chip bgg-chip" href="${href}" target="_blank" rel="noopener" title="BoardGameGeek 综合评分（点击查看原页面）">⭐ BGG ${avg}${rank}${users}</a>`;
+}
+
 // 3) 生成页面（content/bga-zh/<id>.html 有中文版则优先使用；bga-names-zh.json 提供中文译名）
 const ZH_DIR = path.join(ROOT, "content", "bga-zh");
 fs.mkdirSync(ZH_DIR, { recursive: true });
@@ -233,7 +264,7 @@ for (const [title, html] of byTitle) {
   const en = info.name && info.name.length <= 60 ? info.name : titleCase(id);
   const name = nameZh[id] || en; // 中文名优先展示
   const sub = meta.sub || (nameZh[id] ? `${en} · Board Game Arena 官方规则文档` : "Board Game Arena 官方规则文档");
-  const page = renderPage({ id, name, sub, players, contentHtml, chip: meta.chip, desc: meta.desc, source: meta.source });
+  const page = renderPage({ id, name, sub, players, contentHtml, chip: meta.chip, desc: meta.desc, source: meta.source, bgg: bggRatings[id] || null });
   fs.writeFileSync(path.join(OUT_DIR, id + ".html"), page);
   index.push({ id, name, en: name === en ? "" : en, players: players || "" });
   written++;

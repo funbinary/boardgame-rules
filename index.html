@@ -53,6 +53,7 @@
   </main>
 
   <script src="assets/js/bga-index.js"></script>
+  <script src="assets/js/bgg-ratings.js"></script>
   <script>
   (function () {
     var input = document.getElementById("game-search");
@@ -96,13 +97,17 @@
           return hay.indexOf(q) >= 0 || g.id.toLowerCase().indexOf(qn) >= 0 || (g.en || "").toLowerCase().replace(/[\s'-]/g, "").indexOf(qn) >= 0;
         });
       }
+      var R = window.BGG_RATINGS || {};
       var shown = list.slice(0, LIMIT);
       var html = "";
       for (var i = 0; i < shown.length; i++) {
         var g = shown[i];
+        var r = R[g.id];
+        var rating = r ? '<small class="bga-rating">⭐ BGG ' + r.a.toFixed(1) + (r.r ? " · 排名 #" + r.r : "") + "</small>" : "";
         html += '<a class="bga-item" href="' + (g.href || ('games/bga/' + encodeURIComponent(g.id) + '.html')) + '">' +
           '<span class="bga-name"><span class="bga-zh">' + esc(g.name) + "</span>" +
           (g.en ? '<small class="bga-en">' + esc(g.en) + "</small>" : "") +
+          rating +
           "</span>" +
           (g.players ? '<span class="bga-players">' + esc(g.players) + '人</span>' : "") +
           "</a>";
