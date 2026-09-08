@@ -6,7 +6,7 @@
 
 ```
 rules/
-├── index.html               # 首页（搜索全部游戏 + 中文精选）
+├── index.html               # 首页（全部游戏统一目录 + 搜索）
 ├── games/
 │   ├── 7-wonders.html       # 中文精选（人工整理）
 │   ├── brass-birmingham.html
@@ -129,7 +129,7 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 1. `content/` 里整理规则的 Markdown 源文本；
 2. 复制任意 `games/*.html` 为新页面，替换正文与 `data-theme`；
 3. 扫描图放 `assets/img/<game>/`，附录里 `<img loading="lazy">` 引用；
-4. 在 `index.html` 加一张游戏卡片。
+4. 在 `index.html` 的 `featured` 数组加一条（会置顶显示在首页目录里，并与同名的 BGA wiki 条目自动去重）。
 
 ## 内容来源
 
