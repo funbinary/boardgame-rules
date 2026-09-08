@@ -35,6 +35,7 @@ body[data-theme="vale"] { --accent: #7c5cbf; --accent-strong: #6244a3; --accent-
 body[data-theme="grove"] { --accent: #55921c; --accent-strong: #3f7212; --accent-soft: rgba(85, 146, 28, 0.10); --accent-border: rgba(85, 146, 28, 0.35); }
 body[data-theme="brass"] { --accent: #8a6a15; --accent-strong: #6b5210; --accent-soft: rgba(138, 106, 21, 0.10); --accent-border: rgba(138, 106, 21, 0.35); }
 body[data-theme="puerto"] { --accent: #17698e; --accent-strong: #105270; --accent-soft: rgba(23, 105, 142, 0.10); --accent-border: rgba(23, 105, 142, 0.35); }
+body[data-theme="agricola"] { --accent: #a84632; --accent-strong: #8a3828; --accent-soft: rgba(168, 70, 50, 0.10); --accent-border: rgba(168, 70, 50, 0.35); }
 body[data-theme="bga"] { --accent: #c35500; --accent-strong: #9a4300; --accent-soft: rgba(195, 85, 0, 0.09); --accent-border: rgba(195, 85, 0, 0.35); }
 
 /* ---------- BGA wiki 内容适配 ---------- */
@@ -639,6 +640,7 @@ img { max-width: 100%; height: auto; }
 .game-card[data-theme="brass"]     { --accent: #8a6a15; --accent-strong: #6b5210; --accent-soft: rgba(138, 106, 21, 0.10); --accent-border: rgba(138, 106, 21, 0.35); }
 .game-card[data-theme="vale"]       { --accent: #7c5cbf; --accent-strong: #6244a3; --accent-soft: rgba(124, 92, 191, 0.10); --accent-border: rgba(124, 92, 191, 0.35); }
 .game-card[data-theme="puerto"]     { --accent: #17698e; --accent-strong: #105270; --accent-soft: rgba(23, 105, 142, 0.10); --accent-border: rgba(23, 105, 142, 0.35); }
+.game-card[data-theme="agricola"]   { --accent: #a84632; --accent-strong: #8a3828; --accent-soft: rgba(168, 70, 50, 0.10); --accent-border: rgba(168, 70, 50, 0.35); }
 
 .home-footer {
   margin-top: 48px;
