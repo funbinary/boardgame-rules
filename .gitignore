@@ -2,3 +2,4 @@ node_modules/
 _bga/
 _bgg/
 *.tar.gz
+_tmp/
