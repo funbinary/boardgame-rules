@@ -24,10 +24,15 @@ const chipHtml = (key) => {
   return `<a class="meta-chip bgg-chip" href="https://boardgamegeek.com/boardgame/${r.i}" target="_blank" rel="noopener" title="BoardGameGeek：⭐综合评分 ${r.a.toFixed(1)}，排名 #${r.r || "-"}，权重/复杂度 ${r.w ? r.w.toFixed(2) : "-"}/5（1 轻松 ~ 5 重度），${u || "-"}人评分。点击查看原页面">⭐ BGG ${r.a.toFixed(1)}${rank}${weight}${users}</a>`;
 };
 
-const pages = [
-  "7-wonders", "brass-birmingham", "vale-of-eternity",
-  "pokemon-grove", "wingspan", "puerto-rico", "barcelona",
-];
+// 用法：node tools/add-bgg-chips-manual.mjs [slug]
+//   带参数只处理该 slug；不带参数处理全部已收录页面
+const pages = process.argv[2]
+  ? [process.argv[2]]
+  : [
+      "7-wonders", "brass-birmingham", "vale-of-eternity",
+      "pokemon-grove", "wingspan", "puerto-rico", "barcelona",
+      "dune-imperium",
+    ];
 const chipRe = /<a class="meta-chip bgg-chip"[^>]*>⭐ BGG[^<]*<\/a>/;
 
 for (const key of pages) {
