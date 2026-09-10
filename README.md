@@ -146,5 +146,6 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [沙丘：帝国起义](https://bghub.org/r/duneimperiumuprising.pdf) · Dire Wolf 官方英文规则书全文翻译（2023，见 `games/dune-imperium-uprising.html`）
 - [创升纪元（Ascension）第四版 + 史诗传奇](https://mp.weixin.qq.com/s/VJ53bUNrsGhUCj_h8XIggA) · 微信公众号「悠叶游YOUYEYOU」（中文版玩法全录转录，见 `games/ascension.html`）
 - [图拉真（Trajan）](https://mp.weixin.qq.com/s/y-vw5nrlDctHDrmVdrAHyA) · 微信公众号「无忧桌游」（官方中文规则书全文转录，见 `games/trajan.html`）
+- [郁金香泡沫（Tulip Bubble）](https://mp.weixin.qq.com/s/Q91sRYhdjiCmH73IEPsWbQ) · 微信公众号「桌游怎么玩」（官方中文规则书全文转录，见 `games/tulip-bubble.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
