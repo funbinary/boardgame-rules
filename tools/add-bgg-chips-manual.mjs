@@ -32,6 +32,7 @@ const pages = process.argv[2]
       "7-wonders", "brass-birmingham", "vale-of-eternity",
       "pokemon-grove", "wingspan", "puerto-rico", "barcelona",
       "dune-imperium", "ascension", "dune-imperium-uprising",
+      "trajan", "tulip-bubble",
     ];
 const chipRe = /<a class="meta-chip bgg-chip"[^>]*>⭐ BGG[^<]*<\/a>/;
 
