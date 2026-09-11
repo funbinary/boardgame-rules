@@ -47,6 +47,8 @@ jobs:
       - name: 验证站点
         run: |
           sleep 2
-          status="$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 http://101.34.252.34/)"
+          # 2026-09-11 备案通过后已上 HTTPS：certbot 将纯 IP 的 80 端口请求改为 404，
+          # 验证必须走域名（HTTP 会 301 到 HTTPS）
+          status="$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 https://zhibinai.cn/)"
           echo "HTTP $status"
           [ "$status" = "200" ]
