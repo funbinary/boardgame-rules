@@ -415,3 +415,19 @@
     });
   }
 })();
+
+// ICP 备案页脚：大陆网站须在页脚标注备案号并链接至工信部 beian.miit.gov.cn；
+// index.html 不加载本文件，其备案行静态写在 .home-footer 里
+(function () {
+  if (document.getElementById("icp-footer")) return;
+  var footer = document.createElement("footer");
+  footer.id = "icp-footer";
+  footer.className = "icp-footer";
+  var a = document.createElement("a");
+  a.href = "https://beian.miit.gov.cn/";
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.textContent = "闽ICP备2026012848号-2";
+  footer.appendChild(a);
+  document.body.appendChild(footer);
+})();

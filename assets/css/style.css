@@ -738,3 +738,15 @@ img { max-width: 100%; height: auto; }
 img.ic { height: 1.15em; width: auto; vertical-align: -0.22em; margin: 0 1px; }
 img.ic-md { height: 2em; width: auto; vertical-align: middle; margin: 2px 6px 2px 0; }
 img.ic-badge { height: 1.3em; width: auto; vertical-align: -0.3em; margin-right: 3px; }
+
+/* ---------- ICP 备案页脚（main.js 全站注入，index.html 静态内置） ---------- */
+.icp-footer {
+  margin-top: 48px;
+  padding: 20px 0 32px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.icp-footer a { color: var(--ink-soft); }
+.icp-footer a:hover { text-decoration: underline; }
