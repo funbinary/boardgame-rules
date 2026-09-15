@@ -148,5 +148,6 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [图拉真（Trajan）](https://mp.weixin.qq.com/s/y-vw5nrlDctHDrmVdrAHyA) · 微信公众号「无忧桌游」（官方中文规则书全文转录，见 `games/trajan.html`）
 - [郁金香泡沫（Tulip Bubble）](https://mp.weixin.qq.com/s/Q91sRYhdjiCmH73IEPsWbQ) · 微信公众号「桌游怎么玩」（官方中文规则书全文转录，见 `games/tulip-bubble.html`）
 - [伽利略：伽利莱（Galileo Galilei）](https://mp.weixin.qq.com/s/YX-JRKKMtpBPOqVz5YGqeg) · 微信公众号「桌游怎么玩」（Pink Troubadour 官方中文规则书全文转录，见 `games/galileo-galilei.html`）
+- [铁路环游（Ticket to Ride）](https://www.bilibili.com/opus/1042253511813758996) · 哔哩哔哩「BGA小助手」（Days of Wonder 官方中文规则书全文转录，见 `games/bga/tickettoride.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
