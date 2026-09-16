@@ -154,5 +154,6 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [奥洛伊：布拉格天文钟（Orloj: The Prague Astronomical Clock）](https://mp.weixin.qq.com/s/hZMk4x7_qZPONjyyrdQLYg) · 微信公众号「桌游怎么玩」（Perro Loko Games 官方中文规则书全文转录，翻译陈斌华，见 `games/orloj.html`）
 - [殖民火星/重塑火星（Terraforming Mars）](https://www.bilibili.com/opus/1030063174843367432) · 哔哩哔哩「BGA小助手」（繁体中文版规则书全文转录、转简体，覆盖原 BGA wiki 机翻页，见 `games/bga/terraformingmars.html`）
 - [快餐连锁大亨（Food Chain Magnate）](https://mp.weixin.qq.com/s/0xN6ZDRIY_2Wv1UvQ2Mkjw) · 微信公众号「桌游怎么玩」（Splotter 英文原版规则书排印中文译文全文转录，翻译焦无耻，见 `games/food-chain-magnate.html`）
+- [CLANK! 地下墓穴（Clank!: Catacombs）](https://mp.weixin.qq.com/s/eFYIoamsySitThPcMxRVjQ) · 微信公众号「无忧桌游」（Dire Wolf 官方中文规则书全文转录，含 5–6 人派对扩展规则，见 `games/clank-catacombs.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
