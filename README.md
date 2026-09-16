@@ -151,5 +151,6 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [铁路环游（Ticket to Ride）](https://www.bilibili.com/opus/1042253511813758996) · 哔哩哔哩「BGA小助手」（Days of Wonder 官方中文规则书全文转录，见 `games/bga/tickettoride.html`）
 - [大西部之路 第二版（Great Western Trail 2E）](https://www.bilibili.com/opus/1031877777069965321) · 哔哩哔哩「BGA小助手」（2021 第二版中文规则书全文转录，翻译陈斌华，见 `games/bga/greatwesterntrail.html`）
 - [奥丁的盛宴（A Feast for Odin）](https://www.bilibili.com/opus/1032623318990061570) · 哔哩哔哩「BGA小助手」（游人码头繁体中文版规则书+附录全文转录、转简体，见 `games/bga/feastforodin.html`）
+- [奥洛伊：布拉格天文钟（Orloj: The Prague Astronomical Clock）](https://mp.weixin.qq.com/s/hZMk4x7_qZPONjyyrdQLYg) · 微信公众号「桌游怎么玩」（Perro Loko Games 官方中文规则书全文转录，翻译陈斌华，见 `games/orloj.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
