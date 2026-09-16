@@ -153,7 +153,7 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [奥丁的盛宴（A Feast for Odin）](https://www.bilibili.com/opus/1032623318990061570) · 哔哩哔哩「BGA小助手」（游人码头繁体中文版规则书+附录全文转录、转简体，见 `games/bga/feastforodin.html`）
 - [奥洛伊：布拉格天文钟（Orloj: The Prague Astronomical Clock）](https://mp.weixin.qq.com/s/hZMk4x7_qZPONjyyrdQLYg) · 微信公众号「桌游怎么玩」（Perro Loko Games 官方中文规则书全文转录，翻译陈斌华，见 `games/orloj.html`）
 - [殖民火星/重塑火星（Terraforming Mars）](https://www.bilibili.com/opus/1030063174843367432) · 哔哩哔哩「BGA小助手」（繁体中文版规则书全文转录、转简体，覆盖原 BGA wiki 机翻页，见 `games/bga/terraformingmars.html`）
-- [快餐连锁大亨（Food Chain Magnate）](https://mp.weixin.qq.com/s/0xN6ZDRIY_2Wv1UvQ2Mkjw) · 微信公众号「桌游怎么玩」（Splotter 英文原版规则书排印中文译文全文转录，翻译焦无耻，见 `games/food-chain-magnate.html`）
+- [快餐连锁大亨（Food Chain Magnate）](https://mp.weixin.qq.com/s/Dy8X0sICGQ19fZjrZCUdNw) · 微信公众号「桌游怎么玩」（一刻馆官方中文版规则书全文转录，取代此前收录的焦无耻排印译本（[旧源](https://mp.weixin.qq.com/s/0xN6ZDRIY_2Wv1UvQ2Mkjw)，旧版见 Git 历史 1a76ebc），见 `games/food-chain-magnate.html`）
 - [CLANK! 地下墓穴（Clank!: Catacombs）](https://mp.weixin.qq.com/s/eFYIoamsySitThPcMxRVjQ) · 微信公众号「无忧桌游」（Dire Wolf 官方中文规则书全文转录，含 5–6 人派对扩展规则，见 `games/clank-catacombs.html`）
 - [方舟动物园（Ark Nova）](https://mp.weixin.qq.com/s/F_CRdbW-HPnsSNYDQm8vhw) · 微信公众号「桌游怎么玩」（游人码头官方中文规则书全文转录，覆盖原 BGA wiki 机翻页，见 `games/bga/arknova.html`）
 - [方舟动物园：海洋世界（Ark Nova: Marine Worlds）](https://mp.weixin.qq.com/s/CEQf5aa0KbUTwRtjAgg_QA) · 微信公众号「桌游怎么玩」（扩展官方中文规则书+随书术语表/图标概览全文转录，见 `games/ark-nova-marine-worlds.html`）
