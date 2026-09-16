@@ -189,6 +189,7 @@ const SIDEBAR_GAMES = [
   ["galileo-galilei.html", "🔭 伽利略：伽利莱"],
   ["orloj.html", "🕰️ 奥洛伊：布拉格天文钟"],
   ["food-chain-magnate.html", "🍔 快餐连锁大亨"],
+  ["ark-nova-marine-worlds.html", "🐙 方舟动物园：海洋世界"],
 ];
 
 const html = `<!DOCTYPE html>

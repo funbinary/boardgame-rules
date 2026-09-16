@@ -155,5 +155,7 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [殖民火星/重塑火星（Terraforming Mars）](https://www.bilibili.com/opus/1030063174843367432) · 哔哩哔哩「BGA小助手」（繁体中文版规则书全文转录、转简体，覆盖原 BGA wiki 机翻页，见 `games/bga/terraformingmars.html`）
 - [快餐连锁大亨（Food Chain Magnate）](https://mp.weixin.qq.com/s/0xN6ZDRIY_2Wv1UvQ2Mkjw) · 微信公众号「桌游怎么玩」（Splotter 英文原版规则书排印中文译文全文转录，翻译焦无耻，见 `games/food-chain-magnate.html`）
 - [CLANK! 地下墓穴（Clank!: Catacombs）](https://mp.weixin.qq.com/s/eFYIoamsySitThPcMxRVjQ) · 微信公众号「无忧桌游」（Dire Wolf 官方中文规则书全文转录，含 5–6 人派对扩展规则，见 `games/clank-catacombs.html`）
+- [方舟动物园（Ark Nova）](https://mp.weixin.qq.com/s/F_CRdbW-HPnsSNYDQm8vhw) · 微信公众号「桌游怎么玩」（游人码头官方中文规则书全文转录，覆盖原 BGA wiki 机翻页，见 `games/bga/arknova.html`）
+- [方舟动物园：海洋世界（Ark Nova: Marine Worlds）](https://mp.weixin.qq.com/s/CEQf5aa0KbUTwRtjAgg_QA) · 微信公众号「桌游怎么玩」（扩展官方中文规则书+随书术语表/图标概览全文转录，见 `games/ark-nova-marine-worlds.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
