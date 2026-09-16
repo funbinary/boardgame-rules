@@ -44,6 +44,7 @@ body[data-theme="trajan"] { --accent: #8c3037; --accent-strong: #6f2430; --accen
 body[data-theme="tulip"] { --accent: #a92f3d; --accent-strong: #87222e; --accent-soft: rgba(169, 47, 61, 0.10); --accent-border: rgba(169, 47, 61, 0.35); }
 body[data-theme="galileo"] { --accent: #35558a; --accent-strong: #2a4470; --accent-soft: rgba(53, 85, 138, 0.10); --accent-border: rgba(53, 85, 138, 0.35); }
 body[data-theme="orloj"] { --accent: #2f6e5e; --accent-strong: #24584c; --accent-soft: rgba(47, 110, 94, 0.10); --accent-border: rgba(47, 110, 94, 0.35); }
+body[data-theme="fcm"] { --accent: #0f7f8b; --accent-strong: #0c6671; --accent-soft: rgba(15, 127, 139, 0.10); --accent-border: rgba(15, 127, 139, 0.35); }
 body[data-theme="bga"] { --accent: #c35500; --accent-strong: #9a4300; --accent-soft: rgba(195, 85, 0, 0.09); --accent-border: rgba(195, 85, 0, 0.35); }
 
 /* ---------- BGA wiki 内容适配 ---------- */
