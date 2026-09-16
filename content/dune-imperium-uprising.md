@@ -1,10 +1,12 @@
 # 沙丘：帝国起义（Dune: Imperium – Uprising）
 
-> 来源：Dire Wolf 官方英文规则书（2023，bghub.org 转载 PDF：https://bghub.org/r/duneimperiumuprising.pdf ）
+> 来源：Dire Wolf 官方英文规则书（2023，bghub.org 转载 PDF：https://bghub.org/r/duneimperiumuprising.pdf ）；页面图采用 Dire Wolf 官方繁体中文版规则书（PDF：https://d19y2ttatozxjp.cloudfront.net/pdfs/TCN_DUNE_IMPERIUM_UPRISING_Rulebook.pdf ）
 >
-> 《沙丘：帝国起义》（Dune: Imperium – Uprising，Paul Dennen 设计，Dire Wolf Digital 出版）是《沙丘：帝国》的独立续作，可与其合玩，也可单独游玩。本书暂无官方简体中文版，本页为英文原版规则书全文翻译（20 页），并在对应章节嵌入原版页面图供对照——**点击任意页面图即可放大查看**。规则内容归版权方所有，翻译仅供个人学习查阅。
+> 《沙丘：帝国起义》（Dune: Imperium – Uprising，Paul Dennen 设计，Dire Wolf Digital 出版）是《沙丘：帝国》的独立续作，可与其合玩，也可单独游玩。本书暂无官方简体中文版，本页为英文原版规则书全文翻译（20 页），并在对应章节嵌入官方繁体中文版页面图供对照——**点击任意页面图即可放大查看**。规则内容归版权方所有，翻译仅供个人学习查阅。
 
 > **整理说明**：本页为非官方翻译。译名与站内《沙丘：帝国》官方中文版（旅法师营地）保持一致：特使（Agent）、展示（Reveal）、秘牌（Intrigue）、说服力（Persuasion）、印章戒指（Signet Ring）、兵营（Garrison）、供应堆（Supply）、同盟（Alliance）、帝国索（Solari）、美琅脂（Melange）等；初代官方中文版把「回合（turn）」译作「阶段」（特使阶段/展示阶段），本页按《起义》原书结构译作「特使回合/展示回合」，含义相同。原书以 ◆ 标注的「与初代《沙丘：帝国》差异」条目，本页以「⭐《起义》差异」引出。原书 PDF 文字层个别连字丢失（如 di erent），不影响中文译文；全书组件数量均按原书照录。
+>
+> **页面图译名差异**：嵌入的页面图为官方繁体中文版，图内译名与正文简体译文存在出入（如图中「哨站／貿易聯會／招募點數／太陽幣／弗瑞曼人」对应正文「观察哨／CHOAM 模块／说服力／帝国索／弗雷曼人」），阅读时请以正文译名及本说明为准。
 
 ## 引言（第 1 页）
 

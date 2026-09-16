@@ -142,7 +142,7 @@ ${SIDEBAR_GAMES}
           <p class="game-sub">Dune: Imperium – Uprising · 设计：Paul Dennen · Dire Wolf Digital 出版（2023）· 《沙丘：帝国》独立续作，可单独游玩或与其合玩</p>
           <div class="meta-chips">
             <span class="meta-chip">👥 1–4 人（可扩展至 6 人）</span>
-            <span class="meta-chip">📖 官方规则书全文翻译（英文原版）</span>
+            <span class="meta-chip">📖 官方规则书全文翻译 · 嵌官方繁中版页面图</span>
             <span class="meta-chip">🗺️ 正文 20 页 · 含 CHOAM 模块与图标指南</span>
           </div>
         </header>
@@ -150,7 +150,7 @@ ${SIDEBAR_GAMES}
 ${body}
 
         <footer class="source-note">
-<p>来源：<a href="https://bghub.org/r/duneimperiumuprising.pdf" target="_blank" rel="noopener">Dune: Imperium – Uprising Rulebook（官方英文规则书 PDF，2023，bghub.org 转载）</a> · Dire Wolf Digital · 规则内容归 Dire Wolf Digital 及版权方所有，翻译仅供个人学习查阅。</p>
+<p>来源：<a href="https://bghub.org/r/duneimperiumuprising.pdf" target="_blank" rel="noopener">Dune: Imperium – Uprising Rulebook（官方英文规则书 PDF，2023，bghub.org 转载）</a> · 页面图为 <a href="https://d19y2ttatozxjp.cloudfront.net/pdfs/TCN_DUNE_IMPERIUM_UPRISING_Rulebook.pdf" target="_blank" rel="noopener">官方繁体中文版规则书 PDF（Dire Wolf）</a> · Dire Wolf Digital · 规则内容归 Dire Wolf Digital 及版权方所有，翻译仅供个人学习查阅。</p>
 </footer>
       </article>
     </main>

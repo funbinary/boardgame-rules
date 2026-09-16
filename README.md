@@ -143,7 +143,7 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 - [阿纳克遗迹](https://www.bilibili.com/opus/1030775946166140930/) · BGA桌游规则（官方中文规则书全文转录，见 `games/bga/arnak.html`）
 - [巴塞罗那](https://mp.weixin.qq.com/s/vp7R0FbF9FMj8nFBpGHyCw) · 微信公众号「桌游怎么玩」（官方中文规则书全文转录，见 `games/barcelona.html`）
 - [沙丘：帝国](https://iyingdi.com/tz/post/2355507) · 旅法师营地（官方中文规则书 v3 + 单人规则 + 地区说明全文转录，见 `games/dune-imperium.html`）
-- [沙丘：帝国起义](https://bghub.org/r/duneimperiumuprising.pdf) · Dire Wolf 官方英文规则书全文翻译（2023，见 `games/dune-imperium-uprising.html`）
+- [沙丘：帝国起义](https://bghub.org/r/duneimperiumuprising.pdf) · Dire Wolf 官方英文规则书全文翻译（2023，页面图采用官方繁体中文版 PDF，见 `games/dune-imperium-uprising.html`）
 - [创升纪元（Ascension）第四版 + 史诗传奇](https://mp.weixin.qq.com/s/VJ53bUNrsGhUCj_h8XIggA) · 微信公众号「悠叶游YOUYEYOU」（中文版玩法全录转录，见 `games/ascension.html`）
 - [图拉真（Trajan）](https://mp.weixin.qq.com/s/y-vw5nrlDctHDrmVdrAHyA) · 微信公众号「无忧桌游」（官方中文规则书全文转录，见 `games/trajan.html`）
 - [郁金香泡沫（Tulip Bubble）](https://mp.weixin.qq.com/s/Q91sRYhdjiCmH73IEPsWbQ) · 微信公众号「桌游怎么玩」（官方中文规则书全文转录，见 `games/tulip-bubble.html`）
