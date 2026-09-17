@@ -133,6 +133,8 @@ parts.push(`<blockquote>
 <p><small>整理说明：扫描件为灰度印刷品，书中未载中文翻译者与发行信息。原书排印问题较多，均照录并加〔原文如此〕：「到序」（应为倒序，P.1 流程卡注解）、「Aress」（应为 Areas，P.2）、「10 Elektron」（应为 Elektro，P.5 举例）、「颠序」「原料兜」（P.5）、「校燃料」「3分煤炭」（P.6）、「从新排序」（P.3/P.4/P.8）、「竟拍电厂」（P.7）、「也有可能有走到第二时期就结束」等病句，以及 P.4「重要：本阶段采取倒序」整框重复印刷、P.7 句号后孤立逗号等，均为原书排印如此。P.5 报酬表（0–20 城 × 收入）、P.8 补充资源表（2–6 人 × Step 1/2/3）与 P.12 韩国表（N/S 双行 × 45 格）、中国表（60 格）均已逐格人工核对。扩展单页为条栏排版，转录按左中右栏顺序。〔图 …〕说明为整理所拟；扫描件右下角「白马公子」水印非原书内容。</small></p>
 </blockquote>`);
 
+parts.push(mdToHtml(frags[1]));
+
 for (let n = 2; n <= 12; n++) {
   parts.push(figure(n));
   parts.push(mdToHtml(frags[n]));
@@ -161,6 +163,7 @@ const SIDEBAR_GAMES = [
   ["clank-catacombs.html", "🐉 CLANK! 地下墓穴"],
   ["ark-nova-marine-worlds.html", "🐙 方舟动物园：海洋世界"],
   ["speakeasy.html", "🎷 地下酒吧"],
+  ["seti.html", "🛰️ SETI：寻找外星人"],
 ];
 
 const html = `<!DOCTYPE html>
