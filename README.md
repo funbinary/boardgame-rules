@@ -196,4 +196,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [巫师飞塔（Wandering Towers）](https://mp.weixin.qq.com/s/bS7rGuj0lXQ2RFGmt3Mc3g) · 微信公众号「无忧桌游」（Kramer & Kiesling 作品，ABACUSSPIELE 出版/游卡代理，官方中文规则书全文转录，含单人/合作/大乱斗/团队变体与咒语速查，覆盖原 BGA wiki 机翻页，见 `games/bga/wanderingtowers.html`）
 - [马拉开波（Maracaibo）](https://shop.capstone.hk/products/maracaibo-chi-ver) · Capstone 香港商品页提供的[线上规则说明书 PDF](https://www.gokids.com.tw/tsaiss/gokids/rules/%E9%A6%AC%E6%8B%89%E9%96%8B%E6%B3%A2_%E6%B0%B4%E5%8D%B0.pdf)（Alexander Pfister 作品，官方繁体中文版（艾賜魔袋台灣翻译排版）全文转录并转写为简体，覆盖原 BGA wiki 机翻页，见 `games/bga/maracaibo.html`）
 
+- [奥地利大饭店（Grand Austria Hotel）](https://mp.weixin.qq.com/s/H9Pp2T7TXpO7J9HbjFZM5w) · 微信公众号「无忧桌游」（Luciani & Gigli 作品，Lookout Spiele 出版，中文规则书全文转录，含满房奖励/政治卡/49 名员工与符号速查，见 `games/grand-austria-hotel.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。

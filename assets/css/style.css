@@ -52,6 +52,7 @@ body[data-theme="powergrid"] { --accent: #b09510; --accent-strong: #8d770c; --ac
 body[data-theme="seti"] { --accent: #0e7490; --accent-strong: #0b5c73; --accent-soft: rgba(14, 116, 144, 0.10); --accent-border: rgba(14, 116, 144, 0.35); }
 body[data-theme="endeavor"] { --accent: #0d6273; --accent-strong: #0a4d5b; --accent-soft: rgba(13, 98, 115, 0.10); --accent-border: rgba(13, 98, 115, 0.35); }
 body[data-theme="edora"] { --accent: #2e6b46; --accent-strong: #235236; --accent-soft: rgba(46, 107, 70, 0.10); --accent-border: rgba(46, 107, 70, 0.35); }
+body[data-theme="austria"] { --accent: #7a3b2e; --accent-strong: #61301f; --accent-soft: rgba(122, 59, 46, 0.10); --accent-border: rgba(122, 59, 46, 0.35); }
 body[data-theme="bga"] { --accent: #c35500; --accent-strong: #9a4300; --accent-soft: rgba(195, 85, 0, 0.09); --accent-border: rgba(195, 85, 0, 0.35); }
 
 /* ---------- BGA wiki 内容适配 ---------- */
