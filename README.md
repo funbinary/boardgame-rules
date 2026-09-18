@@ -192,6 +192,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [SETI：寻找外星人（SETI: Search for Extraterrestrial Intelligence）](https://mp.weixin.qq.com/s/GhvVuSu4sZ7t4qG1jQfHhA) · 微信公众号「桌游怎么玩」（[上篇 1–14](https://mp.weixin.qq.com/s/GhvVuSu4sZ7t4qG1jQfHhA) / [下篇 15–28](https://mp.weixin.qq.com/s/dsypcaYiXezRAdvcCrifjQ)，CGE 作品，陈斌华中文规则书全文转录，含单人游戏规则与 FAQ，见 `games/seti.html`）
 - [奋进号：深海（Endeavor: Deep Sea）](https://mp.weixin.qq.com/s/wsGWL0IV3MMCTjv9A2xTvQ) · 微信公众号「张憬泽」（Burnt Island Games / Grand Gamers Guild 作品，张憬泽中文翻译&排版，16 页扫描图全文转录，含合作/单人模式，见 `games/endeavor-deep-sea.html`）
 - [卡坦岛（Catan）](https://mp.weixin.qq.com/s/NZg9R3WGyv07Y4ATOtsBRw) · 微信公众号「无忧桌游」（KOSMOS《卡坦：基礎》官方中文规则书全文转录，遊戲說明單張＋遊戲規則冊（繁体）＋玩家手冊（简体），覆盖原 BGA wiki 机翻页，见 `games/bga/catan.html`）
-- [埃多拉的德鲁伊（The Druids of Edora）](games/druids-of-edora.html) · 玩家社群流传扫描件（Stefan Feld 作品，alea / Ravensburger 出版，陈斌华中文翻译&排版，现收录前 8 页全文转录，第 9 页起待补充，见 `games/druids-of-edora.html`）
+- [埃多拉的德鲁伊（The Druids of Edora）](games/druids-of-edora.html) · 玩家社群流传扫描件（Stefan Feld 作品，alea / Ravensburger 出版，陈斌华中文翻译&排版，全书 12 页+双面规则参考表（魔法药剂/石碑）全文转录，见 `games/druids-of-edora.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。

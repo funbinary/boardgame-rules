@@ -1,7 +1,6 @@
-// 把 content/_transcripts/druids-of-edora/ 下的 8 页转录片段装配为 games/druids-of-edora.html
+// 把 content/_transcripts/druids-of-edora/ 下的转录片段装配为 games/druids-of-edora.html
 // 用法: node tools/assemble-edora.mjs
-// 注: 用户提供的前 8 页扫描图(封面+P.2–P.8);原书引用的第 9/10 页(药草/篝火/魔法药剂与石碑)暂缺,
-//     补充扫描后新增 p09+.md 片段并把 PAGE_COUNT 调大重跑即可。
+// 全书 12 页 + 双面规则参考表(魔法药剂/石碑)共 14 个扫描单元,已全部收录。
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,7 +9,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "content", "_transcripts", "druids-of-edora");
 const OUT = path.join(ROOT, "games", "druids-of-edora.html");
 const IMG = "../assets/img/druids-of-edora";
-const PAGE_COUNT = 8;
+const PAGE_COUNT = 14;
 
 // 每页插图题注
 const CAPTIONS = {
@@ -22,6 +21,12 @@ const CAPTIONS = {
   6: "P.6 行动：拿取补给袋或骰子 · 将知识标记向前移动 · 移动镰刀标记 · 拿取石碑板块 · 采集槲寄生",
   7: "P.7 添加宝石到护符（乘数与去重规则） · 放置立石（累积奖励） · 两则举例",
   8: "P.8 放置符文石（点数 −1 / ×1×2×3 两类） · 奖励 6 种一览 · 「陷入困境的德鲁伊」",
+  9: "P.9 药草：释放规则 · 激活/未激活 · 7 种药草增益（深绿底 4 种须亲自执行行动）",
+  10: "P.10 药草（续）：林跃 · 符文石 · 篝火 · 声望 3→5 · 石碑药草 · 篝火（16 个火坑的围住与覆盖）",
+  11: "P.11 游戏结束与终局计分 5 步：剩余物资 · 镰刀标记 · 石碑 · 护符 · 神殿（知识条乘数）",
+  12: "P.12 玩法变体 4 则 · 制作人员（Stefan Feld / alea / Ravensburger）",
+  13: "规则参考表·正面「中文 魔法药剂」：炼制规则与 1–5 槲寄生费用全部药剂效果",
+  14: "规则参考表·背面「魔法药剂（续）+ 石碑」：5–6 槲寄生药剂 · 15 块石碑计分条件一览",
 };
 
 const CJK = "\\u4e00-\\u9fff\\u3000-\\u303f\\uff00-\\uffef";
@@ -104,8 +109,8 @@ for (let n = 1; n <= PAGE_COUNT; n++) frags[n] = preprocess(n, readFrag(n));
 const parts = [];
 parts.push(figure(1));
 parts.push(`<blockquote>
-<p>本页整理自玩家社群流传的《埃多拉的德鲁伊》(The Druids of Edora,Stefan Feld 设计,alea / Ravensburger AG 出版,2025)中文规则书扫描件(中文翻译 &amp; 排版:陈斌华,译笔与<a href="speakeasy.html" target="_blank" rel="noopener">《地下酒吧》</a>同源),扫描图由网友直接提供。现已收录的前 8 页(封面 + P.2–P.8)逐页全文转录,原书扫描图随文嵌入——<strong>点击任意图片即可放大查看</strong>。规则内容归 alea、Ravensburger AG 及版权方所有,转录仅供个人学习查阅。</p>
-<p><small>整理说明:全书不止 8 页——正文引用了「第 9 页:药草」「第 10 页:篝火」与「魔法药剂/石碑规则页」,并另有规则参考表(正面回合步骤/背面终局计分流程),<strong>这些部分暂缺,欢迎提供补充扫描</strong>,本页将随之续录。〔三螺旋〕为声望点数图标,〔知识结〕〔槲寄生〕等为印刷图标标记;〔图 …〕〔右栏摘要〕说明为整理所拟(原书每步骤右侧附摘要卡,已并入各步骤之后)。原书排印问题照录:「补给袋品」(封面,疑为「补给袋」衍字)、「请确保每个 24 个神殿」(P.2,疑衍「每个」)、「记录记录条」(P.6 镰刀行动,衍「记录」)、「声望点」与「声望点数」混用。</small></p>
+<p>本页整理自玩家社群流传的《埃多拉的德鲁伊》(The Druids of Edora,Stefan Feld 设计,alea / Ravensburger AG 出版,2025)中文规则书扫描件(中文翻译 &amp; 排版:陈斌华,译笔与<a href="speakeasy.html" target="_blank" rel="noopener">《地下酒吧》</a>同源),扫描图由网友直接提供。全书 12 页(封面 + P.2–P.12)与双面规则参考表(「中文 魔法药剂」/「魔法药剂(续) + 石碑」)共 14 幅扫描图逐页全文转录,原书扫描图随文嵌入——<strong>点击任意图片即可放大查看</strong>。规则内容归 alea、Ravensburger AG 及版权方所有,转录仅供个人学习查阅。</p>
+<p><small>整理说明:〔三螺旋〕为声望点数图标,〔知识结〕〔槲寄生〕等为印刷图标标记;〔图 …〕〔右栏摘要〕〔费用:N 槲寄生〕〔石碑面值 N〕说明为整理所拟(原书每步骤右侧附摘要卡,已并入各步骤之后;规则参考表石碑条目中两块骰子图形石碑未印面值数字,照录)。原书排印问题照录:「补给袋品」(封面与规则参考表,他处作「补给袋」)、「请确保每个 24 个神殿」(P.2,疑衍「每个」)、「记录记录条」(P.6 镰刀行动,衍「记录」)、「声望点」与「声望点数」混用、「15 点声望(3x5),而非九点」(P.10,汉字「九」与他处阿拉伯数字混用)、「并重新分配 2 点声望」(参考表 6 槲寄生药剂,语义存疑照录)。</small></p>
 </blockquote>`);
 parts.push(mdToHtml(frags[1]));
 
@@ -147,7 +152,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="《埃多拉的德鲁伊》（The Druids of Edora）中文规则书全文转录：2–4 人骰子放置游戏，Stefan Feld 设计，在魔法森林的神殿间移动掷骰、竖立符文石与立石、炼制魔法药剂、连接巨石墓、参拜神谕遗址，积累声望获胜，规则书扫描图随文嵌入。">
+  <meta name="description" content="《埃多拉的德鲁伊》（The Druids of Edora）中文规则书全文转录：2–4 人骰子放置游戏，Stefan Feld 设计，在魔法森林的神殿间移动掷骰、竖立符文石与立石、炼制魔法药剂、释放药草增益、连接巨石墓、围住火坑，终局五步计分与15块石碑目标，全书 12 页+双面规则参考表，扫描图随文嵌入。">
   <title>埃多拉的德鲁伊 (The Druids of Edora) · 规则 — 桌游规则书</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌲</text></svg>">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -182,7 +187,7 @@ ${SIDEBAR_GAMES.map(([href, name]) => `          <li><a href="${href}">${name}</
       <article>
         <header class="page-header">
           <h1 class="game-title">🌲 埃多拉的德鲁伊</h1>
-          <p class="game-sub">The Druids of Edora · 设计：Stefan Feld · alea / Ravensburger AG 出版（2025）· 2–4 人（中文规则书全文转录·现收录前 8 页）</p>
+          <p class="game-sub">The Druids of Edora · 设计：Stefan Feld · alea / Ravensburger AG 出版（2025）· 2–4 人（中文规则书全文转录·全书 12 页+双面规则参考表）</p>
           <div class="meta-chips">
             ${chip}
             <span class="meta-chip">👥 2–4 人</span>
