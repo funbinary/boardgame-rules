@@ -120,7 +120,7 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body data-theme="bga">
+<body data-theme="bga" data-game-key="${id}">
 
   <div class="progress-bar" aria-hidden="true"></div>
 
@@ -167,6 +167,7 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
 
   <button class="to-top" aria-label="返回顶部">↑</button>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/account.js"></script>
 </body>
 </html>
 `;

@@ -33,22 +33,68 @@ jobs:
             exit 1
           fi
 
-      - name: 部署到 /var/www/rules
+      - name: 交叉编译 rules-api（linux/amd64）
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: server/go.mod
+          cache-dependency-path: server/go.sum
+      - run: |
+          cd server
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+            go build -trimpath -ldflags "-s -w" -o /tmp/rules-api ./cmd/rules-api
+
+      - name: 部署静态站到 /var/www/rules
         run: |
           ssh "$SERVER" "mkdir -p /var/www/rules"
           if ssh "$SERVER" "command -v rsync" > /dev/null 2>&1; then
             echo ">> rsync 增量同步（--delete 清除残留）"
-            rsync -az --delete --exclude='.git/' --stats ./ "$SERVER":/var/www/rules/
+            rsync -az --delete \
+              --exclude='.git/' \
+              --exclude='server/' \
+              --stats ./ "$SERVER":/var/www/rules/
           else
             echo ">> tar 全量同步（先清空目录）"
-            tar --exclude='./.git' -czf - . | ssh "$SERVER" "find /var/www/rules -mindepth 1 -delete && tar -xzf - -C /var/www/rules"
+            tar --exclude='./.git' --exclude='./server' -czf - . \
+              | ssh "$SERVER" "find /var/www/rules -mindepth 1 -delete && tar -xzf - -C /var/www/rules"
           fi
 
-      - name: 验证站点
+      - name: 发布 rules-api 二进制并重启服务
+        run: |
+          ssh "$SERVER" "mkdir -p /opt/rules-api/data"
+          scp -q /tmp/rules-api "$SERVER":/opt/rules-api/rules-api.new
+          ssh "$SERVER" "chmod +x /opt/rules-api/rules-api.new && mv /opt/rules-api/rules-api.new /opt/rules-api/rules-api"
+          # systemd 单元幂等安装（server/ 不进 webroot，单元内容内联在这里维护）
+          ssh "$SERVER" 'cat > /etc/systemd/system/rules-api.service << "UNIT"
+          [Unit]
+          Description=rules-api — 桌游规则书用户与收藏服务
+          After=network.target
+
+          [Service]
+          Type=simple
+          WorkingDirectory=/opt/rules-api
+          ExecStart=/opt/rules-api/rules-api
+          Environment=ADDR=127.0.0.1:8787
+          Environment=DB_PATH=/opt/rules-api/data/rules.db
+          Environment=COOKIE_SECURE=1
+          Restart=on-failure
+          RestartSec=3
+          NoNewPrivileges=true
+          ProtectSystem=full
+          ReadWritePaths=/opt/rules-api/data
+
+          [Install]
+          WantedBy=multi-user.target
+          UNIT
+          systemctl daemon-reload && systemctl enable rules-api >/dev/null && systemctl restart rules-api'
+
+      - name: 验证站点与 API
         run: |
           sleep 2
           # 2026-09-11 备案通过后已上 HTTPS：certbot 将纯 IP 的 80 端口请求改为 404，
           # 验证必须走域名（HTTP 会 301 到 HTTPS）
           status="$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 https://zhibinai.cn/)"
-          echo "HTTP $status"
+          echo "站点 HTTP $status"
           [ "$status" = "200" ]
+          health="$(curl -s --max-time 20 https://zhibinai.cn/api/health)"
+          echo "API $health"
+          echo "$health" | grep -q '"ok":true'

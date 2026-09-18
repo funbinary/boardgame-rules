@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="我的桌游收藏：记录已有、想买、想玩的游戏清单，与站内 1600+ 游戏规则书联动。">
+  <meta name="robots" content="noindex">
+  <title>我的收藏 · 桌游规则书</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="account">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">🎲 桌游规则书</a>
+    <span class="topbar-title">我的收藏</span>
+  </header>
+
+  <main class="home">
+    <!-- 登录 / 注册 -->
+    <section class="account-auth" id="auth-view" hidden>
+      <div class="auth-card">
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab active" data-tab="login">登录</button>
+          <button type="button" class="auth-tab" data-tab="register">注册</button>
+        </div>
+
+        <form id="login-form" class="auth-form" autocomplete="on">
+          <label>用户名
+            <input name="username" type="text" required maxlength="24" placeholder="用户名" autocomplete="username">
+          </label>
+          <label>密码
+            <input name="password" type="password" required maxlength="72" placeholder="密码（至少 6 位）" autocomplete="current-password">
+          </label>
+          <p class="form-error" hidden></p>
+          <button type="submit" class="auth-submit">登录</button>
+          <p class="auth-hint">没有账号？<a href="#" data-switch="register">注册一个</a>，只需用户名和密码。</p>
+        </form>
+
+        <form id="register-form" class="auth-form" hidden autocomplete="on">
+          <label>用户名
+            <input name="username" type="text" required minlength="2" maxlength="24" placeholder="2-24 位中文、字母、数字、_ 或 -" autocomplete="username">
+          </label>
+          <label>密码
+            <input name="password" type="password" required minlength="6" maxlength="72" placeholder="至少 6 位" autocomplete="new-password">
+          </label>
+          <p class="form-error" hidden></p>
+          <button type="submit" class="auth-submit">注册并登录</button>
+          <p class="auth-hint">已有账号？<a href="#" data-switch="login">直接登录</a>。</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 收藏清单 -->
+    <section class="account-lists" id="lists-view" hidden>
+      <div class="account-head">
+        <h1 class="account-title">👋 <span id="hello-name"></span>的游戏架</h1>
+        <div class="account-stats" id="account-stats"></div>
+        <button type="button" class="auth-logout account-logout" id="logout-btn">退出登录</button>
+      </div>
+      <p class="account-tip">在任意游戏页点「已有 / 想买 / 想玩」即可加入对应清单；再点一次可取消。</p>
+      <div id="lists-container"></div>
+    </section>
+
+    <footer class="home-footer">
+      <p><a href="index.html">← 返回全部游戏</a></p>
+      <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备2026012848号-2</a></p>
+    </footer>
+  </main>
+
+  <script src="assets/js/bgg-ratings.js"></script>
+  <script src="assets/js/account.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var api = window.RulesAccount.api;
+    var STATUS_LABEL = { owned: "✅ 已有", wishlist: "🛒 想买", play: "🎲 想玩" };
+    var STATUS_KEYS = ["owned", "wishlist", "play"];
+    var SECTION_META = [
+      { key: "owned", title: "✅ 已有", empty: "还没有标记「已有」的游戏" },
+      { key: "wishlist", title: "🛒 想买", empty: "购物车是空的" },
+      { key: "play", title: "🎲 想玩", empty: "还没有想玩的游戏，去首页逛逛吧" }
+    ];
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    // ?next= 登录后回跳（只允许站内路径，防开放重定向）
+    function nextTarget() {
+      var next = new URLSearchParams(location.search).get("next");
+      if (next && next.charAt(0) === "/" && next.charAt(1) !== "/") return next;
+      return null;
+    }
+
+    function gameHref(key) {
+      var i = key.indexOf("/");
+      return i < 0 ? "games/" + key + ".html" : "games/" + key.slice(0, i) + "/" + key.slice(i + 1) + ".html";
+    }
+
+    function bggChip(key) {
+      var R = window.BGG_RATINGS || {};
+      var r = R[key] || R[key.replace("bga/", "")];
+      if (!r) return "";
+      return '<span class="meta-chip bgg-chip-mini" title="BGG 综合 ' + esc(r.a) + ' · 排名 #' + esc(r.r) +
+        ' · 权重/复杂度 ' + esc(r.w) + '/5 · ' + esc(r.u) + ' 人评分">⭐' + esc(r.a) + " · 权重 " + esc(r.w) + "</span>";
+    }
+
+    /* ---------- 视图切换 ---------- */
+    var authView = document.getElementById("auth-view");
+    var listsView = document.getElementById("lists-view");
+
+    function showAuth() { authView.hidden = false; listsView.hidden = true; }
+    function showLists(user) {
+      authView.hidden = true;
+      listsView.hidden = false;
+      document.getElementById("hello-name").textContent = user.username;
+      loadLists();
+    }
+
+    /* ---------- 清单渲染 ---------- */
+    function loadLists() {
+      api("GET", "/collection").then(renderLists).catch(function () { showAuth(); });
+    }
+
+    function renderLists(data) {
+      var stats = STATUS_KEYS.map(function (k) {
+        return '<span class="meta-chip">' + STATUS_LABEL[k] + " " + (data.counts[k] || 0) + "</span>";
+      }).join("");
+      document.getElementById("account-stats").innerHTML = stats;
+
+      var html = "";
+      SECTION_META.forEach(function (sec) {
+        var items = data[sec.key] || [];
+        html += '<section class="list-block"><h2 class="section-title">' + sec.title +
+          " <small>(" + items.length + ")</small></h2>";
+        if (!items.length) {
+          html += '<p class="list-empty">' + sec.empty + "</p>";
+        } else {
+          html += '<div class="list-rows">';
+          items.forEach(function (it) {
+            html += '<div class="list-row" data-key="' + esc(it.game_key) + '">' +
+              '<div class="list-info"><a class="list-name" href="' + esc(gameHref(it.game_key)) + '">' +
+              esc(it.name) + "</a>" +
+              (it.en ? '<span class="list-en">' + esc(it.en) + "</span>" : "") +
+              bggChip(it.game_key) + "</div>" +
+              '<div class="list-actions">' +
+              STATUS_KEYS.map(function (k) {
+                return '<button type="button" class="mini-btn' + (k === it.status ? " active" : "") +
+                  '" data-move="' + k + '" title="移到「' + STATUS_LABEL[k] + '」">' + STATUS_LABEL[k] + "</button>";
+              }).join("") +
+              '<button type="button" class="mini-btn remove" data-move="" title="移出清单">✕</button>' +
+              "</div></div>";
+          });
+          html += "</div>";
+        }
+        html += "</section>";
+      });
+      document.getElementById("lists-container").innerHTML = html;
+    }
+
+    // 事件委托：移动 / 移除
+    document.getElementById("lists-container").addEventListener("click", function (ev) {
+      var btn = ev.target.closest("[data-move]");
+      if (!btn) return;
+      var row = btn.closest(".list-row");
+      var key = row && row.dataset.key;
+      if (!key) return;
+      api("PUT", "/collection/" + key, { status: btn.dataset.move, name: row.querySelector(".list-name").textContent })
+        .then(loadLists)
+        .catch(function (err) { window.alert("操作失败：" + err.message); });
+    });
+
+    document.getElementById("logout-btn").addEventListener("click", function () {
+      api("POST", "/logout").then(function () { location.href = "index.html"; });
+    });
+
+    /* ---------- 登录 / 注册 ---------- */
+    var tabs = document.querySelectorAll(".auth-tab");
+    function switchTab(name) {
+      tabs.forEach(function (t) { t.classList.toggle("active", t.dataset.tab === name); });
+      document.getElementById("login-form").hidden = name !== "login";
+      document.getElementById("register-form").hidden = name !== "register";
+    }
+    tabs.forEach(function (t) {
+      t.addEventListener("click", function () { switchTab(t.dataset.tab); });
+    });
+    document.querySelectorAll("[data-switch]").forEach(function (a) {
+      a.addEventListener("click", function (ev) { ev.preventDefault(); switchTab(a.dataset.switch); });
+    });
+
+    function bindForm(formId, path) {
+      var form = document.getElementById(formId);
+      var errEl = form.querySelector(".form-error");
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        errEl.hidden = true;
+        var username = form.username.value.trim();
+        var password = form.password.value;
+        var btn = form.querySelector(".auth-submit");
+        btn.disabled = true;
+        api("POST", path, { username: username, password: password }).then(function (user) {
+          var next = nextTarget();
+          location.href = next || "/account.html";
+        }).catch(function (err) {
+          errEl.textContent = err.message;
+          errEl.hidden = false;
+          btn.disabled = false;
+        });
+      });
+    }
+    bindForm("login-form", "/login");
+    bindForm("register-form", "/register");
+
+    /* ---------- 启动 ---------- */
+    api("GET", "/me").then(showLists).catch(showAuth);
+  })();
+  </script>
+</body>
+</html>

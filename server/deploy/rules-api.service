@@ -1,0 +1,19 @@
+[Unit]
+Description=rules-api — 桌游规则书用户与收藏服务
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/rules-api
+ExecStart=/opt/rules-api/rules-api
+Environment=ADDR=127.0.0.1:8787
+Environment=DB_PATH=/opt/rules-api/data/rules.db
+Environment=COOKIE_SECURE=1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=full
+ReadWritePaths=/opt/rules-api/data
+
+[Install]
+WantedBy=multi-user.target

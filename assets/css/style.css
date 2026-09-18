@@ -758,3 +758,195 @@ img.ic-badge { height: 1.3em; width: auto; vertical-align: -0.3em; margin-right:
 }
 .icp-footer a { color: var(--ink-soft); }
 .icp-footer a:hover { text-decoration: underline; }
+
+/* ---------- 用户与收藏（account.js 注入） ---------- */
+.topbar-auth {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+.topbar-auth + .topbar-title { text-align: right; }
+.auth-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 12px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.auth-link:hover { background: var(--accent-border); text-decoration: none; }
+.auth-logout {
+  border: none;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px 2px;
+}
+.auth-logout:hover { color: var(--ink); }
+
+.collect-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+}
+.collect-label { font-size: 0.88rem; color: var(--accent-strong); font-weight: 600; }
+.collect-btn {
+  padding: 5px 14px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.collect-btn:hover:not(:disabled) { border-color: var(--accent-strong); color: var(--accent-strong); }
+.collect-btn.active {
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: #fff;
+}
+.collect-btn:disabled { opacity: 0.55; cursor: wait; }
+
+/* ---------- 我的收藏页（account.html） ---------- */
+.account-auth { display: flex; justify-content: center; padding: 48px 18px; }
+.auth-card {
+  width: min(400px, 100%);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 28px 22px;
+}
+.auth-tabs { display: flex; gap: 6px; margin-bottom: 22px; background: var(--bg); border-radius: 999px; padding: 4px; }
+.auth-tab {
+  flex: 1;
+  padding: 7px 0;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.auth-tab.active { background: var(--paper); color: var(--accent-strong); font-weight: 600; box-shadow: var(--shadow); }
+.auth-form { display: flex; flex-direction: column; gap: 14px; }
+.auth-form label { font-size: 0.9rem; color: var(--ink-soft); display: flex; flex-direction: column; gap: 6px; }
+.auth-form input {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 1rem;
+}
+.auth-form input:focus { outline: 2px solid var(--accent-border); border-color: var(--accent); }
+.form-error { margin: 0; color: #b42318; font-size: 0.88rem; }
+.auth-submit {
+  margin-top: 4px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.auth-submit:hover:not(:disabled) { background: var(--accent-strong); }
+.auth-submit:disabled { opacity: 0.6; cursor: wait; }
+.auth-hint { margin: 0; font-size: 0.85rem; color: var(--ink-soft); text-align: center; }
+.auth-hint a { color: var(--accent-strong); }
+
+.account-lists { max-width: 860px; margin: 0 auto; padding: 32px 18px 64px; }
+.account-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-bottom: 8px;
+}
+.account-title { font-size: 1.4rem; margin: 0; color: var(--ink); }
+.account-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.account-logout { margin-left: auto; }
+.account-tip { margin: 0 0 18px; font-size: 0.88rem; color: var(--ink-soft); }
+
+.list-block { margin-bottom: 28px; }
+.section-title { font-size: 1.15rem; color: var(--ink); margin: 0 0 12px; }
+.section-title small { color: var(--ink-soft); font-weight: 400; }
+.list-empty {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  text-align: center;
+  background: var(--bg);
+}
+.list-rows { display: flex; flex-direction: column; gap: 10px; }
+.list-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding: 12px 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.list-info { flex: 1; min-width: 220px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.list-name { color: var(--ink); font-weight: 600; text-decoration: none; }
+.list-name:hover { color: var(--accent-strong); text-decoration: underline; }
+.list-en { color: var(--ink-soft); font-size: 0.85rem; }
+.bgg-chip-mini {
+  padding: 1px 9px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.list-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.mini-btn {
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.mini-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent-strong); }
+.mini-btn.active { background: var(--accent); border-color: var(--accent-strong); color: #fff; cursor: default; }
+.mini-btn.remove:hover { border-color: #b42318; color: #b42318; }
+
+@media (max-width: 900px) {
+  .topbar-auth { gap: 8px; }
+  .auth-link { max-width: 130px; }
+  .collect-bar { padding: 9px 11px; }
+  .collect-btn { flex: 1 1 auto; text-align: center; padding: 7px 10px; }
+  .list-actions .mini-btn { flex: 1 1 auto; text-align: center; }
+}
+@media print {
+  .topbar-auth, .collect-bar { display: none !important; }
+}
+
+/* hidden 属性优先于任何 display 规则（否则 .auth-form 的 flex 会把 hidden 表单顶出来） */
+[hidden] { display: none !important; }
