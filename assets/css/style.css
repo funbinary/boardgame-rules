@@ -1132,3 +1132,36 @@ body[data-page="shared"] {
   .share-on { flex-direction: column; align-items: stretch; }
   .share-btns .mini-btn { flex: 1 1 auto; text-align: center; }
 }
+
+/* ---------- 首页卡片快捷收藏（登录态，account.js 注入） ---------- */
+.bga-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bga-card .bga-item { flex: 1; }
+.card-collect { display: flex; gap: 5px; }
+.card-btn {
+  flex: 1;
+  padding: 4px 0;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.12s, border-color 0.12s;
+}
+.card-btn:hover:not(:disabled) { opacity: 1; border-color: var(--accent); }
+.card-btn:disabled { opacity: 0.5; cursor: wait; }
+.card-btn.active { color: #fff; opacity: 1; font-weight: 600; }
+.card-btn.st-owned.active { background: #2f7d4f; border-color: #2f7d4f; }
+.card-btn.st-wishlist.active { background: #b45309; border-color: #b45309; }
+.card-btn.st-play.active { background: #5457c8; border-color: #5457c8; }
+
+@media print {
+  .card-collect { display: none !important; }
+}
