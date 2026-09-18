@@ -3,6 +3,7 @@ package api
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/cookiejar"
 	"net/http/httptest"
@@ -125,6 +126,101 @@ func TestRegisterValidation(t *testing.T) {
 		if code != tc.want {
 			t.Fatalf("%s (%s): got %d want %d", tc.note, tc.username, code, tc.want)
 		}
+	}
+}
+
+func TestPasswordStrength(t *testing.T) {
+	_, ts := newTestServer(t)
+	c := client(t, ts)
+
+	cases := []struct {
+		pw   string
+		want int
+		note string
+	}{
+		{"12345678", http.StatusBadRequest, "纯数字缺字母"},
+		{"abcdefgh", http.StatusBadRequest, "纯字母缺数字"},
+		{"ab12", http.StatusBadRequest, "过短"},
+		{"password1", http.StatusBadRequest, "常见弱密码"},
+		{"a1234567", http.StatusBadRequest, "常见弱密码2"},
+		{"goodpass123", http.StatusOK, "合规"},
+	}
+	for i, tc := range cases {
+		code, _ := doJSON(t, c, ts, "POST", "/api/register",
+			map[string]string{"username": fmt.Sprintf("pwuser%d", i), "password": tc.pw})
+		if code != tc.want {
+			t.Fatalf("%s (%s): got %d want %d", tc.note, tc.pw, code, tc.want)
+		}
+	}
+}
+
+func TestShareFlow(t *testing.T) {
+	_, ts := newTestServer(t)
+	c := client(t, ts)
+	anon := client(t, ts)
+	register(t, c, ts, "sharer")
+
+	// 未登录操作分享 → 401
+	if code, _ := doJSON(t, anon, ts, "POST", "/api/share", nil); code != http.StatusUnauthorized {
+		t.Fatalf("anon share create should 401: %d", code)
+	}
+
+	// 初始状态：未开启
+	code, out := doJSON(t, c, ts, "GET", "/api/share", nil)
+	if code != http.StatusOK || out["enabled"] != false {
+		t.Fatalf("initial share status: %d %v", code, out)
+	}
+
+	// 开启分享
+	code, out = doJSON(t, c, ts, "POST", "/api/share", nil)
+	if code != http.StatusOK || out["enabled"] != true || len(out["token"].(string)) < 20 {
+		t.Fatalf("share create: %d %v", code, out)
+	}
+	token1 := out["token"].(string)
+
+	// 公开视图：空清单也能看到用户名
+	code, shared := doJSON(t, anon, ts, "GET", "/api/shared/"+token1, nil)
+	if code != http.StatusOK || shared["username"] != "sharer" {
+		t.Fatalf("shared view: %d %v", code, shared)
+	}
+
+	// 加一条收藏后公开视图可见
+	doJSON(t, c, ts, "PUT", "/api/collection/seti",
+		map[string]string{"status": "owned", "name": "SETI", "en": "SETI"})
+	code, shared = doJSON(t, anon, ts, "GET", "/api/shared/"+token1, nil)
+	counts := shared["counts"].(map[string]any)
+	if code != http.StatusOK || counts["owned"].(float64) != 1 {
+		t.Fatalf("shared after add: %d %v", code, shared)
+	}
+
+	// 重新生成：旧 token 失效
+	code, out = doJSON(t, c, ts, "POST", "/api/share", nil)
+	token2 := out["token"].(string)
+	if token2 == token1 {
+		t.Fatal("regenerate should produce new token")
+	}
+	if code, _ := doJSON(t, anon, ts, "GET", "/api/shared/"+token1, nil); code != http.StatusNotFound {
+		t.Fatalf("old token should 404: %d", code)
+	}
+	if code, _ := doJSON(t, anon, ts, "GET", "/api/shared/"+token2, nil); code != http.StatusOK {
+		t.Fatalf("new token should work: %d", code)
+	}
+
+	// 非法 token
+	if code, _ := doJSON(t, anon, ts, "GET", "/api/shared/BAD!TOKEN", nil); code != http.StatusNotFound {
+		t.Fatalf("malformed token should 404: %d", code)
+	}
+
+	// 关闭分享
+	if code, _ := doJSON(t, c, ts, "DELETE", "/api/share", nil); code != http.StatusOK {
+		t.Fatalf("share delete: %d", code)
+	}
+	if code, _ := doJSON(t, anon, ts, "GET", "/api/shared/"+token2, nil); code != http.StatusNotFound {
+		t.Fatalf("disabled token should 404: %d", code)
+	}
+	code, out = doJSON(t, c, ts, "GET", "/api/share", nil)
+	if code != http.StatusOK || out["enabled"] != false {
+		t.Fatalf("status after disable: %d %v", code, out)
 	}
 }
 

@@ -70,6 +70,36 @@ func (s *Store) migrate(ctx context.Context) error {
 			return fmt.Errorf("migrate: %w", err)
 		}
 	}
+
+	// v2：users.share_token（明文存，便于再次展示分享链接；仅授予只读收藏视图）。
+	// 建表语句不含此列，新旧库统一在此补加，保证 schema 一致。
+	rows, err := s.db.QueryContext(ctx, `PRAGMA table_info(users)`)
+	if err != nil {
+		return fmt.Errorf("migrate table_info: %w", err)
+	}
+	hasShare := false
+	for rows.Next() {
+		var cid, notnull, pk int
+		var name, ctype string
+		var dflt sql.NullString
+		if err := rows.Scan(&cid, &name, &ctype, &notnull, &dflt, &pk); err != nil {
+			rows.Close()
+			return fmt.Errorf("migrate scan: %w", err)
+		}
+		if name == "share_token" {
+			hasShare = true
+		}
+	}
+	rows.Close()
+	if !hasShare {
+		if _, err := s.db.ExecContext(ctx, `ALTER TABLE users ADD COLUMN share_token TEXT`); err != nil {
+			return fmt.Errorf("migrate add share_token: %w", err)
+		}
+	}
+	if _, err := s.db.ExecContext(ctx,
+		`CREATE UNIQUE INDEX IF NOT EXISTS idx_users_share_token ON users(share_token) WHERE share_token IS NOT NULL`); err != nil {
+		return fmt.Errorf("migrate share index: %w", err)
+	}
 	return nil
 }
 

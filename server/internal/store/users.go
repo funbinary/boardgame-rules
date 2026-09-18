@@ -72,3 +72,47 @@ func (s *Store) CountUsers(ctx context.Context) (int, error) {
 	}
 	return n, nil
 }
+
+// GetShareToken 返回用户分享 token，未开启返回 ""。
+func (s *Store) GetShareToken(ctx context.Context, userID int64) (string, error) {
+	var tok sql.NullString
+	err := s.db.QueryRowContext(ctx,
+		`SELECT share_token FROM users WHERE id = ?`, userID).Scan(&tok)
+	if err != nil {
+		return "", fmt.Errorf("get share token: %w", err)
+	}
+	if !tok.Valid {
+		return "", nil
+	}
+	return tok.String, nil
+}
+
+// SetShareToken 设置用户分享 token；空串即关闭分享。
+func (s *Store) SetShareToken(ctx context.Context, userID int64, token string) error {
+	var v any
+	if token != "" {
+		v = token
+	}
+	_, err := s.db.ExecContext(ctx,
+		`UPDATE users SET share_token = ? WHERE id = ?`, v, userID)
+	if err != nil {
+		return fmt.Errorf("set share token: %w", err)
+	}
+	return nil
+}
+
+// UserByShareToken 按分享 token 查用户（公开只读视图入口）。
+func (s *Store) UserByShareToken(ctx context.Context, token string) (*User, error) {
+	row := s.db.QueryRowContext(ctx,
+		`SELECT id, username, created_at FROM users WHERE share_token = ?`, token)
+	var u User
+	var createdAt string
+	if err := row.Scan(&u.ID, &u.Username, &createdAt); err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return nil, ErrNotFound
+		}
+		return nil, fmt.Errorf("user by share token: %w", err)
+	}
+	u.CreatedAt = parseTime(createdAt)
+	return &u, nil
+}

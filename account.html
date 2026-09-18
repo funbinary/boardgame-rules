@@ -43,8 +43,17 @@
             <input name="username" type="text" required minlength="2" maxlength="24" placeholder="2-24 位中文、字母、数字、_ 或 -" autocomplete="username">
           </label>
           <label>密码
-            <input name="password" type="password" required minlength="6" maxlength="72" placeholder="至少 6 位" autocomplete="new-password">
+            <input name="password" type="password" required minlength="8" maxlength="72" placeholder="至少 8 位，含字母和数字" autocomplete="new-password">
           </label>
+          <div class="pw-meter" id="pw-meter" hidden>
+            <div class="pw-track"><div class="pw-fill" id="pw-fill"></div></div>
+            <span class="pw-text" id="pw-text"></span>
+          </div>
+          <ul class="pw-rules" id="pw-rules">
+            <li data-rule="len">8 位以上</li>
+            <li data-rule="letter">包含字母</li>
+            <li data-rule="digit">包含数字</li>
+          </ul>
           <p class="form-error" hidden></p>
           <button type="submit" class="auth-submit">注册并登录</button>
           <p class="auth-hint">已有账号？<a href="#" data-switch="login">直接登录</a>。</p>
@@ -63,6 +72,26 @@
           <span class="avatar" id="user-avatar" aria-hidden="true"></span>
           <span class="account-username" id="hello-name"></span>
           <button type="button" class="mini-btn account-logout" id="logout-btn">退出</button>
+        </div>
+      </div>
+      <div class="share-panel" id="share-panel" hidden>
+        <div class="share-info">
+          <span class="share-ico">🔗</span>
+          <div>
+            <strong>分享我的收藏</strong>
+            <p id="share-desc">开启后，任何人都可以通过链接查看你的三张清单（只读）</p>
+          </div>
+        </div>
+        <div class="share-off" id="share-off">
+          <button type="button" class="mini-btn share-primary" id="share-enable">开启分享</button>
+        </div>
+        <div class="share-on" id="share-on" hidden>
+          <input class="share-link" id="share-link" readonly aria-label="分享链接">
+          <div class="share-btns">
+            <button type="button" class="mini-btn share-primary" id="share-copy">复制链接</button>
+            <button type="button" class="mini-btn" id="share-regen">重新生成</button>
+            <button type="button" class="mini-btn remove" id="share-disable">关闭分享</button>
+          </div>
         </div>
       </div>
       <div class="stat-cards" id="account-stats"></div>
@@ -127,6 +156,61 @@
       var ch = (user.username.trim().charAt(0) || "?").toUpperCase();
       document.getElementById("user-avatar").textContent = ch;
       loadLists();
+      loadShare();
+    }
+
+    /* ---------- 分享 ---------- */
+    var sharePanel = document.getElementById("share-panel");
+
+    function shareURL(token) {
+      return location.origin + "/shared.html?t=" + token;
+    }
+
+    function renderShare(st) {
+      sharePanel.hidden = false;
+      document.getElementById("share-off").hidden = st.enabled;
+      document.getElementById("share-on").hidden = !st.enabled;
+      if (st.enabled) {
+        document.getElementById("share-link").value = shareURL(st.token);
+      }
+    }
+
+    function loadShare() {
+      api("GET", "/share").then(renderShare).catch(function () { /* 面板保持隐藏 */ });
+    }
+
+    function flashBtn(btn, text) {
+      var orig = btn.textContent;
+      btn.textContent = text;
+      btn.disabled = true;
+      setTimeout(function () { btn.textContent = orig; btn.disabled = false; }, 1600);
+    }
+
+    document.getElementById("share-enable").addEventListener("click", function () {
+      api("POST", "/share").then(renderShare).catch(function (err) { window.alert("开启失败：" + err.message); });
+    });
+    document.getElementById("share-regen").addEventListener("click", function () {
+      if (!window.confirm("重新生成后，旧链接将立即失效，确定？")) return;
+      api("POST", "/share").then(renderShare).catch(function (err) { window.alert("操作失败：" + err.message); });
+    });
+    document.getElementById("share-disable").addEventListener("click", function () {
+      if (!window.confirm("关闭分享后，现有链接将无法访问，确定？")) return;
+      api("DELETE", "/share").then(function () { renderShare({ enabled: false }); })
+        .catch(function (err) { window.alert("关闭失败：" + err.message); });
+    });
+    document.getElementById("share-copy").addEventListener("click", function () {
+      var input = document.getElementById("share-link");
+      var btn = this;
+      var done = function () { flashBtn(btn, "已复制 ✓"); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(input.value).then(done, function () { fallbackCopy(input, done); });
+      } else {
+        fallbackCopy(input, done);
+      }
+    });
+    function fallbackCopy(input, done) {
+      input.select();
+      try { document.execCommand("copy"); done(); } catch (e) { window.prompt("请手动复制：", input.value); }
     }
 
     /* ---------- 清单渲染 ---------- */
@@ -226,6 +310,37 @@
     }
     bindForm("login-form", "/login");
     bindForm("register-form", "/register");
+
+    /* ---------- 注册密码强度实时反馈 ---------- */
+    var pwInput = document.querySelector('#register-form input[name="password"]');
+    var pwMeter = document.getElementById("pw-meter");
+    var pwFill = document.getElementById("pw-fill");
+    var pwText = document.getElementById("pw-text");
+    var pwRules = document.querySelectorAll("#pw-rules li");
+
+    pwInput.addEventListener("input", function () {
+      var v = pwInput.value;
+      pwMeter.hidden = !v;
+      var okLen = v.length >= 8;
+      var okLetter = /[a-zA-Z\u4e00-\u9fff]/.test(v);
+      var okDigit = /\d/.test(v);
+      pwRules.forEach(function (li) {
+        var ok = li.dataset.rule === "len" ? okLen : li.dataset.rule === "letter" ? okLetter : okDigit;
+        li.classList.toggle("ok", ok);
+        li.classList.toggle("bad", !!v && !ok);
+      });
+      if (!v) { pwFill.style.width = "0%"; pwText.textContent = ""; return; }
+      var score = 0;
+      if (okLen) score++;
+      if (okLetter && okDigit) score++;
+      if (/[a-z]/.test(v) && /[A-Z]/.test(v)) score++;
+      if (/[^a-zA-Z0-9\u4e00-\u9fff]/.test(v)) score++;
+      if (v.length >= 12) score++;
+      var level = score <= 2 ? ["弱", 33, ""] : score === 3 ? ["中", 66, "mid"] : ["强", 100, "strong"];
+      pwFill.style.width = level[1] + "%";
+      pwFill.className = "pw-fill " + level[2];
+      pwText.textContent = "强度：" + level[0];
+    });
 
     /* ---------- 启动 ---------- */
     api("GET", "/me").then(showLists).catch(showAuth);

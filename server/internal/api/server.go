@@ -59,6 +59,10 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /api/collection", s.handleListCollection)
 	mux.HandleFunc("GET /api/collection/{key...}", s.handleGetItem)
 	mux.HandleFunc("PUT /api/collection/{key...}", s.handlePutItem)
+	mux.HandleFunc("GET /api/share", s.handleShareStatus)
+	mux.HandleFunc("POST /api/share", s.handleShareCreate)
+	mux.HandleFunc("DELETE /api/share", s.handleShareDelete)
+	mux.HandleFunc("GET /api/shared/{token}", s.handleSharedCollection)
 	return withLog(securityHeaders(mux))
 }
 
