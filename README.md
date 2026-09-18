@@ -193,5 +193,7 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [奋进号：深海（Endeavor: Deep Sea）](https://mp.weixin.qq.com/s/wsGWL0IV3MMCTjv9A2xTvQ) · 微信公众号「张憬泽」（Burnt Island Games / Grand Gamers Guild 作品，张憬泽中文翻译&排版，16 页扫描图全文转录，含合作/单人模式，见 `games/endeavor-deep-sea.html`）
 - [卡坦岛（Catan）](https://mp.weixin.qq.com/s/NZg9R3WGyv07Y4ATOtsBRw) · 微信公众号「无忧桌游」（KOSMOS《卡坦：基礎》官方中文规则书全文转录，遊戲說明單張＋遊戲規則冊（繁体）＋玩家手冊（简体），覆盖原 BGA wiki 机翻页，见 `games/bga/catan.html`）
 - [埃多拉的德鲁伊（The Druids of Edora）](games/druids-of-edora.html) · 玩家社群流传扫描件（Stefan Feld 作品，alea / Ravensburger 出版，陈斌华中文翻译&排版，全书 12 页+双面规则参考表（魔法药剂/石碑）全文转录，见 `games/druids-of-edora.html`）
+- [巫师飞塔（Wandering Towers）](https://mp.weixin.qq.com/s/bS7rGuj0lXQ2RFGmt3Mc3g) · 微信公众号「无忧桌游」（Kramer & Kiesling 作品，ABACUSSPIELE 出版/游卡代理，官方中文规则书全文转录，含单人/合作/大乱斗/团队变体与咒语速查，覆盖原 BGA wiki 机翻页，见 `games/bga/wanderingtowers.html`）
+- [马拉开波（Maracaibo）](https://shop.capstone.hk/products/maracaibo-chi-ver) · Capstone 香港商品页提供的[线上规则说明书 PDF](https://www.gokids.com.tw/tsaiss/gokids/rules/%E9%A6%AC%E6%8B%89%E9%96%8B%E6%B3%A2_%E6%B0%B4%E5%8D%B0.pdf)（Alexander Pfister 作品，官方繁体中文版（艾賜魔袋台灣翻译排版）全文转录并转写为简体，覆盖原 BGA wiki 机翻页，见 `games/bga/maracaibo.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
