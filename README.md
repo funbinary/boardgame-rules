@@ -1,12 +1,13 @@
 # 桌游规则书
 
-纯静态桌游规则查询网站。无构建步骤、无外部依赖（不用 CDN 字体/JS 库），把整个目录丢到任意静态服务器即可运行，支持手机浏览。
+纯静态桌游规则查询网站 + Go 用户服务。静态部分无构建步骤、无外部依赖（不用 CDN 字体/JS 库），把整个目录丢到任意静态服务器即可运行，支持手机浏览；`server/` 下的 rules-api 提供注册登录与游戏收藏（已有/想买/想玩）。
 
 ## 目录结构
 
 ```
 rules/
 ├── index.html               # 首页（全部游戏统一目录 + 搜索）
+├── account.html             # 我的收藏（登录/注册 + 三张清单）
 ├── games/
 │   ├── 7-wonders.html       # 中文精选（人工整理）
 │   ├── brass-birmingham.html
@@ -17,15 +18,21 @@ rules/
 ├── assets/
 │   ├── css/style.css
 │   ├── js/main.js           # 自动目录 / 滚动高亮 / 抽屉侧边栏
+│   ├── js/account.js        # 登录态 + 收藏交互（全站引用）
 │   ├── js/bga-index.js      # BGA 游戏索引（构建产物，首页搜索用）
 │   └── img/
 │       ├── 7-wonders/ …     # 中文精选的规则书扫描图
 │       └── bga/             # BGA 规则插图（本地化副本）
 ├── content/                 # 中文精选的 Markdown 源文本（维护用）
+├── server/                  # rules-api：Go 用户与收藏服务（不进 webroot，rsync 已排除）
+│   ├── cmd/rules-api/       # 入口
+│   ├── internal/            # store(SQLite) / auth / api / static
+│   └── deploy/              # systemd 单元 + 服务器一次性引导脚本
 ├── tools/
 │   ├── fetch-bga.mjs        # 抓取 BGA wiki 全部规则页（_bga/raw/）
 │   ├── fetch-bga-images.mjs # 下载规则插图到本地
-│   └── build-bga.mjs        # 从 _bga/raw/ 生成 games/bga/ 页面
+│   ├── build-bga.mjs        # 从 _bga/raw/ 生成 games/bga/ 页面
+│   └── wire-account.mjs     # 给游戏页幂等注入 data-game-key + account.js
 └── _bga/                    # 抓取缓存（原始 JSON / 日志 / 映射表）
 ```
 
@@ -80,6 +87,7 @@ node tools/translate-bga.mjs catan azul   # 只翻指定游戏
 - **手机适配**（≤900px）：侧边栏变为抽屉，顶栏出现 ☰ 按钮开关
 - 顶部阅读进度条、返回顶部按钮
 - 每个游戏独立主题色（`body[data-theme="..."]` 控制）
+- **用户与收藏**：注册登录后，任意游戏页一键标记 已有 / 想买 / 想玩；`account.html` 集中管理三张清单（见下文「用户与收藏服务 rules-api」）
 
 ## 本地预览
 
@@ -96,6 +104,15 @@ npm start     # http://localhost:18080
 ```bash
 python -m http.server 18080
 ```
+
+**本地调试用户服务**（一个进程同时托管静态页 + /api，复刻生产路径形态）：
+
+```bash
+cd server
+ADDR=127.0.0.1:18090 COOKIE_SECURE=0 SERVE_STATIC=.. go run ./cmd/rules-api
+```
+
+（Windows PowerShell 下用 `$env:ADDR='127.0.0.1:18090'` 等逐条设置环境变量。）
 
 ## 部署到服务器
 
@@ -129,7 +146,19 @@ docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:alpine
 1. `content/` 里整理规则的 Markdown 源文本；
 2. 复制任意 `games/*.html` 为新页面，替换正文与 `data-theme`；
 3. 扫描图放 `assets/img/<game>/`，附录里 `<img loading="lazy">` 引用；
-4. 在 `index.html` 的 `featured` 数组加一条（会置顶显示在首页目录里，并与同名的 BGA wiki 条目自动去重）。
+4. 在 `index.html` 的 `featured` 数组加一条（会置顶显示在首页目录里，并与同名的 BGA wiki 条目自动去重）；
+5. 给新页面挂收藏能力：`<body …>` 加 `data-game-key="<slug>"`，`main.js` 引用后追加 `assets/js/account.js`（或直接跑 `node tools/wire-account.mjs` 幂等补齐全站）。
+
+## 用户与收藏服务 rules-api
+
+Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部署时 rsync 已排除）。零 Web 框架，依赖仅 `modernc.org/sqlite`（纯 Go SQLite 驱动，CGO_ENABLED=0 可交叉编译）与 `x/crypto/bcrypt`。
+
+- **API**（前缀 `/api`，JSON）：`POST register/login/logout`、`GET me/health`、`GET collection`（三张清单+计数）、`GET|PUT collection/{game_key}`（status 为 `owned/wishlist/play`，空串即移除）。`game_key` 为精选页 slug（`seti`）或 `bga/<id>`（`bga/catan`）。
+- **认证**：bcrypt 密码哈希；会话 token 随机 32 字节、库中只存 sha256；Cookie `rules_session`（HttpOnly + Secure + SameSite=Lax，30 天）。限流：注册 5/时/IP、登录 15/5 分/IP、收藏写 120/分/IP（内存固定窗口）。
+- **生产部署**（腾讯云服务器）：二进制 `/opt/rules-api/rules-api`，数据 `/opt/rules-api/data/rules.db`，systemd 单元 `rules-api.service`（仅监听 127.0.0.1:8787）；nginx `/etc/nginx/conf.d/rule.conf` 的 443 块将 `location /api/` 反代至该端口。一次性引导见 `server/deploy/bootstrap.sh`（幂等）。
+- **日常发版**：`deploy.yml` 全自动——交叉编译 → rsync 静态（排除 `server/`）→ scp 二进制 → 重启服务 → 验证 `https://zhibinai.cn/api/health`。
+- **数据维护**：用户/会话/收藏都在单个 SQLite 文件，备份即拷贝（建议停服务或用 `sqlite3 .backup`）；手动改数据可在服务器上用 `python3`（自带 sqlite3 模块）。
+- 收藏清单当前仅本人可见；表结构已预留分享扩展（后续可加随机只读链接）。
 
 ## 内容来源
 
