@@ -20,6 +20,7 @@
     <!-- 登录 / 注册 -->
     <section class="account-auth" id="auth-view" hidden>
       <div class="auth-card">
+        <div class="auth-hero">📚</div>
         <div class="auth-tabs" role="tablist">
           <button type="button" class="auth-tab active" data-tab="login">登录</button>
           <button type="button" class="auth-tab" data-tab="register">注册</button>
@@ -54,11 +55,17 @@
     <!-- 收藏清单 -->
     <section class="account-lists" id="lists-view" hidden>
       <div class="account-head">
-        <h1 class="account-title">👋 <span id="hello-name"></span>的游戏架</h1>
-        <div class="account-stats" id="account-stats"></div>
-        <button type="button" class="auth-logout account-logout" id="logout-btn">退出登录</button>
+        <div class="account-head-text">
+          <h1 class="account-title">📚 我的收藏</h1>
+          <p class="account-tip">在任意游戏页点「已有 / 想买 / 想玩」即可加入对应清单</p>
+        </div>
+        <div class="account-user">
+          <span class="avatar" id="user-avatar" aria-hidden="true"></span>
+          <span class="account-username" id="hello-name"></span>
+          <button type="button" class="mini-btn account-logout" id="logout-btn">退出</button>
+        </div>
       </div>
-      <p class="account-tip">在任意游戏页点「已有 / 想买 / 想玩」即可加入对应清单；再点一次可取消。</p>
+      <div class="stat-cards" id="account-stats"></div>
       <div id="lists-container"></div>
     </section>
 
@@ -77,9 +84,9 @@
     var STATUS_LABEL = { owned: "✅ 已有", wishlist: "🛒 想买", play: "🎲 想玩" };
     var STATUS_KEYS = ["owned", "wishlist", "play"];
     var SECTION_META = [
-      { key: "owned", title: "✅ 已有", empty: "还没有标记「已有」的游戏" },
-      { key: "wishlist", title: "🛒 想买", empty: "购物车是空的" },
-      { key: "play", title: "🎲 想玩", empty: "还没有想玩的游戏，去首页逛逛吧" }
+      { key: "owned", ico: "✅", title: "已有", empty: "还没有标记「已有」的游戏" },
+      { key: "wishlist", ico: "🛒", title: "想买", empty: "购物车还是空的" },
+      { key: "play", ico: "🎲", title: "想玩", empty: "还没有想玩的游戏" }
     ];
 
     function esc(s) {
@@ -117,6 +124,8 @@
       authView.hidden = true;
       listsView.hidden = false;
       document.getElementById("hello-name").textContent = user.username;
+      var ch = (user.username.trim().charAt(0) || "?").toUpperCase();
+      document.getElementById("user-avatar").textContent = ch;
       loadLists();
     }
 
@@ -126,18 +135,22 @@
     }
 
     function renderLists(data) {
-      var stats = STATUS_KEYS.map(function (k) {
-        return '<span class="meta-chip">' + STATUS_LABEL[k] + " " + (data.counts[k] || 0) + "</span>";
+      document.getElementById("account-stats").innerHTML = SECTION_META.map(function (sec) {
+        var n = data.counts[sec.key] || 0;
+        return '<a class="stat-card st-' + sec.key + '" href="#list-' + sec.key + '">' +
+          '<span class="stat-num">' + n + "</span>" +
+          '<span class="stat-label">' + sec.ico + " " + sec.title + "</span></a>";
       }).join("");
-      document.getElementById("account-stats").innerHTML = stats;
 
       var html = "";
       SECTION_META.forEach(function (sec) {
         var items = data[sec.key] || [];
-        html += '<section class="list-block"><h2 class="section-title">' + sec.title +
-          " <small>(" + items.length + ")</small></h2>";
+        html += '<section class="list-block st-' + sec.key + '" id="list-' + sec.key + '">' +
+          '<h2 class="list-title">' + sec.ico + " " + sec.title +
+          '<span class="count-badge">' + items.length + "</span></h2>";
         if (!items.length) {
-          html += '<p class="list-empty">' + sec.empty + "</p>";
+          html += '<div class="list-empty"><span class="le-ico">' + sec.ico + "</span>" +
+            "<p>" + sec.empty + '</p><a class="le-link" href="index.html">去首页逛逛 →</a></div>';
         } else {
           html += '<div class="list-rows">';
           items.forEach(function (it) {
