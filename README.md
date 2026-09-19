@@ -200,4 +200,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - [阿勒农场（Fields of Arle）](https://mp.weixin.qq.com/s/mDfNCFGvtqiurBd7QKP31A) · 微信公众号「无忧桌游」（Uwe Rosenberg 作品，Feuerland 出版/游人码头中文大盒版，繁体中文规则书全文转录，含《茶與貿易》擴展与建筑/旅行目的地/工具索引，见 `games/fields-of-arle.html`）
 
+- [奶酪（Fromage）](https://mp.weixin.qq.com/s/LDXk77QOFWEvtBf71OHiVg) · 微信公众号「无忧桌游」（2024 年同时工人放置转盘游戏，游卡中文版，中文规则书全文转录，含单人模式与组装说明，覆盖原 BGA wiki 机翻页，见 `games/bga/fromage.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。
