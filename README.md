@@ -198,4 +198,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - [奥地利大饭店（Grand Austria Hotel）](https://mp.weixin.qq.com/s/H9Pp2T7TXpO7J9HbjFZM5w) · 微信公众号「无忧桌游」（Luciani & Gigli 作品，Lookout Spiele 出版，中文规则书全文转录，含满房奖励/政治卡/49 名员工与符号速查，见 `games/grand-austria-hotel.html`）
 
+- [阿勒农场（Fields of Arle）](https://mp.weixin.qq.com/s/mDfNCFGvtqiurBd7QKP31A) · 微信公众号「无忧桌游」（Uwe Rosenberg 作品，Feuerland 出版/游人码头中文大盒版，繁体中文规则书全文转录，含《茶與貿易》擴展与建筑/旅行目的地/工具索引，见 `games/fields-of-arle.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。
