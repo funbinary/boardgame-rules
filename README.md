@@ -204,4 +204,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - [风声再临（The Message）](https://www.gstonegames.com/game/doc-859.html) · 集石词条所载中文规则书（来源标注：出版商，Tobey Ho 设计/千骐动漫出版，3–7 人谍战阵营推理，中文规则书全文转录，含 25 名角色技能与游戏用语概念说明，见 `games/the-message.html`）
 
+- [璀璨宝石（Splendor）](https://www.gstonegames.com/game/doc-517.html) · 集石词条所载官方中文规则书（Marc André 设计，SPACE Cowboys 出版/Gokids 玩樂小子翻譯排版，2–4 人珠宝商贸，繁体规则书全文转录，含 2/3 人变体与贵族规则，覆盖原 BGA wiki 机翻页，见 `games/bga/splendor.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。
