@@ -206,4 +206,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - [璀璨宝石（Splendor）](https://www.gstonegames.com/game/doc-517.html) · 集石词条所载官方中文规则书（Marc André 设计，SPACE Cowboys 出版/Gokids 玩樂小子翻譯排版，2–4 人珠宝商贸，繁体规则书全文转录，含 2/3 人变体与贵族规则，覆盖原 BGA wiki 机翻页，见 `games/bga/splendor.html`）
 
+- [大西部开拓者：新西兰开拓史（Great Western Trail: New Zealand）](https://www.gstonegames.com/game/doc-4984.html) · 集石词条所载非官方规则书（Alexander Pfister 设计，eggertspiele 出版/本长文化发行，1–4 人含单人模式，繁体规则书全文转录，一盒四册按各册页码重排，见 `games/gwt-new-zealand.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。
