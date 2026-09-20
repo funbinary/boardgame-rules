@@ -202,4 +202,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - [奶酪（Fromage）](https://mp.weixin.qq.com/s/LDXk77QOFWEvtBf71OHiVg) · 微信公众号「无忧桌游」（2024 年同时工人放置转盘游戏，游卡中文版，中文规则书全文转录，含单人模式与组装说明，覆盖原 BGA wiki 机翻页，见 `games/bga/fromage.html`）
 
+- [风声再临（The Message）](https://www.gstonegames.com/game/doc-859.html) · 集石词条所载中文规则书（来源标注：出版商，Tobey Ho 设计/千骐动漫出版，3–7 人谍战阵营推理，中文规则书全文转录，含 25 名角色技能与游戏用语概念说明，见 `games/the-message.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。
