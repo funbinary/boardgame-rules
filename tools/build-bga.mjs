@@ -103,6 +103,10 @@ function cleanHtml(html, titleToId, imgMap) {
 }
 
 /* ---------- 模板 ---------- */
+const SEO_BASE = "https://zhibinai.cn";
+const escAttr = (s) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
 function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, bgg }) {
   const chips = [
     players ? `<span class="meta-chip">👥 ${players} 人</span>` : "",
@@ -110,15 +114,62 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
     `<span class="meta-chip">📄 ${chip || "BGA 官方文档"}</span>`,
   ].filter(Boolean).join("\n            ");
 
+  // SEO/GEO：canonical + Open Graph + JSON-LD（与 tools/wire-seo.mjs 保持一致；重建后无需再跑 wire-seo）
+  const pageUrl = `${SEO_BASE}/games/bga/${id}.html`;
+  const pageTitle = `${name} · 规则 — 桌游规则书`;
+  const pageDesc = desc || `${name} 的中文规则（Board Game Arena 官方文档翻译）`;
+  const dateModified = new Date().toISOString().slice(0, 10);
+  const seoJsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SEO_BASE}/#website`,
+        name: "桌游规则书",
+        url: `${SEO_BASE}/`,
+        inLanguage: "zh-CN",
+        description: "免费中文桌游规则书查询站：热门桌游完整中文规则全文 + Board Game Arena 全量官方规则中文版。",
+      },
+      {
+        "@type": "WebPage",
+        "@id": pageUrl,
+        url: pageUrl,
+        name: pageTitle,
+        description: pageDesc,
+        isPartOf: { "@id": `${SEO_BASE}/#website` },
+        inLanguage: "zh-CN",
+        dateModified,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "首页", item: `${SEO_BASE}/` },
+          { "@type": "ListItem", position: 2, name, item: pageUrl },
+        ],
+      },
+    ],
+  });
+
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="${desc || `${name} 的中文规则（Board Game Arena 官方文档翻译）`}。">
+  <meta name="description" content="${escAttr(pageDesc)}。">
   <title>${name} · 规则 — 桌游规则书</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="canonical" href="${pageUrl}">
+  <meta property="og:site_name" content="桌游规则书">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${escAttr(pageTitle)}">
+  <meta property="og:description" content="${escAttr(pageDesc)}">
+  <meta property="og:url" content="${pageUrl}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${escAttr(pageTitle)}">
+  <meta name="twitter:description" content="${escAttr(pageDesc)}">
+  <script type="application/ld+json">${seoJsonLd}</script>
 </head>
 <body data-theme="bga" data-game-key="bga/${id}">
 

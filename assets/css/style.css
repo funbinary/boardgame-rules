@@ -606,6 +606,59 @@ img { max-width: 100%; height: auto; }
   text-align: center;
 }
 
+/* ---------- 首页 FAQ ---------- */
+.faq-section {
+  margin-top: 48px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: var(--content-w);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 400;
+  flex: none;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after { content: "–"; }
+
+.faq-item .faq-a {
+  padding: 0 18px 14px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
 /* ---------- 移动端（≤ 900px）：侧边栏变抽屉 ---------- */
 @media (max-width: 900px) {
   :root { --topbar-h: 52px; }

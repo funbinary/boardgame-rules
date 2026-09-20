@@ -1,0 +1,46 @@
+# 桌游规则书 https://zhibinai.cn
+# 传统搜索引擎与 AI 搜索引擎一律允许抓取
+
+User-agent: *
+Allow: /
+Disallow: /account.html
+
+# --- 传统搜索引擎 ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- AI 搜索引擎（GEO：允许抓取以便被引用） ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://zhibinai.cn/sitemap.xml
