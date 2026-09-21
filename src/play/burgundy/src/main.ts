@@ -98,8 +98,32 @@ function setupHotseat(modules: string[]) {
 
 function setupSolo(modules: string[]) {
   if (!modules.includes('automa')) modules = [...modules, 'automa'];
-  alert(`自动机模式即将开放(模块:${modules.join(',')})——先随热座体验`);
-  home();
+  app.innerHTML = `
+  <div class="setup">
+    <h1>单机(对战自动机)</h1>
+    <p class="modnote">自动机作为第 2 位玩家加入,按官方规则书郡县卡流程行动。难度:普通(无修正)。</p>
+    <label>自动机难度
+      <select id="difficulty">
+        <option value="easy">入门(4 分/卡)</option>
+        <option value="normal" selected>普通(5 分/卡)</option>
+        <option value="hard">困难(6 分/卡)</option>
+      </select>
+    </label>
+    <div class="btns"><button id="go">开始对局</button> <button id="back">返回</button></div>
+  </div>`;
+  app.querySelector('#back')!.addEventListener('click', home);
+  app.querySelector('#go')!.addEventListener('click', () => {
+    const difficulty = (app.querySelector('#difficulty') as HTMLSelectElement).value;
+    const game = new LocalGame(app, {
+      playerCount: 2,
+      seed: Math.floor(Math.random() * 2 ** 31),
+      names: ['你', '自动机'],
+      modules,
+    });
+    window.addEventListener('keydown', (ev) => {
+      if (ev.key === 'h') game.hint();
+    });
+  });
 }
 
 home();
