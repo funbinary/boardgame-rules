@@ -1,0 +1,81 @@
+{
+ "_meta": {
+  "sources": [
+   "https://gamefound.com/en/projects/awaken-realms/castles-of-burgundy-special-edition/updates/20 (Development update #1 'Redesigned player boards are here!' - boards 1-8 final straight-on renders, 4 images)",
+   "https://gamefound.com/en/projects/awaken-realms/castles-of-burgundy-special-edition/updates/8 (Day 7 'Two new Duchies and two rebalanced ones!' - duchies 4&8 rebalanced, duchies 9&10 new)",
+   "https://gamefound.com/en/projects/awaken-realms/castles-of-burgundy-special-edition/updates/21 (Development update #2 - prototype photos incl. boards 7,8 + 1500x1500 renders of boards 9,10)",
+   "https://imgcdn.gamefound.com/richtextimage/richtext/ed170d5f-ee35-4bb1-a9a0-601523b21969.jpg (u20_1: boards 4,7)",
+   "https://imgcdn.gamefound.com/richtextimage/richtext/0a49ac6b-9798-4c37-a572-22fc638ce449.jpg (u20_2: boards 1,3)",
+   "https://imgcdn.gamefound.com/richtextimage/richtext/f67a4fdd-fc63-4a19-9b3a-4bc333bd1466.jpg (u20_3: boards 2,5)",
+   "https://imgcdn.gamefound.com/richtextimage/richtext/90aed39c-e44f-41b2-b152-19f03c10f351.jpg (u20_4: boards 6,8)",
+   "https://imgcdn.gamefound.com/richtextimage/richtext/28400452-36f0-4aaa-84ae-e2555a483ff2.jpg (d7_3: new duchies 9,10)",
+   "https://imgcdn.gamefound.com/richtextimage/richtext/cd7cbcde-1c77-4c58-9538-87360b29fd1d.jpg (d7_1: rebalanced 4,8)"
+  ],
+  "verifiedBy": [],
+  "notes": "Board-number -> image mapping established and cross-checked via banner digits: u20_1L=4 u20_1R=7 u20_2L=1 u20_2R=3 u20_3L=2 u20_3R=5 u20_4L=6 u20_4R=8; u21_11=9 u21_12=10; u21_1=8 u21_3=7. SE facts confirmed from Day 7 update text: duchies 4 and 8 were rebalanced for SE (field repositioning); duchies 9 and 10 are new, never published before; all come in 4 copies (20 double-sided boards). Fixed duchy composition (from community-verified constraint, burgundicer): brown/city=12, yellow/monastery=6, blue/water=6, green/pasture=6, red/castle=4, gray/mine=3. Access method: gamefound.com SSR HTML pages fetchable with browser-like headers via python urllib (403 on first try, succeeds on retries); full update list via POST https://gamefound.com/api/projectUpdates/searchProjectUpdates {\"projectID\":1926,...}; imgcdn.gamefound.com serves full-resolution originals without authentication. Extraction pipeline (ruler-zones + overlay circles + die/terrain montages) produced per-row consensus data for board 1 but failed the 37-cell and color-distribution invariants, so per contract no cell data is asserted. Full working files in D:\\project\rules\\_cob\\d2\\ (images gf/, crops boards/, montages gf/b1_*.png)."
+ },
+ "data": {
+  "boards": [
+   {
+    "id": 1,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_2 left (ed170d5f); banner digit 1 confirmed"
+   },
+   {
+    "id": 2,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_3 left (f67a4fdd); banner digit 2 confirmed"
+   },
+   {
+    "id": 3,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_2 right (0a49ac6b); banner digit 3 confirmed"
+   },
+   {
+    "id": 4,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_1 left (90aed39c) + d7_1 rebalanced reveal (cd7cbcde); banner digit 4 confirmed"
+   },
+   {
+    "id": 5,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_3 right (f67a4fdd); banner digit 5 confirmed"
+   },
+   {
+    "id": 6,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_4 left; banner digit 6 confirmed"
+   },
+   {
+    "id": 7,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_1 right + u21_3 prototype photo; banner digit 7 confirmed"
+   },
+   {
+    "id": 8,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_4 right + u21_1 prototype photo + d7_1; banner digit 8 confirmed"
+   },
+   {
+    "id": 9,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u21_11 single 1500x1500 render + d7_3 (28400452); badge digit 9 confirmed"
+   },
+   {
+    "id": 10,
+    "cells": [],
+    "confidence": "missing",
+    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u21_12 single 1500x1500 render + d7_3; badge digit 10 confirmed"
+   }
+  ]
+ }
+}

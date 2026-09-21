@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "sources": [
+      {
+        "type": "official-pdf-photo",
+        "ref": "D:/project/rules/_cob/cob-se-rulebook-en.pdf page 4 (index 3) board photo; extracted embedded JPEGs (PDF xref 80/81/70, native ~300dpi, assembled 1742x1287) — crops in D:/project/rules/_cob/d1/",
+        "usedFor": "front depots I-VI colors, die pips, black depot row"
+      },
+      {
+        "type": "official-pdf-text",
+        "ref": "cob-se-rulebook-en.pdf p4 (H: '6 numbered depots (1-6), each with four colored hex tile spaces and 1 large space for goods tiles'), p5 ('replenish the hex spaces ... with random hex tiles of the corresponding color'; 'Some spaces ... are marked 4'; 'one special place marked 3BD ... in 3-player games, during phases B and D, place a mine tile there instead of a castle'; black depot 'random hex tiles with black backs'), p10 ('The burgundy space of the #6 depot is special'; 2p = flip board)",
+        "usedFor": "space count per depot, typed spaces, only4/3BD semantics, depot6 special space"
+      },
+      {
+        "type": "cn-scan",
+        "ref": "D:/project/rules/assets/img/bga/castlesofburgundy/p05.jpg (1080px, same photo) — template-matched board region, per-depot cross-reads",
+        "usedFor": "cross-validation of depots I, II, IV, V, VI"
+      },
+      {
+        "type": "gamefound-infographic",
+        "ref": "https://image-search-mcp-cn-beijing.oss-cn-beijing.aliyuncs.com/image-search-mcp/images-ppt/1806245593d6.jpg (Awaken Realms 'Castles of Burgundy Special Edition' component infographic)",
+        "usedFor": "black depot tiles per phase: 3-4 players = 6, 2 players = 4"
+      },
+      {
+        "type": "supply-constraint-recheck",
+        "ref": "D4 recheck 2026-09-21 on the same native photo (se_board_full.png). HARD MATH: 24 cells x 5 phases of 1 colored tile each; colored supply buildings40/monasteries20/ships20/livestock20/mines10/castles14 caps cells at 8/4/4/4/2/2 which sum to exactly 24, so every color must hit its cap. Method: per-hex k-means + annulus RGB measurement (r26-40 ring, fill color, avoiding center icon), hex-cell inventory fixed by dual detection (convour hexes + color-radar sweep); depot numbers re-derived from PRINTED PIPS on ivory goods hexes via dark-blob counting: TL=6 pips (2x3)+numeral 'VI' (5 vision reads agree), ML=5 pips (quincunx), MR=2 pips (diagonal); rulebook p16 'next depot in clockwise order' fixes rotation => depots clockwise from top-right: 1=TR, 2=MR, 3=BR, 4=BL, 5=ML, 6=TL. Rulebook p5/p8 color vocabulary (beige buildings / yellow monasteries / green livestock / gray mines / burgundy castles / turquoise ships) matches measured families one-to-one.",
+        "usedFor": "front depots 1-6 colors, only4/threeBD markers, depot numbering correction (prev compass mapping 1=NW..6=W was wrong: it would put the 3BD castle outside depot 6)"
+      }
+    ],
+    "verifiedBy": ["D4-recheck"],
+    "notes": [
+      "SE depots each have exactly 4 typed colored spaces + 1 large goods hex (rulebook p4 text); depot number shown as printed die face (pips 1-6) and Roman numeral I-VI on the goods hex.",
+      "Depot compass positions (3-4p face) CORRECTED by D4: depots sit in two columns of three flanking the central black-depot castle area, numbered CLOCKWISE starting top-right: 1=top-right, 2=middle-right, 3=bottom-right, 4=bottom-left, 5=middle-left, 6=top-left. Evidence: printed pips on goods hexes (TL=6/VI, ML=5, MR=2) + rulebook p16 clockwise replenishment rule. The previous mapping (1=NW..6=W, 'matches classic 2011 board') is disproved: it placed the 3BD castle in the left-middle cluster, which has no red cell.",
+      "cells order = clockwise starting from the top-most cell of the cluster. Color SETS are pixel-verified (k-means + annulus RGB families distinct by >0.15 RGB distance); start points/direction are geometric and carry medium confidence throughout.",
+      "Two cells are covered by action dice in the photo: depot2's 4th cell (color forced brown by supply math; region vision read saw tan buildings under the die). The dark-olive hex inside depot 4's area is the goods space under a placed livestock tile, not a 5th cell (including it would break the supply totals).",
+      "Front black depot = single horizontal row of 6 black hexes between the phase/goods stacks (left) and turn order track (right), center-north of the castle illustration; one hex carries the '4' marker (photo: 3rd from left reads as marked; leftmost is cut in tightest crops — count 6 is confirmed by two sources).",
+      "2-player face: rulebook states the ONLY difference is number of hex spaces per depot including black depot; black = 4 (infographic). Per-depot colored cells for the back could not be determined from any available source — left as missing, not guessed. Classic-edition reference (unverified for SE): 2p depots historically carry 3 spaces each."
+    ]
+  },
+  "data": {
+    "front": {
+      "depots": [
+        {
+          "n": 1,
+          "cells": [
+            { "color": "yellow" },
+            { "color": "brown", "only4": true },
+            { "color": "blue" },
+            { "color": "green" }
+          ],
+          "goods": true,
+          "confidence": "high",
+          "note": "D4: TOP-RIGHT cluster (board coords ~x1336,y321; px hexes (1282,226)(1392,226)(1450,320)(1394,416)). Pixel k-means+annulus: gold(0.97,0.81,0.26)=yellow monastery, tan(0.93,0.82,0.62)=beige building, teal(0.36,0.71,0.69)=turquoise ship, chartreuse(0.71,0.78,0.17)=green pasture — all four families distinct and unambiguous. '4' badge on the brown (region read explicit; matches prev agent's district-2 'gray4' = this hex, brown->gray confusion). Goods hex covered by component stack. Clockwise from top: yellow, brown(4), blue, green."
+        },
+        {
+          "n": 2,
+          "cells": [
+            { "color": "brown", "only4": true },
+            { "color": "yellow" },
+            { "color": "red" },
+            { "color": "brown" }
+          ],
+          "goods": true,
+          "confidence": "medium",
+          "note": "D4: RIGHT-MIDDLE cluster (px hexes (1352,569)(1450,626)(1450,735) + 4th at ~(1338,677)). Visible three measured: tan=brown, gold=yellow, (0.79,0.23,0.14)=burgundy castle. 4th cell is covered by an action die on/near the ivory goods hex (which prints 2 pips diagonal — script blob-count, depot II); its color is FORCED brown by supply math: it is the only completion of {8,4,4,4,2,2} given the other 23 cells; region vision read independently saw 'tan town buildings under the die'. '4' on the visible brown (medium — prev agent's district-3 read may instead place it on the covered one). No 3BD here. Clockwise from top: brown(4), yellow, red, brown(covered)."
+        },
+        {
+          "n": 3,
+          "cells": [
+            { "color": "blue" },
+            { "color": "green" },
+            { "color": "brown", "only4": true },
+            { "color": "yellow" }
+          ],
+          "goods": true,
+          "confidence": "high",
+          "note": "D4: BOTTOM-RIGHT cluster (px hexes (1361,938)(1414,1036)(1248,1133)(1359,1131)). Pixel: teal=blue, chartreuse=green, tan=brown, gold=yellow. '4' on brown (region read + prev agent's district-4 'building 4' agree). No red here. Clockwise from top: blue, green, brown(4), yellow."
+        },
+        {
+          "n": 4,
+          "cells": [
+            { "color": "green", "only4": true },
+            { "color": "gray" },
+            { "color": "brown" },
+            { "color": "blue", "only4": true }
+          ],
+          "goods": true,
+          "confidence": "high",
+          "note": "D4: BOTTOM-LEFT cluster (px hexes (466,934)(408,1030)(462,1126)(574,1130)). Pixel: chartreuse=green, teal=blue, tan=brown, warm-gray(0.73,0.70,0.66,sat~10%)=gray mine. '4' badges on green AND blue (region read explicit; matches prev agent's district-5 'monastery(4)+ship(4)' = this cluster's green[tan-yellow confusion]+blue). The dark-olive hex at (368,948) is NOT a depot cell — it is the cluster's goods space with a placed dark-green livestock tile on it (its exclusion is also forced: including it would make green=5 and break supply math). No red here. Clockwise from top: green(4), gray, brown, blue(4)."
+        },
+        {
+          "n": 5,
+          "cells": [
+            { "color": "brown", "only4": true },
+            { "color": "brown", "only4": true },
+            { "color": "yellow" },
+            { "color": "gray" }
+          ],
+          "goods": true,
+          "confidence": "high",
+          "note": "D4: LEFT-MIDDLE cluster (px hexes (470,567)(375,620)(374,734)(472,782), ivory depot hex at (478,675) printing 5 pips quincunx — script blob-count + vision, depot V). Pixel: 2x tan=brown, gold=yellow, warm-gray(0.72,0.70,0.67,sat~7%)=gray mine (prev agent's 'red 3BD' on this cluster = this gray hex, classic red/gray confusion — 3BD belongs to depot 6). '4' on upper building (high) and bottom building (medium). Clockwise from top: brown(4), brown(4), yellow, gray."
+        },
+        {
+          "n": 6,
+          "cells": [
+            { "color": "brown", "only4": true },
+            { "color": "red", "threeBD": true },
+            { "color": "blue", "only4": true },
+            { "color": "green", "only4": true }
+          ],
+          "goods": true,
+          "confidence": "high",
+          "note": "D4: TOP-LEFT cluster = depot VI (px hexes (432,221)(542,222)(376,316)(432,411), goods hex (493,320) prints 6 pips in 2x3 grid + numeral 'VI' — script pip-count + 5 independent vision reads). Its red cell (0.81,0.29,0.20) is the board's ONLY 3BD space — rulebook p5/p10 anchors the special burgundy space to the #6 depot, and this is one of the two castles on the whole board (the other is depot 2). Set {brown, red(3BD), blue, green}: prev agent read this cluster as {brown4,brown4,yellow,gray} via brown/red, tan-yellow/chartreuse and teal/gray confusions. '4' badges: brown (high, 3 sources), blue (high, confirmed twice); green's '4' medium/disputed (region read yes, close-up only 'gold badge too small'). Clockwise from top-left: brown(4), red(3BD), blue(4), green(4?)."
+        }
+      ],
+      "blackDepotCells": 6,
+      "blackDepotNote": "Horizontal row of 6 black hexes; one carries '4' (3-player uses 5). Count cross-confirmed by Gamefound infographic '3-4 PLAYER GAME: 6 tiles per phase'.",
+      "confidence": "high"
+    },
+    "back": {
+      "depots": [
+        { "n": 1, "cells": [], "confidence": "missing", "note": "no usable image of the 2-player side found in rulebook/scans/search" },
+        { "n": 2, "cells": [], "confidence": "missing", "note": "no usable image of the 2-player side found" },
+        { "n": 3, "cells": [], "confidence": "missing", "note": "no usable image of the 2-player side found" },
+        { "n": 4, "cells": [], "confidence": "missing", "note": "no usable image of the 2-player side found" },
+        { "n": 5, "cells": [], "confidence": "missing", "note": "no usable image of the 2-player side found" },
+        { "n": 6, "cells": [], "confidence": "missing", "note": "no usable image of the 2-player side found; if the back mirrors the front's special space, depot 6 should still hold the 3BD castle space — unverified" }
+      ],
+      "blackDepotCells": 4,
+      "blackDepotNote": "From Gamefound infographic call-out '2 PLAYER GAME: 4 tiles per phase'; board image not seen — medium confidence.",
+      "confidence": "missing",
+      "note": "Rulebook (p4/p10): back side differs from front ONLY in number of hex spaces per depot, incl. black depot. Per-depot space colors not determined from any available source."
+    }
+  }
+}

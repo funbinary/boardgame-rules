@@ -155,7 +155,8 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - **API**（前缀 `/api`，JSON）：`POST register/login/logout`、`GET me/health`、`GET collection`（三张清单+计数）、`GET|PUT collection/{game_key}`（status 为 `owned/wishlist/play`，空串即移除）。`game_key` 为精选页 slug（`seti`）或 `bga/<id>`（`bga/catan`）。分享：`GET|POST|DELETE share`（查询/生成重生成/关闭，token 随机 256 位）+ `GET shared/{token}`（公开只读视图，`shared.html?t=<token>` 渲染，限流 120/分/IP）。
 - **认证**：bcrypt 密码哈希；密码规则 8-72 位且同时含字母和数字、常见弱密码黑名单（仅注册校验，存量登录不受影响）；会话 token 随机 32 字节、库中只存 sha256；Cookie `rules_session`（HttpOnly + Secure + SameSite=Lax，30 天）。限流：注册 5/时/IP、登录 15/5 分/IP、收藏写 120/分/IP（内存固定窗口）。
-- **生产部署**（腾讯云服务器）：二进制 `/opt/rules-api/rules-api`，数据 `/opt/rules-api/data/rules.db`，systemd 单元 `rules-api.service`（仅监听 127.0.0.1:8787）；nginx `/etc/nginx/conf.d/rule.conf` 的 443 块将 `location /api/` 反代至该端口。一次性引导见 `server/deploy/bootstrap.sh`（幂等）。
+- **联机对战**（`/api/play`，游戏页 `play/burgundy/`）：REST `POST rooms`（建房：游戏/人数 2-4/每回合限时秒/模块勾选）、`GET rooms`、`GET rooms/{id}`（含全量走子 journal，断线重连重放）、`POST rooms/{id}/join|start`；WS `GET play/ws?room={id}` 走子中继/聊天/presence/超时广播。服务端不实现规则——各客户端用同一 TS 引擎重放 journal，每步带状态哈希对账，超时由各端确定性代走器计算（先到先入 journal）。表：`play_rooms`/`play_room_players`/`play_moves`（append-only）。
+- **生产部署**（腾讯云服务器）：二进制 `/opt/rules-api/rules-api`，数据 `/opt/rules-api/data/rules.db`，systemd 单元 `rules-api.service`（仅监听 127.0.0.1:8787）；nginx `/etc/nginx/conf.d/rule.conf` 的 443 块将 `location /api/` 反代至该端口。一次性引导见 `server/deploy/bootstrap.sh`（幂等；含 `/api/play/ws` 所需的 WebSocket Upgrade 头——**老部署需重跑一次 bootstrap.sh 或手工补 Upgrade/Connection 头**，否则联机 WS 无法握手）。
 - **日常发版**：`deploy.yml` 全自动——交叉编译 → rsync 静态（排除 `server/`）→ scp 二进制 → 重启服务 → 验证 `https://zhibinai.cn/api/health`。
 - **数据维护**：用户/会话/收藏都在单个 SQLite 文件，备份即拷贝（建议停服务或用 `sqlite3 .backup`）；手动改数据可在服务器上用 `python3`（自带 sqlite3 模块）。
 - 收藏清单当前仅本人可见；表结构已预留分享扩展（后续可加随机只读链接）。

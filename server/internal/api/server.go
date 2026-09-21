@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/funbinary/boardgame-rules/server/internal/auth"
+	"github.com/funbinary/boardgame-rules/server/internal/play"
 	"github.com/funbinary/boardgame-rules/server/internal/store"
 )
 
@@ -31,6 +32,7 @@ type Server struct {
 	ttl          time.Duration
 	cookieSecure bool
 	limiter      *Limiter
+	play         *play.Handler
 }
 
 type Config struct {
@@ -40,12 +42,14 @@ type Config struct {
 }
 
 func New(cfg Config) *Server {
-	return &Server{
+	s := &Server{
 		store:        cfg.Store,
 		ttl:          cfg.SessionTTL,
 		cookieSecure: cfg.CookieSecure,
 		limiter:      NewLimiter(),
 	}
+	s.play = play.NewHandler(cfg.Store, s.currentUser)
+	return s
 }
 
 // Handler 组装路由与中间件。
@@ -63,6 +67,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /api/share", s.handleShareCreate)
 	mux.HandleFunc("DELETE /api/share", s.handleShareDelete)
 	mux.HandleFunc("GET /api/shared/{token}", s.handleSharedCollection)
+	s.play.Routes(mux)
 	return withLog(securityHeaders(mux))
 }
 

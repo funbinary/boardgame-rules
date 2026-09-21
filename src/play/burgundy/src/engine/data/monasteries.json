@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "sources": [
+      "D:\\project\\rules\\content\\bga-zh\\castlesofburgundy.html (修道院 1-14 / 15-26 节 + 第二扩展节 + 帮助表节)",
+      "D:\\project\\rules\\_cob\\cob-se-rulebook-en.pdf p11-12 文本层(1-26 + 16-23+29 规则原文)",
+      "D:\\project\\rules\\_cob\\cob-se-rulebook-en.pdf p13 文本层(27/28/吊车/鹅;吊车条目再次引用 16-23+29)",
+      "D:\\project\\rules\\_cob\\cob-se-rulebook-en.pdf p26 文本层: \"Additional monastery tiles (#27–#29)\" —— 确证 29 号存在且属第二扩展额外修道院",
+      "D:\\project\\rules\\_cob\\render\\p12.png / PDF p12 侧栏 500-900dpi 渲染(16-23+29 板块图,编号标签与图像逐一对应)",
+      "D:\\project\\rules\\assets\\img\\bga\\castlesofburgundy\\p30.jpg 中文帮助表扫描(标题「29 块修道院板块」,16-23、29 行)",
+      "D:\\project\\rules\\assets\\img\\bga\\castlesofburgundy\\p13.jpg 中文修道院 15-26 页扫描"
+    ],
+    "verifiedBy": [],
+    "notes": [
+      "when 词表与引擎 data.ts 兜底一致: ongoing | onMinePhaseEnd | onSell | onShip | onLivestock | diceAdjust | onWorkers | endgame。",
+      "16-23 号对应 8 种建筑各一块;29 号(SE 第二扩展新增)与 19 号同为市政厅类型(9 块计分修道院覆盖 8 种建筑,市政厅出现两次)。",
+      "编号 17=瞭望塔、22=银行 由规则书示例原文锚定(text confidence=high);16/18/19/20/21/23/29 的建筑类型由板块图与 p8/p9 侧栏建筑参照图交叉比对得出(vision confidence=medium)。",
+      "基础 26 块修道院(黄 20 + 黑 6);第二扩展另加 27/28/29 三块黄色修道院 → 全局共 29 种修道院面,与帮助表标题「29 块修道院板块」吻合。英文配件表写「4 additional hex tiles (2nd Expansion)」但规则正文(p13 详述 27/28/吊车/鹅,p26 提及 27-29)表明该扩展实为 5 片(3 修道院+吊车+鹅),配件行数字疑似沿袭旧版未更新 —— 以规则正文为准。"
+    ]
+  },
+  "data": [
+    { "n": 1, "when": "ongoing", "effect": "同城镇可重复建造同种建筑", "text": "你不再需要遵守每种建筑物(浅褐色)在每个城镇只能建造一次的规则;你可以在同一个城镇中建造多个同种建筑物。", "confidence": "high", "note": "规则书正文" },
+    { "n": 2, "when": "onMinePhaseEnd", "effect": "每银矿每阶段结束额外+1工人", "text": "你已放置的每个银矿,在每个阶段结束时,会令你额外获得 1 个工人(伴随正常银币)。", "confidence": "high", "note": "帮助表标 (A-E),即每个阶段结束时生效" },
+    { "n": 3, "when": "onSell", "effect": "出售货物改为获得2银币", "text": "每当你出售货物时(骰子行动或放置仓库),你改为获得 2 枚银币,而不是 1 枚。", "confidence": "high" },
+    { "n": 4, "when": "onSell", "effect": "出售货物额外+1工人", "text": "每当你出售货物时,除了通常获得的银币外,还会额外获得 1 个工人。", "confidence": "high" },
+    { "n": 5, "when": "onShip", "effect": "放船时额外从相邻补给区拿货", "text": "每当你放置船只时,除了拿取你所选补给区的所有货物外,还可从与之相邻的一个补给区拿取所有货物。", "confidence": "high" },
+    { "n": 6, "when": "ongoing", "effect": "每回合1次:2工人换1建筑片", "text": "每回合一次,你可以支付 2 个工人,立即从任意 1 个补给区(中央黑色补给区除外)拿取 1 个建筑物(浅褐色)放入储存格。", "confidence": "high" },
+    { "n": 7, "when": "onLivestock", "effect": "放牲畜时每参与计分片+1分", "text": "每当你放置牲畜时,此时每有 1 个参与计分的牲畜六角片(包括刚放置的那个),就额外获得 1 分。", "confidence": "high" },
+    { "n": 8, "when": "diceAdjust", "effect": "每工人改骰±2", "text": "每当你使用 1 个工人更改骰子点数时,你可以令点数增加或减少 2 点,而不是 1 点。", "confidence": "high" },
+    { "n": 9, "when": "diceAdjust", "effect": "放置建筑时骰点±1", "text": "每当你想要放置建筑物(浅褐色)到公国时,你可以将骰子点数更改 1 点(如同使用了 1 个工人)。", "confidence": "high" },
+    { "n": 10, "when": "diceAdjust", "effect": "放置船/牲畜时骰点±1", "text": "每当你想要放置船只(蓝色)或牲畜(绿色)到公国时,你可以将骰子点数更改 1 点。", "confidence": "high" },
+    { "n": 11, "when": "diceAdjust", "effect": "放置城堡/银矿/修道院时骰点±1", "text": "每当你想要放置城堡(暗红色)、银矿(灰色)或修道院(黄色)到公国时,你可以将骰子点数更改 1 点。", "confidence": "high" },
+    { "n": 12, "when": "diceAdjust", "effect": "拿取六角片时骰点±1", "text": "每当你想要从游戏主版图拿取 1 个六角片时,你可以将骰子点数更改 1 点。", "confidence": "high" },
+    { "n": 13, "when": "onWorkers", "effect": "拿工人行动额外+1银币", "text": "每当你执行「拿取 2 个工人标记」行动时,额外获得 1 枚银币。放置宿舍时不触发。", "confidence": "high" },
+    { "n": 14, "when": "onWorkers", "effect": "拿工人行动改为获得4工人", "text": "每当你执行「拿取 2 个工人标记」行动时,改为获得 4 个工人。放置宿舍时不触发。", "confidence": "high" },
+    { "n": 15, "when": "endgame", "effect": "每种已出售货物类型+2分", "text": "游戏结束时,你已出售的货物中,每有一种不同类型的货物就获得 2 分;未出售的货物不纳入计算。", "confidence": "high" },
+    { "n": 16, "when": "endgame", "effect": "每个木工坊+4分", "text": "游戏结束时,公国中每有 1 个木工坊就获得 4 分。(16-23+29 号:每有 1 个对应类型的建筑物获得 4 分)", "confidence": "medium", "note": "效果类别与分值为规则书原文(high);对应建筑=木工坊由板块图比对得出(vision)" },
+    { "n": 17, "when": "endgame", "effect": "每个瞭望塔+4分", "text": "游戏结束时,公国中每有 1 个瞭望塔就获得 4 分。", "confidence": "high", "note": "规则书示例原文锚定: \"the yellow #17 (watchtower)\"" },
+    { "n": 18, "when": "endgame", "effect": "每个教堂+4分", "text": "游戏结束时,公国中每有 1 个教堂就获得 4 分。", "confidence": "medium", "note": "板块图可见十字与钟塔(vision,多轮一致)" },
+    { "n": 19, "when": "endgame", "effect": "每个市政厅+4分", "text": "游戏结束时,公国中每有 1 个市政厅就获得 4 分。", "confidence": "medium", "note": "板块图两轮盲读均为市政厅样式建筑(vision)" },
+    { "n": 20, "when": "endgame", "effect": "每个市场+4分", "text": "游戏结束时,公国中每有 1 个市场就获得 4 分。", "confidence": "medium", "note": "板块图可见成排遮阳摊位(vision)" },
+    { "n": 21, "when": "endgame", "effect": "每个宿舍+4分", "text": "游戏结束时,公国中每有 1 个宿舍就获得 4 分。", "confidence": "medium", "note": "板块图为半木结构住宅、烟囱冒烟(vision)" },
+    { "n": 22, "when": "endgame", "effect": "每个银行+4分", "text": "游戏结束时,公国中每有 1 个银行就获得 4 分。", "confidence": "high", "note": "规则书示例原文锚定: \"#22 (bank)\"" },
+    { "n": 23, "when": "endgame", "effect": "每个仓库+4分", "text": "游戏结束时,公国中每有 1 个仓库就获得 4 分。", "confidence": "medium", "note": "板块图可见门前麻袋与木桶(vision,两轮一致)" },
+    { "n": 24, "when": "endgame", "effect": "每种不同牲畜类型+4分", "text": "游戏结束时,公国中已放置的牲畜每有一种不同类型就获得 4 分(鹅对 7/24 号视为额外牲畜类型)。", "confidence": "high" },
+    { "n": 25, "when": "endgame", "effect": "每个已出售货物板块+1分", "text": "游戏结束时,你已出售的每个货物板块都令你获得 1 分;未出售的货物不纳入计算。", "confidence": "high" },
+    { "n": 26, "when": "endgame", "effect": "每个奖励板块+3分", "text": "游戏结束时,你拥有的每个奖励板块(无论大小)都令你获得 3 分。", "confidence": "high" },
+    { "n": 27, "when": "ongoing", "effect": "顺位轨同格时己方标记始终置顶", "text": "如果你的回合顺位标记与其他玩家的标记位于同一格,你的标记总会被放置在顶部;主动或被动触发均适用。(第二扩展,黄色修道院)", "confidence": "high" },
+    { "n": 28, "when": "ongoing", "effect": "随时1银币换2工人", "text": "如果该六角片位于你的公国中,你可以随时从供应堆购买工人:每支付 1 枚银币获得 2 个工人。(第二扩展,黄色修道院)", "confidence": "high" },
+    { "n": 29, "when": "endgame", "effect": "每个市政厅+4分(与19号同类)", "text": "16-23+29 号:游戏结束时,公国中每有 1 个对应类型的建筑物就获得 4 分。29 号(SE 新增的第 9 块计分类修道院,第二扩展)对应类型为市政厅,与 19 号重复;终局时吊车可指定为任意建筑用于 16-23+29 计分。", "confidence": "medium", "note": "「16-23+29 每对应建筑+4分」为英文 PDF p12/p13 文本层确证(high);具体对应市政厅由中英帮助表/板块图 4 轮独立读图一致得出(vision=medium)。另 p26 文本 \"Additional monastery tiles (#27–#29)\" 证其归属第二扩展。" }
+  ]
+}

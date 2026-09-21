@@ -19,7 +19,40 @@ systemctl enable rules-api
 echo ">> 配置 nginx /api/ 反代（幂等）"
 CONF=/etc/nginx/conf.d/rule.conf
 if grep -q "location /api/" "$CONF"; then
-  echo "   /api/ location 已存在，跳过"
+  if grep -q "proxy_set_header Upgrade" "$CONF"; then
+    echo "   /api/ location 已含 WebSocket 头，跳过"
+  else
+    echo "   /api/ location 存在但缺 WebSocket 头，补丁中"
+    cp "$CONF" "$CONF.bak.$(date +%s)"
+    python3 - "$CONF" << 'PYEOF'
+import sys
+
+path = sys.argv[1]
+with open(path, encoding="utf-8") as f:
+    content = f.read()
+
+old = """        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+"""
+new = """        proxy_set_header X-Forwarded-Proto $scheme;
+        # WebSocket(联机对战 /api/play/ws)
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+"""
+if old not in content:
+    print("!! 未找到反代配置锚点，请手工检查", file=sys.stderr)
+    sys.exit(1)
+with open(path, "w", encoding="utf-8") as f:
+    f.write(content.replace(old, new, 1))
+print("已补 WebSocket 头", path)
+PYEOF
+    nginx -t
+    systemctl reload nginx
+  fi
 else
   cp "$CONF" "$CONF.bak.$(date +%s)"
   python3 - "$CONF" << 'PYEOF'
@@ -37,6 +70,12 @@ snippet = anchor + """
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
+        # WebSocket(联机对战 /api/play/ws)
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
     }
 """
 if anchor not in content:

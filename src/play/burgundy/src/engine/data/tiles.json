@@ -1,0 +1,206 @@
+{
+ "_meta": {
+  "sources": [
+   "D:\\project\\rules\\_cob\\cob-se-rulebook-en.pdf p2 文本层: \"1 7x 8 buildings (40 beige, 16 black)\" / \"2 7x 4 livestock (20 green, 8 black)\" / mines/ships/monasteries/castles 各行",
+   "D:\\project\\rules\\content\\bga-zh\\castlesofburgundy.html (配件清单、牲畜计分示例、第二扩展鹅、白色城堡/旅店/吊车各节、出售货物节)",
+   "D:\\project\\rules\\_cob\\cob-se-rulebook-en.pdf p26 文本层(自动机): \"keep 1 of each goods tile type\" + \"F. Place one goods tile of each type on each matching-numbered goods space\" → 每色必含 1-6 全部点数",
+   "D:\\project\\rules\\_cob\\render\\p02.png 组件照片提取图 emb_p2_x34/x36(buildings/livestock 堆照, 500-900dpi)",
+   "D:\\project\\rules\\_cob\\render\\p08.png Ben 牧场示例图 (p8_example.png, 1172x669): 羊-3/牛-3/牛-4 面实绘确证",
+   "D:\\project\\rules\\_cob\\render\\p03.png 第二扩展/白色城堡/旅店照片(p03_x52/x57/x56)",
+   "D:\\project\\rules\\assets\\img\\bga\\castlesofburgundy\\p30.jpg/p31.jpg 中文帮助表"
+  ],
+  "verifiedBy": [],
+  "notes": [
+   "牲畜:面(物种×只数)存在性由规则书正文示例(明确算分算式)与示例图确证;每面张数无法从本地资料勘定 —— 组件照片为堆叠照,叠面不可见;「7x 4 livestock」的乘式与示例面数(≥8 种)矛盾,不能按 4 面×7 张解读。count 留 null 并标 confidence=missing。",
+   "货物:每色 7 片;由自动机设置(每色各留 1 片放上编号 1-6 的对应货物格)推得每色必含 1-6 各一枚,第 7 片为某一点数的重复,重复点数未能从本地图片可靠读出(photo 读数不稳定)。valuesPerColor 记 6 个确定值并加 note。",
+   "修道院总数:基础 26 面(黄20+黑6) + 第二扩展 27/28/29 三面(黄) = 29 种面,与帮助表标题「29 块修道院板块」一致;英文配件表「4 additional hex tiles (2nd Expansion)」与正文(27/28/29+吊车+鹅=5 片)不符,以正文为准。",
+   "黑色牲畜:基础 8 张;第二扩展鹅(黑面)为额外 1 张 → 含扩展共 9 张黑面牲畜。"
+  ]
+ },
+ "data": {
+  "buildings": [
+   {
+    "type": "market",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "carpenter",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "church",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "warehouse",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "dormitory",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "bank",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "cityhall",
+    "count": 5,
+    "blackCount": 2
+   },
+   {
+    "type": "watchtower",
+    "count": 5,
+    "blackCount": 2
+   }
+  ],
+  "buildingsNote": "8 种 × (彩色 5 + 黑 2) = 彩色 40 + 黑 16,由「7x 8 buildings (40 beige, 16 black)」均分唯一解,confidence=high。",
+  "livestock": [
+   {
+    "kind": "sheep",
+    "animals": 2,
+    "count": 3,
+    "confidence": "missing",
+    "note": "面存在:基础示例「1 个印有 2 只羊…5 分(2+3)」 | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 2
+   },
+   {
+    "kind": "sheep",
+    "animals": 3,
+    "count": 3,
+    "confidence": "missing",
+    "note": "面存在:Ben 牧场示例图 + 7 号修道院示例 | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 2
+   },
+   {
+    "kind": "sheep",
+    "animals": 4,
+    "count": 2,
+    "confidence": "missing",
+    "note": "面存在:7 号修道院示例(3+1)+(4+1)=9;组件照可见 | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 0
+   },
+   {
+    "kind": "cattle",
+    "animals": 2,
+    "count": 3,
+    "confidence": "missing",
+    "note": "面存在:鹅扩展示例(牧场已有 2 只牛与 3 只牛) | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 2
+   },
+   {
+    "kind": "cattle",
+    "animals": 3,
+    "count": 3,
+    "confidence": "missing",
+    "note": "面存在:Ben 示例图与正文 | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 2
+   },
+   {
+    "kind": "cattle",
+    "animals": 4,
+    "count": 2,
+    "confidence": "missing",
+    "note": "面存在:Ben 示例正文与示例图(4+4+3=11) | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 0
+   },
+   {
+    "kind": "pig",
+    "animals": 2,
+    "count": 1,
+    "confidence": "missing",
+    "note": "面存在:7 号修道院示例(2 只猪=3 分);组件照可见 | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 0
+   },
+   {
+    "kind": "pig",
+    "animals": 3,
+    "count": 1,
+    "confidence": "missing",
+    "note": "面未见确证:正文示例从未引用 3 只猪;组件照一轮读图称见猪-3,不稳定,存疑 | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 0
+   },
+   {
+    "kind": "pig",
+    "animals": 4,
+    "count": 2,
+    "confidence": "missing",
+    "note": "面存在:鹅扩展示例(4+2=6) | count 为占位(面谱确证、张数未勘),总计校准 20 彩色/8 黑",
+    "blackCount": 0
+   }
+  ],
+  "livestockNote": "合计彩色 20 / 黑 8(黑面另含第二扩展鹅 1 张 → 全局黑面 9)。物种×只数面谱如上;每面张数(彩色/黑色细分)本地资料不可勘定:组件页为堆叠照片,正面被叠压,且「7x 4」乘式与 ≥8 种面矛盾。待复核代理以 Gamefound/BGG 组件清点图确认。鹅:印 2 只鹅,放置时 2 分+同牧场另一种牲畜全部分数,此后该牧场每次放牲畜再+2 分;对 7/24 号修道院视为额外牲畜类型。",
+  "mines": {
+   "colored": 10,
+   "black": 2,
+   "confidence": "high",
+   "note": "正文:12 个银矿(10 灰 + 2 黑)"
+  },
+  "ships": {
+   "colored": 20,
+   "black": 6,
+   "confidence": "high",
+   "note": "正文:26 个船只(20 蓝 + 6 黑)"
+  },
+  "monasteries": {
+   "colored": 20,
+   "black": 6,
+   "confidence": "high",
+   "note": "基础 26 面(20 黄 + 6 黑);第二扩展另加 27/28/29(黄),全局 29 种面"
+  },
+  "castles": {
+   "colored": 14,
+   "black": 2,
+   "confidence": "high",
+   "note": "正文:16 个城堡(14 暗红 + 2 黑)"
+  },
+  "goods": {
+   "colors": 6,
+   "perColor": 7,
+   "valuesPerColor": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6
+   ],
+   "confidence": "low",
+   "note": "由自动机设置推证:每色各留 1 片可放上编号 1-6 的货物格 → 每色必含 1-6 各 1 片;第 7 片为某点数重复,重复点数未能从本地照片可靠读出(组件照/示例图点数读数多轮不一致)。示例旁证:p10 出售示例见粉色 1(×3)。valuesPerColor 列 6 个确定值,引擎应理解为 1-6 各一 + 1 未知重复。 | 第 7 枚占位为 6,勘定后替换"
+  },
+  "whitecastle": {
+   "total": 9,
+   "byColor": null,
+   "confidence": "partial",
+   "note": "总数 9(正文)。洗入浅褐/黄色/黑色对应供应堆;各色张数本地不可勘定,byColor 留待复核(组件照片无法分辨背面归属)。效果:放置时以白色骰子当前点数执行一个行动(可用工人改点但不实际改骰面)。"
+  },
+  "inns": {
+   "total": 5,
+   "confidence": "high",
+   "note": "每阶段开始放 1 个于黑色补给区旁(叠放),支付 2 银币购买,可放任意颜色空格但每区域限 1 个;自身无效果,仅令区域规模+1(9 格区域=45 分)。不支持自动机。"
+  },
+  "crane": {
+   "black": 1,
+   "confidence": "high",
+   "note": "黑面建筑。放置时可立即指定触发任意一种建筑效果(即使公国中无该建筑);终局计分时可改指定为任意一种建筑用于 16-23+29 号修道院计分(可与放置时指定不同)。"
+  },
+  "goose": {
+   "black": 1,
+   "confidence": "high",
+   "note": "黑面牲畜,印 2 只鹅;详见 livestockNote。"
+  },
+  "shields": {
+   "total": 18,
+   "confidence": "high",
+   "note": "盾徽扩展;非六角片,顺带收录。按玩家人数放补给区货物格(2人每区1/3人1&2交替/4人每区2)。"
+  },
+  "expansion2CountDiscrepancy": "英文配件表称第二扩展「4 additional hex tiles」,但正文详述 27/28/29(黄修道院)+吊车(黑建筑)+鹅(黑牲畜)共 5 片(p13 详述 + p26 \"Additional monastery tiles (#27–#29)\");以正文为准,提示复核代理留意。"
+ }
+}

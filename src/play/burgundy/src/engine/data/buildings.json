@@ -1,0 +1,98 @@
+{
+  "_meta": {
+    "sources": [
+      "D:\\project\\rules\\content\\bga-zh\\castlesofburgundy.html (「行动」节八种建筑效果全文 + 帮助表「六角片效果速览」)",
+      "D:\\project\\rules\\_cob\\cob-se-rulebook-en.pdf p8 文本层(Market/Carpenter's Workshop/Church...)",
+      "D:\\project\\rules\\assets\\img\\bga\\castlesofburgundy\\p31.jpg 中文帮助表(六角片效果速览)",
+      "D:\\project\\rules\\_cob\\render\\p08/p09.png 侧栏建筑图标(建筑名↔图标文本层定位校验)"
+    ],
+    "verifiedBy": [],
+    "notes": [
+      "type 标识与引擎 data.ts 兜底一致(market/carpenter/church/warehouse/dormitory/bank/cityhall/watchtower);dormitory 即英文 Boarding house(宿舍)。",
+      "每种建筑彩色 5 + 黑色 2(由「7x 8 buildings (40 beige, 16 black)」均分推得,与 tiles.json 一致)。",
+      "text 取自帮助表速览原文;detail 为规则书正文全文。"
+    ]
+  },
+  "data": [
+    {
+      "type": "market",
+      "name": "市场",
+      "when": "onPlace",
+      "text": "拿取 1 个牲畜或船只六角片。",
+      "detail": "每当你放置市场到公国时,你可以立即从任意 1 个补给区中(黑色补给区除外)拿取 1 个船只(蓝色)或牲畜(绿色),并放置到你玩家版图右下角一个空的储存格。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "carpenter",
+      "name": "木工坊",
+      "when": "onPlace",
+      "text": "拿取 1 个建筑六角片。",
+      "detail": "每当你放置木工坊到公国时,你可以立即从任意 1 个补给区中(黑色补给区除外)拿取 1 个建筑物(浅褐色),并放置到玩家版图右下角一个空的储存格。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "church",
+      "name": "教堂",
+      "when": "onPlace",
+      "text": "拿取 1 个银矿、修道院或城堡六角片。",
+      "detail": "每当你放置教堂到公国时,你可以立即从任意 1 个补给区中(黑色补给区除外)拿取 1 个银矿(灰色)或修道院(黄色)或城堡(暗红色),并放置到你玩家版图右下角一个空的储存格。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "warehouse",
+      "name": "仓库",
+      "when": "onPlace",
+      "text": "出售一种类型的货物。",
+      "detail": "每当你放置仓库到公国时,你可以立即选择你拥有的任意一种类型的所有货物(无需使用骰子),并将其全部出售,如同你执行了「出售货物」行动。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "dormitory",
+      "name": "宿舍",
+      "when": "onPlace",
+      "text": "获得 4 个工人。",
+      "detail": "每当你放置宿舍到公国时,你立即从供应堆获得 4 个工人标记。(英文 Boarding house;放置宿舍不触发 13/14 号修道院)",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "bank",
+      "name": "银行",
+      "when": "onPlace",
+      "text": "获得 2 枚银币。",
+      "detail": "每当你放置银行到公国时,你立即从供应堆获得 2 枚银币。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "cityhall",
+      "name": "市政厅",
+      "when": "onPlace",
+      "text": "额外放置 1 个六角片。",
+      "detail": "每当你放置市政厅到公国时,你可以立即从你的储存格选择另一个六角片,并将它放置在你的公国,视为你使用了一颗由你自由决定点数的骰子。放置的六角片如常触发效果。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    },
+    {
+      "type": "watchtower",
+      "name": "瞭望塔",
+      "when": "onPlace",
+      "text": "获得 4 分。",
+      "detail": "每当你放置瞭望塔到公国时,你立即获得 4 分。",
+      "count": 5,
+      "blackCount": 2,
+      "confidence": "high"
+    }
+  ]
+}

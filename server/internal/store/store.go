@@ -100,6 +100,10 @@ func (s *Store) migrate(ctx context.Context) error {
 		`CREATE UNIQUE INDEX IF NOT EXISTS idx_users_share_token ON users(share_token) WHERE share_token IS NOT NULL`); err != nil {
 		return fmt.Errorf("migrate share index: %w", err)
 	}
+	// v3:联机对战房间与走子日志。
+	if err := s.migratePlay(ctx); err != nil {
+		return err
+	}
 	return nil
 }
 
