@@ -68,9 +68,9 @@ export interface PlayerState {
   vineyard?: { tiles: Tile[]; regions: { type: string; size: number }[]; bonusTiles: { type: string }[] };
   /** 自动机状态 */
   automa?: {
-    deck: number[];
-    hand: number[];
-    countyCards: (number | null)[];
+    deck: string[];                        // 郡县卡内容字符串数组(简化)
+    hand: string[];
+    countyCards: (string | null)[];        // 左右槽
     reserve: Tile[];
     silver: number;
     goods: number[];
