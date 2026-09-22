@@ -56,6 +56,7 @@ body[data-theme="austria"] { --accent: #7a3b2e; --accent-strong: #61301f; --acce
 body[data-theme="arle"] { --accent: #3d7ab0; --accent-strong: #2f5f8c; --accent-soft: rgba(61, 122, 176, 0.10); --accent-border: rgba(61, 122, 176, 0.35); }
 body[data-theme="message"] { --accent: #6b3040; --accent-strong: #552533; --accent-soft: rgba(107, 48, 64, 0.10); --accent-border: rgba(107, 48, 64, 0.35); }
 body[data-theme="gwt"] { --accent: #2a6149; --accent-strong: #214e3a; --accent-soft: rgba(42, 97, 73, 0.10); --accent-border: rgba(42, 97, 73, 0.35); }
+body[data-theme="arnakel"] { --accent: #8c6d2f; --accent-strong: #6f5724; --accent-soft: rgba(140, 109, 47, 0.10); --accent-border: rgba(140, 109, 47, 0.35); }
 body[data-theme="bga"] { --accent: #c35500; --accent-strong: #9a4300; --accent-soft: rgba(195, 85, 0, 0.09); --accent-border: rgba(195, 85, 0, 0.35); }
 
 /* ---------- BGA wiki 内容适配 ---------- */

@@ -209,4 +209,6 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 
 - [大西部开拓者：新西兰开拓史（Great Western Trail: New Zealand）](https://www.gstonegames.com/game/doc-4984.html) · 集石词条所载非官方规则书（Alexander Pfister 设计，eggertspiele 出版/本长文化发行，1–4 人含单人模式，繁体规则书全文转录，一盒四册按各册页码重排，见 `games/gwt-new-zealand.html`）
 
+- [阿纳克遗迹：探险队长（Lost Ruins of Arnak: Expedition Leaders）](https://mp.weixin.qq.com/s/nEGzfRTol5gFHuc16sETPA) · 微信公众号「桌游怎么玩」所载官方简体中文规则书（Mín & Elwen 设计，CGE 出版/一刻馆代理发行，1–4 人扩展含单人变体，简体规则书全文转录，封面+页2–23+衬页按印刷页码重排，见 `games/arnak-expedition-leaders.html`）
+
 规则内容版权归原作者所有，本站仅作个人学习查阅。
