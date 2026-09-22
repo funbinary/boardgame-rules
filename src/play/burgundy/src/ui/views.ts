@@ -39,16 +39,19 @@ function myBoard(g: GameState): string {
   if (!b) return '<section>版图缺失</section>';
   let cells = '';
   let maxC = 0;
-  for (const cell of b.cells) maxC = Math.max(maxC, cell.c);
+  let minC = 0;
+  for (const cell of b.cells) { maxC = Math.max(maxC, cell.c); minC = Math.min(minC, cell.c); }
   for (const cell of b.cells) {
     const x = hexX(cell.c, cell.r), y = hexY(cell.r);
     const placed = p.placed[`${cell.r}:${cell.c}`];
     const inner = placed ? tileSvg(placed) : boardCellSvg(cell.color, cell.n);
     cells += `<g class="cell" data-r="${cell.r}" data-c="${cell.c}" transform="translate(${x},${y})">${inner}</g>`;
   }
-  const w = (maxC + 2) * 48, h = (b.cells.length ? Math.max(...b.cells.map((c) => c.r)) + 2 : 5) * 40;
+  // 勘定版图用标准 odd-r 坐标,奇数行左边界可到负列,viewBox 需左移
+  const vx = Math.min(0, minC) * 49 - 6;
+  const w = (maxC - Math.min(0, minC) + 2) * 48, h = (b.cells.length ? Math.max(...b.cells.map((c) => c.r)) + 2 : 5) * 40;
   return `<h2>${escapeHtml(p.name)} 的公国(版图 ${p.boardId})</h2>
-    <svg viewBox="0 0 ${w} ${h}" class="duchy">${cells}</svg>`;
+    <svg viewBox="${vx} 0 ${w} ${h}" class="duchy">${cells}</svg>`;
 }
 
 function renderCentral(g: GameState, sel: UiSelection, moves: Move[]): string {

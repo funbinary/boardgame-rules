@@ -1,80 +1,2317 @@
 {
  "_meta": {
   "sources": [
-   "https://gamefound.com/en/projects/awaken-realms/castles-of-burgundy-special-edition/updates/20 (Development update #1 'Redesigned player boards are here!' - boards 1-8 final straight-on renders, 4 images)",
-   "https://gamefound.com/en/projects/awaken-realms/castles-of-burgundy-special-edition/updates/8 (Day 7 'Two new Duchies and two rebalanced ones!' - duchies 4&8 rebalanced, duchies 9&10 new)",
-   "https://gamefound.com/en/projects/awaken-realms/castles-of-burgundy-special-edition/updates/21 (Development update #2 - prototype photos incl. boards 7,8 + 1500x1500 renders of boards 9,10)",
-   "https://imgcdn.gamefound.com/richtextimage/richtext/ed170d5f-ee35-4bb1-a9a0-601523b21969.jpg (u20_1: boards 4,7)",
-   "https://imgcdn.gamefound.com/richtextimage/richtext/0a49ac6b-9798-4c37-a572-22fc638ce449.jpg (u20_2: boards 1,3)",
-   "https://imgcdn.gamefound.com/richtextimage/richtext/f67a4fdd-fc63-4a19-9b3a-4bc333bd1466.jpg (u20_3: boards 2,5)",
-   "https://imgcdn.gamefound.com/richtextimage/richtext/90aed39c-e44f-41b2-b152-19f03c10f351.jpg (u20_4: boards 6,8)",
-   "https://imgcdn.gamefound.com/richtextimage/richtext/28400452-36f0-4aaa-84ae-e2555a483ff2.jpg (d7_3: new duchies 9,10)",
-   "https://imgcdn.gamefound.com/richtextimage/richtext/cd7cbcde-1c77-4c58-9538-87360b29fd1d.jpg (d7_1: rebalanced 4,8)"
+   "BGG pic7621703 (https://boardgamegeek.com/image/7621703): fan-rendered reference of all 30 duchy diagrams with per-hex die values; boards 1-10 match SE numbering incl. '(reworked)' tags on 4/8; transcribed at 3x full-board + 8x-10x zoom passes",
+   "Gamefound update #8 render (imgcdn cd7cbcde = _cob/d2/gf/d7_1.jpg): official straight-on renders of reworked boards 4 & 8; full 37-cell cross-check against sheet",
+   "Gamefound update #8 render (28400452 = d7_3_full.png): badges show border boards 21/22, NOT boards 9/10 as earlier assumed; no official straight-on render exists for boards 9/10 - those rest on double independent reads of pic7621703 plus the color-distribution invariant",
+   "Gamefound Dev update #1 (u20_*.png): angled 'empty board' hero renders without hex grid or dice - unusable for transcription",
+   "Color-distribution invariant per board: brown/buildings 12, yellow/monastery 6, blue/water 6, green/pasture 6, red/castle 4, gray/mine 3 (sum 37; holds on all 10 transcriptions)"
   ],
-  "verifiedBy": [],
-  "notes": "Board-number -> image mapping established and cross-checked via banner digits: u20_1L=4 u20_1R=7 u20_2L=1 u20_2R=3 u20_3L=2 u20_3R=5 u20_4L=6 u20_4R=8; u21_11=9 u21_12=10; u21_1=8 u21_3=7. SE facts confirmed from Day 7 update text: duchies 4 and 8 were rebalanced for SE (field repositioning); duchies 9 and 10 are new, never published before; all come in 4 copies (20 double-sided boards). Fixed duchy composition (from community-verified constraint, burgundicer): brown/city=12, yellow/monastery=6, blue/water=6, green/pasture=6, red/castle=4, gray/mine=3. Access method: gamefound.com SSR HTML pages fetchable with browser-like headers via python urllib (403 on first try, succeeds on retries); full update list via POST https://gamefound.com/api/projectUpdates/searchProjectUpdates {\"projectID\":1926,...}; imgcdn.gamefound.com serves full-resolution originals without authentication. Extraction pipeline (ruler-zones + overlay circles + die/terrain montages) produced per-row consensus data for board 1 but failed the 37-cell and color-distribution invariants, so per contract no cell data is asserted. Full working files in D:\\project\rules\\_cob\\d2\\ (images gf/, crops boards/, montages gf/b1_*.png)."
+  "verifiedBy": [
+   "board 1: 8x montage re-read 37/37 == first pass",
+   "board 2: 8x montage re-read 37/37 == first pass",
+   "board 3: 8x montage (refit grid) 37/37 == first pass",
+   "board 4: official d7_1 cross-check 37/37 after 10x spot-checks of 4-vs-5 ambiguities (r5 yellow=5, r6 red=3)",
+   "board 5: 3x read + 10x spot-checks (r3c4/r4c1 corrected to red-5)",
+   "board 6: 3x read + 10x spot-checks (r6c1/r6c4 corrected to red-3)",
+   "board 7: 3x read + 10x spot-checks (r0c2 = red-5)",
+   "board 8: 3x read + official d7_1 cross-check: 36/37 agree, r0c1 sheet=6 vs official=5 -> official wins (brown-5)",
+   "board 9: 3x read + independent 10x strip rows 0-1 (9/9 identical); no official render available",
+   "board 10: 3x read + 10x spot-checks (r2c1 corrected to green-4); no official render available"
+  ],
+  "notes": "Coordinate scheme: pointy-top hexes, odd-r offset (odd rows shifted right half hex, matching engine neighborsOf and ui hexX). Rows 0-6 top-down, col ranges per row: 0..3 / -1..3 / -1..4 / -2..4 / -1..4 / -1..3 / 0..3 (correct side-4 hexagon). The previous fallback layout in data.ts used 0..n-1 per row, which breaks hex geometry (spike cell at 3:6)."
  },
  "data": {
   "boards": [
    {
     "id": 1,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_2 left (ed170d5f); banner digit 1 confirmed"
+    "name": "Starter",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 2,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_3 left (f67a4fdd); banner digit 2 confirmed"
+    "name": "Distant Castles",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "gray",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "red",
+      "n": 2
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 3,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_2 right (0a49ac6b); banner digit 3 confirmed"
+    "name": "Ring of Knowledge",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "gray",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 4,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_1 left (90aed39c) + d7_1 rebalanced reveal (cd7cbcde); banner digit 4 confirmed"
+    "name": "Restructuring (reworked)",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "red",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 5,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_3 right (f67a4fdd); banner digit 5 confirmed"
+    "name": "Triplets",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "gray",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "gray",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 6,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_4 left; banner digit 6 confirmed"
+    "name": "Big River",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "red",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 7,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_1 right + u21_3 prototype photo; banner digit 7 confirmed"
+    "name": "Central City",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "red",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 8,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u20_4 right + u21_1 prototype photo + d7_1; banner digit 8 confirmed"
+    "name": "Outer Cities (reworked)",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "red",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "red",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 9,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u21_11 single 1500x1500 render + d7_3 (28400452); badge digit 9 confirmed"
+    "name": "Two Cities",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ],
+    "confidence": "high"
    },
    {
     "id": 10,
-    "cells": [],
-    "confidence": "missing",
-    "note": "sources located, board-number identity confirmed; extraction attempted via 4-channel VLM pipeline (ruler-zone reads, lattice overlay validation, die-number disc montage, terrain montage) but channels did not converge to the contractual 37-cell/color-distribution invariants (row-structure reads summed to 39; color counts Y7 B6 R3 G5 P8 L10 vs required Y6 B6 R4 G3 P6 L12). Per contract, no data written. Sources: u21_12 single 1500x1500 render + d7_3; badge digit 10 confirmed"
+    "name": "Big City",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "red",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "red",
+      "n": 4
+     }
+    ],
+    "confidence": "high"
    }
   ]
  }

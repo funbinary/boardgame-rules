@@ -1,6 +1,7 @@
 // 勃艮第引擎数据装载:读取 data/*.json 勘定数据;勘定未完成处提供兜底(带 TODO 标记)。
 // 引擎绝不硬编码版面 —— 全部来自此处,便于数据替换后无需改代码。
 import centralJson from './data/central.json';
+import boardsJson from './data/boards.json';
 import monasteriesJson from './data/monasteries.json';
 import tilesJson from './data/tiles.json';
 import type { CentralBoardDef, DuchyBoard, TileColor } from './types';
@@ -52,11 +53,13 @@ export function loadCentral(): CentralData {
 
 export function loadBoards(): BoardsData {
   if (cached.boards) return cached.boards;
-  cached.boards = { boards: [fallbackBoard()] };
+  const raw = (boardsJson as unknown as { data: BoardsData }).data;
+  const usable = raw.boards.filter((b) => b.cells.length > 0);
+  cached.boards = usable.length ? { boards: usable } : { boards: [fallbackBoard()] };
   return cached.boards;
 }
 
-/** 兜底公国版图:37 格手工摆一张可玩布局(勘定数据 boards.json 目前全部占位,版图 1-10 逐格勘定未完成) */
+/** 兜底公国版图:37 格手工摆一张可玩布局(仅当 boards.json 全占位时使用;勘定数据已落盘,保留供测试) */
 export function fallbackBoard(): DuchyBoard {
   const rows: [TileColor, number][][] = [
     [['gray', 1], ['yellow', 2], ['green', 3], ['brown', 4]],
@@ -89,7 +92,3 @@ export function loadMonasteries(modules: string[] = []): MonasteryItem[] {
   if (!modules.includes('exp2')) return all.filter((m) => m.n <= 26);
   return all;
 }
-
-// ---------- 兜底数据(勘定 JSON 落盘前的占位,保证引擎可开发可测) ----------
-
-/** 兜底公国版图:37 格手工摆一张可玩布局(测试用;勘定数据到位后弃用) */
