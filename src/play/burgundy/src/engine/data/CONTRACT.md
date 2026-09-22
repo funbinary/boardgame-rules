@@ -54,3 +54,23 @@
 
 ## buildings.json
 8 种建筑效果表(文案取自帮助表速览),字段 `{type, text}`。
+
+## automa.json(P1 新增;当前为占位数据)
+```jsonc
+{ "_meta": {...}, "data": {
+  "countyCards": [ { "id":1, "cells":[{"color":"blue"},{"color":"blue","sell":true}...],
+                     "scores":{"easy":4,"normal":5,"hard":6} } ... ],   // 基础 9 张(1-9)
+  "vineyardCountyCards": [ ... ],                                      // 葡萄园 8 张(10-17,含 twin 格)
+  "twinScores": [1,3,6,...,91],          // 双生片数量→分(1..13+),规则书 p28 表格,已确证
+  "shieldScores": [0,8,15,25,40],        // 盾徽 1/2/3/4+ 张,规则书 p27,已确证
+  "reserveTypeOrder": ["brown","yellow","blue","green","gray","red"]   // 储备区类型序(占位)
+} }
+```
+- 卡面格字段:`sell`(出售货物符号)/`twin`(双生六角片符号)/`castle`(城堡格);数组顺序=读序(自上而下逐行自左而右)。
+- **待勘定**:逐卡格色布局、出售货物符号位置、各难度填充得分、储备区类型序。硬约束(规则书文字):牌库=1-9 或 1+10-17;至少一张含城堡格;填充得分三档印于卡顶。
+- 计分表(twinScores/shieldScores)来源为规则书正文表格,confidence=high。
+
+## boards.json 35/36 号(P1 新增,占位)
+- 自动机公国版图 35(无标记)/36(修正标记格)。当前复用已勘定几何,颜色配比 brown10/yellow6/blue7/green5/gray5/red4 为占位。
+- 36 号 `mark` 字段:`A`(黑面预填格,须恰 5:建筑2+牲畜1+船1+修道院1)/`B`(明置预填格,恰 3:建筑1+银矿1+城堡1)/`D`(额外回合标记,数量待勘)。
+- **待勘定**:35/36 逐格真实布局与骰点。

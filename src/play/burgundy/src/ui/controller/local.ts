@@ -1,7 +1,6 @@
 // 本地控制器:热座对局的交互状态机(选中骰子/板块 → 匹配合法走子 → 应用)。
 // 联机控制器(M5)复用同一套匹配逻辑,只把 applyMove 换成发招+本地预测。
 import { autopilotPick } from '../../ai/autopilot';
-import { automaTurn } from '../../engine/modules/automa';
 import { applyMove, legalMoves, type MoveError } from '../../engine/moves';
 import { createGame } from '../../engine/setup';
 import type { GameState, Move } from '../../engine/state';
@@ -12,6 +11,8 @@ export interface LocalGameOpts {
   playerCount: number;
   names?: string[];
   modules?: string[];
+  /** 自动机配置(难度/修正);含自动机模块时生效 */
+  automa?: { difficulty: 'easy' | 'normal' | 'hard'; modifiers: string[] };
 }
 
 export class LocalGame {
@@ -27,6 +28,7 @@ export class LocalGame {
       playerCount: opts.playerCount,
       names: opts.names,
       modules: opts.modules as GameState['modules'],
+      automa: opts.automa,
     });
     this.render();
     root.addEventListener('click', (e) => this.onClick(e));
@@ -47,16 +49,19 @@ export class LocalGame {
     if (this.history.length > 50) this.history.shift();
     this.state = applyMove(this.state, m);
     this.sel = { die: this.sel.die, storage: null };
-    this.render();
-    // 自动机回合
-    if (this.state.players.some((p) => p.isAutoma)) {
+    // 自动机回合:整回合打包为单走子,经引擎执行(可重放)
+    if (this.state.status === 'playing' || this.state.status === 'placingCastles') {
       const automaIdx = this.state.players.findIndex((p) => p.isAutoma);
-      const actor = this.state.pending.length ? this.state.pending[this.state.pending.length - 1].player : this.state.turn.player;
-      if (actor === automaIdx && this.state.status === 'playing') {
-        automaTurn(this.state, automaIdx);
-        this.render();
+      if (automaIdx >= 0) {
+        const actor = this.state.pending.length
+          ? this.state.pending[this.state.pending.length - 1].player
+          : this.state.turn.player;
+        if (actor === automaIdx && this.state.status === 'playing') {
+          this.state = applyMove(this.state, { t: 'automa' });
+        }
       }
     }
+    this.render();
   }
 
   private onClick(e: Event) {

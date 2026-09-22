@@ -2312,6 +2312,474 @@
      }
     ],
     "confidence": "high"
+   },
+   {
+    "id": 35,
+    "name": "Automa 35(占位,待勘定)",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "n": 6,
+      "color": "brown"
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "n": 5,
+      "color": "yellow"
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "n": 5,
+      "color": "blue"
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "n": 2,
+      "color": "green"
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "n": 2,
+      "color": "gray"
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "n": 1,
+      "color": "red"
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "n": 6,
+      "color": "brown"
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "n": 5,
+      "color": "yellow"
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "n": 4,
+      "color": "blue"
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "n": 5,
+      "color": "green"
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "n": 4,
+      "color": "gray"
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "n": 3,
+      "color": "red"
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "n": 1,
+      "color": "brown"
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "n": 2,
+      "color": "yellow"
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "n": 3,
+      "color": "blue"
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "n": 6,
+      "color": "green"
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "n": 1,
+      "color": "gray"
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "n": 2,
+      "color": "red"
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "n": 6,
+      "color": "brown"
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "n": 5,
+      "color": "yellow"
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "n": 4,
+      "color": "blue"
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "n": 1,
+      "color": "green"
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "n": 2,
+      "color": "gray"
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "n": 5,
+      "color": "red"
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "n": 4,
+      "color": "brown"
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "n": 3,
+      "color": "yellow"
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "n": 1,
+      "color": "blue"
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "n": 2,
+      "color": "green"
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "n": 6,
+      "color": "gray"
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "n": 2,
+      "color": "brown"
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "n": 2,
+      "color": "yellow"
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "n": 3,
+      "color": "blue"
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "n": 6,
+      "color": "brown"
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "n": 3,
+      "color": "blue"
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "n": 4,
+      "color": "brown"
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "n": 1,
+      "color": "brown"
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "n": 3,
+      "color": "brown"
+     }
+    ]
+   },
+   {
+    "id": 36,
+    "name": "Automa 36(占位,A/B/D 修正标记)",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "n": 6,
+      "color": "brown",
+      "mark": "A"
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "n": 5,
+      "color": "yellow",
+      "mark": "A"
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "n": 5,
+      "color": "blue",
+      "mark": "A"
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "n": 2,
+      "color": "green",
+      "mark": "A"
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "n": 2,
+      "color": "gray",
+      "mark": "B"
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "n": 1,
+      "color": "red",
+      "mark": "B"
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "n": 6,
+      "color": "brown",
+      "mark": "A"
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "n": 5,
+      "color": "yellow",
+      "mark": "D"
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "n": 4,
+      "color": "blue",
+      "mark": "D"
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "n": 5,
+      "color": "green"
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "n": 4,
+      "color": "gray",
+      "mark": "D"
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "n": 3,
+      "color": "red"
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "n": 1,
+      "color": "brown",
+      "mark": "B"
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "n": 2,
+      "color": "yellow"
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "n": 3,
+      "color": "blue"
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "n": 6,
+      "color": "green"
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "n": 1,
+      "color": "gray"
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "n": 2,
+      "color": "red"
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "n": 6,
+      "color": "brown",
+      "mark": "D"
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "n": 5,
+      "color": "yellow"
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "n": 4,
+      "color": "blue"
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "n": 1,
+      "color": "green"
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "n": 2,
+      "color": "gray"
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "n": 5,
+      "color": "red"
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "n": 4,
+      "color": "brown"
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "n": 3,
+      "color": "yellow"
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "n": 1,
+      "color": "blue"
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "n": 2,
+      "color": "green"
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "n": 6,
+      "color": "gray"
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "n": 2,
+      "color": "brown"
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "n": 2,
+      "color": "yellow"
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "n": 3,
+      "color": "blue"
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "n": 6,
+      "color": "brown"
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "n": 3,
+      "color": "blue"
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "n": 4,
+      "color": "brown"
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "n": 1,
+      "color": "brown"
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "n": 3,
+      "color": "brown"
+     }
+    ]
    }
   ]
  }

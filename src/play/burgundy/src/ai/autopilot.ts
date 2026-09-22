@@ -20,6 +20,7 @@ export function autopilotPick(g: GameState): Move | null {
 
 function scoreMove(g: GameState, m: Move): number {
   switch (m.t) {
+    case 'automa': return 120;                    // 自动机整回合:唯一选择
     case 'placeCastle': return 100;
     case 'answerShipGoods': return g.depots[m.depot - 1].goods ? 60 : 5;
     case 'answerTake': return 55;

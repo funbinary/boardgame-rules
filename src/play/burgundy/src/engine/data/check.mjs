@@ -74,6 +74,49 @@ if (boards?.data?.boards) {
   for (const id of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
     if (!seen.has(id)) warns.push(`版图 ${id} 缺失(勘定未完成)`);
   }
+  // 自动机版图 35/36(占位):37 格 + 36 号修正标记计数(规则书 p26 硬约束)
+  const b35 = boards.data.boards.find((b) => b.id === 35);
+  const b36 = boards.data.boards.find((b) => b.id === 36);
+  if (!b35 || !b36) errors.push('boards.json 缺自动机版图 35/36');
+  if (b36) {
+    const marks = {};
+    for (const c of b36.cells ?? []) if (c.mark) marks[c.mark] = (marks[c.mark] ?? 0) + 1;
+    if ((marks.A ?? 0) !== 5) errors.push(`版图 36 A 标记 ${(marks.A ?? 0)} ≠ 5(建筑2+牲畜1+船1+修道院1)`);
+    if ((marks.B ?? 0) !== 3) errors.push(`版图 36 B 标记 ${(marks.B ?? 0)} ≠ 3(建筑1+银矿1+城堡1)`);
+    if (!(marks.D ?? 0)) warns.push('版图 36 无 D(额外回合)标记');
+  }
+}
+
+// ---- automa.json(占位数据:校验结构与规则书文字硬约束) ----
+const automa = read('automa.json');
+if (automa?.data) {
+  const a = automa.data;
+  const COLORS = ['yellow', 'blue', 'red', 'gray', 'green', 'brown'];
+  const checkCards = (cards, tag, need) => {
+    if (!Array.isArray(cards) || cards.length !== need) { errors.push(`automa.json ${tag} 数量 ${cards?.length} ≠ ${need}`); return; }
+    let castleCards = 0;
+    const ids = new Set();
+    for (const card of cards) {
+      if (ids.has(card.id)) errors.push(`automa.json ${tag} 重复卡 id=${card.id}`);
+      ids.add(card.id);
+      if (!card.cells?.length) errors.push(`automa.json ${tag} 卡 ${card.id} 无格`);
+      let hasCastle = false;
+      for (const cell of card.cells) {
+        if (!COLORS.includes(cell.color)) errors.push(`automa.json ${tag} 卡 ${card.id} 非法颜色 ${cell.color}`);
+        if (cell.castle) hasCastle = true;
+      }
+      if (hasCastle) castleCards++;
+      if (!card.scores || !(card.scores.easy > 0) || !(card.scores.normal > 0) || !(card.scores.hard > 0)) {
+        errors.push(`automa.json ${tag} 卡 ${card.id} 缺三档填充得分`);
+      }
+    }
+    if (castleCards < 1) errors.push(`automa.json ${tag} 无含城堡格的卡(设置 C 步不可行)`);
+  };
+  checkCards(a.countyCards, '基础郡县卡', 9);
+  checkCards(a.vineyardCountyCards, '葡萄园郡县卡', 8);
+  if (a.twinScores?.length !== 13) errors.push('automa.json 双生片计分表长度 ≠ 13(1..13+)');
+  if (a.shieldScores?.length !== 5) errors.push('automa.json 盾徽计分表长度 ≠ 5(0..4+)');
+  if (!Array.isArray(a.reserveTypeOrder) || a.reserveTypeOrder.length !== 6) errors.push('automa.json 储备区类型序 ≠ 6');
 }
 
 // ---- tiles.json ----

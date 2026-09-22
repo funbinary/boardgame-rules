@@ -1,9 +1,10 @@
 // 走子:合法动作枚举与应用。纯函数风格:applyMove 返回新状态(深克隆后改)。
 // 任何随机性禁止出现(骰子/布袋都发生在 flow 的固定时机,由 GameState.rng 派生)。
 import { loadBoards } from './data';
-import { settle } from './flow';
+import { settle, advanceTrack } from './flow';
 import { regionsOf } from './setup';
 import { callHook } from './modules';
+import { executeAutomaTurn } from './modules/automa';
 import { addVP, livestockScore, PHASE_BONUS, rewardVP, SIZE_VP } from './scoring';
 import type { GameState, Move, PlayerState, Tile } from './state';
 import type { TileColor } from './types';
@@ -176,6 +177,16 @@ export function applyMove(prev: GameState, move: Move): GameState {
     return g;
   }
 
+  // ---- 自动机整回合(官方郡县卡流程) ----
+  if (move.t === 'automa') {
+    requireOwnTurn(g, actor);
+    if (!p.isAutoma) throw new MoveError('只有自动机可执行该走子');
+    if (g.status !== 'playing') throw new MoveError('对局未在进行中');
+    executeAutomaTurn(g, actor);
+    settle(g);
+    return g;
+  }
+
   // ---- 常规行动 ----
   if (isAction(move.t)) {
     const r = applyAction(g, actor, move);
@@ -288,8 +299,12 @@ function resolvePlacement(g: GameState, actor: number, tile: Tile, r: number, c:
       addVP(g, actor, vp, `${colorName(tile.color)}色奖励板块`);
     }
   }
-  // 板块效果
-  switch (tile.color) {
+  // 板块效果(白色城堡:白骰点数奖励行动;其余按颜色)
+  if (tile.whitecastle) {
+    g.turn.bonusDice.push(0);
+    pushPending(g, { kind: 'bonusAction', player: actor, from: 'whitecastle' });
+    g.log.push({ player: actor, text: '白色城堡:获得白骰点数的奖励行动' });
+  } else switch (tile.color) {
     case 'blue':   // 船:拿货(待决)+顺位推进(应答后)
       pushPending(g, { kind: 'shipGoods', player: actor });
       break;
@@ -395,22 +410,8 @@ function takeGoods(g: GameState, actor: number, depotN: number) {
   }
 }
 
-/** 顺位轨推进 1 格(同格压顶;27号修道院持有者永远在顶部) */
-export function advanceTrack(g: GameState, player: number) {
-  for (let s = g.track.length - 1; s >= 0; s--) {
-    const i = g.track[s].indexOf(player);
-    if (i >= 0) {
-      g.track[s].splice(i, 1);
-      if (s + 1 >= g.track.length) g.track.push([]);
-      const target = g.track[s + 1];
-      const mon27idx = target.findIndex((q) => q !== player && Object.values(g.players[q].placed).some((t) => t.monastery === 27));
-      if (mon27idx >= 0) target.splice(mon27idx, 0, player);   // 插到 27 号持有者下方
-      else target.push(player);
-      g.log.push({ player, text: '顺位轨推进' });
-      return;
-    }
-  }
-}
+/** 顺位轨推进(实现移至 flow.ts,此处 re-export 兼容) */
+export { advanceTrack } from './flow';
 
 function adjacencyOk(p: PlayerState, b: { cells: { r: number; c: number }[] }, r: number, c: number): boolean {
   const even = r % 2 === 0;
@@ -451,6 +452,12 @@ export function legalMoves(g: GameState): Move[] {
   const actor = actorOf(g);
   const p = g.players[actor];
   if (g.status === 'ended') return out;
+
+  // 自动机:整回合打包为单走子
+  if (p.isAutoma) {
+    if (g.status === 'playing' && actor === g.turn.player) out.push({ t: 'automa' });
+    return out;
+  }
 
   // 随时类
   if (g.status === 'playing' && actor === g.turn.player) {
@@ -522,7 +529,20 @@ export function legalMoves(g: GameState): Move[] {
           }
           return out;
         }
-        // 白堡等:按白骰点数(M2b)
+        // 白色城堡:用白骰点数执行一个行动(拿取/放置/出售/工人)
+        if (top.from === 'whitecastle') {
+          const v = g.whiteDie;
+          if (storageFree(p)) {
+            for (const n of depotNumsFor(g, p, v)) {
+              const dep = g.depots[n - 1];
+              if (!dep) continue;
+              dep.cells.forEach((t, ci) => { if (t) out.push({ t: 'take', die: 'bonus', depot: n, cell: ci, dieValue: v }); });
+            }
+          }
+          for (const m of placeMoves(g, actor, 'bonus', v)) out.push(m);
+          if (p.goods[v]?.length) out.push({ t: 'sell', die: 'bonus', dieValue: v });
+          out.push({ t: 'takeWorkers', die: 'bonus', dieValue: v });
+        }
         return out;
       }
       default: return out;

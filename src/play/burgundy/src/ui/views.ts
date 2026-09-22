@@ -2,7 +2,7 @@
 import { loadBoards } from '../engine/data';
 import { actorOf, legalMoves } from '../engine/moves';
 import type { GameState, Move } from '../engine/state';
-import { COLOR_ZH } from './svg';
+import { COLOR_HEX, COLOR_ZH } from './svg';
 import { boardCellSvg, dieSvg, goodsSvg, hexPath, hexX, hexY, playerBadge, tileSvg, escapeHtml } from './svg';
 
 export interface UiSelection {
@@ -103,6 +103,7 @@ function renderPanel(g: GameState, sel: UiSelection, moves: Move[]): string {
   // 动作按钮
   const canWorkers = sel.die != null && moves.some((m) => m.t === 'takeWorkers' && m.die === sel.die);
   const players = g.players.map((pl) => `<div class="prow ${pl.idx === actorOf(g) ? 'now' : ''}">${playerBadge(g, pl.idx)}</div>`).join('');
+  const automaPanel = renderAutomaPanel(g);
   const log = g.log.slice(-14).reverse().map((l) => `<div class="logline">${l.player != null ? `<b>${escapeHtml(g.players[l.player].name)}</b> ` : ''}${escapeHtml(l.text)}</div>`).join('');
   return `<aside class="panel">
     <div class="row dice-row"><svg viewBox="-40 -20 240 40" width="240">${dice}${modBtns}</svg>${bonus}</div>
@@ -112,9 +113,49 @@ function renderPanel(g: GameState, sel: UiSelection, moves: Move[]): string {
     </div>
     <div class="row"><label>储存格</label><svg viewBox="0 0 ${3 * 52 + 12} 56" width="${3 * 52 + 12}">${storage}</svg></div>
     <div class="row"><label>货物(点选=出售)</label><svg viewBox="0 0 200 26" width="200">${goods}</svg></div>
+    ${automaPanel}
     <div class="row players">${players}</div>
     <div class="log">${log}</div>
   </aside>`;
+}
+
+/** 自动机面板:郡县卡/储备区/货物/银币/公国覆盖 */
+function renderAutomaPanel(g: GameState): string {
+  const a = g.players.find((p) => p.isAutoma);
+  if (!a?.automa) return '';
+  const st = a.automa;
+  const cardSvg = (card: (typeof st.cards)[number], slot: number): string => {
+    if (!card) return `<div class="acard empty">槽位空<br><small>牌库 ${st.deck.length}</small></div>`;
+    const cells = card.cells.map((c) => {
+      const x = (ci: number) => (ci % 2) * 44 + 26;
+      const y = (ci: number) => Math.floor(ci / 2) * 44 + 26;
+      const ci = card.cells.indexOf(c);
+      const inner = c.filled ? tileSvg(c.filled, 34) : `<polygon points="0,-20 17.3,-10 17.3,10 0,20 -17.3,10 -17.3,-10" fill="${COLOR_HEX[c.color]}" fill-opacity="0.3" stroke="#7c6a58" stroke-dasharray="3 2"/>`;
+      const badges = `${c.sell ? '<text x="14" y="-10" font-size="12">🪙</text>' : ''}${c.twin ? '<text x="-14" y="-10" font-size="12">🍇</text>' : ''}${c.castle ? '<text x="0" y="20" font-size="11">🏰</text>' : ''}`;
+      return `<g transform="translate(${x(ci)},${y(ci)})">${inner}${badges}</g>`;
+    }).join('');
+    const score = card.scores[st.difficulty];
+    return `<div class="acard"><svg viewBox="0 0 96 96" width="96">${cells}</svg><small>#${card.id} · ${score}分 · ${card.cells.every((c) => c.filled) ? '✓满' : ''}</small></div>`;
+  };
+  const active = g.whiteDie <= 4 ? 0 : 1;
+  const reserve = st.reserve.map((t) => `<g transform="translate(${(st.reserve.indexOf(t)) * 30 + 22},24)">${t.black ? '<polygon points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11" fill="#3a3a3a" stroke="#111"/><text y="4" font-size="9" fill="#ddd" text-anchor="middle">百搭</text>' : tileSvg(t, 30)}</g>`).join('');
+  const goodsRow = [1, 2, 3, 4, 5, 6].filter((c) => (st.goods[c] ?? 0) > 0)
+    .map((c) => `<g transform="translate(${c * 30},16)">${goodsSvg(c, st.goods[c])}</g>`).join('');
+  // 公国覆盖(含溢出)
+  const board = loadBoards().boards.find((b) => b.id === a.boardId);
+  const cover = board ? [...new Set(board.cells.map((c) => c.color))].map((color) => {
+    const cap = board.cells.filter((c) => c.color === color).length;
+    const occ = board.cells.filter((c) => c.color === color && a.placed[`${c.r}:${c.c}`]).length + st.overflow.filter((t) => t.color === color).length;
+    return `<span class="cov" title="${COLOR_ZH[color]}"><i style="background:${COLOR_HEX[color]};width:${Math.round((occ / cap) * 100)}%"></i></span>`;
+  }).join('') : '';
+  return `<details class="automa-panel" open>
+    <summary>🤖 自动机(难度 ${st.difficulty}${st.modifiers.length ? ` · 修正 ${st.modifiers.join('')}` : ''})</summary>
+    <div class="acards">${cardSvg(st.cards[0], 0)}${cardSvg(st.cards[1], 1)}<div class="aslot">${active === 0 ? '◀ 白骰' : '白骰 ▶'}</div></div>
+    <div class="arow">🪙 ${st.silver} · 牌库 ${st.deck.length} · 双生 ${st.twins.length}${st.shields.length ? ` · 盾徽 ${st.shields.length}` : ''}</div>
+    <div class="arow"><svg viewBox="0 0 ${Math.max(st.reserve.length * 30 + 30, 60)} 48" width="${Math.min(st.reserve.length * 30 + 30, 300)}">${reserve || ''}</svg>${st.reserve.length === 0 ? '<small>储备区空</small>' : ''}</div>
+    <div class="arow"><svg viewBox="0 0 200 32" width="200">${goodsRow}</svg></div>
+    <div class="arow covrow">${cover}</div>
+  </details>`;
 }
 
 function renderPending(g: GameState, moves: Move[]): string {
@@ -143,7 +184,9 @@ function renderPending(g: GameState, moves: Move[]): string {
       body = `<p>仓库:选择出售一种颜色的全部货物。</p><div>${moves.filter((m) => m.t === 'answerWarehouseSell').map((m) => `<button data-sellcolor="${(m as { color: number }).color}">${COLOR_ZH.black ? '' : ''}颜色 ${(m as { color: number }).color}</button>`).join('')}</div>`;
       break;
     case 'bonusAction':
-      body = `<p>${top.from === 'cityhall' ? '市政厅:从储存格选择板块放入公国(任意点数)。' : '奖励行动。'}</p>`;
+      body = `<p>${top.from === 'cityhall' ? '市政厅:从储存格选择板块放入公国(任意点数)。'
+        : top.from === 'whitecastle' ? `白色城堡:用白骰点数(${g.whiteDie})执行一个行动——点补给区拿取/公国格放置/货物出售/拿工人。`
+        : '奖励行动。'}</p>`;
       break;
     default:
       body = `<p>${top.kind}…</p>`;

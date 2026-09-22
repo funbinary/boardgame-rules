@@ -3,9 +3,14 @@
 import type { GameState, Tile } from './state';
 import type { ModuleId } from './types';
 
+/** 建局附加配置(自动机难度/修正等) */
+export interface ModuleSetupOpts {
+  automa?: { difficulty: 'easy' | 'normal' | 'hard'; modifiers: string[] };
+}
+
 export interface ModuleHook {
   /** 建局时修改(版图/板块供应) */
-  onSetup?: (g: GameState) => void;
+  onSetup?: (g: GameState, opts?: ModuleSetupOpts) => void;
   /** 放置板块后触发(返回额外 VP) */
   onPlace?: (g: GameState, player: number, tile: Tile, r: number, c: number) => number;
   /** 阶段开始时触发 */
@@ -41,12 +46,13 @@ export function callHook(
   return vp;
 }
 
-/** 调用指定模块的钩子(无返回值场景) */
+/** 调用指定模块的钩子(无返回值场景);extra 透传附加参数(如建局配置) */
 export function callModule(
   id: ModuleId, g: GameState, name: keyof ModuleHook,
+  ...extra: unknown[]
 ): void {
   const fn = registry.get(id)?.[name];
-  if (fn) (fn as (...a: unknown[]) => unknown)(g);
+  if (fn) (fn as (...a: unknown[]) => unknown)(g, ...extra);
 }
 
 /** 检查模块兼容性 */

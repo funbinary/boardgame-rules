@@ -2,6 +2,7 @@
 import type { GameState, PlayerState, Tile } from './state';
 import { regionsOf } from './setup';
 import { loadBoards } from './data';
+import { automaEndgameBreakdown } from './modules/automa';
 
 /** 区域规模 → 分(1-8 基础;9/10 由旅店/盾徽17造成) */
 export const SIZE_VP = [0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55];
@@ -37,40 +38,45 @@ export function endgameScore(g: GameState) {
   const perPlayer: { idx: number; breakdown: { label: string; vp: number }[] }[] = [];
   for (const p of g.players) {
     const bd: { label: string; vp: number }[] = [];
-    const goodsN = Object.values(p.goods).reduce((s, arr) => s + arr.length, 0);
-    bd.push({ label: '未出售货物×1', vp: goodsN });
-    bd.push({ label: '银币×1', vp: p.silver });
-    bd.push({ label: '工人÷2', vp: Math.floor(p.workers / 2) });
-    // 修道院 15-26(计分类)
-    const mons = Object.values(p.placed).filter((t): t is Tile & { monastery: number } => t.color === 'yellow' && t.monastery != null);
-    for (const m of mons) {
-      let vp = 0;
-      let label = `修道院${m.monastery}`;
-      switch (m.monastery) {
-        case 15: {
-          const kinds = new Set(p.soldGoods.map((x) => x.color));
-          vp = kinds.size * 2; label += ':每已售种类×2'; break;
+    if (p.automa) {
+      // 自动机按官方终局口径单独计分(规则书 p25)
+      bd.push(...automaEndgameBreakdown(g, p.idx));
+    } else {
+      const goodsN = Object.values(p.goods).reduce((s, arr) => s + arr.length, 0);
+      bd.push({ label: '未出售货物×1', vp: goodsN });
+      bd.push({ label: '银币×1', vp: p.silver });
+      bd.push({ label: '工人÷2', vp: Math.floor(p.workers / 2) });
+      // 修道院 15-26(计分类)
+      const mons = Object.values(p.placed).filter((t): t is Tile & { monastery: number } => t.color === 'yellow' && t.monastery != null);
+      for (const m of mons) {
+        let vp = 0;
+        let label = `修道院${m.monastery}`;
+        switch (m.monastery) {
+          case 15: {
+            const kinds = new Set(p.soldGoods.map((x) => x.color));
+            vp = kinds.size * 2; label += ':每已售种类×2'; break;
+          }
+          case 16: case 17: case 18: case 19: case 20: case 21: case 22: case 23: {
+            const type = monasteryBuilding(m.monastery);
+            vp = Object.values(p.placed).filter((t) => t.building === type || (t.building === 'crane' && craneCountsAs(p, type))).length * 4;
+            label += `:每${type}×4`; break;
+          }
+          case 24: {
+            const kinds = new Set(Object.values(p.placed).filter((t) => t.livestock || t.goose).map((t) => t.livestock ?? 'goose'));
+            vp = kinds.size * 4; label += ':每牲畜种类×4'; break;
+          }
+          case 25: vp = p.soldGoods.length; label += ':每已售货物×1'; break;
+          case 26: vp = p.bonusTiles.length * 3; label += ':每奖励板块×3'; break;
+          default: continue;
         }
-        case 16: case 17: case 18: case 19: case 20: case 21: case 22: case 23: {
-          const type = monasteryBuilding(m.monastery);
-          vp = Object.values(p.placed).filter((t) => t.building === type || (t.building === 'crane' && craneCountsAs(p, type))).length * 4;
-          label += `:每${type}×4`; break;
-        }
-        case 24: {
-          const kinds = new Set(Object.values(p.placed).filter((t) => t.livestock || t.goose).map((t) => t.livestock ?? 'goose'));
-          vp = kinds.size * 4; label += ':每牲畜种类×4'; break;
-        }
-        case 25: vp = p.soldGoods.length; label += ':每已售货物×1'; break;
-        case 26: vp = p.bonusTiles.length * 3; label += ':每奖励板块×3'; break;
-        default: continue;
+        bd.push({ label, vp });
       }
-      bd.push({ label, vp });
     }
     perPlayer.push({ idx: p.idx, breakdown: bd });
     addVP(g, p.idx, bd.reduce((s, x) => s + x.vp, 0), '终局计分');
   }
   g.final = { perPlayer };
-  // 决胜:分高 → 空格少 → 顺位轨落后
+  // 决胜:分高 → 空格少 → 顺位轨落后;与自动机平手时自动机胜(规则书 p25)
   const emptyOf = (p: PlayerState) => {
     const b = loadBoards().boards.find((x) => x.id === p.boardId);
     return b ? b.cells.length - Object.keys(p.placed).length : 99;
@@ -82,8 +88,11 @@ export function endgameScore(g: GameState) {
     }
     return 99;
   };
-  const ranked = [...g.players].sort((a, b) =>
-    b.vp - a.vp || emptyOf(a) - emptyOf(b) || trackPosOf(a) - trackPosOf(b));
+  const ranked = [...g.players].sort((a, b) => {
+    if (a.vp !== b.vp) return b.vp - a.vp;
+    if (a.isAutoma !== b.isAutoma) return a.isAutoma ? -1 : 1;
+    return emptyOf(a) - emptyOf(b) || trackPosOf(a) - trackPosOf(b);
+  });
   g.log.push({ text: `游戏结束,胜者:${ranked[0].name}(${ranked[0].vp}分)` });
   g.status = 'ended';
 }

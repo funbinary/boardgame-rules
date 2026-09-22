@@ -66,17 +66,8 @@ export interface PlayerState {
   tradeRoutePlaced?: number;
   /** 葡萄园扩展:葡萄园版图状态 */
   vineyard?: { tiles: Tile[]; regions: { type: string; size: number }[]; bonusTiles: { type: string }[] };
-  /** 自动机状态 */
-  automa?: {
-    deck: string[];                        // 郡县卡内容字符串数组(简化)
-    hand: string[];
-    countyCards: (string | null)[];        // 左右槽
-    reserve: Tile[];
-    silver: number;
-    goods: number[];
-    bonusTiles: { color: string; value: number }[];
-    scoreModifier: 'easy' | 'normal' | 'hard';
-  };
+  /** 自动机状态(见底部 AutomaState) */
+  automa?: AutomaState;
 }
 
 // ---------- 中央区域 ----------
@@ -110,7 +101,7 @@ export type Move =
   | { t: 'take'; die: 0 | 1 | 'bonus'; depot: number; cell: number; dieValue?: number }
   | { t: 'place'; die: 0 | 1 | 'bonus'; storage: number; r: number; c: number; dieValue?: number }
   | { t: 'sell'; die: 0 | 1 | 'bonus'; dieValue?: number }
-  | { t: 'takeWorkers'; die: 0 | 1 | 'bonus' }
+  | { t: 'takeWorkers'; die: 0 | 1 | 'bonus'; dieValue?: number }
   // 骰子调整(非行动):花 1 工人 ±1(1↔6 环绕;修道院8 每 1 工人 ±2)
   | { t: 'modDie'; die: 0 | 1; delta: 1 | -1 | 2 | -2 }
   // 黑区购买(每回合一次,2 银币)
@@ -127,7 +118,9 @@ export type Move =
   | { t: 'mon28BuyWorkers' }                                      // 28号:1 银币换 2 工人
   // 扩展
   | { t: 'takeTwin'; die: 0 | 1 | 'bonus'; slot: number }
-  | { t: 'placeTwin'; die: 0 | 1 | 'bonus'; storage: number; r: number; c: number; rot: 0 | 1 };
+  | { t: 'placeTwin'; die: 0 | 1 | 'bonus'; storage: number; r: number; c: number; rot: 0 | 1 }
+  // 自动机整回合(仅 isAutoma 玩家;引擎内部完成掷骰/检索/放置/奖励/买黑区全流程)
+  | { t: 'automa' };
 
 // ---------- 对局状态 ----------
 
@@ -177,12 +170,38 @@ export interface GameState {
   /** 版图区域缓存:每格所属区域 id(同色连通) —— 建局时算好 */
   regionOf: Record<string, number>;
   regions: { id: number; color: TileColor; cells: string[] }[];
-  /** 自动机扩展状态(M2b) */
-  automa?: { deck: number[]; hand: number[] };
-  /** 葡萄园扩展状态(M2b) */
+  /** 自动机扩展状态(官方郡县卡流程) */
+  automa?: AutomaState;
+  /** 葡萄园扩展状态(M2b):双生片供应与商店槽位 */
   vineyard?: { twinsSupply: Tile[]; shopSlots: (Tile | null)[] };
   /** 终局计分明细 */
   final?: { perPlayer: { idx: number; breakdown: { label: string; vp: number }[] }[] };
+}
+
+/** 郡县卡(数据来自 automa.json;filled=已放置板块) */
+export interface AutomaCard {
+  id: number;
+  cells: { color: TileColor; sell?: boolean; twin?: boolean; castle?: boolean; filled?: Tile }[];
+  scores: { easy: number; normal: number; hard: number };
+}
+
+export interface AutomaState {
+  difficulty: 'easy' | 'normal' | 'hard';
+  /** 难度修正 A/B/C/D */
+  modifiers: string[];
+  deck: AutomaCard[];
+  cards: (AutomaCard | null)[];      // [左槽(骰1-4), 右槽(骰5-6)]
+  reserve: Tile[];                   // 储备区;末位=同类顶部;black 面=百搭六角片
+  silver: number;
+  goods: number[];                   // [0]=弃用,[1..6]=各色货物数(无限堆)
+  /** 公国溢出堆叠(同色格满后叠放,计入公国) */
+  overflow: Tile[];
+  /** 葡萄园:双生六角片(公国旁) */
+  twins: Tile[];
+  /** 盾徽扩展:已拿盾徽(不使用效果/不纳贡) */
+  shields: number[];
+  /** 出售货物行动次数(商路兼容:每次+1分) */
+  sellActions: number;
 }
 
 export interface LogEntry { player?: number; text: string }

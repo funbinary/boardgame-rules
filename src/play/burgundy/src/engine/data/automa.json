@@ -1,0 +1,40 @@
+{
+ "_meta": {
+  "sources": [
+   "_cob/rulebook.txt p22-23(自动机配件/设置):9 张郡县卡编号 1-9;葡萄园替换为 1 + 10-17;卡面含六角格/填充得分(入门/普通/困难)/卡号;至少一张含城堡格",
+   "_cob/rulebook.txt p25(郡县卡放置奖励:出售货物符号)/p27(双生六角片符号)"
+  ],
+  "verifiedBy": [],
+  "notes": [
+   "PLACEHOLDER:郡县卡逐张格色布局/出售货物符号位置/各难度填充得分,本地规则书仅有文字描述,无逐卡图样 —— 全部为占位数据,待 Gamefound/BGG 组件图勘定后替换。",
+   "硬约束(规则书文字):牌库=编号 1-9(基础)或 1+10-17(葡萄园);至少一张卡含城堡格(设置 C 步翻卡放入左槽);部分卡含出售货物符号;葡萄园卡部分格含双生六角片符号。",
+   "占位布局沿用旧引擎桩的 9 卡构成(6 纯色 + 3 混色),出售货物符号每卡 1 个,填充得分统一 4/5/6。"
+  ]
+ },
+ "data": {
+  "countyCards": [
+   { "id": 1, "cells": [ { "color": "blue" }, { "color": "blue" }, { "color": "blue", "sell": true }, { "color": "blue" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 2, "cells": [ { "color": "yellow" }, { "color": "yellow", "sell": true }, { "color": "yellow" }, { "color": "yellow" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 3, "cells": [ { "color": "green" }, { "color": "green" }, { "color": "green", "sell": true }, { "color": "green" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 4, "cells": [ { "color": "brown" }, { "color": "brown", "sell": true }, { "color": "brown" }, { "color": "brown" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 5, "cells": [ { "color": "gray" }, { "color": "gray" }, { "color": "gray", "sell": true }, { "color": "gray" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 6, "cells": [ { "color": "red", "castle": true }, { "color": "red", "sell": true }, { "color": "red" }, { "color": "red" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 7, "cells": [ { "color": "blue" }, { "color": "yellow", "sell": true }, { "color": "green" }, { "color": "brown" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 8, "cells": [ { "color": "gray" }, { "color": "red", "castle": true, "sell": true }, { "color": "blue" }, { "color": "yellow" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 9, "cells": [ { "color": "green" }, { "color": "brown", "sell": true }, { "color": "gray" }, { "color": "red", "castle": true } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } }
+  ],
+  "vineyardCountyCards": [
+   { "id": 10, "cells": [ { "color": "blue" }, { "color": "blue", "twin": true }, { "color": "blue", "sell": true }, { "color": "blue" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 11, "cells": [ { "color": "yellow" }, { "color": "yellow", "sell": true }, { "color": "yellow", "twin": true }, { "color": "yellow" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 12, "cells": [ { "color": "green", "twin": true }, { "color": "green" }, { "color": "green", "twin": true }, { "color": "green", "sell": true } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 13, "cells": [ { "color": "brown" }, { "color": "brown", "sell": true }, { "color": "brown" }, { "color": "brown", "twin": true } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 14, "cells": [ { "color": "gray", "twin": true }, { "color": "gray" }, { "color": "gray", "sell": true }, { "color": "gray" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 15, "cells": [ { "color": "red", "castle": true }, { "color": "red", "twin": true }, { "color": "red", "sell": true }, { "color": "red" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 16, "cells": [ { "color": "blue" }, { "color": "yellow", "twin": true }, { "color": "green", "sell": true }, { "color": "brown" } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } },
+   { "id": 17, "cells": [ { "color": "gray" }, { "color": "red", "castle": true }, { "color": "blue", "twin": true }, { "color": "yellow", "sell": true } ], "scores": { "easy": 4, "normal": 5, "hard": 6 } }
+  ],
+  "twinScores": [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91],
+  "shieldScores": [0, 8, 15, 25, 40],
+  "reserveTypeOrder": ["brown", "yellow", "blue", "green", "gray", "red"]
+ }
+}

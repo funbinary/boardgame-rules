@@ -112,3 +112,28 @@ button:hover:not(:disabled) { background: var(--burgundy-soft); }
 @media (max-width: 720px) {
   .game-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- 自动机面板 ---- */
+.automa-panel {
+  border: 1px solid #d8c9b4; border-radius: 10px; padding: 6px 10px; background: #fbf7ef;
+  font-size: 13px;
+}
+.automa-panel summary { cursor: pointer; font-weight: 600; color: #5c1019; }
+.automa-panel .acards { display: flex; gap: 8px; align-items: center; margin: 8px 0 4px; flex-wrap: wrap; }
+.automa-panel .acard {
+  border: 1px solid #cbb99f; border-radius: 8px; background: #fff; padding: 3px 5px; text-align: center;
+}
+.automa-panel .acard.empty { width: 96px; color: #a08c72; }
+.automa-panel .acard small { color: #7c6a58; }
+.automa-panel .aslot { color: #a0522d; font-weight: 600; }
+.automa-panel .arow { margin: 3px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.automa-panel .covrow { gap: 4px; }
+.automa-panel .cov {
+  flex: 1; min-width: 28px; height: 8px; border-radius: 4px; background: #eee3d2;
+  display: inline-block; overflow: hidden; position: relative;
+}
+.automa-panel .cov i { display: block; height: 100%; }
+
+.setup .modsel { border: 1px solid #d8c9b4; border-radius: 8px; padding: 8px 12px; display: flex; flex-direction: column; gap: 6px; }
+.setup .modsel legend { color: #5c1019; font-size: 13px; }
+.setup .modsel label { font-size: 13px; display: flex; gap: 6px; align-items: center; }

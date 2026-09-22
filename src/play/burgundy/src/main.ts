@@ -101,24 +101,33 @@ function setupSolo(modules: string[]) {
   app.innerHTML = `
   <div class="setup">
     <h1>单机(对战自动机)</h1>
-    <p class="modnote">自动机作为第 2 位玩家加入,按官方规则书郡县卡流程行动。难度:普通(无修正)。</p>
-    <label>自动机难度
+    <p class="modnote">自动机作为末位玩家加入,按官方规则书郡县卡流程行动(规则书第 22-28 页)。</p>
+    <label>难度等级(郡县卡填充得分:入门4/普通5/困难6)
       <select id="difficulty">
-        <option value="easy">入门(4 分/卡)</option>
-        <option value="normal" selected>普通(5 分/卡)</option>
-        <option value="hard">困难(6 分/卡)</option>
+        <option value="easy">入门</option>
+        <option value="normal" selected>普通</option>
+        <option value="hard">困难</option>
       </select>
     </label>
+    <fieldset class="modsel">
+      <legend>难度修正(入门0项 · 普通1项 · 困难≥2项;可自由搭配)</legend>
+      <label><input type="checkbox" value="A"> A · 36号版图预置黑片(少5格,更难拿奖励板块)</label>
+      <label><input type="checkbox" value="B"> B · 36号版图预置明片含银矿(少3格+每阶段产银)</label>
+      <label><input type="checkbox" value="C"> C · 自动机第一轮先手</label>
+      <label><input type="checkbox" value="D"> D · 36号版图「额外回合」格(迁移触发额外行动)</label>
+    </fieldset>
     <div class="btns"><button id="go">开始对局</button> <button id="back">返回</button></div>
   </div>`;
   app.querySelector('#back')!.addEventListener('click', home);
   app.querySelector('#go')!.addEventListener('click', () => {
-    const difficulty = (app.querySelector('#difficulty') as HTMLSelectElement).value;
+    const difficulty = (app.querySelector('#difficulty') as HTMLSelectElement).value as 'easy' | 'normal' | 'hard';
+    const modifiers = [...app.querySelectorAll('.modsel input:checked')].map((i) => (i as HTMLInputElement).value);
     const game = new LocalGame(app, {
       playerCount: 2,
       seed: Math.floor(Math.random() * 2 ** 31),
       names: ['你', '自动机'],
       modules,
+      automa: { difficulty, modifiers },
     });
     window.addEventListener('keydown', (ev) => {
       if (ev.key === 'h') game.hint();

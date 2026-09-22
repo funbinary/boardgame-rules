@@ -1,7 +1,7 @@
 // 建局:装配初始对局状态。随机性全部走 GameState.rng(可重放、联机一致)。
 import { loadBoards, loadCentral, loadMonasteries, loadTiles } from './data';
 import { randInt, rngInit, shuffle, type RngState } from './rng';
-import { callModule, registerModule } from './modules';
+import { callModule, registerModule, type ModuleSetupOpts } from './modules';
 import { innModule } from './modules/inn';
 import { whitecastleModule } from './modules/whitecastle';
 import { traderouteModule } from './modules/traderoute';
@@ -20,7 +20,7 @@ registerModule('shields', shieldsModule);
 registerModule('vineyard', vineyardModule);
 registerModule('automa', automaModule);
 
-export interface SetupOptions {
+export interface SetupOptions extends ModuleSetupOpts {
   seed: number;
   playerCount: number;                 // 2-4 真实玩家(自动机另算)
   modules?: ModuleId[];
@@ -36,25 +36,30 @@ export function drawTile(color: TileColor, black: boolean, rng: RngState, module
   const tiles = loadTiles();
   const t: Tile = { id: nextTileId(), color, black };
   let r = rng;
+  const wcW = modules.includes('exp5') ? (color === 'brown' ? (black ? 3 : 4) : color === 'yellow' && !black ? 2 : 0) : 0;
   if (color === 'yellow') {
     const mons = loadMonasteries();
     const maxN = modules.includes('exp2') ? 29 : 26;
     const pool = mons.map((m) => m.n).filter((n) => n <= maxN);
-    const [k, r1] = randInt(r, pool.length);
+    const [k, r1] = randInt(r, pool.length + wcW);
     r = r1;
-    t.monastery = pool[k];
+    if (k < pool.length) t.monastery = pool[k];
+    else t.whitecastle = true;                    // 第五扩展:白堡洗入黄色供应(占位配比)
   } else if (color === 'brown') {
     // 吊车(黑面,exp2);白色城堡(exp5)按其颜色构成并入
     const entries: { type: Tile['building']; w: number }[] =
       tiles.buildings.map((b) => ({ type: b.type as Tile['building'], w: black ? b.blackCount : b.count }));
     if (black && modules.includes('exp2')) entries.push({ type: 'crane', w: 1 });
-    const total = entries.reduce((s, e) => s + e.w, 0);
+    const total = entries.reduce((s, e) => s + e.w, 0) + wcW;
     const [k, r1] = randInt(r, total);
     r = r1;
-    let acc = 0;
-    for (const e of entries) {
-      acc += e.w;
-      if (k < acc) { t.building = e.type; break; }
+    if (k >= total - wcW) t.whitecastle = true;   // 第五扩展:白堡洗入浅褐/黑色供应(占位配比 4彩/3黑)
+    else {
+      let acc = 0;
+      for (const e of entries) {
+        acc += e.w;
+        if (k < acc) { t.building = e.type; break; }
+      }
     }
   } else if (color === 'green') {
     const lv = tiles.livestock;
@@ -134,8 +139,9 @@ export function createGame(opts: SetupOptions): GameState {
     brown: tiles.buildings.reduce((s, b) => s + b.count, 0), black: 0,
   };
 
-  // ---- 起始玩家(掷骰决定)与工人分配 ----
-  const [startIdx, r1] = randInt(rng, playerCount);
+  // ---- 起始玩家(掷骰决定)与工人分配;自动机模块下末位玩家是自动机,不参与起始掷骰 ----
+  const startPool = modules.includes('automa') ? playerCount - 1 : playerCount;
+  const [startIdx, r1] = randInt(rng, Math.max(1, startPool));
   rng = r1;
   players.forEach((p, i) => { p.workers = ((i - startIdx + playerCount) % playerCount) + 1; });
   // 轨:末位玩家先放,起始玩家在最顶
@@ -173,13 +179,17 @@ export function createGame(opts: SetupOptions): GameState {
     regions: [],
   };
 
-  // 模块建局钩子
+  // 模块建局钩子(透传配置;自动机钩子会改末位玩家状态/顺位)
+  const moduleOpts: ModuleSetupOpts = { automa: opts.automa };
   for (const m of modules) {
-    callModule(m, g, 'onSetup');
+    callModule(m, g, 'onSetup', moduleOpts);
   }
 
-  // 初始城堡:每人待决(从起始玩家开始)
-  for (let k = playerCount - 1; k >= 0; k--) g.pending.push({ kind: 'initialCastle', player: (startIdx + k) % playerCount });
+  // 初始城堡:每人待决(从起始玩家开始;自动机不设初始城堡——城堡在郡县卡上)
+  for (let k = playerCount - 1; k >= 0; k--) {
+    const pi = (startIdx + k) % playerCount;
+    if (!players[pi].isAutoma) g.pending.push({ kind: 'initialCastle', player: pi });
+  }
 
   beginPhase(g);
   rollRound(g);
@@ -220,14 +230,15 @@ export function beginPhase(g: GameState) {
       return t;
     });
   }
-  // 黑区:按各色 black 构成随机
+  // 黑区:按各色 black 构成随机(exp5 白堡黑面占位 3 张并入褐桶)
+  const exp5 = g.modules.includes('exp5');
   const blackPool: { color: TileColor; w: number }[] = [
     { color: 'yellow', w: tiles.monasteries.black },
     { color: 'blue', w: tiles.ships.black },
     { color: 'red', w: tiles.castles.black },
     { color: 'gray', w: tiles.mines.black },
     { color: 'green', w: tiles.livestock.reduce((s, l) => s + (l.blackCount ?? 0), 0) },
-    { color: 'brown', w: tiles.buildings.reduce((s, b) => s + b.blackCount, 0) },
+    { color: 'brown', w: tiles.buildings.reduce((s, b) => s + b.blackCount, 0) + (exp5 ? 3 : 0) },
   ];
   const total = blackPool.reduce((s, e) => s + e.w, 0);
   const blackCount = face.blackDepotCells;

@@ -4,6 +4,7 @@ import centralJson from './data/central.json';
 import boardsJson from './data/boards.json';
 import monasteriesJson from './data/monasteries.json';
 import tilesJson from './data/tiles.json';
+import automaJson from './data/automa.json';
 import type { CentralBoardDef, DuchyBoard, TileColor } from './types';
 
 export interface CentralFace {
@@ -91,4 +92,26 @@ export function loadMonasteries(modules: string[] = []): MonasteryItem[] {
   const all = (monasteriesJson.data as unknown as MonasteryItem[]).slice();
   if (!modules.includes('exp2')) return all.filter((m) => m.n <= 26);
   return all;
+}
+
+// ---- 自动机数据(郡县卡/储备区类型序/双生片/盾徽计分表) ----
+
+export interface AutomaCardDef {
+  id: number;
+  cells: { color: TileColor; sell?: boolean; twin?: boolean; castle?: boolean }[];
+  scores: { easy: number; normal: number; hard: number };
+}
+
+export interface AutomaData {
+  countyCards: AutomaCardDef[];
+  vineyardCountyCards: AutomaCardDef[];
+  twinScores: number[];
+  shieldScores: number[];
+  reserveTypeOrder: TileColor[];
+}
+
+let cachedAutoma: AutomaData | undefined;
+export function loadAutoma(): AutomaData {
+  if (!cachedAutoma) cachedAutoma = (automaJson as unknown as { data: AutomaData }).data;
+  return cachedAutoma;
 }

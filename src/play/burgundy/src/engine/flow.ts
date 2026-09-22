@@ -73,18 +73,42 @@ function startTurn(g: GameState, player: number) {
   g.log.push({ player, text: `${p.name} 的回合` });
 }
 
-/** 阶段结束效果:银矿产银(修道院2:另+工人) */
+/** 阶段结束效果:银矿产银(修道院2:另+工人);自动机郡县卡上的银矿同样产银(储备区不计) */
 export function phaseEnd(g: GameState) {
   for (const p of g.players) {
-    const mines = Object.values(p.placed).filter((t) => t.color === 'gray').length;
+    let mines = Object.values(p.placed).filter((t) => t.color === 'gray').length;
+    if (p.automa) {
+      for (const card of p.automa.cards) {
+        if (!card) continue;
+        mines += card.cells.filter((c) => c.filled?.color === 'gray').length;
+      }
+    }
     if (mines > 0) {
       p.silver += mines;
-      const mon2 = Object.values(p.placed).some((t) => t.monastery === 2);
+      // 自动机忽略修道院效果(规则书 p23)
+      const mon2 = !p.isAutoma && Object.values(p.placed).some((t) => t.monastery === 2);
       if (mon2) p.workers += mines;
       g.log.push({ player: p.idx, text: `阶段结束:${mines}银矿产银(+${mines}银币${mon2 ? `,修道院2:+${mines}工人` : ''})` });
     }
   }
   void addVP;
+}
+
+/** 顺位轨推进 1 格(同格压顶;27号修道院持有者永远在顶部) */
+export function advanceTrack(g: GameState, player: number) {
+  for (let s = g.track.length - 1; s >= 0; s--) {
+    const i = g.track[s].indexOf(player);
+    if (i >= 0) {
+      g.track[s].splice(i, 1);
+      if (s + 1 >= g.track.length) g.track.push([]);
+      const target = g.track[s + 1];
+      const mon27idx = target.findIndex((q) => q !== player && Object.values(g.players[q].placed).some((t) => t.monastery === 27));
+      if (mon27idx >= 0) target.splice(mon27idx, 0, player);   // 插到 27 号持有者下方
+      else target.push(player);
+      g.log.push({ player, text: '顺位轨推进' });
+      return;
+    }
+  }
 }
 
 /** 奖励行动(自由点数)是否还有可放置目标:储存格有板块,且存在同色空格与其已放板块相邻 */
