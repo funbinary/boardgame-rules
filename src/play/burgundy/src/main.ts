@@ -1,18 +1,19 @@
 import './ui/theme.css';
 import { LocalGame } from './ui/controller/local';
 import { OnlineFlow } from './ui/controller/net';
+import { validateModules } from './engine/modules';
 
-interface ModuleDef { id: string; name: string; desc: string; minPlayers?: number; incompatible?: string[] }
+interface ModuleDef { id: string; name: string; desc: string; minPlayers?: number; maxPlayers?: number; incompatible?: string[] }
 
 export const MODULES: ModuleDef[] = [
   { id: 'exp1', name: '额外公国版图(11-18)', desc: '变体公国版图,含"与城堡相连"可选规则' },
   { id: 'exp2', name: '额外六角片', desc: '27/28 号修道院 + 吊车 + 鹅' },
   { id: 'exp3_7', name: '德国冠军赛版图(19-20)', desc: '两张特殊公国版图' },
-  { id: 'exp4', name: '边境哨所', desc: '公国版图 23-30,哨所连线得分' },
+  { id: 'exp4', name: '边境哨所(第四扩展)', desc: '团队/个人版图 23-30 印 3 个哨所徽章;2 哨所连通按阶段得分(10-2),3 哨所全连通领奖励板块(首位 5/6/7,次位 2/3/4)' },
   { id: 'exp5', name: '白色城堡', desc: '9 个白堡板块,按白骰点数行动' },
   { id: 'exp6', name: '旅店', desc: '旅店提升区域规模' },
   { id: 'exp8', name: '商路', desc: '出售货物上商路格领奖' },
-  { id: 'exp9', name: '团队游戏', desc: '4 人 2v2 共享资源', minPlayers: 4 },
+  { id: 'exp9', name: '团队游戏(第九扩展)', desc: '4 人 2v2:共享工人/银币/货物/公国,2 私人+2 共享储存格;团队版图 31/32', minPlayers: 4, maxPlayers: 4 },
   { id: 'exp10', name: '单人游戏', desc: '单人冲目标分变体', minPlayers: 1 },
   { id: 'shields', name: '盾徽', desc: '对子骰拿盾徽,持续效果+纳贡' },
   { id: 'vineyard', name: '葡萄园', desc: '双生六角片与葡萄藤计分' },
@@ -23,7 +24,7 @@ const app = document.getElementById('app')!;
 
 const done = new Set<string>(['exp1', 'exp2', 'exp3_7', 'exp4', 'exp5', 'exp6', 'exp8', 'exp9', 'exp10', 'shields', 'vineyard', 'automa']);
 // 引擎已支持:基础 + 第二扩展额外六角片(27/28/29 修道院/吊车/鹅) + 白堡/旅店/商路/盾徽/葡萄园骨架
-const implemented = new Set<string>(['exp2', 'exp5', 'exp6', 'exp8', 'shields', 'vineyard', 'automa']);
+const implemented = new Set<string>(['exp2', 'exp4', 'exp5', 'exp6', 'exp8', 'exp9', 'shields', 'vineyard', 'automa']);
 
 function home() {
   app.innerHTML = `
@@ -66,6 +67,7 @@ function selectedModules(): string[] {
 }
 
 function setupHotseat(modules: string[]) {
+  const zhNames = (ids: string[]) => ids.map((id) => MODULES.find((m) => m.id === id)?.name ?? id).join(', ');
   app.innerHTML = `
   <div class="setup">
     <h1>同屏热座</h1>
@@ -77,12 +79,17 @@ function setupHotseat(modules: string[]) {
     <label>随机种子(留空随机)
       <input id="seed" type="number" placeholder="如 42">
     </label>
-    <p class="modnote">已选模块:${modules.length ? modules.join(', ') : '(无,基础玩法)'}</p>
+    <p class="modnote">已选模块:${modules.length ? zhNames(modules) : '(无,基础玩法)'}</p>
     <div class="btns"><button id="go">开始对局</button> <button id="back">返回</button></div>
   </div>`;
   app.querySelector('#back')!.addEventListener('click', home);
   app.querySelector('#go')!.addEventListener('click', () => {
     const pc = +(app.querySelector('#pc') as HTMLSelectElement).value;
+    const bad = validateModules(modules as never, pc);
+    if (bad) {
+      (app.querySelector('.modnote') as HTMLElement).innerHTML = `<b class="ended">${bad}</b>`;
+      return;
+    }
     const seedStr = (app.querySelector('#seed') as HTMLInputElement).value.trim();
     const seed = seedStr ? Math.abs(+seedStr | 0) || 42 : Math.floor(Math.random() * 2 ** 31);
     const game = new LocalGame(app, {

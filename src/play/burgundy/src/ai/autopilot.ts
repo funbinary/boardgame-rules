@@ -26,6 +26,15 @@ function scoreMove(g: GameState, m: Move): number {
     case 'answerTake': return 55;
     case 'answerWarehouseSell': return 50;
     case 'answerBonusDie': return 45;
+    // P2 待决应答:可答即答,避免卡待决
+    case 'answerShield5': return 58;
+    case 'answerShield6': return 58;
+    case 'answerFreePlace': return 57;
+    case 'answerFreeBlack': return 56;
+    case 'answerFreeTwin': return 56;
+    case 'takeVineBonus': return 56;
+    case 'skipFreePlace': return 3;
+    case 'skipShieldFree': return 3;
     case 'place': {
       const p = g.players[g.turn.player];
       const tile = p.storage[m.storage];
@@ -46,12 +55,16 @@ function scoreMove(g: GameState, m: Move): number {
     case 'mon6Buy': return 20;
     case 'mon28BuyWorkers': return 18;
     case 'buyBlack': return g.players[g.turn.player].silver >= 4 ? 15 : -5;
+    case 'buyInn': return 12;
+    case 'takeShield': case 'takeShieldFree': return 52;   // 盾徽必拿(对子/免费机会)
+    case 'setDie': return -15;                    // 改骰是手段不是目的,不主动用
+    case 'takeTwin': return 28;
+    case 'placeTwin': return 42;
     case 'modDie': {
       // 代走器不主动改骰(legalMoves 已含直接可行的动作)
       return -20;
     }
     case 'discardStorage': return -50;
-    case 'takeTwin': case 'placeTwin': return 10;
     default: return 0;
   }
 }

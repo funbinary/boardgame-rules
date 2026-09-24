@@ -1,5 +1,6 @@
 // 联机控制器:大厅 → 房间 → 对局。走子经 PlayClient 提交,状态由服务器广播驱动重放。
 import { autopilotPick } from '../../ai/autopilot';
+import { dataVersion } from '../../engine/dataVersion';
 import { actorOf, legalMoves } from '../../engine/moves';
 import type { GameState, Move } from '../../engine/state';
 import { PlayClient, type NetStatus } from '../../net/client';
@@ -28,7 +29,7 @@ export class OnlineFlow {
   /** 对局区点击委托:选骰/选储存格本地处理,其余匹配走子提交 */
   private onRootClick(e: Event) {
     const el = (e.target as HTMLElement).closest(
-      '[data-die],[data-storage],[data-r],[data-depot],[data-cell],[data-moddie],[data-sellcolor],[data-shipdepot],[id],.black-tile,.depot-goods,.goods',
+      '[data-die],[data-storage],[data-r],[data-depot],[data-cell],[data-moddie],[data-sellcolor],[data-shipdepot],[data-takeshield],[data-takeshieldfree],[data-skipshieldfree],[data-setdie],[data-shield5],[data-shield6],[data-freeplace],[data-skipfreeplace],[data-freeblack],[data-freetwin],[data-vinebonus],[data-vslot],[data-vspace],[data-shopcell],[id],.black-tile,.depot-goods,.goods',
     ) as HTMLElement | null;
     if (!el) return;
     const g = this.client?.state;
@@ -73,6 +74,7 @@ export class OnlineFlow {
         seats: +(fd.get('seats') || 2),
         turnSeconds: +(fd.get('turnSeconds') || 90),
         modules: [],
+        dataVersion: dataVersion(),
       }).then((out) => {
         const room = out?.room as ServerRoom | undefined;
         if (room?.ID) this.enterRoom(room.ID);
@@ -140,6 +142,7 @@ export class OnlineFlow {
         onMsg: (m) => void this.onMsg(m),
         onState: (g) => this.onState(g),
         onDesync: (e, got) => this.flash(`状态不一致(期望 ${e.slice(0, 6)} 实得 ${got.slice(0, 6)}),已自动重同步`),
+        onVersionMismatch: (rv, lv) => this.showVersionMismatch(rv, lv),
       },
     );
     this.client.connect();
@@ -302,6 +305,19 @@ export class OnlineFlow {
     setTimeout(() => bar.remove(), 1600);
   }
 
+  /** 数据指纹不一致:同种子重放会分叉,整页拦截(站点更新后进旧房间的典型场景) */
+  private showVersionMismatch(roomV: string, localV: string) {
+    this.client?.close();
+    this.root.innerHTML = `<div class="setup"><div class="panel">
+      <h2>数据版本不一致</h2>
+      <p>该房间由旧版本勘定数据创建,与当前数据不兼容;继续对局会导致状态分叉。</p>
+      <p class="err">房间 <code>${escapeHtml(roomV)}</code> · 本地 <code>${escapeHtml(localV)}</code></p>
+      <p>请返回大厅重建房间;若站点刚更新,请让所有玩家刷新页面后再进。</p>
+      <button id="vm-back">返回大厅</button>
+    </div></div>`;
+    this.root.querySelector('#vm-back')?.addEventListener('click', () => { location.hash = ''; location.reload(); });
+  }
+
   cleanup() {
     this.client?.close();
     if (this.timerInt) clearInterval(this.timerInt);
@@ -325,6 +341,7 @@ export function matchMove(g: GameState, sel: UiSelection, el: HTMLElement): Move
     return pick((mv) => mv.t === 'takeWorkers' && mv.die === die);
   }
   if (el.id === 'btn-undo') return null; // 联机不支持撤销
+  if (el.id === 'btn-buyinn') return pick((mv) => mv.t === 'buyInn');
   if (d('moddie') != null) {
     const die = +(d('moddie')!) as 0 | 1;
     const delta = +(d('delta')!) as 1 | -1;
@@ -342,6 +359,7 @@ export function matchMove(g: GameState, sel: UiSelection, el: HTMLElement): Move
     const r = +d('r')!, c = +d('c')!;
     const top = g.pending[g.pending.length - 1];
     if (top?.kind === 'initialCastle') return pick((mv) => mv.t === 'placeCastle' && mv.r === r && mv.c === c);
+    if (top?.kind === 'freePlace') return pick((mv) => mv.t === 'answerFreePlace' && mv.r === r && mv.c === c);
     if (sel.storage != null) {
       const die = sel.die ?? unusedDie();
       return pick((mv) => mv.t === 'place' && mv.r === r && mv.c === c && mv.storage === sel.storage && (mv.die === die || mv.die === 'bonus'))
@@ -351,6 +369,41 @@ export function matchMove(g: GameState, sel: UiSelection, el: HTMLElement): Move
     if (m && m.die === 'bonus') return m;
     return null;
   }
+  // ---- P2 扩展(与 LocalGame.onClick 同源) ----
+  if (d('takeshield') != null) {
+    const [depot, idx] = d('takeshield')!.split(':').map(Number);
+    return pick((mv) => mv.t === 'takeShield' && mv.depot === depot && mv.idx === idx);
+  }
+  if (d('takeshieldfree') != null) {
+    const [depot, idx] = d('takeshieldfree')!.split(':').map(Number);
+    return pick((mv) => mv.t === 'takeShieldFree' && mv.depot === depot && mv.idx === idx);
+  }
+  if (d('skipshieldfree') != null) return pick((mv) => mv.t === 'skipShieldFree');
+  if (d('setdie') != null) {
+    const [die, value] = d('setdie')!.split(':').map(Number);
+    return pick((mv) => mv.t === 'setDie' && mv.die === die && mv.value === value);
+  }
+  if (d('shield5') != null) return pick((mv) => mv.t === 'answerShield5' && mv.color === +d('shield5')!);
+  if (d('shield6') != null) return pick((mv) => mv.t === 'answerShield6' && mv.player === +d('shield6')!);
+  if (d('freeplace') != null) return moves.filter((mv) => mv.t === 'answerFreePlace')[+d('freeplace')!] ?? null;
+  if (d('skipfreeplace') != null) return pick((mv) => mv.t === 'skipFreePlace');
+  if (d('freeblack') != null) {
+    const [source, cell] = d('freeblack')!.split(':');
+    return pick((mv) => mv.t === 'answerFreeBlack' && mv.source === source && mv.cell === +cell);
+  }
+  if (d('freetwin') != null) return pick((mv) => mv.t === 'answerFreeTwin' && mv.slot === +d('freetwin')!);
+  if (d('vinebonus') != null) return pick((mv) => mv.t === 'takeVineBonus' && mv.type === d('vinebonus'));
+  if (d('vslot') != null) {
+    const die = sel.die ?? unusedDie();
+    return pick((mv) => mv.t === 'takeTwin' && mv.slot === +d('vslot')! && (mv.die === die || mv.die === 'bonus'));
+  }
+  if (d('vspace') != null) {
+    const storage = sel.storage ?? g.players[g.turn.player].storage.findIndex((s) => s?.twin);
+    const rot = (+d('vrot')!) as 0 | 1;
+    return pick((mv) => mv.t === 'placeTwin' && mv.space === d('vspace') && mv.rot === rot && mv.storage === storage)
+      ?? pick((mv) => mv.t === 'placeTwin' && mv.space === d('vspace') && mv.rot === rot);
+  }
+  if (d('shopcell') != null) return pick((mv) => mv.t === 'buyBlack' && mv.shop === true && mv.cell === +d('shopcell')!);
   const depot = d('depot');
   const cell = d('cell');
   if (depot != null && cell != null) {

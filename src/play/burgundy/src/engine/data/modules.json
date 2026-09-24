@@ -1,44 +1,330 @@
 {
   "_meta": {
-    "sources": ["content/bga-zh/castlesofburgundy.html 规则书正文全文"],
-    "verifiedBy": ["D0-transcript"]
+    "sources": [
+      "content/bga-zh/castlesofburgundy.html 规则书正文全文"
+    ],
+    "verifiedBy": [
+      "D0-transcript"
+    ]
   },
   "data": {
     "modules": [
-      { "id": "exp1", "name": "额外公国版图(11-18)", "desc": "变体公国版图,含「与城堡相连」可选规则", "minPlayers": 2 },
-      { "id": "exp2", "name": "额外六角片", "desc": "27/28/29 号修道院 + 吊车 + 鹅", "minPlayers": 2 },
-      { "id": "exp3_7", "name": "德国冠军赛版图(19-20)", "desc": "两张特殊公国版图", "minPlayers": 2 },
-      { "id": "exp4", "name": "边境哨所", "desc": "公国版图 23-30,哨所连线得分", "minPlayers": 2 },
-      { "id": "exp5", "name": "白色城堡", "desc": "9 个白堡板块,按白骰点数行动", "minPlayers": 2 },
-      { "id": "exp6", "name": "旅店", "desc": "旅店提升区域规模", "minPlayers": 2, "incompatible": ["automa"] },
-      { "id": "exp8", "name": "商路", "desc": "出售货物上商路格领奖", "minPlayers": 2, "incompatible": ["automa"] },
-      { "id": "exp9", "name": "团队游戏", "desc": "4 人 2v2 共享资源", "minPlayers": 4 },
-      { "id": "exp10", "name": "单人游戏", "desc": "单人冲目标分变体", "minPlayers": 1, "maxPlayers": 1 },
-      { "id": "shields", "name": "盾徽", "desc": "对子骰拿盾徽,持续效果+纳贡", "minPlayers": 2, "incompatible": ["automa"] },
-      { "id": "vineyard", "name": "葡萄园", "desc": "双生六角片与葡萄藤计分", "minPlayers": 2 },
-      { "id": "automa", "name": "自动机", "desc": "官方单人 AI 对手(追加虚拟玩家)", "minPlayers": 1, "maxPlayers": 3 }
+      {
+        "id": "exp1",
+        "name": "额外公国版图(11-18)",
+        "desc": "变体公国版图,含「与城堡相连」可选规则",
+        "minPlayers": 2
+      },
+      {
+        "id": "exp2",
+        "name": "额外六角片",
+        "desc": "27/28/29 号修道院 + 吊车 + 鹅",
+        "minPlayers": 2
+      },
+      {
+        "id": "exp3_7",
+        "name": "德国冠军赛版图(19-20)",
+        "desc": "两张特殊公国版图",
+        "minPlayers": 2
+      },
+      {
+        "id": "exp4",
+        "name": "边境哨所",
+        "desc": "公国版图 23-30,哨所连线得分(版图数据待勘定,引擎就绪)",
+        "minPlayers": 2
+      },
+      {
+        "id": "exp5",
+        "name": "白色城堡",
+        "desc": "9 个白堡板块,按白骰点数行动",
+        "minPlayers": 2
+      },
+      {
+        "id": "exp6",
+        "name": "旅店",
+        "desc": "旅店提升区域规模",
+        "minPlayers": 2,
+        "incompatible": [
+          "automa"
+        ]
+      },
+      {
+        "id": "exp8",
+        "name": "商路",
+        "desc": "出售货物上商路格领奖",
+        "minPlayers": 2
+      },
+      {
+        "id": "exp9",
+        "name": "团队游戏(第九扩展)",
+        "desc": "4 人 2v2:共享工人/银币/货物/储存格/公国,骰子与私人储存格独立;团队版图 31/32(2×半版);终局两队比分",
+        "minPlayers": 4,
+        "incompatible": [
+          "exp1",
+          "exp3_7",
+          "exp4",
+          "exp5",
+          "exp6",
+          "exp8",
+          "exp10",
+          "shields",
+          "vineyard",
+          "automa"
+        ],
+        "maxPlayers": 4
+      },
+      {
+        "id": "exp10",
+        "name": "单人游戏",
+        "desc": "单人冲目标分变体",
+        "minPlayers": 1,
+        "maxPlayers": 1
+      },
+      {
+        "id": "shields",
+        "name": "盾徽",
+        "desc": "对子骰拿盾徽,持续效果+纳贡",
+        "minPlayers": 2
+      },
+      {
+        "id": "vineyard",
+        "name": "葡萄园",
+        "desc": "双生六角片与葡萄藤计分",
+        "minPlayers": 2
+      },
+      {
+        "id": "automa",
+        "name": "自动机",
+        "desc": "官方单人 AI 对手(追加虚拟玩家)",
+        "minPlayers": 1,
+        "maxPlayers": 3
+      }
     ],
     "automa": {
       "countyCards": [
-        { "id": 1, "name": "蓝色郡县", "cells": ["blue", "blue", "blue", "blue"], "vpEasy": 4, "vpNormal": 5, "vpHard": 6 },
-        { "id": 2, "name": "黄色郡县", "cells": ["yellow", "yellow", "yellow", "yellow"], "vpEasy": 4, "vpNormal": 5, "vpHard": 6 },
-        { "id": 3, "name": "绿色郡县", "cells": ["green", "green", "green", "green"], "vpEasy": 4, "vpNormal": 5, "vpHard": 6 },
-        { "id": 4, "name": "棕色郡县", "cells": ["brown", "brown", "brown", "brown"], "vpEasy": 4, "vpNormal": 5, "vpHard": 6 },
-        { "id": 5, "name": "灰色郡县", "cells": ["gray", "gray", "gray", "gray"], "vpEasy": 4, "vpNormal": 5, "vpHard": 6 },
-        { "id": 6, "name": "暗红色郡县", "cells": ["red", "red", "red", "red"], "vpEasy": 4, "vpNormal": 5, "vpHard": 6 },
-        { "id": 7, "name": "混合郡县", "cells": ["blue", "yellow", "green", "brown"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 8, "name": "混合郡县", "cells": ["gray", "red", "blue", "yellow"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 9, "name": "混合郡县", "cells": ["green", "brown", "gray", "red"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 }
+        {
+          "id": 1,
+          "name": "蓝色郡县",
+          "cells": [
+            "blue",
+            "blue",
+            "blue",
+            "blue"
+          ],
+          "vpEasy": 4,
+          "vpNormal": 5,
+          "vpHard": 6
+        },
+        {
+          "id": 2,
+          "name": "黄色郡县",
+          "cells": [
+            "yellow",
+            "yellow",
+            "yellow",
+            "yellow"
+          ],
+          "vpEasy": 4,
+          "vpNormal": 5,
+          "vpHard": 6
+        },
+        {
+          "id": 3,
+          "name": "绿色郡县",
+          "cells": [
+            "green",
+            "green",
+            "green",
+            "green"
+          ],
+          "vpEasy": 4,
+          "vpNormal": 5,
+          "vpHard": 6
+        },
+        {
+          "id": 4,
+          "name": "棕色郡县",
+          "cells": [
+            "brown",
+            "brown",
+            "brown",
+            "brown"
+          ],
+          "vpEasy": 4,
+          "vpNormal": 5,
+          "vpHard": 6
+        },
+        {
+          "id": 5,
+          "name": "灰色郡县",
+          "cells": [
+            "gray",
+            "gray",
+            "gray",
+            "gray"
+          ],
+          "vpEasy": 4,
+          "vpNormal": 5,
+          "vpHard": 6
+        },
+        {
+          "id": 6,
+          "name": "暗红色郡县",
+          "cells": [
+            "red",
+            "red",
+            "red",
+            "red"
+          ],
+          "vpEasy": 4,
+          "vpNormal": 5,
+          "vpHard": 6
+        },
+        {
+          "id": 7,
+          "name": "混合郡县",
+          "cells": [
+            "blue",
+            "yellow",
+            "green",
+            "brown"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 8,
+          "name": "混合郡县",
+          "cells": [
+            "gray",
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 9,
+          "name": "混合郡县",
+          "cells": [
+            "green",
+            "brown",
+            "gray",
+            "red"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        }
       ],
       "vineyardCards": [
-        { "id": 10, "name": "葡萄园郡县", "cells": ["blue", "twin", "yellow", "twin"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 11, "name": "葡萄园郡县", "cells": ["yellow", "twin", "green", "twin"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 12, "name": "葡萄园郡县", "cells": ["green", "twin", "brown", "twin"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 13, "name": "葡萄园郡县", "cells": ["brown", "twin", "gray", "twin"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 14, "name": "葡萄园郡县", "cells": ["gray", "twin", "red", "twin"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 15, "name": "葡萄园郡县", "cells": ["red", "twin", "blue", "twin"], "vpEasy": 5, "vpNormal": 6, "vpHard": 7 },
-        { "id": 16, "name": "葡萄园郡县", "cells": ["twin", "twin", "twin", "twin"], "vpEasy": 6, "vpNormal": 7, "vpHard": 8 },
-        { "id": 17, "name": "葡萄园郡县", "cells": ["twin", "twin", "twin", "twin"], "vpEasy": 6, "vpNormal": 7, "vpHard": 8 }
+        {
+          "id": 10,
+          "name": "葡萄园郡县",
+          "cells": [
+            "blue",
+            "twin",
+            "yellow",
+            "twin"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 11,
+          "name": "葡萄园郡县",
+          "cells": [
+            "yellow",
+            "twin",
+            "green",
+            "twin"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 12,
+          "name": "葡萄园郡县",
+          "cells": [
+            "green",
+            "twin",
+            "brown",
+            "twin"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 13,
+          "name": "葡萄园郡县",
+          "cells": [
+            "brown",
+            "twin",
+            "gray",
+            "twin"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 14,
+          "name": "葡萄园郡县",
+          "cells": [
+            "gray",
+            "twin",
+            "red",
+            "twin"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 15,
+          "name": "葡萄园郡县",
+          "cells": [
+            "red",
+            "twin",
+            "blue",
+            "twin"
+          ],
+          "vpEasy": 5,
+          "vpNormal": 6,
+          "vpHard": 7
+        },
+        {
+          "id": 16,
+          "name": "葡萄园郡县",
+          "cells": [
+            "twin",
+            "twin",
+            "twin",
+            "twin"
+          ],
+          "vpEasy": 6,
+          "vpNormal": 7,
+          "vpHard": 8
+        },
+        {
+          "id": 17,
+          "name": "葡萄园郡县",
+          "cells": [
+            "twin",
+            "twin",
+            "twin",
+            "twin"
+          ],
+          "vpEasy": 6,
+          "vpNormal": 7,
+          "vpHard": 8
+        }
       ],
       "difficultyModifiers": {
         "A": "版图36:预放5块黑面(建筑2+牲畜1+船1+修道院1)",
@@ -46,21 +332,84 @@
         "C": "自动机为第一轮起始玩家",
         "D": "版图36:部分格含额外回合奖励"
       },
-      "twinScores": [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91],
-      "sellingScores": { "2": 2, "3": 3, "4": 4 }
+      "twinScores": [
+        1,
+        3,
+        6,
+        10,
+        15,
+        21,
+        28,
+        36,
+        45,
+        55,
+        66,
+        78,
+        91
+      ],
+      "sellingScores": {
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
     },
     "vineyard": {
       "twinTiles": 51,
       "vineTypes": 6,
       "bonusTiles": 24,
-      "supplySlots": { "2-3": 3, "4": 6 },
-      "shopSlots": { "2-3": 1, "4": 3 },
-      "vineScores": [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91]
+      "supplySlots": {
+        "4": 6,
+        "2-3": 3
+      },
+      "shopSlots": {
+        "4": 3,
+        "2-3": 1
+      },
+      "vineScores": [
+        1,
+        3,
+        6,
+        10,
+        15,
+        21,
+        28,
+        36,
+        45,
+        55,
+        66,
+        78,
+        91
+      ]
     },
     "shields": {
       "count": 18,
       "tributeCost": 1,
-      "placement": { "2": [1,1,1,1,1,1], "3": [1,2,1,2,1,2], "4": [2,2,2,2,2,2] }
+      "placement": {
+        "2": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "3": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "4": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
     },
     "inn": {
       "count": 5,
@@ -69,7 +418,11 @@
       "vp10": 55
     },
     "traderoute": {
-      "tilesPerPlayer": { "2": 5, "3": 4, "4": 3 },
+      "tilesPerPlayer": {
+        "2": 5,
+        "3": 4,
+        "4": 3
+      },
       "slotsPerTile": 3
     }
   }

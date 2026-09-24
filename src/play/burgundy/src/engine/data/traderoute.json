@@ -1,0 +1,230 @@
+{
+ "_meta": {
+  "sources": [
+   "官方英文规则书 PDF p14 右栏三张示例板块(_cob/d3/tr_tile1-3.png,12x 渲染)",
+   "规则书正文:每个商路板块印 3 个商路格,共 12 块"
+  ],
+  "confidence": "low",
+  "note": "12 块板块逐格奖励为占位:仅示例 3 块的部分格可确证(tile2: 6→vp4 / 3→silver2 / 4→takeBuilding;tile1/3: 1→workers4)。其余格子的图例语义(灰hex+钥匙/条纹hex)待对照 Gamefound 组件高清图专项勘定;占位奖励全部取自可实现的奖励词表。"
+ },
+ "data": {
+  "tiles": [
+   {
+    "id": 1,
+    "spaces": [
+     {
+      "n": 2,
+      "reward": "takeBuilding"
+     },
+     {
+      "n": 4,
+      "reward": "takeMineMonasteryCastle"
+     },
+     {
+      "n": 1,
+      "reward": "workers4"
+     }
+    ],
+    "confidence": "high",
+    "notes": [
+     "2026-09-23 40x 复核(p14 右栏示例);tile3 旧读数「1→workers4」系 12x 误读,实为 2→workers4;4→takeAny(六色条纹钥匙格,词表外新增,引擎已实现)"
+    ]
+   },
+   {
+    "id": 2,
+    "spaces": [
+     {
+      "n": 6,
+      "reward": "vp4"
+     },
+     {
+      "n": 3,
+      "reward": "silver2"
+     },
+     {
+      "n": 4,
+      "reward": "takeBuilding"
+     }
+    ],
+    "confidence": "high",
+    "notes": [
+     "2026-09-23 40x 复核(p14 右栏示例);tile3 旧读数「1→workers4」系 12x 误读,实为 2→workers4;4→takeAny(六色条纹钥匙格,词表外新增,引擎已实现)"
+    ]
+   },
+   {
+    "id": 3,
+    "spaces": [
+     {
+      "n": 4,
+      "reward": "takeAny"
+     },
+     {
+      "n": 3,
+      "reward": "takeMineMonasteryCastle"
+     },
+     {
+      "n": 2,
+      "reward": "workers4"
+     }
+    ],
+    "confidence": "high",
+    "notes": [
+     "2026-09-23 40x 复核(p14 右栏示例);tile3 旧读数「1→workers4」系 12x 误读,实为 2→workers4;4→takeAny(六色条纹钥匙格,词表外新增,引擎已实现)"
+    ]
+   },
+   {
+    "id": 4,
+    "spaces": [
+     {
+      "n": 5,
+      "reward": "workers2"
+     },
+     {
+      "n": 2,
+      "reward": "takeMineMonasteryCastle"
+     },
+     {
+      "n": 6,
+      "reward": "silver2"
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "spaces": [
+     {
+      "n": 3,
+      "reward": "vp2"
+     },
+     {
+      "n": 5,
+      "reward": "takeBuilding"
+     },
+     {
+      "n": 2,
+      "reward": "workers2"
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "spaces": [
+     {
+      "n": 1,
+      "reward": "workers4"
+     },
+     {
+      "n": 6,
+      "reward": "takeShipLivestock"
+     },
+     {
+      "n": 3,
+      "reward": "silver1"
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "spaces": [
+     {
+      "n": 2,
+      "reward": "takeMineMonasteryCastle"
+     },
+     {
+      "n": 5,
+      "reward": "vp4"
+     },
+     {
+      "n": 4,
+      "reward": "silver2"
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "spaces": [
+     {
+      "n": 6,
+      "reward": "workers2"
+     },
+     {
+      "n": 1,
+      "reward": "takeBuilding"
+     },
+     {
+      "n": 5,
+      "reward": "vp2"
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "spaces": [
+     {
+      "n": 4,
+      "reward": "silver2"
+     },
+     {
+      "n": 2,
+      "reward": "workers4"
+     },
+     {
+      "n": 6,
+      "reward": "takeMineMonasteryCastle"
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "spaces": [
+     {
+      "n": 3,
+      "reward": "takeShipLivestock"
+     },
+     {
+      "n": 5,
+      "reward": "silver1"
+     },
+     {
+      "n": 1,
+      "reward": "vp2"
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "spaces": [
+     {
+      "n": 5,
+      "reward": "workers4"
+     },
+     {
+      "n": 1,
+      "reward": "takeShipLivestock"
+     },
+     {
+      "n": 4,
+      "reward": "vp4"
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "spaces": [
+     {
+      "n": 1,
+      "reward": "silver2"
+     },
+     {
+      "n": 3,
+      "reward": "takeMineMonasteryCastle"
+     },
+     {
+      "n": 6,
+      "reward": "workers2"
+     }
+    ]
+   }
+  ]
+ }
+}

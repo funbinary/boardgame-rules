@@ -1,7 +1,7 @@
 // 本地控制器:热座对局的交互状态机(选中骰子/板块 → 匹配合法走子 → 应用)。
 // 联机控制器(M5)复用同一套匹配逻辑,只把 applyMove 换成发招+本地预测。
 import { autopilotPick } from '../../ai/autopilot';
-import { applyMove, legalMoves, type MoveError } from '../../engine/moves';
+import { actorOf, applyMove, legalMoves, type MoveError } from '../../engine/moves';
 import { createGame } from '../../engine/setup';
 import type { GameState, Move } from '../../engine/state';
 import { renderGame, type UiSelection } from '../views';
@@ -65,7 +65,7 @@ export class LocalGame {
   }
 
   private onClick(e: Event) {
-    const el = (e.target as HTMLElement).closest('[data-die],[data-storage],[data-r],[data-depot],[data-cell],[data-moddie],[data-sellcolor],[data-shipdepot],[data-mod],[id]');
+    const el = (e.target as HTMLElement).closest('[data-die],[data-storage],[data-r],[data-depot],[data-cell],[data-moddie],[data-sellcolor],[data-shipdepot],[data-mod],[data-takeshield],[data-takeshieldfree],[data-skipshieldfree],[data-setdie],[data-shield5],[data-shield6],[data-freeplace],[data-skipfreeplace],[data-freeblack],[data-freetwin],[data-vinebonus],[data-vslot],[data-vspace],[data-shopcell],[id]');
     if (!el) return;
     const d = (s: string) => (el as HTMLElement).dataset[s];
     try {
@@ -77,10 +77,89 @@ export class LocalGame {
         return;
       }
       if (el.id === 'btn-undo') { this.undo(); return; }
+      if (el.id === 'btn-buyinn') { const m = this.pick((mv) => mv.t === 'buyInn'); if (m) this.apply(m); return; }
+      if (el.id === 'btn-rot') { this.sel.rot = this.sel.rot === 1 ? 0 : 1; this.render(); return; }
       if (d('moddie') != null) {
         const die = +(d('moddie')!) as 0 | 1;
         const delta = +(d('delta')!) as 1 | -1;
         const m = this.pick((mv) => mv.t === 'modDie' && mv.die === die && mv.delta === delta);
+        if (m) this.apply(m);
+        return;
+      }
+      // ---- 盾徽(P2) ----
+      if (d('takeshield') != null) {
+        const [depot, idx] = d('takeshield')!.split(':').map(Number);
+        const m = this.pick((mv) => mv.t === 'takeShield' && mv.depot === depot && mv.idx === idx);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('takeshieldfree') != null) {
+        const [depot, idx] = d('takeshieldfree')!.split(':').map(Number);
+        const m = this.pick((mv) => mv.t === 'takeShieldFree' && mv.depot === depot && mv.idx === idx);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('skipshieldfree') != null) { const m = this.pick((mv) => mv.t === 'skipShieldFree'); if (m) this.apply(m); return; }
+      if (d('setdie') != null) {
+        const [die, value] = d('setdie')!.split(':').map(Number);
+        const m = this.pick((mv) => mv.t === 'setDie' && mv.die === die && mv.value === value);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('shield5') != null) {
+        const m = this.pick((mv) => mv.t === 'answerShield5' && mv.color === +d('shield5')!);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('shield6') != null) {
+        const m = this.pick((mv) => mv.t === 'answerShield6' && mv.player === +d('shield6')!);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('freeplace') != null) {
+        const list = legalMoves(this.state).filter((mv) => mv.t === 'answerFreePlace');
+        const m = list[+d('freeplace')!];
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('skipfreeplace') != null) { const m = this.pick((mv) => mv.t === 'skipFreePlace'); if (m) this.apply(m); return; }
+      // ---- 葡萄园(P2) ----
+      if (d('freeblack') != null) {
+        const [source, cell] = d('freeblack')!.split(':');
+        const m = this.pick((mv) => mv.t === 'answerFreeBlack' && mv.source === source && mv.cell === +cell);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('freetwin') != null) {
+        const m = this.pick((mv) => mv.t === 'answerFreeTwin' && mv.slot === +d('freetwin')!);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('vinebonus') != null) {
+        const m = this.pick((mv) => mv.t === 'takeVineBonus' && mv.type === d('vinebonus'));
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('vslot') != null) {
+        const die = this.sel.die ?? this.unusedDie();
+        const m = this.pick((mv) => mv.t === 'takeTwin' && mv.slot === +d('vslot')! && (mv.die === die || mv.die === 'bonus'));
+        if (!m) {
+          const any = this.pick((mv) => mv.t === 'takeTwin' && mv.slot === +d('vslot')!);
+          if (any) { this.flash('✗ 骰点与槽位不匹配'); return; }
+        }
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('vspace') != null) {
+        const storage = this.sel.storage ?? this.state.players[actorOf(this.state)].storage.findIndex((s) => s?.twin);
+        const rot = (+d('vrot')!) as 0 | 1;
+        const m = this.pick((mv) => mv.t === 'placeTwin' && mv.space === d('vspace') && mv.rot === rot && mv.storage === storage)
+          ?? this.pick((mv) => mv.t === 'placeTwin' && mv.space === d('vspace') && mv.rot === rot);
+        if (m) this.apply(m);
+        return;
+      }
+      if (d('shopcell') != null) {
+        const m = this.pick((mv) => mv.t === 'buyBlack' && mv.shop === true && mv.cell === +d('shopcell')!);
         if (m) this.apply(m);
         return;
       }
@@ -114,6 +193,11 @@ export class LocalGame {
         const top = this.state.pending[this.state.pending.length - 1];
         if (top?.kind === 'initialCastle') {
           const m = this.pick((mv) => mv.t === 'placeCastle' && mv.r === r && mv.c === c);
+          if (m) this.apply(m);
+          return;
+        }
+        if (top?.kind === 'freePlace') {
+          const m = this.pick((mv) => mv.t === 'answerFreePlace' && mv.r === r && mv.c === c);
           if (m) this.apply(m);
           return;
         }

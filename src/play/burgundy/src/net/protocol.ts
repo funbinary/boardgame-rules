@@ -10,6 +10,8 @@ export interface ServerRoom {
   Status: 'lobby' | 'playing' | 'ended';
   Seed: number;
   HostUserID: number;
+  /** 建房客户端的勘定数据指纹(空串=历史房间,跳过校验) */
+  DataVersion: string;
 }
 
 export interface ServerPlayer { UserID: number; Username: string; Seat: number }

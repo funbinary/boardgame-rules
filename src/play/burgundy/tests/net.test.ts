@@ -3,6 +3,7 @@ import { describe, expect, it, vi, beforeEach } from 'vitest';
 import { PlayClient, wsFactory } from '../src/net/client';
 import type { ServerMsg } from '../src/net/protocol';
 import { createGame } from '../src/engine/setup';
+import { dataVersion } from '../src/engine/dataVersion';
 import { autopilotPick } from '../src/ai/autopilot';
 import { applyMove } from '../src/engine/moves';
 import type { GameState, Move } from '../src/engine/state';
@@ -11,6 +12,7 @@ function makeClient(journalSink?: (m: unknown) => void) {
   const states: (GameState | null)[] = [];
   const msgs: ServerMsg[] = [];
   const sent: unknown[] = [];
+  const mismatches: [string, string][] = [];
   const c = new PlayClient(
     'test01',
     (seed, _mods, seats) => createGame({ seed, playerCount: seats }),
@@ -19,6 +21,7 @@ function makeClient(journalSink?: (m: unknown) => void) {
       onMsg: (m) => msgs.push(m),
       onState: (g) => states.push(g),
       onDesync: () => {},
+      onVersionMismatch: (rv, lv) => mismatches.push([rv, lv]),
     },
   );
   // 拦截 send
@@ -26,13 +29,13 @@ function makeClient(journalSink?: (m: unknown) => void) {
     sent.push(o);
     journalSink?.(o);
   };
-  return { c, states, msgs, sent };
+  return { c, states, msgs, sent, mismatches };
 }
 
-function roomJson(seed: number, status = 'playing') {
+function roomJson(seed: number, status = 'playing', dv = '') {
   return {
     ID: 'test01', GameKey: 'burgundy', Modules: '[]', Seats: 2,
-    TurnSeconds: 90, Status: status, Seed: seed, HostUserID: 1,
+    TurnSeconds: 90, Status: status, Seed: seed, HostUserID: 1, DataVersion: dv,
   };
 }
 
@@ -102,6 +105,20 @@ describe('PlayClient', () => {
     expect(mm.hash.length).toBe(16);
     expect(c.state).toBe(before);           // 未本地推进
     expect(states.length).toBe(nBefore);    // 无新状态事件
+  });
+
+  it('数据指纹:不一致触发 onVersionMismatch,一致/空版本不触发', () => {
+    const a = makeClient();
+    a.c.handle(JSON.stringify({ t: 'init', room: roomJson(42, 'playing', 'dv1-deadbeef'), players: [], journal: [], name: 't' }));
+    expect(a.mismatches).toEqual([['dv1-deadbeef', dataVersion()]]);
+
+    const b = makeClient();
+    b.c.handle(JSON.stringify({ t: 'init', room: roomJson(42, 'playing', dataVersion()), players: [], journal: [], name: 't' }));
+    expect(b.mismatches).toHaveLength(0);   // 一致
+
+    const d = makeClient();
+    d.c.handle(JSON.stringify({ t: 'init', room: roomJson(42), players: [], journal: [], name: 't' }));
+    expect(d.mismatches).toHaveLength(0);   // 历史房间(空版本)跳过校验
   });
 });
 

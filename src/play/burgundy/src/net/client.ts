@@ -2,6 +2,7 @@
 // 单一事实源原则:走子不本地推进,等服务器广播回来重放(防 stale 拒绝后状态分叉)。
 import { autopilotPick } from '../ai/autopilot';
 import { actorOf, applyMove } from '../engine/moves';
+import { dataVersion } from '../engine/dataVersion';
 import { hashState } from '../engine/hash';
 import type { GameState, Move } from '../engine/state';
 import type { JournalEntry, ServerMsg, ServerRoom } from './protocol';
@@ -13,6 +14,8 @@ export interface NetEvents {
   onMsg: (m: ServerMsg) => void;
   onState: (g: GameState | null) => void;
   onDesync: (expected: string, got: string) => void;
+  /** 房间数据指纹与本地不一致(房间非空且不同时触发;P4 数据漂移防护) */
+  onVersionMismatch?: (roomV: string, localV: string) => void;
 }
 
 /** 测试注入点:真实环境用浏览器 WebSocket */
@@ -105,9 +108,11 @@ export class PlayClient {
     if (m.t === 'init') {
       this.room = m.room;
       this.deadlineMs = m.deadline ?? 0;
+      this.checkVersion();
       this.replay(m.journal ?? []);
     } else if (m.t === 'started') {
       this.room = m.room;
+      this.checkVersion();
       this.replay([]);
     } else if (m.t === 'deadline') {
       this.deadlineMs = m.deadline;
@@ -131,6 +136,13 @@ export class PlayClient {
     } else if (m.t === 'timeout') {
       this.autopilotOnTimeout();
     }
+  }
+
+  /** 房间数据指纹校验:非空且与本地不同 → onVersionMismatch(同种子重放会分叉,需提前拦截) */
+  private checkVersion() {
+    const rv = this.room?.DataVersion ?? '';
+    if (!rv || rv === dataVersion()) return;
+    this.ev.onVersionMismatch?.(rv, dataVersion());
   }
 
   private replay(journal: JournalEntry[]) {
@@ -161,6 +173,7 @@ export class PlayClient {
       if (!res.ok) return;
       const data = await res.json();
       this.room = data.room;
+      this.checkVersion();
       this.replay((data.journal ?? []) as JournalEntry[]);
     } catch { /* 下次消息再试 */ }
   }

@@ -1,5 +1,6 @@
 // 完整对局状态与走子(意图)类型。全部 JSON 可序列化。
 import type { BuildingType, LivestockKind, ModuleId, TileColor } from './types';
+import type { TradeReward } from './data';
 
 // ---------- 板块与货物 ----------
 
@@ -25,9 +26,9 @@ export interface Tile {
 
 export type VineColor = 'red' | 'white' | 'yellow' | 'green' | 'blue' | 'purple';
 export type VineBonus =
-  | 'workers2' | 'silver2' | 'workers1' | 'silver1' | 'vp4' | 'vp2'
+  | 'workers2' | 'workers4' | 'silver2' | 'workers1' | 'silver1' | 'vp4' | 'vp2'
   | 'takeShipLivestock' | 'takeBuilding' | 'takeMineMonasteryCastle'
-  | 'freeBlack' | 'freeTwin' | 'extraAction';
+  | 'freeBlack' | 'freeTwin' | 'extraAction';   // workers4:2026-09-23 勘定,葡萄园版图格印「4+工人」
 
 export interface GoodsTile { id: number; color: number; value: number } // color 1-6 ↔ 骰点
 
@@ -59,15 +60,34 @@ export interface PlayerState {
   lastRoll?: [number, number];
   /** 初始城堡格 key(r:c) */
   castleCell?: string;
-  /** 盾徽扩展:已拿盾徽列表 */
+  /** 盾徽扩展:已拿盾徽列表(编号 1-18 = 效果号) */
   shields?: number[];
-  /** 商路扩展:商路格(点数序列)与已放置数 */
-  tradeRoute?: number[];
+  /** 盾徽6:复制的目标玩家 idx */
+  shieldTarget?: number;
+  /** 商路扩展:商路格序列(自左而右)与已放置数;good=放置的货物点数(展示) */
+  tradeRoute?: { n: number; reward: TradeReward; good?: number }[];
   tradeRoutePlaced?: number;
-  /** 葡萄园扩展:葡萄园版图状态 */
-  vineyard?: { tiles: Tile[]; regions: { type: string; size: number }[]; bonusTiles: { type: string }[] };
+  /** 葡萄园扩展:玩家葡萄园版图状态(spaceId → 已放双生片) */
+  vineyard?: {
+    placed: Record<string, { tile: Tile; rot: 0 | 1 }>;
+    bonusTiles: { type: string }[];
+  };
   /** 自动机状态(见底部 AutomaState) */
   automa?: AutomaState;
+  /** 第九扩展:所属队 'A'|'B'(2v2;共享资源在队锚点玩家上,见 engine/team.ts) */
+  team?: 'A' | 'B';
+}
+
+/** 第九扩展:团队状态(2v2)。
+ *  共享资源(工人/银币/货物/已售/奖励板块/公国 placed/修道院6号/初始城堡/版图号)
+ *  全部挂在队锚点(members[0])玩家的对应字段上 —— 见 engine/modules/team.ts 的 resP 路由;
+ *  TeamState 本身只承载无法归到单个玩家字段的东西(共享储存格)。 */
+export interface TeamState {
+  id: 'A' | 'B';
+  /** 队员玩家 idx(锚点在前;座位 0,2 → A、1,3 → B) */
+  members: number[];
+  /** 共享储存格(2 格;每名队员另有 2 私人格在各 p.storage) */
+  sharedStorage: (Tile | null)[];
 }
 
 // ---------- 中央区域 ----------
@@ -86,13 +106,22 @@ export interface DepotState {
 
 export type PendingPrompt =
   | { kind: 'shipGoods'; player: number }                       // 选补给区拿货物
-  | { kind: 'marketTake' | 'carpenterTake' | 'churchTake'; player: number }
+  | { kind: 'marketTake' | 'carpenterTake' | 'churchTake' | 'tradeAnyTake'; player: number }   // tradeAnyTake=商路 takeAny:补给区任拿
   | { kind: 'warehouseSell'; player: number }
   | { kind: 'bonusAction'; player: number; from: 'castle' | 'cityhall' | 'whitecastle' | 'monastery' }
   | { kind: 'initialCastle'; player: number }
   | { kind: 'discardStorage'; player: number }                  // 储存满必须弃
   | { kind: 'sellColor'; player: number; colors: number[] }     // 仓库/自动机卖货选色
-  | { kind: 'mon6Take'; player: number };
+  | { kind: 'mon6Take'; player: number }
+  // ---- 盾徽(P2) ----
+  | { kind: 'shield5Take'; player: number }                     // 盾徽5:选货物色全取
+  | { kind: 'shield6Target'; player: number }                   // 盾徽6:选复制目标玩家
+  | { kind: 'freePlace'; player: number; from: 'depot' | 'black' } // 盾徽14/15:阶段末免费放置
+  // ---- 葡萄园(P2) ----
+  | { kind: 'freeBlackTake'; player: number }                   // 双生片奖励:黑区/商店免费拿
+  | { kind: 'freeTwinTake'; player: number }                    // 双生片奖励:补给区免费拿双生片
+  | { kind: 'vineCheck'; player: number; space: string }        // 放置后检查层完成(自动应答)
+  | { kind: 'vineBonus'; player: number };                      // 层完成:选藤奖励板块
 
 // ---------- 走子(意图) ----------
 
@@ -104,8 +133,19 @@ export type Move =
   | { t: 'takeWorkers'; die: 0 | 1 | 'bonus'; dieValue?: number }
   // 骰子调整(非行动):花 1 工人 ±1(1↔6 环绕;修道院8 每 1 工人 ±2)
   | { t: 'modDie'; die: 0 | 1; delta: 1 | -1 | 2 | -2 }
-  // 黑区购买(每回合一次,2 银币)
-  | { t: 'buyBlack'; cell: number }
+  // 黑区购买(每回合一次,2 银币;葡萄园下 shop=true 改为购商店双生片)
+  | { t: 'buyBlack'; cell: number; shop?: boolean }
+  // 旅店(第六扩展):2 银币购旅店(与黑区购买共用每回合一次)
+  | { t: 'buyInn' }
+  // 盾徽(P2)
+  | { t: 'takeShield'; depot: number; idx: number; replace?: number }   // 对子骰拿盾徽;replace=被替换盾徽下标
+  | { t: 'takeShieldFree'; depot: number; idx: number; replace?: number } // 盾徽11:放城堡后免费拿(可跳过)
+  | { t: 'skipShieldFree' }
+  | { t: 'setDie'; die: 0 | 1; value: number }                          // 盾徽18:每回合一次改骰为任意点
+  | { t: 'answerShield5'; color: number }
+  | { t: 'answerShield6'; player: number }
+  | { t: 'answerFreePlace'; from: 'depot' | 'black'; depot?: number; cell: number; r: number; c: number }
+  | { t: 'skipFreePlace' }
   // 效果链应答
   | { t: 'answerShipGoods'; depot: number }
   | { t: 'answerTake'; depot: number; cell: number }
@@ -116,9 +156,12 @@ export type Move =
   // 修道院
   | { t: 'mon6Buy'; depot: number; cell: number }                // 6号:花 2 工人拿建筑
   | { t: 'mon28BuyWorkers' }                                      // 28号:1 银币换 2 工人
-  // 扩展
-  | { t: 'takeTwin'; die: 0 | 1 | 'bonus'; slot: number }
-  | { t: 'placeTwin'; die: 0 | 1 | 'bonus'; storage: number; r: number; c: number; rot: 0 | 1 }
+  // 葡萄园(P2)
+  | { t: 'takeTwin'; die: 0 | 1 | 'bonus'; slot: number; dieValue?: number }
+  | { t: 'placeTwin'; die: 0 | 1 | 'bonus'; storage: number; space: string; rot: 0 | 1; dieValue?: number }
+  | { t: 'answerFreeBlack'; source: 'black' | 'shop'; cell: number }
+  | { t: 'answerFreeTwin'; slot: number }
+  | { t: 'takeVineBonus'; type: string }
   // 自动机整回合(仅 isAutoma 玩家;引擎内部完成掷骰/检索/放置/奖励/买黑区全流程)
   | { t: 'automa' };
 
@@ -143,8 +186,19 @@ export interface GameState {
   depots: DepotState[];
   /** 黑色补给区 */
   blackDepot: (Tile | null)[];
-  /** 旅店堆(第六扩展,黑区旁) */
+  /** 旅店堆(第六扩展):当前可购旅店数(每阶段开始 +1,共 5) */
   innPile: number;
+  /** 边境哨所(第四扩展):2连/3连已触发玩家 */
+  outpostClaims?: { done2: number[]; done3: number[] };
+  /** 葡萄园扩展(M2b/P2):布袋/补给区槽/商店 */
+  vineyard?: {
+    bag: Tile[];
+    supply: { ns: number[]; tile: Tile | null }[];
+    shopSlots: (Tile | null)[];
+    bonusPile: string[];
+  };
+  /** 阶段结算已执行(settle 与盾徽14/15免费放置的时序标记) */
+  phaseSettled?: boolean;
   /** 未入袋供应计数(按颜色,供黑区补充等)——彩色面堆 */
   supply: Record<TileColor, number>;
   /** 本回合行动状态 */
@@ -155,6 +209,10 @@ export interface GameState {
     /** 奖励行动自由点数(城堡/市政厅/白堡,每元素一次) */
     bonusDice: number[];
     blackBought: boolean;
+    /** 盾徽11:放城堡后的免费拿盾徽机会(可放弃) */
+    shield11Offer?: boolean;
+    /** 盾徽18:本回合已用改骰 */
+    shield18Used?: boolean;
     /** 本回合是否已放船/货物拿取等一次性标记 */
   };
   /** 回合顺位轨:spaces[spaceIdx] = 该格玩家(底→顶) */
@@ -172,8 +230,8 @@ export interface GameState {
   regions: { id: number; color: TileColor; cells: string[] }[];
   /** 自动机扩展状态(官方郡县卡流程) */
   automa?: AutomaState;
-  /** 葡萄园扩展状态(M2b):双生片供应与商店槽位 */
-  vineyard?: { twinsSupply: Tile[]; shopSlots: (Tile | null)[] };
+  /** 第九扩展:两队共享状态(2v2;存在时玩家资源路由见 engine/team.ts) */
+  teams?: { A: TeamState; B: TeamState };
   /** 终局计分明细 */
   final?: { perPlayer: { idx: number; breakdown: { label: string; vp: number }[] }[] };
 }

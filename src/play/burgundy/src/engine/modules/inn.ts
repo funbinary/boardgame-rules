@@ -1,23 +1,12 @@
-// 旅店(第六扩展):旅店提升区域规模。
-import type { GameState, Tile } from '../state';
+// 旅店(第六扩展,P2):每阶段开始补给区旁 +1 旅店(共5);2 银币购入(与黑区购买共用每回合一次),
+// 放置遵循常规规则但**不限颜色**(骰点/邻接照常);每区域限 1 座;旅店自身无效果,仅令完成区域规模 +1。
+// 放置/区域加成的实现接线在 moves.ts / scoring.ts(避免与 setup.ts 循环依赖)。
+// 自动机不支持本扩展(modules.json 互斥,规则书 p26)。
+import type { GameState } from '../state';
 import type { ModuleHook } from '../modules';
-import { SIZE_VP } from '../scoring';
 
 export const innModule: ModuleHook = {
   onSetup(g) {
-    g.innPile = 5;
-  },
-  onPlace(g, player, tile) {
-    // 旅店自身无即时效果
-    return 0;
-  },
-  onEndgame(g, player) {
-    return 0;
+    g.innPile = 0;   // beginPhase 每阶段 +1(阶段A开始时为 1)
   },
 };
-
-/** 区域完成时若含旅店,规模+1 */
-export function innBoostedSize(regionCells: string[], placed: Record<string, Tile>): number {
-  const hasInn = regionCells.some((k) => placed[k]?.inn);
-  return regionCells.length + (hasInn ? 1 : 0);
-}

@@ -5,7 +5,9 @@
    "Gamefound update #8 render (imgcdn cd7cbcde = _cob/d2/gf/d7_1.jpg): official straight-on renders of reworked boards 4 & 8; full 37-cell cross-check against sheet",
    "Gamefound update #8 render (28400452 = d7_3_full.png): badges show border boards 21/22, NOT boards 9/10 as earlier assumed; no official straight-on render exists for boards 9/10 - those rest on double independent reads of pic7621703 plus the color-distribution invariant",
    "Gamefound Dev update #1 (u20_*.png): angled 'empty board' hero renders without hex grid or dice - unusable for transcription",
-   "Color-distribution invariant per board: brown/buildings 12, yellow/monastery 6, blue/water 6, green/pasture 6, red/castle 4, gray/mine 3 (sum 37; holds on all 10 transcriptions)"
+   "Color-distribution invariant per board: brown/buildings 12, yellow/monastery 6, blue/water 6, green/pasture 6, red/castle 4, gray/mine 3 (sum 37; holds on all 10 transcriptions)",
+   "团队版图 31/32 占位:复用版图 1 几何(官方组件图待勘定,见 CONTRACT.md)",
+   "版图 23-30 逐格:BGG pic7621703 图例表 8x 双读转写(2026-09-23);哨所位:23 号按规则书 p14 样例勘定,24-30 采用同默认(角点右上/左/底中豁口),confidence=low,待官方组件照复核"
   ],
   "verifiedBy": [
    "board 1: 8x montage re-read 37/37 == first pass",
@@ -2309,6 +2311,2315 @@
       "c": 3,
       "color": "red",
       "n": 4
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "id": 23,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "red",
+      "n": 3,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "brown",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "blue",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "green",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 24,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "red",
+      "n": 3,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "red",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "red",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "brown",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 25,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "yellow",
+      "n": 3,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "yellow",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "brown",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "brown",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "red",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 26,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "brown",
+      "n": 3,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "blue",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "green",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "brown",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "yellow",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "red",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 27,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "gray",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "yellow",
+      "n": 2,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "green",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "red",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "red",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 28,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "blue",
+      "n": 3,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "gray",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "red",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "red",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "green",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "green",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "green",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 29,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "blue",
+      "n": 3,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "red",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "blue",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "gray",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "green",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "yellow",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "yellow",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "gray",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 30,
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "blue",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "gray",
+      "n": 2,
+      "outpost": 1
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "yellow",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "red",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "red",
+      "n": 6,
+      "outpost": 2
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "yellow",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "red",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "green",
+      "n": 4,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "blue",
+      "n": 1,
+      "outpost": 3
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "gray",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "id": 31,
+    "name": "团队标准面(占位)",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
+     }
+    ],
+    "confidence": "high",
+    "notes": [
+     "占位:中央(3,2)唯一红格=固定城堡格;几何复用版图1,待勘定"
+    ]
+   },
+   {
+    "id": 32,
+    "name": "团队进阶面(占位,多红格任选)",
+    "cells": [
+     {
+      "r": 0,
+      "c": 0,
+      "color": "green",
+      "n": 6
+     },
+     {
+      "r": 0,
+      "c": 1,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 0,
+      "c": 3,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": -1,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 1,
+      "c": 0,
+      "color": "green",
+      "n": 1
+     },
+     {
+      "r": 1,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 1,
+      "c": 2,
+      "color": "yellow",
+      "n": 5
+     },
+     {
+      "r": 1,
+      "c": 3,
+      "color": "brown",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": -1,
+      "color": "green",
+      "n": 5
+     },
+     {
+      "r": 2,
+      "c": 0,
+      "color": "green",
+      "n": 4
+     },
+     {
+      "r": 2,
+      "c": 1,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 2,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 2,
+      "c": 3,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 2,
+      "c": 4,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 3,
+      "c": -2,
+      "color": "blue",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": -1,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 3,
+      "c": 0,
+      "color": "blue",
+      "n": 2
+     },
+     {
+      "r": 3,
+      "c": 1,
+      "color": "red",
+      "n": 6
+     },
+     {
+      "r": 3,
+      "c": 2,
+      "color": "red",
+      "n": 5
+     },
+     {
+      "r": 3,
+      "c": 3,
+      "color": "blue",
+      "n": 4
+     },
+     {
+      "r": 3,
+      "c": 4,
+      "color": "blue",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": -1,
+      "color": "brown",
+      "n": 2
+     },
+     {
+      "r": 4,
+      "c": 0,
+      "color": "brown",
+      "n": 5
+     },
+     {
+      "r": 4,
+      "c": 1,
+      "color": "gray",
+      "n": 4
+     },
+     {
+      "r": 4,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 4,
+      "c": 3,
+      "color": "brown",
+      "n": 1
+     },
+     {
+      "r": 4,
+      "c": 4,
+      "color": "green",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": -1,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 5,
+      "c": 0,
+      "color": "gray",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 1,
+      "color": "yellow",
+      "n": 2
+     },
+     {
+      "r": 5,
+      "c": 2,
+      "color": "brown",
+      "n": 3
+     },
+     {
+      "r": 5,
+      "c": 3,
+      "color": "brown",
+      "n": 6
+     },
+     {
+      "r": 6,
+      "c": 0,
+      "color": "gray",
+      "n": 3
+     },
+     {
+      "r": 6,
+      "c": 1,
+      "color": "yellow",
+      "n": 4
+     },
+     {
+      "r": 6,
+      "c": 2,
+      "color": "yellow",
+      "n": 1
+     },
+     {
+      "r": 6,
+      "c": 3,
+      "color": "brown",
+      "n": 3
      }
     ],
     "confidence": "high"

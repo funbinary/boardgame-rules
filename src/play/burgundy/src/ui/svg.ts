@@ -1,6 +1,7 @@
 // SVG 渲染:六角网格、板块、骰子、货物。全部内联 SVG,无外部素材。
 import type { GameState, Tile } from '../engine/state';
 import type { TileColor } from '../engine/types';
+import { resP } from '../engine/modules/team';
 
 export const COLOR_HEX: Record<TileColor, string> = {
   yellow: '#e0b93c', blue: '#4a7ba6', red: '#8c2f39', gray: '#9a9a9a',
@@ -23,6 +24,7 @@ export function hexPath(cx: number, cy: number, w = HEX_W, h = HEX_H): string {
 
 /** 板块图标(自绘扁平小图) */
 export function tileGlyph(t: Tile): string {
+  if (t.twin) return twinGlyph(t.twin.vines);
   if (t.inn) return innGlyph();
   if (t.whitecastle) return castleGlyph('#ffffff');
   if (t.goose) return `<text y="8" font-size="26" text-anchor="middle">🦢</text>`;
@@ -35,6 +37,15 @@ export function tileGlyph(t: Tile): string {
     case 'gray': return `<circle r="7" fill="none" stroke="#fff" stroke-width="2"/><circle r="3" fill="#fff"/>`;
     default: return '';
   }
+}
+
+const VINE_HEX: Record<string, string> = {
+  red: '#a33', white: '#eee', yellow: '#db3', green: '#3a7', blue: '#36a', purple: '#73a',
+};
+/** 双生六角片:两道藤色条纹 */
+function twinGlyph(vines: [string, string]): string {
+  const stripe = (v: string, dy: number) => `<rect x="-14" y="${dy - 5}" width="28" height="10" rx="3" fill="${VINE_HEX[v] ?? '#888'}" stroke="#2c2420" stroke-width="0.8"/>`;
+  return `${stripe(vines[0], -6)}${stripe(vines[1], 6)}`;
 }
 
 function buildingGlyph(b: string): string {
@@ -113,7 +124,9 @@ export function goodsSvg(colorIdx: number, count: number): string {
 /** 计分等通用小组件 */
 export function playerBadge(g: GameState, idx: number): string {
   const p = g.players[idx];
-  return `<span class="pbadge" style="--pc:${p.color}">${escapeHtml(p.name)} · ${p.vp}分 · ${p.workers}🛠 ${p.silver}🪙</span>`;
+  const rp = resP(g, idx);
+  const teamTag = p.team ? `<i class="teamtag">${p.team}</i>` : '';
+  return `<span class="pbadge" style="--pc:${p.color}">${teamTag}${escapeHtml(p.name)} · ${p.vp}分 · ${rp.workers}🛠 ${rp.silver}🪙</span>`;
 }
 
 export function escapeHtml(s: string): string {

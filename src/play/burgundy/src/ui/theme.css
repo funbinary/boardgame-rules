@@ -64,9 +64,19 @@ footer { margin-top: 28px; color: #8a7a68; font-size: 12px; }
   width: 28px; height: 28px; border-radius: 50%; background: #3a3a3a; color: #fff;
   display: inline-flex; align-items: center; justify-content: center; font-weight: 700; flex: none;
 }
+.central .depot-n.pill {
+  width: auto; padding: 0 10px; border-radius: 14px; font-size: 13px; white-space: nowrap;
+}
 .central .depot.black .depot-n { background: #7a5a20; }
+.central .depot.vine .depot-n { background: #5a7a40; }
 .depot-tile, .black-tile { cursor: pointer; }
 .depot-goods { cursor: pointer; }
+.vslot, .shop-slot, .vspace.can { cursor: pointer; }
+.vslot.can polygon, .shop-slot.can polygon, .vspace.can polygon { stroke: var(--burgundy); stroke-width: 2; }
+button.mini { font-size: 12px; padding: 1px 6px; }
+.shield { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px;
+  padding: 0 4px; border-radius: 50%; background: #8c2f39; color: #fff; font-size: 12px; font-weight: 700; }
+.vine-panel svg { background: #f4ecdc; border-radius: 6px; }
 .board-wrap { background: #fff6; border: 1px solid #d8c8b0; border-radius: 8px; padding: 10px; }
 .board-wrap h2 { margin: 4px 6px; font-size: 16px; }
 .duchy { width: 100%; height: auto; }

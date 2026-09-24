@@ -203,6 +203,20 @@ describe('扩展兼容', () => {
     // 葡萄园局的自动机明细不包含普通区域分(官方口径)
     expect(bd.every((x) => !x.label.includes('区域'))).toBe(true);
   });
+
+  it('葡萄园:自动机不领藤奖励板块(p27),真实玩家各 1', () => {
+    const g = createGame({ seed: 9, playerCount: 2, modules: ['automa', 'vineyard'], automa: { difficulty: 'normal', modifiers: [] } });
+    expect(g.players[1].isAutoma).toBe(true);
+    expect(g.players[1].vineyard).toBeUndefined();
+    for (const p of g.players) {
+      if (p.isAutoma) continue;
+      expect(p.vineyard?.bonusTiles.length).toBe(1);
+    }
+    // 终局自动机明细无藤奖励计分
+    const { final } = playSolo(607, { modules: ['vineyard'] });
+    const bd = final.final?.perPlayer.find((x) => x.idx === 1)?.breakdown ?? [];
+    expect(bd.every((x) => !x.label.includes('藤'))).toBe(true);
+  });
 });
 
 describe('平手与胜者', () => {

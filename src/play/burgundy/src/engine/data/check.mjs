@@ -74,6 +74,29 @@ if (boards?.data?.boards) {
   for (const id of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
     if (!seen.has(id)) warns.push(`版图 ${id} 缺失(勘定未完成)`);
   }
+  // 边境哨所版图 23-30:哨所序号恰为 1-3(同一序号可标多格,如底边豁口触两格)
+  const outpostBoards = boards.data.boards.filter((b) => b.id >= 23 && b.id <= 30);
+  if (outpostBoards.length !== 8) warns.push(`边境哨所版图 ${outpostBoards.length}/8(勘定未完成)`);
+  for (const b of outpostBoards) {
+    const nums = new Set((b.cells ?? []).filter((c) => c.outpost != null).map((c) => c.outpost));
+    if (nums.size !== 3 || ![1, 2, 3].every((n) => nums.has(n))) errors.push(`版图 ${b.id} 哨所序号异常:${[...nums].join(',')}`);
+  }
+  // 团队版图 31/32(占位):至少 1 红格供初始城堡
+  for (const id of [31, 32]) {
+    const b = boards.data.boards.find((x) => x.id === id);
+    if (!b) warns.push(`团队版图 ${id} 缺失(占位未建)`);
+    else if (!(b.cells ?? []).some((c) => c.color === 'red')) errors.push(`团队版图 ${id} 无红格,初始城堡不可放`);
+  }
+  // 版图 1-30 颜色配比(勘定不变量:brown12/yellow6/blue6/green6/red4/gray3;偏离仅警告,不强制)
+  const BUDGET = { brown: 12, yellow: 6, blue: 6, green: 6, red: 4, gray: 3 };
+  for (const b of boards.data.boards) {
+    if (b.id > 30 || !b.cells?.length) continue;
+    const cnt = {};
+    for (const c of b.cells) cnt[c.color] = (cnt[c.color] ?? 0) + 1;
+    for (const [col, n] of Object.entries(BUDGET)) {
+      if ((cnt[col] ?? 0) !== n) warns.push(`版图 ${b.id} ${col}格 ${cnt[col] ?? 0} ≠ 不变量 ${n}`);
+    }
+  }
   // 自动机版图 35/36(占位):37 格 + 36 号修正标记计数(规则书 p26 硬约束)
   const b35 = boards.data.boards.find((b) => b.id === 35);
   const b36 = boards.data.boards.find((b) => b.id === 36);
@@ -149,6 +172,57 @@ const mons = read('monasteries.json');
 if (mons?.data) {
   const ns = new Set(mons.data.map((m) => m.n));
   for (let n = 1; n <= 29; n++) if (!ns.has(n)) errors.push(`修道院缺 ${n} 号`);
+}
+
+// ---- traderoute.json(P2;占位数据,校验形状与词表) ----
+const TRADE_REWARDS = ['workers4', 'workers2', 'silver2', 'silver1', 'vp4', 'vp2', 'takeBuilding', 'takeShipLivestock', 'takeMineMonasteryCastle', 'takeAny'];
+const trade = read('traderoute.json');
+if (trade?.data) {
+  const tiles = trade.data.tiles;
+  if (tiles?.length !== 12) errors.push(`商路板块数量 ≠ 12(实际 ${tiles?.length})`);
+  for (const t of tiles ?? []) {
+    if (t.spaces?.length !== 3) errors.push(`商路板块 ${t.id} 格数 ≠ 3`);
+    for (const s of t.spaces ?? []) {
+      if (!(s.n >= 1 && s.n <= 6)) errors.push(`商路板块 ${t.id} 非法点数 ${s.n}`);
+      if (!TRADE_REWARDS.includes(s.reward)) errors.push(`商路板块 ${t.id} 非法奖励 ${s.reward}`);
+    }
+  }
+}
+
+// ---- vineyard.json(P2;占位数据,校验形状与规则书硬数字) ----
+const vine = read('vineyard.json');
+if (vine?.data) {
+  const v = vine.data;
+  if (v.bagCount !== 51) errors.push(`双生片布袋数 ≠ 51(实际 ${v.bagCount})`);
+  if (v.bonusTypes?.length !== 6) errors.push('藤奖励类型数 ≠ 6');
+  if (v.twinScores?.length !== 13) errors.push('双生计分表长度 ≠ 13(1..13+)');
+  if (JSON.stringify(v.twinScores?.slice(0, 3)) !== JSON.stringify([1, 3, 6])) errors.push('双生计分表前 3 档应为 1/3/6');
+  for (const key of ['p2', 'p3', 'p4']) {
+    const nums = v.supplyNums?.[key];
+    if (!Array.isArray(nums)) { errors.push(`vineyard.supplyNums 缺 ${key}`); continue; }
+    if (key === 'p4' && nums.length !== 6) errors.push('4人补给区应 6 槽');
+    if (key !== 'p4' && nums.length !== 3) errors.push(`${key} 补给区应 3 片(每片 2 点数)`);
+  }
+  const shop = v.shopSlots;
+  if (shop?.p2 !== 1 || shop?.p3 !== 3 || shop?.p4 !== 3) errors.push('商店槽数应为 p2=1/p3=3/p4=3');
+  // 官方布袋构成(high):6 纯色×pureEach + C(n,2)×mixedEach = 51
+  const comp = v.bagComposition;
+  if (comp?.pureColors?.length) {
+    const n = comp.pureColors.length;
+    const total = n * (comp.pureEach ?? 1) + (n * (n - 1) / 2) * (comp.mixedEach ?? 3);
+    if (total !== v.bagCount) errors.push(`布袋构成总数 ${total} ≠ bagCount ${v.bagCount}`);
+  }
+  // 版图空间(若显式):骰点 1-6;底层恰 2 位且骰点含 1 和 4(规则书确证)
+  const spaces = v.board?.spaces;
+  if (Array.isArray(spaces) && spaces.length) {
+    for (const s of spaces) {
+      if (!(s.n >= 1 && s.n <= 6)) errors.push(`vineyard 空间 L${s.layer}S${s.slot} 骰点非法 ${s.n}`);
+    }
+    const bottom = spaces.filter((s) => s.layer === 0);
+    if (bottom.length !== 2 || !bottom.some((s) => s.n === 1) || !bottom.some((s) => s.n === 4)) {
+      errors.push('vineyard 底层应恰 2 位且骰点 1/4(规则书 p20 确证)');
+    }
+  }
 }
 
 // ---- 汇总 ----

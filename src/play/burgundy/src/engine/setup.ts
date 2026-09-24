@@ -6,9 +6,9 @@ import { innModule } from './modules/inn';
 import { whitecastleModule } from './modules/whitecastle';
 import { traderouteModule } from './modules/traderoute';
 import { shieldsModule } from './modules/shields';
-import { vineyardModule } from './modules/vineyard';
+import { vineyardModule, refillVineyard } from './modules/vineyard';
 import { automaModule } from './modules/automa';
-import type { DepotState, GameState, GoodsTile, PlayerState, Tile } from './state';
+import type { DepotState, GameState, GoodsTile, PlayerState, TeamState, Tile } from './state';
 import type { BoardCell, DuchyBoard, ModuleId, TileColor } from './types';
 
 // 注册全部模块钩子
@@ -100,7 +100,13 @@ export function createGame(opts: SetupOptions): GameState {
   let gi = 25;
 
   // ---- 玩家 ----
-  const usableBoards = boards.boards.filter((b) => b.cells.length > 0);
+  // 31/32(团队)与 35/36(自动机)为专用版图,不入普通玩家随机池;exp4(边境哨所)改发 23-30(无数据时回落基础池)
+  const baseBoards = boards.boards.filter((b) => b.cells.length > 0 && b.id < 23);
+  const outpostBoards = boards.boards.filter((b) => b.cells.length > 0 && b.id >= 23 && b.id <= 30);
+  const usableBoards = modules.includes('exp4') && outpostBoards.length ? outpostBoards : baseBoards;
+  const isTeam = modules.includes('exp9');
+  if (isTeam && playerCount !== 4) throw new Error('团队游戏(第九扩展)仅支持 4 人(2v2)');
+  const g_teams: Partial<Record<'A' | 'B', TeamState>> = {};
   const players: PlayerState[] = [];
   for (let i = 0; i < playerCount; i++) {
     let boardId = opts.boardIds?.[i];
@@ -125,11 +131,37 @@ export function createGame(opts: SetupOptions): GameState {
       mon6Used: false,
       isAutoma: false,
     };
-    for (let k = 0; k < 3; k++) {
-      const g = shuffledGoods[gi++];
-      (p.goods[g.color] ??= []).push(g);
+    if (!isTeam) {
+      // 团队模式:起始货物按队发放(下方团队分支),不按人发放
+      for (let k = 0; k < 3; k++) {
+        const g = shuffledGoods[gi++];
+        (p.goods[g.color] ??= []).push(g);
+      }
     }
     players.push(p);
+  }
+
+  // ---- 团队(第九扩展):座位 0,2 → A 队;1,3 → B 队。共享资源挂锚点(members[0])。
+  if (isTeam) {
+    const teamBoardId = opts.boardIds?.[0] ?? 31;
+    players[0].team = 'A'; players[2].team = 'A';
+    players[1].team = 'B'; players[3].team = 'B';
+    for (const tid of ['A', 'B'] as const) {
+      const members = players.filter((p) => p.team === tid).map((p) => p.idx);
+      const anchor = players[members[0]];
+      for (const m of members) {
+        players[m].boardId = teamBoardId;                          // UI 渲染用;placed 只认锚点
+        players[m].storage = [null, null];                         // 每人 2 私人格
+      }
+      anchor.goods = {};                                           // 队共享货物(覆盖个人起始货物)
+      for (let k = 0; k < 3; k++) {
+        const gd = shuffledGoods[gi++];
+        (anchor.goods[gd.color] ??= []).push(gd);
+      }
+      anchor.soldGoods = [];
+      anchor.bonusTiles = [];
+      g_teams[tid] = { id: tid, members, sharedStorage: [null, null] };
+    }
   }
 
   // ---- 供应堆(仅计数,用于校验) ----
@@ -140,14 +172,29 @@ export function createGame(opts: SetupOptions): GameState {
   };
 
   // ---- 起始玩家(掷骰决定)与工人分配;自动机模块下末位玩家是自动机,不参与起始掷骰 ----
+  // 团队:首轮行动序固定 A1,B1,A2,B2(座位 0,1,2,3);起始玩家 = 座位 0(A1)
   const startPool = modules.includes('automa') ? playerCount - 1 : playerCount;
-  const [startIdx, r1] = randInt(rng, Math.max(1, startPool));
+  const [startIdxRaw, r1] = randInt(rng, Math.max(1, startPool));
   rng = r1;
-  players.forEach((p, i) => { p.workers = ((i - startIdx + playerCount) % playerCount) + 1; });
-  // 轨:末位玩家先放,起始玩家在最顶
+  const startIdx = isTeam ? 0 : startIdxRaw;
+  if (isTeam) {
+    // 工人:起始玩家所在队 3,另一队 5;银币各队 2 —— 全部挂锚点
+    players[0].workers = 3; players[2].workers = 0;
+    players[1].workers = 5; players[3].workers = 0;
+    players[0].silver = 2; players[2].silver = 0;
+    players[1].silver = 2; players[3].silver = 0;
+  } else {
+    players.forEach((p, i) => { p.workers = ((i - startIdx + playerCount) % playerCount) + 1; });
+  }
+  // 轨:末位玩家先放,起始玩家在最顶;团队首轮固定 B2,A2,B1,A1(底→顶)
   const stack: number[] = [];
-  for (let k = playerCount - 1; k >= 1; k--) stack.push((startIdx + k) % playerCount);
-  stack.push(startIdx);
+  if (isTeam) {
+    for (let k = 3; k >= 1; k--) stack.push(k);
+    stack.push(0);
+  } else {
+    for (let k = playerCount - 1; k >= 1; k--) stack.push((startIdx + k) % playerCount);
+    stack.push(startIdx);
+  }
 
   const face = playerCount >= 3 ? central.front : (central.back ?? central.front);
   const depots: DepotState[] = face.depots.map((d) => ({ n: d.n, cells: d.cells.map(() => null) }));
@@ -159,6 +206,7 @@ export function createGame(opts: SetupOptions): GameState {
     modules,
     playerCount,
     players,
+    teams: isTeam ? { A: g_teams.A!, B: g_teams.B! } : undefined,
     phase: 0,
     round: 1,
     phasePools,
@@ -185,10 +233,14 @@ export function createGame(opts: SetupOptions): GameState {
     callModule(m, g, 'onSetup', moduleOpts);
   }
 
-  // 初始城堡:每人待决(从起始玩家开始;自动机不设初始城堡——城堡在郡县卡上)
+  // 初始城堡:每人待决(从起始玩家开始;自动机不设初始城堡——城堡在郡县卡上);
+  // 团队:每队 1 座,只推锚点(标准面 31 唯一中央红格,进阶面 32 任选红格)
   for (let k = playerCount - 1; k >= 0; k--) {
     const pi = (startIdx + k) % playerCount;
-    if (!players[pi].isAutoma) g.pending.push({ kind: 'initialCastle', player: pi });
+    if (!players[pi].isAutoma) {
+      if (isTeam && !(pi === 0 || pi === 1)) continue;   // 队员(非锚点)不放城堡
+      g.pending.push({ kind: 'initialCastle', player: pi });
+    }
   }
 
   beginPhase(g);
@@ -206,7 +258,8 @@ function makeGoods(t: ReturnType<typeof loadTiles>): GoodsTile[] {
   return out;
 }
 
-/** 阶段开始(含阶段A):补给区按格色补板块(考虑 4/3BD 标记)、补黑区、轮次货物上桌 */
+/** 阶段开始(含阶段A):补给区按格色补板块(考虑 4/3BD 标记)、补黑区、轮次货物上桌;
+ *  旅店堆 +1(第六扩展);葡萄园补给区/商店重补(扩展 p19) */
 export function beginPhase(g: GameState) {
   const central = loadCentral();
   const tiles = loadTiles();
@@ -259,6 +312,10 @@ export function beginPhase(g: GameState) {
   }
   g.rng = r;
   g.roundGoods = g.phasePools[g.phase].slice();
+  // 第六扩展:每阶段开始 1 个旅店放上桌(共 5)
+  if (g.modules.includes('exp6')) g.innPile += 1;
+  // 葡萄园:重补补给区+商店
+  if (g.modules.includes('vineyard')) refillVineyard(g);
 }
 
 /** 轮次开始:全员掷骰,起始玩家另掷白骰并把轮次格底货物放到白骰补给区 */
