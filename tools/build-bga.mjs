@@ -107,12 +107,24 @@ const SEO_BASE = "https://zhibinai.cn";
 const escAttr = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, bgg }) {
+function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, bgg, play }) {
   const chips = [
     players ? `<span class="meta-chip">👥 ${players} 人</span>` : "",
     bggChipHtml(bgg),
     `<span class="meta-chip">📄 ${chip || "BGA 官方文档"}</span>`,
   ].filter(Boolean).join("\n            ");
+
+  // 「在线玩」横幅:content/bga-zh/<id>.meta.json 提供 play 字段时渲染(链到 /play/<slug>/)
+  const playBanner = play && play.href
+    ? `<a class="play-banner" href="${escAttr(play.href)}">
+          <span class="play-banner-icon" aria-hidden="true">🎮</span>
+          <span class="play-banner-body">
+            <strong>${play.label || "在线玩本游戏"}</strong>
+            ${play.desc ? `<em>${play.desc}</em>` : ""}
+          </span>
+          <span class="play-banner-go">开始 →</span>
+        </a>`
+    : "";
 
   // SEO/GEO：canonical + Open Graph + JSON-LD（与 tools/wire-seo.mjs 保持一致；重建后无需再跑 wire-seo）
   const pageUrl = `${SEO_BASE}/games/bga/${id}.html`;
@@ -205,6 +217,8 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
             ${chips}
           </div>
         </header>
+
+        ${playBanner}
 
         ${contentHtml}
 
@@ -318,7 +332,7 @@ for (const [title, html] of byTitle) {
   const en = info.name && info.name.length <= 60 ? info.name : titleCase(id);
   const name = nameZh[id] || en; // 中文名优先展示
   const sub = meta.sub || (nameZh[id] ? `${en} · Board Game Arena 官方规则文档` : "Board Game Arena 官方规则文档");
-  const page = renderPage({ id, name, sub, players, contentHtml, chip: meta.chip, desc: meta.desc, source: meta.source, bgg: bggRatings[id] || null });
+  const page = renderPage({ id, name, sub, players, contentHtml, chip: meta.chip, desc: meta.desc, source: meta.source, bgg: bggRatings[id] || null, play: meta.play });
   fs.writeFileSync(path.join(OUT_DIR, id + ".html"), page);
   index.push({ id, name, en: name === en ? "" : en, players: players || "" });
   written++;

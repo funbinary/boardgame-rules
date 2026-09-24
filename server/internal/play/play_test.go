@@ -277,3 +277,32 @@ func TestThirdPartyJoinRejected(t *testing.T) {
 		t.Fatalf("满员应 409,got %d", res.StatusCode)
 	}
 }
+
+// P4 数据指纹:建房上报的 dataVersion 持久化并随房间查询/init 下发。
+func TestDataVersionPersisted(t *testing.T) {
+	srv, s := newTestServer(t)
+	alice := mkUser(t, s, "alice")
+	bob := mkUser(t, s, "bob")
+	_, out := do(t, "POST", srv.URL+"/api/play/rooms", alice.ID, map[string]any{
+		"gameKey": "burgundy", "seats": 2, "turnSeconds": 90, "dataVersion": "dv1-deadbeef",
+	})
+	roomID := out["room"].(map[string]any)["ID"].(string)
+	do(t, "POST", srv.URL+"/api/play/rooms/"+roomID+"/join", bob.ID, nil)
+	do(t, "POST", srv.URL+"/api/play/rooms/"+roomID+"/start", alice.ID, nil)
+
+	// REST 查询携带 DataVersion
+	res, out := do(t, "GET", srv.URL+"/api/play/rooms/"+roomID, alice.ID, nil)
+	if res.StatusCode != 200 {
+		t.Fatal("查询房间失败")
+	}
+	if got := out["room"].(map[string]any)["DataVersion"]; got != "dv1-deadbeef" {
+		t.Fatalf("DataVersion 未持久化:%v", out["room"])
+	}
+
+	// WS init 同样携带
+	wsA := dialWS(t, srv, roomID, alice.ID)
+	init := skipUntil(t, wsA, "init")
+	if got := init["room"].(map[string]any)["DataVersion"]; got != "dv1-deadbeef" {
+		t.Fatalf("init 未携带 DataVersion:%v", init["room"])
+	}
+}

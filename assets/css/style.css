@@ -1225,3 +1225,36 @@ body[data-page="shared"] {
 @media print {
   .card-collect { display: none !important; }
 }
+
+/* ---------- 「在线玩」横幅(规则页 → /play/) ---------- */
+.play-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0 26px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #6e2639, #7c2f3e 55%, #8f3a49);
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(110, 38, 57, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.play-banner:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(110, 38, 57, 0.32); color: #fff; text-decoration: none; }
+.play-banner-icon { font-size: 1.7rem; }
+.play-banner-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.play-banner-body strong { font-size: 1.02rem; letter-spacing: 0.02em; }
+.play-banner-body em { font-style: normal; font-size: 0.84rem; opacity: 0.85; }
+.play-banner-go {
+  margin-left: auto;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.92rem;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+@media (max-width: 640px) {
+  .play-banner { gap: 10px; padding: 12px 14px; }
+  .play-banner-go { display: none; }
+}

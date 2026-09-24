@@ -2,5 +2,10 @@
   "sub": "The Castles of Burgundy · 特别典藏版官方中文规则书",
   "chip": "特别典藏版规则书",
   "desc": "勃艮第城堡（特别典藏版）的中文规则全文整理，含基础游戏与全部典藏版扩展",
-  "source": "来源：整理自<a href=\"https://mp.weixin.qq.com/s/Q5LgHCoXpvZGdYITuS2H2w\" target=\"_blank\" rel=\"noopener\">微信公众号《勃艮第城堡：特别典藏版》官方中文规则书</a>（乐智源桌游工作室发布，游卡YOKA中文代理）· 规则内容归版权方所有，转录仅供个人学习查阅。"
+  "source": "来源：整理自<a href=\"https://mp.weixin.qq.com/s/Q5LgHCoXpvZGdYITuS2H2w\" target=\"_blank\" rel=\"noopener\">微信公众号《勃艮第城堡：特别典藏版》官方中文规则书</a>（乐智源桌游工作室发布，游卡YOKA中文代理）· 规则内容归版权方所有，转录仅供个人学习查阅。",
+  "play": {
+    "href": "/play/burgundy/",
+    "label": "在线玩《勃艮第城堡:特别典藏版》",
+    "desc": "单机(官方自动机) / 同屏热座 / 好友联机 · 支持旅店、商路、盾徽、葡萄园、边境哨所、白色城堡、团队 2v2"
+  }
 }

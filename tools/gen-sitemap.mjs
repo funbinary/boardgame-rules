@@ -28,6 +28,19 @@ if (fs.existsSync(bgaDir)) {
   console.log(`zh pages: ${zhGames.length}, bga pages: ${bgaPages.length}`);
 }
 
+// 在线玩页(play/<slug>/index.html,静态构建产物)
+const playDir = path.join(ROOT, "play");
+if (fs.existsSync(playDir)) {
+  let playCount = 0;
+  for (const d of fs.readdirSync(playDir).sort()) {
+    const rel = path.join("play", d, "index.html");
+    if (d.startsWith(".") || !fs.existsSync(path.join(ROOT, rel))) continue;
+    urls.push(entry(rel, `/play/${d}/`, "0.8"));
+    playCount++;
+  }
+  if (playCount) console.log(`play pages: ${playCount}`);
+}
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), xml, "utf8");
 console.log(`sitemap.xml written: ${urls.length} URLs`);

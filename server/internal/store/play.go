@@ -9,6 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -29,6 +30,8 @@ type PlayRoom struct {
 	Status      string // lobby | playing | ended
 	Seed        int64
 	HostUserID  int64
+	// DataVersion 建房客户端的勘定数据指纹(P4 数据漂移防护;空串=历史房间)
+	DataVersion string
 	CreatedAt   time.Time
 }
 
@@ -84,6 +87,12 @@ func (s *Store) migratePlay(ctx context.Context) error {
 			return fmt.Errorf("migrate play: %w", err)
 		}
 	}
+	// P4 数据指纹列:老库补列(已存在时报 duplicate column,忽略)
+	if _, err := s.db.ExecContext(ctx, `ALTER TABLE play_rooms ADD COLUMN data_version TEXT NOT NULL DEFAULT ''`); err != nil {
+		if !strings.Contains(err.Error(), "duplicate column") {
+			return fmt.Errorf("migrate play data_version: %w", err)
+		}
+	}
 	return nil
 }
 
@@ -107,9 +116,9 @@ func (s *Store) CreatePlayRoom(ctx context.Context, hostUserID int64, r PlayRoom
 	}
 	for attempt := 0; attempt < 5; attempt++ {
 		_, err := s.db.ExecContext(ctx,
-			`INSERT INTO play_rooms (id, game_key, modules, seats, turn_seconds, status, seed, host_user_id, created_at)
-			 VALUES (?,?,?,?,?,?,?,?,?)`,
-			r.ID, r.GameKey, r.Modules, r.Seats, r.TurnSeconds, r.Status, r.Seed, r.HostUserID, formatTime(r.CreatedAt))
+			`INSERT INTO play_rooms (id, game_key, modules, seats, turn_seconds, status, seed, host_user_id, created_at, data_version)
+			 VALUES (?,?,?,?,?,?,?,?,?,?)`,
+			r.ID, r.GameKey, r.Modules, r.Seats, r.TurnSeconds, r.Status, r.Seed, r.HostUserID, formatTime(r.CreatedAt), r.DataVersion)
 		if err == nil {
 			if err := s.joinSeat(ctx, r.ID, hostUserID, 0); err != nil {
 				return nil, err
@@ -127,11 +136,11 @@ func (s *Store) CreatePlayRoom(ctx context.Context, hostUserID int64, r PlayRoom
 
 func (s *Store) GetPlayRoom(ctx context.Context, id string) (*PlayRoom, error) {
 	row := s.db.QueryRowContext(ctx,
-		`SELECT id, game_key, modules, seats, turn_seconds, status, seed, host_user_id, created_at
+		`SELECT id, game_key, modules, seats, turn_seconds, status, seed, host_user_id, created_at, data_version
 		 FROM play_rooms WHERE id = ?`, id)
 	var r PlayRoom
 	var created string
-	if err := row.Scan(&r.ID, &r.GameKey, &r.Modules, &r.Seats, &r.TurnSeconds, &r.Status, &r.Seed, &r.HostUserID, &created); err != nil {
+	if err := row.Scan(&r.ID, &r.GameKey, &r.Modules, &r.Seats, &r.TurnSeconds, &r.Status, &r.Seed, &r.HostUserID, &created, &r.DataVersion); err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
 			return nil, ErrNotFound
 		}
@@ -144,7 +153,7 @@ func (s *Store) GetPlayRoom(ctx context.Context, id string) (*PlayRoom, error) {
 // ListPlayRoomsForUser 我参与且未结束的房间。
 func (s *Store) ListPlayRoomsForUser(ctx context.Context, userID int64) ([]PlayRoom, error) {
 	rows, err := s.db.QueryContext(ctx,
-		`SELECT r.id, r.game_key, r.modules, r.seats, r.turn_seconds, r.status, r.seed, r.host_user_id, r.created_at
+		`SELECT r.id, r.game_key, r.modules, r.seats, r.turn_seconds, r.status, r.seed, r.host_user_id, r.created_at, r.data_version
 		 FROM play_rooms r JOIN play_room_players p ON p.room_id = r.id
 		 WHERE p.user_id = ? AND r.status != 'ended'
 		 ORDER BY r.created_at DESC LIMIT 50`, userID)
@@ -156,7 +165,7 @@ func (s *Store) ListPlayRoomsForUser(ctx context.Context, userID int64) ([]PlayR
 	for rows.Next() {
 		var r PlayRoom
 		var created string
-		if err := rows.Scan(&r.ID, &r.GameKey, &r.Modules, &r.Seats, &r.TurnSeconds, &r.Status, &r.Seed, &r.HostUserID, &created); err != nil {
+		if err := rows.Scan(&r.ID, &r.GameKey, &r.Modules, &r.Seats, &r.TurnSeconds, &r.Status, &r.Seed, &r.HostUserID, &created, &r.DataVersion); err != nil {
 			return nil, err
 		}
 		r.CreatedAt = parseTime(created)

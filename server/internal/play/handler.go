@@ -63,6 +63,8 @@ type createRoomReq struct {
 	Seats       int      `json:"seats"`
 	TurnSeconds int      `json:"turnSeconds"`
 	Modules     []string `json:"modules"`
+	// DataVersion 建房客户端的勘定数据指纹(P4;可空,兼容旧客户端)
+	DataVersion string `json:"dataVersion"`
 }
 
 func (h *Handler) handleCreateRoom(w http.ResponseWriter, r *http.Request) {
@@ -97,10 +99,15 @@ func (h *Handler) handleCreateRoom(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+	if len(req.DataVersion) > 64 {
+		h.fail(w, 400, "bad", "非法数据版本")
+		return
+	}
 	modJSON, _ := json.Marshal(req.Modules)
 	room, err := h.store.CreatePlayRoom(r.Context(), u.ID, store.PlayRoom{
 		GameKey: req.GameKey, Modules: string(modJSON),
 		Seats: req.Seats, TurnSeconds: req.TurnSeconds,
+		DataVersion: req.DataVersion,
 	})
 	if err != nil {
 		log.Printf("play: 建房失败: %v", err)
