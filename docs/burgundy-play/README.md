@@ -223,7 +223,7 @@ D:\project\rules\
 ### P4:上线前检查 ✅(2026-09-24 完成,待部署生效)
 - **生产 nginx WebSocket 头**:已在线补齐——`bootstrap.sh` 的 nginx 段原样在服务器执行(自动备份 `rule.conf.bak.*` → 插入 `proxy_http_version 1.1`/`Upgrade`/`Connection "upgrade"`/`read/send_timeout 3600s` → `nginx -t` 通过 → reload)。服务器本机验证升级请求已穿透 nginx 到达 Go(生产二进制为 2026-09-20 版,尚无 `/api/play/*` 路由故 404;push 部署新二进制后 WS 即通)。
 - **生产数据指纹**:全链路实现——引擎新增 `dataVersion.ts`(对 8 个勘定数据 JSON 做 FNV-1a 指纹,`dv1-xxxxxxxx`);建房时随 `POST /api/play/rooms` 上报,`play_rooms` 表新列 `data_version` 持久化(老库自动 ALTER 补列,重复补列安全);WS `init`/REST 房间查询下发,客户端在 init/started/重同步三处比对,不一致则整页拦截并提示重建房间(同种子重放会分叉,提前拦截代替事后 desync);历史房间空版本跳过校验,向后兼容。测试:TS +1(net.test.ts 指纹三态),Go +1(TestDataVersionPersisted:REST 与 WS init 均下发)。
-- **部署**:push main 触发 deploy.yml(静态站 rsync + 交叉编译 rules-api 重启),指纹功能随该次部署对两端同时生效。
+- **部署**:~~push main 触发 deploy.yml~~ **deploy.yml 的 runner→服务器传输已连续三次 cancelled**(2026-09-20/09-22/09-24,均在 rsync 步骤挂起到 30m 超时;本地 SSH 通道正常)。2026-09-24 已改为**本地手动部署**:`git archive HEAD --format=tar.gz ':(exclude)server'` → ssh 解压至 rules.new → 原子换名(零空窗);本地交叉编译 `CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build` → scp 换装 + restart。生产验收全绿(站点 200/在线玩页新 bundle/`/api/play/*` 401 走鉴权/WS 升级穿透 nginx/外部视角横幅正常)。后续待办:修复 CI 传输(自托管 runner 或分块+断点续传)。
 
 ---
 
