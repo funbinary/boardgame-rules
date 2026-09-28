@@ -143,3 +143,36 @@ function setupSolo(modules: string[]) {
 }
 
 home();
+
+// 六角片效果提示:悬浮(pointerover)或点击/触屏点按带 data-tip 的元素时浮层展示。
+// 全局一次性委托,热座/单机/联机三种模式通用;内容由 views.ts 的 tileTip 生成。
+(() => {
+  const box = document.createElement('div');
+  box.className = 'tipbox';
+  box.style.display = 'none';
+  document.body.appendChild(box);
+  let cur: Element | null = null;
+  const hide = () => { box.style.display = 'none'; cur = null; };
+  const show = (el: Element, x: number, y: number) => {
+    const text = el.getAttribute('data-tip') ?? '';
+    if (!text) { hide(); return; }
+    box.textContent = text;
+    box.style.display = 'block';
+    cur = el;
+    const r = box.getBoundingClientRect();
+    box.style.left = `${Math.max(6, Math.min(x + 14, window.innerWidth - r.width - 8))}px`;
+    box.style.top = `${Math.max(6, Math.min(y + 16, window.innerHeight - r.height - 8))}px`;
+  };
+  document.addEventListener('pointerover', (e) => {
+    const el = (e.target as Element).closest?.('[data-tip]') ?? null;
+    if (el && el !== cur) show(el, e.clientX, e.clientY);
+    else if (!el) hide();
+  });
+  document.addEventListener('click', (e) => {
+    const el = (e.target as Element).closest?.('[data-tip]') ?? null;
+    if (el) show(el, e.clientX, e.clientY);
+    else hide();
+  });
+  window.addEventListener('scroll', hide, true);
+  window.addEventListener('blur', hide);
+})();

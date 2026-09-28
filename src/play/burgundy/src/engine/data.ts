@@ -7,6 +7,7 @@ import tilesJson from './data/tiles.json';
 import automaJson from './data/automa.json';
 import tradeJson from './data/traderoute.json';
 import vineyardJson from './data/vineyard.json';
+import buildingsJson from './data/buildings.json';
 import type { CentralBoardDef, DuchyBoard, TileColor } from './types';
 
 export interface CentralFace {
@@ -94,6 +95,14 @@ export function loadMonasteries(modules: string[] = []): MonasteryItem[] {
   const all = (monasteriesJson.data as unknown as MonasteryItem[]).slice();
   if (!modules.includes('exp2')) return all.filter((m) => m.n <= 26);
   return all;
+}
+
+// ---- 建筑效果表(UI 效果提示用;text=帮助表速览,detail=规则书正文) ----
+
+export interface BuildingItem { type: string; name: string; when: string; text: string; detail: string }
+
+export function loadBuildings(): BuildingItem[] {
+  return buildingsJson.data as unknown as BuildingItem[];
 }
 
 // ---- 商路数据(8th 扩展;占位见 traderoute.json _meta) ----

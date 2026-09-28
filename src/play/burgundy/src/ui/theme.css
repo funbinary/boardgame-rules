@@ -53,8 +53,14 @@ footer { margin-top: 28px; color: #8a7a68; font-size: 12px; }
 .game-header .ended { color: var(--burgundy-strong); font-size: 18px; }
 .pbadge { background: #fff; border-left: 5px solid var(--pc, #888); padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
 .game-grid {
-  display: grid; grid-template-columns: 300px 1fr 300px; gap: 14px; margin-top: 10px; align-items: start;
+  display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 14px; margin-top: 10px; align-items: start;
 }
+.game-grid .central { grid-column: 1 / -1; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* ---- 主板图(实体版:绿纸古地图) ---- */
+.central .mainboard { width: 100%; height: auto; display: block; }
+.central .extra-rows { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+.central .extra-rows .depot { display: inline-flex; align-items: center; margin-bottom: 0; }
 .central .depot {
   display: flex; align-items: center; gap: 6px; margin-bottom: 6px;
   border: 2px solid transparent; border-radius: 8px; padding: 2px;
@@ -70,27 +76,54 @@ footer { margin-top: 28px; color: #8a7a68; font-size: 12px; }
 .central .depot.black .depot-n { background: #7a5a20; }
 .central .depot.vine .depot-n { background: #5a7a40; }
 .depot-tile, .black-tile { cursor: pointer; }
+.depot-tile.can polygon, .black-tile.can polygon, .vslot.can polygon, .shop-slot.can polygon, .vspace.can polygon {
+  stroke: #ffd964; stroke-width: 3;
+}
 .depot-goods { cursor: pointer; }
-.vslot, .shop-slot, .vspace.can { cursor: pointer; }
-.vslot.can polygon, .shop-slot.can polygon, .vspace.can polygon { stroke: var(--burgundy); stroke-width: 2; }
+.depot-goods.can rect { stroke: #ffd964; stroke-width: 3; }
 button.mini { font-size: 12px; padding: 1px 6px; }
 .shield { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px;
   padding: 0 4px; border-radius: 50%; background: #8c2f39; color: #fff; font-size: 12px; font-weight: 700; }
 .vine-panel svg { background: #f4ecdc; border-radius: 6px; }
-.board-wrap { background: #fff6; border: 1px solid #d8c8b0; border-radius: 8px; padding: 10px; }
-.board-wrap h2 { margin: 4px 6px; font-size: 16px; }
+/* ---- 玩家公国板(实体版:羊皮纸+酒红饰边) ---- */
+.board-wrap {
+  background: linear-gradient(160deg, #f6ecd6 0%, #efe0c2 55%, #e8d5b0 100%);
+  border: 2px solid #c8a86a; border-radius: 12px; padding: 12px;
+  box-shadow: inset 0 0 0 5px #7a1f2b22, inset 0 0 24px #c8a86a44;
+}
+.board-wrap h2 { margin: 2px 6px 8px; font-size: 16px; color: #5c1019; }
 .duchy { width: 100%; height: auto; }
 .cell { cursor: pointer; }
+.cell.can polygon { stroke: #ffd964; stroke-width: 3; }
+.cell.castle-target polygon { stroke: #ffd964; stroke-width: 3.5; }
+.duchy-strip { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; align-items: stretch; }
+.strip-box {
+  background: #fffdf6; border: 1.5px solid #c8a86a; border-radius: 10px; padding: 6px 10px 8px;
+  display: flex; flex-direction: column; gap: 2px; justify-content: center;
+}
+.strip-box label { font-size: 11.5px; color: #7c6a58; }
+.strip-box .res { font-size: 14px; white-space: nowrap; }
+.btile {
+  display: inline-flex; align-items: center; justify-content: center; width: 21px; height: 21px;
+  border-radius: 50%; border: 2px solid; color: #fdf6e3; font-size: 11.5px; font-weight: 700; margin: 0 1px;
+}
 .panel { display: flex; flex-direction: column; gap: 10px; }
 .panel .row { background: #fff8; border: 1px solid #d8c8b0; border-radius: 8px; padding: 8px; }
 .panel .row label { font-size: 12px; color: #7c6a58; display: block; margin-bottom: 4px; }
 .die { cursor: pointer; }
+.dice-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.modcol { display: flex; flex-direction: column; gap: 4px; }
+.modbtns { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; color: #7c6a58; }
+.modbtns button { padding: 1px 7px; font-size: 12px; }
 .die.sel { outline: 3px solid var(--burgundy); outline-offset: 2px; border-radius: 8px; }
+.die.sel rect { stroke: var(--burgundy); stroke-width: 3; }
 .bonus { align-self: center; background: var(--burgundy-soft); border: 1px solid var(--burgundy); color: var(--burgundy-strong); padding: 2px 8px; border-radius: 4px; font-size: 13px; }
 .storage-tile { cursor: pointer; }
 .storage-tile.sel { outline: 3px solid var(--burgundy); outline-offset: 2px; border-radius: 8px; }
+.storage-tile.sel polygon { stroke: var(--burgundy); stroke-width: 3.5; }
 .goods { cursor: pointer; }
 .goods.can { outline: 3px solid var(--burgundy); outline-offset: 1px; border-radius: 6px; }
+.goods.can rect { stroke: #ffd964; stroke-width: 3.5; }
 button {
   font-family: inherit; background: #fff; border: 1.5px solid var(--burgundy); color: var(--burgundy-strong);
   border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 14px;
@@ -102,7 +135,7 @@ button:hover:not(:disabled) { background: var(--burgundy-soft); }
 .log { background: #fff8; border: 1px solid #d8c8b0; border-radius: 8px; padding: 8px; max-height: 220px; overflow-y: auto; font-size: 12px; }
 .logline { padding: 1px 0; border-bottom: 1px dotted #e4d8c4; }
 .pending {
-  position: sticky; bottom: 10px; margin-top: 10px; background: var(--burgundy); color: #fff;
+  margin-top: 12px; background: var(--burgundy); color: #fff;
   border-radius: 10px; padding: 10px 14px; box-shadow: 0 4px 18px #0004;
 }
 .pending button { background: #fff; color: var(--burgundy-strong); margin: 4px 6px 0 0; }
@@ -116,11 +149,8 @@ button:hover:not(:disabled) { background: var(--burgundy-soft); }
 .modnote { color: #7c6a58; font-size: 13px; }
 
 @media (max-width: 1100px) {
-  .game-grid { grid-template-columns: 1fr 1fr; }
-  .central { grid-column: 1 / -1; order: -1; }
-}
-@media (max-width: 720px) {
   .game-grid { grid-template-columns: 1fr; }
+  .central { grid-column: auto; }
 }
 
 /* ---- 自动机面板 ---- */
@@ -147,3 +177,20 @@ button:hover:not(:disabled) { background: var(--burgundy-soft); }
 .setup .modsel { border: 1px solid #d8c9b4; border-radius: 8px; padding: 8px 12px; display: flex; flex-direction: column; gap: 6px; }
 .setup .modsel legend { color: #5c1019; font-size: 13px; }
 .setup .modsel label { font-size: 13px; display: flex; gap: 6px; align-items: center; }
+
+/* ---------- 六角片效果提示浮层(悬浮/点击 data-tip) ---------- */
+.tipbox {
+  position: fixed;
+  z-index: 999;
+  max-width: 300px;
+  background: rgba(44, 36, 32, 0.95);
+  color: #f4ecdd;
+  font-size: 12.5px;
+  line-height: 1.55;
+  padding: 8px 11px;
+  border-radius: 8px;
+  border: 1px solid rgba(244, 236, 221, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  white-space: pre-wrap;
+}

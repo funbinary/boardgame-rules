@@ -296,6 +296,10 @@ npx vite-node _cob/e2e-bot.mts <roomID> 9999
 
 ## 9. 变更日志
 
+- **2026-09-28(UI·按实体版图视觉重做)**:依据用户提供的实体「特别典藏版」主板图/玩家板扫描件(PDF 44 页,`_cob/pdf_scan/` 留档)重做对局界面——中央区从列表行改为整张主板图 SVG(绿纸古地图风:六个花朵状补给集群围绕骒点圆盘、集群左上角货物格带面值、深棕黑市面板 2🪙/块、右列 5×5 阶段/轮次轨带当前进度标记、回合顺位轨按 track 实时叠玩家棋子、轮次货物堆首度可视化);玩家公国板羊皮纸底+酒红双线饰边,底部新增三条 strip(储存格交互自侧栏迁入、六色货物出售轨点击即售+持货角标、资源+奖励板块展示——奖励板块首度可见);svg.ts 调色板对齐实体(每色配深色描边),板块改三层勾线模拟木片厚度,版图格实色+白字黑晕,新增骒盘/花朵布局/带面值货物片组件;待决提示条改文档流不再遮挡日志与公国板,改骰按钮骒1/骒2 常驻置灰;SVG outline 选中态兼容修复(改对 polygon 描边)。visual-judge 验收首轮两阻断(提示条遮挡/缺骒2行)修复后复检 3/3 pass;TS+59 测试绿,Playwright 冒烟无页面错误,`_cob/ui-smoke.mjs` 新增且旧冒烟脚本选择器适配新 DOM;产物重建。
+
+- **2026-09-24(UI·六角片效果提示)**:悬浮或点击任意六角片显示其效果浮层——新增 `tileTip()` 文案生成(修道院 29 种取 monasteries.json、建筑 8 种新接 buildings.json 装载器 loadBuildings()、牲畜/鹅/船/银矿/城堡/白堡/旅店/双生片各按规则书口径),挂接补给区/黑区/储存格/公国已放置格/葡萄园补给区与商店;葡萄园面板空间格显示 骰点+层+放置奖励(新增 BONUS_ZH 词表,含 takeAny/freeBlack/freeTwin/extraAction);main.ts 全局 pointerover+click 委托浮层(.tipbox),热座/单机/联机通用。typecheck+59 测试绿,浏览器目检通过。
+
 - **2026-09-24(P4 上线前检查)**:生产 nginx 补齐 WebSocket Upgrade 头(bootstrap.sh nginx 段在线执行,备份+nginx -t+reload,升级请求已穿透 nginx);数据指纹全链路落地(引擎 8 个数据 JSON 的 FNV 指纹 → 建房上报入库 → init/重同步比对,不一致整页拦截;老库自动补列,空版本向后兼容),TS 59/Go 测试全绿。生产 rules-api 为 2026-09-20 版,待 push main 触发 deploy.yml 部署对局后端与指纹功能。
 
 - **2026-09-24(P3 站点接入)**:规则页"在线玩"横幅(meta.json `play` 字段 + build-bga.mjs 注入酒红渐变横幅,样式入 style.css)、首页 featured 第 3 位收录勃艮第城堡(与 BGA 自动索引同名去重)、gen-sitemap.mjs 扫描 play/<slug>/ 入 sitemap(1661 URL,check-seo 全绿)。内置浏览器目检三处接入点全过;其余游戏接入只需 meta.json 加 play 字段。待办:P4 上线检查(nginx WS 头/数据指纹)+实物数据勘定。
