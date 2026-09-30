@@ -69,6 +69,7 @@ function preprocess(text) {
       if (stripLevel && level <= stripLevel) stripLevel = 0; // 剥离区结束
       if (!stripLevel && STRIP_HEAD.test(line)) { stripLevel = level; continue; }
       if (stripLevel) continue;
+      if (/^# 规则书第 \d+ 页/.test(line)) continue; // 转录文件题头,不进正文
       let t = line;
       if (DEMOTE_HEAD.test(t.replace(/^#+ /, ""))) t = t.replace(/^#+ /, "#### ");
       else if (t.startsWith("## 示例卡牌文字")) t = t.replace(/^## /, "### ");

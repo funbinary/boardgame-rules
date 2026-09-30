@@ -191,6 +191,7 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [地下酒吧（Speakeasy）](https://mp.weixin.qq.com/s/rd8TwTQ70XzUmEGOD9h1Lg) · 微信公众号「桌游怎么玩」（Vital Lacerda 作品，陈斌华中文规则书全文转录，见 `games/speakeasy.html`）
 - [电力公司（Power Grid）](https://mp.weixin.qq.com/s/BIVeveLX6kIYAHX9qqZntw) · 微信公众号「白马公子」（中文规则书全文转录，附中国/韩国地图扩展规则与资源表，见 `games/power-grid.html`）
 - [SETI：寻找外星人（SETI: Search for Extraterrestrial Intelligence）](https://mp.weixin.qq.com/s/GhvVuSu4sZ7t4qG1jQfHhA) · 微信公众号「桌游怎么玩」（[上篇 1–14](https://mp.weixin.qq.com/s/GhvVuSu4sZ7t4qG1jQfHhA) / [下篇 15–28](https://mp.weixin.qq.com/s/dsypcaYiXezRAdvcCrifjQ)，CGE 作品，陈斌华中文规则书全文转录，含单人游戏规则与 FAQ，见 `games/seti.html`）
+- [地外文明：太空机构（SETI: Space Agencies）](https://mp.weixin.qq.com/s/bOqAtW6UeCSGyJqAyBPm4Q) · 微信公众号「乐智源桌游工作室」（SETI 官方中文版《地外文明》的扩展规则书全文转录，封面+8 页，11 个非对称机构/快速启动牌/42 张新项目牌/3 个新外星物种/信号指示物/单人长期目标/Promo 卡牌与 FAQ，见 `games/seti-space-agencies.html`）
 - [奋进号：深海（Endeavor: Deep Sea）](https://mp.weixin.qq.com/s/wsGWL0IV3MMCTjv9A2xTvQ) · 微信公众号「张憬泽」（Burnt Island Games / Grand Gamers Guild 作品，张憬泽中文翻译&排版，16 页扫描图全文转录，含合作/单人模式，见 `games/endeavor-deep-sea.html`）
 - [卡坦岛（Catan）](https://mp.weixin.qq.com/s/NZg9R3WGyv07Y4ATOtsBRw) · 微信公众号「无忧桌游」（KOSMOS《卡坦：基礎》官方中文规则书全文转录，遊戲說明單張＋遊戲規則冊（繁体）＋玩家手冊（简体），覆盖原 BGA wiki 机翻页，见 `games/bga/catan.html`）
 - [埃多拉的德鲁伊（The Druids of Edora）](games/druids-of-edora.html) · 玩家社群流传扫描件（Stefan Feld 作品，alea / Ravensburger 出版，陈斌华中文翻译&排版，全书 12 页+双面规则参考表（魔法药剂/石碑）全文转录，见 `games/druids-of-edora.html`）
@@ -210,5 +211,9 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [大西部开拓者：新西兰开拓史（Great Western Trail: New Zealand）](https://www.gstonegames.com/game/doc-4984.html) · 集石词条所载非官方规则书（Alexander Pfister 设计，eggertspiele 出版/本长文化发行，1–4 人含单人模式，繁体规则书全文转录，一盒四册按各册页码重排，见 `games/gwt-new-zealand.html`）
 
 - [阿纳克遗迹：探险队长（Lost Ruins of Arnak: Expedition Leaders）](https://mp.weixin.qq.com/s/nEGzfRTol5gFHuc16sETPA) · 微信公众号「桌游怎么玩」所载官方简体中文规则书（Mín & Elwen 设计，CGE 出版/一刻馆代理发行，1–4 人扩展含单人变体，简体规则书全文转录，封面+页2–23+衬页按印刷页码重排，见 `games/arnak-expedition-leaders.html`）
+
+- [CLANK! 地下墓穴：地下世界（Clank! Catacombs: Underworld）](https://mp.weixin.qq.com/s/rev2XGxuP-gsbYloNm-8bw) · 微信公众号「无忧桌游」所载官方简体中文规则书（Paul Dennen 设计，Dire Wolf 出品，2025 年《Clank! Catacombs》第二弹扩展，冥界守卫/命运牌/恶魔助手/鹰身女妖等新元素与固定空间、宽恕变体，简体规则书 4 页全文转录，页 29–32，前两页页脚均印「30」系原书排印如此，见 `games/clank-catacombs-underworld.html`）
+
+- [CLANK! 冒险队（Clank!: Adventuring Party）](https://mp.weixin.qq.com/s/rev2XGxuP-gsbYloNm-8bw) · 微信公众号「无忧桌游」所载官方简体中文规则书（Paul Dennen 设计，Dire Wolf 出品，《CLANK!》5–6 人扩展，两种新玩家颜色、背包/王冠/万能钥匙与「反应(REACT)」「到达选择」新术语及专属角色，简体规则书 6 页全文转录（封底+页 34–38，角色录得四位，原帖未及其余角色页），见 `games/clank-adventuring-party.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
