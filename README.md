@@ -192,6 +192,7 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [电力公司（Power Grid）](https://mp.weixin.qq.com/s/BIVeveLX6kIYAHX9qqZntw) · 微信公众号「白马公子」（中文规则书全文转录，附中国/韩国地图扩展规则与资源表，见 `games/power-grid.html`）
 - [SETI：寻找外星人（SETI: Search for Extraterrestrial Intelligence）](https://mp.weixin.qq.com/s/GhvVuSu4sZ7t4qG1jQfHhA) · 微信公众号「桌游怎么玩」（[上篇 1–14](https://mp.weixin.qq.com/s/GhvVuSu4sZ7t4qG1jQfHhA) / [下篇 15–28](https://mp.weixin.qq.com/s/dsypcaYiXezRAdvcCrifjQ)，CGE 作品，陈斌华中文规则书全文转录，含单人游戏规则与 FAQ，见 `games/seti.html`）
 - [地外文明：太空机构（SETI: Space Agencies）](https://mp.weixin.qq.com/s/bOqAtW6UeCSGyJqAyBPm4Q) · 微信公众号「乐智源桌游工作室」（SETI 官方中文版《地外文明》的扩展规则书全文转录，封面+8 页，11 个非对称机构/快速启动牌/42 张新项目牌/3 个新外星物种/信号指示物/单人长期目标/Promo 卡牌与 FAQ，见 `games/seti-space-agencies.html`）
+- [姬路城（The White Castle）](https://mp.weixin.qq.com/s/7Az5TS7gdIokcO6RNyON_w) · 微信公众号「宁小方510」（Sheila Santos & Israel Cendrero 设计，Devir Games 出版，「圣瓦西里大教堂」系列第二作，官方中文规则书全文转录，18 张扫描图（封面+介绍+印页 4–20），桥梁骰子放置/城堡三层/三大行动/大名家纹与灯笼/时间流逝轨/单人模式「德川家族的到访」/终局计分示例/附录图标总表，见 `games/white-castle.html`）
 - [奋进号：深海（Endeavor: Deep Sea）](https://mp.weixin.qq.com/s/wsGWL0IV3MMCTjv9A2xTvQ) · 微信公众号「张憬泽」（Burnt Island Games / Grand Gamers Guild 作品，张憬泽中文翻译&排版，16 页扫描图全文转录，含合作/单人模式，见 `games/endeavor-deep-sea.html`）
 - [卡坦岛（Catan）](https://mp.weixin.qq.com/s/NZg9R3WGyv07Y4ATOtsBRw) · 微信公众号「无忧桌游」（KOSMOS《卡坦：基礎》官方中文规则书全文转录，遊戲說明單張＋遊戲規則冊（繁体）＋玩家手冊（简体），覆盖原 BGA wiki 机翻页，见 `games/bga/catan.html`）
 - [埃多拉的德鲁伊（The Druids of Edora）](games/druids-of-edora.html) · 玩家社群流传扫描件（Stefan Feld 作品，alea / Ravensburger 出版，陈斌华中文翻译&排版，全书 12 页+双面规则参考表（魔法药剂/石碑）全文转录，见 `games/druids-of-edora.html`）
