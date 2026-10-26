@@ -12,6 +12,9 @@ const RAW_DIR = path.join(ROOT, "_bga", "raw");
 
 const VOID = new Set(["br", "hr", "img", "input", "meta", "link", "area", "base", "col", "embed", "source", "track", "wbr"]);
 
+// 标签匹配正则（全局导出：verify-zh-html.mjs 复用同一份做平衡校验）
+export const TAG_RE = /<\/?([a-zA-Z][a-zA-Z0-9]*)((?:"[^"]*"|'[^']*'|[^"'>])*)>/g;
+
 // 从英文原始页面收集合法标签名（全部小写）
 function collectLegitTags() {
   const set = new Set(["!doctype"]);
@@ -40,7 +43,8 @@ const escapeBareLt = (html, legit) =>
 
 export function repairHtml(html, legit) {
   if (legit) html = escapeBareLt(html, legit);
-  const re = /<\/?([a-zA-Z][a-zA-Z0-9]*)((?:"[^"]*"|'[^']*'|[^"'>])*)>/g;
+  TAG_RE.lastIndex = 0;
+  const re = TAG_RE;
   let out = "", last = 0, m;
   const stack = [];
   while ((m = re.exec(html))) {
@@ -70,15 +74,18 @@ export function repairHtmlAuto(html) {
   return repairHtml(html, _legit);
 }
 
-const only = process.argv.slice(2);
-const files = only.length ? only.map(f => path.basename(f)) : fs.readdirSync(ZH_DIR).filter(f => f.endsWith(".html"));
-const legit = collectLegitTags();
-console.log("合法标签集:", [...legit].sort().join(" "));
-let changed = 0;
-for (const f of files) {
-  const p = path.join(ZH_DIR, f);
-  const before = fs.readFileSync(p, "utf8");
-  const after = repairHtml(before, legit);
-  if (after !== before) { fs.writeFileSync(p, after); changed++; }
+// 仅直接执行本脚本时才跑批量修复；被 import（verify-zh-html / translate-bga）时不产生副作用
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const only = process.argv.slice(2);
+  const files = only.length ? only.map(f => path.basename(f)) : fs.readdirSync(ZH_DIR).filter(f => f.endsWith(".html"));
+  const legit = collectLegitTags();
+  console.log("合法标签集:", [...legit].sort().join(" "));
+  let changed = 0;
+  for (const f of files) {
+    const p = path.join(ZH_DIR, f);
+    const before = fs.readFileSync(p, "utf8");
+    const after = repairHtml(before, legit);
+    if (after !== before) { fs.writeFileSync(p, after); changed++; }
+  }
+  console.log(`修复 ${changed}/${files.length} 个文件`);
 }
-console.log(`修复 ${changed}/${files.length} 个文件`);
