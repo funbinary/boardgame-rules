@@ -467,9 +467,3 @@ function renderPending(g: GameState, moves: Move[]): string {
   }
   return `<div class="pending"><b>${escapeHtml(p.name)}</b> ${body}</div>`;
 }
-
-/** SVG 组绑定用的 data 属性 → Move 匹配辅助(控制器用) */
-export function matchers(g: GameState, sel: UiSelection, moves: Move[]) {
-  void g; void sel; void moves;
-  return null;
-}

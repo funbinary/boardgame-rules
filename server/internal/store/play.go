@@ -20,27 +20,29 @@ var (
 	ErrAlreadyIn = errors.New("已在房间中")
 )
 
-// PlayRoom 房间元信息。
+// PlayRoom 房间元信息。json tag 钉住线上字段名(沿用历史大写驼峰,TS 侧
+// ServerRoom 逐字段对齐;协议一致性由 play/protocol_fixture_test.go 与
+// src/play/burgundy/tests/net.test.ts 共读 protocol.fixture.json 双侧保证)。
 type PlayRoom struct {
-	ID          string
-	GameKey     string // 如 burgundy
-	Modules     string // JSON 数组,如 ["exp1","vineyard"]
-	Seats       int
-	TurnSeconds int
-	Status      string // lobby | playing | ended
-	Seed        int64
-	HostUserID  int64
+	ID          string `json:"ID"`
+	GameKey     string `json:"GameKey"` // 如 burgundy
+	Modules     string `json:"Modules"` // JSON 数组,如 ["exp1","vineyard"]
+	Seats       int    `json:"Seats"`
+	TurnSeconds int    `json:"TurnSeconds"`
+	Status      string `json:"Status"` // lobby | playing | ended
+	Seed        int64  `json:"Seed"`
+	HostUserID  int64  `json:"HostUserID"`
 	// DataVersion 建房客户端的勘定数据指纹(P4 数据漂移防护;空串=历史房间)
-	DataVersion string
-	CreatedAt   time.Time
+	DataVersion string    `json:"DataVersion"`
+	CreatedAt   time.Time `json:"CreatedAt"`
 }
 
 // PlayPlayer 房内玩家。
 type PlayPlayer struct {
-	UserID   int64
-	Username string
-	Seat     int
-	JoinedAt time.Time
+	UserID   int64     `json:"UserID"`
+	Username string    `json:"Username"`
+	Seat     int       `json:"Seat"`
+	JoinedAt time.Time `json:"JoinedAt"`
 }
 
 // PlayMoveEntry journal 条目。

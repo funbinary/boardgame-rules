@@ -1,4 +1,6 @@
 // 联机协议:与 server/internal/play/handler.go 的 serverMsg/clientMsg 对应。
+// 线上字段单一事实源:server/internal/play/protocol.fixture.json —— TS 侧由 tests/net.test.ts
+// 断言,Go 侧由 protocol_fixture_test.go 金测试钉住;改协议先改 fixture 再同步两侧。
 // WS 地址:/api/play/ws?room=xxx(同源,cookie 自动携带)。
 
 export interface ServerRoom {

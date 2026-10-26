@@ -45,10 +45,10 @@
 
 ## P4 · 勃艮第在线玩（独立轨道，可与 P1–P3 并行）
 
-- [ ] **T4.1 点击→Move 合并为单一匹配 module（⭐ 子系统内首推，一个下午；评审候选 4）** — `renderGame` 给 `legalMoves[i]` 盖 `data-move-idx`，点击层 `moves[i]` 直取；删除 local.ts:67-254 的 onClick if 链与 net.ts:327-427 的 matchMove 手抄（~290 行），LocalGame/OnlineFlow 各剩 ~20 行薄 adapter；落地 views.ts:471-475 的 matchers() 废弃桩。
-  验收：新增一种 Move 类型只改引擎+渲染两处；热座与联机走同一路匹配；测试 59 绿。
-- [ ] **T4.2 TS⇄Go 协议共同 fixture（一个下午；评审候选 6）** — 提交 `protocol.fixture.json`，TS（net.test.ts）与 Go（play_test.go）各自解析同一文件断言字段/类型；给 `store.PlayRoom`（store/play.go:24-36，现无 json tag）补 tag。
-  验收：改协议任一侧字段，两套测试至少一套变红。
+- [x] **T4.1 点击→Move 合并为单一匹配 module（⭐ 子系统内首推，一个下午；评审候选 4）** — ✅ 2026-10-26 完成。机制微调：点击解析依赖跨元素选择状态（先选储存格/骰子再点格子）与回退规则（answerTake 优先、place 兜底），data-move-idx 会在渲染层再造一份匹配逻辑，故改为新建 `src/ui/click-match.ts` 共用解析层 `resolveClick(g, sel, el)`（结构化 ClickEl 入参，脱离 DOM 可单测），LocalGame/OnlineFlow 改接后各剩 ~40 行薄 adapter；删除双份 if 链（local.ts 288→116 行、net.ts 448→333 行，net.ts:327 matchMove 注释自称「同源逻辑抽出共用」却从未被复用）与 views.ts:471 matchers() 废弃桩；顺势统一三处已漂移语义：vslot 骰点不匹配的 flash 提示（原联机侧静默）、vspace 储存格回退统一取 actorOf（原联机侧用 turn.player）、清理联机死导入 autopilotPick。
+  验收：✅ 新增走子类型只改 引擎产出 + views 渲染 + click-match 解析 三处数据；热座与联机走同一解析层；新增 tests/click-match.test.ts 5 用例，全套 67 绿 + tsc 干净 + play 产物重建。
+- [x] **T4.2 TS⇄Go 协议共同 fixture（一个下午；评审候选 6）** — ✅ 2026-10-26 完成：`server/internal/play/protocol.fixture.json` 单一事实源（不进 webroot）；Go 侧 `protocol_fixture_test.go` 把样本消息 marshal 后与 fixture 逐键 DeepEqual——多键/少键/改名/改类型都红，另断言 clientMsg 解析；TS 侧 net.test.ts 哨兵断言（resolveJsonModule 直接 import fixture，ServerRoom/ServerPlayer/JournalEntry/ServerMsg/ClientMsg 静态对齐）；`store.PlayRoom/PlayPlayer` 补 json tag 冻结历史大写驼峰字段名（无线上变更，纯显式化）。
+  验收：✅ 改协议任一侧字段，Go 或 TS 至少一套测试变红；go test 全绿 + gofmt 干净（handler.go/handlers.go 的历史未格式化维持原状未动）。
 - [ ] **T4.3 联机模块接线（解锁断头 seam）** — net.ts:76 建房硬编码 `modules: []`、net.ts:139 丢弃 `_mods`：大厅勾选模块（validateModules + engine/data/modules.json 现成）→ 透传 modules；自动机座位由任一客户端确定性代提交（超时代走路径已验证，client.ts:96-101）。
   验收：联机可开带扩展（旅店/商路/盾徽/葡萄园）与自动机的对局，双方哈希对账一致。
 - [ ] **T4.4 modules.ts 深化为效果解释器（评审候选 5；大改动，建议在 T4.1–T4.3 之后）** — 钩子从「只能返回 VP」升级为返回 `{pending?, vp, log, legalMoves?}` 效果列表，按 pending-kind 注册应答/自愈/枚举器；消除 moves.ts 17 处 `modules.includes` 开关与 state.ts 字段直挂；以 team.ts 的 `resP()` 资源路由为接口样板。

@@ -1,10 +1,10 @@
 // 联机控制器:大厅 → 房间 → 对局。走子经 PlayClient 提交,状态由服务器广播驱动重放。
-import { autopilotPick } from '../../ai/autopilot';
 import { dataVersion } from '../../engine/dataVersion';
-import { actorOf, legalMoves } from '../../engine/moves';
-import type { GameState, Move } from '../../engine/state';
+import { actorOf } from '../../engine/moves';
+import type { GameState } from '../../engine/state';
 import { PlayClient, type NetStatus } from '../../net/client';
 import type { ServerMsg, ServerPlayer, ServerRoom } from '../../net/protocol';
+import { CLICK_SELECTOR, resolveClick } from '../click-match';
 import { renderGame, type UiSelection } from '../views';
 import { renderLobby, renderRoom } from '../views-lobby';
 import { escapeHtml } from '../svg';
@@ -26,26 +26,27 @@ export class OnlineFlow {
     root.addEventListener('click', (e) => this.onRootClick(e));
   }
 
-  /** 对局区点击委托:选骰/选储存格本地处理,其余匹配走子提交 */
+  /** 对局区点击委托:解析层给出选择/走子动作,这里只做联机适配(非我回合拦截 + 发招) */
   private onRootClick(e: Event) {
-    const el = (e.target as HTMLElement).closest(
-      '[data-die],[data-storage],[data-r],[data-depot],[data-cell],[data-moddie],[data-sellcolor],[data-shipdepot],[data-takeshield],[data-takeshieldfree],[data-skipshieldfree],[data-setdie],[data-shield5],[data-shield6],[data-freeplace],[data-skipfreeplace],[data-freeblack],[data-freetwin],[data-vinebonus],[data-vslot],[data-vspace],[data-shopcell],[id],.black-tile,.depot-goods,.goods',
-    ) as HTMLElement | null;
+    const el = (e.target as HTMLElement).closest(CLICK_SELECTOR) as HTMLElement | null;
     if (!el) return;
     const g = this.client?.state;
     if (!g || !this.room || this.room.Status !== 'playing') return;
-    const d = el.dataset;
-    if (d.die !== undefined && el.classList.contains('die')) {
-      this.sel.die = +d.die! as 0 | 1;
+    const act = resolveClick(g, this.sel, el);
+    if (act.kind === 'select') {
+      this.sel = { ...this.sel, ...act.sel };
       this.onState(g);
       return;
     }
-    if (d.storage !== undefined) {
-      this.sel.storage = +d.storage!;
-      this.onState(g);
+    if (act.kind === 'undo') return; // 联机不支持撤销
+    if (act.kind !== 'move') {
+      if (act.flash) this.flash(act.flash);
       return;
     }
-    this.handleUIClick(el);
+    const actor = actorOf(g);
+    if (actor !== this.mySeat) { this.flash('还没轮到你'); return; }
+    this.client!.submitMove(g, act.move);
+    this.sel = { die: this.sel.die, storage: null };
   }
 
   async start() {
@@ -271,21 +272,6 @@ export class OnlineFlow {
     }, 500);
   }
 
-  /** UI 点击 → 匹配合法走子 → 提交(与热座同一套匹配逻辑) */
-  handleUIClick(target: HTMLElement): boolean {
-    const g = this.client?.state;
-    if (!g || !this.room || this.room.Status !== 'playing') return false;
-    const actor = actorOf(g);
-    if (actor !== this.mySeat) { this.flash('还没轮到你'); return true; }
-    const move = matchMove(g, this.sel, target);
-    if (move) {
-      this.client!.submitMove(g, move);
-      this.sel = { die: this.sel.die, storage: null };
-      return true;
-    }
-    return false;
-  }
-
   setSel(s: UiSelection) { this.sel = s; }
   getSel(): UiSelection { return this.sel; }
   getState(): GameState | null { return this.client?.state ?? null; }
@@ -322,108 +308,6 @@ export class OnlineFlow {
     this.client?.close();
     if (this.timerInt) clearInterval(this.timerInt);
   }
-}
-
-// ---------- 走子匹配(与 LocalGame.onClick 同源逻辑,抽出共用) ----------
-export function matchMove(g: GameState, sel: UiSelection, el: HTMLElement): Move | null {
-  const moves = legalMoves(g);
-  const d = (s: string) => el.dataset[s];
-  const pick = (pred: (m: Move) => boolean): Move | null => moves.find(pred) ?? null;
-  const unusedDie = (): 0 | 1 | 'bonus' => {
-    const t = g.turn;
-    if (!t.used[0]) return 0;
-    if (!t.used[1]) return 1;
-    return 'bonus';
-  };
-
-  if (el.id === 'btn-workers') {
-    const die = sel.die ?? unusedDie();
-    return pick((mv) => mv.t === 'takeWorkers' && mv.die === die);
-  }
-  if (el.id === 'btn-undo') return null; // 联机不支持撤销
-  if (el.id === 'btn-buyinn') return pick((mv) => mv.t === 'buyInn');
-  if (d('moddie') != null) {
-    const die = +(d('moddie')!) as 0 | 1;
-    const delta = +(d('delta')!) as 1 | -1;
-    return pick((mv) => mv.t === 'modDie' && mv.die === die && mv.delta === delta);
-  }
-  if (d('shipdepot') != null) {
-    return pick((mv) => mv.t === 'answerShipGoods' && mv.depot === +d('shipdepot')!);
-  }
-  if (d('sellcolor') != null && !el.classList.contains('goods')) {
-    return pick((mv) => mv.t === 'answerWarehouseSell' && mv.color === +d('sellcolor')!);
-  }
-  if (d('die') != null && el.classList.contains('die')) return 'SEL_DIE' as unknown as Move; // 选骰由调用方处理
-  if (d('storage') != null) return 'SEL_STORAGE' as unknown as Move;
-  if (d('r') != null && d('c') != null) {
-    const r = +d('r')!, c = +d('c')!;
-    const top = g.pending[g.pending.length - 1];
-    if (top?.kind === 'initialCastle') return pick((mv) => mv.t === 'placeCastle' && mv.r === r && mv.c === c);
-    if (top?.kind === 'freePlace') return pick((mv) => mv.t === 'answerFreePlace' && mv.r === r && mv.c === c);
-    if (sel.storage != null) {
-      const die = sel.die ?? unusedDie();
-      return pick((mv) => mv.t === 'place' && mv.r === r && mv.c === c && mv.storage === sel.storage && (mv.die === die || mv.die === 'bonus'))
-        ?? pick((mv) => mv.t === 'place' && mv.r === r && mv.c === c);
-    }
-    const m = pick((mv) => mv.t === 'place' && mv.r === r && mv.c === c) as Extract<Move, { t: 'place' }> | null;
-    if (m && m.die === 'bonus') return m;
-    return null;
-  }
-  // ---- P2 扩展(与 LocalGame.onClick 同源) ----
-  if (d('takeshield') != null) {
-    const [depot, idx] = d('takeshield')!.split(':').map(Number);
-    return pick((mv) => mv.t === 'takeShield' && mv.depot === depot && mv.idx === idx);
-  }
-  if (d('takeshieldfree') != null) {
-    const [depot, idx] = d('takeshieldfree')!.split(':').map(Number);
-    return pick((mv) => mv.t === 'takeShieldFree' && mv.depot === depot && mv.idx === idx);
-  }
-  if (d('skipshieldfree') != null) return pick((mv) => mv.t === 'skipShieldFree');
-  if (d('setdie') != null) {
-    const [die, value] = d('setdie')!.split(':').map(Number);
-    return pick((mv) => mv.t === 'setDie' && mv.die === die && mv.value === value);
-  }
-  if (d('shield5') != null) return pick((mv) => mv.t === 'answerShield5' && mv.color === +d('shield5')!);
-  if (d('shield6') != null) return pick((mv) => mv.t === 'answerShield6' && mv.player === +d('shield6')!);
-  if (d('freeplace') != null) return moves.filter((mv) => mv.t === 'answerFreePlace')[+d('freeplace')!] ?? null;
-  if (d('skipfreeplace') != null) return pick((mv) => mv.t === 'skipFreePlace');
-  if (d('freeblack') != null) {
-    const [source, cell] = d('freeblack')!.split(':');
-    return pick((mv) => mv.t === 'answerFreeBlack' && mv.source === source && mv.cell === +cell);
-  }
-  if (d('freetwin') != null) return pick((mv) => mv.t === 'answerFreeTwin' && mv.slot === +d('freetwin')!);
-  if (d('vinebonus') != null) return pick((mv) => mv.t === 'takeVineBonus' && mv.type === d('vinebonus'));
-  if (d('vslot') != null) {
-    const die = sel.die ?? unusedDie();
-    return pick((mv) => mv.t === 'takeTwin' && mv.slot === +d('vslot')! && (mv.die === die || mv.die === 'bonus'));
-  }
-  if (d('vspace') != null) {
-    const storage = sel.storage ?? g.players[g.turn.player].storage.findIndex((s) => s?.twin);
-    const rot = (+d('vrot')!) as 0 | 1;
-    return pick((mv) => mv.t === 'placeTwin' && mv.space === d('vspace') && mv.rot === rot && mv.storage === storage)
-      ?? pick((mv) => mv.t === 'placeTwin' && mv.space === d('vspace') && mv.rot === rot);
-  }
-  if (d('shopcell') != null) return pick((mv) => mv.t === 'buyBlack' && mv.shop === true && mv.cell === +d('shopcell')!);
-  const depot = d('depot');
-  const cell = d('cell');
-  if (depot != null && cell != null) {
-    const dep = +depot, ce = +cell;
-    const answer = pick((mv) => mv.t === 'answerTake' && mv.depot === dep && mv.cell === ce);
-    if (answer) return answer;
-    const die = sel.die ?? unusedDie();
-    return pick((mv) => mv.t === 'take' && mv.depot === dep && mv.cell === ce && (mv.die === die || mv.die === 'bonus'));
-  }
-  if (el.classList.contains('black-tile') && cell != null) {
-    return pick((mv) => mv.t === 'buyBlack' && mv.cell === +cell!);
-  }
-  if (el.classList.contains('depot-goods') && depot != null) {
-    return pick((mv) => mv.t === 'answerShipGoods' && mv.depot === +depot);
-  }
-  if (el.classList.contains('goods') && d('sellcolor') != null) {
-    const die = sel.die ?? unusedDie();
-    return pick((mv) => mv.t === 'sell' && mv.die === die);
-  }
-  return null;
 }
 
 // ---------- 工具 ----------

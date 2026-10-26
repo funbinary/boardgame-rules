@@ -1,7 +1,8 @@
 // net 层单测:journal 重放 / 乱序重同步 / 超时代走消息(不真连 WS,handle() 直驱)。
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 import { PlayClient, wsFactory } from '../src/net/client';
-import type { ServerMsg } from '../src/net/protocol';
+import type { ClientMsg, JournalEntry, ServerMsg, ServerPlayer, ServerRoom } from '../src/net/protocol';
+import protocolFixture from '../../../../server/internal/play/protocol.fixture.json';
 import { createGame } from '../src/engine/setup';
 import { dataVersion } from '../src/engine/dataVersion';
 import { autopilotPick } from '../src/ai/autopilot';
@@ -123,3 +124,57 @@ describe('PlayClient', () => {
 });
 
 beforeEach(() => { void wsFactory; });
+
+// ---------- 协议 fixture(TS⇄Go 单一事实源;Go 侧金测试在 server/internal/play/protocol_fixture_test.go) ----------
+describe('protocol fixture(TS⇄Go 同源)', () => {
+  const fx = protocolFixture as {
+    serverRoom: ServerRoom; serverPlayer: ServerPlayer; journalEntry: JournalEntry;
+    serverMsgInit: Extract<ServerMsg, { t: 'init' }>; serverMsgMove: Extract<ServerMsg, { t: 'move' }>;
+    clientMsgMove: ClientMsg;
+  };
+
+  it('ServerRoom/ServerPlayer/JournalEntry 字段与 fixture 对齐', () => {
+    const room = fx.serverRoom;
+    expect(room.ID).toBe('r01abc');
+    expect(room.GameKey).toBe('burgundy');
+    expect(room.Modules).toBe('["shields"]');
+    expect(room.Seats).toBe(3);
+    expect(room.TurnSeconds).toBe(90);
+    expect(room.Status).toBe('playing');
+    expect(room.Seed).toBe(424242);
+    expect(room.HostUserID).toBe(7);
+    expect(room.DataVersion).toBe('dv-test-0001');
+    // Go 侧多发 CreatedAt,TS 类型未声明但字段不得丢
+    expect((room as unknown as Record<string, unknown>).CreatedAt).toBe('2026-01-02T03:04:05Z');
+    expect(fx.serverPlayer).toEqual({ UserID: 7, Username: 'host', Seat: 0, JoinedAt: '2026-01-02T03:04:05Z' });
+    const j = fx.journalEntry;
+    expect(j.seq).toBe(1);
+    expect(j.userId).toBe(7);
+    expect(j.hash).toBe('0123456789abcdef');
+    expect(j.move).toEqual({ t: 'takeWorkers', die: 0 });
+  });
+
+  it('ServerMsg init/move 形状与 fixture 对齐', () => {
+    const init = fx.serverMsgInit;
+    expect(init.t).toBe('init');
+    expect(init.name).toBe('host');
+    expect(init.deadline).toBe(1767131045000);
+    expect(init.room.ID).toBe('r01abc');
+    expect(init.players[0].Seat).toBe(0);
+    expect(init.journal[0].hash).toBe('0123456789abcdef');
+    const mv = fx.serverMsgMove;
+    expect(mv.t).toBe('move');
+    expect(mv.seq).toBe(1);
+    expect(mv.userId).toBe(7);
+    expect(mv.hash).toBe('0123456789abcdef');
+  });
+
+  it('ClientMsg 字段与 fixture 对齐', () => {
+    const cm = fx.clientMsgMove;
+    expect(cm.t).toBe('move');
+    expect(cm.seq).toBe(2);
+    expect(cm.hash).toBe('fedcba9876543210');
+    expect(cm.next).toBe(1);
+    expect(cm.move).toEqual({ t: 'sell', die: 1, color: 3 });
+  });
+});

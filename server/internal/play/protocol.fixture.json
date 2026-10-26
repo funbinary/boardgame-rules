@@ -1,0 +1,83 @@
+{
+  "_readme": "联机协议线格式单一事实源。server/internal/play/protocol_fixture_test.go(Go marshal 金测试)与 src/play/burgundy/tests/net.test.ts(TS 哨兵断言)各自读取本文件;任何字段名/类型变更必须先改这里再同步两侧。对应关系:serverRoom/serverPlayer ← store.PlayRoom/PlayPlayer(json tag 钉名),journalEntry ← store.PlayMoveEntry,serverMsg* ← play.serverMsg,clientMsgMove ← play.clientMsg;TS 侧类型在 src/play/burgundy/src/net/protocol.ts。键名沿用 Go 默认大写驼峰是历史现状,由 json tag 冻结,勿随手改小写。",
+  "serverRoom": {
+    "ID": "r01abc",
+    "GameKey": "burgundy",
+    "Modules": "[\"shields\"]",
+    "Seats": 3,
+    "TurnSeconds": 90,
+    "Status": "playing",
+    "Seed": 424242,
+    "HostUserID": 7,
+    "DataVersion": "dv-test-0001",
+    "CreatedAt": "2026-01-02T03:04:05Z"
+  },
+  "serverPlayer": {
+    "UserID": 7,
+    "Username": "host",
+    "Seat": 0,
+    "JoinedAt": "2026-01-02T03:04:05Z"
+  },
+  "journalEntry": {
+    "seq": 1,
+    "userId": 7,
+    "move": { "t": "takeWorkers", "die": 0 },
+    "hash": "0123456789abcdef"
+  },
+  "serverMsgInit": {
+    "t": "init",
+    "name": "host",
+    "deadline": 1767131045000,
+    "room": {
+      "ID": "r01abc",
+      "GameKey": "burgundy",
+      "Modules": "[\"shields\"]",
+      "Seats": 3,
+      "TurnSeconds": 90,
+      "Status": "playing",
+      "Seed": 424242,
+      "HostUserID": 7,
+      "DataVersion": "dv-test-0001",
+      "CreatedAt": "2026-01-02T03:04:05Z"
+    },
+    "players": [
+      {
+        "UserID": 7,
+        "Username": "host",
+        "Seat": 0,
+        "JoinedAt": "2026-01-02T03:04:05Z"
+      }
+    ],
+    "journal": [
+      {
+        "seq": 1,
+        "userId": 7,
+        "move": { "t": "takeWorkers", "die": 0 },
+        "hash": "0123456789abcdef"
+      }
+    ]
+  },
+  "serverMsgMove": {
+    "t": "move",
+    "seq": 1,
+    "userId": 7,
+    "move": { "t": "takeWorkers", "die": 0 },
+    "hash": "0123456789abcdef"
+  },
+  "serverMsgError": {
+    "t": "error",
+    "code": "stale",
+    "msg": "序号过期,请以 journal 为准重放"
+  },
+  "serverMsgPresence": {
+    "t": "presence",
+    "presence": [{ "userId": 7, "name": "host", "connected": true }]
+  },
+  "clientMsgMove": {
+    "t": "move",
+    "seq": 2,
+    "move": { "t": "sell", "die": 1, "color": 3 },
+    "hash": "fedcba9876543210",
+    "next": 1
+  }
+}
