@@ -67,7 +67,7 @@ let baseHtml = fs.readFileSync(base, "utf8");
 if (!baseHtml.includes("扩展规则:本站另收录")) {
   baseHtml = baseHtml.replace(
     /(<p><small>整理说明：)/,
-    `扩展规则:本站另收录官方中文版《地外文明：太空机构》(SETI: Space Agencies) 扩展规则书全文转录页(11 个非对称机构/快速启动牌/新外星物种/信号指示物/单人长期目标),见<a href="seti-space-agencies.html">地外文明：太空机构</a>。</small></p>\n<p><small>$1`,
+    `<p><small>扩展规则:本站另收录官方中文版《地外文明：太空机构》(SETI: Space Agencies) 扩展规则书全文转录页(11 个非对称机构/快速启动牌/新外星物种/信号指示物/单人长期目标),见<a href="seti-space-agencies.html">地外文明：太空机构</a>。</small></p>\n$1`,
   );
   fs.writeFileSync(base, baseHtml);
   console.log("seti.html: 扩展互链已加");
