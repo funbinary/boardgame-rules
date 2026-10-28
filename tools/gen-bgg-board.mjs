@@ -96,3 +96,110 @@ const js = "// 自动生成：node tools/gen-bgg-board.mjs（BGA gamelist 页面
 fs.writeFileSync(path.join(ROOT, "assets", "js", "bga-bgg-board.js"), js);
 console.log(`数据日期 ${updated}：共 ${stats.total} 款，有评分 ${stats.have}（含排名 ${stats.ranked}），待补 ${stats.pending}，无词条 ${stats.noid}，Beta ${stats.beta}`);
 console.log(`-> assets/js/bga-bgg-board.js（${(js.length / 1024).toFixed(0)}KB）`);
+
+// ===== BGG 总榜（含未上架 BGA 的全部有排名桌游）=====
+// 数据源：_bgg/full-board.jsonl（BGG browse 榜单页 33 页装配结果，见 _bgg/assemble-board.mjs）
+// 关联：BGA 在架状态（上方 fresh 清单）+ 本站规则页（games/bga/* 与 games/* 文件名）+ BGG id（results.jsonl 标题）
+const boardPath = path.join(ROOT, "_bgg", "full-board.jsonl");
+if (fs.existsSync(boardPath)) {
+  const norm = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, "").replace(/^the(?=[a-z0-9]{3})/, "");
+  // BGA 在架：norm(en) 与 norm(slug) 双索引
+  const live = new Map();
+  for (const g of fresh) {
+    const e = { slug: g.name, en: g.en || "", status: g.status, zh: zhById.get(g.name) || zhMap[g.name] || "", bggId: g.bggId || null };
+    for (const key of [g.en || "", g.name]) {
+      const k = norm(key);
+      if (k && !live.has(k)) live.set(k, e);
+    }
+  }
+  // 本站规则页：games/bga/<slug>.html（含已下架）与 games/<slug>.html（手工页）
+  const site = new Map(); // norm -> href
+  for (const f of fs.readdirSync(path.join(ROOT, "games", "bga"))) {
+    if (!f.endsWith(".html")) continue;
+    const slug = f.slice(0, -5);
+    const k = norm(slug);
+    if (k && !site.has(k)) site.set(k, "games/bga/" + slug + ".html");
+  }
+  for (const f of fs.readdirSync(path.join(ROOT, "games"))) {
+    if (!f.endsWith(".html")) continue;
+    const slug = f.slice(0, -5);
+    const k = norm(slug);
+    if (k && !site.has(k)) site.set(k, "games/" + slug + ".html");
+  }
+  // BGG id（按标题，兜底 live 匹配）
+  const bggIdByTitle = new Map();
+  for (const line of fs.readFileSync(path.join(ROOT, "_bgg", "results.jsonl"), "utf8").split("\n")) {
+    if (!line.trim()) continue;
+    const r = JSON.parse(line);
+    if (r.i && (r.title || r.s)) {
+      const t = norm(r.title || r.s);
+      if (t && !bggIdByTitle.has(t)) bggIdByTitle.set(t, r.i);
+    }
+  }
+
+  const full = [];
+  const rowsRaw = fs.readFileSync(boardPath, "utf8").trim().split("\n").map(l => JSON.parse(l));
+  const presentRanks = new Set(rowsRaw.map(r => r.r));
+  const presentNorms = new Set(rowsRaw.map(r => norm(r.n)));
+  // 空槽注入：用既有 BGG 抓取（BGA 游戏为主）补齐 browse 缺失的名次（geek 值未知留空）
+  const fillByRank = new Map();
+  for (const line of fs.readFileSync(path.join(ROOT, "_bgg", "results.jsonl"), "utf8").split("\n")) {
+    if (!line.trim()) continue;
+    const r = JSON.parse(line);
+    const rank = +((r.r ?? r.rank) || 0);
+    const title = r.title || r.s;
+    if (!rank || rank > 3300 || !title || (r.x && !r.a && !r.average)) continue;
+    const avg = (r.a ?? r.average) || null;
+    if (!avg) continue;
+    if (!fillByRank.has(rank)) fillByRank.set(rank, { title, avg, users: +((r.u ?? r.usersrated) || 0), year: (r.y ?? r.year) || "", i: r.i || null });
+  }
+  let injected = 0;
+  for (const r of rowsRaw) full.push(r);
+  for (const [rk, info] of [...fillByRank.entries()].sort((a, b) => a[0] - b[0])) {
+    if (presentRanks.has(rk)) continue;
+    if (presentNorms.has(norm(info.title))) continue; // 已在其他名次（快照漂移）
+    full.push({ r: rk, n: info.title, y: String(info.year), g: "", a: String(Math.round(parseFloat(info.avg) * 100) / 100), v: info.users, inj: 1, fillId: info.i || null });
+    presentRanks.add(rk); presentNorms.add(norm(info.title));
+    injected++;
+  }
+  full.sort((a, b) => a.r - b.r);
+  const outRows = [];
+  for (const r of full) {
+    const k = norm(r.n);
+    const lv = live.get(k) || null;
+    const href = site.get(k) || null;
+    const row = { r: r.r, n: r.n, y: r.y, g: r.g, a: r.a, v: r.v };
+    if (r.inj) {
+      row.j = 1; // 注入行（browse 缺槽，用本站既有抓取数据补；显示名优先 BGA 官方英文名）
+      if (lv && lv.en) row.n = lv.en;
+      else row.n = String(r.n).replace(/-/g, " ").replace(/([a-z])/g, (m, c) => c.toUpperCase());
+    }
+    if (lv) {
+      row.st = lv.status === "beta" ? "b" : "p";
+      if (lv.zh) row.z = lv.zh;
+    } else if (href) {
+      row.st = "o"; // 曾上架/已下架（本站有规则页）
+    }
+    if (href) row.p = href;
+    const bggId = (lv && lv.bggId) || bggIdByTitle.get(k) || (r.fillId ? String(r.fillId) : null);
+    if (bggId) row.b = parseInt(bggId, 10);
+    outRows.push(row);
+  }
+  const fstats = {
+    total: outRows.length,
+    injected,
+    onBga: outRows.filter(x => x.st === "p" || x.st === "b").length,
+    notOnBga: outRows.filter(x => !x.st).length,
+    delisted: outRows.filter(x => x.st === "o").length,
+    withSite: outRows.filter(x => x.p).length,
+  };
+  const fjs = "// 自动生成：node tools/gen-bgg-board.mjs（BGG browse 总榜 × BGA/本站关联）\n"
+    + "// 短键：r=BGG总排名 n=游戏名 y=年份 g=Geek评分(注入行可能为空) a=平均分 v=评分人数\n"
+    + "//       st=p在架/b在架Beta/o曾上架(已下架)|无=未上架BGA z=中文名 p=本站规则页链接 b=BGG词条id j=注入行\n"
+    + "window.BGG_FULL_BOARD = " + JSON.stringify({ updated, stats: fstats, games: outRows }) + ";\n";
+  fs.writeFileSync(path.join(ROOT, "assets", "js", "bgg-full-board.js"), fjs);
+  console.log(`BGG 总榜：${fstats.total} 款（注入补缺 ${injected}；在架 ${fstats.onBga} / 未上架 ${fstats.notOnBga} / 已下架有页 ${fstats.delisted} / 本站规则页 ${fstats.withSite}）`);
+  console.log(`-> assets/js/bgg-full-board.js（${(fjs.length / 1024).toFixed(0)}KB）`);
+} else {
+  console.log("（跳过 BGG 总榜：_bgg/full-board.jsonl 不存在）");
+}

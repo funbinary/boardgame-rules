@@ -22,7 +22,8 @@ rules/
 │   ├── js/account.js        # 登录态 + 收藏交互（全站引用）
 │   ├── js/bga-index.js      # BGA 游戏索引（构建产物，首页搜索用）
 │   ├── js/bgg-ratings.js    # BGG 评分数据（构建产物，游戏页 chip / 首页卡片）
-│   ├── js/bga-bgg-board.js  # BGA×BGG 榜单数据（构建产物，bgg-ranking.html 用）
+│   ├── js/bga-bgg-board.js  # BGA 视图榜单数据（构建产物）
+│   ├── js/bgg-full-board.js  # BGG 总榜数据（构建产物，页面懒加载）
 │   └── img/
 │       ├── 7-wonders/ …     # 中文精选的规则书扫描图
 │       └── bga/             # BGA 规则插图（本地化副本）
@@ -51,15 +52,21 @@ node tools/build-bga.mjs         # 生成 games/bga/ + assets/js/bga-index.js
 
 三个脚本都可重复执行：抓取脚本跳过已有文件，构建脚本全量重写。
 
-## BGA 游戏 BGG 排行榜（bgg-ranking.html）
+## BGG 排行榜（bgg-ranking.html）
 
-首页 hero 标签可进入的交互榜单：BGA 当前在架全部游戏（`_bga/gamelist-*.json`，内置浏览器抓自 BGA gamelist 页面内嵌清单）对照 BGG 评分/总排名，支持搜索、筛选（正式/Beta/付费/待补/无词条）与三种排序；游戏名直达本站规则页（有则内链），评分直达 BGG 词条。数据文件重建：
+首页 hero 标签可进入的双视图榜单页：
+
+- **🏆 BGG 总榜**（默认视图）：BoardGameGeek 总排名完整榜单（约 3300 名内全部有排名桌游，**含未上架 BGA 的游戏**），含 Geek 评分/平均分/评分人数；每款标注 🎮 可否在 BGA 在线玩（正式/Beta）、「已下架」（曾上架 BGA、现已移除但本站保留规则书，如 Brass: Birmingham）、📚 本站有无中文规则书。数据抓自 BGG browse 榜单页（`_bgg/browse-raw*/`，33 页多版本装配，`_bgg/assemble-board.mjs` 去伪存真——web_reader 渲染伪影页需双版本一致性判真；个别名次存在快照时点差异）。
+- **🎮 BGA 在架游戏**：BGA 当前在架全部 1400+ 款对照 BGG 评分/总排名，支持搜索、筛选（正式/Beta/付费/待补/无词条）与三种排序。
+
+两个视图均支持搜索、筛选、排序与分批加载；总榜数据 271KB 懒加载（切到该视图才拉取）。数据重建：
 
 ```bash
-node tools/gen-bgg-board.mjs   # _bga/gamelist-*.json（取最新）+ _bgg/results.jsonl → assets/js/bga-bgg-board.js
+node tools/gen-bgg-board.mjs   # ① _bga/gamelist-*.json + _bgg/results.jsonl → assets/js/bga-bgg-board.js（BGA 视图）
+                                # ② _bgg/full-board.jsonl（browse 装配结果）+ 本站页面 → assets/js/bgg-full-board.js（总榜视图，含空槽注入）
 ```
 
-补抓 BGG 评分后（见 `rules-bgg-ratings` skill）重跑本脚本，页面数据即自动更新；已从 BGA 下架的游戏（如 Brass: Birmingham）不在此榜。
+补抓 BGG 评分后（见 `rules-bgg-ratings` skill）重跑本脚本，页面数据即自动更新。
 
 ## BGA 规则翻译成中文
 
@@ -201,6 +208,7 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [快餐连锁大亨（Food Chain Magnate）](https://mp.weixin.qq.com/s/Dy8X0sICGQ19fZjrZCUdNw) · 微信公众号「桌游怎么玩」（一刻馆官方中文版规则书全文转录，取代此前收录的焦无耻排印译本（[旧源](https://mp.weixin.qq.com/s/0xN6ZDRIY_2Wv1UvQ2Mkjw)，旧版见 Git 历史 1a76ebc），见 `games/food-chain-magnate.html`）
 - [CLANK! 地下墓穴（Clank!: Catacombs）](https://mp.weixin.qq.com/s/eFYIoamsySitThPcMxRVjQ) · 微信公众号「无忧桌游」（Dire Wolf 官方中文规则书全文转录，含 5–6 人派对扩展规则，见 `games/clank-catacombs.html`）
 - [方舟动物园（Ark Nova）](https://mp.weixin.qq.com/s/F_CRdbW-HPnsSNYDQm8vhw) · 微信公众号「桌游怎么玩」（游人码头官方中文规则书全文转录，覆盖原 BGA wiki 机翻页，见 `games/bga/arknova.html`）
+<!--ARKNOVA-PENDING-->
 - [方舟动物园：海洋世界（Ark Nova: Marine Worlds）](https://mp.weixin.qq.com/s/CEQf5aa0KbUTwRtjAgg_QA) · 微信公众号「桌游怎么玩」（扩展官方中文规则书+随书术语表/图标概览全文转录，见 `games/ark-nova-marine-worlds.html`）
 - [大创造时代（Age of Innovation）](https://mp.weixin.qq.com/s/g4Hbz6PNH9wXF1KnnIwqfQ) · 微信公众号「桌游怎么玩」（神秘大地系列，陈斌华非官方简体中文规则书全文转录，覆盖原 BGA wiki 机翻页，见 `games/bga/ageofinnovation.html`）
 - [地下酒吧（Speakeasy）](https://mp.weixin.qq.com/s/rd8TwTQ70XzUmEGOD9h1Lg) · 微信公众号「桌游怎么玩」（Vital Lacerda 作品，陈斌华中文规则书全文转录，见 `games/speakeasy.html`）

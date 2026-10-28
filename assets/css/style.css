@@ -1321,3 +1321,20 @@ table.rank-table { width: 100%; border-collapse: collapse; font-size: 14px; }
   .rank-hide-sm { display: none; }
   .rank-table td, .rank-table th { padding: 7px 9px; font-size: 13px; }
 }
+
+/* ===== BGG 排行榜页：视图切换与总榜视图 ===== */
+.view-tabs {
+  display: flex; gap: 8px; margin: 18px auto 2px; padding: 0 16px;
+  max-width: 980px; flex-wrap: wrap;
+}
+.view-tab {
+  flex: 1 1 200px; border: 1px solid var(--line); background: transparent; color: var(--ink-soft);
+  font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 10px; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.view-tab:hover { border-color: var(--accent-border); color: var(--accent-strong); }
+.view-tab.on { background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent-strong); }
+.rank-year { color: var(--ink-soft); font-size: 12px; font-weight: 400; }
+.rank-badge.ok { background: rgba(34, 140, 62, 0.12); color: #1e7a3c; }
+a.rank-site { color: var(--accent-strong); text-decoration: none; font-size: 13px; white-space: nowrap; }
+a.rank-site:hover { text-decoration: underline; }

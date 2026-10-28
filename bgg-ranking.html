@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Board Game Arena 全部 1400+ 款游戏对照 BoardGameGeek 评分与总排名的完整榜单：按 BGG 排名 / 评分 / BGA 热度排序，可按正式、Beta、付费、待补筛选并搜索，游戏名直达本站中文规则书。">
-  <title>BGA 游戏 BGG 排行榜 — 桌游规则书</title>
+  <meta name="description" content="BoardGameGeek 总排名完整榜单（3200+ 款桌游，含未上架 BGA 的游戏）：Geek 评分、平均分、评分人数，标注每款游戏能否在 Board Game Arena 在线玩、是否已下架、本站有无中文规则书；另附 BGA 全部 1400+ 款在架游戏对照榜。">
+  <title>BGG 排行榜 · BGA 游戏对照 — 桌游规则书</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏆</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="canonical" href="https://zhibinai.cn/bgg-ranking.html">
   <meta property="og:site_name" content="桌游规则书">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="BGA 游戏 BGG 排行榜 — 桌游规则书">
-  <meta property="og:description" content="Board Game Arena 全部 1400+ 款游戏对照 BoardGameGeek 评分与总排名的完整榜单，可筛选、排序、搜索。">
+  <meta property="og:title" content="BGG 排行榜 · BGA 游戏对照 — 桌游规则书">
+  <meta property="og:description" content="BoardGameGeek 总排名完整榜单（3200+ 款桌游），标注 BGA 可玩性、下架状态与中文规则书链接。">
   <meta property="og:url" content="https://zhibinai.cn/bgg-ranking.html">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="BGA 游戏 BGG 排行榜 — 桌游规则书">
-  <meta name="twitter:description" content="Board Game Arena 全部 1400+ 款游戏对照 BoardGameGeek 评分与总排名的完整榜单，可筛选、排序、搜索。">
+  <meta name="twitter:title" content="BGG 排行榜 · BGA 游戏对照 — 桌游规则书">
+  <meta name="twitter:description" content="BoardGameGeek 总排名完整榜单（3200+ 款桌游），标注 BGA 可玩性、下架状态与中文规则书链接。">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,17 +33,17 @@
         "@type": "WebPage",
         "@id": "https://zhibinai.cn/bgg-ranking.html",
         "url": "https://zhibinai.cn/bgg-ranking.html",
-        "name": "BGA 游戏 BGG 排行榜 — 桌游规则书",
-        "description": "Board Game Arena 全部游戏对照 BoardGameGeek 评分与总排名的完整榜单，可筛选、排序、搜索。",
+        "name": "BGG 排行榜 · BGA 游戏对照 — 桌游规则书",
+        "description": "BoardGameGeek 总排名完整榜单，标注 BGA 可玩性、下架状态与中文规则书链接。",
         "isPartOf": { "@id": "https://zhibinai.cn/#website" },
         "inLanguage": "zh-CN",
-        "dateModified": "2026-10-27"
+        "dateModified": "2026-10-28"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://zhibinai.cn/" },
-          { "@type": "ListItem", "position": 2, "name": "BGA 游戏 BGG 排行榜", "item": "https://zhibinai.cn/bgg-ranking.html" }
+          { "@type": "ListItem", "position": 2, "name": "BGG 排行榜", "item": "https://zhibinai.cn/bgg-ranking.html" }
         ]
       }
     ]
@@ -59,13 +59,57 @@
 
   <main class="home">
     <section class="hero hero-compact">
-      <h1>🏆 BGA 游戏 BGG 排行榜</h1>
-      <p class="hero-sub">Board Game Arena 当前在架的全部游戏，对照 BoardGameGeek 总排名与评分；游戏名直达中文规则书，评分直达 BGG 词条。</p>
+      <h1>🏆 BGG 排行榜 · BGA 游戏对照</h1>
+      <p class="hero-sub">两个视角：BGG 总排名完整榜单（全部有排名桌游，含未上架 BGA 的），以及 BGA 当前在架全部游戏对照榜。游戏名直达中文规则书，评分直达 BGG 词条。</p>
       <div class="hero-tags" id="board-stats"></div>
     </section>
 
-    <!-- 榜单 -->
-    <section class="search-section">
+    <div class="view-tabs" id="view-tabs" role="tablist" aria-label="榜单视图">
+      <button class="view-tab on" data-view="full" role="tab" aria-selected="true">🏆 BGG 总榜（全部桌游）</button>
+      <button class="view-tab" data-view="bga" role="tab" aria-selected="false">🎮 BGA 在架游戏</button>
+    </div>
+
+    <!-- ====================== 视图一：BGG 总榜 ====================== -->
+    <section class="search-section" id="view-full">
+      <div class="search-box">
+        <input id="full-search" type="search" placeholder="搜索游戏名称，如：gloomhaven、方舟动物园、scythe…" autocomplete="off">
+      </div>
+      <div class="board-controls">
+        <div class="board-chips" id="full-filters">
+          <button class="board-chip on" data-filter="all">全部</button>
+          <button class="board-chip" data-filter="onbga">🎮 在 BGA 可玩</button>
+          <button class="board-chip" data-filter="offbga">未上架 BGA</button>
+          <button class="board-chip" data-filter="delisted">已下架</button>
+          <button class="board-chip" data-filter="site">📚 本站有规则书</button>
+        </div>
+        <div class="board-sort" id="full-sort" role="group" aria-label="排序方式">
+          <button class="on" data-sort="rank">BGG 排名</button>
+          <button data-sort="avg">平均分</button>
+          <button data-sort="voters">评分人数</button>
+        </div>
+      </div>
+      <div class="search-meta" id="full-meta"></div>
+      <div class="rank-table-wrap">
+        <table class="rank-table" id="full-table">
+          <thead>
+            <tr>
+              <th class="num">BGG 排名</th>
+              <th>游戏名</th>
+              <th class="num">Geek 评分</th>
+              <th class="num">平均分</th>
+              <th class="num rank-hide-sm">评分人数</th>
+              <th class="rank-hide-sm">BGA</th>
+              <th>规则书</th>
+            </tr>
+          </thead>
+          <tbody id="full-body"></tbody>
+        </table>
+      </div>
+      <div class="search-more" id="full-more" hidden></div>
+    </section>
+
+    <!-- ====================== 视图二：BGA 在架游戏 ====================== -->
+    <section class="search-section" id="view-bga" hidden>
       <div class="search-box">
         <input id="board-search" type="search" placeholder="搜索游戏名称，如：方舟动物园、catan、gaia…" autocomplete="off">
       </div>
@@ -108,7 +152,7 @@
     </section>
 
     <footer class="home-footer">
-      <p>榜单数据：Board Game Arena 游戏列表（<a href="https://en.boardgamearena.com/gamelist" target="_blank" rel="noopener">gamelist</a>）× BoardGameGeek 评分与总排名，抓取日期 <span id="board-date">—</span>。「待补评分」多为新游戏与 Beta（BGG 词条已定位，评分抓取待续），「无 BGG 词条」为 BGA 自有/原创小游戏。已从 BGA 下架的游戏（如 Brass: Birmingham）不在本榜。</p>
+      <p>数据来源：<a href="https://boardgamegeek.com/browse/boardgame" target="_blank" rel="noopener">BoardGameGeek 总排名榜</a>（含 Geek 评分/平均分/评分人数）与 <a href="https://en.boardgamearena.com/gamelist" target="_blank" rel="noopener">Board Game Arena 游戏列表</a>，抓取日期 <span id="board-date">—</span>。BGG 总榜收录全部有总排名的桌游（约 3300 名内，个别名次因数据源快照时点略有出入）；「BGA 可玩」含正式与 Beta；「已下架」指曾上架 BGA、现已移除但本站保留规则书（如 Brass: Birmingham）。BGA 在架视图的「待补评分」多为新游戏，BGG 词条已定位、评分抓取待续。</p>
       <p><a href="./">← 返回首页搜索规则书</a></p>
     </footer>
   </main>
@@ -116,11 +160,7 @@
   <script src="assets/js/bga-bgg-board.js"></script>
   <script>
   (function () {
-    var DATA = window.BGA_BGG_BOARD || { updated: "", stats: {}, games: [] };
-    var games = DATA.games || [];
     var LIMIT = 150;
-    var state = { q: "", filter: "all", sort: "rank", shown: LIMIT };
-
     function esc(s) {
       return String(s).replace(/[&<>"']/g, function (c) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -130,9 +170,109 @@
       if (!n) return "—";
       return n >= 10000 ? (n / 10000).toFixed(n >= 100000 ? 0 : 1) + "万" : String(n);
     }
-    // 展示分层：0 有排名 / 1 有评分无排名 / 2 待补（有词条） / 3 无词条
-    function tier(g) { return g.a ? (g.r ? 0 : 1) : (g.b ? 2 : 3); }
+    function wireControls(prefix, state, renderFn) {
+      document.getElementById(prefix + "-search").addEventListener("input", function (e) {
+        state.q = e.target.value; state.shown = LIMIT; renderFn();
+      });
+      document.getElementById(prefix + "-filters").addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-filter]");
+        if (!b) return;
+        this.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+        b.classList.add("on");
+        state.filter = b.dataset.filter; state.shown = LIMIT; renderFn();
+      });
+      document.getElementById(prefix + "-sort").addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-sort]");
+        if (!b) return;
+        this.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+        b.classList.add("on");
+        state.sort = b.dataset.sort; state.shown = LIMIT; renderFn();
+      });
+    }
+    function moreButton(moreId, list, shown, state, renderFn) {
+      var more = document.getElementById(moreId);
+      if (shown.length < list.length) {
+        more.hidden = false;
+        more.innerHTML = "";
+        var btn = document.createElement("button");
+        btn.textContent = "显示更多（还剩 " + (list.length - shown.length) + " 款）";
+        btn.addEventListener("click", function () { state.shown += LIMIT; renderFn(); });
+        more.appendChild(btn);
+      } else more.hidden = true;
+    }
+    function matchQuery(g, q, qn) {
+      var hay = (g.z || "") + " " + (g.n || g.en || "") + " " + (g.s || "");
+      return hay.toLowerCase().indexOf(q) >= 0 ||
+        (g.n || g.en || g.s || "").toLowerCase().replace(/[\s'-]/g, "").indexOf(qn) >= 0;
+    }
 
+    // ===== 视图一：BGG 总榜（数据懒加载）=====
+    var FULL = null;
+    var fullState = { q: "", filter: "all", sort: "rank", shown: LIMIT };
+    var FULL_FILTERS = {
+      all: function () { return true; },
+      onbga: function (g) { return g.st === "p" || g.st === "b"; },
+      offbga: function (g) { return !g.st; },
+      delisted: function (g) { return g.st === "o"; },
+      site: function (g) { return !!g.p; }
+    };
+    var FULL_SORTS = {
+      rank: function (a, b) { return a.r - b.r; },
+      avg: function (a, b) { return (parseFloat(b.a) || 0) - (parseFloat(a.a) || 0) || a.r - b.r; },
+      voters: function (a, b) { return (b.v || 0) - (a.v || 0) || a.r - b.r; }
+    };
+    function renderFull() {
+      if (!FULL) return;
+      var q = fullState.q.trim().toLowerCase();
+      var qn = q.replace(/[\s'-]/g, "");
+      var f = FULL_FILTERS[fullState.filter] || FULL_FILTERS.all;
+      var list = (FULL.games || []).filter(function (g) {
+        if (!f(g)) return false;
+        return !q || matchQuery(g, q, qn);
+      });
+      list.sort(FULL_SORTS[fullState.sort] || FULL_SORTS.rank);
+      var shown = list.slice(0, fullState.shown);
+      document.getElementById("full-body").innerHTML = shown.map(function (g) {
+        var bggHref = g.b
+          ? "https://boardgamegeek.com/boardgame/" + g.b
+          : "https://boardgamegeek.com/search/boardgame?q=" + encodeURIComponent(g.n);
+        var name = esc(g.n) + (g.y ? ' <span class="rank-year">(' + esc(g.y) + ")</span>" : "") +
+          (g.z ? '<small class="rank-en">' + esc(g.z) + "</small>" : "");
+        var bgaCell = g.st === "p" ? '<em class="rank-badge ok">🎮 可玩</em>'
+          : g.st === "b" ? '<em class="rank-badge ok">🎮 可玩 β</em>'
+          : g.st === "o" ? '<em class="rank-badge none">已下架</em>' : "—";
+        var siteCell = g.p ? '<a class="rank-site" href="' + esc(g.p) + '">📚 规则书</a>' : "—";
+        return "<tr>" +
+          '<td class="num rank-idx">#' + g.r + "</td>" +
+          '<td class="rank-name"><a href="' + bggHref + '" target="_blank" rel="noopener">' + name + "</a></td>" +
+          '<td class="num">' + (g.g ? esc(g.g) : "—") + "</td>" +
+          '<td class="num">' + (g.a ? esc(g.a) : "—") + "</td>" +
+          '<td class="num rank-hide-sm">' + fmtWan(g.v) + "</td>" +
+          '<td class="rank-hide-sm">' + bgaCell + "</td>" +
+          "<td>" + siteCell + "</td>" +
+          "</tr>";
+      }).join("");
+      document.getElementById("full-meta").textContent =
+        "共 " + list.length + " 款" + (list.length !== FULL.games.length ? "（总榜 " + FULL.games.length + " 款）" : "") + "，已显示 " + shown.length + " 款";
+      moreButton("full-more", list, shown, fullState, renderFull);
+    }
+    function ensureFullData(cb) {
+      if (FULL) { cb && cb(); return; }
+      var s = document.createElement("script");
+      s.src = "assets/js/bgg-full-board.js";
+      s.onload = function () { FULL = window.BGG_FULL_BOARD || { games: [] }; cb && cb(); };
+      s.onerror = function () {
+        document.getElementById("full-meta").textContent = "总榜数据加载失败，请刷新重试";
+      };
+      document.head.appendChild(s);
+    }
+    wireControls("full", fullState, renderFull);
+
+    // ===== 视图二：BGA 在架游戏 =====
+    var DATA = window.BGA_BGG_BOARD || { updated: "", stats: {}, games: [] };
+    var games = DATA.games || [];
+    var bgaState = { q: "", filter: "all", sort: "rank", shown: LIMIT };
+    function tier(g) { return g.a ? (g.r ? 0 : 1) : (g.b ? 2 : 3); }
     var FILTERS = {
       all: function () { return true; },
       rated: function (g) { return !!g.a; },
@@ -149,103 +289,90 @@
     };
     function cmpAvg(a, b) { return (b.a || 0) - (a.a || 0); }
     function cmpPlays(a, b) { return (b.g || 0) - (a.g || 0); }
-
-    function currentList() {
-      var q = state.q.trim().toLowerCase();
+    function renderBga() {
+      var q = bgaState.q.trim().toLowerCase();
       var qn = q.replace(/[\s'-]/g, "");
-      var f = FILTERS[state.filter] || FILTERS.all;
+      var f = FILTERS[bgaState.filter] || FILTERS.all;
       var list = games.filter(function (g) {
         if (!f(g)) return false;
-        if (!q) return true;
-        var hay = (g.z || "").toLowerCase() + " " + (g.e || "").toLowerCase() + " " + (g.s || "").toLowerCase();
-        return hay.indexOf(q) >= 0 || (g.s || "").toLowerCase().indexOf(qn) >= 0 || (g.e || "").toLowerCase().replace(/[\s'-]/g, "").indexOf(qn) >= 0;
+        return !q || matchQuery(g, q, qn);
       });
       list.forEach(function (g) { g.tier = tier(g); });
-      list.sort(SORTS[state.sort] || SORTS.rank);
-      return list;
-    }
-
-    function gameHref(g) {
-      return g.h ? "games/bga/" + encodeURIComponent(g.s) + ".html"
-        : "https://en.boardgamearena.com/gamepanel?game=" + encodeURIComponent(g.s);
-    }
-    function badges(g) {
-      var out = "";
-      if (g.st === "b") out += '<em class="rank-badge beta">β</em>';
-      if (g.pr) out += '<em class="rank-badge prem">💰</em>';
-      if (!g.a) out += g.b ? '<em class="rank-badge todo">待补</em>' : '<em class="rank-badge none">无词条</em>';
-      return out;
-    }
-    function rowHtml(g, i) {
-      var dim = !g.a ? ' class="dim"' : "";
-      var name = (g.z ? esc(g.z) : esc(g.e || g.s)) + (g.z && g.e ? '<small class="rank-en">' + esc(g.e) + "</small>" : "");
-      var avg = g.a
-        ? (g.b ? '<a class="rank-avg" href="https://boardgamegeek.com/boardgame/' + g.b + '" target="_blank" rel="noopener">' + g.a.toFixed(2) + "</a>"
-               : '<span class="rank-avg">' + g.a.toFixed(2) + "</span>")
-        : "—";
-      return "<tr" + dim + ">" +
-        '<td class="num rank-idx">' + (g.r && state.sort === "rank" && g.tier === 0 ? "#" + g.r : i + 1) + "</td>" +
-        '<td class="rank-name"><a href="' + gameHref(g) + '"' + (g.h ? "" : ' target="_blank" rel="noopener"') + ">" + name + "</a>" + badges(g) + "</td>" +
-        '<td class="num">' + avg + "</td>" +
-        '<td class="num rank-hide-sm">' + (g.w ? g.w.toFixed(2) : "—") + "</td>" +
-        '<td class="num rank-hide-sm">' + fmtWan(g.u) + "</td>" +
-        '<td class="rank-hide-sm">' + (g.p ? esc(g.p) + "人" : "—") + "</td>" +
-        '<td class="num rank-hide-sm">' + (g.d || "—") + "</td>" +
-        '<td class="num">' + fmtWan(g.g) + "</td>" +
-        "</tr>";
-    }
-
-    function render() {
-      var list = currentList();
-      var shown = list.slice(0, state.shown);
-      document.getElementById("rank-body").innerHTML = shown.map(rowHtml).join("");
+      list.sort(SORTS[bgaState.sort] || SORTS.rank);
+      var shown = list.slice(0, bgaState.shown);
+      document.getElementById("rank-body").innerHTML = shown.map(function (g, i) {
+        var dim = !g.a ? ' class="dim"' : "";
+        var name = (g.z ? esc(g.z) : esc(g.e || g.s)) + (g.z && g.e ? '<small class="rank-en">' + esc(g.e) + "</small>" : "");
+        var avg = g.a
+          ? (g.b ? '<a class="rank-avg" href="https://boardgamegeek.com/boardgame/' + g.b + '" target="_blank" rel="noopener">' + g.a.toFixed(2) + "</a>"
+                 : '<span class="rank-avg">' + g.a.toFixed(2) + "</span>")
+          : "—";
+        var badges = "";
+        if (g.st === "b") badges += '<em class="rank-badge beta">β</em>';
+        if (g.pr) badges += '<em class="rank-badge prem">💰</em>';
+        if (!g.a) badges += g.b ? '<em class="rank-badge todo">待补</em>' : '<em class="rank-badge none">无词条</em>';
+        var href = g.h ? "games/bga/" + encodeURIComponent(g.s) + ".html"
+          : "https://en.boardgamearena.com/gamepanel?game=" + encodeURIComponent(g.s);
+        return "<tr" + dim + ">" +
+          '<td class="num rank-idx">' + (g.r && bgaState.sort === "rank" && g.tier === 0 ? "#" + g.r : i + 1) + "</td>" +
+          '<td class="rank-name"><a href="' + href + '"' + (g.h ? "" : ' target="_blank" rel="noopener"') + ">" + name + "</a>" + badges + "</td>" +
+          '<td class="num">' + avg + "</td>" +
+          '<td class="num rank-hide-sm">' + (g.w ? g.w.toFixed(2) : "—") + "</td>" +
+          '<td class="num rank-hide-sm">' + fmtWan(g.u) + "</td>" +
+          '<td class="rank-hide-sm">' + (g.p ? esc(g.p) + "人" : "—") + "</td>" +
+          '<td class="num rank-hide-sm">' + (g.d || "—") + "</td>" +
+          '<td class="num">' + fmtWan(g.g) + "</td>" +
+          "</tr>";
+      }).join("");
       document.getElementById("board-meta").textContent =
         "共 " + list.length + " 款" + (list.length !== games.length ? "（全站 " + games.length + " 款）" : "") + "，已显示 " + shown.length + " 款";
-      var more = document.getElementById("board-more");
-      if (shown.length < list.length) {
-        more.hidden = false;
-        more.innerHTML = "";
-        var btn = document.createElement("button");
-        btn.textContent = "显示更多（还剩 " + (list.length - shown.length) + " 款）";
-        btn.addEventListener("click", function () { state.shown += LIMIT; render(); });
-        more.appendChild(btn);
+      moreButton("board-more", list, shown, bgaState, renderBga);
+    }
+    wireControls("board", bgaState, renderBga);
+
+    // ===== 视图切换 + 统计 chips =====
+    var currentView = "full";
+    function setStats() {
+      var el = document.getElementById("board-stats");
+      if (currentView === "full" && FULL) {
+        var s = FULL.stats || {};
+        el.innerHTML =
+          '<span class="meta-chip">🏆 总榜 ' + (s.total || 0) + " 款</span>" +
+          '<span class="meta-chip">🎮 BGA 可玩 ' + (s.onBga || 0) + " 款</span>" +
+          '<span class="meta-chip">📚 本站规则书 ' + (s.withSite || 0) + " 款</span>" +
+          '<span class="meta-chip">📅 数据日期 ' + esc(FULL.updated || "—") + "</span>";
       } else {
-        more.hidden = true;
+        var s2 = DATA.stats || {};
+        el.innerHTML =
+          '<span class="meta-chip">🎮 BGA ' + (s2.total || games.length) + " 款</span>" +
+          '<span class="meta-chip">⭐ 有 BGG 评分 ' + (s2.have || 0) + " 款</span>" +
+          '<span class="meta-chip">🏅 排名榜 ' + (s2.ranked || 0) + " 款</span>" +
+          '<span class="meta-chip">🧪 Beta ' + (s2.beta || 0) + " 款</span>";
       }
     }
-
-    // 头部统计 chips
-    (function () {
-      var s = DATA.stats || {};
-      var el = document.getElementById("board-stats");
-      el.innerHTML =
-        '<span class="meta-chip">🎮 BGA ' + (s.total || games.length) + " 款</span>" +
-        '<span class="meta-chip">⭐ 有 BGG 评分 ' + (s.have || 0) + " 款</span>" +
-        '<span class="meta-chip">🏅 排名榜 ' + (s.ranked || 0) + " 款</span>" +
-        '<span class="meta-chip">🧪 Beta ' + (s.beta || 0) + " 款</span>" +
-        '<span class="meta-chip">📅 数据日期 ' + esc(DATA.updated || "—") + "</span>";
-      document.getElementById("board-date").textContent = DATA.updated || "—";
-    })();
-
-    document.getElementById("board-search").addEventListener("input", function (e) {
-      state.q = e.target.value; state.shown = LIMIT; render();
+    function switchView(v) {
+      currentView = v;
+      document.querySelectorAll("#view-tabs .view-tab").forEach(function (b) {
+        var on = b.dataset.view === v;
+        b.classList.toggle("on", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      document.getElementById("view-full").hidden = v !== "full";
+      document.getElementById("view-bga").hidden = v !== "bga";
+      if (v === "full") ensureFullData(function () { renderFull(); setStats(); });
+      else { renderBga(); setStats(); }
+      if (location.hash !== (v === "full" ? "#full" : "#bga")) {
+        history.replaceState(null, "", v === "full" ? "#full" : "#bga");
+      }
+    }
+    document.getElementById("view-tabs").addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-view]");
+      if (b) switchView(b.dataset.view);
     });
-    document.getElementById("board-filters").addEventListener("click", function (e) {
-      var b = e.target.closest("button[data-filter]");
-      if (!b) return;
-      this.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
-      b.classList.add("on");
-      state.filter = b.dataset.filter; state.shown = LIMIT; render();
-    });
-    document.getElementById("board-sort").addEventListener("click", function (e) {
-      var b = e.target.closest("button[data-sort]");
-      if (!b) return;
-      this.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
-      b.classList.add("on");
-      state.sort = b.dataset.sort; state.shown = LIMIT; render();
-    });
+    document.getElementById("board-date").textContent = DATA.updated || "—";
 
-    render();
+    // 初始视图：#bga 打开 BGA 视图，否则默认总榜
+    switchView(location.hash === "#bga" ? "bga" : "full");
   })();
   </script>
 </body>
