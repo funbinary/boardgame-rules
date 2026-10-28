@@ -1263,3 +1263,61 @@ body[data-page="shared"] {
   .play-banner { gap: 10px; padding: 12px 14px; }
   .play-banner-go { display: none; }
 }
+
+/* ===== BGG 排行榜页（bgg-ranking.html） ===== */
+body[data-theme="board"] { --accent: #c2551a; --accent-strong: #9c4312; --accent-soft: rgba(194, 85, 26, 0.10); --accent-border: rgba(194, 85, 26, 0.35); }
+.hero-compact { padding: 34px 16px 6px; }
+a.meta-chip { color: inherit; text-decoration: none; }
+.board-controls { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; margin: 14px 0 2px; }
+.board-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.board-chip {
+  border: 1px solid var(--line); background: transparent; color: var(--ink-soft);
+  font-size: 13px; padding: 5px 12px; border-radius: 999px; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.board-chip:hover { border-color: var(--accent-border); color: var(--accent-strong); }
+.board-chip.on { background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent-strong); font-weight: 600; }
+.board-sort { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; margin-left: auto; }
+.board-sort button {
+  border: 0; background: transparent; color: var(--ink-soft); font-size: 13px;
+  padding: 6px 13px; cursor: pointer;
+}
+.board-sort button + button { border-left: 1px solid var(--line); }
+.board-sort button.on { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
+.rank-table-wrap {
+  overflow-x: auto; margin-top: 12px; border: 1px solid var(--line); border-radius: 10px;
+  background: #fff; max-height: 70vh;
+}
+table.rank-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.rank-table th {
+  position: sticky; top: 0; z-index: 1; background: var(--bg);
+  text-align: left; padding: 9px 12px; font-size: 12.5px; color: var(--ink-soft);
+  border-bottom: 1px solid var(--line); white-space: nowrap; letter-spacing: 0.02em;
+}
+.rank-table th.num, .rank-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.rank-table td { padding: 8px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.rank-table tbody tr:last-child td { border-bottom: 0; }
+.rank-table tbody tr:hover td { background: var(--accent-soft); }
+.th-unit { font-weight: 400; opacity: 0.7; margin-left: 2px; }
+.rank-idx { color: var(--ink-soft); }
+.rank-name a { font-weight: 600; color: var(--ink); text-decoration: none; }
+.rank-name a:hover { color: var(--accent-strong); }
+.rank-name .rank-en { display: block; color: var(--ink-soft); font-weight: 400; font-size: 12px; margin-top: 1px; }
+.rank-avg { font-weight: 700; color: var(--accent-strong); text-decoration: none; }
+.rank-avg:hover { text-decoration: underline; }
+.rank-badge {
+  display: inline-block; font-style: normal; font-size: 11px; line-height: 1.5;
+  padding: 0 7px; border-radius: 999px; margin-left: 6px; vertical-align: 1px;
+}
+.rank-badge.beta { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; }
+.rank-badge.prem { background: rgba(202, 138, 4, 0.16); color: #a16207; }
+.rank-badge.todo { background: rgba(100, 116, 139, 0.12); color: #64748b; }
+.rank-badge.none { background: rgba(100, 116, 139, 0.10); color: #94a3b8; }
+.rank-table tr.dim td { opacity: 0.62; }
+.board-note { color: var(--ink-soft); font-size: 14px; }
+@media (max-width: 640px) {
+  .board-controls { flex-direction: column; align-items: stretch; }
+  .board-sort { margin-left: 0; align-self: flex-start; }
+  .rank-hide-sm { display: none; }
+  .rank-table td, .rank-table th { padding: 7px 9px; font-size: 13px; }
+}

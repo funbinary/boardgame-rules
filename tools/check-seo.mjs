@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-const files = ["index.html", "account.html"];
+const files = ["index.html", "bgg-ranking.html", "account.html"];
 for (const f of fs.readdirSync(path.join(ROOT, "games"))) {
   const p = path.join("games", f);
   if (f.endsWith(".html")) files.push(p);

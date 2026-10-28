@@ -14,6 +14,7 @@ function entry(file, urlPath, priority) {
 
 const urls = [];
 urls.push(entry("index.html", "/", "1.0"));
+urls.push(entry("bgg-ranking.html", "/bgg-ranking.html", "0.8"));
 
 const zhGames = fs
   .readdirSync(path.join(ROOT, "games"))

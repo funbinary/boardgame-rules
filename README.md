@@ -1,12 +1,13 @@
 # 桌游规则书
 
-桌游规则书查询网站 + Go 用户服务。独立规则页与站点框架是纯静态、无外部依赖（不用 CDN 字体/JS 库），把整个目录丢到任意静态服务器即可运行，支持手机浏览；`games/bga/`、`assets/js/bga-index.js`、`assets/js/bgg-ratings.js` 为脚本生成的构建产物（日常使用无需重建，重建命令见下文）；`server/` 下的 rules-api 提供注册登录与游戏收藏（已有/想买/想玩）。
+桌游规则书查询网站 + Go 用户服务。独立规则页与站点框架是纯静态、无外部依赖（不用 CDN 字体/JS 库），把整个目录丢到任意静态服务器即可运行，支持手机浏览；`games/bga/`、`assets/js/bga-index.js`、`assets/js/bgg-ratings.js`、`assets/js/bga-bgg-board.js` 为脚本生成的构建产物（日常使用无需重建，重建命令见下文）；`server/` 下的 rules-api 提供注册登录与游戏收藏（已有/想买/想玩）。
 
 ## 目录结构
 
 ```
 rules/
 ├── index.html               # 首页（全部游戏统一目录 + 搜索）
+├── bgg-ranking.html         # BGA 游戏 BGG 排行榜（数据 js 驱动的交互页）
 ├── account.html             # 我的收藏（登录/注册 + 三张清单）
 ├── games/
 │   ├── 7-wonders.html       # 中文精选（人工整理）
@@ -20,6 +21,8 @@ rules/
 │   ├── js/main.js           # 自动目录 / 滚动高亮 / 抽屉侧边栏
 │   ├── js/account.js        # 登录态 + 收藏交互（全站引用）
 │   ├── js/bga-index.js      # BGA 游戏索引（构建产物，首页搜索用）
+│   ├── js/bgg-ratings.js    # BGG 评分数据（构建产物，游戏页 chip / 首页卡片）
+│   ├── js/bga-bgg-board.js  # BGA×BGG 榜单数据（构建产物，bgg-ranking.html 用）
 │   └── img/
 │       ├── 7-wonders/ …     # 中文精选的规则书扫描图
 │       └── bga/             # BGA 规则插图（本地化副本）
@@ -32,6 +35,8 @@ rules/
 │   ├── fetch-bga.mjs        # 抓取 BGA wiki 全部规则页（_bga/raw/）
 │   ├── fetch-bga-images.mjs # 下载规则插图到本地
 │   ├── build-bga.mjs        # 从 _bga/raw/ 生成 games/bga/ 页面
+│   ├── gen-bgg-data.mjs     # _bgg/results.jsonl → assets/js/bgg-ratings.js
+│   ├── gen-bgg-board.mjs    # _bga/gamelist-*.json + results.jsonl → 榜单数据
 │   └── wire-account.mjs     # 给游戏页幂等注入 data-game-key + account.js
 └── _bga/                    # 抓取缓存（原始 JSON / 日志 / 映射表）
 ```
@@ -45,6 +50,16 @@ node tools/build-bga.mjs         # 生成 games/bga/ + assets/js/bga-index.js
 ```
 
 三个脚本都可重复执行：抓取脚本跳过已有文件，构建脚本全量重写。
+
+## BGA 游戏 BGG 排行榜（bgg-ranking.html）
+
+首页 hero 标签可进入的交互榜单：BGA 当前在架全部游戏（`_bga/gamelist-*.json`，内置浏览器抓自 BGA gamelist 页面内嵌清单）对照 BGG 评分/总排名，支持搜索、筛选（正式/Beta/付费/待补/无词条）与三种排序；游戏名直达本站规则页（有则内链），评分直达 BGG 词条。数据文件重建：
+
+```bash
+node tools/gen-bgg-board.mjs   # _bga/gamelist-*.json（取最新）+ _bgg/results.jsonl → assets/js/bga-bgg-board.js
+```
+
+补抓 BGG 评分后（见 `rules-bgg-ratings` skill）重跑本脚本，页面数据即自动更新；已从 BGA 下架的游戏（如 Brass: Birmingham）不在此榜。
 
 ## BGA 规则翻译成中文
 
