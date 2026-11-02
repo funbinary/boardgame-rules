@@ -12,3 +12,6 @@ _pg/
 _wx/
 _cob/
 _work/
+# ZCode 会话计划(AI 内部文件)与脚本崩溃残留
+.zcode/plans/
+*.tmp.*
