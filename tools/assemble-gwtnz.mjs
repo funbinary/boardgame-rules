@@ -119,7 +119,7 @@ const navLis = NAV.map(([slug, label]) => `          <li><a href="${slug}.html">
 
 const DESC = "《大西部开拓者:新西兰开拓史》(Great Western Trail: New Zealand,Alexander Pfister 设计,eggertspiele 出版/本长文化发行)繁体中文规则书全文转录:1–4 人(含单人「英雌狠角色」)的南岛牧场经营游戏,牧羊人移动、绵羊市场、帆船运送与威灵顿四步骤,一盒四册(主规则书+行動詳解+私有建築物板塊總覽+單人册),规则书扫描图随文嵌入。";
 const TITLE = "大西部开拓者:新西兰开拓史 (Great Western Trail: New Zealand) · 规则 — 桌游规则书";
-const URL = "https://zhibinai.cn/games/gwt-new-zealand.html";
+const URL = "https://rule.zhibinai.cn/games/gwt-new-zealand.html";
 
 const html = `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -137,7 +137,7 @@ const html = `<!DOCTYPE html>
   <meta property="og:title" content="${TITLE}">
   <meta property="og:description" content="${DESC}">
   <meta property="og:url" content="${URL}">
-  <meta property="og:image" content="https://zhibinai.cn/${IMG}/13.jpg">
+  <meta property="og:image" content="https://rule.zhibinai.cn/${IMG}/13.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${TITLE}">
   <meta name="twitter:description" content="${DESC}">
@@ -146,9 +146,9 @@ const html = `<!DOCTYPE html>
  "@graph": [
   {
    "@type": "WebSite",
-   "@id": "https://zhibinai.cn/#website",
+   "@id": "https://rule.zhibinai.cn/#website",
    "name": "桌游规则书",
-   "url": "https://zhibinai.cn/",
+   "url": "https://rule.zhibinai.cn/",
    "inLanguage": "zh-CN",
    "description": "免费中文桌游规则书查询站：热门桌游完整中文规则全文 + Board Game Arena 全量官方规则中文版。"
   },
@@ -158,15 +158,15 @@ const html = `<!DOCTYPE html>
    "url": "${URL}",
    "name": "${TITLE}",
    "description": ${JSON.stringify(DESC)},
-   "isPartOf": { "@id": "https://zhibinai.cn/#website" },
+   "isPartOf": { "@id": "https://rule.zhibinai.cn/#website" },
    "inLanguage": "zh-CN",
    "dateModified": "2026-09-20",
-   "primaryImageOfPage": { "@type": "ImageObject", "url": "https://zhibinai.cn/${IMG}/13.jpg" }
+   "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rule.zhibinai.cn/${IMG}/13.jpg" }
   },
   {
    "@type": "BreadcrumbList",
    "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://zhibinai.cn/" },
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://rule.zhibinai.cn/" },
     { "@type": "ListItem", "position": 2, "name": "大西部开拓者:新西兰开拓史 (Great Western Trail: New Zealand)", "item": "${URL}" }
    ]
   }

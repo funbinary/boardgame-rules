@@ -23,7 +23,7 @@ let checked = 0;
 for (const rel of files) {
   const html = fs.readFileSync(path.join(ROOT, rel), "utf8");
   checked++;
-  const hasCanonical = /<link rel="canonical" href="https:\/\/zhibinai\.cn\//.test(html);
+  const hasCanonical = /<link rel="canonical" href="https:\/\/rule\.zhibinai\.cn\//.test(html);
   const hasOg = /<meta property="og:title"/.test(html);
   if (!hasCanonical || !hasOg) {
     console.log(`MISSING TAGS: ${rel} canonical=${hasCanonical} og=${hasOg}`);

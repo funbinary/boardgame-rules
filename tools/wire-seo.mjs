@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const BASE = "https://zhibinai.cn";
+const BASE = "https://rule.zhibinai.cn";
 const SITE_NAME = "桌游规则书";
 
 const esc = (s) =>

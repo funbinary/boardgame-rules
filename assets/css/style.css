@@ -162,7 +162,7 @@ img { max-width: 100%; height: auto; }
 }
 .menu-btn:hover { background: var(--accent-soft); }
 
-/* 中英文切换按钮(i18n.js 注入到顶栏末尾) */
+/* 中英文切换按钮(i18n.js 注入到顶栏末尾,右上角) */
 .lang-toggle {
   margin-left: auto;
   flex: none;
@@ -177,9 +177,9 @@ img { max-width: 100%; height: auto; }
   cursor: pointer;
 }
 .lang-toggle:hover { background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent-strong); }
-/* 顶栏可能同时有 account.js 注入的 .topbar-auth(自带 margin-left:auto);
-   两个 auto 会平分空隙把按钮顶到中间——auth 在后则由 toggle 独占右推 */
-.lang-toggle ~ .topbar-auth { margin-left: 0; }
+/* 顶栏可能有 account.js 注入的 .topbar-auth(自带 margin-left:auto)且排在 toggle 左侧;
+   两个 auto 会平分空隙把按钮顶到中间——auth 在前则由 auth 独占右推,toggle 落在最右角 */
+.topbar-auth ~ .lang-toggle { margin-left: 0; }
 
 /* 正文语言缺失提示条(i18n.js 注入到 article 顶部) */
 .i18n-notice {

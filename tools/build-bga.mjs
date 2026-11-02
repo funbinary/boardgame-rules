@@ -103,7 +103,7 @@ function cleanHtml(html, titleToId, imgMap) {
 }
 
 /* ---------- 模板 ---------- */
-const SEO_BASE = "https://zhibinai.cn";
+const SEO_BASE = "https://rule.zhibinai.cn";
 const escAttr = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 

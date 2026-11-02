@@ -97,7 +97,7 @@ const navLis = NAV.map(([slug, label]) => `          <li><a href="${slug}.html">
 
 const DESC = "《风声再临》(The Message)中文规则书全文转录:Tobey Ho 设计,千骐动漫出版,3–7 人谍战阵营推理游戏。军情/潜伏/特工三方身份博弈,基础牌 87 张的情报传递、截获与烧毁,25 名角色隐藏/暴露双态技能与游戏用语概念说明,规则书扫描图随文嵌入。";
 const TITLE = "风声再临 (The Message) · 规则 — 桌游规则书";
-const URL = "https://zhibinai.cn/games/the-message.html";
+const URL = "https://rule.zhibinai.cn/games/the-message.html";
 
 const html = `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -115,7 +115,7 @@ const html = `<!DOCTYPE html>
   <meta property="og:title" content="${TITLE}">
   <meta property="og:description" content="${DESC}">
   <meta property="og:url" content="${URL}">
-  <meta property="og:image" content="https://zhibinai.cn/${IMG}/01.jpg">
+  <meta property="og:image" content="https://rule.zhibinai.cn/${IMG}/01.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${TITLE}">
   <meta name="twitter:description" content="${DESC}">
@@ -124,9 +124,9 @@ const html = `<!DOCTYPE html>
  "@graph": [
   {
    "@type": "WebSite",
-   "@id": "https://zhibinai.cn/#website",
+   "@id": "https://rule.zhibinai.cn/#website",
    "name": "桌游规则书",
-   "url": "https://zhibinai.cn/",
+   "url": "https://rule.zhibinai.cn/",
    "inLanguage": "zh-CN",
    "description": "免费中文桌游规则书查询站：热门桌游完整中文规则全文 + Board Game Arena 全量官方规则中文版。"
   },
@@ -136,15 +136,15 @@ const html = `<!DOCTYPE html>
    "url": "${URL}",
    "name": "${TITLE}",
    "description": ${JSON.stringify(DESC)},
-   "isPartOf": { "@id": "https://zhibinai.cn/#website" },
+   "isPartOf": { "@id": "https://rule.zhibinai.cn/#website" },
    "inLanguage": "zh-CN",
    "dateModified": "2026-09-20",
-   "primaryImageOfPage": { "@type": "ImageObject", "url": "https://zhibinai.cn/${IMG}/01.jpg" }
+   "primaryImageOfPage": { "@type": "ImageObject", "url": "https://rule.zhibinai.cn/${IMG}/01.jpg" }
   },
   {
    "@type": "BreadcrumbList",
    "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://zhibinai.cn/" },
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://rule.zhibinai.cn/" },
     { "@type": "ListItem", "position": 2, "name": "风声再临 (The Message)", "item": "${URL}" }
    ]
   }

@@ -9,13 +9,13 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
   <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://zhibinai.cn/account.html">
+  <link rel="canonical" href="https://rule.zhibinai.cn/account.html">
   <meta property="og:site_name" content="桌游规则书">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="website">
   <meta property="og:title" content="我的收藏 · 桌游规则书">
   <meta property="og:description" content="我的桌游收藏：记录已有、想买、想玩的游戏清单，与站内 1600+ 游戏规则书联动。">
-  <meta property="og:url" content="https://zhibinai.cn/account.html">
+  <meta property="og:url" content="https://rule.zhibinai.cn/account.html">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="我的收藏 · 桌游规则书">
   <meta name="twitter:description" content="我的桌游收藏：记录已有、想买、想玩的游戏清单，与站内 1600+ 游戏规则书联动。">
@@ -24,20 +24,20 @@
  "@graph": [
   {
    "@type": "WebSite",
-   "@id": "https://zhibinai.cn/#website",
+   "@id": "https://rule.zhibinai.cn/#website",
    "name": "桌游规则书",
-   "url": "https://zhibinai.cn/",
+   "url": "https://rule.zhibinai.cn/",
    "inLanguage": "zh-CN",
    "description": "免费中文桌游规则书查询站：热门桌游完整中文规则全文 + Board Game Arena 全量官方规则中文版。"
   },
   {
    "@type": "WebPage",
-   "@id": "https://zhibinai.cn/account.html",
-   "url": "https://zhibinai.cn/account.html",
+   "@id": "https://rule.zhibinai.cn/account.html",
+   "url": "https://rule.zhibinai.cn/account.html",
    "name": "我的收藏 · 桌游规则书",
    "description": "我的桌游收藏：记录已有、想买、想玩的游戏清单，与站内 1600+ 游戏规则书联动。",
    "isPartOf": {
-    "@id": "https://zhibinai.cn/#website"
+    "@id": "https://rule.zhibinai.cn/#website"
    },
    "inLanguage": "zh-CN",
    "dateModified": "2026-09-18"
@@ -49,13 +49,13 @@
      "@type": "ListItem",
      "position": 1,
      "name": "首页",
-     "item": "https://zhibinai.cn/"
+     "item": "https://rule.zhibinai.cn/"
     },
     {
      "@type": "ListItem",
      "position": 2,
      "name": "我的收藏 · 桌游规则书",
-     "item": "https://zhibinai.cn/account.html"
+     "item": "https://rule.zhibinai.cn/account.html"
     }
    ]
   }
@@ -76,41 +76,41 @@
       <div class="auth-card">
         <div class="auth-hero">📚</div>
         <div class="auth-tabs" role="tablist">
-          <button type="button" class="auth-tab active" data-tab="login">登录</button>
-          <button type="button" class="auth-tab" data-tab="register">注册</button>
+          <button type="button" class="auth-tab active" data-tab="login" data-i18n="loginTab">登录</button>
+          <button type="button" class="auth-tab" data-tab="register" data-i18n="registerTab">注册</button>
         </div>
 
         <form id="login-form" class="auth-form" autocomplete="on">
-          <label>用户名
-            <input name="username" type="text" required maxlength="24" placeholder="用户名" autocomplete="username">
+          <label><span data-i18n="usernameLabel">用户名</span>
+            <input name="username" type="text" required maxlength="24" data-i18n-placeholder="loginPhUser" autocomplete="username">
           </label>
-          <label>密码
-            <input name="password" type="password" required maxlength="72" placeholder="密码（至少 6 位）" autocomplete="current-password">
+          <label><span data-i18n="passwordLabel">密码</span>
+            <input name="password" type="password" required maxlength="72" data-i18n-placeholder="loginPhPw" autocomplete="current-password">
           </label>
           <p class="form-error" hidden></p>
-          <button type="submit" class="auth-submit">登录</button>
-          <p class="auth-hint">没有账号？<a href="#" data-switch="register">注册一个</a>，只需用户名和密码。</p>
+          <button type="submit" class="auth-submit" data-i18n="loginSubmit">登录</button>
+          <p class="auth-hint"><span data-i18n="noAccount">没有账号？</span><a href="#" data-switch="register" data-i18n="registerLink">注册一个</a><span data-i18n="registerTail">，只需用户名和密码。</span></p>
         </form>
 
         <form id="register-form" class="auth-form" hidden autocomplete="on">
-          <label>用户名
-            <input name="username" type="text" required minlength="2" maxlength="24" placeholder="2-24 位中文、字母、数字、_ 或 -" autocomplete="username">
+          <label><span data-i18n="usernameLabel">用户名</span>
+            <input name="username" type="text" required minlength="2" maxlength="24" data-i18n-placeholder="regPhUser" autocomplete="username">
           </label>
-          <label>密码
-            <input name="password" type="password" required minlength="8" maxlength="72" placeholder="至少 8 位，含字母和数字" autocomplete="new-password">
+          <label><span data-i18n="passwordLabel">密码</span>
+            <input name="password" type="password" required minlength="8" maxlength="72" data-i18n-placeholder="regPhPw" autocomplete="new-password">
           </label>
           <div class="pw-meter" id="pw-meter" hidden>
             <div class="pw-track"><div class="pw-fill" id="pw-fill"></div></div>
             <span class="pw-text" id="pw-text"></span>
           </div>
           <ul class="pw-rules" id="pw-rules">
-            <li data-rule="len">8 位以上</li>
-            <li data-rule="letter">包含字母</li>
-            <li data-rule="digit">包含数字</li>
+            <li data-rule="len" data-i18n="pwRuleLen">8 位以上</li>
+            <li data-rule="letter" data-i18n="pwRuleLetter">包含字母</li>
+            <li data-rule="digit" data-i18n="pwRuleDigit">包含数字</li>
           </ul>
           <p class="form-error" hidden></p>
-          <button type="submit" class="auth-submit">注册并登录</button>
-          <p class="auth-hint">已有账号？<a href="#" data-switch="login">直接登录</a>。</p>
+          <button type="submit" class="auth-submit" data-i18n="registerSubmit">注册并登录</button>
+          <p class="auth-hint"><span data-i18n="hasAccount">已有账号？</span><a href="#" data-switch="login" data-i18n="loginLink">直接登录</a><span data-i18n="dotTail">。</span></p>
         </form>
       </div>
     </section>
@@ -119,32 +119,32 @@
     <section class="account-lists" id="lists-view" hidden>
       <div class="account-head">
         <div class="account-head-text">
-          <h1 class="account-title">📚 我的收藏</h1>
-          <p class="account-tip">在任意游戏页点「已有 / 想买 / 想玩」即可加入对应清单</p>
+          <h1 class="account-title" data-i18n="favTitle">📚 我的收藏</h1>
+          <p class="account-tip" data-i18n="favTip">在任意游戏页点「已有 / 想买 / 想玩」即可加入对应清单</p>
         </div>
         <div class="account-user">
           <span class="avatar" id="user-avatar" aria-hidden="true"></span>
           <span class="account-username" id="hello-name"></span>
-          <button type="button" class="mini-btn account-logout" id="logout-btn">退出</button>
+          <button type="button" class="mini-btn account-logout" id="logout-btn" data-i18n="logout">退出</button>
         </div>
       </div>
       <div class="share-panel" id="share-panel" hidden>
         <div class="share-info">
           <span class="share-ico">🔗</span>
           <div>
-            <strong>分享我的收藏</strong>
-            <p id="share-desc">开启后，任何人都可以通过链接查看你的三张清单（只读）</p>
+            <strong data-i18n="shareTitle">分享我的收藏</strong>
+            <p id="share-desc" data-i18n="shareDesc">开启后，任何人都可以通过链接查看你的三张清单（只读）</p>
           </div>
         </div>
         <div class="share-off" id="share-off">
-          <button type="button" class="mini-btn share-primary" id="share-enable">开启分享</button>
+          <button type="button" class="mini-btn share-primary" id="share-enable" data-i18n="shareEnable">开启分享</button>
         </div>
         <div class="share-on" id="share-on" hidden>
-          <input class="share-link" id="share-link" readonly aria-label="分享链接">
+          <input class="share-link" id="share-link" readonly data-i18n-aria="shareLinkAria" aria-label="分享链接">
           <div class="share-btns">
-            <button type="button" class="mini-btn share-primary" id="share-copy">复制链接</button>
-            <button type="button" class="mini-btn" id="share-regen">重新生成</button>
-            <button type="button" class="mini-btn remove" id="share-disable">关闭分享</button>
+            <button type="button" class="mini-btn share-primary" id="share-copy" data-i18n="shareCopy">复制链接</button>
+            <button type="button" class="mini-btn" id="share-regen" data-i18n="shareRegen">重新生成</button>
+            <button type="button" class="mini-btn remove" id="share-disable" data-i18n="shareOff">关闭分享</button>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@
     </section>
 
     <footer class="home-footer">
-      <p><a href="index.html">← 返回全部游戏</a></p>
+      <p><a href="index.html" data-i18n="backAll">← 返回全部游戏</a></p>
       <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备2026012848号-2</a></p>
     </footer>
   </main>
@@ -165,18 +165,29 @@
   (function () {
     "use strict";
     var api = window.RulesAccount.api;
-    var STATUS_LABEL = { owned: "✅ 已有", wishlist: "🛒 想买", play: "🎲 想玩" };
+    // 中英切换(i18n.js):文案走字典,langchange 后重渲染清单
+    var T = function (key) { return window.ZRulesI18N ? window.ZRulesI18N.t(key) : key; };
+    var tErr = function (msg) { return window.ZRulesI18N ? window.ZRulesI18N.tErr(msg) : msg; };
+    var langEn = function () { return !!window.ZRulesI18N && window.ZRulesI18N.lang() === "en"; };
+    var STATUS_LABEL_KEY = { owned: "stOwned", wishlist: "stWishlist", play: "stPlay" };
+    var statusLabel = function (s) { return T(STATUS_LABEL_KEY[s]); };
     var STATUS_KEYS = ["owned", "wishlist", "play"];
     var SECTION_META = [
-      { key: "owned", ico: "✅", title: "已有", empty: "还没有标记「已有」的游戏" },
-      { key: "wishlist", ico: "🛒", title: "想买", empty: "购物车还是空的" },
-      { key: "play", ico: "🎲", title: "想玩", empty: "还没有想玩的游戏" }
+      { key: "owned", ico: "✅", titleKey: "secOwned", emptyKey: "emptyOwned" },
+      { key: "wishlist", ico: "🛒", titleKey: "secWishlist", emptyKey: "emptyWishlist" },
+      { key: "play", ico: "🎲", titleKey: "secPlay", emptyKey: "emptyPlay" }
     ];
 
     function esc(s) {
       return String(s).replace(/[&<>"']/g, function (c) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
       });
+    }
+
+    function fmtUsers(n) {
+      n = Number(n) || 0;
+      if (langEn()) return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "K" : String(n);
+      return n >= 10000 ? (n / 10000).toFixed(1) + "万" : String(n);
     }
 
     // ?next= 登录后回跳（只允许站内路径，防开放重定向）
@@ -195,8 +206,9 @@
       var R = window.BGG_RATINGS || {};
       var r = R[key] || R[key.replace("bga/", "")];
       if (!r) return "";
-      return '<span class="meta-chip bgg-chip-mini" title="BGG 综合 ' + esc(r.a) + ' · 排名 #' + esc(r.r) +
-        ' · 权重/复杂度 ' + esc(r.w) + '/5 · ' + esc(r.u) + ' 人评分">⭐' + esc(r.a) + " · 权重 " + esc(r.w) + "</span>";
+      return '<span class="meta-chip bgg-chip-mini" title="' +
+        esc(T("bggChipTitle").replace("{a}", r.a).replace("{r}", r.r).replace("{w}", r.w).replace("{u}", fmtUsers(r.u))) +
+        '">⭐' + esc(r.a) + " · " + esc(T("wLabel")) + " " + esc(r.w) + "</span>";
     }
 
     /* ---------- 视图切换 ---------- */
@@ -242,21 +254,21 @@
     }
 
     document.getElementById("share-enable").addEventListener("click", function () {
-      api("POST", "/share").then(renderShare).catch(function (err) { window.alert("开启失败：" + err.message); });
+      api("POST", "/share").then(renderShare).catch(function (err) { window.alert(T("enableFail") + tErr(err.message)); });
     });
     document.getElementById("share-regen").addEventListener("click", function () {
-      if (!window.confirm("重新生成后，旧链接将立即失效，确定？")) return;
-      api("POST", "/share").then(renderShare).catch(function (err) { window.alert("操作失败：" + err.message); });
+      if (!window.confirm(T("regenConfirm"))) return;
+      api("POST", "/share").then(renderShare).catch(function (err) { window.alert(T("opFail") + tErr(err.message)); });
     });
     document.getElementById("share-disable").addEventListener("click", function () {
-      if (!window.confirm("关闭分享后，现有链接将无法访问，确定？")) return;
+      if (!window.confirm(T("shareOffConfirm"))) return;
       api("DELETE", "/share").then(function () { renderShare({ enabled: false }); })
-        .catch(function (err) { window.alert("关闭失败：" + err.message); });
+        .catch(function (err) { window.alert(T("closeFail") + tErr(err.message)); });
     });
     document.getElementById("share-copy").addEventListener("click", function () {
       var input = document.getElementById("share-link");
       var btn = this;
-      var done = function () { flashBtn(btn, "已复制 ✓"); };
+      var done = function () { flashBtn(btn, T("copied")); };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(input.value).then(done, function () { fallbackCopy(input, done); });
       } else {
@@ -265,12 +277,14 @@
     });
     function fallbackCopy(input, done) {
       input.select();
-      try { document.execCommand("copy"); done(); } catch (e) { window.prompt("请手动复制：", input.value); }
+      try { document.execCommand("copy"); done(); } catch (e) { window.prompt(T("manualCopy"), input.value); }
     }
 
     /* ---------- 清单渲染 ---------- */
+    var lastListData = null;
     function loadLists() {
-      api("GET", "/collection").then(renderLists).catch(function () { showAuth(); });
+      api("GET", "/collection").then(function (data) { lastListData = data; renderLists(data); })
+        .catch(function () { showAuth(); });
     }
 
     function renderLists(data) {
@@ -278,32 +292,34 @@
         var n = data.counts[sec.key] || 0;
         return '<a class="stat-card st-' + sec.key + '" href="#list-' + sec.key + '">' +
           '<span class="stat-num">' + n + "</span>" +
-          '<span class="stat-label">' + sec.ico + " " + sec.title + "</span></a>";
+          '<span class="stat-label">' + sec.ico + " " + esc(T(sec.titleKey)) + "</span></a>";
       }).join("");
 
       var html = "";
       SECTION_META.forEach(function (sec) {
         var items = data[sec.key] || [];
         html += '<section class="list-block st-' + sec.key + '" id="list-' + sec.key + '">' +
-          '<h2 class="list-title">' + sec.ico + " " + sec.title +
+          '<h2 class="list-title">' + sec.ico + " " + esc(T(sec.titleKey)) +
           '<span class="count-badge">' + items.length + "</span></h2>";
         if (!items.length) {
           html += '<div class="list-empty"><span class="le-ico">' + sec.ico + "</span>" +
-            "<p>" + sec.empty + '</p><a class="le-link" href="index.html">去首页逛逛 →</a></div>';
+            "<p>" + esc(T(sec.emptyKey)) + '</p><a class="le-link" href="index.html">' + esc(T("goIndex")) + "</a></div>";
         } else {
           html += '<div class="list-rows">';
           items.forEach(function (it) {
-            html += '<div class="list-row" data-key="' + esc(it.game_key) + '">' +
+            // 单语言名:英文模式显示英文名(缺失回退中文名),中文模式显示中文名
+            var nm = langEn() ? (it.en || it.name) : (it.name || it.en);
+            html += '<div class="list-row" data-key="' + esc(it.game_key) +
+              '" data-name="' + esc(it.name || "") + '" data-en="' + esc(it.en || "") + '">' +
               '<div class="list-info"><a class="list-name" href="' + esc(gameHref(it.game_key)) + '">' +
-              esc(it.name) + "</a>" +
-              (it.en ? '<span class="list-en">' + esc(it.en) + "</span>" : "") +
+              esc(nm) + "</a>" +
               bggChip(it.game_key) + "</div>" +
               '<div class="list-actions">' +
               STATUS_KEYS.map(function (k) {
                 return '<button type="button" class="mini-btn' + (k === it.status ? " active" : "") +
-                  '" data-move="' + k + '" title="移到「' + STATUS_LABEL[k] + '」">' + STATUS_LABEL[k] + "</button>";
+                  '" data-move="' + k + '" title="' + esc(T("moveTitle").replace("{s}", statusLabel(k))) + '">' + esc(statusLabel(k)) + "</button>";
               }).join("") +
-              '<button type="button" class="mini-btn remove" data-move="" title="移出清单">✕</button>' +
+              '<button type="button" class="mini-btn remove" data-move="" title="' + esc(T("removeTitle")) + '">✕</button>' +
               "</div></div>";
           });
           html += "</div>";
@@ -313,16 +329,25 @@
       document.getElementById("lists-container").innerHTML = html;
     }
 
-    // 事件委托：移动 / 移除
+    // 语言切换后按新语言重渲染清单(静态文案由 i18n.js applyChrome 处理)
+    document.addEventListener("zrules:langchange", function () {
+      if (lastListData) renderLists(lastListData);
+    });
+
+    // 事件委托：移动 / 移除(双语名从 data-* 原样回传,不随当前显示语言改写)
     document.getElementById("lists-container").addEventListener("click", function (ev) {
       var btn = ev.target.closest("[data-move]");
       if (!btn) return;
       var row = btn.closest(".list-row");
       var key = row && row.dataset.key;
       if (!key) return;
-      api("PUT", "/collection/" + key, { status: btn.dataset.move, name: row.querySelector(".list-name").textContent })
+      api("PUT", "/collection/" + key, {
+        status: btn.dataset.move,
+        name: (row.dataset.name || row.querySelector(".list-name").textContent).slice(0, 60),
+        en: (row.dataset.en || "").slice(0, 80)
+      })
         .then(loadLists)
-        .catch(function (err) { window.alert("操作失败：" + err.message); });
+        .catch(function (err) { window.alert(T("opFail") + tErr(err.message)); });
     });
 
     document.getElementById("logout-btn").addEventListener("click", function () {
@@ -357,7 +382,7 @@
           var next = nextTarget();
           location.href = next || "/account.html";
         }).catch(function (err) {
-          errEl.textContent = err.message;
+          errEl.textContent = tErr(err.message);
           errEl.hidden = false;
           btn.disabled = false;
         });
@@ -391,10 +416,10 @@
       if (/[a-z]/.test(v) && /[A-Z]/.test(v)) score++;
       if (/[^a-zA-Z0-9\u4e00-\u9fff]/.test(v)) score++;
       if (v.length >= 12) score++;
-      var level = score <= 2 ? ["弱", 33, ""] : score === 3 ? ["中", 66, "mid"] : ["强", 100, "strong"];
+      var level = score <= 2 ? [T("pwWeak"), 33, ""] : score === 3 ? [T("pwMid"), 66, "mid"] : [T("pwStrong"), 100, "strong"];
       pwFill.style.width = level[1] + "%";
       pwFill.className = "pw-fill " + level[2];
-      pwText.textContent = "强度：" + level[0];
+      pwText.textContent = T("pwStrength") + level[0];
     });
 
     /* ---------- 启动 ---------- */

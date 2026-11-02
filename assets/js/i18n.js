@@ -5,11 +5,13 @@
    fetch 并替换 .rule-body;无片段或 404 时显示提示条保留原文。
    语言存 localStorage(zrules-lang),跨页保持。
    文案约定:
-     data-zh / data-en                    换 textContent(内联双语,适合游戏名等每页不同文案)
+     data-zh / data-en                    换 textContent(内联双语,适合游戏名等每页不同文案;仅限叶子元素,会清掉子节点)
      data-title-zh / data-title-en        换 title 属性
      data-i18n="key"                      按字典 key 换 textContent
      data-i18n-aria="key"                 按字典 key 换 aria-label
      data-i18n-placeholder="key"          按字典 key 换 placeholder
+     data-lang-only="zh|en"               成对出现的整段富文本(内含链接等子节点,不能走 textContent):
+                                          按语言显隐(display:none),中英两份各带一个该属性
    正文约定(由 build-bga.mjs / wire-i18n.mjs 产出):
      <article data-page-lang="zh|en" data-alt-body="片段URL">
        … <div class="rule-body">默认语言正文</div> …
@@ -77,7 +79,75 @@
       statRanked: "🏅 排名榜 {n} 款",
       statBeta: "🧪 Beta {n} 款",
       langBtnAria: "Switch to English",
-      langBtnLabel: "EN"
+      langBtnLabel: "EN",
+      /* ---- 收藏 / 账户(account.js 注入 + account/shared 页) ---- */
+      myGames: "📚 我的游戏",
+      myFav: "我的收藏",
+      loginRegister: "🔐 登录 / 注册",
+      logout: "退出",
+      stOwned: "✅ 已有",
+      stWishlist: "🛒 想买",
+      stPlay: "🎲 想玩",
+      tMarkOwned: "标记为已有",
+      tAddWishlist: "加入想买",
+      tAddPlay: "加入想玩",
+      moveTitle: "移到「{s}」",
+      removeTitle: "移出清单",
+      favFail: "收藏失败：",
+      wLabel: "权重",
+      bggChipTitle: "BGG 综合 {a} · 排名 #{r} · 权重/复杂度 {w}/5 · {u} 人评分",
+      loginTab: "登录",
+      registerTab: "注册",
+      usernameLabel: "用户名",
+      passwordLabel: "密码",
+      loginPhUser: "用户名",
+      loginPhPw: "密码（至少 6 位）",
+      loginSubmit: "登录",
+      noAccount: "没有账号？",
+      registerLink: "注册一个",
+      registerTail: "，只需用户名和密码。",
+      regPhUser: "2-24 位中文、字母、数字、_ 或 -",
+      regPhPw: "至少 8 位，含字母和数字",
+      registerSubmit: "注册并登录",
+      hasAccount: "已有账号？",
+      loginLink: "直接登录",
+      dotTail: "。",
+      pwRuleLen: "8 位以上",
+      pwRuleLetter: "包含字母",
+      pwRuleDigit: "包含数字",
+      pwWeak: "弱",
+      pwMid: "中",
+      pwStrong: "强",
+      pwStrength: "强度：",
+      favTitle: "📚 我的收藏",
+      favTip: "在任意游戏页点「已有 / 想买 / 想玩」即可加入对应清单",
+      shareTitle: "分享我的收藏",
+      shareDesc: "开启后，任何人都可以通过链接查看你的三张清单（只读）",
+      shareEnable: "开启分享",
+      shareLinkAria: "分享链接",
+      shareCopy: "复制链接",
+      copied: "已复制 ✓",
+      shareRegen: "重新生成",
+      shareOff: "关闭分享",
+      secOwned: "已有",
+      secWishlist: "想买",
+      secPlay: "想玩",
+      emptyOwned: "还没有标记「已有」的游戏",
+      emptyWishlist: "购物车还是空的",
+      emptyPlay: "还没有想玩的游戏",
+      goIndex: "去首页逛逛 →",
+      backAll: "← 返回全部游戏",
+      opFail: "操作失败：",
+      enableFail: "开启失败：",
+      closeFail: "关闭失败：",
+      regenConfirm: "重新生成后，旧链接将立即失效，确定？",
+      shareOffConfirm: "关闭分享后，现有链接将无法访问，确定？",
+      manualCopy: "请手动复制：",
+      sharedTitleTpl: "{u} 分享的收藏 · 桌游规则书",
+      sharedTopbar: "分享的收藏",
+      sharedH1Tpl: "👤 {u} 分享的收藏",
+      sharedTip: "通过分享链接查看 · 只读",
+      invalidLink: "链接无效，或对方已关闭分享"
     },
     en: {
       brand: "🎲 Board Game Rules",
@@ -133,7 +203,75 @@
       statRanked: "🏅 {n} ranked",
       statBeta: "🧪 {n} beta",
       langBtnAria: "切换到中文",
-      langBtnLabel: "中"
+      langBtnLabel: "中",
+      /* ---- 收藏 / 账户(account.js 注入 + account/shared 页) ---- */
+      myGames: "📚 My games",
+      myFav: "My favorites",
+      loginRegister: "🔐 Sign in / Register",
+      logout: "Sign out",
+      stOwned: "✅ Owned",
+      stWishlist: "🛒 Want to buy",
+      stPlay: "🎲 Want to play",
+      tMarkOwned: "Mark as owned",
+      tAddWishlist: "Add to want-to-buy",
+      tAddPlay: "Add to want-to-play",
+      moveTitle: "Move to {s}",
+      removeTitle: "Remove from list",
+      favFail: "Failed to save: ",
+      wLabel: "Weight",
+      bggChipTitle: "BGG average {a} · rank #{r} · weight/complexity {w}/5 · {u} ratings",
+      loginTab: "Sign in",
+      registerTab: "Register",
+      usernameLabel: "Username",
+      passwordLabel: "Password",
+      loginPhUser: "Username",
+      loginPhPw: "Password (at least 6 characters)",
+      loginSubmit: "Sign in",
+      noAccount: "No account yet? ",
+      registerLink: "Create one",
+      registerTail: " — just a username and password.",
+      regPhUser: "2–24 chars: Chinese, letters, digits, _ or -",
+      regPhPw: "At least 8 characters with letters and digits",
+      registerSubmit: "Register & sign in",
+      hasAccount: "Already have an account? ",
+      loginLink: "Sign in",
+      dotTail: ".",
+      pwRuleLen: "8+ characters",
+      pwRuleLetter: "Contains a letter",
+      pwRuleDigit: "Contains a digit",
+      pwWeak: "Weak",
+      pwMid: "Fair",
+      pwStrong: "Strong",
+      pwStrength: "Strength: ",
+      favTitle: "📚 My Favorites",
+      favTip: "Tap Owned / Want to buy / Want to play on any game page to build these lists",
+      shareTitle: "Share my favorites",
+      shareDesc: "When enabled, anyone with the link can view your three lists (read-only)",
+      shareEnable: "Enable sharing",
+      shareLinkAria: "Share link",
+      shareCopy: "Copy link",
+      copied: "Copied ✓",
+      shareRegen: "Regenerate",
+      shareOff: "Disable sharing",
+      secOwned: "Owned",
+      secWishlist: "Want to buy",
+      secPlay: "Want to play",
+      emptyOwned: "No games marked as owned yet",
+      emptyWishlist: "Your shopping cart is empty",
+      emptyPlay: "Nothing on the want-to-play list yet",
+      goIndex: "Browse all games →",
+      backAll: "← All games",
+      opFail: "Operation failed: ",
+      enableFail: "Failed to enable: ",
+      closeFail: "Failed to disable: ",
+      regenConfirm: "Regenerating will invalidate the old link immediately. Continue?",
+      shareOffConfirm: "Once disabled, the current link will stop working. Continue?",
+      manualCopy: "Please copy manually: ",
+      sharedTitleTpl: "{u}'s Favorites · Board Game Rules",
+      sharedTopbar: "Shared favorites",
+      sharedH1Tpl: "👤 {u}'s Favorites",
+      sharedTip: "Shared link · read-only",
+      invalidLink: "This link is invalid, or sharing has been turned off"
     }
   };
 
@@ -148,6 +286,34 @@
   function t(key, lang) {
     var dict = STRINGS[lang || current] || STRINGS.zh;
     return dict[key] != null ? dict[key] : (STRINGS.zh[key] != null ? STRINGS.zh[key] : key);
+  }
+
+  // 后端(server/internal/api)错误文案是中文;英文模式下把已知串翻成英文,未知串原样返回
+  var SERVER_ERRORS_EN = {
+    "请求体不是合法 JSON": "Request body is not valid JSON",
+    "用户名需为 2-24 个中文、字母、数字、_ 或 -": "Username must be 2–24 characters: Chinese, letters, digits, _ or -",
+    "密码至少 8 位，且需同时包含字母和数字": "Password must be at least 8 characters and contain both letters and digits",
+    "密码最长 72 位": "Password must be at most 72 characters",
+    "密码需同时包含字母和数字": "Password must contain both letters and digits",
+    "这个密码太常见，请换一个": "This password is too common — please pick another",
+    "注册过于频繁，请稍后再试": "Too many registrations — please try again later",
+    "服务器内部错误": "Internal server error",
+    "用户名已被注册": "Username already taken",
+    "尝试过于频繁，请稍后再试": "Too many attempts — please try again later",
+    "用户名或密码错误": "Wrong username or password",
+    "未登录": "Not signed in",
+    "访问过于频繁，请稍后再试": "Too many requests — please try again later",
+    "链接无效": "Invalid link",
+    "链接无效或分享已关闭": "Invalid link, or sharing has been disabled",
+    "游戏标识不合法": "Invalid game key",
+    "status 需为 owned / wishlist / play": "status must be owned / wishlist / play",
+    "name 必填且不超过 60 字": "name is required (max 60 characters)",
+    "操作过于频繁，请稍后再试": "Too many operations — please try again later"
+  };
+
+  function tErr(msg) {
+    var s = String(msg || "");
+    return current === "en" && SERVER_ERRORS_EN[s] ? SERVER_ERRORS_EN[s] : s;
   }
 
   function esc(s) {
@@ -181,6 +347,11 @@
       if (phKey) el.setAttribute("placeholder", t(phKey, lang));
       var titleAttr = lang === "en" ? el.getAttribute("data-title-en") : el.getAttribute("data-title-zh");
       if (titleAttr != null && titleAttr !== "") el.setAttribute("title", titleAttr);
+    }
+    // data-lang-only:成对出现的富文本段落(内含链接等子节点),按语言显隐
+    var onlys = document.querySelectorAll("[data-lang-only]");
+    for (var k = 0; k < onlys.length; k++) {
+      onlys[k].style.display = onlys[k].getAttribute("data-lang-only") === lang ? "" : "none";
     }
     updateToggleBtn();
   }
@@ -328,6 +499,7 @@
 
   window.ZRulesI18N = {
     t: t,
+    tErr: tErr,
     apply: apply,
     lang: function () { return current; },
     esc: esc

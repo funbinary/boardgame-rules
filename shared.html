@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="通过分享链接查看的桌游收藏清单（已有 / 想买 / 想玩，只读）。">
   <meta name="robots" content="noindex">
-  <title>分享的收藏 · 桌游规则书</title>
+  <title data-zh="分享的收藏 · 桌游规则书" data-en="Shared Favorites · Board Game Rules">分享的收藏 · 桌游规则书</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="shared">
 
   <header class="topbar">
-    <a class="brand" href="index.html">🎲 桌游规则书</a>
-    <span class="topbar-title">分享的收藏</span>
+    <a class="brand" href="index.html" data-i18n="brand">🎲 桌游规则书</a>
+    <span class="topbar-title" data-i18n="sharedTopbar">分享的收藏</span>
   </header>
 
   <main class="home">
@@ -21,16 +21,16 @@
       <!-- 链接无效 -->
       <div class="shared-error" id="shared-error" hidden>
         <span class="le-ico">🔗</span>
-        <p>链接无效，或对方已关闭分享</p>
-        <a class="le-link" href="index.html">去首页逛逛 →</a>
+        <p data-i18n="invalidLink">链接无效，或对方已关闭分享</p>
+        <a class="le-link" href="index.html" data-i18n="goIndex">去首页逛逛 →</a>
       </div>
 
       <!-- 清单视图（只读） -->
       <div id="shared-view" hidden>
         <div class="account-head">
           <div class="account-head-text">
-            <h1 class="account-title">👤 <span id="shared-name"></span> 分享的收藏</h1>
-            <p class="account-tip">通过分享链接查看 · 只读</p>
+            <h1 class="account-title" id="shared-h1">👤 分享的收藏</h1>
+            <p class="account-tip" data-i18n="sharedTip">通过分享链接查看 · 只读</p>
           </div>
         </div>
         <div class="stat-cards" id="shared-stats"></div>
@@ -39,25 +39,35 @@
     </section>
 
     <footer class="home-footer">
-      <p><a href="index.html">← 返回全部游戏</a></p>
+      <p><a href="index.html" data-i18n="backAll">← 返回全部游戏</a></p>
       <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备2026012848号-2</a></p>
     </footer>
   </main>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/bgg-ratings.js"></script>
   <script>
   (function () {
     "use strict";
+    // 中英切换(i18n.js):文案走字典,langchange 后重渲染清单
+    var T = function (key) { return window.ZRulesI18N ? window.ZRulesI18N.t(key) : key; };
+    var langEn = function () { return !!window.ZRulesI18N && window.ZRulesI18N.lang() === "en"; };
     var SECTION_META = [
-      { key: "owned", ico: "✅", title: "已有", empty: "还没有标记「已有」的游戏" },
-      { key: "wishlist", ico: "🛒", title: "想买", empty: "购物车还是空的" },
-      { key: "play", ico: "🎲", title: "想玩", empty: "还没有想玩的游戏" }
+      { key: "owned", ico: "✅", titleKey: "secOwned", emptyKey: "emptyOwned" },
+      { key: "wishlist", ico: "🛒", titleKey: "secWishlist", emptyKey: "emptyWishlist" },
+      { key: "play", ico: "🎲", titleKey: "secPlay", emptyKey: "emptyPlay" }
     ];
 
     function esc(s) {
       return String(s).replace(/[&<>"']/g, function (c) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
       });
+    }
+
+    function fmtUsers(n) {
+      n = Number(n) || 0;
+      if (langEn()) return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "K" : String(n);
+      return n >= 10000 ? (n / 10000).toFixed(1) + "万" : String(n);
     }
 
     function gameHref(key) {
@@ -69,36 +79,48 @@
       var R = window.BGG_RATINGS || {};
       var r = R[key] || R[key.replace("bga/", "")];
       if (!r) return "";
-      return '<span class="meta-chip bgg-chip-mini" title="BGG 综合 ' + esc(r.a) + ' · 排名 #' + esc(r.r) +
-        ' · 权重/复杂度 ' + esc(r.w) + '/5 · ' + esc(r.u) + ' 人评分">⭐' + esc(r.a) + " · 权重 " + esc(r.w) + "</span>";
+      return '<span class="meta-chip bgg-chip-mini" title="' +
+        esc(T("bggChipTitle").replace("{a}", r.a).replace("{r}", r.r).replace("{w}", r.w).replace("{u}", fmtUsers(r.u))) +
+        '">⭐' + esc(r.a) + " · " + esc(T("wLabel")) + " " + esc(r.w) + "</span>";
+    }
+
+    var sharedUser = "";
+    var sharedData = null;
+
+    function paintHeading() {
+      if (!sharedUser) return;
+      document.title = T("sharedTitleTpl").replace("{u}", sharedUser);
+      document.getElementById("shared-h1").textContent = T("sharedH1Tpl").replace("{u}", sharedUser);
     }
 
     function render(data) {
-      document.title = data.username + " 分享的收藏 · 桌游规则书";
-      document.getElementById("shared-name").textContent = data.username;
+      sharedUser = data.username || "";
+      sharedData = data;
+      paintHeading();
 
       document.getElementById("shared-stats").innerHTML = SECTION_META.map(function (sec) {
         var n = data.counts[sec.key] || 0;
         return '<a class="stat-card st-' + sec.key + '" href="#list-' + sec.key + '">' +
           '<span class="stat-num">' + n + "</span>" +
-          '<span class="stat-label">' + sec.ico + " " + sec.title + "</span></a>";
+          '<span class="stat-label">' + sec.ico + " " + esc(T(sec.titleKey)) + "</span></a>";
       }).join("");
 
       var html = "";
       SECTION_META.forEach(function (sec) {
         var items = data[sec.key] || [];
         html += '<section class="list-block st-' + sec.key + '" id="list-' + sec.key + '">' +
-          '<h2 class="list-title">' + sec.ico + " " + sec.title +
+          '<h2 class="list-title">' + sec.ico + " " + esc(T(sec.titleKey)) +
           '<span class="count-badge">' + items.length + "</span></h2>";
         if (!items.length) {
-          html += '<div class="list-empty"><span class="le-ico">' + sec.ico + "</span><p>" + sec.empty + "</p></div>";
+          html += '<div class="list-empty"><span class="le-ico">' + sec.ico + "</span><p>" + esc(T(sec.emptyKey)) + "</p></div>";
         } else {
           html += '<div class="list-rows">';
           items.forEach(function (it) {
+            // 单语言名:英文模式显示英文名(缺失回退中文名),中文模式显示中文名
+            var nm = langEn() ? (it.en || it.name) : (it.name || it.en);
             html += '<div class="list-row">' +
               '<div class="list-info"><a class="list-name" href="' + esc(gameHref(it.game_key)) + '">' +
-              esc(it.name) + "</a>" +
-              (it.en ? '<span class="list-en">' + esc(it.en) + "</span>" : "") +
+              esc(nm) + "</a>" +
               bggChip(it.game_key) + "</div></div>";
           });
           html += "</div>";
@@ -108,6 +130,12 @@
       document.getElementById("shared-lists").innerHTML = html;
       document.getElementById("shared-view").hidden = false;
     }
+
+    // 语言切换后按新语言重渲染(静态文案由 i18n.js applyChrome 处理)
+    document.addEventListener("zrules:langchange", function () {
+      paintHeading();
+      if (sharedData) render(sharedData);
+    });
 
     var token = new URLSearchParams(location.search).get("t");
     if (!token) {

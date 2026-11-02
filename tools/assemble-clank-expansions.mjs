@@ -253,28 +253,28 @@ function buildPage(key) {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://zhibinai.cn/#website",
+        "@id": "https://rule.zhibinai.cn/#website",
         name: "桌游规则书",
-        url: "https://zhibinai.cn/",
+        url: "https://rule.zhibinai.cn/",
         inLanguage: "zh-CN",
         description: "免费中文桌游规则书查询站：热门桌游完整中文规则全文 + Board Game Arena 全量官方规则中文版。",
       },
       {
         "@type": "WebPage",
-        "@id": `https://zhibinai.cn/games/${P.slug}.html`,
-        url: `https://zhibinai.cn/games/${P.slug}.html`,
+        "@id": `https://rule.zhibinai.cn/games/${P.slug}.html`,
+        url: `https://rule.zhibinai.cn/games/${P.slug}.html`,
         name: P.title,
         description: P.desc,
-        isPartOf: { "@id": "https://zhibinai.cn/#website" },
+        isPartOf: { "@id": "https://rule.zhibinai.cn/#website" },
         inLanguage: "zh-CN",
         dateModified: TODAY,
-        primaryImageOfPage: { "@type": "ImageObject", url: `https://zhibinai.cn/assets/img/${key === "uw" ? "clank-catacombs-underworld" : "clank-adventuring-party"}/01.jpg` },
+        primaryImageOfPage: { "@type": "ImageObject", url: `https://rule.zhibinai.cn/assets/img/${key === "uw" ? "clank-catacombs-underworld" : "clank-adventuring-party"}/01.jpg` },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "首页", item: "https://zhibinai.cn/" },
-          { "@type": "ListItem", position: 2, name: P.nameZh, item: `https://zhibinai.cn/games/${P.slug}.html` },
+          { "@type": "ListItem", position: 1, name: "首页", item: "https://rule.zhibinai.cn/" },
+          { "@type": "ListItem", position: 2, name: P.nameZh, item: `https://rule.zhibinai.cn/games/${P.slug}.html` },
         ],
       },
     ],
@@ -289,14 +289,14 @@ function buildPage(key) {
   <title>${P.title}</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🐉</text></svg>">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="canonical" href="https://zhibinai.cn/games/${P.slug}.html">
+  <link rel="canonical" href="https://rule.zhibinai.cn/games/${P.slug}.html">
   <meta property="og:site_name" content="桌游规则书">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
   <meta property="og:title" content="${P.title}">
   <meta property="og:description" content="${P.desc}">
-  <meta property="og:url" content="https://zhibinai.cn/games/${P.slug}.html">
-  <meta property="og:image" content="https://zhibinai.cn/assets/img/${key === "uw" ? "clank-catacombs-underworld" : "clank-adventuring-party"}/01.jpg">
+  <meta property="og:url" content="https://rule.zhibinai.cn/games/${P.slug}.html">
+  <meta property="og:image" content="https://rule.zhibinai.cn/assets/img/${key === "uw" ? "clank-catacombs-underworld" : "clank-adventuring-party"}/01.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${P.title}">
   <meta name="twitter:description" content="${P.desc}">

@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const BASE = "https://zhibinai.cn";
+const BASE = "https://rule.zhibinai.cn";
 
 function entry(file, urlPath, priority) {
   const lastmod = fs.statSync(path.join(ROOT, file)).mtime.toISOString().slice(0, 10);

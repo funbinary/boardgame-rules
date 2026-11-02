@@ -1,4 +1,4 @@
-# 桌游规则书 https://zhibinai.cn
+# 桌游规则书 https://rule.zhibinai.cn
 # 传统搜索引擎与 AI 搜索引擎一律允许抓取
 
 User-agent: *
@@ -43,4 +43,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://zhibinai.cn/sitemap.xml
+Sitemap: https://rule.zhibinai.cn/sitemap.xml

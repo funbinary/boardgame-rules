@@ -92,9 +92,9 @@ jobs:
           sleep 2
           # 2026-09-11 备案通过后已上 HTTPS：certbot 将纯 IP 的 80 端口请求改为 404，
           # 验证必须走域名（HTTP 会 301 到 HTTPS）
-          status="$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 https://zhibinai.cn/)"
+          status="$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 https://rule.zhibinai.cn/)"
           echo "站点 HTTP $status"
           [ "$status" = "200" ]
-          health="$(curl -s --max-time 20 https://zhibinai.cn/api/health)"
+          health="$(curl -s --max-time 20 https://rule.zhibinai.cn/api/health)"
           echo "API $health"
           echo "$health" | grep -q '"ok":true'

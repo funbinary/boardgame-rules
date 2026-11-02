@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # rules-api 服务器一次性引导脚本（root 执行）。
-# 服务器：Ubuntu 24.04 x86_64，nginx 1.24（/etc/nginx/conf.d/rule.conf 托管 zhibinai.cn）
+# 服务器：Ubuntu 24.04 x86_64，nginx 1.24（/etc/nginx/conf.d/rule.conf 托管 rule.zhibinai.cn）
 # 幂等：重复执行安全。日常发版不需要本脚本（deploy.yml 会自动更新二进制并重启）。
 set -euo pipefail
 
