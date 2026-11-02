@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="BoardGameGeek 总排名完整榜单（3200+ 款桌游，含未上架 BGA 的游戏）：Geek 评分、平均分、评分人数，标注每款游戏能否在 Board Game Arena 在线玩、是否已下架、本站有无中文规则书；另附 BGA 全部 1400+ 款在架游戏对照榜。">
-  <title>BGG 排行榜 · BGA 游戏对照 — 桌游规则书</title>
+  <title data-zh="BGG 排行榜 · BGA 游戏对照 — 桌游规则书" data-en="BGG Rankings × BGA Companion — Board Game Rules">BGG 排行榜 · BGA 游戏对照 — 桌游规则书</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏆</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="canonical" href="https://zhibinai.cn/bgg-ranking.html">
@@ -53,39 +53,39 @@
 <body data-theme="board">
 
   <header class="topbar">
-    <a class="brand" href="./">🎲 桌游规则书</a>
-    <span class="topbar-title">🏆 BGG 排行榜</span>
+    <a class="brand" href="./" data-i18n="brand">🎲 桌游规则书</a>
+    <span class="topbar-title" data-zh="🏆 BGG 排行榜" data-en="🏆 BGG Rankings">🏆 BGG 排行榜</span>
   </header>
 
   <main class="home">
     <section class="hero hero-compact">
-      <h1>🏆 BGG 排行榜 · BGA 游戏对照</h1>
-      <p class="hero-sub">两个视角：BGG 总排名完整榜单（全部有排名桌游，含未上架 BGA 的），以及 BGA 当前在架全部游戏对照榜。游戏名直达中文规则书，评分直达 BGG 词条。</p>
+      <h1 data-zh="🏆 BGG 排行榜 · BGA 游戏对照" data-en="🏆 BGG Rankings × BGA Companion">🏆 BGG 排行榜 · BGA 游戏对照</h1>
+      <p class="hero-sub" data-zh="两个视角：BGG 总排名完整榜单（全部有排名桌游，含未上架 BGA 的），以及 BGA 当前在架全部游戏对照榜。游戏名直达中文规则书，评分直达 BGG 词条。" data-en="Two views: the complete BoardGameGeek ranking (every ranked game, including those not on BGA), and a companion board of all games currently on Board Game Arena. Names link to rulebooks on this site; ratings link to BGG.">两个视角：BGG 总排名完整榜单（全部有排名桌游，含未上架 BGA 的），以及 BGA 当前在架全部游戏对照榜。游戏名直达中文规则书，评分直达 BGG 词条。</p>
       <div class="hero-tags" id="board-stats"></div>
     </section>
 
-    <div class="view-tabs" id="view-tabs" role="tablist" aria-label="榜单视图">
-      <button class="view-tab on" data-view="full" role="tab" aria-selected="true">🏆 BGG 总榜（全部桌游）</button>
-      <button class="view-tab" data-view="bga" role="tab" aria-selected="false">🎮 BGA 在架游戏</button>
+    <div class="view-tabs" id="view-tabs" role="tablist" aria-label="榜单视图" data-i18n-aria="viewsAria">
+      <button class="view-tab on" data-view="full" role="tab" aria-selected="true" data-zh="🏆 BGG 总榜（全部桌游）" data-en="🏆 BGG Top (all games)">🏆 BGG 总榜（全部桌游）</button>
+      <button class="view-tab" data-view="bga" role="tab" aria-selected="false" data-zh="🎮 BGA 在架游戏" data-en="🎮 Games on BGA">🎮 BGA 在架游戏</button>
     </div>
 
     <!-- ====================== 视图一：BGG 总榜 ====================== -->
     <section class="search-section" id="view-full">
       <div class="search-box">
-        <input id="full-search" type="search" placeholder="搜索游戏名称，如：gloomhaven、方舟动物园、scythe…" autocomplete="off">
+        <input id="full-search" type="search" placeholder="搜索游戏名称，如：gloomhaven、方舟动物园、scythe…" data-i18n-placeholder="searchPhFull" autocomplete="off">
       </div>
       <div class="board-controls">
         <div class="board-chips" id="full-filters">
-          <button class="board-chip on" data-filter="all">全部</button>
-          <button class="board-chip" data-filter="onbga">🎮 在 BGA 可玩</button>
-          <button class="board-chip" data-filter="offbga">未上架 BGA</button>
-          <button class="board-chip" data-filter="delisted">已下架</button>
-          <button class="board-chip" data-filter="site">📚 本站有规则书</button>
+          <button class="board-chip on" data-filter="all" data-zh="全部" data-en="All">全部</button>
+          <button class="board-chip" data-filter="onbga" data-zh="🎮 在 BGA 可玩" data-en="🎮 Playable on BGA">🎮 在 BGA 可玩</button>
+          <button class="board-chip" data-filter="offbga" data-zh="未上架 BGA" data-en="Not on BGA">未上架 BGA</button>
+          <button class="board-chip" data-filter="delisted" data-zh="已下架" data-en="Delisted">已下架</button>
+          <button class="board-chip" data-filter="site" data-zh="📚 本站有规则书" data-en="📚 Rulebook on site">📚 本站有规则书</button>
         </div>
-        <div class="board-sort" id="full-sort" role="group" aria-label="排序方式">
-          <button class="on" data-sort="rank">BGG 排名</button>
-          <button data-sort="avg">平均分</button>
-          <button data-sort="voters">评分人数</button>
+        <div class="board-sort" id="full-sort" role="group" aria-label="排序方式" data-i18n-aria="sortAria">
+          <button class="on" data-sort="rank" data-zh="BGG 排名" data-en="BGG Rank">BGG 排名</button>
+          <button data-sort="avg" data-zh="平均分" data-en="Average">平均分</button>
+          <button data-sort="voters" data-zh="评分人数" data-en="Voters">评分人数</button>
         </div>
       </div>
       <div class="search-meta" id="full-meta"></div>
@@ -93,13 +93,13 @@
         <table class="rank-table" id="full-table">
           <thead>
             <tr>
-              <th class="num">BGG 排名</th>
-              <th>游戏名</th>
-              <th class="num">Geek 评分</th>
-              <th class="num">平均分</th>
-              <th class="num rank-hide-sm">评分人数</th>
-              <th class="rank-hide-sm">BGA</th>
-              <th>规则书</th>
+              <th class="num" data-zh="BGG 排名" data-en="BGG Rank">BGG 排名</th>
+              <th data-zh="游戏名" data-en="Game">游戏名</th>
+              <th class="num" data-zh="Geek 评分" data-en="Geek">Geek 评分</th>
+              <th class="num" data-zh="平均分" data-en="Average">平均分</th>
+              <th class="num rank-hide-sm" data-zh="评分人数" data-en="Voters">评分人数</th>
+              <th class="rank-hide-sm" data-zh="BGA" data-en="BGA">BGA</th>
+              <th data-zh="规则书" data-en="Rulebook">规则书</th>
             </tr>
           </thead>
           <tbody id="full-body"></tbody>
@@ -111,22 +111,22 @@
     <!-- ====================== 视图二：BGA 在架游戏 ====================== -->
     <section class="search-section" id="view-bga" hidden>
       <div class="search-box">
-        <input id="board-search" type="search" placeholder="搜索游戏名称，如：方舟动物园、catan、gaia…" autocomplete="off">
+        <input id="board-search" type="search" placeholder="搜索游戏名称，如：方舟动物园、catan、gaia…" data-i18n-placeholder="searchPhBga" autocomplete="off">
       </div>
       <div class="board-controls">
         <div class="board-chips" id="board-filters">
-          <button class="board-chip on" data-filter="all">全部</button>
-          <button class="board-chip" data-filter="rated">有 BGG 评分</button>
-          <button class="board-chip" data-filter="public">仅正式版</button>
-          <button class="board-chip" data-filter="beta">仅 Beta</button>
-          <button class="board-chip" data-filter="premium">💰 付费</button>
-          <button class="board-chip" data-filter="pending">待补评分</button>
-          <button class="board-chip" data-filter="noid">无 BGG 词条</button>
+          <button class="board-chip on" data-filter="all" data-zh="全部" data-en="All">全部</button>
+          <button class="board-chip" data-filter="rated" data-zh="有 BGG 评分" data-en="Rated on BGG">有 BGG 评分</button>
+          <button class="board-chip" data-filter="public" data-zh="仅正式版" data-en="Release only">仅正式版</button>
+          <button class="board-chip" data-filter="beta" data-zh="仅 Beta" data-en="Beta only">仅 Beta</button>
+          <button class="board-chip" data-filter="premium" data-zh="💰 付费" data-en="💰 Premium">💰 付费</button>
+          <button class="board-chip" data-filter="pending" data-zh="待补评分" data-en="Rating pending">待补评分</button>
+          <button class="board-chip" data-filter="noid" data-zh="无 BGG 词条" data-en="No BGG entry">无 BGG 词条</button>
         </div>
-        <div class="board-sort" id="board-sort" role="group" aria-label="排序方式">
-          <button class="on" data-sort="rank">BGG 排名</button>
-          <button data-sort="avg">BGG 评分</button>
-          <button data-sort="plays">BGA 热度</button>
+        <div class="board-sort" id="board-sort" role="group" aria-label="排序方式" data-i18n-aria="sortAria">
+          <button class="on" data-sort="rank" data-zh="BGG 排名" data-en="BGG Rank">BGG 排名</button>
+          <button data-sort="avg" data-zh="BGG 评分" data-en="BGG Rating">BGG 评分</button>
+          <button data-sort="plays" data-zh="BGA 热度" data-en="BGA Popularity">BGA 热度</button>
         </div>
       </div>
       <div class="search-meta" id="board-meta"></div>
@@ -135,13 +135,13 @@
           <thead>
             <tr>
               <th class="num">#</th>
-              <th>游戏名</th>
-              <th class="num">BGG 评分</th>
-              <th class="num rank-hide-sm">权重</th>
-              <th class="num rank-hide-sm">评分人数</th>
-              <th class="rank-hide-sm">人数</th>
-              <th class="num rank-hide-sm">时长<span class="th-unit">分</span></th>
-              <th class="num">BGA 场次</th>
+              <th data-zh="游戏名" data-en="Game">游戏名</th>
+              <th class="num" data-zh="BGG 评分" data-en="BGG">BGG 评分</th>
+              <th class="num rank-hide-sm" data-zh="权重" data-en="Weight">权重</th>
+              <th class="num rank-hide-sm" data-zh="评分人数" data-en="Voters">评分人数</th>
+              <th class="rank-hide-sm" data-zh="人数" data-en="Players">人数</th>
+              <th class="num rank-hide-sm" data-zh="时长" data-en="Time">时长<span class="th-unit" data-zh="分" data-en="min">分</span></th>
+              <th class="num" data-zh="BGA 场次" data-en="BGA Plays">BGA 场次</th>
             </tr>
           </thead>
           <tbody id="rank-body"></tbody>
@@ -157,6 +157,7 @@
     </footer>
   </main>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/bga-bgg-board.js"></script>
   <script>
   (function () {
@@ -166,8 +167,12 @@
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
       });
     }
+    // 中英切换(i18n.js):动态渲染的徽章/统计/计数文案走字典
+    function T(k) { return window.ZRulesI18N ? window.ZRulesI18N.t(k) : k; }
+    function langEn() { return !!window.ZRulesI18N && window.ZRulesI18N.lang() === "en"; }
     function fmtWan(n) {
       if (!n) return "—";
+      if (langEn()) return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "K" : String(n);
       return n >= 10000 ? (n / 10000).toFixed(n >= 100000 ? 0 : 1) + "万" : String(n);
     }
     function wireControls(prefix, state, renderFn) {
@@ -195,7 +200,7 @@
         more.hidden = false;
         more.innerHTML = "";
         var btn = document.createElement("button");
-        btn.textContent = "显示更多（还剩 " + (list.length - shown.length) + " 款）";
+        btn.textContent = T("showMore").replace("{n}", list.length - shown.length);
         btn.addEventListener("click", function () { state.shown += LIMIT; renderFn(); });
         more.appendChild(btn);
       } else more.hidden = true;
@@ -236,12 +241,15 @@
         var bggHref = g.b
           ? "https://boardgamegeek.com/boardgame/" + g.b
           : "https://boardgamegeek.com/search/boardgame?q=" + encodeURIComponent(g.n);
-        var name = esc(g.n) + (g.y ? ' <span class="rank-year">(' + esc(g.y) + ")</span>" : "") +
-          (g.z ? '<small class="rank-en">' + esc(g.z) + "</small>" : "");
-        var bgaCell = g.st === "p" ? '<em class="rank-badge ok">🎮 可玩</em>'
-          : g.st === "b" ? '<em class="rank-badge ok">🎮 可玩 β</em>'
-          : g.st === "o" ? '<em class="rank-badge none">已下架</em>' : "—";
-        var siteCell = g.p ? '<a class="rank-site" href="' + esc(g.p) + '">📚 规则书</a>' : "—";
+        // 主显名随语言对调:中文模式 中文名优先(无中文名用英文名);英文模式 英文名
+        var primary = langEn() ? g.n : (g.z || g.n);
+        var secondary = langEn() ? (g.z && g.z !== g.n ? g.z : "") : (g.z ? g.n : "");
+        var name = esc(primary) + (g.y ? ' <span class="rank-year">(' + esc(g.y) + ")</span>" : "") +
+          (secondary ? '<small class="rank-en">' + esc(secondary) + "</small>" : "");
+        var bgaCell = g.st === "p" ? '<em class="rank-badge ok">' + T("badgePlayable") + "</em>"
+          : g.st === "b" ? '<em class="rank-badge ok">' + T("badgePlayableBeta") + "</em>"
+          : g.st === "o" ? '<em class="rank-badge none">' + T("badgeDelisted") + "</em>" : "—";
+        var siteCell = g.p ? '<a class="rank-site" href="' + esc(g.p) + '">' + T("rulesLink") + "</a>" : "—";
         return "<tr>" +
           '<td class="num rank-idx">#' + g.r + "</td>" +
           '<td class="rank-name"><a href="' + bggHref + '" target="_blank" rel="noopener">' + name + "</a></td>" +
@@ -253,7 +261,9 @@
           "</tr>";
       }).join("");
       document.getElementById("full-meta").textContent =
-        "共 " + list.length + " 款" + (list.length !== FULL.games.length ? "（总榜 " + FULL.games.length + " 款）" : "") + "，已显示 " + shown.length + " 款";
+        T("boardCount").replace("{n}", list.length) +
+        (list.length !== FULL.games.length ? T("boardOfTotal").replace("{n}", FULL.games.length) : "") +
+        T("boardShown").replace("{n}", shown.length);
       moreButton("full-more", list, shown, fullState, renderFull);
     }
     function ensureFullData(cb) {
@@ -262,7 +272,7 @@
       s.src = "assets/js/bgg-full-board.js";
       s.onload = function () { FULL = window.BGG_FULL_BOARD || { games: [] }; cb && cb(); };
       s.onerror = function () {
-        document.getElementById("full-meta").textContent = "总榜数据加载失败，请刷新重试";
+        document.getElementById("full-meta").textContent = T("fullLoadErr");
       };
       document.head.appendChild(s);
     }
@@ -302,7 +312,10 @@
       var shown = list.slice(0, bgaState.shown);
       document.getElementById("rank-body").innerHTML = shown.map(function (g, i) {
         var dim = !g.a ? ' class="dim"' : "";
-        var name = (g.z ? esc(g.z) : esc(g.e || g.s)) + (g.z && g.e ? '<small class="rank-en">' + esc(g.e) + "</small>" : "");
+        // 主显名随语言对调:中文模式 中文名优先;英文模式 英文名(无英文名用 slug)
+        var primary = langEn() ? (g.e || g.z || esc(g.s)) : (g.z || g.e || esc(g.s));
+        var secondary = langEn() ? (g.z && g.e ? g.z : "") : (g.z && g.e ? g.e : "");
+        var name = esc(primary) + (secondary ? '<small class="rank-en">' + esc(secondary) + "</small>" : "");
         var avg = g.a
           ? (g.b ? '<a class="rank-avg" href="https://boardgamegeek.com/boardgame/' + g.b + '" target="_blank" rel="noopener">' + g.a.toFixed(2) + "</a>"
                  : '<span class="rank-avg">' + g.a.toFixed(2) + "</span>")
@@ -310,7 +323,7 @@
         var badges = "";
         if (g.st === "b") badges += '<em class="rank-badge beta">β</em>';
         if (g.pr) badges += '<em class="rank-badge prem">💰</em>';
-        if (!g.a) badges += g.b ? '<em class="rank-badge todo">待补</em>' : '<em class="rank-badge none">无词条</em>';
+        if (!g.a) badges += g.b ? '<em class="rank-badge todo">' + T("badgePending") + "</em>" : '<em class="rank-badge none">' + T("badgeNoEntry") + "</em>";
         var href = g.h ? "games/bga/" + encodeURIComponent(g.s) + ".html"
           : "https://en.boardgamearena.com/gamepanel?game=" + encodeURIComponent(g.s);
         return "<tr" + dim + ">" +
@@ -319,13 +332,15 @@
           '<td class="num">' + avg + "</td>" +
           '<td class="num rank-hide-sm">' + (g.w ? g.w.toFixed(2) : "—") + "</td>" +
           '<td class="num rank-hide-sm">' + fmtWan(g.u) + "</td>" +
-          '<td class="rank-hide-sm">' + (g.p ? esc(g.p) + "人" : "—") + "</td>" +
+          '<td class="rank-hide-sm">' + (g.p ? T("playersUnit").replace("{n}", g.p) : "—") + "</td>" +
           '<td class="num rank-hide-sm">' + (g.d || "—") + "</td>" +
           '<td class="num">' + fmtWan(g.g) + "</td>" +
           "</tr>";
       }).join("");
       document.getElementById("board-meta").textContent =
-        "共 " + list.length + " 款" + (list.length !== games.length ? "（全站 " + games.length + " 款）" : "") + "，已显示 " + shown.length + " 款";
+        T("boardCount").replace("{n}", list.length) +
+        (list.length !== games.length ? T("boardAllSite").replace("{n}", games.length) : "") +
+        T("boardShown").replace("{n}", shown.length);
       moreButton("board-more", list, shown, bgaState, renderBga);
     }
     wireControls("board", bgaState, renderBga);
@@ -337,17 +352,17 @@
       if (currentView === "full" && FULL) {
         var s = FULL.stats || {};
         el.innerHTML =
-          '<span class="meta-chip">🏆 总榜 ' + (s.total || 0) + " 款</span>" +
-          '<span class="meta-chip">🎮 BGA 可玩 ' + (s.onBga || 0) + " 款</span>" +
-          '<span class="meta-chip">📚 本站规则书 ' + (s.withSite || 0) + " 款</span>" +
-          '<span class="meta-chip">📅 数据日期 ' + esc(FULL.updated || "—") + "</span>";
+          '<span class="meta-chip">' + T("statFullTotal").replace("{n}", s.total || 0) + "</span>" +
+          '<span class="meta-chip">' + T("statOnBga").replace("{n}", s.onBga || 0) + "</span>" +
+          '<span class="meta-chip">' + T("statSite").replace("{n}", s.withSite || 0) + "</span>" +
+          '<span class="meta-chip">' + T("statDate").replace("{n}", esc(FULL.updated || "—")) + "</span>";
       } else {
         var s2 = DATA.stats || {};
         el.innerHTML =
-          '<span class="meta-chip">🎮 BGA ' + (s2.total || games.length) + " 款</span>" +
-          '<span class="meta-chip">⭐ 有 BGG 评分 ' + (s2.have || 0) + " 款</span>" +
-          '<span class="meta-chip">🏅 排名榜 ' + (s2.ranked || 0) + " 款</span>" +
-          '<span class="meta-chip">🧪 Beta ' + (s2.beta || 0) + " 款</span>";
+          '<span class="meta-chip">' + T("statBgaTotal").replace("{n}", s2.total || games.length) + "</span>" +
+          '<span class="meta-chip">' + T("statHave").replace("{n}", s2.have || 0) + "</span>" +
+          '<span class="meta-chip">' + T("statRanked").replace("{n}", s2.ranked || 0) + "</span>" +
+          '<span class="meta-chip">' + T("statBeta").replace("{n}", s2.beta || 0) + "</span>";
       }
     }
     function switchView(v) {
@@ -373,6 +388,11 @@
 
     // 初始视图：#bga 打开 BGA 视图，否则默认总榜
     switchView(location.hash === "#bga" ? "bga" : "full");
+    // 语言切换后重渲染当前视图
+    document.addEventListener("zrules:langchange", function () {
+      if (currentView === "full") { if (FULL) { renderFull(); setStats(); } }
+      else { renderBga(); setStats(); }
+    });
   })();
   </script>
 </body>

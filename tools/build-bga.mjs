@@ -1,5 +1,5 @@
 // 把 _bga/raw/ 下的 BGA wiki 规则页批量生成为静态游戏页
-// 产出: games/bga/<id>.html + assets/js/bga-index.js
+// 产出: games/bga/<id>.html + assets/js/bga-index.js + assets/i18n/bga/<id>.en.html(中文页的对侧英文正文片段)
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -107,11 +107,15 @@ const SEO_BASE = "https://zhibinai.cn";
 const escAttr = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, bgg, play }) {
+function renderPage({ id, name, nameEn, sub, subEn, players, contentHtml, chip, desc, source, bgg, play, pageLang, altBody }) {
   const chips = [
-    players ? `<span class="meta-chip">👥 ${players} 人</span>` : "",
+    players
+      ? `<span class="meta-chip" data-zh="👥 ${escAttr(players)} 人" data-en="👥 ${escAttr(players)} players">👥 ${players} 人</span>`
+      : "",
     bggChipHtml(bgg),
-    `<span class="meta-chip">📄 ${chip || "BGA 官方文档"}</span>`,
+    chip
+      ? `<span class="meta-chip">📄 ${chip}</span>`
+      : `<span class="meta-chip" data-i18n="docChip">📄 BGA 官方文档</span>`,
   ].filter(Boolean).join("\n            ");
 
   // 「在线玩」横幅:content/bga-zh/<id>.meta.json 提供 play 字段时渲染(链到 /play/<slug>/)
@@ -119,10 +123,10 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
     ? `<a class="play-banner" href="${escAttr(play.href)}">
           <span class="play-banner-icon" aria-hidden="true">🎮</span>
           <span class="play-banner-body">
-            <strong>${play.label || "在线玩本游戏"}</strong>
+            <strong${play.label ? "" : ' data-i18n="playLabel"'}>${play.label || "在线玩本游戏"}</strong>
             ${play.desc ? `<em>${play.desc}</em>` : ""}
           </span>
-          <span class="play-banner-go">开始 →</span>
+          <span class="play-banner-go" data-i18n="playGo">开始 →</span>
         </a>`
     : "";
 
@@ -168,7 +172,7 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="${escAttr(pageDesc)}。">
-  <title>${name} · 规则 — 桌游规则书</title>
+  <title data-zh="${escAttr(name)} · 规则 — 桌游规则书" data-en="${escAttr(nameEn)} · Rules — Board Game Rules">${name} · 规则 — 桌游规则书</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="canonical" href="${pageUrl}">
@@ -188,31 +192,31 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
   <div class="progress-bar" aria-hidden="true"></div>
 
   <header class="topbar">
-    <button class="menu-btn" aria-label="打开目录" aria-expanded="false">☰</button>
-    <a class="brand" href="../../index.html">🎲 桌游规则书</a>
-    <span class="topbar-title">${name}</span>
+    <button class="menu-btn" aria-label="打开目录" data-i18n-aria="openToc" aria-expanded="false">☰</button>
+    <a class="brand" href="../../index.html" data-i18n="brand">🎲 桌游规则书</a>
+    <span class="topbar-title" data-zh="${escAttr(name)}" data-en="${escAttr(nameEn)}">${name}</span>
   </header>
 
   <div class="layout">
     <aside class="sidebar" id="sidebar">
-      <nav class="toc" aria-label="本页目录">
-        <div class="toc-title">本页目录</div>
+      <nav class="toc" aria-label="本页目录" data-i18n-aria="onThisPage">
+        <div class="toc-title" data-i18n="onThisPage">本页目录</div>
         <ul id="toc-list"></ul>
       </nav>
-      <nav aria-label="站点导航">
-        <div class="toc-title">站点导航</div>
+      <nav aria-label="站点导航" data-i18n-aria="siteNav">
+        <div class="toc-title" data-i18n="siteNav">站点导航</div>
         <ul>
-          <li><a href="../../index.html">🏠 返回首页 / 全部游戏</a></li>
+          <li><a href="../../index.html" data-i18n="homeAll">🏠 返回首页 / 全部游戏</a></li>
         </ul>
       </nav>
     </aside>
     <div class="backdrop" aria-hidden="true"></div>
 
     <main class="content">
-      <article>
+      <article data-page-lang="${pageLang}"${altBody ? ` data-alt-body="${altBody}"` : ""}>
         <header class="page-header">
-          <h1 class="game-title">${name}</h1>
-          <p class="game-sub">${sub}</p>
+          <h1 class="game-title" data-zh="${escAttr(name)}" data-en="${escAttr(nameEn)}">${name}</h1>
+          <p class="game-sub" data-zh="${escAttr(sub)}" data-en="${escAttr(subEn)}">${sub}</p>
           <div class="meta-chips">
             ${chips}
           </div>
@@ -220,17 +224,20 @@ function renderPage({ id, name, sub, players, contentHtml, chip, desc, source, b
 
         ${playBanner}
 
-        ${contentHtml}
+        <div class="rule-body">${contentHtml}</div>
 
         <footer class="source-note">
-          ${source ? `<p>${source}</p>` : `<p>来源：<a href="https://en.doc.boardgamearena.com/Gamehelp${id}" target="_blank" rel="noopener">${name} — BGA 官方文档 Wiki</a> ·
-          商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</p>`}
+          ${source
+            ? `<p>${source}</p>`
+            : `<p><span data-i18n="sourcePrefix">来源：</span><a href="https://en.doc.boardgamearena.com/Gamehelp${id}" target="_blank" rel="noopener" data-zh="${escAttr(name)} — BGA 官方文档 Wiki" data-en="${escAttr(nameEn)} — BGA official wiki">${name} — BGA 官方文档 Wiki</a> ·
+          <span data-i18n="sourceSuffix">商标与原内容归各出版商及 BGA 所有，翻译仅供个人学习查阅。</span></p>`}
         </footer>
       </article>
     </main>
   </div>
 
-  <button class="to-top" aria-label="返回顶部">↑</button>
+  <button class="to-top" aria-label="返回顶部" data-i18n-aria="backTop">↑</button>
+  <script src="../../assets/js/i18n.js"></script>
   <script src="../../assets/js/main.js"></script>
   <script src="../../assets/js/account.js"></script>
 </body>
@@ -292,21 +299,33 @@ function fmtWan(n) {
   return v >= 10000 ? (v / 10000).toFixed(1).replace(/\.0$/, "") + "万" : String(v);
 }
 
+// 英文计数:1.2万 -> 12K,46895 -> 46.9K,其余原样
+function fmtK(n) {
+  const v = parseInt(n, 10);
+  if (!isFinite(v) || v <= 0) return "";
+  return v >= 1000 ? (v / 1000).toFixed(1).replace(/\.0$/, "") + "K" : String(v);
+}
+
 function bggChipHtml(row) {
   if (!row || !row.a) return "";
   const avg = parseFloat(row.a).toFixed(1);
-  const rank = row.r ? ` · 排名 #${row.r}` : "";
   const wv = parseFloat(row.w);
-  const weight = isFinite(wv) && wv > 0 ? ` · 权重 ${wv.toFixed(2)}/5` : "";
-  const u = fmtWan(row.u);
-  const users = u ? ` · ${u}人评分` : "";
+  const hasW = isFinite(wv) && wv > 0;
   const href = row.i ? `https://boardgamegeek.com/boardgame/${row.i}` : "https://boardgamegeek.com";
-  return `<a class="meta-chip bgg-chip" href="${href}" target="_blank" rel="noopener" title="BoardGameGeek：⭐综合评分 ${avg}，排名 #${row.r || "-"}，权重/复杂度 ${isFinite(wv) && wv > 0 ? wv.toFixed(2) : "-"}/5（1 轻松 ~ 5 重度），${u || "-"}人评分。点击查看原页面">⭐ BGG ${avg}${rank}${weight}${users}</a>`;
+  const zh = `⭐ BGG ${avg}${row.r ? ` · 排名 #${row.r}` : ""}${hasW ? ` · 权重 ${wv.toFixed(2)}/5` : ""}${fmtWan(row.u) ? ` · ${fmtWan(row.u)}人评分` : ""}`;
+  const en = `⭐ BGG ${avg}${row.r ? ` · Rank #${row.r}` : ""}${hasW ? ` · Weight ${wv.toFixed(2)}/5` : ""}${fmtK(row.u) ? ` · ${fmtK(row.u)} ratings` : ""}`;
+  const zhTip = `BoardGameGeek：⭐综合评分 ${avg}，排名 #${row.r || "-"}，权重/复杂度 ${hasW ? wv.toFixed(2) : "-"}/5（1 轻松 ~ 5 重度），${fmtWan(row.u) || "-"}人评分。点击查看原页面`;
+  const enTip = `BoardGameGeek: average rating ${avg}, rank #${row.r || "-"}, weight/complexity ${hasW ? wv.toFixed(2) : "-"}/5 (1 light – 5 heavy), ${fmtK(row.u) || "-"} ratings. Click to open the BGG page`;
+  return `<a class="meta-chip bgg-chip" href="${href}" target="_blank" rel="noopener" title="${escAttr(zhTip)}" data-title-zh="${escAttr(zhTip)}" data-title-en="${escAttr(enTip)}" data-zh="${escAttr(zh)}" data-en="${escAttr(en)}">${zh}</a>`;
 }
 
 // 3) 生成页面（content/bga-zh/<id>.html 有中文版则优先使用；bga-names-zh.json 提供中文译名）
 const ZH_DIR = path.join(ROOT, "content", "bga-zh");
 fs.mkdirSync(ZH_DIR, { recursive: true });
+// 中文页的对侧英文正文片段(切换语言时由 i18n.js 按需 fetch),每次全量重建
+const I18N_DIR = path.join(ROOT, "assets", "i18n", "bga");
+fs.rmSync(I18N_DIR, { recursive: true, force: true });
+fs.mkdirSync(I18N_DIR, { recursive: true });
 let nameZh = {};
 try { nameZh = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "bga-names-zh.json"), "utf8")); } catch {}
 let written = 0, zhCount = 0;
@@ -315,9 +334,13 @@ for (const [title, html] of byTitle) {
   const id = titleToId.get(title);
   const zhFile = path.join(ZH_DIR, id + ".html");
   let contentHtml, players;
+  let pageLang = "en", altBody = ""; // pageLang=正文语言; altBody=对侧语言片段(无翻译则空,前端切语言出提示条)
   if (fs.existsSync(zhFile)) {
     contentHtml = fs.readFileSync(zhFile, "utf8");
     zhCount++;
+    pageLang = "zh";
+    fs.writeFileSync(path.join(I18N_DIR, id + ".en.html"), cleanHtml(html, titleToId, imgMap) + "\n");
+    altBody = `../../assets/i18n/bga/${encodeURIComponent(id)}.en.html`;
   } else {
     contentHtml = cleanHtml(html, titleToId, imgMap);
   }
@@ -331,8 +354,11 @@ for (const [title, html] of byTitle) {
   players = meta.players || info.players;
   const en = info.name && info.name.length <= 60 ? info.name : titleCase(id);
   const name = nameZh[id] || en; // 中文名优先展示
-  const sub = meta.sub || (nameZh[id] ? `${en} · Board Game Arena 官方规则文档` : "Board Game Arena 官方规则文档");
-  const page = renderPage({ id, name, sub, players, contentHtml, chip: meta.chip, desc: meta.desc, source: meta.source, bgg: bggRatings[id] || null, play: meta.play });
+  const hasZhName = Boolean(nameZh[id]);
+  const sub = meta.sub || (hasZhName ? `${en} · Board Game Arena 官方规则文档` : "Board Game Arena 官方规则文档");
+  // 自定义 sub(中文来源说明)不强译,英文侧回退为英文名
+  const subEn = meta.sub ? String(meta.subEn || en) : (hasZhName ? `${en} · Official Board Game Arena rules` : "Official Board Game Arena rules");
+  const page = renderPage({ id, name, nameEn: en, sub, subEn, players, contentHtml, chip: meta.chip, desc: meta.desc, source: meta.source, bgg: bggRatings[id] || null, play: meta.play, pageLang, altBody });
   fs.writeFileSync(path.join(OUT_DIR, id + ".html"), page);
   index.push({ id, name, en: name === en ? "" : en, players: players || "" });
   written++;
@@ -345,5 +371,5 @@ fs.writeFileSync(
   "// 自动生成：node tools/build-bga.mjs\nwindow.BGA_GAMES = " + JSON.stringify(index) + ";\n"
 );
 
-console.log(`已生成 ${written} 个页面 -> games/bga/（其中中文 ${zhCount} 个）`);
+console.log(`已生成 ${written} 个页面 -> games/bga/（其中中文正文 ${zhCount} 个，英文片段 ${zhCount} 个 -> assets/i18n/bga/）`);
 console.log(`索引 ${index.length} 条 -> assets/js/bga-index.js`);

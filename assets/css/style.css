@@ -162,6 +162,37 @@ img { max-width: 100%; height: auto; }
 }
 .menu-btn:hover { background: var(--accent-soft); }
 
+/* 中英文切换按钮(i18n.js 注入到顶栏末尾) */
+.lang-toggle {
+  margin-left: auto;
+  flex: none;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+.lang-toggle:hover { background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent-strong); }
+/* 顶栏可能同时有 account.js 注入的 .topbar-auth(自带 margin-left:auto);
+   两个 auto 会平分空隙把按钮顶到中间——auth 在后则由 toggle 独占右推 */
+.lang-toggle ~ .topbar-auth { margin-left: 0; }
+
+/* 正文语言缺失提示条(i18n.js 注入到 article 顶部) */
+.i18n-notice {
+  margin: 0 0 18px;
+  padding: 10px 14px;
+  border: 1px solid #f0c36d;
+  border-radius: 10px;
+  background: #fff7e6;
+  color: #7a5b16;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 /* ---------- 整体布局：侧边栏 + 正文 ---------- */
 .layout {
   display: grid;
@@ -725,7 +756,7 @@ img { max-width: 100%; height: auto; }
 
 /* ---------- 打印 ---------- */
 @media print {
-  .topbar, .sidebar, .backdrop, .to-top, .progress-bar, .menu-btn { display: none !important; }
+  .topbar, .sidebar, .backdrop, .to-top, .progress-bar, .menu-btn, .lang-toggle, .i18n-notice { display: none !important; }
   .layout { display: block; }
   .content { padding: 0; max-width: none; }
   body { background: #fff; }

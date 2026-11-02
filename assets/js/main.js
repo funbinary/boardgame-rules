@@ -16,6 +16,17 @@
     initLightbox();
   });
 
+  // 语言切换后(i18n.js 已换正文)重建目录、刷新高亮基准、更新 lightbox 文案
+  document.addEventListener("zrules:langchange", function () {
+    buildToc();
+    refreshScrollspy();
+    updateLightboxLang();
+  });
+
+  function t(key) {
+    return window.ZRulesI18N ? window.ZRulesI18N.t(key) : key;
+  }
+
   /* ---------- 0. 自绘滚动动画 ----------
      不用 CSS scroll-behavior:smooth / scrollTo({behavior:'smooth'})：
      部分内嵌 webview 中平滑滚动动画被节流，会导致所有滚动静默失效。
@@ -85,37 +96,42 @@
   }
 
   /* ---------- 2. 滚动高亮当前章节 ---------- */
-  function initScrollspy() {
-    var links = document.querySelectorAll(".toc a[href^='#']");
-    if (!links.length) return;
+  var spyLinks = [], spyHeadings = [];
 
-    var headings = [];
-    Array.prototype.forEach.call(links, function (a) {
+  // 重算目录链接与标题的对应关系(初始与语言切换重建 TOC 后都要调)
+  function refreshScrollspy() {
+    spyLinks = document.querySelectorAll(".toc a[href^='#']");
+    spyHeadings = [];
+    Array.prototype.forEach.call(spyLinks, function (a) {
       var target = document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)));
-      if (target) headings.push({ link: a, el: target });
+      if (target) spyHeadings.push({ link: a, el: target });
     });
-    if (!headings.length) return;
+  }
+
+  function initScrollspy() {
+    refreshScrollspy();
+    if (!spyLinks.length) return;
 
     var ticking = false;
     function update() {
       ticking = false;
       var pos = window.scrollY + 120;
       var current = -1;
-      for (var i = 0; i < headings.length; i++) {
-        if (headings[i].el.offsetTop <= pos) current = i;
+      for (var i = 0; i < spyHeadings.length; i++) {
+        if (spyHeadings[i].el.offsetTop <= pos) current = i;
       }
       // 已滚动到页面底部时，高亮最后一个章节
       var doc = document.documentElement;
       if (window.innerHeight + window.scrollY >= doc.scrollHeight - 4) {
-        current = headings.length - 1;
+        current = spyHeadings.length - 1;
       }
       // 页面顶部时高亮第一个章节
       if (current < 0) current = 0;
-      Array.prototype.forEach.call(links, function (a) { a.classList.remove("active"); });
+      Array.prototype.forEach.call(spyLinks, function (a) { a.classList.remove("active"); });
       if (current >= 0) {
-        headings[current].link.classList.add("active");
+        spyHeadings[current].link.classList.add("active");
         // 侧边栏内部滚动跟随
-        var active = headings[current].link;
+        var active = spyHeadings[current].link;
         var sidebar = active.closest(".sidebar");
         if (sidebar) {
           var top = active.offsetTop - sidebar.offsetTop;
@@ -202,6 +218,23 @@
   /* ---------- 5. 图片点击放大（lightbox，支持缩放与平移） ----------
      滚轮 / 按钮 / 双击 / 双指捏合缩放；放大后拖动平移。
      图片若带 data-full-src,打开时优先加载该高清原图。 */
+
+  // 语言切换后更新 lightbox 按钮与提示文案(工具条按钮顺序:− + 重置 ✕)
+  function updateLightboxLang() {
+    var bar = document.querySelector(".lightbox-bar");
+    if (!bar) return;
+    var btns = bar.querySelectorAll("button");
+    if (btns.length >= 4) {
+      btns[0].setAttribute("aria-label", t("zoomOut"));
+      btns[1].setAttribute("aria-label", t("zoomIn"));
+      btns[2].textContent = t("zoomResetLabel");
+      btns[2].setAttribute("aria-label", t("zoomReset"));
+      btns[3].setAttribute("aria-label", t("close"));
+    }
+    var hint = document.querySelector(".lightbox-hint");
+    if (hint) hint.textContent = t("lightboxHint");
+  }
+
   function initLightbox() {
     var overlay = document.createElement("div");
     overlay.className = "lightbox";
@@ -223,10 +256,10 @@
       b.setAttribute("aria-label", label);
       return b;
     };
-    var btnOut = mkBtn("−", "缩小");
-    var btnIn = mkBtn("+", "放大");
-    var btnReset = mkBtn("重置", "重置缩放");
-    var btnClose = mkBtn("✕", "关闭");
+    var btnOut = mkBtn("−", t("zoomOut"));
+    var btnIn = mkBtn("+", t("zoomIn"));
+    var btnReset = mkBtn(t("zoomResetLabel"), t("zoomReset"));
+    var btnClose = mkBtn("✕", t("close"));
     bar.appendChild(zoomLabel);
     bar.appendChild(btnOut);
     bar.appendChild(btnIn);
@@ -236,7 +269,7 @@
 
     var hint = document.createElement("div");
     hint.className = "lightbox-hint";
-    hint.textContent = "滚轮 / 双击 / 双指缩放 · 放大后可拖动";
+    hint.textContent = t("lightboxHint");
     overlay.appendChild(hint);
 
     document.body.appendChild(overlay);

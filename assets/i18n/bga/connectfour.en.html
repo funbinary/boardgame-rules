@@ -1,0 +1,22 @@
+<div class="mw-parser-output">
+<h2><span class="mw-headline" id="Objective">Objective</span></h2>
+<p>Connect Four is a two-player connection game. The objective is to connect four of your colored discs in a straight line while preventing your opponent from doing the same.
+</p>
+<h2><span class="mw-headline" id="Game_play">Game play</span></h2>
+<p>The players take turns dropping one colored disc from the top into a vertically suspended grid. The discs fall straight down, occupying the lowest available space within the column.
+</p><p>The game ends when one player forms a horizontal, vertical, or diagonal line of four of their own  discs. If the entire board fills up before either player achieves four in a row, then the game ends in a tie.
+</p>
+<h2><span class="mw-headline" id="Board_sizes">Board sizes</span></h2>
+<p>Five board sizes (6x7, 8x9, 9x8, 9x9, and 10x10) are available in the BGA implementation.
+</p>
+<h2><span class="mw-headline" id="Opening_rule">Opening rule</span></h2>
+<p>Two optional opening rules are implemented to eliminate first player advantage.
+</p>
+<ul><li>Pie rule: After the first player's first move, the second player may switch colors.</li></ul>
+<ul><li>Swap rule: The first player places three discs - a red disc, a yellow disc, and another red disc. After the first 3 discs are placed, the second player may switch colors.</li></ul>
+<h2><span class="mw-headline" id="Arena_mode">Arena mode</span></h2>
+<p>The 6x7 board size is unavailable in Arena mode because the game is too easily solved.
+</p><p>The opening rule is locked as the swap rule, to allow various opening moves to be played and to remove any potential first/second player advantage.
+</p><p>The board size option rotates as the season passes (8x9 → 9x9 → 10x10 → 8x9 → ...).
+</p><p>Gurus, <i>do not vote for a 6x7 board size or non-swap openings!</i>
+</p></div>

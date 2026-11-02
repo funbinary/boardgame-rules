@@ -1,6 +1,6 @@
 # 桌游规则书
 
-桌游规则书查询网站 + Go 用户服务。独立规则页与站点框架是纯静态、无外部依赖（不用 CDN 字体/JS 库），把整个目录丢到任意静态服务器即可运行，支持手机浏览；`games/bga/`、`assets/js/bga-index.js`、`assets/js/bgg-ratings.js`、`assets/js/bga-bgg-board.js` 为脚本生成的构建产物（日常使用无需重建，重建命令见下文）；`server/` 下的 rules-api 提供注册登录与游戏收藏（已有/想买/想玩）。
+桌游规则书查询网站 + Go 用户服务。独立规则页与站点框架是纯静态、无外部依赖（不用 CDN 字体/JS 库），把整个目录丢到任意静态服务器即可运行，支持手机浏览；`games/bga/`、`assets/js/bga-index.js`、`assets/js/bgg-ratings.js`、`assets/js/bga-bgg-board.js`、`assets/i18n/bga/` 为脚本生成的构建产物（日常使用无需重建，重建命令见下文）；`server/` 下的 rules-api 提供注册登录与游戏收藏（已有/想买/想玩）。全站页面支持中英文切换（见下文「中英文切换」）。
 
 ## 目录结构
 
@@ -19,11 +19,13 @@ rules/
 ├── assets/
 │   ├── css/style.css
 │   ├── js/main.js           # 自动目录 / 滚动高亮 / 抽屉侧边栏
+│   ├── js/i18n.js           # 中英文切换（字典 + 正文片段按需 fetch，全站引用）
 │   ├── js/account.js        # 登录态 + 收藏交互（全站引用）
 │   ├── js/bga-index.js      # BGA 游戏索引（构建产物，首页搜索用）
 │   ├── js/bgg-ratings.js    # BGG 评分数据（构建产物，游戏页 chip / 首页卡片）
 │   ├── js/bga-bgg-board.js  # BGA 视图榜单数据（构建产物）
 │   ├── js/bgg-full-board.js  # BGG 总榜数据（构建产物，页面懒加载）
+│   ├── i18n/bga/            # 中文规则页的对侧英文正文片段（构建产物，切换语言时按需 fetch）
 │   └── img/
 │       ├── 7-wonders/ …     # 中文精选的规则书扫描图
 │       └── bga/             # BGA 规则插图（本地化副本）
@@ -38,6 +40,7 @@ rules/
 │   ├── build-bga.mjs        # 从 _bga/raw/ 生成 games/bga/ 页面
 │   ├── gen-bgg-data.mjs     # _bgg/results.jsonl → assets/js/bgg-ratings.js
 │   ├── gen-bgg-board.mjs    # _bga/gamelist-*.json + results.jsonl → 榜单数据
+│   ├── wire-i18n.mjs        # 给手写独立页 games/*.html 幂等接入中英切换（data 属性 + i18n.js）
 │   └── wire-account.mjs     # 给游戏页幂等注入 data-game-key + account.js
 └── _bga/                    # 抓取缓存（原始 JSON / 日志 / 映射表）
 ```
@@ -47,10 +50,20 @@ rules/
 ```bash
 node tools/fetch-bga.mjs         # 抓取/增量更新规则页（约 1600 页，含重定向变体）
 node tools/fetch-bga-images.mjs  # 下载插图到本地（并发 6，断点续传）
-node tools/build-bga.mjs         # 生成 games/bga/ + assets/js/bga-index.js
+node tools/build-bga.mjs         # 生成 games/bga/ + assets/js/bga-index.js + assets/i18n/bga/*.en.html
+node tools/wire-i18n.mjs         # 给手写独立页 games/*.html 接入中英切换（幂等，新增独立页后跑一次）
 ```
 
 三个脚本都可重复执行：抓取脚本跳过已有文件，构建脚本全量重写。
+
+## 中英文切换（全站）
+
+`assets/js/i18n.js` 提供「中/EN」同页即时切换：顶栏按钮切换界面文案与规则正文，语言选择存 `localStorage`（键 `zrules-lang`），跨页/刷新保持；单 URL，不产生英文版独立页面，SEO 四件套（canonical/og/JSON-LD）保持中文默认。
+
+- **界面文案**：页面元素带 `data-i18n="key"`（查 i18n.js 内字典）或 `data-zh`/`data-en`（每页不同的文案，如游戏名）属性，`data-i18n-aria`/`data-i18n-placeholder`/`data-title-*` 同理换 aria-label/placeholder/title。BGA 生成页由 build-bga.mjs 模板输出，独立页由 wire-i18n.mjs 幂等注入（英文名来自 `content/site-games.json` 的 en 字段），index/bgg-ranking/account 三个根页面为手写。
+- **规则正文**：`<article data-page-lang="zh|en" data-alt-body="片段URL">` 包裹 `<div class="rule-body">`；切换时 i18n.js 按需 fetch 对侧语言片段（sessionStorage 缓存）替换正文并派发 `zrules:langchange` 事件（main.js 重建目录、index/bgg-ranking 重渲染列表）。中文规则页（content/bga-zh/ 有正文的 134 款）的对侧英文片段来自 `_bga/raw/` BGA wiki 原文，由 build-bga.mjs 产出在 `assets/i18n/bga/<id>.en.html`。
+- **缺失翻译**：约 1500 个 BGA 页正文是英文（无中文版）、32 个独立页正文是中文（无英文版）——切到缺失语言时正文保持原文，并在正文顶部显示「该规则暂无XX文翻译」提示条（`.i18n-notice`）。后续可用「BGA 规则翻译成中文」管线补齐，补齐即自动获得真双语。
+- 例外：account.html 登录/收藏表单内部文案与 play/burgundy 在线玩子应用未纳入切换。
 
 ## BGG 排行榜（bgg-ranking.html）
 
@@ -207,8 +220,7 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [殖民火星/重塑火星（Terraforming Mars）](https://www.bilibili.com/opus/1030063174843367432) · 哔哩哔哩「BGA小助手」（繁体中文版规则书全文转录、转简体，覆盖原 BGA wiki 机翻页，见 `games/bga/terraformingmars.html`）
 - [快餐连锁大亨（Food Chain Magnate）](https://mp.weixin.qq.com/s/Dy8X0sICGQ19fZjrZCUdNw) · 微信公众号「桌游怎么玩」（一刻馆官方中文版规则书全文转录，取代此前收录的焦无耻排印译本（[旧源](https://mp.weixin.qq.com/s/0xN6ZDRIY_2Wv1UvQ2Mkjw)，旧版见 Git 历史 1a76ebc），见 `games/food-chain-magnate.html`）
 - [CLANK! 地下墓穴（Clank!: Catacombs）](https://mp.weixin.qq.com/s/eFYIoamsySitThPcMxRVjQ) · 微信公众号「无忧桌游」（Dire Wolf 官方中文规则书全文转录，含 5–6 人派对扩展规则，见 `games/clank-catacombs.html`）
-- [方舟动物园（Ark Nova）](https://mp.weixin.qq.com/s/F_CRdbW-HPnsSNYDQm8vhw) · 微信公众号「桌游怎么玩」（游人码头官方中文规则书全文转录，覆盖原 BGA wiki 机翻页，见 `games/bga/arknova.html`）
-<!--ARKNOVA-PENDING-->
+- [方舟动物园（Ark Nova）](https://mp.weixin.qq.com/s/F_CRdbW-HPnsSNYDQm8vhw) · 微信公众号「桌游怎么玩」（游人码头官方中文规则书全文转录+新手规则思维导图，并附[集石官方FAQ](https://www.gstonegames.com/game/doc-4785.html)（Feuerland v1.0·2021-12，2024-03 更新：基础版图标概览/术语表/动物能力详解/赞助商卡牌 201–272 逐张澄清/地图 6·7·8 详解）与[集石官方勘误及FAQ](https://www.gstonegames.com/game/doc-5360.html)（勘误1.0/1.1）逐字转录，覆盖原 BGA wiki 机翻页，见 `games/bga/arknova.html`）
 - [方舟动物园：海洋世界（Ark Nova: Marine Worlds）](https://mp.weixin.qq.com/s/CEQf5aa0KbUTwRtjAgg_QA) · 微信公众号「桌游怎么玩」（扩展官方中文规则书+随书术语表/图标概览全文转录，见 `games/ark-nova-marine-worlds.html`）
 - [大创造时代（Age of Innovation）](https://mp.weixin.qq.com/s/g4Hbz6PNH9wXF1KnnIwqfQ) · 微信公众号「桌游怎么玩」（神秘大地系列，陈斌华非官方简体中文规则书全文转录，覆盖原 BGA wiki 机翻页，见 `games/bga/ageofinnovation.html`）
 - [地下酒吧（Speakeasy）](https://mp.weixin.qq.com/s/rd8TwTQ70XzUmEGOD9h1Lg) · 微信公众号「桌游怎么玩」（Vital Lacerda 作品，陈斌华中文规则书全文转录，见 `games/speakeasy.html`）

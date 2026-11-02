@@ -1,0 +1,116 @@
+<div class="mw-parser-output"><p>In Great Western Trail, you'll play the role of mid-1800's-era ranchers traversing the American west in order to trade cattle and develop the area leading west. You'll do this by moving along the trail, taking an action related to the space you end up, and restocking your cattle. Periodically you'll arrive at Kansas City to make a bigger trade and develop your abilities even further. This is a game containing a mix of deck building, tile placement, and engine development. Players earn points based on their cards, buildings placed, the deliveries made, how far their train can reach, and various other measures. The player with the most points at the end of the game wins!
+</p>
+
+<h2><span class="mw-headline" id="Game_Anatomy">Game Anatomy</span></h2>
+<p>The central board and the area immediately around it consists of:
+</p>
+<ul><li>The game map, with the trail itself appearing as a dotted line.</li>
+<li>Various buildings showing the different actions that can be taken. Gray buildings are neutral and can be used by all players. Buildings of a specific player color can only be used by that player. Square outlines are spaces that can be built on by a player later. Other tokens are hazards and require a money cost to move through.</li>
+<li>The delivery track, along the top edge of the board. As you complete the trail, you can place discs on here for points and other bonuses (or penalties).</li>
+<li>The train station, appearing just under the delivery track and continuing along the right edge of the board. You can upgrade the stations along this for additional points and bonuses.</li>
+<li>The worker market, along the left side of the board. This shows the workers available for hire. It also shows the approximate game progress - if the marker along the right side of it is scrolled off the board, the game will end shortly after.</li>
+<li>The cattle market, shown under the board. This allows you to purchase more cattle.</li>
+<li>The objective display, shown under that. This allows you to pick up new objectives.</li></ul>
+<p>Each player has their own board, which also shows:
+</p>
+<ul><li>The overall turn structure, shown along the top of the board. This shows your movement, actions, and cleanup parameters, which can be upgraded as the game proceeds.</li>
+<li>Auxiliary actions, shown on the left side of this board. These show various actions you can take - if the disc next to the action has been removed, you can take this action.</li>
+<li>Your workers, in the center of your board. The number of cowboys, craftsmen, and engineers are shown here, along with bonuses for hiring these workers.</li>
+<li>Your certificates, represented by ribbons along the right side of your board. These can be spent in order to get a higher value hand.</li>
+<li>Your buildings still left to build, represented by tiles of your player color.</li>
+<li>Your cattle cards. These can be spent on various actions for money, or taken to the end of the trail for a delivery.</li>
+<li>Your objectives. You can complete these for extra points.</li></ul>
+<h2><span class="mw-headline" id="What_To_Do_On_Your_Turn">What To Do On Your Turn</span></h2>
+<p>A turn of Great Western Trail consists of three phases: a movement phase, an action phase, and a cleanup phase, performed in that order. So in general, you will move some number of spaces, take an action related to where you moved to, and replenish any spent cards during your turn.
+</p>
+<h3><span class="mw-headline" id="Movement">Movement</span></h3>
+<p>During your movement phase, you can move up to your movement rating, which is listed on your player board. You don't have to move all of your allotted movement, but you do have to move at least once. You can only move forward along the trail, never backwards. One move consists of touching any building or token on the board - moving through empty space is free.
+</p><p>Some spaces have a toll to cross, represented by a hand symbol. If you touch here, you must pay money - if it's a hazard on the board, you pay to the general supply, but if it's from another player's building, you pay them the money. However, if you don't have enough money, you just pay what you can and move ahead.
+</p>
+<h3><span class="mw-headline" id="Actions">Actions</span></h3>
+<p>If you ended your movement on a neutral building or one of your color, you can take actions for the spaces you are currently on. Alternatively, you can also take one of the auxiliary actions on your player board.
+</p>
+<h4><span class="mw-headline" id="Auxiliary_Actions">Auxiliary Actions</span></h4>
+<p>These actions can be taken regardless of where you stop on the board, and can sometimes be taken as part of another building's action, frequently as a double action (i.e. take the same action twice). However, these need to be unlocked as the game progresses (the first two of these start the game unlocked).
+- Gain 1 coin.
+- Draw a card from your deck, then discard a card.
+- Pay 1 coin and move your train back one space to gain 1 certificate.
+- Pay 1 coin to advance your train 1 space.
+- Move your train back one space to permanently remove one of your cards from the game.
+</p>
+<h4><span class="mw-headline" id="Building_Actions">Building Actions</span></h4>
+<p>These are some of the common building actions. Note that all of these actions are optional and can be performed in any order.
+</p>
+<ul><li>Discard one or two cards for money. The tile will tell you which card(s) to discard and how much you will receive for doing so. Note that you can make only a single discard, even if you have other cards in hand that match the building action.</li></ul>
+<ul><li>Go to the cattle market.</li></ul>
+<ul><li><ul><li>For each cowboy you have, you can take a certain number of actions - these actions are listed along the bottom of the board.</li>
+<li>In general, you can use some number of cowboys to acquire a card of a certain number at a specific cost.</li>
+<li>When you buy a card, it goes to your discard pile (where it will return to your draw pile once you have run out of cards to draw).</li>
+<li>You may use these available cowboys in any combination of purchases, including taking the same purchase action twice.</li>
+<li>You can also use 1 cowboy to add 2 more cards to the cattle market.</li>
+<li>Note that you do not lose any cowboys by using them at the market - you only need to have them on your player board.</li>
+<li>All of the cows that you purchase at the market give you the victory points marked on them at the end of the game (the cows that you start with do not give any victory points).</li></ul></li></ul>
+<p><br />
+</p>
+<ul><li><b>Build a building.</b></li></ul>
+<ul><li><ul><li>The buildings do not have to be built in order, but your choice will usually be limited by the number of craftsmen on your player board.</li>
+<li>Each building tile shows how many craftsmen it requires, and you must usually spend 2 coins for each craftsman. However, you can overbuild one of your tiles already on the board if you have as many craftsmen as the difference between those required for the original building and the new one; if you do this, you pay only for the extra craftsmen (the original building is permanently lost, and does not give you any victory points).</li>
+<li>Building tiles on the map award points to their owners at the end of the game, both because they have points marked on them, and because they might contribute to achieving objective cards or claiming points from Stationmaster tiles.</li></ul></li></ul>
+<p><br />
+</p>
+<ul><li><b>Move your train.</b></li></ul>
+<ul><li><ul><li>When you move your train, skip over any occupied spaces (this also applies if you ever have to move your train backwards).</li>
+<li>Some train movement actions are free and some require a payment, whilst the movement allowed by others is dependent on the number of engineers you have, including the one you start with.</li>
+<li>All of these actions allow you to move to an unoccupied station siding. If you end your movement at a station and there is not already one of your discs there, you can pay (but you don't have to - you might just want to block the station!) to place a disc on the station, gaining points and uncovering another ability on your player mat. Note that if you do not place a disc, you cannot do so in a future turn unless you first leave the station and then return.</li>
+<li>In the turn when you place a disc on a station, you can also take the Stationmaster tile, if it is still available, by replacing it with one of your purchased workers (not one of the workers you start with). This will give you a one-time bonus or one or two permanent certificates, and possibly also some conditional victory points at the end of the game. Note that you lose the chance to take the Stationmaster tile if you do not do so in the turn when you place your disc.</li></ul></li></ul>
+<p><br />
+</p>
+<ul><li><b>Hire more workers.</b></li></ul>
+<ul><li><ul><li>The cost to hire is based on which row the worker has been placed on.</li>
+<li>Only workers in rows above the round marker are available.</li>
+<li>If hiring a worker covers an action on your board, immediately perform that action if able.</li>
+<li>Workers in the 5th and 6th column of your board are worth extra points - up to 24 points in total if you fill all of the worker spaces.</li></ul></li></ul>
+<p><br />
+</p>
+<ul><li><b>Trade with the natives/outlaws.</b></li></ul>
+<ul><li><ul><li>Pick up the native/outlaw tile and gain coins or an exchange token based on its position. Note that you cannot pick up one of these tiles by landing on it.</li></ul></li></ul>
+<p><br />
+</p>
+<ul><li><b>Clear a hazard.</b></li></ul>
+<ul><li><ul><li>Pay money, then pick up a hazard tile of your choice from the board. (Notice that you can also pick up a hazard tile for free whenever you place a cowboy on the 4th space on the cowboy track.)</li>
+<li>These tiles will award points at the end of the game, both because they have points marked on them, and because they might contribute to achieving objective cards or claiming points from Stationmaster tiles.</li></ul></li></ul>
+<p><br />
+</p>
+<ul><li><b>Take auxiliary actions.</b></li></ul>
+<ul><li><ul><li>These will let you take any of your unlocked auxiliary actions, usually twice.</li></ul></li></ul>
+<p>Other similar actions may exist on your building tiles.
+</p>
+<h4><span class="mw-headline" id="Actions_in_Kansas_City">Actions in Kansas City</span></h4>
+<p>If you end your move in Kansas City, instead take the following actions:
+</p>
+<ol><li>Add one tile from each of the three columns to the board. These will contain hazards and workers.</li>
+<li>Discard your hand. Gain coins equal to its numerical value, but ignore any duplicate cards - only unique cows are worth anything here! You may also spend certificates to add to this value.</li>
+<li>Place one of your discs on a delivery space up to the value you received in the previous step.
+<ol><li>These discs will unlock auxiliary actions or improve your movement, hand size, or maximum certificate.</li>
+<li>If there are any train crossings between your train and the space you're placing a disc, pay 1 coin for each of these.</li>
+<li>Note that the white bordered disc spaces can only accept white bordered discs (unless none are available), but black bordered spaces, which usually unlock stronger abilities, can accept either type of disc.</li></ol></li>
+<li>Return your player marker to the start of the trail.</li></ol>
+<h4><span class="mw-headline" id="Cleanup">Cleanup</span></h4>
+<p>During the cleanup phase, draw until you have 4 cards in hand (potentially more if you've removed the discs to increase your hand size). You must keep any cards that were left in your hand, including objective cards (objective cards can be played to the table at any time during your turn, but such objectives cards must be satisfied at the end of the game, otherwise they will impose a victory point penalty).
+</p>
+<h4><span class="mw-headline" id="End_Game">End Game</span></h4>
+<p>End game is triggered when a player places a worker tile onto the last space of the job market, moving the job market token off the bottom of the market.   They finish their turn, and each other player has a last turn.  
+</p><p><b>Then scoring takes place:</b>
+</p>
+<ul><li>1 VP per 5 dollars</li></ul>
+<ul><li>VP from building tiles on the board</li></ul>
+<ul><li>VP from disks on the city crests (don't forget to subtract 6 VP for each disc that you placed on Kansas City).</li></ul>
+<ul><li>VP next to train stations where you have a disc.</li></ul>
+<ul><li>VP from hazard tiles</li></ul>
+<ul><li>VP from all cattle cards with VP's on</li></ul>
+<ul><li>VP's from all your objective cards, whether in your decks or on the table. Note that each building, hazard tile, etc can be counted towards only one objective.</li></ul>
+<ul><li>Subtract VP's for any objective cards <u>on the table</u> that were not completely satisfied.</li></ul>
+<ul><li>VP's from Stationmaster tiles. Note that buildings, hazard tiles, etc can be counted towards these VP's even if they have already been 'used' to satisfy objective cards.</li></ul>
+<ul><li>VP's from workers in 5th or 6th column on your player board (so a maximum of 24 VP's).</li></ul>
+<ul><li>VP's from removing certain discs on your player board.</li></ul>
+<ul><li>2 VP for the job market token.</li></ul></div>
