@@ -34,7 +34,8 @@ export function sidebarGames() {
 export function featuredList() {
   const { reg, bySlug } = loadRegistry();
   return reg.featuredOrder.map((slug) => {
-    const g = bySlug.get(slug)!;
+    const g = bySlug.get(slug);
+    if (!g) throw new Error(`site-games.json: featuredOrder 引用了不存在的 slug "${slug}"`);
     return { name: g.zh, en: g.en, id: g.slug, players: g.players, href: g.href };
   });
 }

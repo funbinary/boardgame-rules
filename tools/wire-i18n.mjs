@@ -34,6 +34,16 @@ function withEmojiPrefix(text, en) {
   return (m ? m[1] : "") + en;
 }
 
+// 从 HTML 源捕获的文本可能带实体(如 "&amp;"),先解码为纯文本再 escAttr,
+// 否则属性值会变成字面 "&amp;"——i18n.js 用 textContent 回填时会原样显示。
+function decodeEntities(s) {
+  return String(s)
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, "&");
+}
+
 // 在标签字符串(以 > 结尾)末尾追加属性;已有同名属性则原样返回
 function setAttr(tag, name, value) {
   if (new RegExp(`\\s${name}=`).test(tag)) return tag;
@@ -53,7 +63,7 @@ function wireFile(file) {
   html = html.replace(/<title>([^<]+)<\/title>/, (m, t) => {
     if (!en || /data-en=/.test(m)) return m;
     changed++;
-    return `<title data-zh="${escAttr(t)}" data-en="${escAttr(en)} · Rules — Board Game Rules">${t}</title>`;
+    return `<title data-zh="${escAttr(decodeEntities(t))}" data-en="${escAttr(decodeEntities(en))} · Rules — Board Game Rules">${t}</title>`;
   });
 
   // 2) brand / menu-btn / to-top 的固定文案走字典
@@ -93,7 +103,7 @@ function wireFile(file) {
     const g = byHref.get(key);
     if (!g || !hasCJK(text)) return m;
     changed++;
-    return `<li><a href="${href}" data-zh="${escAttr(text)}" data-en="${escAttr(withEmojiPrefix(text, enClean(g.en)))}">${text}</a></li>`;
+    return `<li><a href="${href}" data-zh="${escAttr(decodeEntities(text))}" data-en="${escAttr(decodeEntities(withEmojiPrefix(text, enClean(g.en))))}">${text}</a></li>`;
   });
 
   // 5) 侧栏「返回首页」两种文案
@@ -109,12 +119,12 @@ function wireFile(file) {
     html = html.replace(/<h1 class="game-title">([^<]+)<\/h1>/, (m, t) => {
       if (/data-en=/.test(m) || !hasCJK(t)) return m;
       changed++;
-      return `<h1 class="game-title" data-zh="${escAttr(t)}" data-en="${escAttr(withEmojiPrefix(t, en))}">${t}</h1>`;
+      return `<h1 class="game-title" data-zh="${escAttr(decodeEntities(t))}" data-en="${escAttr(decodeEntities(withEmojiPrefix(t, en)))}">${t}</h1>`;
     });
     html = html.replace(/<span class="topbar-title">([^<]+)<\/span>/, (m, t) => {
       if (/data-en=/.test(m) || !hasCJK(t)) return m;
       changed++;
-      return `<span class="topbar-title" data-zh="${escAttr(t)}" data-en="${escAttr(withEmojiPrefix(t, en))}">${t}</span>`;
+      return `<span class="topbar-title" data-zh="${escAttr(decodeEntities(t))}" data-en="${escAttr(decodeEntities(withEmojiPrefix(t, en)))}">${t}</span>`;
     });
   }
 
@@ -124,7 +134,7 @@ function wireFile(file) {
     const mm = t.match(/^([^·]+) · 设计[:：]\s*(.+)$/);
     if (!mm) return m;
     changed++;
-    return `<p class="game-sub" data-zh="${escAttr(t)}" data-en="${escAttr(mm[1].trim())} · Design: ${escAttr(mm[2].trim())}">${t}</p>`;
+    return `<p class="game-sub" data-zh="${escAttr(decodeEntities(t))}" data-en="${escAttr(decodeEntities(mm[1].trim()))} · Design: ${escAttr(decodeEntities(mm[2].trim()))}">${t}</p>`;
   });
 
   // 8) article 标注正文语言(独立页正文为中文,无对侧片段,切英文时 i18n.js 显示提示条)

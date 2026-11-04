@@ -26,6 +26,7 @@
     { "slug": "seti", "zh": "SETI：寻找外星人", "en": "SETI: Search for Extraterrestrial Intelligence", "players": "1-4", "href": "games/seti.html", "emoji": "🛰️" },
     { "slug": "seti-space-agencies", "zh": "地外文明：太空机构", "en": "SETI: Space Agencies · 官方中文版扩展规则书全文转录", "players": "1-4", "href": "games/seti-space-agencies.html", "emoji": "🚀" },
     { "slug": "white-castle", "zh": "姬路城", "en": "The White Castle · 官方中文规则书全文转录", "players": "1-4", "href": "games/white-castle.html", "emoji": "🏯" },
+    { "slug": "white-castle-matcha", "zh": "姬路城：茶道", "en": "The White Castle: Matcha · 扩展规则书全文翻译", "players": "1-4", "href": "games/white-castle-matcha.html", "emoji": "🍵" },
     { "slug": "endeavor-deep-sea", "zh": "奋进号：深海", "en": "Endeavor: Deep Sea · 官方中文规则书全文转录", "players": "1-4", "href": "games/endeavor-deep-sea.html", "emoji": "🌊" },
     { "slug": "druids-of-edora", "zh": "埃多拉的德鲁伊", "en": "The Druids of Edora · 中文规则书全文转录", "players": "2-4", "href": "games/druids-of-edora.html", "emoji": "🌲" },
     { "slug": "grand-austria-hotel", "zh": "奥地利大饭店", "en": "Grand Austria Hotel · 中文规则书全文转录", "players": "2-4", "href": "games/grand-austria-hotel.html", "emoji": "🏨" },
@@ -59,7 +60,7 @@
     "ark-nova-marine-worlds", "ageofinnovation", "speakeasy", "power-grid", "seti",
     "seti-space-agencies", "maracaibo", "endeavor-deep-sea", "catan", "druids-of-edora",
     "wanderingtowers", "grand-austria-hotel", "fields-of-arle", "fromage", "the-message",
-    "gwt-new-zealand", "arnak-expedition-leaders", "clank-catacombs-underworld", "clank-adventuring-party", "white-castle",
+    "gwt-new-zealand", "arnak-expedition-leaders", "clank-catacombs-underworld", "clank-adventuring-party", "white-castle", "white-castle-matcha",
     "andromedasedge", "gaiaproject", "gaiaproject-lost-fleet"
   ],
   "crossLinks": [
@@ -74,6 +75,12 @@
       "marker": "扩展规则:本站另收录",
       "anchor": "(<p><small>整理说明：[^<]*扫描集共 17 图)",
       "inject": "扩展规则:本站另收录《CLANK! 地下墓穴:地下世界》扩展与《CLANK! 冒险队》(5–6 人)扩展的规则书全文转录页,见<a href=\"clank-catacombs-underworld.html\">地下世界</a>与<a href=\"clank-adventuring-party.html\">冒险队</a>。</small></p>\n<p><small>"
+    },
+    {
+      "page": "games/white-castle.html",
+      "marker": "扩展规则:本站另收录",
+      "anchor": "(<p><small>整理说明[:：])",
+      "inject": "扩展规则:本站另收录《姬路城:茶道》(The White Castle: Matcha) 扩展官方英文规则书全文翻译页(绿色骰与艺伎·茶筅/茶之路与茶室三房间/茶田·姬路城郊外/池畔眺台/单人模式扩展图标/附录仪式板块 20 效),见<a href=\"white-castle-matcha.html\">姬路城:茶道</a>。</small></p>\n<p><small>"
     }
   ]
 }
