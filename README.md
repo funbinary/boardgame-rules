@@ -7,7 +7,7 @@
 ```
 rules/
 ├── index.html               # 首页（全部游戏统一目录 + 搜索）
-├── bgg-ranking.html         # BGA 游戏 BGG 排行榜（数据 js 驱动的交互页）
+├── bgg-ranking.html         # BGG 排行榜（Top 100 中英对照 + 总榜 + BGA 对照，数据 js 驱动的交互页）
 ├── account.html             # 我的收藏（登录/注册 + 三张清单）
 ├── games/
 │   ├── 7-wonders.html       # 中文精选（人工整理）
@@ -25,6 +25,7 @@ rules/
 │   ├── js/bgg-ratings.js    # BGG 评分数据（构建产物，游戏页 chip / 首页卡片）
 │   ├── js/bga-bgg-board.js  # BGA 视图榜单数据（构建产物）
 │   ├── js/bgg-full-board.js  # BGG 总榜数据（构建产物，页面懒加载）
+│   ├── js/bgg-top100.js     # BGG Top 100 中英对照数据（构建产物，content/bgg-top100.json 生成）
 │   ├── i18n/bga/            # 中文规则页的对侧英文正文片段（构建产物，切换语言时按需 fetch）
 │   └── img/
 │       ├── 7-wonders/ …     # 中文精选的规则书扫描图
@@ -40,6 +41,7 @@ rules/
 │   ├── build-bga.mjs        # 从 _bga/raw/ 生成 games/bga/ 页面
 │   ├── gen-bgg-data.mjs     # _bgg/results.jsonl → assets/js/bgg-ratings.js
 │   ├── gen-bgg-board.mjs    # _bga/gamelist-*.json + results.jsonl → 榜单数据
+│   ├── gen-bgg-top100.mjs   # content/bgg-top100.json → Top100 对照数据 + 回注中文名到总榜
 │   ├── wire-i18n.mjs        # 给手写独立页 games/*.html 幂等接入中英切换（data 属性 + i18n.js）
 │   └── wire-account.mjs     # 给游戏页幂等注入 data-game-key + account.js
 └── _bga/                    # 抓取缓存（原始 JSON / 日志 / 映射表）
@@ -69,16 +71,19 @@ node tools/wire-i18n.mjs         # 给手写独立页 games/*.html 接入中英�
 
 ## BGG 排行榜（bgg-ranking.html）
 
-首页 hero 标签可进入的双视图榜单页：
+首页 hero 标签可进入的三视图榜单页：
 
 - **🏆 BGG 总榜**（默认视图）：BoardGameGeek 总排名完整榜单（约 3300 名内全部有排名桌游，**含未上架 BGA 的游戏**），含 Geek 评分/平均分/评分人数；每款标注 🎮 可否在 BGA 在线玩（正式/Beta）、「已下架」（曾上架 BGA、现已移除但本站保留规则书，如 Brass: Birmingham）、📚 本站有无中文规则书。数据抓自 BGG browse 榜单页（`_bgg/browse-raw*/`，33 页多版本装配，`_bgg/assemble-board.mjs` 去伪存真——web_reader 渲染伪影页需双版本一致性判真；个别名次存在快照时点差异）。
+- **🀄 Top 100 中英对照**：BGG 总榜前 100 名的「中文名/英文名」并排对照表（两种语言同时显示，不随站内语言切换），含 Geek 评分；中文名优先官方中文版/本站译名（如 工业革命：伯明翰、重塑火星、仙境幽谷、寒霜迷城、星际探险队），有规则书的中文直达本站。单一事实源 `content/bgg-top100.json`（快照日期 + 人工核过的译名），更新榜单就改它再重跑生成脚本。
 - **🎮 BGA 在架游戏**：BGA 当前在架全部 1400+ 款对照 BGG 评分/总排名，支持搜索、筛选（正式/Beta/付费/待补/无词条）与三种排序。
 
-两个视图均支持搜索、筛选、排序与分批加载；总榜数据 271KB 懒加载（切到该视图才拉取）。数据重建：
+总榜/BGA 两视图支持搜索、筛选、排序与分批加载；总榜数据 271KB 懒加载（切到该视图才拉取）。数据重建：
 
 ```bash
 node tools/gen-bgg-board.mjs   # ① _bga/gamelist-*.json + _bgg/results.jsonl → assets/js/bga-bgg-board.js（BGA 视图）
                                 # ② _bgg/full-board.jsonl（browse 装配结果）+ 本站页面 → assets/js/bgg-full-board.js（总榜视图，含空槽注入）
+node tools/gen-bgg-top100.mjs  # content/bgg-top100.json → assets/js/bgg-top100.js（对照视图），
+                                # 并把核实中文名回注 bgg-full-board.js（只补空缺不覆盖；注意 gen-bgg-board 重建总榜会清掉回注，重建后需重跑本脚本）
 ```
 
 补抓 BGG 评分后（见 `rules-bgg-ratings` skill）重跑本脚本，页面数据即自动更新。
