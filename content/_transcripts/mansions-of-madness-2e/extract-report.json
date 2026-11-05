@@ -1,0 +1,31 @@
+{
+ "slug": "mansions-of-madness-2e",
+ "pages": 20,
+ "total_chars": 45505,
+ "avg_chars_per_page": 2275,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  3,
+  5320,
+  1565,
+  3787,
+  2554,
+  2451,
+  2595,
+  1725,
+  1105,
+  2811,
+  1225,
+  3361,
+  2798,
+  3221,
+  1084,
+  2154,
+  1816,
+  1624,
+  1505,
+  2801
+ ]
+}

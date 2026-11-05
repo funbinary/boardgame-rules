@@ -1,0 +1,31 @@
+{
+ "slug": "cthulhu-death-may-die",
+ "pages": 20,
+ "total_chars": 41424,
+ "avg_chars_per_page": 2071,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  11,
+  4414,
+  573,
+  1095,
+  902,
+  1483,
+  1146,
+  2611,
+  937,
+  1991,
+  3125,
+  1577,
+  2542,
+  2578,
+  2246,
+  1947,
+  2684,
+  3250,
+  4063,
+  2249
+ ]
+}

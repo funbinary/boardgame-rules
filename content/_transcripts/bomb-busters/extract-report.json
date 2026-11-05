@@ -1,0 +1,19 @@
+{
+ "slug": "bomb-busters",
+ "pages": 8,
+ "total_chars": 15398,
+ "avg_chars_per_page": 1924,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  645,
+  1745,
+  2168,
+  928,
+  2018,
+  2916,
+  2253,
+  2725
+ ]
+}

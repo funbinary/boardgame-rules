@@ -1,0 +1,31 @@
+{
+ "slug": "pandemic-legacy-season-2",
+ "pages": 20,
+ "total_chars": 56557,
+ "avg_chars_per_page": 2827,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  4951,
+  2008,
+  5119,
+  4669,
+  2950,
+  1152,
+  3478,
+  5634,
+  3573,
+  4120,
+  158,
+  2455,
+  3030,
+  1599,
+  2688,
+  3798,
+  671,
+  422,
+  4082
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "slug": "five-tribes",
+ "pages": 8,
+ "total_chars": 21320,
+ "avg_chars_per_page": 2665,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1265,
+  1946,
+  3270,
+  2503,
+  3084,
+  3258,
+  3455,
+  2539
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "slug": "the-crew-planet-nine",
+ "pages": 22,
+ "total_chars": 32037,
+ "avg_chars_per_page": 1456,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  552,
+  1178,
+  2060,
+  2029,
+  1481,
+  1260,
+  962,
+  1851,
+  1017,
+  1633,
+  1118,
+  2153,
+  1695,
+  1087,
+  1078,
+  682,
+  1735,
+  1875,
+  1717,
+  1515,
+  1592,
+  1767
+ ]
+}

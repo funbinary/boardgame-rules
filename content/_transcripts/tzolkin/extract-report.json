@@ -1,0 +1,27 @@
+{
+ "slug": "tzolkin",
+ "pages": 16,
+ "total_chars": 53839,
+ "avg_chars_per_page": 3364,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1434,
+  1079,
+  927,
+  1568,
+  3083,
+  5539,
+  4648,
+  4444,
+  4154,
+  5182,
+  3373,
+  3907,
+  4608,
+  3960,
+  2873,
+  3060
+ ]
+}

@@ -265,3 +265,144 @@ Go 1.26 编写的用户/收藏后端，位于 `server/`（不进 webroot，部�
 - [CLANK! 冒险队（Clank!: Adventuring Party）](https://mp.weixin.qq.com/s/rev2XGxuP-gsbYloNm-8bw) · 微信公众号「无忧桌游」所载官方简体中文规则书（Paul Dennen 设计，Dire Wolf 出品，《CLANK!》5–6 人扩展，两种新玩家颜色、背包/王冠/万能钥匙与「反应(REACT)」「到达选择」新术语及专属角色，简体规则书 6 页全文转录（封底+页 34–38，角色录得四位，原帖未及其余角色页），见 `games/clank-adventuring-party.html`）
 
 规则内容版权归原作者所有，本站仅作个人学习查阅。
+
+<!-- BGG Top100 补全批次（官方英文规则书 AI 辅助全文翻译） -->
+  - [瘟疫危机：传承·第一季（Pandemic Legacy: Season 1）](http://images-cdn.zmangames.com/us-east-1/filer_public/26/94/2694b3fb-c718-4f87-9bdd-bbea0fdadcbe/zm7172_pandemic_legacys1_red_rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-1.html`）
+  - [魔戒圣战（War of the Ring: Second Edition）](https://www.aresgames.eu/download/20980/) · 官方英文规则书全文 AI 辅助翻译（Ares Games，见 `games/war-of-the-ring.html`）
+  - [星球大战：叛乱（Star Wars: Rebellion）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/sw03_learn_to_play_web.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games (Asmodee)，见 `games/star-wars-rebellion.html`）
+  - [杀戮尖塔：版图游戏（Slay the Spire: The Board Game）](https://contentiongames.com/_images/STS_KS_Rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Contention Games，见 `games/slay-the-spire-bg.html`）
+  - [冷战热斗（Twilight Struggle）](https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/Twilight+Struggle+20th+Anniversary+HOF+Edition/Twilight+Struggle+20th+Ann_Rule+Book_WEB.pdf) · 官方英文规则书全文 AI 辅助翻译（GMT Games，见 `games/twilight-struggle.html`）
+  - [魔戒：中土对决（The Lord of the Rings: Duel for Middle-earth）](https://cdn.svc.asmodee.net/production-rprod/storage/games/7-wonders-LOTR/rules/7dume-en01-rules-1725540544zdnes.pdf) · 官方英文规则书全文 AI 辅助翻译（Space Balloon Games (Ares Games 英文版)，见 `games/lotr-duel-for-middle-earth.html`）
+  - [复仇女神号（Nemesis）](https://awakenrealms.com/images/download/Nemesis/ENG/RULEBOOK_280x280mm_bleed3mm_28pages_PRINT.pdf) · 官方英文规则书全文 AI 辅助翻译（Awaken Realms，见 `games/nemesis.html`）
+  - [咔嚓！传承：收购公司（Clank! Legacy: Acquisitions Incorporated）](https://boardgamegeek.com/filepage/187231/clank-legacy-rulebook) · 官方英文规则书全文 AI 辅助翻译（Renegade Game Studios / Dire Wolf Digital，见 `games/clank-legacy.html`）
+  - [诡镇奇谈：卡牌版（Arkham Horror: The Card Game）](https://images-cdn.fantasyflightgames.com/filer_public/0e/d0/0ed09507-1705-47ed-a630-cd15885cabb0/ahc100_rulebook-web.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/arkham-horror-lcg.html`）
+  - [茂林源记（Root）](https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf?v=1774903756) · 官方英文规则书全文 AI 辅助翻译（Leder Games，见 `games/root.html`）
+  - [太多骨头（Too Many Bones）](https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&dl=1) · 官方英文规则书全文 AI 辅助翻译（Chip Theory Games，见 `games/too-many-bones.html`）
+  - [魔骑士（Mage Knight Board Game）](https://eadn-wc03-13179282.nxedge.io/posters/repository/wizkids/MKUE%20Rulebook%20BOOKLET.pdf) · 官方英文规则书全文 AI 辅助翻译（WizKids，见 `games/mage-knight.html`）
+  - [看板：电动汽车版（Kanban EV）](https://gamers-hq.de/media/pdf/73/e9/d6/Kanban-EV-Rules-v12-Preview.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/kanban-ev.html`）
+  - [葡萄酒庄园（核心版）（Viticulture Essential Edition）](https://www.dropbox.com/sh/bpe1a3sfu73i34d/AABgk4UQuOSVnn1g4XmAPml_a?dl=0) · 官方英文规则书全文 AI 辅助翻译（Stonemaier Games，见 `games/viticulture.html`）
+  - [弹指棋（Crokinole）](https://nationalcrokinoleassociation.com/wp-content/uploads/2026/05/NCA-Official-Rules-of-Crokinole.docx.pdf) · 官方英文规则书全文 AI 辅助翻译（NCA（无传统出版社），见 `games/crokinole.html`）
+  - [仙境幽谷（Everdell）](https://boardgamegeek.com/filepage/176746/everdell-revised-2nd-printing-rulebook) · 官方英文规则书全文 AI 辅助翻译（Starling Games / Asmodee，见 `games/everdell.html`）
+  - [车票之旅：传承·西部传奇（Ticket to Ride Legacy: Legends of the West）](https://cdn.svc.asmodee.net/staging-daysofwonder/uploads/2024/07/720036-T2RL-Rules-210x285-EN-compressed.pdf) · 官方英文规则书全文 AI 辅助翻译（Days of Wonder / Asmodee，见 `games/ticket-to-ride-legacy.html`）
+  - [漫威群英传：卡牌版（Marvel Champions: The Card Game）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mvc01_learn_to_play_eng-compressed.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/marvel-champions.html`）
+  - [水下城市（Underwater Cities）](https://deliciousgames.org/image/catalog/rules/UnderwaterCities-rules-ENG-web.pdf) · 官方英文规则书全文 AI 辅助翻译（Delicious Games，见 `games/underwater-cities.html`）
+  - [克苏鲁：死亡可能会死（Cthulhu: Death May Die）](https://resources.cmon.com/DMD_Rulebook_web.pdf) · 官方英文规则书全文 AI 辅助翻译（CMON，见 `games/cthulhu-death-may-die.html`）
+  - [火星之上（On Mars）](https://drive.google.com/file/d/1FOlaSoODRpO15pNKkcmCbXx11Sl-Lq6L/view) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/on-mars.html`）
+  - [瘟疫危机：传承·第0季（Pandemic Legacy: Season 0）](https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Legacy-Season-0-Rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-0.html`）
+  - [卡斯卡迪亚（Cascadia）](https://www.alderac.com/wp-content/uploads/2021/08/Cascadia-Rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Flatout Games / Alderac Entertainment Group (AEG)，见 `games/cascadia.html`）
+  - [血染钟楼（Blood on the Clocktower）](https://botclinks.page/MainRulebook) · 官方英文规则书全文 AI 辅助翻译（The Pandemonium Institute，见 `games/blood-on-the-clocktower.html`）
+  - [守誓者：深入密林（Oathsworn: Into the Deepwood）](https://drive.google.com/file/d/1eUmHux5TOpkzpGDTyn1epZWFoK2jM-8m/view) · 官方英文规则书全文 AI 辅助翻译（Shadowborne Games，见 `games/oathsworn.html`）
+  - [里斯本（Lisboa）](https://www.tlamagames.com/user/documents/upload/Lisboa/Lisboa%20rulebook%20v3.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/lisboa.html`）
+  - [瘟疫危机：传承·第二季（Pandemic Legacy: Season 2）](https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/pandemic_legacy_season_2_rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-2.html`）
+  - [卓尔金历：玛雅历法（Tzolk'in: The Mayan Calendar）](https://filemanager.czechgames.com/storage/files/tzolkin-the-mayan-calendar/rules/TZ_rules_EN_13.pdf) · 官方英文规则书全文 AI 辅助翻译（Czech Games Edition (CGE)，见 `games/tzolkin.html`）
+  - [疯狂诡宅（第二版）（Mansions of Madness: Second Edition）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mansions_of_madness_second_edition_learn_to_play.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games (Asmodee)，见 `games/mansions-of-madness-2e.html`）
+  - [奎德林堡的江湖郎中（Quacks）](https://www.schmidtspiele.de/files/Retail/72dpi_PNG/88220_Quack_rules_english_2024.pdf) · 官方英文规则书全文 AI 辅助翻译（Schmidt Spiele，见 `games/quacks.html`）
+  - [西王国的圣骑士（Paladins of the West Kingdom）](https://cdn.shopify.com/s/files/1/0713/4622/5238/files/PaladinsRulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Garphill Games，见 `games/paladins-of-the-west-kingdom.html`）
+  - [勒阿弗尔（Le Havre）](https://www.lookout-spiele.de/upload/en_lehavre.html_Rules_LeHavre-2016_EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Lookout Games，见 `games/le-havre.html`）
+  - [安卓：潜袭（Android: Netrunner）](https://images-cdn.fantasyflightgames.com/ffg_content/android-netrunner/support/android-netrunner-core-rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/android-netrunner.html`）
+  - [画商（The Gallerist）](http://www.skellig-rules.de/rules/0073-0001/The_Gallerist_rulebook_English%2072dpi.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/the-gallerist.html`）
+  - [拆弹小队（Bomb Busters）](https://content.cmpl.org/bg/BombBusters.pdf) · 官方英文规则书全文 AI 辅助翻译（iello，见 `games/bomb-busters.html`）
+  - [农场主（修订版）（Agricola (Revised Edition)）](https://www.lookout-spiele.de/upload/en_agricolare.html_Rules_Agricola-RE_EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Lookout Games，见 `games/agricola-revised.html`）
+  - [星球大战：帝国突击（Star Wars: Imperial Assault）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/swi01_learn_to_play_v17.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/star-wars-imperial-assault.html`）
+  - [展翅翱翔：亚洲（Wingspan Asia）](https://stonemaiergames.com/games/wingspan/rules/) · 官方英文规则书全文 AI 辅助翻译（Stonemaier Games，见 `games/wingspan-asia.html`）
+  - [机甲大战小兵（Mechs vs. Minions）](https://boardgamegeek.com/filepage/143267/english-rulebook-for-wave-2) · 官方英文规则书全文 AI 辅助翻译（Riot Games，见 `games/mechs-vs-minions.html`）
+  - [最终女孩（Final Girl）](https://cdn.shopify.com/s/files/1/0593/6984/8897/files/FinalGirl_Rules_ff324b01-6f74-43e0-90e2-1685594703d5.pdf) · 官方英文规则书全文 AI 辅助翻译（Van Ryder Games，见 `games/final-girl.html`）
+  - [星际探险队：第九行星（The Crew: The Quest for Planet Nine）](https://cdn.shopify.com/s/files/1/0104/6331/3977/files/691868_Crew_Manual.pdf) · 官方英文规则书全文 AI 辅助翻译（Thames & Kosmos，见 `games/the-crew-planet-nine.html`）
+  - [五大部落（Five Tribes: The Djinns of Naqala）](https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/8401-FT-Rules-EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Days of Wonder，见 `games/five-tribes.html`）
+
+<!-- BGG Top100 补全批次（官方英文规则书 AI 辅助全文翻译） -->
+  - [瘟疫危机：传承·第一季（Pandemic Legacy: Season 1）](http://images-cdn.zmangames.com/us-east-1/filer_public/26/94/2694b3fb-c718-4f87-9bdd-bbea0fdadcbe/zm7172_pandemic_legacys1_red_rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-1.html`）
+  - [魔戒圣战（War of the Ring: Second Edition）](https://www.aresgames.eu/download/20980/) · 官方英文规则书全文 AI 辅助翻译（Ares Games，见 `games/war-of-the-ring.html`）
+  - [星球大战：叛乱（Star Wars: Rebellion）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/sw03_learn_to_play_web.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games (Asmodee)，见 `games/star-wars-rebellion.html`）
+  - [杀戮尖塔：版图游戏（Slay the Spire: The Board Game）](https://contentiongames.com/_images/STS_KS_Rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Contention Games，见 `games/slay-the-spire-bg.html`）
+  - [冷战热斗（Twilight Struggle）](https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/Twilight+Struggle+20th+Anniversary+HOF+Edition/Twilight+Struggle+20th+Ann_Rule+Book_WEB.pdf) · 官方英文规则书全文 AI 辅助翻译（GMT Games，见 `games/twilight-struggle.html`）
+  - [魔戒：中土对决（The Lord of the Rings: Duel for Middle-earth）](https://cdn.svc.asmodee.net/production-rprod/storage/games/7-wonders-LOTR/rules/7dume-en01-rules-1725540544zdnes.pdf) · 官方英文规则书全文 AI 辅助翻译（Space Balloon Games (Ares Games 英文版)，见 `games/lotr-duel-for-middle-earth.html`）
+  - [星蚀：银河二次黎明（Eclipse: Second Dawn for the Galaxy）](https://cdn.1j1ju.com/medias/bb/af/07-eclipse-second-dawn-for-the-galaxy-rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Lautapelit.fi，见 `games/eclipse-second-dawn.html`）
+  - [复仇女神号（Nemesis）](https://awakenrealms.com/images/download/Nemesis/ENG/RULEBOOK_280x280mm_bleed3mm_28pages_PRINT.pdf) · 官方英文规则书全文 AI 辅助翻译（Awaken Realms，见 `games/nemesis.html`）
+  - [咔嚓！传承：收购公司（Clank! Legacy: Acquisitions Incorporated）](https://boardgamegeek.com/filepage/187231/clank-legacy-rulebook) · 官方英文规则书全文 AI 辅助翻译（Renegade Game Studios / Dire Wolf Digital，见 `games/clank-legacy.html`）
+  - [诡镇奇谈：卡牌版（Arkham Horror: The Card Game）](https://images-cdn.fantasyflightgames.com/filer_public/0e/d0/0ed09507-1705-47ed-a630-cd15885cabb0/ahc100_rulebook-web.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/arkham-horror-lcg.html`）
+  - [茂林源记（Root）](https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf?v=1774903756) · 官方英文规则书全文 AI 辅助翻译（Leder Games，见 `games/root.html`）
+  - [太多骨头（Too Many Bones）](https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&dl=1) · 官方英文规则书全文 AI 辅助翻译（Chip Theory Games，见 `games/too-many-bones.html`）
+  - [魔骑士（Mage Knight Board Game）](https://eadn-wc03-13179282.nxedge.io/posters/repository/wizkids/MKUE%20Rulebook%20BOOKLET.pdf) · 官方英文规则书全文 AI 辅助翻译（WizKids，见 `games/mage-knight.html`）
+  - [看板：电动汽车版（Kanban EV）](https://gamers-hq.de/media/pdf/73/e9/d6/Kanban-EV-Rules-v12-Preview.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/kanban-ev.html`）
+  - [葡萄酒庄园（核心版）（Viticulture Essential Edition）](https://www.dropbox.com/sh/bpe1a3sfu73i34d/AABgk4UQuOSVnn1g4XmAPml_a?dl=0) · 官方英文规则书全文 AI 辅助翻译（Stonemaier Games，见 `games/viticulture.html`）
+  - [弹指棋（Crokinole）](https://nationalcrokinoleassociation.com/wp-content/uploads/2026/05/NCA-Official-Rules-of-Crokinole.docx.pdf) · 官方英文规则书全文 AI 辅助翻译（NCA（无传统出版社），见 `games/crokinole.html`）
+  - [仙境幽谷（Everdell）](https://boardgamegeek.com/filepage/176746/everdell-revised-2nd-printing-rulebook) · 官方英文规则书全文 AI 辅助翻译（Starling Games / Asmodee，见 `games/everdell.html`）
+  - [车票之旅：传承·西部传奇（Ticket to Ride Legacy: Legends of the West）](https://cdn.svc.asmodee.net/staging-daysofwonder/uploads/2024/07/720036-T2RL-Rules-210x285-EN-compressed.pdf) · 官方英文规则书全文 AI 辅助翻译（Days of Wonder / Asmodee，见 `games/ticket-to-ride-legacy.html`）
+  - [漫威群英传：卡牌版（Marvel Champions: The Card Game）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mvc01_learn_to_play_eng-compressed.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/marvel-champions.html`）
+  - [水下城市（Underwater Cities）](https://deliciousgames.org/image/catalog/rules/UnderwaterCities-rules-ENG-web.pdf) · 官方英文规则书全文 AI 辅助翻译（Delicious Games，见 `games/underwater-cities.html`）
+  - [克苏鲁：死亡可能会死（Cthulhu: Death May Die）](https://resources.cmon.com/DMD_Rulebook_web.pdf) · 官方英文规则书全文 AI 辅助翻译（CMON，见 `games/cthulhu-death-may-die.html`）
+  - [火星之上（On Mars）](https://drive.google.com/file/d/1FOlaSoODRpO15pNKkcmCbXx11Sl-Lq6L/view) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/on-mars.html`）
+  - [瘟疫危机：传承·第0季（Pandemic Legacy: Season 0）](https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Legacy-Season-0-Rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-0.html`）
+  - [卡斯卡迪亚（Cascadia）](https://www.alderac.com/wp-content/uploads/2021/08/Cascadia-Rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Flatout Games / Alderac Entertainment Group (AEG)，见 `games/cascadia.html`）
+  - [血染钟楼（Blood on the Clocktower）](https://botclinks.page/MainRulebook) · 官方英文规则书全文 AI 辅助翻译（The Pandemonium Institute，见 `games/blood-on-the-clocktower.html`）
+  - [守誓者：深入密林（Oathsworn: Into the Deepwood）](https://drive.google.com/file/d/1eUmHux5TOpkzpGDTyn1epZWFoK2jM-8m/view) · 官方英文规则书全文 AI 辅助翻译（Shadowborne Games，见 `games/oathsworn.html`）
+  - [里斯本（Lisboa）](https://www.tlamagames.com/user/documents/upload/Lisboa/Lisboa%20rulebook%20v3.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/lisboa.html`）
+  - [瘟疫危机：传承·第二季（Pandemic Legacy: Season 2）](https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/pandemic_legacy_season_2_rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-2.html`）
+  - [沉睡之神（Sleeping Gods）](https://www.dropbox.com/scl/fi/uznxgogk2ccpscosd37xh/Sleeping-Gods-Rulebook_updated.pdf?rlkey=9umbfocntldl0vqzsm0rr3hut&dl=1) · 官方英文规则书全文 AI 辅助翻译（Red Raven Games，见 `games/sleeping-gods.html`）
+  - [卓尔金历：玛雅历法（Tzolk'in: The Mayan Calendar）](https://filemanager.czechgames.com/storage/files/tzolkin-the-mayan-calendar/rules/TZ_rules_EN_13.pdf) · 官方英文规则书全文 AI 辅助翻译（Czech Games Edition (CGE)，见 `games/tzolkin.html`）
+  - [疯狂诡宅（第二版）（Mansions of Madness: Second Edition）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mansions_of_madness_second_edition_learn_to_play.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games (Asmodee)，见 `games/mansions-of-madness-2e.html`）
+  - [虚空坠落（Voidfall）](https://mindclashgames.com/wp-content/uploads/2023/03/VOIDFALL-Rulebook-websafe.pdf) · 官方英文规则书全文 AI 辅助翻译（Mindclash Games，见 `games/voidfall.html`）
+  - [奎德林堡的江湖郎中（Quacks）](https://www.schmidtspiele.de/files/Retail/72dpi_PNG/88220_Quack_rules_english_2024.pdf) · 官方英文规则书全文 AI 辅助翻译（Schmidt Spiele，见 `games/quacks.html`）
+  - [西王国的圣骑士（Paladins of the West Kingdom）](https://cdn.shopify.com/s/files/1/0713/4622/5238/files/PaladinsRulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Garphill Games，见 `games/paladins-of-the-west-kingdom.html`）
+  - [勒阿弗尔（Le Havre）](https://www.lookout-spiele.de/upload/en_lehavre.html_Rules_LeHavre-2016_EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Lookout Games，见 `games/le-havre.html`）
+  - [安卓：潜袭（Android: Netrunner）](https://images-cdn.fantasyflightgames.com/ffg_content/android-netrunner/support/android-netrunner-core-rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/android-netrunner.html`）
+  - [画商（The Gallerist）](http://www.skellig-rules.de/rules/0073-0001/The_Gallerist_rulebook_English%2072dpi.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/the-gallerist.html`）
+  - [拆弹小队（Bomb Busters）](https://content.cmpl.org/bg/BombBusters.pdf) · 官方英文规则书全文 AI 辅助翻译（iello，见 `games/bomb-busters.html`）
+  - [农场主（修订版）（Agricola (Revised Edition)）](https://www.lookout-spiele.de/upload/en_agricolare.html_Rules_Agricola-RE_EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Lookout Games，见 `games/agricola-revised.html`）
+  - [星球大战：帝国突击（Star Wars: Imperial Assault）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/swi01_learn_to_play_v17.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/star-wars-imperial-assault.html`）
+  - [展翅翱翔：亚洲（Wingspan Asia）](https://stonemaiergames.com/games/wingspan/rules/) · 官方英文规则书全文 AI 辅助翻译（Stonemaier Games，见 `games/wingspan-asia.html`）
+  - [机甲大战小兵（Mechs vs. Minions）](https://boardgamegeek.com/filepage/143267/english-rulebook-for-wave-2) · 官方英文规则书全文 AI 辅助翻译（Riot Games，见 `games/mechs-vs-minions.html`）
+  - [最终女孩（Final Girl）](https://cdn.shopify.com/s/files/1/0593/6984/8897/files/FinalGirl_Rules_ff324b01-6f74-43e0-90e2-1685594703d5.pdf) · 官方英文规则书全文 AI 辅助翻译（Van Ryder Games，见 `games/final-girl.html`）
+  - [星际探险队：第九行星（The Crew: The Quest for Planet Nine）](https://cdn.shopify.com/s/files/1/0104/6331/3977/files/691868_Crew_Manual.pdf) · 官方英文规则书全文 AI 辅助翻译（Thames & Kosmos，见 `games/the-crew-planet-nine.html`）
+  - [五大部落（Five Tribes: The Djinns of Naqala）](https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/8401-FT-Rules-EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Days of Wonder，见 `games/five-tribes.html`）
+
+<!-- BGG Top100 补全批次（官方英文规则书 AI 辅助全文翻译） -->
+  - [瘟疫危机：传承·第一季（Pandemic Legacy: Season 1）](http://images-cdn.zmangames.com/us-east-1/filer_public/26/94/2694b3fb-c718-4f87-9bdd-bbea0fdadcbe/zm7172_pandemic_legacys1_red_rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-1.html`）
+  - [幽港迷城（Gloomhaven）](https://drive.google.com/file/d/16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT/view) · 官方英文规则书全文 AI 辅助翻译（Cephalofair Games，见 `games/gloomhaven.html`）
+  - [魔戒圣战（War of the Ring: Second Edition）](https://www.aresgames.eu/download/20980/) · 官方英文规则书全文 AI 辅助翻译（Ares Games，见 `games/war-of-the-ring.html`）
+  - [星球大战：叛乱（Star Wars: Rebellion）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/sw03_learn_to_play_web.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games (Asmodee)，见 `games/star-wars-rebellion.html`）
+  - [幽港迷城：雄狮之颚（Gloomhaven: Jaws of the Lion）](https://cdn.1j1ju.com/medias/c1/6f/d7-gloomhaven-jaws-of-the-lion-rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Cephalofair Games，见 `games/gloomhaven-jaws-of-the-lion.html`）
+  - [杀戮尖塔：版图游戏（Slay the Spire: The Board Game）](https://contentiongames.com/_images/STS_KS_Rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Contention Games，见 `games/slay-the-spire-bg.html`）
+  - [冷战热斗（Twilight Struggle）](https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/Twilight+Struggle+20th+Anniversary+HOF+Edition/Twilight+Struggle+20th+Ann_Rule+Book_WEB.pdf) · 官方英文规则书全文 AI 辅助翻译（GMT Games，见 `games/twilight-struggle.html`）
+  - [魔戒：中土对决（The Lord of the Rings: Duel for Middle-earth）](https://cdn.svc.asmodee.net/production-rprod/storage/games/7-wonders-LOTR/rules/7dume-en01-rules-1725540544zdnes.pdf) · 官方英文规则书全文 AI 辅助翻译（Space Balloon Games (Ares Games 英文版)，见 `games/lotr-duel-for-middle-earth.html`）
+  - [寒霜迷城（Frosthaven）](https://gusandco.net/wp-content/uploads/2023/06/fh-rule-book.pdf) · 官方英文规则书全文 AI 辅助翻译（Cephalofair Games，见 `games/frosthaven.html`）
+  - [星蚀：银河二次黎明（Eclipse: Second Dawn for the Galaxy）](https://cdn.1j1ju.com/medias/bb/af/07-eclipse-second-dawn-for-the-galaxy-rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Lautapelit.fi，见 `games/eclipse-second-dawn.html`）
+  - [复仇女神号（Nemesis）](https://awakenrealms.com/images/download/Nemesis/ENG/RULEBOOK_280x280mm_bleed3mm_28pages_PRINT.pdf) · 官方英文规则书全文 AI 辅助翻译（Awaken Realms，见 `games/nemesis.html`）
+  - [咔嚓！传承：收购公司（Clank! Legacy: Acquisitions Incorporated）](https://boardgamegeek.com/filepage/187231/clank-legacy-rulebook) · 官方英文规则书全文 AI 辅助翻译（Renegade Game Studios / Dire Wolf Digital，见 `games/clank-legacy.html`）
+  - [诡镇奇谈：卡牌版（Arkham Horror: The Card Game）](https://images-cdn.fantasyflightgames.com/filer_public/0e/d0/0ed09507-1705-47ed-a630-cd15885cabb0/ahc100_rulebook-web.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/arkham-horror-lcg.html`）
+  - [茂林源记（Root）](https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf?v=1774903756) · 官方英文规则书全文 AI 辅助翻译（Leder Games，见 `games/root.html`）
+  - [太多骨头（Too Many Bones）](https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&dl=1) · 官方英文规则书全文 AI 辅助翻译（Chip Theory Games，见 `games/too-many-bones.html`）
+  - [魔骑士（Mage Knight Board Game）](https://eadn-wc03-13179282.nxedge.io/posters/repository/wizkids/MKUE%20Rulebook%20BOOKLET.pdf) · 官方英文规则书全文 AI 辅助翻译（WizKids，见 `games/mage-knight.html`）
+  - [看板：电动汽车版（Kanban EV）](https://gamers-hq.de/media/pdf/73/e9/d6/Kanban-EV-Rules-v12-Preview.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/kanban-ev.html`）
+  - [葡萄酒庄园（核心版）（Viticulture Essential Edition）](https://www.dropbox.com/sh/bpe1a3sfu73i34d/AABgk4UQuOSVnn1g4XmAPml_a?dl=0) · 官方英文规则书全文 AI 辅助翻译（Stonemaier Games，见 `games/viticulture.html`）
+  - [弹指棋（Crokinole）](https://nationalcrokinoleassociation.com/wp-content/uploads/2026/05/NCA-Official-Rules-of-Crokinole.docx.pdf) · 官方英文规则书全文 AI 辅助翻译（NCA（无传统出版社），见 `games/crokinole.html`）
+  - [仙境幽谷（Everdell）](https://boardgamegeek.com/filepage/176746/everdell-revised-2nd-printing-rulebook) · 官方英文规则书全文 AI 辅助翻译（Starling Games / Asmodee，见 `games/everdell.html`）
+  - [车票之旅：传承·西部传奇（Ticket to Ride Legacy: Legends of the West）](https://cdn.svc.asmodee.net/staging-daysofwonder/uploads/2024/07/720036-T2RL-Rules-210x285-EN-compressed.pdf) · 官方英文规则书全文 AI 辅助翻译（Days of Wonder / Asmodee，见 `games/ticket-to-ride-legacy.html`）
+  - [漫威群英传：卡牌版（Marvel Champions: The Card Game）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mvc01_learn_to_play_eng-compressed.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/marvel-champions.html`）
+  - [水下城市（Underwater Cities）](https://deliciousgames.org/image/catalog/rules/UnderwaterCities-rules-ENG-web.pdf) · 官方英文规则书全文 AI 辅助翻译（Delicious Games，见 `games/underwater-cities.html`）
+  - [克苏鲁：死亡可能会死（Cthulhu: Death May Die）](https://resources.cmon.com/DMD_Rulebook_web.pdf) · 官方英文规则书全文 AI 辅助翻译（CMON，见 `games/cthulhu-death-may-die.html`）
+  - [火星之上（On Mars）](https://drive.google.com/file/d/1FOlaSoODRpO15pNKkcmCbXx11Sl-Lq6L/view) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/on-mars.html`）
+  - [瘟疫危机：传承·第0季（Pandemic Legacy: Season 0）](https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Legacy-Season-0-Rulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-0.html`）
+  - [卡斯卡迪亚（Cascadia）](https://www.alderac.com/wp-content/uploads/2021/08/Cascadia-Rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Flatout Games / Alderac Entertainment Group (AEG)，见 `games/cascadia.html`）
+  - [血染钟楼（Blood on the Clocktower）](https://botclinks.page/MainRulebook) · 官方英文规则书全文 AI 辅助翻译（The Pandemonium Institute，见 `games/blood-on-the-clocktower.html`）
+  - [守誓者：深入密林（Oathsworn: Into the Deepwood）](https://drive.google.com/file/d/1eUmHux5TOpkzpGDTyn1epZWFoK2jM-8m/view) · 官方英文规则书全文 AI 辅助翻译（Shadowborne Games，见 `games/oathsworn.html`）
+  - [里斯本（Lisboa）](https://www.tlamagames.com/user/documents/upload/Lisboa/Lisboa%20rulebook%20v3.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/lisboa.html`）
+  - [瘟疫危机：传承·第二季（Pandemic Legacy: Season 2）](https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/pandemic_legacy_season_2_rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Z-Man Games (Asmodee)，见 `games/pandemic-legacy-season-2.html`）
+  - [沉睡之神（Sleeping Gods）](https://www.dropbox.com/scl/fi/uznxgogk2ccpscosd37xh/Sleeping-Gods-Rulebook_updated.pdf?rlkey=9umbfocntldl0vqzsm0rr3hut&dl=1) · 官方英文规则书全文 AI 辅助翻译（Red Raven Games，见 `games/sleeping-gods.html`）
+  - [卓尔金历：玛雅历法（Tzolk'in: The Mayan Calendar）](https://filemanager.czechgames.com/storage/files/tzolkin-the-mayan-calendar/rules/TZ_rules_EN_13.pdf) · 官方英文规则书全文 AI 辅助翻译（Czech Games Edition (CGE)，见 `games/tzolkin.html`）
+  - [疯狂诡宅（第二版）（Mansions of Madness: Second Edition）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mansions_of_madness_second_edition_learn_to_play.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games (Asmodee)，见 `games/mansions-of-madness-2e.html`）
+  - [虚空坠落（Voidfall）](https://mindclashgames.com/wp-content/uploads/2023/03/VOIDFALL-Rulebook-websafe.pdf) · 官方英文规则书全文 AI 辅助翻译（Mindclash Games，见 `games/voidfall.html`）
+  - [奎德林堡的江湖郎中（Quacks）](https://www.schmidtspiele.de/files/Retail/72dpi_PNG/88220_Quack_rules_english_2024.pdf) · 官方英文规则书全文 AI 辅助翻译（Schmidt Spiele，见 `games/quacks.html`）
+  - [西王国的圣骑士（Paladins of the West Kingdom）](https://cdn.shopify.com/s/files/1/0713/4622/5238/files/PaladinsRulebook.pdf) · 官方英文规则书全文 AI 辅助翻译（Garphill Games，见 `games/paladins-of-the-west-kingdom.html`）
+  - [勒阿弗尔（Le Havre）](https://www.lookout-spiele.de/upload/en_lehavre.html_Rules_LeHavre-2016_EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Lookout Games，见 `games/le-havre.html`）
+  - [安卓：潜袭（Android: Netrunner）](https://images-cdn.fantasyflightgames.com/ffg_content/android-netrunner/support/android-netrunner-core-rules.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/android-netrunner.html`）
+  - [画商（The Gallerist）](http://www.skellig-rules.de/rules/0073-0001/The_Gallerist_rulebook_English%2072dpi.pdf) · 官方英文规则书全文 AI 辅助翻译（Eagle-Gryphon Games，见 `games/the-gallerist.html`）
+  - [拆弹小队（Bomb Busters）](https://content.cmpl.org/bg/BombBusters.pdf) · 官方英文规则书全文 AI 辅助翻译（iello，见 `games/bomb-busters.html`）
+  - [农场主（修订版）（Agricola (Revised Edition)）](https://www.lookout-spiele.de/upload/en_agricolare.html_Rules_Agricola-RE_EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Lookout Games，见 `games/agricola-revised.html`）
+  - [星球大战：帝国突击（Star Wars: Imperial Assault）](https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/swi01_learn_to_play_v17.pdf) · 官方英文规则书全文 AI 辅助翻译（Fantasy Flight Games，见 `games/star-wars-imperial-assault.html`）
+  - [展翅翱翔：亚洲（Wingspan Asia）](https://stonemaiergames.com/games/wingspan/rules/) · 官方英文规则书全文 AI 辅助翻译（Stonemaier Games，见 `games/wingspan-asia.html`）
+  - [机甲大战小兵（Mechs vs. Minions）](https://boardgamegeek.com/filepage/143267/english-rulebook-for-wave-2) · 官方英文规则书全文 AI 辅助翻译（Riot Games，见 `games/mechs-vs-minions.html`）
+  - [最终女孩（Final Girl）](https://cdn.shopify.com/s/files/1/0593/6984/8897/files/FinalGirl_Rules_ff324b01-6f74-43e0-90e2-1685594703d5.pdf) · 官方英文规则书全文 AI 辅助翻译（Van Ryder Games，见 `games/final-girl.html`）
+  - [星际探险队：第九行星（The Crew: The Quest for Planet Nine）](https://cdn.shopify.com/s/files/1/0104/6331/3977/files/691868_Crew_Manual.pdf) · 官方英文规则书全文 AI 辅助翻译（Thames & Kosmos，见 `games/the-crew-planet-nine.html`）
+  - [五大部落（Five Tribes: The Djinns of Naqala）](https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/8401-FT-Rules-EN.pdf) · 官方英文规则书全文 AI 辅助翻译（Days of Wonder，见 `games/five-tribes.html`）

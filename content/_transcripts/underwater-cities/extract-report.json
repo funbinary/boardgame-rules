@@ -1,0 +1,31 @@
+{
+ "slug": "underwater-cities",
+ "pages": 20,
+ "total_chars": 71725,
+ "avg_chars_per_page": 3586,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1047,
+  2462,
+  1358,
+  1775,
+  1053,
+  3377,
+  4038,
+  4642,
+  5130,
+  3788,
+  2470,
+  4151,
+  4336,
+  3313,
+  4994,
+  3923,
+  4100,
+  6347,
+  6202,
+  3219
+ ]
+}

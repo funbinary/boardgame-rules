@@ -1299,6 +1299,54 @@ body[data-page="shared"] {
 
 /* ===== BGG 排行榜页（bgg-ranking.html） ===== */
 body[data-theme="board"] { --accent: #c2551a; --accent-strong: #9c4312; --accent-soft: rgba(194, 85, 26, 0.10); --accent-border: rgba(194, 85, 26, 0.35); }
+body[data-theme="agricola-revised"] { --accent: #379545; --accent-strong: #297034; --accent-soft: rgba(55, 149, 69, 0.10); --accent-border: rgba(55, 149, 69, 0.35); }
+body[data-theme="final-girl"] { --accent: #378295; --accent-strong: #296270; --accent-soft: rgba(55, 130, 149, 0.10); --accent-border: rgba(55, 130, 149, 0.35); }
+body[data-theme="le-havre"] { --accent: #953793; --accent-strong: #70296f; --accent-soft: rgba(149, 55, 147, 0.10); --accent-border: rgba(149, 55, 147, 0.35); }
+body[data-theme="lotr-duel-for-middle-earth"] { --accent: #37958a; --accent-strong: #297067; --accent-soft: rgba(55, 149, 138, 0.10); --accent-border: rgba(55, 149, 138, 0.35); }
+body[data-theme="marvel-champions"] { --accent: #378595; --accent-strong: #296470; --accent-soft: rgba(55, 133, 149, 0.10); --accent-border: rgba(55, 133, 149, 0.35); }
+body[data-theme="nemesis"] { --accent: #5e9537; --accent-strong: #477029; --accent-soft: rgba(94, 149, 55, 0.10); --accent-border: rgba(94, 149, 55, 0.35); }
+body[data-theme="pandemic-legacy-season-0"] { --accent: #953795; --accent-strong: #702970; --accent-soft: rgba(149, 55, 149, 0.10); --accent-border: rgba(149, 55, 149, 0.35); }
+body[data-theme="pandemic-legacy-season-1"] { --accent: #379558; --accent-strong: #297042; --accent-soft: rgba(55, 149, 88, 0.10); --accent-border: rgba(55, 149, 88, 0.35); }
+body[data-theme="android-netrunner"] { --accent: #95374a; --accent-strong: #702937; --accent-soft: rgba(149, 55, 74, 0.10); --accent-border: rgba(149, 55, 74, 0.35); }
+body[data-theme="arkham-horror-lcg"] { --accent: #459537; --accent-strong: #347029; --accent-soft: rgba(69, 149, 55, 0.10); --accent-border: rgba(69, 149, 55, 0.35); }
+body[data-theme="bomb-busters"] { --accent: #739537; --accent-strong: #567029; --accent-soft: rgba(115, 149, 55, 0.10); --accent-border: rgba(115, 149, 55, 0.35); }
+body[data-theme="cascadia"] { --accent: #95374b; --accent-strong: #702939; --accent-soft: rgba(149, 55, 75, 0.10); --accent-border: rgba(149, 55, 75, 0.35); }
+body[data-theme="everdell"] { --accent: #953a37; --accent-strong: #702c29; --accent-soft: rgba(149, 58, 55, 0.10); --accent-border: rgba(149, 58, 55, 0.35); }
+body[data-theme="five-tribes"] { --accent: #7f3795; --accent-strong: #5f2970; --accent-soft: rgba(127, 55, 149, 0.10); --accent-border: rgba(127, 55, 149, 0.35); }
+body[data-theme="kanban-ev"] { --accent: #37958c; --accent-strong: #297069; --accent-soft: rgba(55, 149, 140, 0.10); --accent-border: rgba(55, 149, 140, 0.35); }
+body[data-theme="lisboa"] { --accent: #958537; --accent-strong: #706429; --accent-soft: rgba(149, 133, 55, 0.10); --accent-border: rgba(149, 133, 55, 0.35); }
+body[data-theme="mage-knight"] { --accent: #956b37; --accent-strong: #705029; --accent-soft: rgba(149, 107, 55, 0.10); --accent-border: rgba(149, 107, 55, 0.35); }
+body[data-theme="mansions-of-madness-2e"] { --accent: #429537; --accent-strong: #327029; --accent-soft: rgba(66, 149, 55, 0.10); --accent-border: rgba(66, 149, 55, 0.35); }
+body[data-theme="paladins-of-the-west-kingdom"] { --accent: #4d3795; --accent-strong: #3a2970; --accent-soft: rgba(77, 55, 149, 0.10); --accent-border: rgba(77, 55, 149, 0.35); }
+body[data-theme="pandemic-legacy-season-2"] { --accent: #373a95; --accent-strong: #292c70; --accent-soft: rgba(55, 58, 149, 0.10); --accent-border: rgba(55, 58, 149, 0.35); }
+body[data-theme="quacks"] { --accent: #376b95; --accent-strong: #295070; --accent-soft: rgba(55, 107, 149, 0.10); --accent-border: rgba(55, 107, 149, 0.35); }
+body[data-theme="root"] { --accent: #379573; --accent-strong: #297056; --accent-soft: rgba(55, 149, 115, 0.10); --accent-border: rgba(55, 149, 115, 0.35); }
+body[data-theme="slay-the-spire-bg"] { --accent: #95374f; --accent-strong: #70293b; --accent-soft: rgba(149, 55, 79, 0.10); --accent-border: rgba(149, 55, 79, 0.35); }
+body[data-theme="star-wars-imperial-assault"] { --accent: #37958f; --accent-strong: #29706b; --accent-soft: rgba(55, 149, 143, 0.10); --accent-border: rgba(55, 149, 143, 0.35); }
+body[data-theme="star-wars-rebellion"] { --accent: #479537; --accent-strong: #357029; --accent-soft: rgba(71, 149, 55, 0.10); --accent-border: rgba(71, 149, 55, 0.35); }
+body[data-theme="the-crew-planet-nine"] { --accent: #373995; --accent-strong: #292a70; --accent-soft: rgba(55, 57, 149, 0.10); --accent-border: rgba(55, 57, 149, 0.35); }
+body[data-theme="the-gallerist"] { --accent: #956e37; --accent-strong: #705229; --accent-soft: rgba(149, 110, 55, 0.10); --accent-border: rgba(149, 110, 55, 0.35); }
+body[data-theme="ticket-to-ride-legacy"] { --accent: #37955b; --accent-strong: #297044; --accent-soft: rgba(55, 149, 91, 0.10); --accent-border: rgba(55, 149, 91, 0.35); }
+body[data-theme="tzolkin"] { --accent: #955537; --accent-strong: #704029; --accent-soft: rgba(149, 85, 55, 0.10); --accent-border: rgba(149, 85, 55, 0.35); }
+body[data-theme="underwater-cities"] { --accent: #7c3795; --accent-strong: #5d2970; --accent-soft: rgba(124, 55, 149, 0.10); --accent-border: rgba(124, 55, 149, 0.35); }
+body[data-theme="viticulture"] { --accent: #375595; --accent-strong: #294070; --accent-soft: rgba(55, 85, 149, 0.10); --accent-border: rgba(55, 85, 149, 0.35); }
+body[data-theme="wingspan-asia"] { --accent: #375295; --accent-strong: #293d70; --accent-soft: rgba(55, 82, 149, 0.10); --accent-border: rgba(55, 82, 149, 0.35); }
+body[data-theme="blood-on-the-clocktower"] { --accent: #379544; --accent-strong: #297033; --accent-soft: rgba(55, 149, 68, 0.10); --accent-border: rgba(55, 149, 68, 0.35); }
+body[data-theme="oathsworn"] { --accent: #37958d; --accent-strong: #29706a; --accent-soft: rgba(55, 149, 141, 0.10); --accent-border: rgba(55, 149, 141, 0.35); }
+body[data-theme="cthulhu-death-may-die"] { --accent: #955337; --accent-strong: #703e29; --accent-soft: rgba(149, 83, 55, 0.10); --accent-border: rgba(149, 83, 55, 0.35); }
+body[data-theme="too-many-bones"] { --accent: #933795; --accent-strong: #6f2970; --accent-soft: rgba(147, 55, 149, 0.10); --accent-border: rgba(147, 55, 149, 0.35); }
+body[data-theme="crokinole"] { --accent: #633795; --accent-strong: #4a2970; --accent-soft: rgba(99, 55, 149, 0.10); --accent-border: rgba(99, 55, 149, 0.35); }
+body[data-theme="twilight-struggle"] { --accent: #956937; --accent-strong: #704f29; --accent-soft: rgba(149, 105, 55, 0.10); --accent-border: rgba(149, 105, 55, 0.35); }
+body[data-theme="on-mars"] { --accent: #4b3795; --accent-strong: #392970; --accent-soft: rgba(75, 55, 149, 0.10); --accent-border: rgba(75, 55, 149, 0.35); }
+body[data-theme="war-of-the-ring"] { --accent: #955037; --accent-strong: #703c29; --accent-soft: rgba(149, 80, 55, 0.10); --accent-border: rgba(149, 80, 55, 0.35); }
+body[data-theme="mechs-vs-minions"] { --accent: #958737; --accent-strong: #706529; --accent-soft: rgba(149, 135, 55, 0.10); --accent-border: rgba(149, 135, 55, 0.35); }
+body[data-theme="clank-legacy"] { --accent: #373d95; --accent-strong: #292e70; --accent-soft: rgba(55, 61, 149, 0.10); --accent-border: rgba(55, 61, 149, 0.35); }
+body[data-theme="eclipse-second-dawn"] { --accent: #953937; --accent-strong: #702a29; --accent-soft: rgba(149, 57, 55, 0.10); --accent-border: rgba(149, 57, 55, 0.35); }
+body[data-theme="voidfall"] { --accent: #379576; --accent-strong: #297058; --accent-soft: rgba(55, 149, 118, 0.10); --accent-border: rgba(55, 149, 118, 0.35); }
+body[data-theme="sleeping-gods"] { --accent: #7d3795; --accent-strong: #5e2970; --accent-soft: rgba(125, 55, 149, 0.10); --accent-border: rgba(125, 55, 149, 0.35); }
+body[data-theme="gloomhaven"] { --accent: #378895; --accent-strong: #296670; --accent-soft: rgba(55, 136, 149, 0.10); --accent-border: rgba(55, 136, 149, 0.35); }
+body[data-theme="gloomhaven-jaws-of-the-lion"] { --accent: #376f95; --accent-strong: #295470; --accent-soft: rgba(55, 111, 149, 0.10); --accent-border: rgba(55, 111, 149, 0.35); }
+body[data-theme="frosthaven"] { --accent: #375695; --accent-strong: #294170; --accent-soft: rgba(55, 86, 149, 0.10); --accent-border: rgba(55, 86, 149, 0.35); }
 .hero-compact { padding: 34px 16px 6px; }
 a.meta-chip { color: inherit; text-decoration: none; }
 .board-controls { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; margin: 14px 0 2px; }

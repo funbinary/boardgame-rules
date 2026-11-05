@@ -1,0 +1,27 @@
+{
+ "slug": "wingspan-asia",
+ "pages": 16,
+ "total_chars": 51452,
+ "avg_chars_per_page": 3215,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  7454,
+  2935,
+  3006,
+  3504,
+  3750,
+  3027,
+  2690,
+  2796,
+  2034,
+  3628,
+  2113,
+  2556,
+  3197,
+  3326,
+  2956,
+  2480
+ ]
+}

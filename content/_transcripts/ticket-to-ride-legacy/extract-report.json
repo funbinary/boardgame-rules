@@ -1,0 +1,27 @@
+{
+ "slug": "ticket-to-ride-legacy",
+ "pages": 16,
+ "total_chars": 25997,
+ "avg_chars_per_page": 1624,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  170,
+  1294,
+  663,
+  3415,
+  3723,
+  2198,
+  222,
+  4160,
+  2000,
+  221,
+  1523,
+  1569,
+  599,
+  649,
+  2285,
+  1306
+ ]
+}

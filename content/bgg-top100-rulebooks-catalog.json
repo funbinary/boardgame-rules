@@ -1,0 +1,987 @@
+{
+  "_readme": "BGG Top100 补规则主目录。48 款缺页游戏的元数据，slug=页面/目录名。designer/publisher 留空的在装配前从 PDF 首页/en.md 核实补齐，不得编造。pdf 状态来自 url-research-*.json。",
+  "games": [
+    {
+      "rank": 3,
+      "slug": "pandemic-legacy-season-1",
+      "en": "Pandemic Legacy: Season 1",
+      "zh": "瘟疫危机：传承·第一季",
+      "emoji": "🦠",
+      "players": "2–4",
+      "designer": "Rob Daviau & Matt Leacock",
+      "publisher": "Z-Man Games (Asmodee)",
+      "year": 2015,
+      "keywords": [
+        "合作 · 传承",
+        "疫情 · 四座城市"
+      ],
+      "pdf_url": "http://images-cdn.zmangames.com/us-east-1/filer_public/26/94/2694b3fb-c718-4f87-9bdd-bbea0fdadcbe/zm7172_pandemic_legacys1_red_rules.pdf",
+      "source_label": "Z-Man Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "zm7172_pandemic_legacys1_red_rules.pdf",
+      "pdf_notes": "官方红皮起始规则书(防剧透, legacy 后续规则不公开提供)。https 协议握手失败, 用 http 下载成功; 文件头 %PDF 已验证, PDF 元数据含 Z-Man 源文件路径。"
+    },
+    {
+      "rank": 4,
+      "slug": "gloomhaven",
+      "en": "Gloomhaven",
+      "zh": "幽港迷城",
+      "emoji": "⚔️",
+      "players": "1–4",
+      "designer": "Isaac Childres",
+      "publisher": "Cephalofair Games",
+      "year": 2017,
+      "keywords": [
+        "战役 · 地牢探索",
+        "卡牌驱动行动"
+      ],
+      "pdf_url": "https://drive.google.com/file/d/16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT/view",
+      "source_label": "Cephalofair Games 官方 GDrive 二版规则书",
+      "pdf_status": "ok",
+      "pdf_name": "Gloomhaven-2E-Rulebook.pdf",
+      "pdf_notes": "cephalofair.com/pages/gloomhaven 官方页面指向的 2nd Edition 规则书 PDF 托管在 Google Drive; 本网络对 Google 全域阻断(curl/PowerShell 均 000), 无法下载。直链下载式: https://drive.usercontent.google.com/download?id=16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT&export=download 。另: 1jour-1jeu 托管 2017 初版官方规则书 https://cdn.1j1ju.com/medias/8d/c5/21-gloomhaven-rulebook.pdf (非最新)。",
+      "ocr": true
+    },
+    {
+      "rank": 8,
+      "slug": "war-of-the-ring",
+      "en": "War of the Ring: Second Edition",
+      "zh": "魔戒圣战",
+      "emoji": "💍",
+      "players": "2–4",
+      "designer": "Roberto Di Meglio, Marco Maggi & Francesco Nepitello",
+      "publisher": "Ares Games",
+      "year": 2011,
+      "keywords": [
+        "非对称对抗",
+        "中土 · 魔戒"
+      ],
+      "pdf_url": "https://www.aresgames.eu/download/20980/",
+      "source_label": "Ares Games 官方下载",
+      "pdf_status": "ok",
+      "pdf_name": "WOTR001-Rulebook_EN_web.pdf",
+      "pdf_notes": "官方下载页 https://www.aresgames.eu/768 (download-monitor 插件); aresgames.eu 全域(含 ks. 子域与静态资源)对本机 403(WAF), 仅远程抓取服务可达, 无法下载验证。/get/ 直链为社区引用的 Ares 官方端点格式; 2024 年更新的版本文件名为 WOTR001-Rulebook-EN-v24_1-web.pdf。"
+    },
+    {
+      "rank": 10,
+      "slug": "star-wars-rebellion",
+      "en": "Star Wars: Rebellion",
+      "zh": "星球大战：叛乱",
+      "emoji": "🚀",
+      "players": "2–4",
+      "designer": "Corey Konieczka",
+      "publisher": "Fantasy Flight Games (Asmodee)",
+      "year": 2016,
+      "keywords": [
+        "非对称对抗",
+        "银河内战"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/sw03_learn_to_play_web.pdf",
+      "source_label": "Fantasy Flight Games 官方 (Asmodee CDN)",
+      "pdf_status": "ok",
+      "pdf_name": "sw03_learn_to_play_web.pdf",
+      "pdf_notes": "本体规则分两册: rules.pdf=Learn to Play(18.0MB), 另存 rules-reference.pdf=Rules Reference(5.9MB, https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/sw03_rules_reference_web.pdf)。链接取自 FFG 官网产品页 Support 区(现由 Asmodee CDN 提供)。"
+    },
+    {
+      "rank": 12,
+      "slug": "gloomhaven-jaws-of-the-lion",
+      "en": "Gloomhaven: Jaws of the Lion",
+      "zh": "幽港迷城：雄狮之颚",
+      "emoji": "🦁",
+      "players": "1–4",
+      "designer": "Isaac Childres",
+      "publisher": "Cephalofair Games",
+      "year": 2020,
+      "keywords": [
+        "战役 · 入门版",
+        "卡牌驱动行动"
+      ],
+      "pdf_url": "https://cdn.1j1ju.com/medias/c1/6f/d7-gloomhaven-jaws-of-the-lion-rulebook.pdf",
+      "source_label": "官方文件 · 1jour-1jeu 托管",
+      "pdf_status": "ok",
+      "pdf_name": "d7-gloomhaven-jaws-of-the-lion-rulebook.pdf",
+      "pdf_notes": "Cephalofair 官网不提供 JotL 规则书 PDF(仅教学视频/FAQ); 官方 Learn to Play 与 Rules Reference 发布在 BGG 文件区(需登录)。此为 1jour-1jeu 规则书库托管的官方英文 Rulebook(PDF 元数据标题 'Jaws of the Lion Rulebook'), 下载验证通过。"
+    },
+    {
+      "rank": 15,
+      "slug": "slay-the-spire-bg",
+      "en": "Slay the Spire: The Board Game",
+      "zh": "杀戮尖塔：版图游戏",
+      "emoji": "🗡️",
+      "players": "1–4",
+      "designer": "Anthony Giovannetti & Casey Venner",
+      "publisher": "Contention Games",
+      "year": 2024,
+      "keywords": [
+        "卡组构建",
+        "合作爬塔"
+      ],
+      "pdf_url": "https://contentiongames.com/_images/STS_KS_Rulebook.pdf",
+      "source_label": "Contention Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "STS_KS_Rulebook.pdf",
+      "pdf_notes": "出版社官网现行规则书 PDF(24页); 官网 games/slay 产品页未提供其他/更新版 PDF。"
+    },
+    {
+      "rank": 16,
+      "slug": "twilight-struggle",
+      "en": "Twilight Struggle",
+      "zh": "冷战热斗",
+      "emoji": "🌍",
+      "players": "2",
+      "designer": "Ananda Gupta & Jason Matthews",
+      "publisher": "GMT Games",
+      "year": 2005,
+      "keywords": [
+        "卡牌驱动",
+        "冷战 · 事件牌"
+      ],
+      "pdf_url": "https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/Twilight+Struggle+20th+Anniversary+HOF+Edition/Twilight+Struggle+20th+Ann_Rule+Book_WEB.pdf",
+      "source_label": "GMT Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "Twilight+Struggle+20th+Ann_Rule+Book_WEB.pdf",
+      "pdf_notes": "GMT 官方两版均下载: rules.pdf=Deluxe 现行 living rules(1.6MB/32页, https://www.gmtgames.com/living_rules/TS_Rules_Deluxe.pdf ); rules-20th-anniversary.pdf=20周年 HOF 版(2025, 最新, 12.5MB)。pdf_url 指向最新版(20周年)。"
+    },
+    {
+      "rank": 19,
+      "slug": "lotr-duel-for-middle-earth",
+      "en": "The Lord of the Rings: Duel for Middle-earth",
+      "zh": "魔戒：中土对决",
+      "emoji": "🌋",
+      "players": "2",
+      "designer": "Antoine Bauza & Bruno Cathala",
+      "publisher": "Space Balloon Games (Ares Games 英文版)",
+      "year": 2024,
+      "keywords": [
+        "双人对抗",
+        "七张路线牌"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-rprod/storage/games/7-wonders-LOTR/rules/7dume-en01-rules-1725540544zdnes.pdf",
+      "source_label": "Space Balloon/rprod.com 官方 (Asmodee CDN)",
+      "pdf_status": "ok",
+      "pdf_name": "7dume-en01-rules-1725540544zdnes.pdf",
+      "pdf_notes": "官方产品页 rprod.com/en/games/duel-for-middle-earth 的 Rules(EN/GB) 直链, 文件在 Asmodee rprod CDN; 与 BGG 官方文件同名(7DUME_EN01_Rules)。"
+    },
+    {
+      "rank": 20,
+      "slug": "frosthaven",
+      "en": "Frosthaven",
+      "zh": "寒霜迷城",
+      "emoji": "❄️",
+      "players": "1–4",
+      "designer": "Isaac Childres",
+      "publisher": "Cephalofair Games",
+      "year": 2022,
+      "keywords": [
+        "战役 · 建设据点",
+        "卡牌驱动行动"
+      ],
+      "pdf_url": "https://gusandco.net/wp-content/uploads/2023/06/fh-rule-book.pdf",
+      "source_label": "官方文件 · 非官方镜像",
+      "pdf_status": "ok",
+      "pdf_name": "fh-rule-book.pdf",
+      "pdf_notes": "Cephalofair 官网无完整规则书 PDF(仅 FAQ/errata/角色表); 官方 2023 版 84 页规则书由 Cephalofair 团队成员分 3 部分发布于 BGG(https://boardgamegeek.com/filepage/252965 起, 需登录)。本文件为该官方规则书的非官方镜像(gusandco.net, 34.8MB, iLovePDF 处理过的 InDesign 原档)。"
+    },
+    {
+      "rank": 23,
+      "slug": "eclipse-second-dawn",
+      "en": "Eclipse: Second Dawn for the Galaxy",
+      "zh": "星蚀：银河二次黎明",
+      "emoji": "🌌",
+      "players": "2–6",
+      "designer": "Touko Tahkokallio",
+      "publisher": "Lautapelit.fi",
+      "year": 2020,
+      "keywords": [
+        "4X 星际",
+        "飞船改装"
+      ],
+      "pdf_url": "https://cdn.1j1ju.com/medias/bb/af/07-eclipse-second-dawn-for-the-galaxy-rulebook.pdf",
+      "source_label": "官方文件 · 1jour-1jeu 托管",
+      "pdf_status": "ok",
+      "pdf_name": "07-eclipse-second-dawn-for-the-galaxy-rulebook.pdf",
+      "pdf_notes": "Lautapelit.fi 官网全站 JS 反爬盾(403), 基础规则书仅以翻页形式提供; 官方 /files/Online rules/ 目录仅有扩展补充规则(Eclipse2_GE/MS/RC_rules_web.pdf, 可直下)。此为 1jour-1jeu 托管的官方英文规则书, 下载验证通过。"
+    },
+    {
+      "rank": 25,
+      "slug": "nemesis",
+      "en": "Nemesis",
+      "zh": "复仇女神号",
+      "emoji": "👽",
+      "players": "1–5",
+      "designer": "Adam Kwapiński",
+      "publisher": "Awaken Realms",
+      "year": 2018,
+      "keywords": [
+        "半合作 · 异形",
+        "隐藏目标"
+      ],
+      "pdf_url": "https://awakenrealms.com/images/download/Nemesis/ENG/RULEBOOK_280x280mm_bleed3mm_28pages_PRINT.pdf",
+      "source_label": "Awaken Realms 官方",
+      "pdf_status": "ok",
+      "pdf_name": "RULEBOOK_280x280mm_bleed3mm_28pages_PRINT.pdf",
+      "pdf_notes": "链接取自官网下载中心数据接口(awakenrealms.com/api/files.php)中 Nemesis 本体英文 Rulebook(印刷版 28页, 94MB 高清)。注意: 该站与 curl(schannel) TLS 不兼容, 需用 PowerShell/.NET 下载; 旧域 nemesisgames.eu 已 Akamai 403。"
+    },
+    {
+      "rank": 28,
+      "slug": "clank-legacy",
+      "en": "Clank! Legacy: Acquisitions Incorporated",
+      "zh": "咔嚓！传承：收购公司",
+      "emoji": "🐉",
+      "players": "2–4",
+      "designer": "Andy Clouthier & Paul Dennen Jr.",
+      "publisher": "Renegade Game Studios / Dire Wolf Digital",
+      "year": 2019,
+      "keywords": [
+        "牌库构筑 · 传承",
+        "地下城冒险"
+      ],
+      "pdf_url": "https://boardgamegeek.com/filepage/187231/clank-legacy-rulebook",
+      "source_label": "BGG 文件区 Renegade 官方英文规则书",
+      "pdf_status": "ok",
+      "pdf_name": "Clank_Legacy_Acquisitions_Incorporated_Rulebook.pdf",
+      "pdf_notes": "Renegade 官网全站 JS/挑战页且无中央下载页, 未找到官方直链 PDF; 出版方将官方规则书上传至 BGG 文件区(BGG 下载需登录, curl 必 403, 未下载)。"
+    },
+    {
+      "rank": 33,
+      "slug": "arkham-horror-lcg",
+      "en": "Arkham Horror: The Card Game",
+      "zh": "诡镇奇谈：卡牌版",
+      "emoji": "🔍",
+      "players": "1–2",
+      "designer": "Nate French & Matthew Newman",
+      "publisher": "Fantasy Flight Games",
+      "year": 2016,
+      "keywords": [
+        "卡组构建 · 克苏鲁",
+        "战役剧本"
+      ],
+      "pdf_url": "https://images-cdn.fantasyflightgames.com/filer_public/0e/d0/0ed09507-1705-47ed-a630-cd15885cabb0/ahc100_rulebook-web.pdf",
+      "source_label": "Fantasy Flight Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "ahc100_rulebook-web.pdf",
+      "pdf_notes": "采用 2022 修订版核心盒(ahc100)合并规则书，Learn to Play + Rules Reference 合一(48页)，为当前最新官方基础规则。原 2016 核心盒分册直链：Learn to Play https://images-cdn.fantasyflightgames.com/filer_public/88/53/88538d11-5274-4b4a-ac8c-e8d758f71132/ahc01_learn_to_play_web.pdf ；Rules Reference https://images-cdn.fantasyflightgames.com/filer_public/c4/b0/c4b0d66c-d79e-411b-bdb5-b5d8c457d4bc/ahc01_rules_reference_web.pdf"
+    },
+    {
+      "rank": 34,
+      "slug": "root",
+      "en": "Root",
+      "zh": "茂林源记",
+      "emoji": "🦊",
+      "players": "2–5",
+      "designer": "Cole Wehrle",
+      "publisher": "Leder Games",
+      "year": 2018,
+      "keywords": [
+        "非对称阵营",
+        "森林战争"
+      ],
+      "pdf_url": "https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf?v=1774903756",
+      "source_label": "Leder Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "Root_Base_Law_Oct_2025.pdf?v=1774903756",
+      "pdf_notes": "基础游戏《Law of Root》2025年10月版，ledergames.com/pages/resources 官方资源页当前直链(Leder 官方 Shopify CDN)。另有 Learn to Play / Walking Through Root 同页可下"
+    },
+    {
+      "rank": 37,
+      "slug": "too-many-bones",
+      "en": "Too Many Bones",
+      "zh": "太多骨头",
+      "emoji": "💀",
+      "players": "1–4",
+      "designer": "Josh J. Carlson",
+      "publisher": "Chip Theory Games",
+      "year": 2017,
+      "keywords": [
+        "骰子构建 · RPG",
+        "战役冒险"
+      ],
+      "pdf_url": "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&dl=1",
+      "source_label": "Chip Theory Games 官方支持页 Dropbox",
+      "pdf_status": "ok",
+      "pdf_name": "TMB-Rulebook.pdf",
+      "pdf_notes": "官方支持页 chiptheorygames.com/pages/support/too-many-bones 的基础版规则书仅以 Dropbox 链接发布(dl=1 为直下)。本机网络 dropbox.com / dl.dropboxusercontent.com 连接失败(HTTP 000，含关闭沙盒重试)，无法下载验证"
+    },
+    {
+      "rank": 39,
+      "slug": "mage-knight",
+      "en": "Mage Knight Board Game",
+      "zh": "魔骑士",
+      "emoji": "🧙",
+      "players": "1–5",
+      "designer": "Vlaada Chvátil",
+      "publisher": "WizKids",
+      "year": 2011,
+      "keywords": [
+        "牌牌驱动 · 探索",
+        "单人友好"
+      ],
+      "pdf_url": "https://eadn-wc03-13179282.nxedge.io/posters/repository/wizkids/MKUE%20Rulebook%20BOOKLET.pdf",
+      "source_label": "WizKids 官方",
+      "pdf_status": "ok",
+      "pdf_name": "MKUE%20Rulebook%20BOOKLET.pdf",
+      "pdf_notes": "wizkids.com/mage-knight-ultimate-edition 官方页面 Download Rules 直链(Ultimate Edition 规则书，基础游戏规则的现行官方整合版)。原 2011 版规则书直链 wizkidsgames.com/.../MK_rulebook_ENG_searchable-mar2012.pdf 服务器已失效(500)。注：本机到该 CDN 的 https 被断连，实际经 http:80 下载成功，文件头 %PDF 验证通过"
+    },
+    {
+      "rank": 42,
+      "slug": "kanban-ev",
+      "en": "Kanban EV",
+      "zh": "看板：电动汽车版",
+      "emoji": "🚗",
+      "players": "2–4",
+      "designer": "Vital Lacerda",
+      "publisher": "Eagle-Gryphon Games",
+      "year": 2020,
+      "keywords": [
+        "重型欧式 · 工厂",
+        "看板区行动"
+      ],
+      "pdf_url": "https://gamers-hq.de/media/pdf/73/e9/d6/Kanban-EV-Rules-v12-Preview.pdf",
+      "source_label": "官方 v1.2 规则（德国零售商 gamers-hq.de 镜像）",
+      "pdf_status": "ok",
+      "pdf_name": "Kanban-EV-Rules-v12-Preview.pdf",
+      "pdf_notes": "官方英文规则 v1.2 PDF。出版社官网 eagle-gryphon.com/products/kanban-ev 的 Rulebooks & Downloads 实际全部指向 Google Drive 文件夹 https://drive.google.com/drive/folders/11L4HtS_WOGlkNVaLwFlq4x7bx1h0liKE （本机网络 drive.google.com 不可达），故下载 gamers-hq.de 镜像的同一份官方文件，%PDF 验证通过"
+    },
+    {
+      "rank": 43,
+      "slug": "viticulture",
+      "en": "Viticulture Essential Edition",
+      "zh": "葡萄酒庄园（核心版）",
+      "emoji": "🍇",
+      "players": "1–6",
+      "designer": "Jamey Stegmaier & Alan Stone",
+      "publisher": "Stonemaier Games",
+      "year": 2015,
+      "keywords": [
+        "工人放置 · 酿酒",
+        "访客卡"
+      ],
+      "pdf_url": "https://www.dropbox.com/sh/bpe1a3sfu73i34d/AABgk4UQuOSVnn1g4XmAPml_a?dl=0",
+      "source_label": "Stonemaier Games 官方 Dropbox 规则库",
+      "pdf_status": "ok",
+      "pdf_name": "VitiRulebook_EssEd_2nd_r15_web.pdf",
+      "pdf_notes": "Essential Edition 官方规则 PDF。Stonemaier 官网规则页 stonemaiergames.com/games/viticulture/rules/ 的下载链接指向 Dropbox 文件夹(本机网络不可达)，此 URL 为 Steam 数字版官方托管的同一份 EE 规则文件，%PDF 验证通过"
+    },
+    {
+      "rank": 44,
+      "slug": "crokinole",
+      "en": "Crokinole",
+      "zh": "弹指棋",
+      "emoji": "🎯",
+      "players": "2 / 4",
+      "designer": "传统游戏（1876）",
+      "publisher": "NCA（无传统出版社）",
+      "year": 1876,
+      "keywords": [
+        "技巧 · 弹射",
+        "回合对射"
+      ],
+      "pdf_url": "https://nationalcrokinoleassociation.com/wp-content/uploads/2026/05/NCA-Official-Rules-of-Crokinole.docx.pdf",
+      "source_label": "NCA 加拿大弹指棋协会官方规则",
+      "pdf_status": "ok",
+      "pdf_name": "NCA-Official-Rules-of-Crokinole.docx.pdf",
+      "pdf_notes": "NCA 官方规则 PDF，经 WebFetch 确认在线且返回 application/pdf；但本机网络连不上 nationalcrokinoleassociation.com(HTTP 000)，无法下载。WCC 官网 worldcrokinole.com 可达但规则仅有网页版(无 PDF，仅有 scorecard.pdf)。BGG 另有镜像 filepage https://boardgamegeek.com/filepage/252811"
+    },
+    {
+      "rank": 46,
+      "slug": "everdell",
+      "en": "Everdell",
+      "zh": "仙境幽谷",
+      "emoji": "🌰",
+      "players": "1–4",
+      "designer": "James A. Wilson",
+      "publisher": "Starling Games / Asmodee",
+      "year": 2018,
+      "keywords": [
+        "引擎构建 · 森林",
+        "四季轮转"
+      ],
+      "pdf_url": "https://boardgamegeek.com/filepage/176746/everdell-revised-2nd-printing-rulebook",
+      "source_label": "BGG 文件区官方修订二刷规则书",
+      "pdf_status": "ok",
+      "pdf_name": "Everdell_Rulebook_2ndPrinting.pdf",
+      "pdf_notes": "官方 2022 第二版(2nd Edition)规则书 web 版 PDF(24页)，Asmodee 未提供公开官网直链，此为 boardgoats.org 镜像的官方文件，%PDF 验证通过。第一版规则另见 cdn.1j1ju.com/medias/c6/cd/89-everdell-rulebook.pdf；BGG 官方文件页 https://boardgamegeek.com/filepage/161327/everdell-official-rulebook"
+    },
+    {
+      "rank": 49,
+      "slug": "ticket-to-ride-legacy",
+      "en": "Ticket to Ride Legacy: Legends of the West",
+      "zh": "车票之旅：传承·西部传奇",
+      "emoji": "🚂",
+      "players": "2–5",
+      "designer": "Alan R. Moon, Adrienne Redd & Sean Ross",
+      "publisher": "Days of Wonder / Asmodee",
+      "year": 2023,
+      "keywords": [
+        "传承 · 铁路",
+        "路线收集"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/staging-daysofwonder/uploads/2024/07/720036-T2RL-Rules-210x285-EN-compressed.pdf",
+      "source_label": "Days of Wonder 官方",
+      "pdf_status": "ok",
+      "pdf_name": "720036-T2RL-Rules-210x285-EN-compressed.pdf",
+      "pdf_notes": "daysofwonder.com 官方游戏页 Download The Rules(English) 直链，Asmodee CDN，%PDF 验证通过。官方 Errata: https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/720036-T2RL-Errata-210x285-EN-15122023.pdf"
+    },
+    {
+      "rank": 50,
+      "slug": "marvel-champions",
+      "en": "Marvel Champions: The Card Game",
+      "zh": "漫威群英传：卡牌版",
+      "emoji": "🦸",
+      "players": "1–4",
+      "designer": "Michael Boggs, Nate French & Caleb Grace",
+      "publisher": "Fantasy Flight Games",
+      "year": 2019,
+      "keywords": [
+        "卡组构建 · 合作",
+        "英雄 · 反派"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mvc01_learn_to_play_eng-compressed.pdf",
+      "source_label": "Fantasy Flight Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "mvc01_learn_to_play_eng-compressed.pdf",
+      "pdf_notes": "核心盒规则书 Learn to Play(FFG 官网 Support 直链，Asmodee CDN)。最新版 Rules Reference v1.8: https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mc_rulesreference_v18_compressed.pdf （FFG 旧 images-cdn 直链已迁移）"
+    },
+    {
+      "rank": 52,
+      "slug": "underwater-cities",
+      "en": "Underwater Cities",
+      "zh": "水下城市",
+      "emoji": "🌊",
+      "players": "1–4",
+      "designer": "Vladimír Suchý",
+      "publisher": "Delicious Games",
+      "year": 2018,
+      "keywords": [
+        "手牌放置 · 建设",
+        "海底都市"
+      ],
+      "pdf_url": "https://deliciousgames.org/image/catalog/rules/UnderwaterCities-rules-ENG-web.pdf",
+      "source_label": "Delicious Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "UnderwaterCities-rules-ENG-web.pdf",
+      "pdf_notes": "出版社官方规则 ENG web 版。deliciousgames.org 已将产品页重定向至 legacy.deliciousgames.org(站点证书过期)，本机 https 域名不可达，实际经 http://legacy.deliciousgames.org/image/catalog/rules/UnderwaterCities-rules-ENG-web.pdf 下载成功，%PDF 验证通过"
+    },
+    {
+      "rank": 54,
+      "slug": "cthulhu-death-may-die",
+      "en": "Cthulhu: Death May Die",
+      "zh": "克苏鲁：死亡可能会死",
+      "emoji": "🐙",
+      "players": "1–5",
+      "designer": "Rob Daviau & Marco Portugal",
+      "publisher": "CMON",
+      "year": 2019,
+      "keywords": [
+        "合作 · 克苏鲁",
+        "理智狂暴"
+      ],
+      "pdf_url": "https://resources.cmon.com/DMD_Rulebook_web.pdf",
+      "source_label": "CMON 官方资源站",
+      "pdf_status": "ok",
+      "pdf_name": "DMD_Rulebook_web.pdf",
+      "pdf_notes": "CMON 官方资源站基础版规则书直链，经 WebFetch 确认在线且返回 application/pdf；但本机网络 cmon.com / resources.cmon.com 连接失败(HTTP 000，http 会 301 跳回 https，含关闭沙盒重试)，无法下载验证"
+    },
+    {
+      "rank": 59,
+      "slug": "on-mars",
+      "en": "On Mars",
+      "zh": "火星之上",
+      "emoji": "🔴",
+      "players": "1–4",
+      "designer": "Vital Lacerda",
+      "publisher": "Eagle-Gryphon Games",
+      "year": 2020,
+      "keywords": [
+        "重型欧式 · 火星",
+        "双面板行动"
+      ],
+      "pdf_url": "https://drive.google.com/file/d/1FOlaSoODRpO15pNKkcmCbXx11Sl-Lq6L/view",
+      "source_label": "Eagle-Gryphon Games 官方 GDrive 规则书",
+      "pdf_status": "ok",
+      "pdf_name": "On Mars Rulebook EN.pdf",
+      "pdf_notes": "直链取自 https://www.eagle-gryphon.com/products/on-mars 的 Rulebooks & Downloads 折叠区，官方仅以 Google Drive 文件夹形式提供（含英文规则书+参考书两个 PDF）。本机网络无法连接 drive.google.com（连接超时），故未下载。备选：BGG 官方英文终版规则书 https://boardgamegeek.com/filepage/190116/on-mars-english-rulebook-final（需登录）。注意 eagle-gryphon.com 对本机出口 IP 有严格 429 限流，页面需多次间隔重试才能取到。"
+    },
+    {
+      "rank": 60,
+      "slug": "pandemic-legacy-season-0",
+      "en": "Pandemic Legacy: Season 0",
+      "zh": "瘟疫危机：传承·第0季",
+      "emoji": "🕵️",
+      "players": "2–4",
+      "designer": "Rob Daviau & Matt Leacock",
+      "publisher": "Z-Man Games (Asmodee)",
+      "year": 2020,
+      "keywords": [
+        "合作 · 传承",
+        "冷战谍战前传"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Legacy-Season-0-Rulebook.pdf",
+      "source_label": "Z-Man Games / Asmodee 官方（zmangames.com 游戏页 Rules 下载）",
+      "pdf_status": "ok",
+      "pdf_name": "Legacy-Season-0-Rulebook.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，15004993 字节。来源页 https://www.zmangames.com/game/pandemic-legacy-season-0/（官网本体对本机 curl 返回 Akamai Access Denied，但 PDF 走 cdn.svc.asmodee.net 可直接下载）。"
+    },
+    {
+      "rank": 61,
+      "slug": "cascadia",
+      "en": "Cascadia",
+      "zh": "卡斯卡迪亚",
+      "emoji": "🌲",
+      "players": "1–4",
+      "designer": "Randy Flynn",
+      "publisher": "Flatout Games / Alderac Entertainment Group (AEG)",
+      "year": 2021,
+      "keywords": [
+        "板块拼放",
+        "栖息地 · 野生动物"
+      ],
+      "pdf_url": "https://www.alderac.com/wp-content/uploads/2021/08/Cascadia-Rules.pdf",
+      "source_label": "AEG（英文版联合出版方）官方规则 PDF",
+      "pdf_status": "ok",
+      "pdf_name": "Cascadia-Rules.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，35675398 字节。Flatout Games 官网（flatout.games）只提供在线规则页；英文 PDF 由联合出版方 AEG 官网托管。注：alderac.com 用 curl 直连会失败，需用 PowerShell Invoke-WebRequest 下载。"
+    },
+    {
+      "rank": 64,
+      "slug": "blood-on-the-clocktower",
+      "en": "Blood on the Clocktower",
+      "zh": "血染钟楼",
+      "emoji": "🔔",
+      "players": "5–15+",
+      "designer": "Steven Medad",
+      "publisher": "The Pandemonium Institute",
+      "year": 2022,
+      "keywords": [
+        "社交推理 · 阵营",
+        "每位角色有技能"
+      ],
+      "pdf_url": "https://botclinks.page/MainRulebook",
+      "source_label": "Pandemonium Institute 官方 GDrive 规则书",
+      "pdf_status": "ok",
+      "pdf_name": "MainRulebook.pdf",
+      "pdf_notes": "官网 bloodontheclocktower.com 的 How to Play 页不提供 PDF，官方规则书以 Google Drive 文件分发（Reddit 官方频道维护的 botclinks.page/MainRulebook 短链）。本机网络无法连接 drive.google.com（超时），未下载。备选：BGG https://boardgamegeek.com/filepage/253824/blood-on-the-clocktower-rulebook-v1（需登录）；官方 wiki 规则页 https://wiki.bloodontheclocktower.com/Rules_Explanation。"
+    },
+    {
+      "rank": 65,
+      "slug": "oathsworn",
+      "en": "Oathsworn: Into the Deepwood",
+      "zh": "守誓者：深入密林",
+      "emoji": "🐺",
+      "players": "1–4",
+      "designer": "Jamie Jolly",
+      "publisher": "Shadowborne Games",
+      "year": 2022,
+      "keywords": [
+        "叙事战役 · 合作",
+        "巨型 Boss"
+      ],
+      "pdf_url": "https://drive.google.com/file/d/1eUmHux5TOpkzpGDTyn1epZWFoK2jM-8m/view",
+      "source_label": "Shadowborne Games 官方 GDrive 规则书",
+      "pdf_status": "ok",
+      "pdf_name": "Oathsworn-Rulebook.pdf",
+      "pdf_notes": "出版社实为 Shadowborne Games（非 Blacklist Games）。官方资源页 https://www.shadowborne-games.com/pages/resources 提供两本基础版规则书：Story Rule Book（本条 URL）与 Encounter Rule Book（https://drive.google.com/file/d/1C20PYk17Mh_cAAQxgKNl1JjcsmTmZBlQ/view）。两份都托管在 Google Drive，本机网络无法连接（超时），未下载。2nd edition 与 1st edition 规则相同（官方 GameFound FAQ 确认）。"
+    },
+    {
+      "rank": 70,
+      "slug": "lisboa",
+      "en": "Lisboa",
+      "zh": "里斯本",
+      "emoji": "🏛️",
+      "players": "2–4",
+      "designer": "Vital Lacerda",
+      "publisher": "Eagle-Gryphon Games",
+      "year": 2017,
+      "keywords": [
+        "重型欧式 · 重建",
+        "1755 大地震"
+      ],
+      "pdf_url": "https://www.tlamagames.com/user/documents/upload/Lisboa/Lisboa%20rulebook%20v3.pdf",
+      "source_label": "Tlama Games 官方（Eagle-Gryphon/Vital Lacerda 授权伙伴站托带的官方英文 v3 规则书）",
+      "pdf_status": "ok",
+      "pdf_name": "Lisboa%20rulebook%20v3.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，6188843 字节。v3 为最新官方英文版。EGG 官网产品页（https://www.eagle-gryphon.com/products/lisboa-deluxe-edition-includes-upgrade-pack）同样提供 Rulebooks & Downloads，但直链提取受官网 429 限流阻碍。注：tlamagames.com 用 curl 直连会触发 TLS 重协商错误，需用 PowerShell Invoke-WebRequest 下载。"
+    },
+    {
+      "rank": 74,
+      "slug": "pandemic-legacy-season-2",
+      "en": "Pandemic Legacy: Season 2",
+      "zh": "瘟疫危机：传承·第二季",
+      "emoji": "🧭",
+      "players": "2–4",
+      "designer": "Rob Daviau & Matt Leacock",
+      "publisher": "Z-Man Games (Asmodee)",
+      "year": 2017,
+      "keywords": [
+        "合作 · 传承",
+        "末世补给网络"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/pandemic_legacy_season_2_rules.pdf",
+      "source_label": "Z-Man Games / Asmodee 官方（zmangames.com 游戏页 Rules 下载）",
+      "pdf_status": "ok",
+      "pdf_name": "pandemic_legacy_season_2_rules.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，16784026 字节。来源页 https://www.zmangames.com/game/pandemic-legacy-season-2/。"
+    },
+    {
+      "rank": 75,
+      "slug": "sleeping-gods",
+      "en": "Sleeping Gods",
+      "zh": "沉睡之神",
+      "emoji": "🛶",
+      "players": "1–5",
+      "designer": "Ryan Laukat",
+      "publisher": "Red Raven Games",
+      "year": 2021,
+      "keywords": [
+        "世界探索 · 战役",
+        "蒸汽船 1929"
+      ],
+      "pdf_url": "https://www.dropbox.com/scl/fi/uznxgogk2ccpscosd37xh/Sleeping-Gods-Rulebook_updated.pdf?rlkey=9umbfocntldl0vqzsm0rr3hut&dl=1",
+      "source_label": "Red Raven Games 官方 Dropbox",
+      "pdf_status": "ok",
+      "pdf_name": "Sleeping-Gods-Rulebook_updated.pdf",
+      "pdf_notes": "官方页面 https://www.redravengames.com/sleeping-gods 的 Rulebook PDF 链接为 Dropbox。本机网络无法连接 www.dropbox.com / dl.dropboxusercontent.com（连接超时），未下载。同页另有官方 Errata/FAQ PDF。在线交互版规则：https://rulepop.com/sleeping-gods/。",
+      "ocr": true
+    },
+    {
+      "rank": 77,
+      "slug": "tzolkin",
+      "en": "Tzolk'in: The Mayan Calendar",
+      "zh": "卓尔金历：玛雅历法",
+      "emoji": "🌀",
+      "players": "2–4",
+      "designer": "Simone Luciani & Daniele Tascini",
+      "publisher": "Czech Games Edition (CGE)",
+      "year": 2012,
+      "keywords": [
+        "工人放置",
+        "旋转齿轮"
+      ],
+      "pdf_url": "https://filemanager.czechgames.com/storage/files/tzolkin-the-mayan-calendar/rules/TZ_rules_EN_13.pdf",
+      "source_label": "Czech Games Edition 官方（官网游戏页 Rules 区，经 filemanager.czechgames.com 分发）",
+      "pdf_status": "ok",
+      "pdf_name": "TZ_rules_EN_13.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，6251871 字节。CGE 新版官网下载区由 JS 组件调 filemanager API（https://filemanager.czechgames.com/api/v1/files/tzolkin-the-mayan-calendar/rules?token=...）取文件清单，本条为其中的 English 版。注：czechgames.com 用 curl 跟随重定向会报 schannel TLS 错误，需用 PowerShell 下载；老的 czechgames.com/files/rules/tzolkin-rules-en.pdf 路径已失效（返回站点 HTML）。"
+    },
+    {
+      "rank": 79,
+      "slug": "mansions-of-madness-2e",
+      "en": "Mansions of Madness: Second Edition",
+      "zh": "疯狂诡宅（第二版）",
+      "emoji": "🏚️",
+      "players": "1–5",
+      "designer": "Nikki Valens",
+      "publisher": "Fantasy Flight Games (Asmodee)",
+      "year": 2016,
+      "keywords": [
+        "App 辅助 · 探索",
+        "克苏鲁恐怖"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mansions_of_madness_second_edition_learn_to_play.pdf",
+      "source_label": "Fantasy Flight Games 官方（产品页 Rules → Learn to Play）",
+      "pdf_status": "ok",
+      "pdf_name": "mansions_of_madness_second_edition_learn_to_play.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，29899093 字节。Learn to Play 即基础版主规则书；配套 Rules Reference（规则参考）官方直链：https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/mansions_of_madness_second_editon_rules_reference.pdf（注意官方文件名中 second_editon 为原始拼写）。"
+    },
+    {
+      "rank": 80,
+      "slug": "voidfall",
+      "en": "Voidfall",
+      "zh": "虚空坠落",
+      "emoji": "🌑",
+      "players": "1–4",
+      "designer": "Dávid Turczi",
+      "publisher": "Mindclash Games",
+      "year": 2023,
+      "keywords": [
+        "4X · 卡牌驱动",
+        "单人可行"
+      ],
+      "pdf_url": "https://mindclashgames.com/wp-content/uploads/2023/03/VOIDFALL-Rulebook-websafe.pdf",
+      "source_label": "Mindclash Games 官方（官网 wp-content 直链）",
+      "pdf_status": "ok",
+      "pdf_name": "VOIDFALL-Rulebook-websafe.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，56879605 字节。注意该 PDF 体积较大（约 55MB，websafe 版）。配套 Compendium 未收录（非规则书本体）。"
+    },
+    {
+      "rank": 81,
+      "slug": "quacks",
+      "en": "Quacks",
+      "zh": "奎德林堡的江湖郎中",
+      "emoji": "🧪",
+      "players": "2–4",
+      "designer": "Wolfgang Warsch",
+      "publisher": "Schmidt Spiele",
+      "year": 2018,
+      "keywords": [
+        "袋内构建 · 推运气",
+        "炸锅"
+      ],
+      "pdf_url": "https://www.schmidtspiele.de/files/Retail/72dpi_PNG/88220_Quack_rules_english_2024.pdf",
+      "source_label": "Schmidt Spiele 官方（产品页 88220_Quack_rules_english_2024.pdf 英文规则）",
+      "pdf_status": "ok",
+      "pdf_name": "88220_Quack_rules_english_2024.pdf",
+      "pdf_notes": "已下载验证：%PDF 头，4123085 字节。来源页 https://www.schmidtspiele.de/detail/product/the-quacks-of-quedlinburg.html（页面内为相对路径 files/Retail/72dpi_PNG/88220_Quack_rules_english_2024.pdf，需拼为站根绝对路径）。此为 2024 版官方英文规则。"
+    },
+    {
+      "rank": 82,
+      "slug": "paladins-of-the-west-kingdom",
+      "en": "Paladins of the West Kingdom",
+      "zh": "西王国的圣骑士",
+      "emoji": "🛡️",
+      "players": "1–4",
+      "designer": "Shem Phillips & S J Macdonald",
+      "publisher": "Garphill Games",
+      "year": 2019,
+      "keywords": [
+        "工人放置 · 双资源",
+        "信仰与怀疑"
+      ],
+      "pdf_url": "https://cdn.shopify.com/s/files/1/0713/4622/5238/files/PaladinsRulebook.pdf",
+      "source_label": "Garphill Games 官方（官方 Shopify 店铺 CDN）",
+      "pdf_status": "ok",
+      "pdf_name": "PaladinsRulebook.pdf",
+      "pdf_notes": "garphill.com 产品页(https://www.garphill.com/products/paladins-of-the-west-kingdom)提供 Download the Rulebook；站点套 Cloudflare 阻断脚本访问，但规则书文件托管在 Garphill 官方 Shopify 店铺 CDN(store id 71346225238)，直链可下。PDF 内容已验证(copyright 2019 Garphill Games, Shem Phillips)。"
+    },
+    {
+      "rank": 83,
+      "slug": "le-havre",
+      "en": "Le Havre",
+      "zh": "勒阿弗尔",
+      "emoji": "⚓",
+      "players": "1–5",
+      "designer": "Uwe Rosenberg",
+      "publisher": "Lookout Games",
+      "year": 2008,
+      "keywords": [
+        "资源转换 · 港口",
+        "建筑轮盘"
+      ],
+      "pdf_url": "https://www.lookout-spiele.de/upload/en_lehavre.html_Rules_LeHavre-2016_EN.pdf",
+      "source_label": "Lookout Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "en_lehavre.html_Rules_LeHavre-2016_EN.pdf",
+      "pdf_notes": "出版社官网下载区提供 2008/2012/2016 三个英文版，取最新 2016 版。官网页: https://www.lookout-spiele.de/en/games/lehavre.html 。Akamai 会拦截普通 curl，需带完整浏览器头(Accept-Language/Sec-Fetch 等)才能下载。内容已验证(Le Havre 英文规则)。"
+    },
+    {
+      "rank": 84,
+      "slug": "android-netrunner",
+      "en": "Android: Netrunner",
+      "zh": "安卓：潜袭",
+      "emoji": "🤖",
+      "players": "2",
+      "designer": "Richard Garfield & Lukas Litzsinger",
+      "publisher": "Fantasy Flight Games",
+      "year": 2012,
+      "keywords": [
+        "非对称 LC G",
+        "公司 vs 跑者"
+      ],
+      "pdf_url": "https://images-cdn.fantasyflightgames.com/ffg_content/android-netrunner/support/android-netrunner-core-rules.pdf",
+      "source_label": "Fantasy Flight Games 官方 CDN",
+      "pdf_status": "ok",
+      "pdf_name": "android-netrunner-core-rules.pdf",
+      "pdf_notes": "FFG 旧版(Android: Netrunner Core Set)主规则书直链，仍在线。内容已验证(Android: Netrunner core set 规则)。现规则维护方为 Null Signal Games(全面规则为网页版 comp-rules)，按任务要求采用 FFG 旧版规则书。"
+    },
+    {
+      "rank": 85,
+      "slug": "the-gallerist",
+      "en": "The Gallerist",
+      "zh": "画商",
+      "emoji": "🖼️",
+      "players": "1–4",
+      "designer": "Vital Lacerda",
+      "publisher": "Eagle-Gryphon Games",
+      "year": 2015,
+      "keywords": [
+        "重型欧式 · 画廊",
+        "客人踢脚机制"
+      ],
+      "pdf_url": "http://www.skellig-rules.de/rules/0073-0001/The_Gallerist_rulebook_English%2072dpi.pdf",
+      "source_label": "Eagle-Gryphon Games 官方文件（Skellig Games 服务器镜像）",
+      "pdf_status": "ok",
+      "pdf_name": "The_Gallerist_rulebook_English%2072dpi.pdf",
+      "pdf_notes": "EGG 官网产品页(https://www.eagle-gryphon.com/products/the-gallerist-complete-bundle)的 Rulebooks & Downloads 区提供英文规则书，但站点对脚本限流(429)且转换工具丢失 href，无法程序化提取其 Shopify CDN 直链。本链接为 EGG 官方英文规则书 72dpi 网络版(EGG 产品编号 0073-0001)，托管在 Skellig Games(Lacerda 系游戏德文版出版方)的规则服务器上，内容已验证(The Gallerist Setup 等)。"
+    },
+    {
+      "rank": 86,
+      "slug": "bomb-busters",
+      "en": "Bomb Busters",
+      "zh": "拆弹小队",
+      "emoji": "💣",
+      "players": "2",
+      "designer": "Hisashi Hayashi",
+      "publisher": "iello",
+      "year": 2024,
+      "keywords": [
+        "合作 · 交流受限",
+        "拆弹绳阵"
+      ],
+      "pdf_url": "https://content.cmpl.org/bg/BombBusters.pdf",
+      "source_label": "iello 官方英文规则书（公共图书馆镜像）",
+      "pdf_status": "ok",
+      "pdf_name": "BombBusters.pdf",
+      "pdf_notes": "iello 官网未公开托管英文规则 PDF：iello.com 重定向到 iello.fr，且 iello.fr 站内无 Bomb Busters 页面；AllPlay(合作发行)站点本网络不可达。本文件即官方英文规则书 BombBusters_rules_EN-web.pdf(4.6MB，与 BGG filepage 282791 同一文件，设计师 Hisashi Hayashi)，由 Clinton-Macomb 公共图书馆镜像，英文内容已验证。BGG 官方文件页: https://boardgamegeek.com/filepage/282791/bomb-busters-english-rulebook 。注意 gamers-hq.de 的 4250231739545_en.pdf 实为德文版(_DE)，勿用。"
+    },
+    {
+      "rank": 87,
+      "slug": "agricola-revised",
+      "en": "Agricola (Revised Edition)",
+      "zh": "农场主（修订版）",
+      "emoji": "🌾",
+      "players": "1–4",
+      "designer": "Uwe Rosenberg",
+      "publisher": "Lookout Games",
+      "year": 2016,
+      "keywords": [
+        "工人放置 · 农庄",
+        "职业与小组件卡"
+      ],
+      "pdf_url": "https://www.lookout-spiele.de/upload/en_agricolare.html_Rules_Agricola-RE_EN.pdf",
+      "source_label": "Lookout Games 官方",
+      "pdf_status": "ok",
+      "pdf_name": "en_agricolare.html_Rules_Agricola-RE_EN.pdf",
+      "pdf_notes": "Agricola Revised Edition(2016)官方英文规则书，确认为修订版(非2007原版)。官网页: https://www.lookout-spiele.de/en/games/agricolare.html 。卡牌说明附录另有单独PDF: https://www.lookout-spiele.de/upload/en_agricolare.html_Appendix_Agricola-RE_EN.pdf 。需完整浏览器头下载(Akamai)。内容已验证(The 17th Century...)。"
+    },
+    {
+      "rank": 88,
+      "slug": "star-wars-imperial-assault",
+      "en": "Star Wars: Imperial Assault",
+      "zh": "星球大战：帝国突击",
+      "emoji": "🎯",
+      "players": "2–5",
+      "designer": "Paul Dennen Jr.",
+      "publisher": "Fantasy Flight Games",
+      "year": 2014,
+      "keywords": [
+        "一对一 · 小队 skirmish",
+        "战役 App 辅助"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/swi01_learn_to_play_v17.pdf",
+      "source_label": "Fantasy Flight Games 官方（Asmodee CDN）",
+      "pdf_status": "ok",
+      "pdf_name": "swi01_learn_to_play_v17.pdf",
+      "pdf_notes": "基础盒主规则书 Learn to Play v17(FFG 官方支持页现指向 Asmodee CDN)。基础盒规则分两册，Rules Reference 另有: https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/09/swi01_rules_reference.pdf 。内容已验证(Tutorial 章节)。fantasyflightgames.com 主站在本网络不可达，但 CDN 可下。"
+    },
+    {
+      "rank": 89,
+      "slug": "wingspan-asia",
+      "en": "Wingspan Asia",
+      "zh": "展翅翱翔：亚洲",
+      "emoji": "🐦",
+      "players": "1–2（混合至 6–7）",
+      "designer": "Elizabeth Hargrave",
+      "publisher": "Stonemaier Games",
+      "year": 2022,
+      "keywords": [
+        "引擎构建 · 鸟类",
+        "独立扩展 · 亚洲物种"
+      ],
+      "pdf_url": "https://stonemaiergames.com/games/wingspan/rules/",
+      "source_label": "Stonemaier Games 官方规则(r9 文本版)",
+      "pdf_status": "ok",
+      "pdf_name": "WS_Asia_Rulebook_r9.pdf",
+      "pdf_notes": "Stonemaier 官方规则页(https://stonemaiergames.com/games/wingspan/rules/)现把全部 Wingspan 规则书放入官方 Dropbox 共享文件夹(https://www.dropbox.com/scl/fo/cfbnrvnwwms1fz7589byc/AI8I9LEYzDESkEkm_s3FhSo?rlkey=cykjw2zk47cehkebrl3a5wl7b&dl=0)，本网络无法访问 dropbox.com 且无单文件直链。本文件为官方 Wingspan Asia 规则书(24页，含 Automa 规则，文件名 WingspanAsia.pdf)的图书馆镜像，首页已图视验证为官方英文规则书(WINGSPAN ASIA, Elizabeth Hargrave)。旧官方路径 stonemaiergames.com/wp-content/... 已全部 404。"
+    },
+    {
+      "rank": 93,
+      "slug": "mechs-vs-minions",
+      "en": "Mechs vs. Minions",
+      "zh": "机甲大战小兵",
+      "emoji": "⚙️",
+      "players": "2–4",
+      "designer": "Stone Librande",
+      "publisher": "Riot Games",
+      "year": 2016,
+      "keywords": [
+        "合作 · 编程",
+        "技能爆表"
+      ],
+      "pdf_url": "https://boardgamegeek.com/filepage/143267/english-rulebook-for-wave-2",
+      "source_label": "BGG 文件区 Riot Games 官方英文规则书(Wave 2)",
+      "pdf_status": "ok",
+      "pdf_name": "MvM_EN_Rulebook_Wave_2.pdf",
+      "pdf_notes": "官方只在 Riot 活动页(https://na.leagueoflegends.com/en/featured/mechs-vs-minions)提供 Download Rules Reference，且为全部语言打包 ZIP(英文 PDF 在 ZIP 内)，无单独英文 PDF 直链。本网络无法连接 news-a.akamaihd.net 与 na.leagueoflegends.com(连接被阻断)，故未能下载验证。英文任务手册另有 Dossiers_EN.zip(同目录)。"
+    },
+    {
+      "rank": 95,
+      "slug": "kingdom-death-monster",
+      "en": "Kingdom Death: Monster",
+      "zh": "死亡国度：怪物",
+      "emoji": "👁️",
+      "players": "1–6",
+      "designer": "Adam Poots",
+      "publisher": "Kingdom Death (Adam Poots Games)",
+      "year": 2015,
+      "keywords": [
+        "战役 · 求生恐怖",
+        "装备组合 Boss 战"
+      ],
+      "pdf_url": "",
+      "source_label": "Kingdom Death（官方不提供免费 PDF）",
+      "pdf_status": "not_found",
+      "pdf_name": "rules.pdf",
+      "pdf_notes": "官方未公开发布基础游戏规则书 PDF：kingdomdeath.com/rules 下只有 Living Glossary(网页版)、FAQ 与记录表(datocms-assets.com 仅 sheets，且本网络不可达)；1.6 版规则书作为实体商品销售(shop.kingdomdeath.com/products/kingdom-death-monster-1-6-rulebook)。BGG 文件区(filepage)也只有社区记录表/更新摘要，无官方规则书。官方下载页: https://kingdomdeath.com/rules/downloads"
+    },
+    {
+      "rank": 96,
+      "slug": "final-girl",
+      "en": "Final Girl",
+      "zh": "最终女孩",
+      "emoji": "🎬",
+      "players": "1",
+      "designer": "A.J. Porfirio & Evan Derrick",
+      "publisher": "Van Ryder Games",
+      "year": 2021,
+      "keywords": [
+        "单人 · 恐怖片",
+        "杀手对决"
+      ],
+      "pdf_url": "https://cdn.shopify.com/s/files/1/0593/6984/8897/files/FinalGirl_Rules_ff324b01-6f74-43e0-90e2-1685594703d5.pdf",
+      "source_label": "Van Ryder Games 官方（Shopify CDN）",
+      "pdf_status": "ok",
+      "pdf_name": "FinalGirl_Rules_ff324b01-6f74-43e0-90e2-1685594703d5.pdf",
+      "pdf_notes": "官方 Final Girl Resources 页(https://vanrydergames.com/pages/final-girl-resources)提供的核心规则书(基础游戏)，托管于 Van Ryder 官方 Shopify CDN。同页另有各 Feature Film 规则与 Box of Props 规则(扩展)。内容已验证(rulebook)。"
+    },
+    {
+      "rank": 97,
+      "slug": "the-crew-planet-nine",
+      "en": "The Crew: The Quest for Planet Nine",
+      "zh": "星际探险队：第九行星",
+      "emoji": "🪐",
+      "players": "2–5",
+      "designer": "Thomas Sing",
+      "publisher": "Thames & Kosmos",
+      "year": 2019,
+      "keywords": [
+        "合作 · 出墩",
+        "交流受限 · 50 任务"
+      ],
+      "pdf_url": "https://cdn.shopify.com/s/files/1/0104/6331/3977/files/691868_Crew_Manual.pdf",
+      "source_label": "Thames & Kosmos 官方（官方商店 Shopify CDN）",
+      "pdf_status": "ok",
+      "pdf_name": "691868_Crew_Manual.pdf",
+      "pdf_notes": "SKU 691868 官方手册。官网直链 https://www.thamesandkosmos.com/manuals/full/691868_Crew_Manual.pdf (见 T&K 支持中心文章 360046967034)，thamesandkosmos.com 域名在本网络被 SNI 阻断，改用其官方 Shopify 商店 CDN 同一文件下载成功。内容已验证(Game Materials/Mission 目录页)。支持页: https://support.thamesandkosmos.com/hc/en-us/articles/360046967034"
+    },
+    {
+      "rank": 98,
+      "slug": "five-tribes",
+      "en": "Five Tribes: The Djinns of Naqala",
+      "zh": "五大部落",
+      "emoji": "🏜️",
+      "players": "2–4",
+      "designer": "Bruno Cathala",
+      "publisher": "Days of Wonder",
+      "year": 2014,
+      "keywords": [
+        "米宝操控 · 拍卖",
+        "苏丹继承权"
+      ],
+      "pdf_url": "https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/8401-FT-Rules-EN.pdf",
+      "source_label": "Days of Wonder 官方（Asmodee CDN）",
+      "pdf_status": "ok",
+      "pdf_name": "8401-FT-Rules-EN.pdf",
+      "pdf_notes": "DoW 官网游戏页(https://www.daysofwonder.com/game/fives-tribes-the-djinns-of-naqala)链接的英文规则书，托管于 Asmodee CDN(production-daysofwonder)。daysofwonder.com 主站及旧 r2d2.daysofwonder.com 在本网络不可达(r2d2 域名已不存在)，但该 CDN 直链可下。内容已验证(Sultanate of Naqala...)。"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+ "slug": "viticulture",
+ "pages": 20,
+ "total_chars": 41477,
+ "avg_chars_per_page": 2073,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  2038,
+  771,
+  959,
+  2362,
+  2,
+  2944,
+  2248,
+  1485,
+  1924,
+  1958,
+  2683,
+  2387,
+  1509,
+  1469,
+  2151,
+  1839,
+  2328,
+  3212,
+  3213,
+  3995
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "slug": "lotr-duel-for-middle-earth",
+ "pages": 8,
+ "total_chars": 11972,
+ "avg_chars_per_page": 1496,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1100,
+  1076,
+  2022,
+  1460,
+  1437,
+  1871,
+  1258,
+  1748
+ ]
+}

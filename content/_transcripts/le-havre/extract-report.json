@@ -1,0 +1,27 @@
+{
+ "slug": "le-havre",
+ "pages": 16,
+ "total_chars": 73670,
+ "avg_chars_per_page": 4604,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  4093,
+  2549,
+  3314,
+  2837,
+  3280,
+  2762,
+  2887,
+  2166,
+  2743,
+  3153,
+  2839,
+  6766,
+  7907,
+  12462,
+  8654,
+  5258
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "slug": "star-wars-rebellion",
+ "pages": 20,
+ "total_chars": 57065,
+ "avg_chars_per_page": 2853,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  5,
+  2450,
+  1893,
+  2677,
+  4234,
+  2698,
+  3071,
+  3972,
+  2041,
+  3185,
+  2052,
+  3071,
+  4334,
+  4213,
+  2363,
+  1208,
+  3312,
+  3492,
+  3400,
+  3394
+ ]
+}

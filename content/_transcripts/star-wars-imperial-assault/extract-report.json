@@ -1,0 +1,29 @@
+{
+ "slug": "star-wars-imperial-assault",
+ "pages": 16,
+ "total_chars": 68357,
+ "avg_chars_per_page": 4272,
+ "has_text_layer": true,
+ "dropped_headers": [
+  "IMPERIAL ASSAULT-CORE GAME"
+ ],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  3358,
+  5420,
+  5507,
+  3892,
+  3936,
+  4657,
+  4675,
+  4837,
+  4513,
+  5241,
+  4622,
+  4547,
+  4560,
+  3495,
+  5097
+ ]
+}

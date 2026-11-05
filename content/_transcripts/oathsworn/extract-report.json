@@ -1,0 +1,31 @@
+{
+ "slug": "oathsworn",
+ "pages": 20,
+ "total_chars": 50795,
+ "avg_chars_per_page": 2539,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  934,
+  3579,
+  567,
+  954,
+  3702,
+  4106,
+  2594,
+  3548,
+  2869,
+  2509,
+  4219,
+  3188,
+  2833,
+  5157,
+  3161,
+  1528,
+  0,
+  3789,
+  1558
+ ]
+}

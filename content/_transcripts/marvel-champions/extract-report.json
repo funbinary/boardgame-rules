@@ -1,0 +1,37 @@
+{
+ "slug": "marvel-champions",
+ "pages": 24,
+ "total_chars": 62534,
+ "avg_chars_per_page": 2605,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [
+  "LEARN TO PLAY"
+ ],
+ "per_page_chars": [
+  0,
+  1831,
+  1629,
+  1481,
+  1334,
+  1510,
+  1067,
+  3197,
+  2587,
+  2867,
+  3513,
+  3816,
+  3294,
+  3312,
+  3391,
+  4078,
+  3097,
+  1102,
+  852,
+  3546,
+  4041,
+  2792,
+  4211,
+  3986
+ ]
+}

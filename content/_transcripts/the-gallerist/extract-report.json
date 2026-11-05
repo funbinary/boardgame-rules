@@ -1,0 +1,31 @@
+{
+ "slug": "the-gallerist",
+ "pages": 20,
+ "total_chars": 66982,
+ "avg_chars_per_page": 3349,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  2082,
+  263,
+  4097,
+  3765,
+  4267,
+  3297,
+  2706,
+  2508,
+  2455,
+  2718,
+  2698,
+  2509,
+  3554,
+  3875,
+  3560,
+  4075,
+  6076,
+  5125,
+  3270,
+  4082
+ ]
+}

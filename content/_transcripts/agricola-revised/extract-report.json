@@ -1,0 +1,23 @@
+{
+ "slug": "agricola-revised",
+ "pages": 12,
+ "total_chars": 39062,
+ "avg_chars_per_page": 3255,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  972,
+  2362,
+  4716,
+  2176,
+  2569,
+  3566,
+  3477,
+  4034,
+  3662,
+  3828,
+  4576,
+  3124
+ ]
+}

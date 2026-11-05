@@ -1,0 +1,15 @@
+{
+ "slug": "crokinole",
+ "pages": 4,
+ "total_chars": 8211,
+ "avg_chars_per_page": 2052,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1498,
+  2474,
+  2610,
+  1629
+ ]
+}

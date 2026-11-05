@@ -1,0 +1,19 @@
+{
+ "slug": "quacks",
+ "pages": 8,
+ "total_chars": 21120,
+ "avg_chars_per_page": 2640,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  3241,
+  2419,
+  2691,
+  2530,
+  2270,
+  2835,
+  2639,
+  2495
+ ]
+}

@@ -1,68 +1,875 @@
 {
   "_readme": "站点游戏注册表——「本站收录哪些游戏」的单一事实源。消费方:tools/sync-sidebar.mjs(全站侧边栏 nav 重写)、tools/sync-index.mjs(首页 featured 数组与收录计数)、tools/add-bgg-chips-manual.mjs(评分 chip 页清单)、tools/assemble-*.mjs(经 tools/lib/site-games.mjs 取侧边栏)。字段:slug(唯一键,即 BGA id 或独立页文件名)=id;zh 中文名;en 展示用英文串(与首页 featured 一致,含来源后缀);players 人数;href 相对根目录路径;emoji 存在=进侧边栏(标签=emoji+空格+zh,sidebar 字段可覆盖标签全文);games 数组顺序=侧边栏顺序;featuredOrder=首页 featured 展示顺序;crossLinks=基础页扩展互链(marker 存在则跳过,anchor 为正则源串,注入串后拼接 $1)。改这里→跑 sync-sidebar/sync-index 即全站生效。",
   "games": [
-    { "slug": "7-wonders", "zh": "七大奇迹", "en": "7 Wonders", "players": "3-7", "href": "games/7-wonders.html", "emoji": "🏛️" },
-    { "slug": "brass-birmingham", "zh": "工业革命：伯明翰", "en": "Brass: Birmingham", "players": "2-4", "href": "games/brass-birmingham.html", "emoji": "🏭" },
-    { "slug": "vale-of-eternity", "zh": "永恒之谷", "en": "The Vale of Eternity", "players": "2-4", "href": "games/vale-of-eternity.html", "emoji": "✨" },
-    { "slug": "wingspan", "zh": "展翅翱翔", "en": "Wingspan", "players": "1-5", "href": "games/wingspan.html", "emoji": "🦜" },
-    { "slug": "pokemon-grove", "zh": "宝可梦林地探索", "en": "Pokemon Grove", "players": "1-5", "href": "games/pokemon-grove.html", "emoji": "🌳" },
-    { "slug": "puerto-rico", "zh": "波多黎各", "en": "Puerto Rico · 完整规则书", "players": "2-5", "href": "games/puerto-rico.html", "emoji": "⛵" },
-    { "slug": "barcelona", "zh": "巴塞罗那", "en": "Barcelona · 官方中文规则书", "players": "1-4", "href": "games/barcelona.html", "emoji": "🌸" },
-    { "slug": "dune-imperium", "zh": "沙丘：帝国", "en": "Dune: Imperium · 官方中文规则书", "players": "1-4", "href": "games/dune-imperium.html", "emoji": "🏜️" },
-    { "slug": "dune-imperium-uprising", "zh": "沙丘：帝国起义", "en": "Dune: Imperium – Uprising · 官方规则书全文翻译", "players": "1-4", "href": "games/dune-imperium-uprising.html", "emoji": "🪱" },
-    { "slug": "ascension", "zh": "创升纪元", "en": "Ascension · 中文版玩法全录", "players": "1-4", "href": "games/ascension.html", "emoji": "🃏" },
-    { "slug": "tulip-bubble", "zh": "郁金香泡沫", "en": "Tulip Bubble · 官方中文规则书", "players": "3-5", "href": "games/tulip-bubble.html", "emoji": "🌷" },
-    { "slug": "trajan", "zh": "图拉真", "en": "Trajan · 官方中文规则书", "players": "2-4", "href": "games/trajan.html", "emoji": "🦅" },
-    { "slug": "galileo-galilei", "zh": "伽利略：伽利莱", "en": "Galileo Galilei · 官方中文规则书", "players": "1-4", "href": "games/galileo-galilei.html", "emoji": "🔭" },
-    { "slug": "orloj", "zh": "奥洛伊：布拉格天文钟", "en": "Orloj: The Prague Astronomical Clock · 官方中文规则书", "players": "1-4", "href": "games/orloj.html", "emoji": "🕰️" },
-    { "slug": "food-chain-magnate", "zh": "快餐连锁大亨", "en": "Food Chain Magnate · 中文规则书全文转录", "players": "2-5", "href": "games/food-chain-magnate.html", "emoji": "🍔" },
-    { "slug": "clank-catacombs", "zh": "CLANK! 地下墓穴", "en": "Clank!: Catacombs · 官方中文规则书", "players": "2-4", "href": "games/clank-catacombs.html", "emoji": "🐉" },
-    { "slug": "clank-catacombs-underworld", "zh": "CLANK! 地下墓穴:地下世界", "en": "Clank! Catacombs: Underworld · 简中规则书全文转录(扩展)", "players": "2-4", "href": "games/clank-catacombs-underworld.html", "emoji": "💀" },
-    { "slug": "clank-adventuring-party", "zh": "CLANK! 冒险队", "en": "Clank!: Adventuring Party · 简中规则书全文转录(扩展)", "players": "2-6", "href": "games/clank-adventuring-party.html", "emoji": "🗡️" },
-    { "slug": "ark-nova-marine-worlds", "zh": "方舟动物园：海洋世界", "en": "Ark Nova: Marine Worlds · 扩展规则书全文转录", "players": "1-4", "href": "games/ark-nova-marine-worlds.html", "emoji": "🐙" },
-    { "slug": "arnak-expedition-leaders", "zh": "阿纳克遗迹:探险队长", "en": "Lost Ruins of Arnak: Expedition Leaders · 简中规则书全文转录(扩展)", "players": "1-4", "href": "games/arnak-expedition-leaders.html", "emoji": "🗿" },
-    { "slug": "speakeasy", "zh": "地下酒吧", "en": "Speakeasy · 中文规则书全文转录", "players": "1-4", "href": "games/speakeasy.html", "emoji": "🎷" },
-    { "slug": "power-grid", "zh": "电力公司", "en": "Power Grid · 中文规则书全文转录", "players": "2-6", "href": "games/power-grid.html", "emoji": "⚡" },
-    { "slug": "seti", "zh": "SETI：寻找外星人", "en": "SETI: Search for Extraterrestrial Intelligence", "players": "1-4", "href": "games/seti.html", "emoji": "🛰️" },
-    { "slug": "seti-space-agencies", "zh": "地外文明：太空机构", "en": "SETI: Space Agencies · 官方中文版扩展规则书全文转录", "players": "1-4", "href": "games/seti-space-agencies.html", "emoji": "🚀" },
-    { "slug": "white-castle", "zh": "姬路城", "en": "The White Castle · 官方中文规则书全文转录", "players": "1-4", "href": "games/white-castle.html", "emoji": "🏯" },
-    { "slug": "white-castle-matcha", "zh": "姬路城：茶道", "en": "The White Castle: Matcha · 扩展规则书全文翻译", "players": "1-4", "href": "games/white-castle-matcha.html", "emoji": "🍵" },
-    { "slug": "endeavor-deep-sea", "zh": "奋进号：深海", "en": "Endeavor: Deep Sea · 官方中文规则书全文转录", "players": "1-4", "href": "games/endeavor-deep-sea.html", "emoji": "🌊" },
-    { "slug": "druids-of-edora", "zh": "埃多拉的德鲁伊", "en": "The Druids of Edora · 中文规则书全文转录", "players": "2-4", "href": "games/druids-of-edora.html", "emoji": "🌲" },
-    { "slug": "grand-austria-hotel", "zh": "奥地利大饭店", "en": "Grand Austria Hotel · 中文规则书全文转录", "players": "2-4", "href": "games/grand-austria-hotel.html", "emoji": "🏨" },
-    { "slug": "the-message", "zh": "风声再临", "en": "The Message · 中文规则书全文转录", "players": "3-7", "href": "games/the-message.html", "emoji": "🕵️" },
-    { "slug": "gwt-new-zealand", "zh": "大西部开拓者:新西兰开拓史", "en": "Great Western Trail: New Zealand · 繁中规则书全文转录", "players": "1-4", "href": "games/gwt-new-zealand.html", "emoji": "🐑", "sidebar": "🐑 大西部开拓者:新西兰" },
-    { "slug": "fields-of-arle", "zh": "阿勒農場", "en": "Fields of Arle · 繁中规则书全文转录", "players": "1-2", "href": "games/fields-of-arle.html", "emoji": "🌾" },
-    { "slug": "gaiaproject-lost-fleet", "zh": "盖亚计划:失落的舰队", "en": "Gaia Project: The Lost Fleet · 官方中文扩展规则书全文转录", "players": "1-4", "href": "games/gaiaproject-lost-fleet.html", "emoji": "🌌" },
-    { "slug": "castlesofburgundy", "zh": "勃艮第城堡", "en": "The Castles of Burgundy: Special Edition · 官方中文规则书 · 可在线玩", "players": "1-4", "href": "games/bga/castlesofburgundy.html" },
-    { "slug": "agricola", "zh": "农场主", "en": "Agricola · 官方中文规则书", "players": "1-5", "href": "games/bga/agricola.html" },
-    { "slug": "hegemony", "zh": "领国者", "en": "Hegemony · 官方中文规则书", "players": "2-4", "href": "games/bga/hegemony.html" },
-    { "slug": "arnak", "zh": "阿纳克遗迹", "en": "Lost Ruins of Arnak · 官方中文规则书", "players": "1-4", "href": "games/bga/arnak.html" },
-    { "slug": "tickettoride", "zh": "铁路环游", "en": "Ticket to Ride · 官方中文规则书", "players": "2-5", "href": "games/bga/tickettoride.html" },
-    { "slug": "greatwesterntrail", "zh": "大西部之路", "en": "Great Western Trail 2E · 中文规则书", "players": "2-4", "href": "games/bga/greatwesterntrail.html" },
-    { "slug": "feastforodin", "zh": "奥丁的盛宴", "en": "A Feast for Odin · 繁中规则书转录", "players": "1-4", "href": "games/bga/feastforodin.html" },
-    { "slug": "terraformingmars", "zh": "重塑火星", "en": "Terraforming Mars · 繁中规则书转录", "players": "1-5", "href": "games/bga/terraformingmars.html" },
-    { "slug": "arknova", "zh": "方舟动物园", "en": "Ark Nova · 官方中文规则书", "players": "1-4", "href": "games/bga/arknova.html" },
-    { "slug": "ageofinnovation", "zh": "大创造时代", "en": "Age of Innovation · 非官方中文规则书", "players": "1-5", "href": "games/bga/ageofinnovation.html" },
-    { "slug": "maracaibo", "zh": "马拉开波", "en": "Maracaibo · 官方中文规则书", "players": "1-4", "href": "games/bga/maracaibo.html" },
-    { "slug": "catan", "zh": "卡坦岛", "en": "Catan · 官方中文规则书全文转录", "players": "3-4", "href": "games/bga/catan.html" },
-    { "slug": "wanderingtowers", "zh": "巫师飞塔", "en": "Wandering Towers · 官方中文规则书全文转录", "players": "1-6", "href": "games/bga/wanderingtowers.html" },
-    { "slug": "fromage", "zh": "奶酪", "en": "Fromage · 中文规则书全文转录", "players": "1-4", "href": "games/bga/fromage.html" },
-    { "slug": "andromedasedge", "zh": "仙女座边境", "en": "Andromeda's Edge · 官方中文规则书全文转录", "players": "2-4", "href": "games/bga/andromedasedge.html" },
-    { "slug": "gaiaproject", "zh": "盖亚计划", "en": "Gaia Project · 官方中文规则书全文转录(繁中)", "players": "1-4", "href": "games/bga/gaiaproject.html" },
-    { "slug": "spirit-island", "zh": "灵迹岛", "en": "Spirit Island · 官方英文规则书全文翻译", "players": "1-4", "href": "games/spirit-island.html", "emoji": "🏝️" }
+    {
+      "slug": "7-wonders",
+      "zh": "七大奇迹",
+      "en": "7 Wonders",
+      "players": "3-7",
+      "href": "games/7-wonders.html",
+      "emoji": "🏛️"
+    },
+    {
+      "slug": "brass-birmingham",
+      "zh": "工业革命：伯明翰",
+      "en": "Brass: Birmingham",
+      "players": "2-4",
+      "href": "games/brass-birmingham.html",
+      "emoji": "🏭"
+    },
+    {
+      "slug": "vale-of-eternity",
+      "zh": "永恒之谷",
+      "en": "The Vale of Eternity",
+      "players": "2-4",
+      "href": "games/vale-of-eternity.html",
+      "emoji": "✨"
+    },
+    {
+      "slug": "wingspan",
+      "zh": "展翅翱翔",
+      "en": "Wingspan",
+      "players": "1-5",
+      "href": "games/wingspan.html",
+      "emoji": "🦜"
+    },
+    {
+      "slug": "pokemon-grove",
+      "zh": "宝可梦林地探索",
+      "en": "Pokemon Grove",
+      "players": "1-5",
+      "href": "games/pokemon-grove.html",
+      "emoji": "🌳"
+    },
+    {
+      "slug": "puerto-rico",
+      "zh": "波多黎各",
+      "en": "Puerto Rico · 完整规则书",
+      "players": "2-5",
+      "href": "games/puerto-rico.html",
+      "emoji": "⛵"
+    },
+    {
+      "slug": "barcelona",
+      "zh": "巴塞罗那",
+      "en": "Barcelona · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/barcelona.html",
+      "emoji": "🌸"
+    },
+    {
+      "slug": "dune-imperium",
+      "zh": "沙丘：帝国",
+      "en": "Dune: Imperium · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/dune-imperium.html",
+      "emoji": "🏜️"
+    },
+    {
+      "slug": "dune-imperium-uprising",
+      "zh": "沙丘：帝国起义",
+      "en": "Dune: Imperium – Uprising · 官方规则书全文翻译",
+      "players": "1-4",
+      "href": "games/dune-imperium-uprising.html",
+      "emoji": "🪱"
+    },
+    {
+      "slug": "ascension",
+      "zh": "创升纪元",
+      "en": "Ascension · 中文版玩法全录",
+      "players": "1-4",
+      "href": "games/ascension.html",
+      "emoji": "🃏"
+    },
+    {
+      "slug": "tulip-bubble",
+      "zh": "郁金香泡沫",
+      "en": "Tulip Bubble · 官方中文规则书",
+      "players": "3-5",
+      "href": "games/tulip-bubble.html",
+      "emoji": "🌷"
+    },
+    {
+      "slug": "trajan",
+      "zh": "图拉真",
+      "en": "Trajan · 官方中文规则书",
+      "players": "2-4",
+      "href": "games/trajan.html",
+      "emoji": "🦅"
+    },
+    {
+      "slug": "galileo-galilei",
+      "zh": "伽利略：伽利莱",
+      "en": "Galileo Galilei · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/galileo-galilei.html",
+      "emoji": "🔭"
+    },
+    {
+      "slug": "orloj",
+      "zh": "奥洛伊：布拉格天文钟",
+      "en": "Orloj: The Prague Astronomical Clock · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/orloj.html",
+      "emoji": "🕰️"
+    },
+    {
+      "slug": "food-chain-magnate",
+      "zh": "快餐连锁大亨",
+      "en": "Food Chain Magnate · 中文规则书全文转录",
+      "players": "2-5",
+      "href": "games/food-chain-magnate.html",
+      "emoji": "🍔"
+    },
+    {
+      "slug": "clank-catacombs",
+      "zh": "CLANK! 地下墓穴",
+      "en": "Clank!: Catacombs · 官方中文规则书",
+      "players": "2-4",
+      "href": "games/clank-catacombs.html",
+      "emoji": "🐉"
+    },
+    {
+      "slug": "clank-catacombs-underworld",
+      "zh": "CLANK! 地下墓穴:地下世界",
+      "en": "Clank! Catacombs: Underworld · 简中规则书全文转录(扩展)",
+      "players": "2-4",
+      "href": "games/clank-catacombs-underworld.html",
+      "emoji": "💀"
+    },
+    {
+      "slug": "clank-adventuring-party",
+      "zh": "CLANK! 冒险队",
+      "en": "Clank!: Adventuring Party · 简中规则书全文转录(扩展)",
+      "players": "2-6",
+      "href": "games/clank-adventuring-party.html",
+      "emoji": "🗡️"
+    },
+    {
+      "slug": "ark-nova-marine-worlds",
+      "zh": "方舟动物园：海洋世界",
+      "en": "Ark Nova: Marine Worlds · 扩展规则书全文转录",
+      "players": "1-4",
+      "href": "games/ark-nova-marine-worlds.html",
+      "emoji": "🐙"
+    },
+    {
+      "slug": "arnak-expedition-leaders",
+      "zh": "阿纳克遗迹:探险队长",
+      "en": "Lost Ruins of Arnak: Expedition Leaders · 简中规则书全文转录(扩展)",
+      "players": "1-4",
+      "href": "games/arnak-expedition-leaders.html",
+      "emoji": "🗿"
+    },
+    {
+      "slug": "speakeasy",
+      "zh": "地下酒吧",
+      "en": "Speakeasy · 中文规则书全文转录",
+      "players": "1-4",
+      "href": "games/speakeasy.html",
+      "emoji": "🎷"
+    },
+    {
+      "slug": "power-grid",
+      "zh": "电力公司",
+      "en": "Power Grid · 中文规则书全文转录",
+      "players": "2-6",
+      "href": "games/power-grid.html",
+      "emoji": "⚡"
+    },
+    {
+      "slug": "seti",
+      "zh": "SETI：寻找外星人",
+      "en": "SETI: Search for Extraterrestrial Intelligence",
+      "players": "1-4",
+      "href": "games/seti.html",
+      "emoji": "🛰️"
+    },
+    {
+      "slug": "seti-space-agencies",
+      "zh": "地外文明：太空机构",
+      "en": "SETI: Space Agencies · 官方中文版扩展规则书全文转录",
+      "players": "1-4",
+      "href": "games/seti-space-agencies.html",
+      "emoji": "🚀"
+    },
+    {
+      "slug": "white-castle",
+      "zh": "姬路城",
+      "en": "The White Castle · 官方中文规则书全文转录",
+      "players": "1-4",
+      "href": "games/white-castle.html",
+      "emoji": "🏯"
+    },
+    {
+      "slug": "white-castle-matcha",
+      "zh": "姬路城：茶道",
+      "en": "The White Castle: Matcha · 扩展规则书全文翻译",
+      "players": "1-4",
+      "href": "games/white-castle-matcha.html",
+      "emoji": "🍵"
+    },
+    {
+      "slug": "endeavor-deep-sea",
+      "zh": "奋进号：深海",
+      "en": "Endeavor: Deep Sea · 官方中文规则书全文转录",
+      "players": "1-4",
+      "href": "games/endeavor-deep-sea.html",
+      "emoji": "🌊"
+    },
+    {
+      "slug": "druids-of-edora",
+      "zh": "埃多拉的德鲁伊",
+      "en": "The Druids of Edora · 中文规则书全文转录",
+      "players": "2-4",
+      "href": "games/druids-of-edora.html",
+      "emoji": "🌲"
+    },
+    {
+      "slug": "grand-austria-hotel",
+      "zh": "奥地利大饭店",
+      "en": "Grand Austria Hotel · 中文规则书全文转录",
+      "players": "2-4",
+      "href": "games/grand-austria-hotel.html",
+      "emoji": "🏨"
+    },
+    {
+      "slug": "the-message",
+      "zh": "风声再临",
+      "en": "The Message · 中文规则书全文转录",
+      "players": "3-7",
+      "href": "games/the-message.html",
+      "emoji": "🕵️"
+    },
+    {
+      "slug": "gwt-new-zealand",
+      "zh": "大西部开拓者:新西兰开拓史",
+      "en": "Great Western Trail: New Zealand · 繁中规则书全文转录",
+      "players": "1-4",
+      "href": "games/gwt-new-zealand.html",
+      "emoji": "🐑",
+      "sidebar": "🐑 大西部开拓者:新西兰"
+    },
+    {
+      "slug": "fields-of-arle",
+      "zh": "阿勒農場",
+      "en": "Fields of Arle · 繁中规则书全文转录",
+      "players": "1-2",
+      "href": "games/fields-of-arle.html",
+      "emoji": "🌾"
+    },
+    {
+      "slug": "gaiaproject-lost-fleet",
+      "zh": "盖亚计划:失落的舰队",
+      "en": "Gaia Project: The Lost Fleet · 官方中文扩展规则书全文转录",
+      "players": "1-4",
+      "href": "games/gaiaproject-lost-fleet.html",
+      "emoji": "🌌"
+    },
+    {
+      "slug": "castlesofburgundy",
+      "zh": "勃艮第城堡",
+      "en": "The Castles of Burgundy: Special Edition · 官方中文规则书 · 可在线玩",
+      "players": "1-4",
+      "href": "games/bga/castlesofburgundy.html"
+    },
+    {
+      "slug": "agricola",
+      "zh": "农场主",
+      "en": "Agricola · 官方中文规则书",
+      "players": "1-5",
+      "href": "games/bga/agricola.html"
+    },
+    {
+      "slug": "hegemony",
+      "zh": "领国者",
+      "en": "Hegemony · 官方中文规则书",
+      "players": "2-4",
+      "href": "games/bga/hegemony.html"
+    },
+    {
+      "slug": "arnak",
+      "zh": "阿纳克遗迹",
+      "en": "Lost Ruins of Arnak · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/bga/arnak.html"
+    },
+    {
+      "slug": "tickettoride",
+      "zh": "铁路环游",
+      "en": "Ticket to Ride · 官方中文规则书",
+      "players": "2-5",
+      "href": "games/bga/tickettoride.html"
+    },
+    {
+      "slug": "greatwesterntrail",
+      "zh": "大西部之路",
+      "en": "Great Western Trail 2E · 中文规则书",
+      "players": "2-4",
+      "href": "games/bga/greatwesterntrail.html"
+    },
+    {
+      "slug": "feastforodin",
+      "zh": "奥丁的盛宴",
+      "en": "A Feast for Odin · 繁中规则书转录",
+      "players": "1-4",
+      "href": "games/bga/feastforodin.html"
+    },
+    {
+      "slug": "terraformingmars",
+      "zh": "重塑火星",
+      "en": "Terraforming Mars · 繁中规则书转录",
+      "players": "1-5",
+      "href": "games/bga/terraformingmars.html"
+    },
+    {
+      "slug": "arknova",
+      "zh": "方舟动物园",
+      "en": "Ark Nova · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/bga/arknova.html"
+    },
+    {
+      "slug": "ageofinnovation",
+      "zh": "大创造时代",
+      "en": "Age of Innovation · 非官方中文规则书",
+      "players": "1-5",
+      "href": "games/bga/ageofinnovation.html"
+    },
+    {
+      "slug": "maracaibo",
+      "zh": "马拉开波",
+      "en": "Maracaibo · 官方中文规则书",
+      "players": "1-4",
+      "href": "games/bga/maracaibo.html"
+    },
+    {
+      "slug": "catan",
+      "zh": "卡坦岛",
+      "en": "Catan · 官方中文规则书全文转录",
+      "players": "3-4",
+      "href": "games/bga/catan.html"
+    },
+    {
+      "slug": "wanderingtowers",
+      "zh": "巫师飞塔",
+      "en": "Wandering Towers · 官方中文规则书全文转录",
+      "players": "1-6",
+      "href": "games/bga/wanderingtowers.html"
+    },
+    {
+      "slug": "fromage",
+      "zh": "奶酪",
+      "en": "Fromage · 中文规则书全文转录",
+      "players": "1-4",
+      "href": "games/bga/fromage.html"
+    },
+    {
+      "slug": "andromedasedge",
+      "zh": "仙女座边境",
+      "en": "Andromeda's Edge · 官方中文规则书全文转录",
+      "players": "2-4",
+      "href": "games/bga/andromedasedge.html"
+    },
+    {
+      "slug": "gaiaproject",
+      "zh": "盖亚计划",
+      "en": "Gaia Project · 官方中文规则书全文转录(繁中)",
+      "players": "1-4",
+      "href": "games/bga/gaiaproject.html"
+    },
+    {
+      "slug": "spirit-island",
+      "zh": "灵迹岛",
+      "en": "Spirit Island · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/spirit-island.html",
+      "emoji": "🏝️"
+    },
+    {
+      "slug": "agricola-revised",
+      "zh": "农场主（修订版）",
+      "en": "Agricola (Revised Edition) · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/agricola-revised.html",
+      "emoji": "🌾"
+    },
+    {
+      "slug": "final-girl",
+      "zh": "最终女孩",
+      "en": "Final Girl · 官方英文规则书全文翻译",
+      "players": "1",
+      "href": "games/final-girl.html",
+      "emoji": "🎬"
+    },
+    {
+      "slug": "le-havre",
+      "zh": "勒阿弗尔",
+      "en": "Le Havre · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/le-havre.html",
+      "emoji": "⚓"
+    },
+    {
+      "slug": "lotr-duel-for-middle-earth",
+      "zh": "魔戒：中土对决",
+      "en": "The Lord of the Rings: Duel for Middle-earth · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/lotr-duel-for-middle-earth.html",
+      "emoji": "🌋"
+    },
+    {
+      "slug": "marvel-champions",
+      "zh": "漫威群英传：卡牌版",
+      "en": "Marvel Champions: The Card Game · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/marvel-champions.html",
+      "emoji": "🦸"
+    },
+    {
+      "slug": "nemesis",
+      "zh": "复仇女神号",
+      "en": "Nemesis · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/nemesis.html",
+      "emoji": "👽"
+    },
+    {
+      "slug": "pandemic-legacy-season-0",
+      "zh": "瘟疫危机：传承·第0季",
+      "en": "Pandemic Legacy: Season 0 · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/pandemic-legacy-season-0.html",
+      "emoji": "🕵️"
+    },
+    {
+      "slug": "pandemic-legacy-season-1",
+      "zh": "瘟疫危机：传承·第一季",
+      "en": "Pandemic Legacy: Season 1 · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/pandemic-legacy-season-1.html",
+      "emoji": "🦠"
+    },
+    {
+      "slug": "android-netrunner",
+      "zh": "安卓：潜袭",
+      "en": "Android: Netrunner · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/android-netrunner.html",
+      "emoji": "🤖"
+    },
+    {
+      "slug": "arkham-horror-lcg",
+      "zh": "诡镇奇谈：卡牌版",
+      "en": "Arkham Horror: The Card Game · 官方英文规则书全文翻译",
+      "players": "1-2",
+      "href": "games/arkham-horror-lcg.html",
+      "emoji": "🔍"
+    },
+    {
+      "slug": "bomb-busters",
+      "zh": "拆弹小队",
+      "en": "Bomb Busters · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/bomb-busters.html",
+      "emoji": "💣"
+    },
+    {
+      "slug": "cascadia",
+      "zh": "卡斯卡迪亚",
+      "en": "Cascadia · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/cascadia.html",
+      "emoji": "🌲"
+    },
+    {
+      "slug": "everdell",
+      "zh": "仙境幽谷",
+      "en": "Everdell · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/everdell.html",
+      "emoji": "🌰"
+    },
+    {
+      "slug": "five-tribes",
+      "zh": "五大部落",
+      "en": "Five Tribes: The Djinns of Naqala · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/five-tribes.html",
+      "emoji": "🏜️"
+    },
+    {
+      "slug": "kanban-ev",
+      "zh": "看板：电动汽车版",
+      "en": "Kanban EV · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/kanban-ev.html",
+      "emoji": "🚗"
+    },
+    {
+      "slug": "lisboa",
+      "zh": "里斯本",
+      "en": "Lisboa · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/lisboa.html",
+      "emoji": "🏛️"
+    },
+    {
+      "slug": "mage-knight",
+      "zh": "魔骑士",
+      "en": "Mage Knight Board Game · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/mage-knight.html",
+      "emoji": "🧙"
+    },
+    {
+      "slug": "mansions-of-madness-2e",
+      "zh": "疯狂诡宅（第二版）",
+      "en": "Mansions of Madness: Second Edition · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/mansions-of-madness-2e.html",
+      "emoji": "🏚️"
+    },
+    {
+      "slug": "paladins-of-the-west-kingdom",
+      "zh": "西王国的圣骑士",
+      "en": "Paladins of the West Kingdom · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/paladins-of-the-west-kingdom.html",
+      "emoji": "🛡️"
+    },
+    {
+      "slug": "pandemic-legacy-season-2",
+      "zh": "瘟疫危机：传承·第二季",
+      "en": "Pandemic Legacy: Season 2 · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/pandemic-legacy-season-2.html",
+      "emoji": "🧭"
+    },
+    {
+      "slug": "quacks",
+      "zh": "奎德林堡的江湖郎中",
+      "en": "Quacks · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/quacks.html",
+      "emoji": "🧪"
+    },
+    {
+      "slug": "root",
+      "zh": "茂林源记",
+      "en": "Root · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/root.html",
+      "emoji": "🦊"
+    },
+    {
+      "slug": "slay-the-spire-bg",
+      "zh": "杀戮尖塔：版图游戏",
+      "en": "Slay the Spire: The Board Game · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/slay-the-spire-bg.html",
+      "emoji": "🗡️"
+    },
+    {
+      "slug": "star-wars-imperial-assault",
+      "zh": "星球大战：帝国突击",
+      "en": "Star Wars: Imperial Assault · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/star-wars-imperial-assault.html",
+      "emoji": "🎯"
+    },
+    {
+      "slug": "star-wars-rebellion",
+      "zh": "星球大战：叛乱",
+      "en": "Star Wars: Rebellion · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/star-wars-rebellion.html",
+      "emoji": "🚀"
+    },
+    {
+      "slug": "the-crew-planet-nine",
+      "zh": "星际探险队：第九行星",
+      "en": "The Crew: The Quest for Planet Nine · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/the-crew-planet-nine.html",
+      "emoji": "🪐"
+    },
+    {
+      "slug": "the-gallerist",
+      "zh": "画商",
+      "en": "The Gallerist · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/the-gallerist.html",
+      "emoji": "🖼️"
+    },
+    {
+      "slug": "ticket-to-ride-legacy",
+      "zh": "车票之旅：传承·西部传奇",
+      "en": "Ticket to Ride Legacy: Legends of the West · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/ticket-to-ride-legacy.html",
+      "emoji": "🚂"
+    },
+    {
+      "slug": "tzolkin",
+      "zh": "卓尔金历：玛雅历法",
+      "en": "Tzolk'in: The Mayan Calendar · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/tzolkin.html",
+      "emoji": "🌀"
+    },
+    {
+      "slug": "underwater-cities",
+      "zh": "水下城市",
+      "en": "Underwater Cities · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/underwater-cities.html",
+      "emoji": "🌊"
+    },
+    {
+      "slug": "blood-on-the-clocktower",
+      "zh": "血染钟楼",
+      "en": "Blood on the Clocktower · 官方英文规则书全文翻译",
+      "players": "5-15+",
+      "href": "games/blood-on-the-clocktower.html",
+      "emoji": "🔔"
+    },
+    {
+      "slug": "oathsworn",
+      "zh": "守誓者：深入密林",
+      "en": "Oathsworn: Into the Deepwood · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/oathsworn.html",
+      "emoji": "🐺"
+    },
+    {
+      "slug": "cthulhu-death-may-die",
+      "zh": "克苏鲁：死亡可能会死",
+      "en": "Cthulhu: Death May Die · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/cthulhu-death-may-die.html",
+      "emoji": "🐙"
+    },
+    {
+      "slug": "too-many-bones",
+      "zh": "太多骨头",
+      "en": "Too Many Bones · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/too-many-bones.html",
+      "emoji": "💀"
+    },
+    {
+      "slug": "crokinole",
+      "zh": "弹指棋",
+      "en": "Crokinole · 官方英文规则书全文翻译",
+      "players": "2 / 4",
+      "href": "games/crokinole.html",
+      "emoji": "🎯"
+    },
+    {
+      "slug": "wingspan-asia",
+      "zh": "展翅翱翔：亚洲",
+      "en": "Wingspan Asia · 官方英文规则书全文翻译",
+      "players": "1-2（混合至 6-7）",
+      "href": "games/wingspan-asia.html",
+      "emoji": "🐦"
+    },
+    {
+      "slug": "viticulture",
+      "zh": "葡萄酒庄园（核心版）",
+      "en": "Viticulture Essential Edition · 官方英文规则书全文翻译",
+      "players": "1-6",
+      "href": "games/viticulture.html",
+      "emoji": "🍇"
+    },
+    {
+      "slug": "twilight-struggle",
+      "zh": "冷战热斗",
+      "en": "Twilight Struggle · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/twilight-struggle.html",
+      "emoji": "🌍"
+    },
+    {
+      "slug": "on-mars",
+      "zh": "火星之上",
+      "en": "On Mars · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/on-mars.html",
+      "emoji": "🔴"
+    },
+    {
+      "slug": "war-of-the-ring",
+      "zh": "魔戒圣战",
+      "en": "War of the Ring: Second Edition · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/war-of-the-ring.html",
+      "emoji": "💍"
+    },
+    {
+      "slug": "mechs-vs-minions",
+      "zh": "机甲大战小兵",
+      "en": "Mechs vs. Minions · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/mechs-vs-minions.html",
+      "emoji": "⚙️"
+    },
+    {
+      "slug": "clank-legacy",
+      "zh": "咔嚓！传承：收购公司",
+      "en": "Clank! Legacy: Acquisitions Incorporated · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/clank-legacy.html",
+      "emoji": "🐉"
+    },
+    {
+      "slug": "eclipse-second-dawn",
+      "zh": "星蚀：银河二次黎明",
+      "en": "Eclipse: Second Dawn for the Galaxy · 官方英文规则书全文翻译",
+      "players": "2-6",
+      "href": "games/eclipse-second-dawn.html",
+      "emoji": "🌌"
+    },
+    {
+      "slug": "voidfall",
+      "zh": "虚空坠落",
+      "en": "Voidfall · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/voidfall.html",
+      "emoji": "🌑"
+    },
+    {
+      "slug": "sleeping-gods",
+      "zh": "沉睡之神",
+      "en": "Sleeping Gods · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/sleeping-gods.html",
+      "emoji": "🛶"
+    },
+    {
+      "slug": "gloomhaven",
+      "zh": "幽港迷城",
+      "en": "Gloomhaven · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/gloomhaven.html",
+      "emoji": "⚔️"
+    },
+    {
+      "slug": "gloomhaven-jaws-of-the-lion",
+      "zh": "幽港迷城：雄狮之颚",
+      "en": "Gloomhaven: Jaws of the Lion · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/gloomhaven-jaws-of-the-lion.html",
+      "emoji": "🦁"
+    },
+    {
+      "slug": "frosthaven",
+      "zh": "寒霜迷城",
+      "en": "Frosthaven · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/frosthaven.html",
+      "emoji": "❄️"
+    }
   ],
   "featuredOrder": [
-    "7-wonders", "brass-birmingham", "castlesofburgundy", "vale-of-eternity", "pokemon-grove",
-    "wingspan", "puerto-rico", "agricola", "hegemony", "arnak",
-    "barcelona", "dune-imperium", "dune-imperium-uprising", "ascension", "trajan",
-    "tulip-bubble", "galileo-galilei", "tickettoride", "greatwesterntrail", "feastforodin",
-    "orloj", "terraformingmars", "food-chain-magnate", "clank-catacombs", "arknova",
-    "ark-nova-marine-worlds", "ageofinnovation", "speakeasy", "power-grid", "seti",
-    "seti-space-agencies", "maracaibo", "endeavor-deep-sea", "catan", "druids-of-edora",
-    "wanderingtowers", "grand-austria-hotel", "fields-of-arle", "fromage", "the-message",
-    "gwt-new-zealand", "arnak-expedition-leaders", "clank-catacombs-underworld", "clank-adventuring-party", "white-castle", "white-castle-matcha",
-    "andromedasedge", "gaiaproject", "gaiaproject-lost-fleet", "spirit-island"
+    "7-wonders",
+    "brass-birmingham",
+    "castlesofburgundy",
+    "vale-of-eternity",
+    "pokemon-grove",
+    "wingspan",
+    "puerto-rico",
+    "agricola",
+    "hegemony",
+    "arnak",
+    "barcelona",
+    "dune-imperium",
+    "dune-imperium-uprising",
+    "ascension",
+    "trajan",
+    "tulip-bubble",
+    "galileo-galilei",
+    "tickettoride",
+    "greatwesterntrail",
+    "feastforodin",
+    "orloj",
+    "terraformingmars",
+    "food-chain-magnate",
+    "clank-catacombs",
+    "arknova",
+    "ark-nova-marine-worlds",
+    "ageofinnovation",
+    "speakeasy",
+    "power-grid",
+    "seti",
+    "seti-space-agencies",
+    "maracaibo",
+    "endeavor-deep-sea",
+    "catan",
+    "druids-of-edora",
+    "wanderingtowers",
+    "grand-austria-hotel",
+    "fields-of-arle",
+    "fromage",
+    "the-message",
+    "gwt-new-zealand",
+    "arnak-expedition-leaders",
+    "clank-catacombs-underworld",
+    "clank-adventuring-party",
+    "white-castle",
+    "white-castle-matcha",
+    "andromedasedge",
+    "gaiaproject",
+    "gaiaproject-lost-fleet",
+    "spirit-island",
+    "agricola-revised",
+    "final-girl",
+    "le-havre",
+    "lotr-duel-for-middle-earth",
+    "marvel-champions",
+    "nemesis",
+    "pandemic-legacy-season-0",
+    "pandemic-legacy-season-1",
+    "android-netrunner",
+    "arkham-horror-lcg",
+    "bomb-busters",
+    "cascadia",
+    "everdell",
+    "five-tribes",
+    "kanban-ev",
+    "lisboa",
+    "mage-knight",
+    "mansions-of-madness-2e",
+    "paladins-of-the-west-kingdom",
+    "pandemic-legacy-season-2",
+    "quacks",
+    "root",
+    "slay-the-spire-bg",
+    "star-wars-imperial-assault",
+    "star-wars-rebellion",
+    "the-crew-planet-nine",
+    "the-gallerist",
+    "ticket-to-ride-legacy",
+    "tzolkin",
+    "underwater-cities",
+    "blood-on-the-clocktower",
+    "oathsworn",
+    "cthulhu-death-may-die",
+    "too-many-bones",
+    "crokinole",
+    "wingspan-asia",
+    "viticulture",
+    "twilight-struggle",
+    "on-mars",
+    "war-of-the-ring",
+    "mechs-vs-minions",
+    "clank-legacy",
+    "eclipse-second-dawn",
+    "voidfall",
+    "sleeping-gods",
+    "gloomhaven",
+    "gloomhaven-jaws-of-the-lion",
+    "frosthaven"
   ],
   "crossLinks": [
     {

@@ -114,26 +114,46 @@ if (fs.existsSync(boardPath)) {
   }
   // 本站规则页：games/bga/<slug>.html（含已下架）与 games/<slug>.html（手工页）
   const site = new Map(); // norm -> href
+  const siteByFile = new Map(); // 文件名 slug -> href（供 BGG id 反查）
   for (const f of fs.readdirSync(path.join(ROOT, "games", "bga"))) {
     if (!f.endsWith(".html")) continue;
     const slug = f.slice(0, -5);
     const k = norm(slug);
     if (k && !site.has(k)) site.set(k, "games/bga/" + slug + ".html");
+    siteByFile.set(slug, "games/bga/" + slug + ".html");
   }
   for (const f of fs.readdirSync(path.join(ROOT, "games"))) {
     if (!f.endsWith(".html")) continue;
     const slug = f.slice(0, -5);
     const k = norm(slug);
     if (k && !site.has(k)) site.set(k, "games/" + slug + ".html");
+    if (!siteByFile.has(slug)) siteByFile.set(slug, "games/" + slug + ".html");
+  }
+  // site-games.json 的 en 字段（剥「 · 官方中文规则书」类后缀）作补充键：
+  // slug 缩写页（seti / gwt-new-zealand）的游戏全名关联
+  const sg = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "site-games.json"), "utf8"));
+  for (const g of (sg.games || [])) {
+    if (!g.href) continue;
+    const en = String(g.en || "").split(" · ")[0].trim();
+    const k = norm(en);
+    if (k && !site.has(k)) site.set(k, g.href);
   }
   // BGG id（按标题，兜底 live 匹配）
   const bggIdByTitle = new Map();
+  // BGG id -> 本站页：results.jsonl 的 k(slug) 对应页面文件存在且带 i(bgg id) 时按 id 关联
+  // （slug 缩写与游戏全名 norm 对不上时的兜底，如 seti / gwt-new-zealand / arnak）
+  const siteById = new Map();
   for (const line of fs.readFileSync(path.join(ROOT, "_bgg", "results.jsonl"), "utf8").split("\n")) {
     if (!line.trim()) continue;
     const r = JSON.parse(line);
     if (r.i && (r.title || r.s)) {
       const t = norm(r.title || r.s);
       if (t && !bggIdByTitle.has(t)) bggIdByTitle.set(t, r.i);
+    }
+    const slug = r.k || r.s;
+    if (r.i && slug) {
+      const href = siteByFile.get(slug);
+      if (href && !siteById.has(String(r.i))) siteById.set(String(r.i), href);
     }
   }
 
@@ -167,12 +187,16 @@ if (fs.existsSync(boardPath)) {
   for (const r of full) {
     const k = norm(r.n);
     const lv = live.get(k) || null;
-    const href = site.get(k) || null;
+    const bggId = (lv && lv.bggId) || bggIdByTitle.get(k) || (r.fillId ? String(r.fillId) : null);
+    const href = site.get(k)
+      || (bggId ? siteById.get(String(bggId)) : null)
+      || (lv ? siteByFile.get(lv.slug) : null) // BGA 在架且 games/bga/<slug>.html 存在
+      || null;
     const row = { r: r.r, n: r.n, y: r.y, g: r.g, a: r.a, v: r.v };
     if (r.inj) {
       row.j = 1; // 注入行（browse 缺槽，用本站既有抓取数据补；显示名优先 BGA 官方英文名）
       if (lv && lv.en) row.n = lv.en;
-      else row.n = String(r.n).replace(/-/g, " ").replace(/([a-z])/g, (m, c) => c.toUpperCase());
+      else row.n = String(r.n).replace(/-/g, " ").replace(/([a-z])/g, (m, c) => c.toUpperCase());
     }
     if (lv) {
       row.st = lv.status === "beta" ? "b" : "p";
@@ -181,7 +205,6 @@ if (fs.existsSync(boardPath)) {
       row.st = "o"; // 曾上架/已下架（本站有规则页）
     }
     if (href) row.p = href;
-    const bggId = (lv && lv.bggId) || bggIdByTitle.get(k) || (r.fillId ? String(r.fillId) : null);
     if (bggId) row.b = parseInt(bggId, 10);
     outRows.push(row);
   }

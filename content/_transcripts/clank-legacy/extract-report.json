@@ -1,0 +1,27 @@
+{
+ "slug": "clank-legacy",
+ "pages": 16,
+ "total_chars": 43560,
+ "avg_chars_per_page": 2722,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  2976,
+  1620,
+  3098,
+  4382,
+  4388,
+  2141,
+  738,
+  3073,
+  4152,
+  2025,
+  2928,
+  2847,
+  3282,
+  2563,
+  1383,
+  1964
+ ]
+}

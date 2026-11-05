@@ -1,0 +1,30 @@
+{
+ "slug": "final-girl",
+ "pages": 19,
+ "total_chars": 72779,
+ "avg_chars_per_page": 3830,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  8,
+  4427,
+  3068,
+  2600,
+  4961,
+  2224,
+  3124,
+  4245,
+  3334,
+  4137,
+  3881,
+  4060,
+  3450,
+  3813,
+  4479,
+  4487,
+  4112,
+  11048,
+  1321
+ ]
+}

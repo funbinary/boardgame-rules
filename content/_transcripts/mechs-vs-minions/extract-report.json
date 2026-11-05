@@ -1,0 +1,27 @@
+{
+ "slug": "mechs-vs-minions",
+ "pages": 16,
+ "total_chars": 41569,
+ "avg_chars_per_page": 2598,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  0,
+  6512,
+  2938,
+  3148,
+  2989,
+  2848,
+  3329,
+  2533,
+  2522,
+  2370,
+  3024,
+  3110,
+  3276,
+  2915,
+  55
+ ]
+}
