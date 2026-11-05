@@ -49,7 +49,8 @@
     { "slug": "wanderingtowers", "zh": "巫师飞塔", "en": "Wandering Towers · 官方中文规则书全文转录", "players": "1-6", "href": "games/bga/wanderingtowers.html" },
     { "slug": "fromage", "zh": "奶酪", "en": "Fromage · 中文规则书全文转录", "players": "1-4", "href": "games/bga/fromage.html" },
     { "slug": "andromedasedge", "zh": "仙女座边境", "en": "Andromeda's Edge · 官方中文规则书全文转录", "players": "2-4", "href": "games/bga/andromedasedge.html" },
-    { "slug": "gaiaproject", "zh": "盖亚计划", "en": "Gaia Project · 官方中文规则书全文转录(繁中)", "players": "1-4", "href": "games/bga/gaiaproject.html" }
+    { "slug": "gaiaproject", "zh": "盖亚计划", "en": "Gaia Project · 官方中文规则书全文转录(繁中)", "players": "1-4", "href": "games/bga/gaiaproject.html" },
+    { "slug": "spirit-island", "zh": "灵迹岛", "en": "Spirit Island · 官方英文规则书全文翻译", "players": "1-4", "href": "games/spirit-island.html", "emoji": "🏝️" }
   ],
   "featuredOrder": [
     "7-wonders", "brass-birmingham", "castlesofburgundy", "vale-of-eternity", "pokemon-grove",
@@ -61,7 +62,7 @@
     "seti-space-agencies", "maracaibo", "endeavor-deep-sea", "catan", "druids-of-edora",
     "wanderingtowers", "grand-austria-hotel", "fields-of-arle", "fromage", "the-message",
     "gwt-new-zealand", "arnak-expedition-leaders", "clank-catacombs-underworld", "clank-adventuring-party", "white-castle", "white-castle-matcha",
-    "andromedasedge", "gaiaproject", "gaiaproject-lost-fleet"
+    "andromedasedge", "gaiaproject", "gaiaproject-lost-fleet", "spirit-island"
   ],
   "crossLinks": [
     {
