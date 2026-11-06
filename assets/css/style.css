@@ -65,6 +65,7 @@ body[data-theme="white-castle"] { --accent: #1e3a8a; --accent-strong: #172e6b; -
 body[data-theme="matcha"] { --accent: #5e8c3e; --accent-strong: #4a7230; --accent-soft: rgba(94, 140, 62, 0.10); --accent-border: rgba(94, 140, 62, 0.35); }
 body[data-theme="gaialost"] { --accent: #6d28d9; --accent-strong: #5b21b6; --accent-soft: rgba(109, 40, 217, 0.10); --accent-border: rgba(109, 40, 217, 0.35); }
 body[data-theme="spiritisland"] { --accent: #16766b; --accent-strong: #0f5c53; --accent-soft: rgba(22, 118, 107, 0.10); --accent-border: rgba(22, 118, 107, 0.35); }
+body[data-theme="harmonies"] { --accent: #c15f1c; --accent-strong: #9c4c14; --accent-soft: rgba(193, 95, 28, 0.10); --accent-border: rgba(193, 95, 28, 0.35); }
 
 /* ---------- BGA wiki 内容适配 ---------- */
 .content .mw-parser-output { font-size: 0.98rem; }

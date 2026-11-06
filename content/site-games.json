@@ -387,6 +387,14 @@
       "emoji": "🏝️"
     },
     {
+      "slug": "harmonies",
+      "zh": "自然和弦",
+      "en": "Harmonies · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/harmonies.html",
+      "emoji": "🦁"
+    },
+    {
       "slug": "agricola-revised",
       "zh": "农场主（修订版）",
       "en": "Agricola (Revised Edition) · 官方英文规则书全文翻译",
@@ -822,6 +830,7 @@
     "gaiaproject",
     "gaiaproject-lost-fleet",
     "spirit-island",
+    "harmonies",
     "agricola-revised",
     "final-girl",
     "le-havre",

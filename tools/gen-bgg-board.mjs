@@ -112,22 +112,23 @@ if (fs.existsSync(boardPath)) {
       if (k && !live.has(k)) live.set(k, e);
     }
   }
-  // 本站规则页：games/bga/<slug>.html（含已下架）与 games/<slug>.html（手工页）
+  // 本站规则页：games/<slug>.html（精选独立页,全文转录/翻译）与 games/bga/<slug>.html（wiki 机翻页）。
+  // 同名两存时独立页优先（wingspan / tzolkin / harmonies 等,精选全文规则书优于 BGA wiki 机翻）。
   const site = new Map(); // norm -> href
   const siteByFile = new Map(); // 文件名 slug -> href（供 BGG id 反查）
-  for (const f of fs.readdirSync(path.join(ROOT, "games", "bga"))) {
-    if (!f.endsWith(".html")) continue;
-    const slug = f.slice(0, -5);
-    const k = norm(slug);
-    if (k && !site.has(k)) site.set(k, "games/bga/" + slug + ".html");
-    siteByFile.set(slug, "games/bga/" + slug + ".html");
-  }
   for (const f of fs.readdirSync(path.join(ROOT, "games"))) {
     if (!f.endsWith(".html")) continue;
     const slug = f.slice(0, -5);
     const k = norm(slug);
     if (k && !site.has(k)) site.set(k, "games/" + slug + ".html");
-    if (!siteByFile.has(slug)) siteByFile.set(slug, "games/" + slug + ".html");
+    siteByFile.set(slug, "games/" + slug + ".html");
+  }
+  for (const f of fs.readdirSync(path.join(ROOT, "games", "bga"))) {
+    if (!f.endsWith(".html")) continue;
+    const slug = f.slice(0, -5);
+    const k = norm(slug);
+    if (k && !site.has(k)) site.set(k, "games/bga/" + slug + ".html");
+    if (!siteByFile.has(slug)) siteByFile.set(slug, "games/bga/" + slug + ".html");
   }
   // site-games.json 的 en 字段（剥「 · 官方中文规则书」类后缀）作补充键：
   // slug 缩写页（seti / gwt-new-zealand）的游戏全名关联
