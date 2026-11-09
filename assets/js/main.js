@@ -56,8 +56,16 @@
     var article = document.querySelector(".content article");
     if (!tocList || !article) return;
 
-    var headings = article.querySelectorAll("h2, h3");
-    if (!headings.length) return;
+    var headings = Array.prototype.filter.call(article.querySelectorAll("h2, h3"), function (h) {
+      // 折叠区（原书页机翻对照）内的标题不进目录：默认收起，锚点跳转看不到内容
+      return !h.closest("details.mt-fold");
+    });
+    if (!headings.length) {
+      // 无可见标题（如原书页图流页）：整块目录隐藏
+      var nav = tocList.closest("nav");
+      if (nav) nav.style.display = "none";
+      return;
+    }
 
     // 给没有 id 的标题补 id
     var used = {};

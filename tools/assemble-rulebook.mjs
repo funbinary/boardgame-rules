@@ -120,48 +120,41 @@ function buildOne(g) {
   // 原书页面图：assets/img/<slug>/NN.webp 存在则按页穿插
   const imgDir = path.join(ROOT, "assets", "img", g.slug);
   const hasPageImg = n => fs.existsSync(path.join(imgDir, String(n).padStart(2, "0") + ".webp"));
-  const figure = n => `<figure>\n<img src="../assets/img/${g.slug}/${String(n).padStart(2, "0")}.webp" alt="${g.en} rulebook page ${n}" loading="lazy">\n<figcaption>《${g.zh}》原版规则书 · 第 ${n} 页（点击放大）</figcaption>\n</figure>`;
+  const figure = n => `<figure>\n<img src="../assets/img/${g.slug}/${String(n).padStart(2, "0")}.webp" alt="${g.en} rulebook page ${n}" loading="lazy">\n<figcaption>原版规则书 · 第 ${n} 页（点击图片放大）</figcaption>\n</figure>`;
 
-  // 原书页图按 PDF 页数 1..N 驱动；译文按 <!--page:N--> 对位（多余标记并入末尾，缺失页只插图）
-  const blocksByPage = new Map();
-  let preface = ""; // 第一个标记之前的内容（罕见）
-  const pageParts = zhMd.split(/(?=<!--page:\d+-->)/).filter(p => p.trim());
-  for (const part of pageParts) {
-    const m = part.match(/<!--page:(\d+)-->/);
-    if (!m) { preface = part; continue; }
-    const n = +m[1];
-    blocksByPage.set(n, (blocksByPage.get(n) || "") + "\n\n" + part);
-  }
-  const blocks = [];
-  if (preface.trim()) blocks.push(mdToHtml(preface));
-  for (let n = 1; n <= rep.pages; n++) {
-    const fig = hasPageImg(n) ? figure(n) : null;
-    const md = blocksByPage.get(n) || "";
-    blocks.push((fig ? fig + "\n\n" : "") + mdToHtml(md));
-  }
-  // 译文中超出 PDF 页数的标记（罕见）：追加到末尾，不插图
-  for (const [n, md] of blocksByPage) if (n > rep.pages) blocks.push(mdToHtml(md));
+  // 版式：原书页图为主体，每页下方折叠「AI 机翻对照」（默认收起，页面清爽）
+  const fold = (n, body, label) => body && body.trim()
+    ? `<details class="mt-fold">\n<summary>${label}</summary>\n<div class="mt-body">${body}</div>\n</details>`
+    : "";
+
+  const pageMap = md => {
+    const byPage = new Map();
+    let pre = "";
+    for (const part of md.split(/(?=<!--page:\d+-->)/).filter(p => p.trim())) {
+      const m = part.match(/<!--page:(\d+)-->/);
+      if (!m) { pre = part; continue; }
+      byPage.set(+m[1], (byPage.get(+m[1]) || "") + "\n\n" + part);
+    }
+    return { byPage, pre };
+  };
+
+  const buildFlow = (md, preLabel, pageLabel) => {
+    const { byPage, pre } = pageMap(md);
+    const out = [];
+    if (pre.trim()) out.push(`<details class="mt-fold">\n<summary>${preLabel}</summary>\n<div class="mt-body">${mdToHtml(pre)}</div>\n</details>`);
+    for (let n = 1; n <= rep.pages; n++) {
+      const fig = hasPageImg(n) ? figure(n) : "";
+      const body = mdToHtml(byPage.get(n) || "");
+      out.push((fig ? fig + "\n\n" : "") + fold(n, body, pageLabel(n)));
+    }
+    for (const [n, md2] of byPage) if (n > rep.pages) out.push(fold(n, mdToHtml(md2), pageLabel(n)));
+    return out.filter(Boolean).join("\n\n");
+  };
+
   const anyImg = fs.existsSync(imgDir) && fs.readdirSync(imgDir).some(f => f.endsWith(".webp"));
 
-  const zhHtml = blocks.join("\n\n");
-
-  // EN 片段同样按页插入原书页图（切英文时版式与图片保持一致）
-  const enByPage = new Map();
-  const enParts = enMd.split(/(?=<!--page:\d+-->)/).filter(p => p.trim());
-  let enPreface = "";
-  for (const part of enParts) {
-    const m = part.match(/<!--page:(\d+)-->/);
-    if (!m) { enPreface = part; continue; }
-    enByPage.set(+m[1], (enByPage.get(+m[1]) || "") + "\n\n" + part);
-  }
-  const enBlocks = [];
-  if (enPreface.trim()) enBlocks.push(mdToHtml(enPreface));
-  for (let n = 1; n <= rep.pages; n++) {
-    const fig = hasPageImg(n) ? figure(n) : null;
-    enBlocks.push((fig ? fig + "\n\n" : "") + mdToHtml(enByPage.get(n) || ""));
-  }
-  for (const [n, md] of enByPage) if (n > rep.pages) enBlocks.push(mdToHtml(md));
-  const enHtml = enBlocks.join("\n\n");
+  const zhHtml = buildFlow(zhMd, "📝 开篇 AI 机翻对照（点击展开）", n => `📝 第 ${n} 页 AI 机翻对照（点击展开）`);
+  const enHtml = buildFlow(enMd, "📝 Preface notes (click to expand)", n => `📝 Page ${n} · original text (click to expand)`);
 
   const byline = [
     g.en,
@@ -184,8 +177,8 @@ function buildOne(g) {
 
   const parts = [];
   parts.push(`<blockquote>
-<p>本页为《${g.zh}》（${g.en}${g.year ? ", " + g.year : ""}）官方英文规则书的全文中文翻译，底本为 ${sourceLink}（${pdfName}，${rep.pages} 页），整本译出、未删节${anyImg ? "，<strong>原版规则书页面随文嵌入——点击任意图片即可放大查看</strong>" : ""}。规则内容归 ${esc(g.publisher || "版权方")} 及版权方所有，译文仅供个人学习查阅。</p>
-<p><small>整理说明：本页由 AI 辅助机翻整本规则书并按本站术语口径对齐（牌库/手牌/回合/轮/板块/指示物等），数字与费用逐段保留原文口径；如对规则细节有疑问，请以随文原书页面或上方官方原文 PDF 为准。每页译文上方为对应的原版规则书页面。</small></p>
+<p>本页收录《${g.zh}》（${g.en}${g.year ? ", " + g.year : ""}）的<strong>原版官方规则书全部 ${rep.pages} 页</strong>（底本：${sourceLink}，${pdfName}），逐页随图排列，<strong>点击任意图片即可放大查看</strong>；每页下方默认折叠了该页的 AI 辅助中文机翻对照，需要时可展开。规则内容归 ${esc(g.publisher || "版权方")} 及版权方所有，收录仅供个人学习查阅。</p>
+<p><small>整理说明：机翻对照按本站术语口径对齐（牌库/手牌/回合/轮/板块/指示物等），PDF 图文混排页的语序可能与原书视觉顺序略有出入；规则细节请一律以页面上方原书页面为准。</small></p>
 </blockquote>`);
   parts.push(zhHtml);
 

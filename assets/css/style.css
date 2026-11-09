@@ -1420,3 +1420,28 @@ table.rank-table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .rank-badge.ok { background: rgba(34, 140, 62, 0.12); color: #1e7a3c; }
 a.rank-site { color: var(--accent-strong); text-decoration: none; font-size: 13px; white-space: nowrap; }
 a.rank-site:hover { text-decoration: underline; }
+
+/* 原书页图流 + 每页机翻折叠（BGG Top100 官方英文规则书批次） */
+details.mt-fold {
+  margin: -0.4em auto 2.2em;
+  max-width: 640px;
+}
+details.mt-fold summary {
+  cursor: pointer;
+  padding: 7px 14px;
+  border: 1px dashed var(--accent-border);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  user-select: none;
+  text-align: center;
+}
+details.mt-fold summary:hover { background: var(--accent-border); color: var(--accent-strong); }
+details.mt-fold[open] summary { margin-bottom: 10px; }
+details.mt-fold .mt-body {
+  padding: 2px 6px 0;
+  font-size: 0.9em;
+  line-height: 1.75;
+}
