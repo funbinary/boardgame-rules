@@ -1,0 +1,27 @@
+{
+ "slug": "lotr-journeys-in-middle-earth",
+ "pages": 16,
+ "total_chars": 57371,
+ "avg_chars_per_page": 3585,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  3626,
+  2522,
+  3594,
+  4262,
+  2864,
+  2700,
+  2452,
+  4076,
+  4783,
+  3898,
+  4400,
+  3312,
+  4819,
+  6481,
+  3582
+ ]
+}

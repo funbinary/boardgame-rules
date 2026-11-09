@@ -1,0 +1,1325 @@
+<!--page:1-->
+®
+You are a monarch, like your parents before you - a ruler of a small pleasant kingdom of rivers
+and evergreens. Unlike your parents, however, you have hopes...dreams! You want a bigger and
+more pleasant kingdom, with more rivers, and a wider variety of trees. You want a Dominion!
+In all directions lie fiefs, freeholds, and feodums - all small bits of land, controlled by petty
+lords and verging on anarchy. You will bring civilization to these unfortunates, uniting them
+under your banner.
+But wait. It must be something in the air; several other monarchs have had the exact same idea.
+You must race to get as much of the unclaimed land as possible while you can, fending them off
+along the way. To do this you will hire minions, construct buildings, spruce up your castle, and
+fill the coffers of your treasury. Your parents wouldn't be proud, but your grandparents, on
+your mother's side, would be delighted.
+This is a game of building a deck of cards. The deck represents your Dominion. It contains your
+resources, victory points, and the things you can do. It starts out a small sad collection of
+Estates and Coppers, but you hope that by the end of the game it will be brimming with Gold,
+Provinces, and the inhabitants and structures of your castle and kingdom. You win by having
+the most
+in your deck when the game ends.
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 1
+
+<!--page:2-->
+500 cards
+130 basic Treasure cards - 60 Copper, 40 Silver, 30 Gold
+48 basic Victory cards - 24 Estate, 12 Duchy, 12 Province
+30 Curse cards
+262 Kingdom cards
+10 each of Artisan, Bandit, Bureaucrat, Cellar, Chapel, Council Room, Festival,
+Harbinger, Laboratory, Library, Market, Merchant, Militia, Mine, Moat,
+Moneylender, Poacher, Remodel, Sentry, Smithy, Throne Room, Vassal,
+Village, Witch, Workshop
+12 Gardens
+26 Randomizer cards (one of each Kingdom card with a different card back)
+4 blank cards (unused)
+1 Trash mat
+1 Plastic organizer tray
+1 Organizing Inlay
+1 Rule booklet
+Before the first game, carefully place the cards in the organizer tray - do not shuffle them!
+Please note that some cards have different backs than others. The playing cards (Treasure cards, Victory
+cards, Curse cards, and Kingdom cards) all have a back with a tan border:
+The Randomizer cards all have blue borders:
+Do not mix the playing cards with the Randomizer cards. Place the Organizing Inlay in the middle of the
+Plastic organizer tray (placed such that the largest storage space is on the left) with Artisan at the top of
+the plastic tray.
+Now unwrap the card decks and place the cards in the slots of the Plastic organizer tray next to the
+matching names on the Organizing Inlay. When playing a game, you will remove only the cards used in
+that game and then return them to their appropriate slots after each game. By doing so, you will always
+be able to easily and quickly set up a new game.
+Artisan
+Bandit
+Cellar
+Chapel
+Bureaucrat
+Festival
+Library
+Harbinger
+Laboratory
+Council Room
+Militia
+Merchant
+Moat
+Market
+Moneylender
+Copper
+Mine
+Silver
+Vassal
+Throne Room
+Smithy
+Sentry
+Remodel
+Poacher
+Curse
+Village
+Witch
+Duchy
+Workshop
+Province
+Estate
+Gardens
+Gold
+Artisan
+Bandit
+Cellar
+Chapel
+Bureaucrat
+Festival
+Library
+Harbinger
+Laboratory
+Council Room
+Militia
+Merchant
+Moat
+Market
+Moneylender
+Copper
+Mine
+Silver
+Vassal
+Throne Room
+Smithy
+Sentry
+Remodel
+Poacher
+Curse
+Village
+Witch
+Duchy
+Workshop
+Province
+Estate
+Gardens
+Gold
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 2
+
+<!--page:3-->
+Each player takes 3 Estates and 7 Coppers and shuffles them face down as a starting deck.
+Place 17 face-up piles of cards on the table: the 7 Base card piles, which are always used, and always the
+same, and 10 Kingdom card piles, which vary from game to game. The full set of cards available this
+game is called the Supply.
+Kingdom Cards
+Base Cards
+The Supply
+Trash mat
+The Base cards are Copper, Silver, Gold, Estate, Duchy, Province, and Curse.
+• Copper, Silver, Gold: Use every copy you have of these (except Coppers players already have).
+• Estate, Duchy, Province: Use 8 copies of each for a 2-player game, 12 copies for 3-4 players.
+• Curse: Use 10 with 2 players, 20 with 3 players, all 30 with 4 players.
+There are 26 Kingdom cards. If you have expansions, you can use those Kingdom cards as well. Choose
+10 Kingdom cards to use, however you like; the others will not be used this game. You can pick the
+Kingdom cards randomly by shuffling the randomizer cards - the cards with the blue framed backs -
+and turning over 10 of them. There are a few pre-made sets of 10 cards in the Recommended Sets
+section that you can try. For your very first game of Dominion, use these cards: Cellar, Market,
+Merchant, Militia, Mine, Moat, Remodel, Smithy, Village, Workshop.
+Whichever 10 cards you pick, get out those piles - 10 copies of each card (do not put the randomizer
+card in the pile). When a Victory Kingdom card is used (e.g. Gardens), it gets 8 copies for 2 players, 12
+copies for 3-4 players, as with the other Victory cards.
+Put the Trash mat near the piles.
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Gold
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Estate
+Victory
+Province
+Victory
+Illustration: Martin Hoffmann                            ©2021 Rio Grande Games
+Curse
+Curse
+Illustration: Claus Stephan                               © 2021 Rio Grande Games
+-1
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
++1 Card
++1 Action
++1 Buy
++
+Market
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Workshop
+Gain a card costing up to
+.
+Action
+Illustration: Christof Tisch                     © 2021 Rio Grande Games
+Trash
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Duchy
+Victory
+Illustration: Martin Hoffmann                          © 2021 Rio Grande Games
+Duchy
+Victory
+Illustration: Martin Hoffmann                          © 2021 Rio Grande Games
+Province
+Victory
+Illustration: Martin Hoffmann                            ©2021 Rio Grande Games
+Curse
+Curse
+Illustration: Claus Stephan                               © 2021 Rio Grande Games
+-1
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Gold
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Gold
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Cellar
++1 Action
+Discard any number of cards.
++1 Card per card discarded.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Cellar
++1 Action
+Discard any number of cards.
++1 Card per card discarded.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Moat
++2 Cards
+When another player plays
+an Attack card, you may 昀rst
+reveal this from your hand, to
+be unaffected by it.
+Illustration: Matthias Catrein               © 2021 Rio Grande Games
+Action - Reaction
+Moat
++2 Cards
+When another player plays
+an Attack card, you may 昀rst
+reveal this from your hand, to
+be unaffected by it.
+Illustration: Matthias Catrein               © 2021 Rio Grande Games
+Action - Reaction
+Village
++1 Card
++2 Actions
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
+Village
++1 Card
++2 Actions
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
+Merchant
++1 Card
++1 Action
+The 昀rst time you play a Silver
+this turn, +
+.
+Action
+Illustration: Joshua Stewart                    © 2021 Rio Grande Games
+Workshop
+Gain a card costing up to
+.
+Action
+Illustration: Christof Tisch                     © 2021 Rio Grande Games
+Artisan
+Gain a card to your hand
+costing up to
+.
+Put a card from your hand
+onto your deck
+Action
+Illustration: Harald Lieske                     © 2021 Rio Grande Games
++3 Cards
+Smithy
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
++
+Each other player discards
+down to 3 cards in hand.
+Militia
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Action - Attack
++
+Each other player discards
+down to 3 cards in hand.
+Militia
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Action - Attack
++1 Card
++1 Action
++1 Buy
++
+Market
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Mine
+You may trash a Treasure from
+your hand. Gain a Treasure to
+your hand costing up to
+more than it.
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
+Mine
+You may trash a Treasure from
+your hand. Gain a Treasure to
+your hand costing up to
+more than it.
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
+Merchant
++1 Card
++1 Action
+The 昀rst time you play a Silver
+this turn, +
+.
+Action
+Illustration: Joshua Stewart                    © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 3
+
+<!--page:4-->
+Randomly choose a starting player. If you have just played a game of Dominion and it was not a tie, have
+the player who won the previous game go last (the player to their left goes first).
+Each player draws an initial hand of 5 cards.
+Dominion is a game of building a deck of cards. Each player has their own deck, their own discard pile,
+their own hand of cards and play area. Players start with a weak initial deck and gradually acquire better
+cards over the course of the game.
+Players take turns. Each turn has three phases: Action, then Buy, then Clean-up, which you can
+remember as ABC. In the Action phase, you can play one Action card from your hand; in the Buy phase,
+you can play any number of Treasure cards and then buy one card to add to your deck; and in Clean-up
+you sweep up all of your cards from play and from your hand and discard them, then draw a new hand
+of 5 cards, shuffling as needed.
+The game ends after 3 piles are empty or the Province pile is empty; then players count up the
+on all
+of their cards, and the player with the most
+wins.
+In your Action phase, you can play one Action card from your hand. Those are cards that say "Action" on
+the bottom, and by default have a white banner (some are other colors due to additional types). Playing
+an Action card has three steps: announcing it; moving it to the "in play" area - the table space in front of
+you; and following the instructions on it, in order, top to bottom. If the card has a dividing line (e.g.
+Moat), you stop there; instructions below the line happen at some other time (indicated). If you cannot
+do everything a card tells you to do, you do as much as you can; you can still play a card even if you
+know you will not be able to do everything it tells you to.
+Some cards give "+1 Action." This increases how many Action cards you can play in a turn. The increase
+happens right then, but you do not play the next Action card until completely finishing the first one.
+Some cards give "+2 Actions"; that means you can play two more Action cards that turn.
+So, for example, if you play Militia, which does not give +Actions, you resolve Militia and are done with
+your Action phase. But you could instead play a Market, then another Market, then a Militia; each
+Market gives you +1 Action, which lets you keep playing Actions.
+Using up your Actions is optional; you can have an Action card left in hand that you can play, and decide
+not to play it.
+Card name
++1 Action
+Instructions
+Dividing line
+to follow
+Happens at a
+different time
+Action type
++1 Card
++1 Action
++1 Buy
++
+Market
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Moat
++2 Cards
+When another player plays
+an Attack card, you may 昀rst
+reveal this from your hand, to
+be unaffected by it.
+Illustration: Matthias Catrein               © 2021 Rio Grande Games
+Action - Reaction
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 4
+
+<!--page:5-->
+First you can play any number of Treasure cards from your hand, in any order. Treasure cards say
+"Treasure" on the bottom and have a yellow banner. You play one by moving it to the "in play" area; you
+probably will not announce your Treasures, though you can if you want. The Treasures have no text, just a
+big coin with a number on it. You get that many coins to spend this turn - one coin for a Copper, two for
+a Silver, three for a Gold, indicated as
+,
+,
+. The amount is also in the corners at the top of
+Treasures. You do not have to play every Treasure in your hand (but only get
+this turn for the Treasures
+you play).
+Then, you can buy one card, costing as much
+as you have or less. Costs are indicated in the lower left
+corner of cards. You buy a card by choosing it from the Supply, and then "gaining" it. "Gaining" a card
+means moving it from the Supply to your discard pile. Your total amount of coins available to spend goes
+down by the cost of the card. For example if you played four Coppers and a Silver, that makes
+total; if
+you bought a Market, that costs
+, so you would move a Market from the Supply to your discard pile
+and have
+left.
+Buying cards does not use up Treasure cards; you still have the cards. The Treasures produce income
+usable every time you draw them. Buying cards just uses up the
+you have available this turn.
+Some cards give "+1 Buy." This increases how many cards you can buy in a turn in your Buy phase. For
+example with
+and an extra Buy, you could buy two Silvers, which each cost
+. Using up your Buys is
+optional. You can have two Buys but just buy one card, or skip buying entirely. As Copper costs
+, you
+could use a Buy with no
+to buy a Copper.
+You cannot go back and play more Treasures after buying a card; first play Treasures, then buy.
+Worth
+Worth
++1 Buy
+Costs
+Costs
+Costs
+Treasure type
+Take all of the cards you have in play (both Actions and Treasures), and any remaining cards in your
+hand, and put them all into your discard pile. The order does not matter; you can hide the cards from
+your hand under the played cards if you want to.
+Draw a new hand of 5 cards. If your deck has fewer than 5 cards, first shuffle your discard pile and put it
+under your deck, then draw.
+Play passes to the player to your left. Any unused +Actions, unused +Buys, or unspent
+that you had
+left are gone; you start each turn fresh.
++2 Actions
++1 Buy
++
+Festival
+Action
+Illustration: Marcel-André Casasola-Merkle   © 2021 Rio Grande Games
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Gold
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 5
+
+<!--page:6-->
+The game ends at the end of a turn, if either the Province pile is empty, or any three or more Supply piles
+are empty (any piles at all, including Kingdom cards, Curses, Copper, etc.).
+Take all of your cards - from your hand, deck, discard pile, play area, and even set aside cards - and sort
+them for putting them back in their piles. Count up your
+.
+The player with the most
+wins. If players tie for
+, a player who tied but had fewer turns wins. If
+players tie and had the same number of turns, they rejoice in their shared victory.
+Every card has types, listed on the bottom; a color, which helps indicate certain types; and a cost, in the
+lower left corner. Action cards all have a text box with instructions; sometimes other cards do.
+Cards can have multiple types. A card has all of its types for all purposes. For example, Throne Room lets
+you play an Action card twice; that Action could be Witch, which is an Action - Attack, or Moat, an
+Action - Reaction, or Smithy, an Action.
+These are the card types present in the main set (expansions add some):
+• Action: These can be played in your Action phase to do what they say to do in the text box.
+• Treasure: These can be played in your Buy phase to produce
+used to buy cards. The amount of
+is
+indicated in the top corners and on a big
+symbol. Treasures in expansions may have rules on them
+like Action cards.
+• Victory: These are generally not useful during the game, but are worth
+at the end indicated by a
+number next to a big
+symbol.
+• Curse: These are bad cards worth -1
+. Normally they have no use and you will not choose to buy
+them, though you can; however you may receive them from other players via Witch.
+• Attack: These are cards that hurt other players directly somehow.
+• Reaction: These are cards that can be used in some way at an unusual time. Any such use is spelled
+out on the Reaction card; for example Moat says it can be revealed when another player plays an
+Attack card. Reactions are used one at a time (which matters for expansion Reactions).
+Action
+Treasure
+Victory            Curse
+Action &
+Action &
+Attack
+Reaction
+Moat
++2 Cards
+When another player plays
+an Attack card, you may 昀rst
+reveal this from your hand, to
+be unaffected by it.
+Illustration: Matthias Catrein               © 2021 Rio Grande Games
+Action - Reaction
++2 Cards
+Each other player
+gains a Curse.
+Witch
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Action - Attack
+Curse
+Curse
+Illustration: Claus Stephan                               © 2021 Rio Grande Games
+-1
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Village
++1 Card
++2 Actions
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 6
+
+<!--page:7-->
+Some special terms are used in card text.
+Four terms involve a number after a + symbol. +2 is the same as +1 twice, and so on.
+"+1 Action" - You may play an additional Action card this turn.
+• When this happens, it just adds to the number of Action cards you can play; you finish resolving the
+current card before actually playing more Action cards.
+• Actions are only usable in the Action phase.
+• When you have multiple Actions, it can be helpful to say the number out loud to remember it. Some
+players like to form a "tree" on the table, putting two played Actions on a Village or Festival to show its
+Actions being used up.
+"+1 Buy" - You may buy an additional card in your Buy phase this turn.
+• You do not have to use extra Buys.
+• You split up your
+among your Buys.
+"+1 Card" - Draw a card.
+• You draw the card immediately.
+• If you have to draw more cards than are left in your deck, you shuffle your discard pile, put it under
+your deck, and then draw. If there still are not enough cards to draw, you just draw as many as you
+can.
+"+
+" - You have an extra
+to spend in your Buy phase this turn.
+• +
+does not give you a Copper card; it just adds to how much
+you can spend this turn.
+Other terms involve moving cards, seeing cards, and where cards are.
+"Discard a card" - Move a card from your hand to your discard pile.
+• Sometimes a card will tell you to discard a card from another location, but by default discarded cards
+come from hands.
+• You place the discarded card on top of your discard pile, face up.
+• If you discard multiple cards at once, you do not need to reveal them all, just the one you put on top.
+"Gain a card" - Take a card from the Supply and put it into your discard pile.
+• Sometimes a card will let you gain a card from a place other than the Supply, but by default gained
+cards come from the Supply.
+• Sometimes a card will let you gain a card to a location other than your discard pile, but by default all
+gained cards are put into your discard pile.
+• You do not play a card when you gain it; it just goes to your discard pile.
+"In play" - Being in a player's play area.
+• Cards become "in play" when played, and usually stay there until discarded from play in Clean-up.
+• Only played cards are in play; set aside cards, cards in the trash, in the Supply, in hands, etc., are not in
+play.
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 7
+
+<!--page:8-->
+"Look at a card" - You get to see the card; other players do not.
+• After looking at it, return it to wherever it was (unless otherwise instructed).
+"Play a card" - Put a card into play, and follow the instructions on it.
+• When a card tells you to play a card, that does not use up an Action play for the turn.
+• As with playing a card normally, you follow the instructions in order, stopping at a dividing line when
+there is one.
+• As always, played cards go into play, not directly into the discard pile.
+"Reveal a card" - All players get to see the card.
+• After revealing it, return it to wherever it was (unless otherwise instructed).
+"Set aside a card" - Put the card on the table, outside of the play area.
+• Set aside cards are not "in play."
+• Set aside cards are face up unless otherwise specified.
+• A card that sets a card aside will say when to move it somewhere else.
+"Trash a card" - Put a card into the Trash pile.
+• This is a way of getting rid of a card; a trashed card is no longer one of your cards.
+• The Trash pile is on the Trash mat, face up; players may look through the Trash at any time.
+• The order of the Trash pile does not matter; players can reorder it.
+• Cards in the Trash are essentially out of the game, though some expansion cards can get them.
+Finally there are three symbols used in text boxes.
+- Victory points. The player with the most
+wins.
+- The coin symbol. This indicates costs of cards, and amounts of money produced.
+Dividing line - Some cards have the text box divided with a line (e.g. Moat). This separates abilities that
+happen at different times. When playing the card, you follow instructions above the line only; the text
+below the line will say when it applies.
+If you have to do anything with your deck - for example draw, look at, reveal, set aside, discard, or trash
+cards - and you need more cards than are left in your deck, first shuffle your discard pile and put it
+under your deck, then do the thing. If there are still not enough cards, you do the thing with however
+many cards you can. If when shuffling there are no cards in your deck, the shuffled discard pile simply
+becomes your new deck.
+When your deck is empty, you do not shuffle until you need to do something with cards from your deck.
+If you have to put a card on top of your deck when it is empty, that card becomes the only card in your
+deck.
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 8
+
+<!--page:9-->
+You can count the number of cards in your deck at any time (without looking at the card fronts), but
+cannot look through or count your discard pile or another player's deck or discard pile. The number of
+cards in each player's hand is public, as is the top card of each discard pile. All cards in play are public; set
+aside cards are normally public but are sometimes face down. Players can look through the Trash pile at
+any time.
+When interacting with a discard pile (e.g. with Harbinger), it is not necessary to keep it in the same
+order. The only thing that ever matters about that order is that the top card is public. It is also never
+necessary to keep the Trash pile in a particular order.
+When two things happen to different players at the same time, go in turn order starting with the player
+whose turn it is. For example, when a player plays Witch, the other players gain Curses in turn order,
+which may matter if the Curses run out.
+When two things happen to one player at the same time, that player picks the order to do them, even if
+some are mandatory and some are not. This can come up with expansions.
+When a card gives you a choice ("choose one..."), you can pick any option, without considering whether
+or not you will be able to do it. This comes up with expansions.
+To play with 5 or 6 players, you need additional base cards. These are available in the Base Cards product
+and in the Big Box, or you could have two copies of Dominion.
+Most Victory piles still have 12 cards, as with 3-4 player games. However use 15 Provinces for 5 players,
+and use 18 Provinces for 6 players. Use 40 Curses for 5 players, 50 Curses for 6 players.
+Add all of the extra Coppers, Silvers, and Golds to those piles.
+The game end condition for 5-6 players is: any four piles are empty, or the Province pile is empty.
+Before the game
+Deck
+Shuffle your starting 10 cards (7 Coppers & 3 Estates) and place them face-down as your deck. Draw the top
+5 cards as your starting hand. In this example, you have 1 Estate & 4 Coppers. The rest remain as your deck.
+Cards played
+Hand
+empty
+Discard pile
+empty
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 9
+
+<!--page:10-->
+Clean-up phase                                       Buy phase
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+7/1
+7/1
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Deck
+Hand
+Cards played
+As you have no Action cards to start the game, you skip the Action phase and go directly to the Buy phase.
+You play 4 Copper cards from your hand to buy a Remodel card (cost =
+) from the Supply, placing it in your discard pile.
+Deck
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Hand
+Cards played
+After completing your buy, you go to the Clean-up phase. Here you place the cards
+you played on the discard pile and the cards left in your hand there as well.
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+empty
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Deck
+Hand
+Cards played
+Discard pile
+1st turn
+Buy phase
+Deck
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Cards played
+Hand
+empty
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+2nd turn
+from the Supply
+Discard pile
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+from the Supply
+Discard pile
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Finally, you draw 5 cards from your deck for your next turn. This time, you get 2 Estates and 3 Coppers.
+Your 1st turn is over and the opponent on your left begins their turn.
+After your opponents complete their turns, it is your 2nd turn. Again, you have no Action cards, so you go directly
+to the Buy phase. This time, you play your 3 Copper cards to buy a Silver card, placing it on your discard pile.
+Discard pile
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 10
+
+<!--page:11-->
+Clean-up phase
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Discard pile
+Cards played
+In your Clean-up phase, you place the 3 Coppers you played on your discard pile
+and the 2 Estate cards left in your hand there as well.
+empty
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+2nd
+nd
+empty
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Cards played
+Discard pile
+Finally, you draw 5 cards from your deck for your next turn. Since your deck is empty, you shuffle
+your discard pile, place it face-down, and draw 5 cards from it. This time, you get 1 Estate, 1 Silver,
+2 Coppers, and 1 Remodel. Your 2nd turn is over and the opponent on your left begins their turn.
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Deck
+Hand
+Buy phase                         Action phase
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Deck
+Hand
+Cards played
+Discard pile
+You have
+in your hand for the Buy phase. You play the
+(2 Copper cards and 1 Silver card) and
+decide to buy a Militia card from the Supply, placing it in your discard pile.
+from the Supply
++
+Each other player discards
+down to 3 cards in hand.
+Militia
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Action - Attack
+3rd turn
+After your opponents complete their turns, you begin your 3rd turn with the Action phase and play Remodel. You decide to trash the
+Estate from your hand and gain a Smithy from the Supply (cost =
+= cost of Estate +
+), placing it on your discard pile.
++3 Cards
+Smithy
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+from the Supply
+Discard pile
+Deck
+put on the
+Trash pile
+Trash
+Hand
+Cards played
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Hand
+Deck
+Estate
+Victory
+Illustration: Martin Hoffmann                         © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+2ndt
+2ndt
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 11
+
+<!--page:12-->
+Artisan: The card you gain comes from the Supply and is put into your hand. You
+cannot use
+to increase how expensive of a card you gain; it always costs from
+to
+. After gaining the card, you put a card from your hand onto your deck;
+that can be the card you just gained, or a different card.
+Bandit: First you gain a Gold from the Supply, putting it into your discard pile.
+Then each other player, in turn order, reveals their top 2 cards, trashes one they
+choose that is a Treasure other than Copper (e.g. Silver or Gold), and discards the
+other revealed cards. A player who did not reveal a Treasure card other than
+Copper simply discards both cards.
+Bureaucrat: A player with no cards in their deck will have the card they put on
+top become the only card in their deck.
+Cellar: Choose any number of cards from your hand; discard them all at once;
+then draw as many cards as you actually discarded. If this causes you to shuffle,
+you will shuffle in the cards you discarded. You do not have to let players see any
+but the top card discarded; however the number of cards you discard is public.
+Chapel: You cannot trash the Chapel itself, since it is not in your hand after you
+play it.
+Council Room: The other players draw a card whether they want to or not.
+Festival: You get +2 Actions, +1 Buy, and +
+.
+Gardens: For example, if you have 37 cards at the end of the game, each copy of
+Gardens you have is worth 3
+. Use 8 copies of Gardens in a 2-player game, 12
+copies for 3 or more players.
+Harbinger: First draw a card and get +1 Action; then look through your discard
+pile, and you may put a card from it on top of your deck. Putting a card on top is
+optional.
+Clean-up phase
+Deck
+Hand
+Cards played
+Discard pile
+In your Clean-up phase, you discard your played cards and hand as usual, then draw 5 cards to end your turn.
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Silver
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+empty
+Copper
+Treasure
+Illustration: Ryan Laukat                                © 2021 Rio Grande Games
+Artisan
+Gain a card to your hand
+costing up to
+.
+Put a card from your hand
+onto your deck
+Action
+Illustration: Harald Lieske                     © 2021 Rio Grande Games
+Bandit
+Gain a Gold. Each other
+player reveals the top 2 cards
+of their deck, trashes a revealed
+Treasure other than Copper,
+and discards the rest.
+Action - Attack
+Illustration: Julien Delval                     © 2021 Rio Grande Games
+Bureaucrat
+Gain a Silver onto your deck.
+Each other player reveals a
+Victory card from their hand
+and puts it onto their deck
+(or reveals a hand with no
+Victory cards).
+Action - Attack
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Cellar
++1 Action
+Discard any number of cards.
++1 Card per card discarded.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Chapel
+Illustration: Matthias Catrein                © 2021 Rio Grande Games
+Trash up to 4 cards
+from your hand.
+Action
+Council Room
+Illustration: Matthias Catrein                    © 2021 Rio Grande Games
++4 Cards
++1 Buy
+Each other player draws a card.
+Action
++2 Actions
++1 Buy
++
+Festival
+Action
+Illustration: Marcel-André Casasola-Merkle   © 2021 Rio Grande Games
+Gardens
+Worth 1
+per 10 cards you
+have (round down).
+Victory
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Harbinger
++1 Card
++1 Action
+Look through your discard pile.
+You may put a card from it
+onto your deck.
+Action
+Illustration: Martin Hoffmann                 © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 12
+
+<!--page:13-->
+Laboratory: You draw 2 cards and get +1 Action.
+Library: You look at cards one at a time, putting each one into your hand or
+setting it aside, until you have 7 cards in hand; then you discard the set aside
+cards. If you shuffle in the middle of doing this, you do not shuffle in the set
+aside cards. Only Action cards can be set aside. You are not forced to set aside
+Action cards; that is just an option. If you already have 7 cards in hand to start,
+you do not draw any cards.
+Market: You draw a card and get +1 Action, +
+, and +1 Buy.
+Merchant: When you play Merchant, you draw a card and get +1 Action. If you
+end up playing a Silver later in the turn, it comes with +
+. If you play more than
+one Merchant, each gives you +
+when you play that first Silver; but if you play
+more than one Silver, you only get the +
+for the first Silver.
+Militia: Players with 3 or fewer cards in hand do not discard any cards. Players
+with more cards discard until they only have 3.
+Mine: You can, for example, trash a Copper to gain a Silver, or trash a Silver to
+gain a Gold. The Treasure you gain comes from the Supply and is put into your
+hand; you can play it for
+the same turn. If you do not have a Treasure to trash,
+you do not gain one.
+Moat: An Attack card says "Attack" on the bottom line; in this set, Bandit,
+Bureaucrat, Militia, and Witch are Attacks. When another player plays an Attack
+card, you may reveal a Moat from your hand, before the Attack does anything, to
+be unaffected by the Attack - you do not reveal cards to Bandit, or put a Victory
+card on your deck for Bureaucrat, or discard for Militia, or gain a Curse for Witch.
+Moat stays in your hand, and can still be played on your next turn. Moat does
+not stop anything an Attack does to other players, or for the player who played it;
+it just protects you personally. Moat can also be played on your turn for +2 Cards.
+If multiple Attacks are played on a turn or in a round of turns, you may reveal
+Moat for as many of them as you want.
+Moneylender: You only get the +
+if you actually trashed a Copper.
+Poacher: You draw your one card before discarding. If there are no empty piles,
+you do not discard. If there is one empty pile, you discard one card; if there are
+two empty piles, you discard two cards, and so on. This includes all Supply piles,
+including Curses, Coppers, Poacher itself, etc. If you do not have enough cards to
+discard, just discard the rest of your hand.
+Merchant
++1 Card
++1 Action
+The 昀rst time you play a Silver
+this turn, +
+.
+Action
+Illustration: Joshua Stewart                    © 2021 Rio Grande Games
+Mine
+You may trash a Treasure from
+your hand. Gain a Treasure to
+your hand costing up to
+more than it.
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
++
+Each other player discards
+down to 3 cards in hand.
+Militia
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Action - Attack
+Moneylender
+You may trash a Copper from
+your hand for +
+.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Poacher
+Action
+Illustration: Joshua Stewart                    © 2021 Rio Grande Games
++1 Card
++1 Action
++
+Discard a card per empty
+Supply pile.
+Moat
++2 Cards
+When another player plays
+an Attack card, you may 昀rst
+reveal this from your hand, to
+be unaffected by it.
+Illustration: Matthias Catrein               © 2021 Rio Grande Games
+Action - Reaction
+Laboratory
++2 Cards
++1 Action
+Action
+Illustration: Julien Delval                        © 2021 Rio Grande Games
+Library
+Draw until you have 7 cards
+in hand, skipping any Action
+cards you choose to;
+set those aside, discarding
+them afterwards.
+Action
+Illustration: Harald Lieske                       © 2021 Rio Grande Games
++1 Card
++1 Action
++1 Buy
++
+Market
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 13
+
+<!--page:14-->
+Remodel: You cannot trash the Remodel itself, since it is not in your hand after
+you play it. If you do not have a card to trash, you do not gain one. If you do gain
+a card, it comes from the Supply and is put into your discard pile. The gained card
+does not need to cost exactly
+more than the trashed card; it can cost that
+much or less, and can even be another copy of the trashed card. You cannot use
+to increase how expensive of a card you gain.
+Sentry: First you draw a card and get +1 Action. Then you look at the top 2 cards
+of your deck. You can trash both, or discard both, or put both back in either
+order; or you can trash one and discard one, or trash one and put one back, or
+discard one and put one back.
+Smithy: You draw 3 cards.
+Throne Room: Playing an Action card from your hand is optional. If you do play
+one, you resolve it completely, then play it a second time. You cannot play other
+cards in-between (unless told to by the card, such as with Vassal or Throne Room
+itself). Playing Action cards with Throne Room is just like playing Action cards
+normally, except it does not use up Action plays for the turn. For example if you
+start a turn by playing Throne Room on Village, you would draw a card, get +2
+Actions, draw another card, and get +2 Actions again, leaving you with 4 Actions.
+If you Throne Room a Throne Room, you may play an Action card twice, then may
+play another Action card twice; you do not play one Action card four times.
+Vassal: If the card is an Action card, you can play it, but do not have to. If you do
+play it, you move it into your play area and follow its instructions; this does not
+use up one of your Action plays for the turn.
+Village: You draw a card and get +2 Actions.
+Witch: The Curses come from the Supply and are put into discard piles. They are
+given out in turn order, which can matter when the Curse pile is low. When the
+Curses are gone, you can still play Witch for +2 Cards.
+Workshop: The card you gain comes from the Supply and is put into your
+discard pile. You cannot use
+to increase how expensive of a card you gain; it
+always costs from
+to
+.
++3 Cards
+Smithy
+Action
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Throne Room
+You may play an Action card
+from your hand twice.
+Action
+Illustration: Harald Lieske                     © 2021 Rio Grande Games
+Vassal
+Action
+Illustration: Julien Delval                       © 2021 Rio Grande Games
++
+Discard the top card of your
+deck. If it’s an Action card,
+you may play it.
+Village
++1 Card
++2 Actions
+Action
+Illustration: Claus Stephan                     © 2021 Rio Grande Games
++2 Cards
+Each other player
+gains a Curse.
+Witch
+Illustration: Matthias Catrein
+© 2021 Rio Grande Games
+Action - Attack
+Workshop
+Gain a card costing up to
+.
+Action
+Illustration: Christof Tisch                     © 2021 Rio Grande Games
+Remodel
+Trash a card from your hand.
+Gain a card costing up to
+more than it.
+Action
+Illustration: Matthias Catrein                 © 2021 Rio Grande Games
+Sentry
++1 Card
++1 Action
+Look at the top 2 cards of your
+deck. Trash and/or discard any
+number of them.Put the rest
+back on top in any order.
+Action
+Illustration: Eric J Carter                        © 2021 Rio Grande Games
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 14
+
+<!--page:15-->
+Players can play Dominion with any set of 10 Kingdom cards, but these sets have been specially picked out to be
+entertaining and show off card interactions and strategies. Dominion now has a large number of expansions with which
+you can add to your fun. We have included recommended sets for those expansions as well.
+Dominion alone:
+First Game: Cellar, Market, Merchant, Militia, Mine, Moat, Remodel, Smithy, Village, Workshop
+Size Distortion: Artisan, Bandit, Bureaucrat, Chapel, Festival, Gardens, Sentry, Throne Room, Witch, Workshop
+Deck Top: Artisan, Bureaucrat, Council Room, Festival, Harbinger, Laboratory, Moneylender, Sentry, Vassal, Village
+Sleight of Hand: Cellar, Council Room, Festival, Gardens, Library, Harbinger, Militia, Poacher, Smithy, Throne Room
+Improvements: Artisan, Cellar, Market, Merchant, Mine, Moat, Moneylender, Poacher, Remodel, Witch
+Silver & Gold: Bandit, Bureaucrat, Chapel, Harbinger, Laboratory, Merchant, Mine, Moneylender, Throne Room, Vassal
+Dominion & Intrigue:
+Underlings: Cellar, Festival, Library, Sentry, Vassal • Courtier, Diplomat, Minion, Nobles, Pawn
+Grand Scheme: Artisan, Council Room, Market, Militia, Workshop • Bridge, Mill, Mining Village, Patrol, Shanty Town
+Deconstruction: Bandit, Mine, Remodel, Throne Room, Village • Diplomat, Harem, Lurker, Replace, Swindler
+Dominion & Seaside:
+Reach for Tomorrow: Artisan, Cellar, Council Room, Vassal, Village • Cutpurse, Ghost Ship, Lookout, Sea Hag,
+Treasure Map
+Repetition: Festival, Harbinger, Militia, Workshop • Caravan, Explorer, Outpost, Pearl Diver, Pirate Ship, Treasury
+Give and Take: Library, Market, Moneylender, Witch • Ambassador, Fishing Village, Haven, Island, Salvager, Smugglers
+Dominion & Alchemy:
+Forbidden Arts: Bandit, Cellar, Council Room, Gardens, Laboratory, Throne Room • Apprentice, Familiar, Possession,
+University
+Potion Mixers: Cellar, Festival, Militia, Poacher, Smithy • Alchemist, Apothecary, Golem, Herbalist, Transmute
+Chemistry Lesson:  Bureaucrat, Market, Moat, Remodel, Vassal, Witch • Alchemist, Golem, Philosopher's Stone,
+University
+Dominion & Prosperity:
+Biggest Money: Artisan, Harbinger, Laboratory, Mine, Moneylender • Bank, Grand Market, Mint, Royal Seal, Venture
+The King’s Army: Bureaucrat, Council Room, Merchant, Moat, Village • Expand, Goons, King's Court, Rabble, Vault
+The Good Life: Artisan, Bureaucrat, Cellar, Gardens, Village • Contraband, Counting House, Hoard, Monument,
+Mountebank
+Dominion & Cornucopia/Guilds:
+Bounty of the Hunt: Cellar, Festival, Militia, Moneylender, Smithy • Harvest, Horn of Plenty, Hunting Party, Menagerie,
+Tournament
+Bad Omens:  Bureaucrat, Laboratory, Merchant, Poacher, Throne Room • Fortune Teller, Hamlet, Horn of Plenty, Jester,
+Remake
+The Jester’s Workshop: Artisan, Laboratory, Market, Remodel, Workshop • Fairgrounds,
+Farming Village, Horse Traders, Jester, Young Witch • Bane: Merchant
+Arts and Crafts: Laboratory, Cellar, Workshop, Festival, Moneylender • Stonemason, Advisor, Baker, Journeyman,
+Merchant Guild
+Clean Living: Bandit, Militia, Moneylender, Gardens, Village • Butcher, Baker, Candlestick Maker, Doctor, Soothsayer
+Gilding the Lily: Library, Merchant, Remodel, Market, Sentry • Plaza, Masterpiece, Candlestick Maker, Taxman, Herald
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 15
+
+<!--page:16-->
+Thanks
+1st Edition Developers: Dale Yu and Valerie Putman; 1st Edition Playtesters: Kelly Bailey, Dan Brees, Josephine Burns, Max Crowe,
+Ray Dennis, David Fair, Lucas Hedgren, Michael M. Landers, W. Eric Martin, Destry Miller, Miikka Notkola, Molly Sherwin, Chris West,
+Sir Shufflesalot, P. Colin Street, the 6am Gamers, the Cincygamers, and the Columbus Area Boardgaming Society.
+2nd Edition Playtesters: Tyler Babcock, Jeff Boschen, Kent Bunn, Josephine Burns, Bryan Doughty, Matthew Engel,
+Dibson T Hoffweiler, Jen Huang, Destry Miller, Kevin White, and Jeff Wolfe.
+© 2009 - 2021  Rio Grande Games; All Rights Reserved.If you have any comments, questions,
+or suggestions, please contact us at: PO Box 1033, Placitas, NM 87043, USA or by email at:
+RioGames@aol.com. Please visit our web site www.riograndegames.com.
+Dominion & Hinterlands:
+Highway Robbery: Cellar, Library, Moneylender, Throne Room, Workshop • Highway, Inn, Margrave, Noble Brigand,
+Oasis
+Adventures Abroad: Festival, Laboratory, Remodel, Sentry, Vassal • Crossroads, Farmland, Fool's Gold, Oracle,
+Spice Merchant
+Dominion & Dark Ages:
+High and Low: Cellar, Moneylender, Throne Room, Witch, Workshop • Hermit, Hunting Grounds, Mystic,
+Poor House, Wandering Minstrel
+Chivalry and Revelry: Festival, Gardens, Laboratory, Library, Remodel • Altar, Knights, Rats, Scavenger, Squire
+Dominion & Adventures:
+Level Up: Training • Market, Merchant, Militia, Throne Room, Workshop • Dungeon, Gear, Guide, Lost City, Miser
+Son of Size Distortion: Bonfire, Raid • Bandit, Bureaucrat, Gardens, Moneylender, Witch • Amulet, Duplicate, Giant,
+Messenger, Treasure Trove
+Dominion & Empires:
+Everything in Moderation: Orchard, Windfall • Cellar, Library, Remodel, Village, Workshop • Enchantress, Forum,
+Legionary, Overlord, Temple
+Silver Bullets: Aqueduct, Conquest • Bureaucrat, Gardens, Laboratory, Market, Moneylender • Catapult/Rocks,
+Charm, Farmers' Market, Groundskeeper, Patrician/Emporium
+Dominion & Nocturne:
+Night Shift: Bandit, Gardens, Mine, Poacher, Smithy • Druid (The Earth's Gift, The Flame's Gift, The Forest's Gift),
+Exorcist, Ghost Town, Idol, Night Watchman
+Idle Hands: Cellar, Harbinger, Market, Merchant, Moneylender • Bard, Conclave, Cursed Village, Devil's Workshop,
+Tragic Hero
+Dominion & Renaissance:
+It Takes a Villager: Road Network • Market, Merchant, Mine, Smithy, Vassal • Acting Troupe, Cargo Ship, Recruiter,
+Seer, Treasurer
+Capture the Flag: Barracks, Pageant • Cellar, Festival, Harbinger, Remodel, Workshop • Flag Bearer, Lackeys, Scholar,
+Swashbuckler, Villain
+Dominion & Menagerie:
+Pony Express: Way of the Seal, Stampede • Artisan, Cellar, Market, Mine, Village • Barge, Destrier, Paddock, Stockpile,
+Supplies
+Garden of Cats: Way of the Mole, Toil • Bandit, Gardens, Harbinger, Merchant, Moat • Black Cat, Displace, Sanctuary,
+Scrap, Snowy Village
+DominionRules2021.qxp_WideDominion  7/19/21  6:37 AM  Page 16

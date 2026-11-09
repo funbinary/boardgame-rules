@@ -1,0 +1,31 @@
+{
+ "slug": "xia",
+ "pages": 20,
+ "total_chars": 107087,
+ "avg_chars_per_page": 5354,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1173,
+  2954,
+  5900,
+  3538,
+  4710,
+  5345,
+  3790,
+  5363,
+  7033,
+  6438,
+  4484,
+  6443,
+  5625,
+  5890,
+  5881,
+  6351,
+  8153,
+  8987,
+  6553,
+  2476
+ ]
+}

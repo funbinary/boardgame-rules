@@ -1,0 +1,23 @@
+{
+ "slug": "age-of-steam",
+ "pages": 12,
+ "total_chars": 32599,
+ "avg_chars_per_page": 2716,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  31,
+  1349,
+  1418,
+  2858,
+  2757,
+  3279,
+  2493,
+  2596,
+  4457,
+  4129,
+  5846,
+  1386
+ ]
+}

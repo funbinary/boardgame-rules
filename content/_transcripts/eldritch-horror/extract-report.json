@@ -1,0 +1,27 @@
+{
+ "slug": "eldritch-horror",
+ "pages": 16,
+ "total_chars": 64294,
+ "avg_chars_per_page": 4018,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  8,
+  3945,
+  4699,
+  3870,
+  5085,
+  9361,
+  2637,
+  2892,
+  5031,
+  3484,
+  3254,
+  4584,
+  2667,
+  4899,
+  2839,
+  5039
+ ]
+}

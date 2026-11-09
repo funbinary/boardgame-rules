@@ -1,0 +1,23 @@
+{
+ "slug": "quest-for-el-dorado",
+ "pages": 12,
+ "total_chars": 21686,
+ "avg_chars_per_page": 1807,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  361,
+  527,
+  1840,
+  1926,
+  2206,
+  3798,
+  2595,
+  1614,
+  1103,
+  3698,
+  2018
+ ]
+}

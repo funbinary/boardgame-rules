@@ -1,0 +1,27 @@
+{
+ "slug": "vinhos",
+ "pages": 16,
+ "total_chars": 50657,
+ "avg_chars_per_page": 3166,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  2638,
+  2809,
+  2246,
+  2943,
+  1860,
+  3399,
+  2485,
+  3426,
+  3151,
+  3714,
+  2768,
+  3994,
+  3247,
+  3840,
+  4261,
+  3876
+ ]
+}

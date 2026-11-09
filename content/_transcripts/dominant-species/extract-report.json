@@ -1,0 +1,33 @@
+{
+ "slug": "dominant-species",
+ "pages": 20,
+ "total_chars": 56640,
+ "avg_chars_per_page": 2832,
+ "has_text_layer": true,
+ "dropped_headers": [
+  "© 2010 GMT Games, LLC"
+ ],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1479,
+  4831,
+  3695,
+  4033,
+  0,
+  3155,
+  2262,
+  1885,
+  3453,
+  2531,
+  2315,
+  2063,
+  2632,
+  3089,
+  2601,
+  3215,
+  3679,
+  3570,
+  2943,
+  3209
+ ]
+}

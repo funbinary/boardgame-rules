@@ -1,0 +1,23 @@
+{
+ "slug": "rajas-of-the-ganges",
+ "pages": 12,
+ "total_chars": 43150,
+ "avg_chars_per_page": 3595,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  2138,
+  2050,
+  2790,
+  62,
+  4837,
+  4792,
+  4815,
+  6152,
+  5945,
+  5411,
+  4158
+ ]
+}

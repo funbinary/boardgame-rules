@@ -1,0 +1,33 @@
+{
+ "slug": "aeons-end-war-eternal",
+ "pages": 20,
+ "total_chars": 47016,
+ "avg_chars_per_page": 2350,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [
+  "5/2/17   9:07 AM"
+ ],
+ "per_page_chars": [
+  1190,
+  1711,
+  719,
+  2634,
+  1643,
+  866,
+  2194,
+  4093,
+  478,
+  3778,
+  1844,
+  1954,
+  3145,
+  3263,
+  3261,
+  2213,
+  2492,
+  3941,
+  2912,
+  2685
+ ]
+}

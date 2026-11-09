@@ -1,0 +1,25 @@
+{
+ "slug": "hansa-teutonica",
+ "pages": 14,
+ "total_chars": 62903,
+ "avg_chars_per_page": 4493,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  2342,
+  3674,
+  2468,
+  6996,
+  5583,
+  4770,
+  5146,
+  5468,
+  2999,
+  4132,
+  4924,
+  5285,
+  3794,
+  5322
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "slug": "dominion-2e",
+ "pages": 16,
+ "total_chars": 50868,
+ "avg_chars_per_page": 3179,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1392,
+  2072,
+  5932,
+  2898,
+  2721,
+  2880,
+  2385,
+  2431,
+  2637,
+  4174,
+  4067,
+  3925,
+  3876,
+  3279,
+  3299,
+  2900
+ ]
+}

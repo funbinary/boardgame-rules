@@ -1,0 +1,23 @@
+{
+ "slug": "iberia",
+ "pages": 12,
+ "total_chars": 44052,
+ "avg_chars_per_page": 3671,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  872,
+  2755,
+  6243,
+  4565,
+  2357,
+  4037,
+  3533,
+  4257,
+  4141,
+  4514,
+  2640,
+  4138
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "slug": "thats-pretty-clever",
+ "pages": 8,
+ "total_chars": 13337,
+ "avg_chars_per_page": 1667,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  832,
+  1845,
+  1671,
+  1870,
+  1601,
+  1865,
+  2029,
+  1624
+ ]
+}

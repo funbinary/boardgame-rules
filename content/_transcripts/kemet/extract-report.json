@@ -1,0 +1,23 @@
+{
+ "slug": "kemet",
+ "pages": 12,
+ "total_chars": 27091,
+ "avg_chars_per_page": 2257,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  765,
+  1731,
+  1042,
+  2421,
+  1042,
+  3276,
+  4025,
+  3084,
+  3553,
+  3149,
+  3003,
+  0
+ ]
+}

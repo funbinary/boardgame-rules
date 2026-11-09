@@ -1,0 +1,27 @@
+{
+ "slug": "wyrmspan",
+ "pages": 16,
+ "total_chars": 43018,
+ "avg_chars_per_page": 2688,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  7811,
+  3325,
+  18,
+  3114,
+  2913,
+  2819,
+  2378,
+  2682,
+  1968,
+  3414,
+  3793,
+  1905,
+  1369,
+  2679,
+  1863,
+  967
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "slug": "mombasa",
+ "pages": 12,
+ "total_chars": 57620,
+ "avg_chars_per_page": 4801,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  2215,
+  3970,
+  4556,
+  4082,
+  4600,
+  6501,
+  6644,
+  5513,
+  4443,
+  5037,
+  5594,
+  4465
+ ]
+}

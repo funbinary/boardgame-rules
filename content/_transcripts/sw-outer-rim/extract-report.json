@@ -1,0 +1,27 @@
+{
+ "slug": "sw-outer-rim",
+ "pages": 16,
+ "total_chars": 63289,
+ "avg_chars_per_page": 3955,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  0,
+  2318,
+  3437,
+  1304,
+  7476,
+  3972,
+  2331,
+  4968,
+  4438,
+  6012,
+  4787,
+  2591,
+  5905,
+  5227,
+  5290,
+  3233
+ ]
+}

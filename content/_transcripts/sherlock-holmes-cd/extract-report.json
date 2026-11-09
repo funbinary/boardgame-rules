@@ -1,0 +1,23 @@
+{
+ "slug": "sherlock-holmes-cd",
+ "pages": 12,
+ "total_chars": 16150,
+ "avg_chars_per_page": 1345,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  38,
+  5,
+  2948,
+  1560,
+  992,
+  1064,
+  814,
+  1447,
+  2546,
+  1553,
+  773,
+  2410
+ ]
+}

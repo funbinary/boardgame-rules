@@ -1,0 +1,23 @@
+{
+ "slug": "star-realms",
+ "pages": 12,
+ "total_chars": 37529,
+ "avg_chars_per_page": 3127,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  8,
+  3025,
+  3916,
+  2234,
+  3453,
+  3269,
+  3182,
+  3527,
+  3140,
+  3307,
+  2933,
+  5535
+ ]
+}

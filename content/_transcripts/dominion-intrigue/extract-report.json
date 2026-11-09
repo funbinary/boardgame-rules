@@ -1,0 +1,19 @@
+{
+ "slug": "dominion-intrigue",
+ "pages": 8,
+ "total_chars": 22880,
+ "avg_chars_per_page": 2860,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  955,
+  2511,
+  1179,
+  3989,
+  4323,
+  4607,
+  2798,
+  2518
+ ]
+}

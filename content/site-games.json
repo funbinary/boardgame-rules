@@ -777,6 +777,422 @@
       "players": "1-4",
       "href": "games/frosthaven.html",
       "emoji": "❄️"
+    },
+    {
+      "slug": "aeons-end-war-eternal",
+      "zh": "末日决战：永恒战争",
+      "en": "Aeon's End: War Eternal · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/aeons-end-war-eternal.html",
+      "emoji": "💠"
+    },
+    {
+      "slug": "arcs",
+      "zh": "星弧航记",
+      "en": "Arcs · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/arcs.html",
+      "emoji": "🌟"
+    },
+    {
+      "slug": "battlestar-galactica",
+      "zh": "太空堡垒卡拉狄加",
+      "en": "Battlestar Galactica: The Board Game · 官方英文规则书全文翻译",
+      "players": "3-6",
+      "href": "games/battlestar-galactica.html",
+      "emoji": "🚀"
+    },
+    {
+      "slug": "codenames",
+      "zh": "行动代号",
+      "en": "Codenames · 官方英文规则书全文翻译",
+      "players": "2-8+",
+      "href": "games/codenames.html",
+      "emoji": "🕵️"
+    },
+    {
+      "slug": "concordia-venus",
+      "zh": "康考迪亚：维纳斯",
+      "en": "Concordia Venus · 官方英文规则书全文翻译",
+      "players": "2-6",
+      "href": "games/concordia-venus.html",
+      "emoji": "🕊️"
+    },
+    {
+      "slug": "dominant-species",
+      "zh": "优势物种",
+      "en": "Dominant Species · 官方英文规则书全文翻译",
+      "players": "2-6",
+      "href": "games/dominant-species.html",
+      "emoji": "🦣"
+    },
+    {
+      "slug": "iberia",
+      "zh": "伊比利亚（待查词条）",
+      "en": "Iberia · 官方英文规则书全文翻译",
+      "players": "",
+      "href": "games/iberia.html",
+      "emoji": "❓"
+    },
+    {
+      "slug": "istanbul",
+      "zh": "伊斯坦布尔",
+      "en": "Istanbul · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/istanbul.html",
+      "emoji": "🏺"
+    },
+    {
+      "slug": "lotr-journeys-in-middle-earth",
+      "zh": "魔戒：中土之旅",
+      "en": "The Lord of the Rings: Journeys in Middle-earth · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/lotr-journeys-in-middle-earth.html",
+      "emoji": "🗺️"
+    },
+    {
+      "slug": "lotr-lcg",
+      "zh": "魔戒：卡牌游戏",
+      "en": "The Lord of the Rings: The Card Game · 官方英文规则书全文翻译",
+      "players": "1-2",
+      "href": "games/lotr-lcg.html",
+      "emoji": "💍"
+    },
+    {
+      "slug": "nemesis-lockdown",
+      "zh": "复仇女神号：封锁",
+      "en": "Nemesis: Lockdown · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/nemesis-lockdown.html",
+      "emoji": "🚪"
+    },
+    {
+      "slug": "rising-sun",
+      "zh": "旭日战魂",
+      "en": "Rising Sun · 官方英文规则书全文翻译",
+      "players": "3-5",
+      "href": "games/rising-sun.html",
+      "emoji": "🎴"
+    },
+    {
+      "slug": "robinson-crusoe",
+      "zh": "鲁滨逊漂流记：诅咒之岛",
+      "en": "Robinson Crusoe: Adventures on the Cursed Island · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/robinson-crusoe.html",
+      "emoji": "🏝️"
+    },
+    {
+      "slug": "star-realms",
+      "zh": "星域奇航？",
+      "en": "Star Realms · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/star-realms.html",
+      "emoji": "🚀"
+    },
+    {
+      "slug": "tainted-grail",
+      "zh": "污痕圣杯：阿瓦隆的陷落",
+      "en": "Tainted Grail: The Fall of Avalon · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/tainted-grail.html",
+      "emoji": "🕯️"
+    },
+    {
+      "slug": "the-7th-continent",
+      "zh": "第七大陆",
+      "en": "The 7th Continent · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/the-7th-continent.html",
+      "emoji": "🏝️"
+    },
+    {
+      "slug": "trickerion",
+      "zh": "幻术师：幻象传奇？",
+      "en": "Trickerion: Legends of Illusion · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/trickerion.html",
+      "emoji": "🎩"
+    },
+    {
+      "slug": "undaunted-normandy",
+      "zh": "无畏：诺曼底",
+      "en": "Undaunted: Normandy · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/undaunted-normandy.html",
+      "emoji": "🎖️"
+    },
+    {
+      "slug": "unmatched-cobble-and-fog",
+      "zh": "无双对决：雾都？",
+      "en": "Unmatched: Cobble & Fog · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/unmatched-cobble-and-fog.html",
+      "emoji": "🌫️"
+    },
+    {
+      "slug": "viscounts-of-the-west-kingdom",
+      "zh": "西王国的子爵",
+      "en": "Viscounts of the West Kingdom · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/viscounts-of-the-west-kingdom.html",
+      "emoji": "📜"
+    },
+    {
+      "slug": "age-of-steam",
+      "zh": "蒸汽时代",
+      "en": "Age of Steam · 官方英文规则书全文翻译",
+      "players": "1-6",
+      "href": "games/age-of-steam.html",
+      "emoji": "🚂"
+    },
+    {
+      "slug": "clank-in-space",
+      "zh": "咔嚓！太空！",
+      "en": "Clank! In! Space!: A Deck-Building Adventure · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/clank-in-space.html",
+      "emoji": "🛸"
+    },
+    {
+      "slug": "dominion-2e",
+      "zh": "皇舆争霸（第二版）",
+      "en": "Dominion (Second Edition) · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/dominion-2e.html",
+      "emoji": "🏰"
+    },
+    {
+      "slug": "dominion-intrigue",
+      "zh": "皇舆争霸：暗潮汹涌（二版）",
+      "en": "Dominion: Intrigue · 官方英文规则书全文翻译",
+      "players": "2-6",
+      "href": "games/dominion-intrigue.html",
+      "emoji": "👑"
+    },
+    {
+      "slug": "dwellings-of-eldervale",
+      "zh": "永恒谷居所？",
+      "en": "Dwellings of Eldervale · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/dwellings-of-eldervale.html",
+      "emoji": "🏘️"
+    },
+    {
+      "slug": "eldritch-horror",
+      "zh": "全球惊悚",
+      "en": "Eldritch Horror · 官方英文规则书全文翻译",
+      "players": "1-8",
+      "href": "games/eldritch-horror.html",
+      "emoji": "🐙"
+    },
+    {
+      "slug": "endeavor-age-of-sail",
+      "zh": "奋进：风帆时代",
+      "en": "Endeavor: Age of Sail · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/endeavor-age-of-sail.html",
+      "emoji": "⛵"
+    },
+    {
+      "slug": "glen-more-2",
+      "zh": "格伦莫尔2：编年史",
+      "en": "Glen More II: Chronicles · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/glen-more-2.html",
+      "emoji": "🌾"
+    },
+    {
+      "slug": "hansa-teutonica",
+      "zh": "汉萨同盟",
+      "en": "Hansa Teutonica · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/hansa-teutonica.html",
+      "emoji": "🏛️"
+    },
+    {
+      "slug": "inis",
+      "zh": "翠屿秘境（INIS）",
+      "en": "Inis · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/inis.html",
+      "emoji": "🍀"
+    },
+    {
+      "slug": "iss-vanguard",
+      "zh": "ISS 先锋号",
+      "en": "ISS Vanguard · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/iss-vanguard.html",
+      "emoji": "🛰️"
+    },
+    {
+      "slug": "kemet",
+      "zh": "凯麦特",
+      "en": "Kemet · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/kemet.html",
+      "emoji": "🐍"
+    },
+    {
+      "slug": "legendary-encounters-alien",
+      "zh": "传奇遭遇：异形",
+      "en": "Legendary Encounters: An Alien Deck Building Game · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/legendary-encounters-alien.html",
+      "emoji": "👽"
+    },
+    {
+      "slug": "mombasa",
+      "zh": "蒙巴萨",
+      "en": "Mombasa · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/mombasa.html",
+      "emoji": "💎"
+    },
+    {
+      "slug": "quest-for-el-dorado",
+      "zh": "竞逐黄金国",
+      "en": "The Quest for El Dorado · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/quest-for-el-dorado.html",
+      "emoji": "🏛️"
+    },
+    {
+      "slug": "ra",
+      "zh": "RA 太阳神",
+      "en": "Ra · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/ra.html",
+      "emoji": "☀️"
+    },
+    {
+      "slug": "radlands",
+      "zh": "辐射荒漠？",
+      "en": "Radlands · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/radlands.html",
+      "emoji": "🌵"
+    },
+    {
+      "slug": "raiders-of-the-north-sea",
+      "zh": "北海劫掠者",
+      "en": "Raiders of the North Sea · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/raiders-of-the-north-sea.html",
+      "emoji": "⚓"
+    },
+    {
+      "slug": "rajas-of-the-ganges",
+      "zh": "恒河王侯",
+      "en": "Rajas of the Ganges · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/rajas-of-the-ganges.html",
+      "emoji": "🐘"
+    },
+    {
+      "slug": "search-for-planet-x",
+      "zh": "搜寻行星 X",
+      "en": "The Search for Planet X · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/search-for-planet-x.html",
+      "emoji": "🔭"
+    },
+    {
+      "slug": "sherlock-holmes-cd",
+      "zh": "福尔摩斯：侦探顾问",
+      "en": "Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases · 官方英文规则书全文翻译",
+      "players": "1-8",
+      "href": "games/sherlock-holmes-cd.html",
+      "emoji": "🔍"
+    },
+    {
+      "slug": "sw-outer-rim",
+      "zh": "星球大战：外环",
+      "en": "Star Wars: Outer Rim · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/sw-outer-rim.html",
+      "emoji": "🪙"
+    },
+    {
+      "slug": "sw-x-wing",
+      "zh": "星球大战：X 翼战机",
+      "en": "Star Wars: X-Wing Miniatures Game · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/sw-x-wing.html",
+      "emoji": "✈️"
+    },
+    {
+      "slug": "thats-pretty-clever",
+      "zh": "绝顶聪明",
+      "en": "That's Pretty Clever! · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/thats-pretty-clever.html",
+      "emoji": "🎲"
+    },
+    {
+      "slug": "twilight-imperium-3e",
+      "zh": "帝国曙光：第三版",
+      "en": "Twilight Imperium: Third Edition · 官方英文规则书全文翻译",
+      "players": "3-6",
+      "href": "games/twilight-imperium-3e.html",
+      "emoji": "🪐"
+    },
+    {
+      "slug": "tyrants-of-the-underdark",
+      "zh": "地底暴君",
+      "en": "Tyrants of the Underdark · 官方英文规则书全文翻译",
+      "players": "2-4",
+      "href": "games/tyrants-of-the-underdark.html",
+      "emoji": "🕸️"
+    },
+    {
+      "slug": "vinhos",
+      "zh": "葡萄园：典藏版",
+      "en": "Vinhos: Deluxe Edition · 官方英文规则书全文翻译",
+      "players": "1-6",
+      "href": "games/vinhos.html",
+      "emoji": "🍷"
+    },
+    {
+      "slug": "wonderlands-war",
+      "zh": "仙境之战？",
+      "en": "Wonderland's War · 官方英文规则书全文翻译",
+      "players": "2-5",
+      "href": "games/wonderlands-war.html",
+      "emoji": "🐇"
+    },
+    {
+      "slug": "wyrmspan",
+      "zh": "龙翼翱翔",
+      "en": "Wyrmspan · 官方英文规则书全文翻译",
+      "players": "1-5",
+      "href": "games/wyrmspan.html",
+      "emoji": "🐉"
+    },
+    {
+      "slug": "xia",
+      "zh": "夏亚：漂流星系传说？",
+      "en": "Xia: Legends of a Drift System · 官方英文规则书全文翻译",
+      "players": "3-4",
+      "href": "games/xia.html",
+      "emoji": "🌌"
+    },
+    {
+      "slug": "tfm-ares-expedition",
+      "zh": "重塑火星：战神远征",
+      "en": "Terraforming Mars: Ares Expedition · 官方英文规则书全文翻译",
+      "players": "1-4",
+      "href": "games/tfm-ares-expedition.html",
+      "emoji": "🔴"
+    },
+    {
+      "slug": "mtg",
+      "zh": "万智牌",
+      "en": "Magic: The Gathering · 官方英文规则书全文翻译",
+      "players": "2",
+      "href": "games/mtg.html",
+      "emoji": "🃏"
     }
   ],
   "featuredOrder": [
@@ -878,7 +1294,59 @@
     "sleeping-gods",
     "gloomhaven",
     "gloomhaven-jaws-of-the-lion",
-    "frosthaven"
+    "frosthaven",
+    "aeons-end-war-eternal",
+    "arcs",
+    "battlestar-galactica",
+    "codenames",
+    "concordia-venus",
+    "dominant-species",
+    "iberia",
+    "istanbul",
+    "lotr-journeys-in-middle-earth",
+    "lotr-lcg",
+    "nemesis-lockdown",
+    "rising-sun",
+    "robinson-crusoe",
+    "star-realms",
+    "tainted-grail",
+    "the-7th-continent",
+    "trickerion",
+    "undaunted-normandy",
+    "unmatched-cobble-and-fog",
+    "viscounts-of-the-west-kingdom",
+    "age-of-steam",
+    "clank-in-space",
+    "dominion-2e",
+    "dominion-intrigue",
+    "dwellings-of-eldervale",
+    "eldritch-horror",
+    "endeavor-age-of-sail",
+    "glen-more-2",
+    "hansa-teutonica",
+    "inis",
+    "iss-vanguard",
+    "kemet",
+    "legendary-encounters-alien",
+    "mombasa",
+    "quest-for-el-dorado",
+    "ra",
+    "radlands",
+    "raiders-of-the-north-sea",
+    "rajas-of-the-ganges",
+    "search-for-planet-x",
+    "sherlock-holmes-cd",
+    "sw-outer-rim",
+    "sw-x-wing",
+    "thats-pretty-clever",
+    "twilight-imperium-3e",
+    "tyrants-of-the-underdark",
+    "vinhos",
+    "wonderlands-war",
+    "wyrmspan",
+    "xia",
+    "tfm-ares-expedition",
+    "mtg"
   ],
   "crossLinks": [
     {

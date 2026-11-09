@@ -1,0 +1,19 @@
+{
+ "slug": "codenames",
+ "pages": 8,
+ "total_chars": 12280,
+ "avg_chars_per_page": 1535,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  189,
+  1211,
+  326,
+  1281,
+  1488,
+  2735,
+  2670,
+  2380
+ ]
+}

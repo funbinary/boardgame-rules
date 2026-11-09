@@ -1,0 +1,27 @@
+{
+ "slug": "radlands",
+ "pages": 16,
+ "total_chars": 22056,
+ "avg_chars_per_page": 1378,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  78,
+  0,
+  2157,
+  1065,
+  983,
+  901,
+  1079,
+  1183,
+  2039,
+  1770,
+  1816,
+  2343,
+  1962,
+  2685,
+  1356,
+  639
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "slug": "ra",
+ "pages": 8,
+ "total_chars": 16752,
+ "avg_chars_per_page": 2094,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1564,
+  1812,
+  2617,
+  2817,
+  3534,
+  1576,
+  1928,
+  904
+ ]
+}

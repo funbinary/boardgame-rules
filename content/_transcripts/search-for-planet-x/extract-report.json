@@ -1,0 +1,31 @@
+{
+ "slug": "search-for-planet-x",
+ "pages": 20,
+ "total_chars": 31785,
+ "avg_chars_per_page": 1589,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  80,
+  772,
+  422,
+  1804,
+  1338,
+  2361,
+  1414,
+  2226,
+  2561,
+  2124,
+  0,
+  1426,
+  1707,
+  2357,
+  2512,
+  2074,
+  1669,
+  2564,
+  2031,
+  343
+ ]
+}

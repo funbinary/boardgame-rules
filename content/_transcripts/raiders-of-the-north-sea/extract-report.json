@@ -1,0 +1,18 @@
+{
+ "slug": "raiders-of-the-north-sea",
+ "pages": 7,
+ "total_chars": 18933,
+ "avg_chars_per_page": 2704,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  151,
+  2106,
+  2958,
+  4116,
+  4024,
+  3461,
+  2117
+ ]
+}

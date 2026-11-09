@@ -1,0 +1,25 @@
+{
+ "slug": "inis",
+ "pages": 12,
+ "total_chars": 39549,
+ "avg_chars_per_page": 3295,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [
+  "13/07/2016   20:24"
+ ],
+ "per_page_chars": [
+  68,
+  8097,
+  2230,
+  4066,
+  2121,
+  3567,
+  3830,
+  3971,
+  3744,
+  3472,
+  4355,
+  28
+ ]
+}

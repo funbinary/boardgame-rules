@@ -1,0 +1,22 @@
+{
+ "slug": "unmatched-cobble-and-fog",
+ "pages": 11,
+ "total_chars": 25592,
+ "avg_chars_per_page": 2326,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  19,
+  624,
+  3620,
+  2685,
+  3216,
+  4141,
+  2745,
+  2412,
+  1995,
+  1622,
+  2513
+ ]
+}

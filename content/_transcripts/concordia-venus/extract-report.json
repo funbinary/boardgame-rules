@@ -1,0 +1,17 @@
+{
+ "slug": "concordia-venus",
+ "pages": 6,
+ "total_chars": 34687,
+ "avg_chars_per_page": 5781,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  3096,
+  5576,
+  5870,
+  7511,
+  5872,
+  6762
+ ]
+}

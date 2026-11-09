@@ -1,0 +1,23 @@
+{
+ "slug": "clank-in-space",
+ "pages": 12,
+ "total_chars": 31490,
+ "avg_chars_per_page": 2624,
+ "has_text_layer": true,
+ "dropped_headers": [],
+ "dropped_footers": [],
+ "per_page_chars": [
+  1351,
+  3245,
+  31,
+  2398,
+  2854,
+  4388,
+  2703,
+  3027,
+  3506,
+  4960,
+  830,
+  2197
+ ]
+}
